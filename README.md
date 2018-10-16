@@ -1,29 +1,20 @@
-# README #
+# Jekyll Materialize Starter Template v0.1
 
-This README would normally document whatever steps are necessary to get your application up and running.
+*A Site Starter Materialize Templates.
 
-### What is this repository for? ###
+The theme is a fork of the [minima][1]
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+![minima theme preview](/screenshot.png)
 
-### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+# License
 
-### Contribution guidelines ###
+The theme is available as so I use this source [MIT License][2].
 
-* Writing tests
-* Code review
-* Other guidelines
+[Materialize][3] a  modern responsive front-end framework based on Material Design
 
-### Who do I talk to? ###
+Copyright © 2017 Marco Damiani. Powered by <a href="http://jekyllrb.com">Jekyll</a>
 
-* Repo owner or admin
-* Other community or team contact
+[1]: https://github.com/jekyll/minima
+[2]: https://opensource.org/licenses/MIT
+[3]: http://materializecss.com/
