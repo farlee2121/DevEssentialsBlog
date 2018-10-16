@@ -1,3 +1,13 @@
+# Netlify Notes
+ - build requires a config for necessary resources
+      - https://www.netlify.com/docs/build-gotchas/
+      - ruby setup https://www.netlify.com/docs/build-settings/
+ - Files needed for netlify (and not needed locally)
+      - /Gemfile
+      - /Gemfile.lock
+      - /.ruby-version
+
+
 # Jekyll Materialize Starter Template v0.1
 
 *A Site Starter Materialize Templates.
