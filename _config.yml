@@ -15,10 +15,12 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <p>Uh. I don't think i want to leave it this way</p>
+     <h3>Critical developer skills in 5 minutes or less.</h3>
+     <p style="font-size: 0.75em" >This "blog" is an experiment in teaching core skills to be a "10x developer".
+     These posts attempt to extract best practices from, and connect readers to, leading software literature.</p>
   header_text_feature_image: #assets/img/pexels/triangular.jpeg
-  footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+  footer_text: "  "
+   #Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
