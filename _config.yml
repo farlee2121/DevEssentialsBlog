@@ -1,8 +1,8 @@
 # SITE CONFIGURATION
 baseurl: 
 url: "https://spencerfarley.com"
-title: Type on Strap # site's title
-description: "A website with blog posts and pages" # used by search engines
+title: "5min Dev Essentials" # site's title
+description: "Essential developer skills in 5 minutes" # used by search engines
 
 
 # THEME-SPECIFIC CONFIGURATION
@@ -16,7 +16,7 @@ theme_settings:
   # Header and footer text
   header_text: > #two or three lines to describe your site
      <p>Uh. I don't think i want to leave it this way</p>
-  header_text_feature_image: assets/img/pexels/triangular.jpeg
+  header_text_feature_image: #assets/img/pexels/triangular.jpeg
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
@@ -67,9 +67,11 @@ theme_settings:
     search: 
       icon: "search"
       enabled: true
+      text: "Search"
     tags:
       icon: "tags"
       enabled: true
+      text: "Tags"
   
   # Localization strings
   str_follow_on: "Follow on"
