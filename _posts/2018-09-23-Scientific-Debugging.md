@@ -8,15 +8,13 @@ programmers.
 Scientific debugging is one of the skills that differentiates 10x programmers."
 ---
 
-# Scientific Debugging
-
 *“Finding the defect – and understanding it – is usually 90% of the work” -
 Steve McConnell*
 
-<!--more-->Studies suggest a 10x difference in productivity between average and best
+Studies suggest a 10x difference in productivity between average and best
 programmers [Brooks, McConnell].
 
-Scientific debugging is one of the skills that differentiates 10x programmers. <!--more-->
+Scientific debugging is one of the skills that differentiates 10x programmers. 
 What is scientific debugging and why does it matter? Let’s start with an
 example.
 
