@@ -160,4 +160,4 @@ Further Reading
     Section 31: Programming by Coincidence, Section 43: Ruthless Testing
 
 -   The Three Laws of TDD by Robert Martin
-    <https://www.youtube.com/watch?v=AoIfc5NwRks&t=1753s>
+    <https://www.youtube.com/watch?v=AoIfc5NwRks>
