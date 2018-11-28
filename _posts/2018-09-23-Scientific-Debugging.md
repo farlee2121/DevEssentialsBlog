@@ -1,31 +1,22 @@
----
-layout: post
-# title: Scientific Debugging
-tags: [Construction, Dev Essentials, Debugging]
-excerpt: "Studies suggest a 10x difference in productivity between average and best
-programmers.
-
-Scientific debugging is one of the skills that differentiates 10x programmers."
----
-
 *“Finding the defect – and understanding it – is usually 90% of the work” -
 Steve McConnell*
 
 Studies suggest a 10x difference in productivity between average and best
 programmers [Brooks, McConnell].
 
-Scientific debugging is one of the skills that differentiates 10x programmers. 
+Scientific debugging is one of the skills that differentiates 10x programmers.
 What is scientific debugging and why does it matter? Let’s start with an
 example.
 
-## Story
+Story
+-----
 
 Once upon a time, I worked in a physics lab. We needed to estimate a magnetic
 effect on iron filings, and weight was an important factor.
 
 I tried to tackle this problem head on. I got a single iron filing and tried
 every scale I could get my hands on. However, even the most sensitive scale in
-the department was not enough to weight this sliver of metal.
+the department was not enough to weigh this sliver of metal.
 
 I returned to my professor, defeated, and explained I couldn’t estimate the
 effect on the filing. My professor was a patient and smart guy. He dumped a
@@ -34,7 +25,8 @@ than X, we won’t be able to see the effect. The scale shows Y grams, so if the
 are more than 1000 filings on the scale, we need to reformulate. Are there more
 than 1000 filings?”. There clearly were.
 
-## Lesson
+Lesson
+------
 
 I had spent the better part of a day trying all kinds of special equipment, but
 my professor answered the question in a minute with common equipment.
@@ -53,7 +45,8 @@ together.
 
 [Scientific method picture]
 
-## Tie-in
+Tie-in
+------
 
 The same skill applies to our debugging (and most problem solving). It is
 tempting to debug whack-a-mole style, by trying to solve pieces of the issue.
@@ -72,7 +65,8 @@ the scope conclusively to that one line. This prompted me to conduct different
 tests on the line, eventually opening it in notepad, and finding the culprit
 character.
 
-## Example Process
+Example Process
+---------------
 
 Let’s break it down into steps.
 
@@ -127,7 +121,8 @@ Testing should be the quickest path to a *definitive* answer to the hypothesis.
 
 -   Ask a coworker to run the reproduction steps
 
-## Unit Testing
+Unit Testing
+------------
 
 Scientific debugging ties well into automated testing. If you understand your
 problem well, you should be able to create an automated test for it. By creating
@@ -140,7 +135,8 @@ further formalize this process into Test Driven Development (TDD). The idea
 being that you need very little debugging if you first formalize assumptions in
 tests and iterate to meet those assumptions one at a time.
 
-## TL;DR
+TL;DR
+-----
 
 Scientific debugging increases productivity by methodically and definitively
 improving understanding of the problem.
