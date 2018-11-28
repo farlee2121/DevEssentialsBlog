@@ -1,10 +1,9 @@
 ---
 title: Self-Documenting Code
-tags: [Construction, Dev Essentials, Naming, Code Style, Readability, Documentation, Tests]
-excerpt: "The code is the one guaranteed source for how the program operates, everything
-else is out of date the moment the code changes. Good programmers hate repeating
-themselves, so the code should be made a sufficient document to avoid
-documentation catchup."
+layout: post
+tags: [Construction, Dev Essentials, Naming, Code Style, Readability, Documentation, Testing]
+excerpt: "The code is the one guaranteed source for how the program operates, everything else is out of date the moment the code changes. Good programmers hate repeating themselves, so the code should be made a sufficient document to avoid documentation catchup."
+
 ---
 
 >   “There are two ways of constructing a software design: One way is to make it

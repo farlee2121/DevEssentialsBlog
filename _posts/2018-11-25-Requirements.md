@@ -1,5 +1,13 @@
 ---
-title: Requirements / Build the right thing
+title: Requirements
+layout: post
+tags: [Project Management, Dev Essentials, Process]
+excerpt: "Requirements are the first step of any project.
+
+The above intern project failed because we never considered what we were
+accomplishing, in other words, our requirements. Requirements set out the
+vision, and we had none. With no vision, the software had no where to go from
+the start."
 ---
 
 >   The most important single aspect of software development is to be clear
@@ -82,7 +90,7 @@ Building a single-use script for a personal task is low impact and low use, so
 it doesn’t need much planning. On the other hand, an airplane control system
 should probably have more planning and verification than coding.
 
-![See the source image](media/b01d5bcb885ec15bfa0d11b1b1f9810d.png)
+![See the source image](media/threat-matrix.png)
 
 In general, up front planning should identify the most important features, not
 all features. There should be enough clarity that, if a mockup was made,

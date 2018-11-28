@@ -1,5 +1,11 @@
 ---
 title: Test-Centered Development
+layout: post
+tags: [Construction, Dev Essentials, Testing]
+excerpt: "In the words of Pragmatic Programmer, “We want to
+start testing as soon as we have code.”
+Testing changes the way we write code. It forces us to see the code from the
+point of the consumer. This makes our code easier to understand and to use."
 ---
 
 >   “Coding ain’t done ‘til the tests run” - The Pragmatic Programmer
