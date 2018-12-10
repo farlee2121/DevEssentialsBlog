@@ -158,5 +158,4 @@ Further Reading
 
 -   Agile Principles, Patterns, and Practices, Robert Martin, Ch. 3 Planning
 
-    Pragmatic Programmer, Andy Hunt and David Thomas, Section 4 Good-Enough
-    Software
+-   Pragmatic Programmer, Andy Hunt and David Thomas, Section 37 Solving Impossible puzzles, Section 36 The Requirements Pit, Section 4 Good-Enough Software

@@ -119,4 +119,4 @@ Further Reading
 
 -   The Pragmatic Programmer, Andy Hunt and David Thomas, Sections 34, 43
 
--   Code Complete, Steve McConnell, Ch 22
+-   Code Complete, Steve McConnell, Ch 22, Ch 5.3
