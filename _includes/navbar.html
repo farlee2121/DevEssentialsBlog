@@ -3,8 +3,12 @@
     <!-- Logo and title -->
 	<div class="branding">
 		<a href="{{ site.baseurl }}/">
-			<img class="avatar" src="{{ site.baseurl }}/{{ site.theme_settings.avatar }}" alt=""/>
-		</a>
+            {%if site.theme_settings.avatar != null%}
+            <img class="avatar" src="{{ site.baseurl }}/{{ site.theme_settings.avatar }}" alt=""/>
+            {%else%}
+            <div class="avatar"></div>
+            {% endif %}
+        </a>
 
 		<h1 class="site-title">
 			<a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
