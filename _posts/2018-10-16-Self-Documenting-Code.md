@@ -8,18 +8,15 @@ excerpt: "The code is the one guaranteed source for how the program operates, ev
 
 >   “There are two ways of constructing a software design: One way is to make it
 >   so simple that there are obviously no deficiencies and the other way is to
->   make it so complicated that there are no obvious deficiencies.” – C.A.R.
->   Hoare
+>   make it so complicated that there are no obvious deficiencies.” – C.A.R. Hoare
 
 Last time we established the importance of understandability, and thus naming.
 
 To recap
 
--   Code is harder to understand than to write
-
--   Understandability affects system lifespan
-
--   We write code for future contributors
+- Code is harder to understand than to write
+- Understandability affects system lifespan
+- We write code for future contributors
 
 However, there is more to understanding code than readability and more to
 readability than naming. We want our code to be self-documenting.
@@ -60,41 +57,37 @@ setting consistent expectations.
 Naming is important to code style, but we also need to consider choices like
 
 -   Spacing
-
 -   In-code documentation (readmes, comments, doc generator annotations,...)
-
 -   Comment placement
-
 -   Reason for comments
-
 -   File structure
-
 -   Argument and return types
-
 -   Type usage
 
 The list goes on.
 
 Here are some common questions to consider
 
--   Do you assign types implicitly or explicitly?
-
--   How do you use white space to convey separation?
-
--   Does your language use braces? What line do they fall on?
-
--   If your language doesn’t have encapsulation, how do you indicate internals?
-
--   We all find answers on the internet, so where do you record sources (I
-    usually leave a comment with a link)
-
--   When do you use getters and setters?
-
--   Tabs or spaces? (real answer, have the editor handle it)
+- Do you assign types implicitly or explicitly?
+- How do you use white space to convey separation?
+- Does your language use braces? What line do they fall on?
+- If your language doesn’t have encapsulation, how do you indicate internals?
+- We all find answers on the internet, so where do you record sources (I usually leave a comment with a link)
+- When do you use getters and setters?
+- Tabs or spaces? (real answer, have the editor handle it)
 
 Whatever you choose, be consistent. I recommend setting up a .editorconfig. It
 is a community standard for style rule definition and many editors will enforce
 it for you.
+
+Pseudocode Readability
+-----------------------
+
+Readability can be a hard measure to grasp because of the torrent of contributing factors. As a rule of thumb, your code should read like it is pseudocode.
+
+This means the code has a consistent level of abstraction. Imagine reading the code out loud. The code should read like a normal verbal summary and each step should feel like a natural continuation.
+
+Jumps in detail or spots that need further explanation should be split out and named as their summary.
 
 Cleverness
 ----------
@@ -135,27 +128,20 @@ without external knowledge.
 
 We make code self-documenting with
 
--   Semantic Naming
+- Semantic Naming
+- Consistent Style
+- Tests
+- Clarity over cleverness
 
--   Consistent Style
-
--   Tests
-
--   Clarity over cleverness
-
-Self-documenting code makes teams more flexible, companies more robust, and
-vacations more peaceful.
+Self-documenting code makes teams more flexible, companies more robust, and vacations more peaceful.
 
 Further Reading
 ---------------
 
 -   Design of Design, Fred Brooks, Chapter 12
-
--   Code Complete, Steve McConnell, Most of the book (especially part VII)
-
+-   Code Complete, Steve McConnell, Most of the book (especially part VII and Ch 32 Self-Documenting Code), Ch 9 Pseudocode Programming Process
 -   The Pragmatic Programmer, Andrew Hunt & David Thomas, Section 44: It’s All
     Writing, Section 34: Code that’s easy to test, Section 21: Design by
     Contract
-
 -   The Humble Programmer, Edsger Dijkstra  
     (<https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html>)

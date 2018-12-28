@@ -100,9 +100,9 @@ Understandable code is a primary concern of programmers and naming is at its cor
 Further Reading / Resources
 ---------------------------
 
--   Code Complete, Steve McConnell (especially chapter 11)
+- Code Complete, Steve McConnell (especially Ch 11 The Power of Variable Names, Ch 9 Pseudocode Programming Process)
 
--   .NET Rocks episode 1586 <https://www.dotnetrocks.com/?show=1586>
+- .NET Rocks episode 1586 <https://www.dotnetrocks.com/?show=1586>
 
--   Smart Bear Study
+- Smart Bear Study
     <https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/>
