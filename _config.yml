@@ -3,7 +3,7 @@ baseurl:
 url: "https://spencerfarley.com"
 title: "5min Dev Essentials" # site's title
 description: "Essential developer skills in 5 minutes" # used by search engines
-
+permalink: pretty # https://jekyllrb.com/docs/permalinks/
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
