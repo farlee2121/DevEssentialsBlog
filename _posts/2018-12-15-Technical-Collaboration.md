@@ -3,25 +3,24 @@ title: Technical Collaboration
 layout: post
 tags: [Project Management, Dev Essentials, Process, Review, Collaboration, Pair Programming]
 excerpt: "IBM found that every hour of code inspection saved 100 hours of related work. Pair programmers produce higher quality, more
-maintainable, code in 15% more time an individual ,
+maintainable, code in 15% more time than an individual,
 and inspected systems require 1/10th the maintenance of non-inspected systems.
 
 These a few of stats supporting collaboration and review in software. Teams that regularly collaborate work faster, learn faster, and have fewer defects."
 ---
 
->   “The need for reviewing was so obvious to the best programmer that they
->   rarely mentioned it in print, while the worst programmers believed the were
->   so good that their work did not need reviewing” – Daniel Freedman and Gerald
->   Weinberg
+> “The need for reviewing was so obvious to the best programmer that they
+> rarely mentioned it in print, while the worst programmers believed they 
+> were so good that their work did not need reviewing”
+> – Daniel Freedman and Gerald Weinberg
 
 IBM found that every hour of code inspection saved 100 hours of related work
 (Code Complete, p.480). Pair programmers produce higher quality, more
-maintainable, code in 15% more time an individual (Pair Programming Benefits),
+maintainable, code in only 15% more time than an individual (Pair Programming Benefits),
 and inspected systems require 1/10th the maintenance of non-inspected systems
 (Code Complete, p. 485).
 
-These a few of stats supporting collaboration and review in software. Teams that
-regularly collaborate work faster, learn faster, and have fewer defects.
+These are a few of the stats supporting collaboration and review in software. Teams that regularly collaborate work faster, learn faster, and have fewer defects.
 
 Methods
 =======
@@ -131,13 +130,13 @@ to reduce dev time, produce better code, and raise team skill.
 Further Reading
 ===============
 
--   Code Complete, Steve McConnell, Ch 21 Collaborative Construction
+- Code Complete, Steve McConnell, Ch 21 Collaborative Construction
 
--   Best Practices for Code Review, Smart Bear,
+- Best Practices for Code Review, Smart Bear,
     <https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/>
 
--   Pair Programming Benefits, Jeff Langr and Tim Ottinger,
+- Pair Programming Benefits, Jeff Langr and Tim Ottinger,
     <https://pragprog.com/magazines/2011-07/pair-programming-benefits>
 
--   Agile Principles, Practices, and Patterns, Robert Martin, Ch 2 Overview of
+- Agile Principles, Practices, and Patterns, Robert Martin, Ch 2 Overview of
     Extreme Programming
