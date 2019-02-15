@@ -10,10 +10,10 @@ vision, and we had none. With no vision, the software had no where to go from
 the start."
 ---
 
->   The most important single aspect of software development is to be clear
->   about what you are trying to build. - Bjarne Stroustrup (inventor of c++)
+> The most important single aspect of software development is to be clear
+> about what you are trying to build. - Bjarne Stroustrup (inventor of c++)
 
->   Plans are worthless, but planning is everything. - Dwight D. Eisenhower
+> Plans are worthless, but planning is everything. - Dwight D. Eisenhower
 
 I was once on an intern team tasked with detecting open parking spots with
 cameras. This team had a “just code” mentality. Code was the metric that
@@ -54,7 +54,7 @@ intent is unclear, decisions will be filled with assumptions. To paraphrase
 Pragmatic Programmer, if you aren’t programming intentionally, you are
 programming by accident.
 
-Check Frequently 
+Check Frequently
 =================
 
 Stable requirements are bad, because the only time requirements are stable is
@@ -148,14 +148,10 @@ customer and communicate with them frequently.
 Further Reading
 ===============
 
--   Code Complete, Steve McConnell, Ch 3: Measure Twice, Cut Once
-
--   How to Build Products Users Love, Kevin Hale,
+- Code Complete, Steve McConnell, Ch 3: Measure Twice, Cut Once
+- How to Build Products Users Love, Kevin Hale,
     <https://www.youtube.com/watch?v=sz_LgBAGYyo>
-
--   Design of Design, Fred Brooks, Ch. 11 Constraints are Friends, Ch. 14 How
+- Design of Design, Fred Brooks, Ch. 11 Constraints are Friends, Ch. 14 How
     Expert Designers Go Wrong
-
--   Agile Principles, Patterns, and Practices, Robert Martin, Ch. 3 Planning
-
--   Pragmatic Programmer, Andy Hunt and David Thomas, Section 37 Solving Impossible puzzles, Section 36 The Requirements Pit, Section 4 Good-Enough Software
+- Agile Principles, Patterns, and Practices, Robert Martin, Ch. 3 Planning
+- Pragmatic Programmer, Andy Hunt and David Thomas, Section 37 Solving Impossible puzzles, Section 36 The Requirements Pit, Section 4 Good-Enough Software
