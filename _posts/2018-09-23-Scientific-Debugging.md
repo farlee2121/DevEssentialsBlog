@@ -158,6 +158,7 @@ Once you understand the problem, write a test and make sure it doesn’t happen
 again.
 
 Further Reading
+---------------
 
 -   Code Complete, Steve McConnell, Chapter 23: Debugging
 
