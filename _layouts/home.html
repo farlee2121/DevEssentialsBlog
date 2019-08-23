@@ -1,42 +1,76 @@
 ---
 layout: default
-bootstrap: true 
+bootstrap: true
 ---
 
 <div class="home">
   {% if site.theme_settings.header_text %}
   <div id="main" class="call-out"
-  style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+    style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
     {{ site.theme_settings.header_text }}
+    <div class="subscribe-banner">
+      <!-- Begin Mailchimp Signup Form -->
+      <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+        <form action="https://gmail.us20.list-manage.com/subscribe/post?u=42f3ae72ee6be36b0f74959b4&amp;id=ef7ac361bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <label for="mce-EMAIL">Subscribe</label>
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_42f3ae72ee6be36b0f74959b4_ef7ac361bc" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+      </div>
+      <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"42f3ae72ee6be36b0f74959b4","lid":"ef7ac361bc","uniqueMethods":true}) })</script>
+      <!--End mc_embed_signup-->
+      <!-- <a class="button" onclick="OpenSubscribeModal()">Subscribe</a>
+      <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js"
+        data-dojo-config="usePlainJson: true, isDebug: false"></script>
+      <script type="text/javascript">
+        window.dojoRequire(["mojo/signup-forms/Loader"],function (L) {
+            window.openIt = function(){ L.start({ "baseUrl": "mc.us20.list-manage.com", "uuid": "42f3ae72ee6be36b0f74959b4", "lid": "ef7ac361bc", "uniqueMethods": true })};
+        });
+        function OpenSubscribeModal(){
+          console.log("hi there")
+          window.openIt();
+        }
+      </script> -->
+    </div>
   </div>
   {% endif %}
 
   <div class="posts">
     {% for post in paginator.posts %}
     <div class="post-teaser">
-      {% if post.thumbnail %} 
+      {% if post.thumbnail %}
       <div class="post-img">
-         <img src="{{ site.baseurl }}/{{ post.thumbnail }}">
+        <img src="{{ site.baseurl }}/{{ post.thumbnail }}">
       </div>
       {% endif %}
       <span>
-          <header>
-            <h1>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                {{ post.title }}
-              </a>
-            </h1>
-            <p class="meta">
-              {{ post.date | date: "%B %-d, %Y" }}
-            </p>
-          </header>
-          <div class="excerpt">
-              {{ post.excerpt | strip_html | escape }}
-            <!--{{ post.content | strip_html | truncate: "250" }}-->
-            <!--<a class="button" href="{{ post.url | prepend: site.baseurl }}">
+        <header>
+          <h1>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+              {{ post.title }}
+            </a>
+          </h1>
+          <p class="meta">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </p>
+        </header>
+        <div class="excerpt">
+          {{ post.excerpt | strip_html | escape }}
+          <!--{{ post.content | strip_html | truncate: "250" }}-->
+          <!--<a class="button" href="{{ post.url | prepend: site.baseurl }}">
               {{ site.theme_settings.str_continue_reading }}
             </a>-->
-          </div>
+        </div>
       </span>
     </div>
     {% endfor %}
@@ -45,13 +79,13 @@ bootstrap: true
   {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button">
       <i class="fa fa-chevron-left"></i>
       {{ site.theme_settings.str_previous_page }}
     </a>
     {% endif %}
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button">
       {{ site.theme_settings.str_next_page }}
       <i class="fa fa-chevron-right"></i>
     </a>
