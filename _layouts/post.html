@@ -18,7 +18,13 @@ layout: default
   </div>
   {% endif %}
   </section>
-  
+  {% if page.series %}
+  <section class="series-list">
+    <header>Series</header>
+    {% series %}
+  </section>
+  {% endif %}
+
   <!-- Social media shares -->
   {% include share_buttons.html %}
    
