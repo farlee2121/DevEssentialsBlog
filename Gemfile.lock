@@ -41,6 +41,8 @@ GEM
     jekyll-seo-tag (2.6.1)
       jekyll (>= 3.3, < 5.0)
     jekyll-series (1.0.3)
+    jekyll-titles-from-headings (0.5.3)
+      jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (1.17.0)
@@ -70,6 +72,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.12)
   jekyll-series (~> 1.0)
+  jekyll-titles-from-headings (~> 0.5.3)
   rake (~> 10.0)
   type-on-strap!
 

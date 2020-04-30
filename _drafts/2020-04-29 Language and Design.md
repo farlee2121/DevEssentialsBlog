@@ -1,5 +1,4 @@
 ---
-title: Technical Collaboration
 layout: post
 tags: [Project Management, Dev Essentials, Process, Review, Collaboration, Pair Programming]
 excerpt: "IBM found that every hour of code inspection saved 100 hours of related work. Pair programmers produce higher quality, more
@@ -10,6 +9,7 @@ These a few of stats supporting collaboration and review in software. Teams that
 series: Name of your series
 series_description: A concise description of your series. This should be included on every article.
 ---
+# Technical Collaboration
 
 Quote?
 
