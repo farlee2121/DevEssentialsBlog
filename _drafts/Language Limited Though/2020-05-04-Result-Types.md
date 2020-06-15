@@ -9,6 +9,8 @@ series_description: Exploring how different languages equip us to solve differen
 
 # Result Types
 
+Recap: this 
+
 Problem Statement: The happy path returns a value, but the behavior has well-known (expected) error states that should be handled.
 
 Concrete examples

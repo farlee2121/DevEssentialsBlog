@@ -41,3 +41,5 @@ Further Reading
 - https://fsharpforfunandprofit.com/posts/discriminated-unions/#single-cases
 - https://fsharpforfunandprofit.com/fppatterns/
 - https://blog.cleancoder.com/uncle-bob/2016/09/01/TheLurn.html
+<!--Uncle bob references the Sapir-whorf theor too
+ https://blog.cleancoder.com/uncle-bob/2011/12/11/The-Barbarians-are-at-the-Gates.html -->
