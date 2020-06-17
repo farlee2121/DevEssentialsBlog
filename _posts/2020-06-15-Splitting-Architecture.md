@@ -6,7 +6,7 @@ excerpt: null
 
 # Splitting Architecture
 
-I was "raised" on the iDesign school of architecture. To me architecture meant the high-level separation of concerns in the system into clients, managers, engines, accessors, and resources.
+I was "raised" on the iDesign school of architecture. To me architecture meant the high-level separation of concerns into clients, managers, engines, accessors, and resources.
 
 Overall, this is a pretty decent view. Later, I would learn of Clean Architecture, Hexagonal Architecture, Onion Architecture, and some other less known paradigms. 
 All of these jive pretty well with iDesign. They all 
@@ -14,17 +14,17 @@ All of these jive pretty well with iDesign. They all
  - systemize thought about temporal coupling and data coupling
  - protect the system from external dependencies (frameworks, databases, apis, etc) and details (display, storage paradigm, infrastructure, etc)
 
-These patterns provide a powerful vocabulary for reasoning about high level system organization. However, I found there was something missing.
+These patterns provide a powerful vocabulary for reasoning about high-level system organization. However, I found there was something missing.
 
-Systems often end up organized around entity types (database tables) or feeling like several system bundled together (with groups of call-chains that aren't really tied to each other). The bundles are better, but it's still tempting to couple them at the database. 
+Systems often ended up organized around entity types (database tables) or feeling like several system bundled together (with groups of call-chains that aren't really tied to each other). The bundles are better, but it's still tempting to couple them at the database. 
 
-Further, I would see awkward chains like EmailAccessor and EmailTemplateEngines or UserAccessor, IdentityEngine, IdentityManager. Something was wrong, these just feel like a different kind of concern than my use-case-oriented managers. These concerns both feel like they should be used different places in my other verticals and simultaneously need a stack of their own.
+Further, I would see awkward chains like EmailAccessor with EmailTemplateEngine or UserAccessor, IdentityEngine, IdentityManager. Something was wrong, these just feel like a different kind of concern than my use-case-oriented managers. These concerns both feel like they should be used different places in my other verticals and simultaneously need a stack of their own.
 
 This brings us back to a paradigm I skipped earlier: Domain Driven Design (aka DDD).
 
-For a good long while I lumped DDD in the same group as iDesign. But, I started testing it alongside iDesign and it changed how I was writing code. This led to an epiphany and the world of architecture split in two.
+For a good long while I lumped DDD in the same group as iDesign. But, I started testing it partnered with iDesign and it changed how I was writing code. This led to an epiphany and the world of architecture split in two.
 
-Certainly, DDD addresses some of the rich concerns of the other patterns with practices like anti-corruption layers. However, DDD is a fundamentally different beast. Here's why
+Certainly, DDD addresses some of the rich concerns of the other patterns with ideas like anti-corruption layers. However, DDD is a fundamentally different beast. Here's why
  - iDesign et.al. give guidance to univeral kinds of coupling relevant to every application, but little advice for separating out sub-problems of your specific application
  - DDD bends around identifying your sub-problems and  protecting them from each other
 
@@ -32,7 +32,7 @@ These are orthogonal problems. Consider hexagonal architecture for the convienie
 
 My feeling that email templating and identity management both needed to be used in my other verticals and needed a vertical of their own was correct. They are *separate domains*. They are a re-usable problem that should be Open and Closed. They should draw a boundary and offer generically flexible behavior that allows your other domains to extend them without changing them. They are they large scale of the Single Responsiblity Principle.
 
-Architecture has been split into domains and intra-domain organization. Rather, they were always separate but now the difference is clear and beautiful. More importantly, we have the power to leverage it to make understandable and flexible systems ([the classic critera for modularization](https://prl.ccs.neu.edu/img/p-tr-1971.pdf)).
+My view of architecture has been split into domains and intra-domain organization. They were really always separate but now the difference is clear and beautiful. More importantly, we have the power to leverage it to make understandable and flexible systems ([the classic critera for modularization](https://prl.ccs.neu.edu/img/p-tr-1971.pdf)).
 
 ### Other "Architectures" footnote
 There are of course other paradigms that use the name architecture, but I find they are too tied to some detail, like a communication or deployment method. The world of iDesign et. al. are intended to hide these concerns and use them as needed from behind abstractions.
