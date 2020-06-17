@@ -22,7 +22,9 @@ Further, I would see awkward chains like EmailAccessor and EmailTemplateEngines 
 
 This brings us back to a paradigm I skipped earlier: Domain Driven Design (aka DDD).
 
-For a good long while I lumped DDD in the same group as iDesign et. al., but then I had an epiphany and the world of architecture split in two. Certainly, DDD addresses some of the rich concerns of the other patterns with practices like anti-corruption layers. However, DDD is a fundamentally different beast. Here's why
+For a good long while I lumped DDD in the same group as iDesign. But, I started testing it alongside iDesign and it changed how I was writing code. This led to an epiphany and the world of architecture split in two.
+
+Certainly, DDD addresses some of the rich concerns of the other patterns with practices like anti-corruption layers. However, DDD is a fundamentally different beast. Here's why
  - iDesign et.al. give guidance to univeral kinds of coupling relevant to every application, but little advice for separating out sub-problems of your specific application
  - DDD bends around identifying your sub-problems and  protecting them from each other
 
@@ -47,5 +49,11 @@ If you're thinking micro-service architecture or event-driven architecture see
 - [Micro-Services and Jars](https://blog.cleancoder.com/uncle-bob/2014/09/19/MicroServicesAndJars.html) and [Clean Micro-Service Architecture](https://blog.cleancoder.com/uncle-bob/2014/10/01/CleanMicroserviceArchitecture.html)
 - And just for fun [The First Micro-Service Architecture](https://blog.cleancoder.com/uncle-bob/2015/05/28/TheFirstMicroserviceArchitecture.html)
 
+[Screaming Architecture](https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html) touches a bit on all of these.
+
 I also generally recommend [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) to see Uncle Bob reasoning about the different architecture methods.
+
+### Response Update
+In response to this realization, I was sent me [Finding Your Service Boundaries - Practical Guide](https://www.youtube.com/watch?v=tVnIUZbsxWI). Around the [51 minute mark](https://youtu.be/tVnIUZbsxWI?t=3017) the presenter makes a similar point while considering how we should find service boundaries (it's a good talk). 
+
 
