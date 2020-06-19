@@ -67,9 +67,9 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bundler (~> 1.12)
+  bundler (~> 2.1.4)
   rake (~> 10.0)
   type-on-strap!
 
 BUNDLED WITH
-   1.17.2
+   2.1.4
