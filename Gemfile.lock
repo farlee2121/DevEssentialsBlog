@@ -70,11 +70,11 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bundler (~> 1.12)
+  bundler (~> 2.0.1)
   jekyll-series (~> 1.0)
   jekyll-titles-from-headings (~> 0.5.3)
   rake (~> 10.0)
   type-on-strap!
 
 BUNDLED WITH
-   1.17.2
+   2.0.1
