@@ -2,10 +2,7 @@
 layout: post
 # title: Scientific Debugging
 tags: [Construction, Dev Essentials, Debugging]
-excerpt: "Studies suggest a 10x difference in productivity between average and best
-programmers.
-
-Scientific debugging is one of the skills that differentiates 10x programmers."
+excerpt: "“Finding the defect – and understanding it – is usually 90% of the work” - Steve McConnell"
 ---
 # Scientific Debugging
 

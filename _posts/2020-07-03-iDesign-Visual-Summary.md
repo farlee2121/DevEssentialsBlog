@@ -1,7 +1,8 @@
 ---
 layout: post
 tags: [Architecture, DDD, iDesign, Reading Notes]
-excerpt: 'Part 1 of Righting Software (iDesign) explained with pictures'
+strip_title: false
+excerpt: "Righting Software (definitive iDesign method book) system design principles explained with pictures"
 ---
 
 # Righting Software Visual Summary

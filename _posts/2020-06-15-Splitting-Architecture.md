@@ -1,7 +1,8 @@
 ---
 layout: post
 tags: [Pivotal Insights, Architecture, DDD, iDesign]
-excerpt: null
+strip_title: false
+excerpt: "I was 'raised' on the iDesign school of architecture. To me architecture meant the high-level separation of concerns into clients, managers, engines, accessors, and resources. ... but now there is a new level of separation"
 ---
 
 # Splitting Architecture
