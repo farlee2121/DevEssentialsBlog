@@ -57,7 +57,7 @@ It may be useful to employ a threat matrix. This is a simple tool for evaluating
 
 Building a single-use script for a personal task is low impact and low use, so it doesn’t need much planning. On the other hand, an airplane control system should probably have more planning and verification than coding.
 
-![See the source image](media/threat-matrix.png)
+![See the source image]({{site.url}}/post-media/threat-matrix.png)
 
 In general, up front planning should identify the most important features, not all features. There should be enough clarity that, if a mockup was made, everyone could agree that the goals were represented.
 
