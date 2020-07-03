@@ -8,7 +8,8 @@ excerpt: null
 
 Thus far this only includes the System Design portion of the book.
 
-## Separating
+## Separating Nature from Solutions (Domain Discovery)
+![Solution Scrubbing]({{site.url}}/post-media/../../../post-media/iDesignSolutionScubbing.png)
 
 ## Layer Guidelines
 ![Rule of Thumb Grid]({{site.url}}/post-media/iDesignRuleofThumbGrid.png)
