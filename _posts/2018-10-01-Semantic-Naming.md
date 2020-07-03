@@ -1,10 +1,10 @@
 ---
-title: Semantic Naming
 layout: post
 tags: [Construction, Dev Essentials, Naming, Code Style, Readability]
 excerpt: "Who do we write code for? This question is not often 
 considered, and so the answer is usually nobody. Thus, nobody is about who can understand and change the code."
 ---
+# Semantic Naming
 
 *There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors. - Phil Karlton*
 
