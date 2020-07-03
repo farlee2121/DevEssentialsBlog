@@ -1,11 +1,7 @@
 ---
 layout: post
 tags: [Architecture, DDD, iDesign, Reading Notes]
-<<<<<<< HEAD
 excerpt: 'Part 1 of Righting Software (iDesign) explained with pictures'
-=======
-excerpt: null
->>>>>>> 8bc374d3df377840da628b6e42cb709e37cac9fb
 ---
 
 # Righting Software Visual Summary
