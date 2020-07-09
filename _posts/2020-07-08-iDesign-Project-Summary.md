@@ -15,29 +15,23 @@ It originated in the 1940's out of the Manhattan project and is based on underst
 Lets start with how to build the graph, then dive into the data and decisions we can make from it.
 
 ## Building the graph
+use making a simple recipe as understandable and small graph
 - inputs
-  - arch components w/ dependencies
-  -   
+  - Activities with dependencies
+    - Coding activities (from arch call chains or activity diagrams)
+    - Non-coding activities (design, migrations, negotiating design contracts with other departments, acceptance tests, etc)
+  - Estimates of all activities
+    - could use PERT, historical analysis, Wideband Delphi
+  - Planning Assumptions
+  - Constraints
+    - limited resource access (i.e. no specialists, limited available developers, timeline, cost limits)
+
+(use a single edge with weight and nodes, label activities, activity dependency, estimate)
+explain why arrow is activity (takes a dense bigraph and makes it clean, were one set activities is all needed for the next set to start)
 
 ## Staffing
 
 
-
-things i need to talk about
-- staffing/resources
-- risk
-  - criticality
-- float
-- schedule (length of critical path)
-- Cost (direct & indirect, idle time)
-- execution complexity
-- compression
-  - simulators
-  - breaking apart activities
-  - better resources
-- resources effect the graph
-- efficiency? 
-- Earned value? (this one doesn't show much that isn't gleaned more clearly from other charts, well, maybe smoothness)
 
 the plan: show a graph, explain critical path, float, compression, decompression, normal. 
  - label stuff on a network. have a brief key
