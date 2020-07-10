@@ -1,12 +1,13 @@
 ---
 layout: post
 tags: [Design Thinking, System Structure, Project Structure, Synthesizing, Design Theory]
-excerpt: "A thesis on project structure from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, ..."
+excerpt: "A theory on project structure from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, ..."
+strip_title: false
 ---
 
 # Synthesizing Project Organization Methods
 
-Here's an interesting idea I thought of from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, and how many nuget packages are organized.
+How to organize code into projects/packages can be a challenge. Here's an interesting idea I thought of from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, and how many nuget packages are organized.
 
 The ideas:
 - Services as Legal Contract / Stand-alone api for part of the business nature
@@ -15,6 +16,7 @@ The ideas:
 - As tests become specific code becomes general
 - Interface Segregation 
 - Separation of abstractions and implementations
+- Reuse units = Release units
 
 ### Maximize Reuse 
 IDesign emphasizes the stand-alone reusability of services. Each service is, in a way, an api for some aspect of the nature of the business. Thus, a service shouldn't be orienting its flows to specific callers. Rather, it should favor becoming general to satisfy additional caller use-cases over adding specific paths (generalized methods are more resistant to change whereas more specific methods increase vulnerability to change).
