@@ -154,18 +154,20 @@ First off, this is all project **design**. It cannot automatically produce a suc
 That said. The book's examples seems to follow a typical flow.
 
 ### Establish the *Normal* Solution: 
-The network created from the natural activity dependencies may not be a realistic project. The staffing distribution may not be achievable, or it may violate project constraints like access to developer and specialists.
+The network created from the natural activity dependencies may not be a realistic project. The staffing distribution may not be achievable, schedule is prone to delay, or it may violate project constraints like access to developer and specialists.
 
 Your first goal is to establish the *normal solution*, or the solution that
  - has least direct cost
  - does not impede the critical path
  - is possible (doesn't violate any project constraints like unrealistic staffing)
+ - has risk under 0.7
 
 Some common tweaks to make a project possible are
 - Try splitting the project into stages to level staff curve (eg.g developing high reuse components up front)
 - Try settings realistic limits on max staff
 - Try limiting specialized resources 
 - Split out sub-projects
+- Decompress as necessary
 
 ### Compress
 With normal established, start trying to compress the graph. Realize that each iteration of compression may change the critical path, thus likely compression candiates.   
