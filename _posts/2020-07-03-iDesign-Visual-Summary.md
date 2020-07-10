@@ -10,13 +10,13 @@ excerpt: "Righting Software (definitive iDesign method book) system design princ
 Thus far this only includes the System Design portion of the book.
 
 ## Separating Nature from Solutions (Domain Discovery)
-![Solution Scrubbing]({{site.url}}/post-media/../../../post-media/iDesignSolutionScubbing.png)
+![Solution Scrubbing]({{site.url}}/post-media/IDesign-System/iDesignSolutionScubbing.png)
 
 ## Layer Guidelines
-![Rule of Thumb Grid]({{site.url}}/post-media/iDesignRuleofThumbGrid.png)
+![Rule of Thumb Grid]({{site.url}}/post-media/IDesign-System/iDesignRuleofThumbGrid.png)
 
 ## Sub-system Guidelines
-![Sub-sytem breakdown]({{site.url}}/post-media/iDesignSubsystems.png)
+![Sub-sytem breakdown]({{site.url}}/post-media/IDesign-System/iDesignSubsystems.png)
 
  - Systems are kept small to be intellectually managable. They are split on a cohesive vertical callchain, which is based around a manager and thus generally a sub-domain
  - "2% activities" are the activities that aren't the nature of you're business and so you spend little time on them. Thus, you'll never be an expert at them and you should keep them separated so that you can utilize pre-packaged solutions if needed (even if you custom implement at first). 
