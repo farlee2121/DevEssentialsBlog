@@ -1,12 +1,13 @@
 ---
 layout: post
 tags: [Design Thinking, System Structure, Project Structure, Synthesizing, Design Theory]
-excerpt: null
+excerpt: "A thesis on project structure from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, ..."
 ---
 
 # Synthesizing Project Organization Methods
 
 Here's an interesting idea I thought of from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, and how many nuget packages are organized.
+
 The ideas:
 - Services as Legal Contract / Stand-alone api for part of the business nature
 - Open-Closed Principle
