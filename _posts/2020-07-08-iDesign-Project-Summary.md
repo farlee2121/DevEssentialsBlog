@@ -199,8 +199,13 @@ This serves as a guide for accepting project conditions. Any projects with cost 
 
 ![Total Cost vs duration]()
 
+# Reservations
+This method offers quantitative insights far above any project planning method I've seen. However, it's context in Righting Software is always long-ish standalone projects. It is unclear to me how effectively this method could be applied at smaller companies. Surely the staffing constraints will greatly limit the possible solutions.
 
-   
+The bigger issue is the size of technical initiatives. Many startups or small companies don't have technical initiatives longer than a few weeks. Understanding and business plans also change much more rapidly than at big companies. It's normal for startups to completely change the nature of their business. For those pioneering new spaces, many things just might not be clear until a product or feature is already out there. 
+
+Maybe those are too extreme of scenarios expect stable insights. Maybe Kanban or Scrum are better suited to such sensitive environments. Still, I can't help but want the powerful metrics of Critical Path. 
+  
 # Asides for Math Nerds
 I focused on discrete math in my undergrad, so here are my mathy musings. 
 
