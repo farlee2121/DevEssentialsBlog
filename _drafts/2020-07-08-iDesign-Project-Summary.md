@@ -51,6 +51,7 @@ The project is *sub-critical* if you do not have enough staff to have all depend
 In the case of one developer, every activity is critical.
 ![One developer scenario]() 
 Everything off the critical path must have *float*: the amount of time it can be put off before it delays the critical path (thus delaying the project). 
+The chili graph is simple enough that we visually conclude 2 people would be enough to accomplish all non-critical activities in time for the critical path to keep moving. In fact, the second worker would really only be needed for about 16 minutes total.
 
 ### Compression
 The project can be shortened by shortening the critical path through *compression*.
