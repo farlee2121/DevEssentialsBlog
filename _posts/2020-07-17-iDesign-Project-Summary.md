@@ -2,7 +2,7 @@
 layout: post
 tags: [Architecture, DDD, iDesign, Reading Notes]
 strip_title: false
-excerpt: "Part 2 of Righting software presents the most complete theory of project management I've seen: the Critical Path Method."
+excerpt: "Part 2 of Righting Software presents the most complete theory of project management I've seen: the Critical Path Method."
 ---
 
 # Righting Software - Project Design Summary
@@ -10,7 +10,7 @@ excerpt: "Part 2 of Righting software presents the most complete theory of proje
 Part 2 of Righting software presents the most complete theory of project management I've seen: the [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method). 
 
 It originated in the 1940's out of the Manhattan project and is based on understanding project dependencies as a graph or network. For example,
-![Network example](). While conceptually simple, this opens up the whole field of math known as graph theory as a tool for understanding properties of our projects like: duration, cost, stability, and staffing.
+![Network example]({{site.url}}/post-media/IDesign-Projects/Netword-Effort.png). While conceptually simple, this opens up the whole field of math known as graph theory as a tool for understanding properties of our projects like: duration, cost, stability, and staffing.
 
 Lets start with how to build the graph, then dive into the data and decisions we can make from it.
 
