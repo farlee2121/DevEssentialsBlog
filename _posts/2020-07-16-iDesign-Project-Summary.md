@@ -9,7 +9,7 @@ strip_title: false
 Part 2 of Righting software presents the most complete theory of project management I've seen: the [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method). 
 
 It originated in the 1940's out of the Manhattan project and is based on understanding project dependencies as a graph or network. For example,
-  ![Network example]({{site.url}}/post-media/IDesign-Projects/Netword-Effort.png).
+  ![Network example]({{site.url}}/post-media/IDesign-Projects/Network-Effort.svg).
 
  While conceptually simple, this opens up the whole field of math known as graph theory as a tool for understanding properties of our projects like: duration, cost, stability, and staffing.
 
@@ -26,23 +26,23 @@ The most basic info to build the graph is
   - Estimates of all activities
     - could use PERT, historical analysis, Wideband Delphi
 
+![Labeled graph parts]({{site.url}}/post-media/IDesign-Projects/Network-LabeledParts.svg)
+
 To interpret the graph you should also record 
   - Planning Assumptions
   - Constraints
     - limited resource access (i.e. no specialists, limited available developers, timeline, cost limits)
 
 Here's the example for making chili.
-![Chili activity network]()
+![Chili activity network]({{site.url}}/post-media/IDesign-Projects/Network-Effort.svg)
 
 Notice that the activities are the edges and dependencies are nodes. That's because the common scenario of many-to-many dependencies(where a collection tasks all need to finish in order for any in another set to begin.
-![Arrow vs Node Graph]()
-(use a single edge with weight and nodes, label activities, activity dependency, estimate)
-explain why arrow is activity (takes a dense bigraph and makes it clean, were one set activities is all needed for the next set to start)
+![Arrow vs Node Graph]({{site.url}}/post-media/IDesign-Projects/Network-WhyArrowGraph.svg)
 
 ## Schedule
 ### Critical Path
 The minimum duration of your project is the network's diameter, or the length of the slowest minimal dependency chain in the network.
-![Critical Path Example]() // label floats too
+![Critical Path Example]({{site.url}}/post-media/IDesign-Projects/Network-Floats.svg)
 
 This path assumes you can complete every dependency off the critical path before it delays a critical activity.
 The project is *sub-critical* if you do not have enough staff to have all dependencies ready for the critical path. This effectively creates a new critical path by adding artificial (or resource-limitation) dependencies to the work that can't be done fast enough.
@@ -50,8 +50,8 @@ The project is *sub-critical* if you do not have enough staff to have all depend
 > *Sub-critical* ~= understaffed
 
 In the case of one developer, every activity is critical.
-![One developer scenario]() 
-Everything off the critical path must have *float*: the amount of time it can be put off before it delays the critical path (thus delaying the project). 
+![One developer scenario]({{site.url}}/post-media/IDesign-Projects/Network-Sub-critical.svg) 
+Everything off the critical path must have *float*: the amount of time the activity (and dependencies) can be put off before it delays the critical path (thus delaying the project). 
 The chili graph is simple enough that we visually conclude 2 people would be enough to accomplish all non-critical activities in time for the critical path to keep moving. In fact, the second worker would really only be needed for about 16 minutes total.
 
 ### Compression
@@ -62,25 +62,29 @@ Types of compression
 - Break down an activity to separate chains (i.e. separate UI design from UI implementation)
 - Forcefully split chains by designing to a contract and later integrating
 
-![Breakdown activity example]()
-![Design to Contract example]()
-
 > Compression should always be done on the critical path (or it won't shorten the project).
 
 Splitting tasks allows more parallel work, but may require more developers and increases complexity of running the project.
 
+A common example would be splitting work around the UI.
+![Compressible Activity]({{site.url}}/post-media/IDesign-Projects/Network-Compressible.svg)
+
+We can increase parallel work and shorten the critical path by splitting out the UI design.
+![Split activity example]({{site.url}}/post-media/IDesign-Projects/Network-InternalSplit.svg)
+
+We can also completely parallelize UI and logic development by designing to a contract/simulator if the UI or business logic work will be exceptionally time consuming. Note that this incurs extra work to build a simulator and integrate the real logic later. Remember to weigh the extra effort when exploring this tactic.
+![Design to Contract example]({{site.url}}/post-media/IDesign-Projects/Network-SimulatorSplit.svg)
+
 It's worth noting that some compression usually pays for itself in reduced indirect cost, but projects usually only be compressed about 30%.
 
 ### Decompression
-*Decompression* is adding artificial float (generally to critical path). This lengthens the project and decreases risk. Think of it as a calculated safty buffer.
+*Decompression* is adding artificial float (generally to critical path). This lengthens the project and decreases risk. Think of it as a calculated safety buffer.
 
 ## Staffing
 The network allows you to plot what staff/resources will be needed over time in the project. Start with a bar chart that assumes staff is always and only employed when you need them.
 
 This shows how realistic ideal staffing is for your project.
-![Good and bad staff charts]()
-//show unattainable solutions and attainable (red x and green check)
-  // - brief description of criteria (no dropoffs, no oscillating, sub-critical:understaffed or idle developers)
+![Good and bad staff charts]({{site.url}}/post-media/IDesign-Projects/StaffExamples.png)
 
 If your staff curve is not practical you might 
  - compress to provide more parallel work options
@@ -96,12 +100,10 @@ If your staff curve is not practical you might
 
 Note that while project design affects staffing, thus direct cost, the project duration also affects indirect cost. Thus adding staff to shorten a project can pay for itself, to a point.
 
-![Cost over Time]()
-- all one visual with brief definitions
-   - direct cost (activity time)
-   - indirect cost (linear function)
-   - Total cost (make sure death zone is evident)
- - Show risk/cost crossovers?
+![Cost over Time]({{site.url}}/post-media/IDesign-Projects/CostCurves.png){: style="display:inline; width:50%; min-width: 400px; padding: 0;"}
+![Death Zone]({{site.url}}/post-media/IDesign-Projects/DeathZone.png){: style="display:inline; width:40%;min-width: 300px;padding: 0;"}
+
+
 ## Efficency
 Project efficiency is the sum of all activity efforts without regard to workdays or idle time over the sum of actual effort accounting for idle time and workdays.
 
@@ -125,20 +127,22 @@ In practice, this should always be
 $C = (\text{\# Dependencies}) - (\text{\# Activities}) + 2$
 
 Target values are $10 \le C \le 12$ and 15 is too complex to execute.
-![High vs low complexity chart]()
+
+Example: while both somewhat complex, I think it's clear which of these graphs has less entangled activity dependencies.
+![High Complexity]({{site.url}}/post-media/IDesign-Projects/Network-Complex.svg)
+![Lower Complexity]({{site.url}}/post-media/IDesign-Projects/Network-Simple.svg)
 
 ## Risk
 Risk can be calculated multiple ways but there are two main formulas. 
 
-Risk as a decision tool is best understood when piecing everything together. We'll revisit risk in the [All Together](#all-together) section, but the general rule is that risk should be  
-$0.4 \le \text{risk} \le 0.75$
+Risk as a decision tool is best understood when piecing everything together. We'll revisit risk in the [All Together](#all-together) section, but the general rule is that risk should be $0.4 \le \text{risk} \le 0.75$
 
 Keep in mind that risk is not a probability, but an index. It only shows relative likelyhood of failure.  
 
 ### Criticality risk
 *Criticality risk* is based on grouping the activity floats into G groups and assigning a weight to each group. Typically $G = 4$ and the groups are critical=4, high=3, medium=3, and low=1.
 
-$Risk = \frac{\sum\limits_{i=1}^G{W_i*\text{Count}_i}}{W_c*(\text{Total Activities})}$
+$$Risk = \frac{\sum\limits_{i=1}^G{W_i*\text{Count}_i}}{W_c*(\text{Total Activities})}$$
 
 Effectively, the sum of activity risk weights over the sum if every activity were critical.  
 This method works well with even float distributions and has low sensitivity to outliers
@@ -146,7 +150,7 @@ This method works well with even float distributions and has low sensitivity to 
 ### Activity risk
 *Activity risk* is the sum of all activity floats over the sum if every activity had the maximum float.
 
-$Risk = 1-\frac{\sum\limits_{i=1}^N{Float_i}}{(\text{Max Float})*(\text{Total Activities})}$  
+$$Risk = 1-\frac{\sum\limits_{i=1}^N{Float_i}}{(\text{Max Float})*(\text{Total Activities})}$$ 
 
 This method is more sensitive to individual activities. It will generally be close to criticality risk unless there is an uneven distribution of risk that should be investigated.
 
