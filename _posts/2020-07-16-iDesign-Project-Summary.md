@@ -100,10 +100,7 @@ If your staff curve is not practical you might
 
 Note that while project design affects staffing, thus direct cost, the project duration also affects indirect cost. Thus adding staff to shorten a project can pay for itself, to a point.
 
-![Cost over Time]({{site.url}}/post-media/IDesign-Projects/CostCurves.png){: style="display:inline; width:50%; min-width: 400px; padding: 0;"}
-![Death Zone]({{site.url}}/post-media/IDesign-Projects/DeathZone.png){: style="display:inline; width:40%;min-width: 300px;padding: 0;"}
-
-
+![Cost over Time]({{site.url}}/post-media/IDesign-Projects/CostCurves.png)
 ## Efficency
 Project efficiency is the sum of all activity efforts without regard to workdays or idle time over the sum of actual effort accounting for idle time and workdays.
 
@@ -112,9 +109,8 @@ Target range is $15\% \le \text{efficiency} \le 25\%$. Over 30% is likely too ri
 ## Earned Value
 *Earned value* is essentially % project completion over time. More specifically, it is the sum of the effort on completed tasks.
 
-The network allows us to plot the expected curve right away, which can reveil potential issues
-![Earned value comparison]()
-//- Show lumpy (impractical staffing), too steep (high-risk), too shallow (sub-critical), good
+The network allows us to plot the expected curve right away, which can reveal potential issues
+![Earned value comparison]({{site.url}}/post-media/IDesign-Projects/EarnedValue.png)
 
 ## Complexity
 A project can be complicated to deliver for many reasons: politics, pandemics, changing markets, etc. 
@@ -204,8 +200,8 @@ Pick the ones that give management the best value trade-offs between duration co
 It's also wise to use a regression tool to find a best-fit curve of the solution Total Cost over Duration points.
 
 This serves as a guide for accepting project conditions. Any projects with cost and duration above the line are possible. Any under the line are impossible and should be killed immediately.
+![Total Cost vs duration]({{site.url}}/post-media/IDesign-Projects/DeathZone.png)
 
-![Total Cost vs duration]()
 
 # Reservations
 This method offers quantitative insights far above any project planning method I've seen. However, it's context in Righting Software is always long-ish standalone projects. It is unclear to me how effectively this method could be applied at smaller companies. Surely the staffing constraints will greatly limit the possible solutions.
