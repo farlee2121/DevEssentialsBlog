@@ -208,7 +208,7 @@ Graph the cost vs duration for each compressed solution. Repeat until you start 
 - complexity is too high
 - costs exceed project limits
 
-![Cost vs duration]() // reaching asymptote
+![Cost vs duration]({{site.url}}/post-media/IDesign-Projects/CompressionPlot.png)
 
 ### Decompress
 Decompress the normal solution and/or compressed solutions with favorable risk values. Try adding different amounts of float to see how each amount changs cost and risk. Plot risk and total cost versus duration for all solutions.
@@ -218,7 +218,7 @@ Stop condidions
  - passed likely project duration limits
  - risk starts decreasing slowly (much past point of minimum decompression)
 
-![Cost and Risk vs Duration]()
+![Cost and Risk vs Duration]({{site.url}}/post-media/IDesign-Projects/CostAndRiskPlot.png)
 
 ### Pick 3(ish)  
 Pick the solutions that give management the best value trade-offs between duration, cost, and risk from the Cost & Risk vs Project Duration plot assembled in previous steps.
