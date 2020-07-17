@@ -16,6 +16,8 @@ It originated in the 1940's out of the Manhattan project and is based on underst
 
 Lets start with how to build the graph, then dive into the data and decisions we can make from it.
 
+---
+
 ## Building the graph
 The most basic info to build the graph is
   - Activities 
@@ -26,7 +28,7 @@ The most basic info to build the graph is
   - Estimates of all activities
     - could use PERT, historical analysis, Wideband Delphi
 
-These components are then represented as
+These components are then represented in the graph as
 
 ![Labeled graph parts]({{site.url}}/post-media/IDesign-Projects/Network-LabeledParts.svg)
 
@@ -44,27 +46,29 @@ Notice that the activities are the edges and dependencies are nodes. That's beca
 ![Arrow vs Node Graph]({{site.url}}/post-media/IDesign-Projects/Network-WhyArrowGraph.svg)
 
 ---
-## Schedule
-The network represents a complete map of activity dependencies and estimates (as far as we understand them). This organization yields powerful insights on schedule. We can calculate when any work item could theoretically start and how long the project will take overall. We can also simulate staffing options to calculate the expected schedule with the given resources.
 
-### Critical Path
+## Making Decisions
+### Schedule
+The network represents a complete map of activity dependencies and estimates (as far as we understand them). This organization yields powerful insights on schedule. We can calculate when any work item could theoretically start and how long the project will take overall. We can also simulate staffing options and calculate the impact on schedule.
+
+**Critical Path**  
 The minimum project length for any staffing is determined by the network's diameter, or the *critical path*. Formally stated, this is the length of the slowest minimal dependency chain in the network.
 
 ![Critical Path Example]({{site.url}}/post-media/IDesign-Projects/Network-Floats.svg)
 
 This path assumes you can complete every dependency off the critical path before it delays a critical activity.
-The project is *sub-critical* if you do not have enough staff to have all dependencies ready for the critical path. This effectively creates a new critical path by adding artificial (or resource-limitation) dependencies to the work that can't be done fast enough.
+The project is *sub-critical* if you do not have enough staff to finish all dependencies before they delay the critical path. Being sub-critical effectively creates a new critical path by adding artificial (or resource-limitation) dependencies to any work that can't be done fast enough.
 
 > *Sub-critical* $\approx$ understaffed
 
-In the case of one developer, every activity is critical.
+For example, with one developer, every activity is critical because only one activity can be done at a time.
 
 ![One developer scenario]({{site.url}}/post-media/IDesign-Projects/Network-Sub-critical.svg) 
 
 Everything off the critical path must have *float*: the amount of time the activity (and dependencies) can be put off before it delays the critical path (thus delaying the project). 
-The chili graph is simple enough that we visually conclude 2 people would be enough to accomplish all non-critical activities in time for the critical path to keep moving. In fact, the second worker would really only be needed for about 16 minutes total.
+The chili graph is simple enough that we can visually conclude 2 people would be enough to accomplish all non-critical activities in time for the critical path to keep moving. In fact, the second worker would really only be needed for about 16 minutes total.
 
-### Compression
+**Compression**  
 The project can be shortened by shortening the critical path through *compression*.
 
 Types of compression
@@ -90,12 +94,12 @@ Splitting tasks allows more parallel work, but may require more developers and i
 
 It's worth noting that some compression usually pays for itself by reducing the project duration and thus reducing indirect costs. However, projects can usually only be compressed about 30%.
 
-### Decompression
-*Decompression* is adding artificial float (generally to critical path). This lengthens the project and decreases [risk](#risk). Think of it as a calculated safety buffer.
+**Decompression**  
+*Decompression* is adding artificial float. Generally the float is added to critical path, else it wouldn't change the project schedule. This lengthens the project and decreases [risk](#risk). Think of it as a calculated safety buffer.
 
----
 
-## Staffing
+
+### Staffing
 Suppose we didn't make any assumptions about available staff. The network with only natural activity dependencies can also be used to measure how much work could be done in parallel at any point in the project. This also means we know how much staff is expected at any point in the project. Plotting this staffing analysis as a bar chart reveals how realistic the project currently is, and what kind of changes might yield a project with realistic staff expectations.
 
 Here are some example scenarios and what they say about the project
@@ -107,7 +111,7 @@ If your staff curve is not practical you might
  - try assuming the staffing levels and see how it effects network
  - Introduce forced stages/milestones in the project
 
-## Cost
+### Cost
 The classic and surprisingly complex question, project cost. We've already seen how the network provides quantitative measures for time and staff. This gives us the information needed to calculate the components of cost
 
 - *Direct Cost*: Cost incurred on activities in the network. More generally, cost for work that advances project completion. Think developer time.  
@@ -121,18 +125,18 @@ Note that while project design affects staffing, thus direct cost, the project d
 
 ![Cost over Time]({{site.url}}/post-media/IDesign-Projects/CostCurves.png)
 
-## Efficency
+### Efficency
 In essence, efficiency is how much of your staff's time is idle versus actively contributing to project completion. The critical path method calculates *project efficiency* as the sum of all activity efforts without regard to workdays or idle time over the sum of actual effort accounting for idle time and workdays.
 
 Target range is $15\% \le \text{efficiency} \le 25\%$. Over 30% is likely too rigorous for any team to execute and high-risk. This number is much lower than expected, largely due to the difference between the work week and raw sum off effort without respect to work days.
 
-## Earned Value
+### Earned Value
 *Earned value* is essentially % project completion over time. More specifically, it is the sum of the effort on completed tasks.
 
 The network allows us to plot the expected curve right away, which can reveal potential issues. For example
 ![Earned value comparison]({{site.url}}/post-media/IDesign-Projects/EarnedValue.png)
 
-## Complexity
+### Complexity
 A project can be complicated to deliver for many reasons: politics, pandemics, changing markets, etc. 
 Many of these factors can't be calculated and are also consistent across project plans. However, the difficulty based on work distribution and communication very much depends on the project design.
 
@@ -149,14 +153,14 @@ Example: while both somewhat complex, I think it's clear which of these graphs h
 ![High Complexity]({{site.url}}/post-media/IDesign-Projects/Network-Complex.svg)
 ![Lower Complexity]({{site.url}}/post-media/IDesign-Projects/Network-Simple.svg)
 
-## Risk
-Schedule, cost, and staff are all measures that could be estimated from past experience (though with much less flexible decision power). However, reliably quantifying risk was previously unattainable. Now risk can be mechanically calculated using two main formulas. 
+### Risk
+Schedule, cost, and staff are all measures that could be estimated from past experience (though with much less flexible decision power). However, reliably quantifying risk was previously unattainable. Now risk can be mechanically calculated using two main formulas: criticality risk and activity risk. 
 
 Risk as a decision tool is best understood when piecing everything together. We'll revisit risk in the [All Together](#all-together) section, but the general rule is that risk should be $0.4 \le \text{risk} \le 0.75$
 
 Keep in mind that risk is not a probability, but an index. It only shows relative likelyhood of failure.  
 
-### Criticality risk
+**Criticality risk**  
 *Criticality risk* is based on grouping the activity floats into G groups and assigning a weight to each group. Typically $G = 4$ and the groups are critical=4, high=3, medium=3, and low=1.
 
 $$Risk = \frac{\sum\limits_{i=1}^G{W_i*\text{Count}_i}}{W_c*(\text{Total Activities})}$$
@@ -164,7 +168,7 @@ $$Risk = \frac{\sum\limits_{i=1}^G{W_i*\text{Count}_i}}{W_c*(\text{Total Activit
 Effectively, the sum of activity risk weights over the sum if every activity were critical.  
 This method works well with even float distributions and has low sensitivity to outliers
 
-### Activity risk
+**Activity risk**  
 *Activity risk* is the sum of all activity floats over the sum if every activity had the maximum float.
 
 $$Risk = 1-\frac{\sum\limits_{i=1}^N{Float_i}}{(\text{Max Float})*(\text{Total Activities})}$$ 
@@ -178,8 +182,8 @@ First off, this is all project **design**. It cannot automatically produce a suc
 
 That said. The book's examples seems to follow a typical flow.
 
-### Establish the *Normal* Solution: 
-The network created from the natural activity dependencies may not be a realistic project. The staffing distribution may not be achievable, schedule is prone to delay, or it may violate project constraints like practical access to developers and specialists.
+### Establish the *Normal* Solution
+The network created from the natural activity dependencies may not be a realistic project. The staffing distribution may not be achievable, schedule could be prone to delay, or it may violate project constraints like practical access to developers and specialists.
 
 Your first goal is to establish the *normal solution*, or the solution that
  - has least direct cost
@@ -210,9 +214,9 @@ Graph the cost vs duration for each compressed solution. Repeat until you start 
 Decompress the normal solution and/or compressed solutions with favorable risk values. Try adding different amounts of float to see how each amount changs cost and risk. Plot risk and total cost versus duration for all solutions.
 
 Stop condidions
- - hit bottom of target risk range ($.3 \le risk \le .75$)
- - pass likely project duration limits
- - Risk starts decreasing slowly (much past point of minimum decompression)
+ - hit bottom of target risk range ($.4 \le risk \le .75$)
+ - passed likely project duration limits
+ - risk starts decreasing slowly (much past point of minimum decompression)
 
 ![Cost and Risk vs Duration]()
 
@@ -225,14 +229,16 @@ This serves as a guide for accepting project conditions. Any projects with cost 
 
 ![Total Cost vs duration]({{site.url}}/post-media/IDesign-Projects/DeathZone.png)
 
-# Summary & Reservations
-This method offers quantitative insights far above any project planning method I've seen. It allows planners to not just create one good plan, but to understand the impact of different forces on their project and create a spectrum of options.
+---
 
-However, it's context in Righting Software is always long-ish standalone projects. It is unclear to me how effectively this method could be applied at smaller companies. Surely the staffing constraints will greatly limit the possible solutions.
+# Summary & Reservations
+The Critical Path Method offers quantitative insights far above any project planning method I've seen. It allows planners to not just create one good plan, but to understand the impact of different forces on their project and create a spectrum of options.
+
+However, its context in Righting Software is always long-ish standalone projects. It is unclear to me how effectively this method could be applied at smaller companies. I would at least expect staffing constraints to greatly limit the possible solutions.
 
 The bigger issue is the size of technical initiatives. Many startups or small companies don't have technical initiatives longer than a few weeks. Understanding and business plans also change much more rapidly than at big companies. It's normal for startups to completely change the nature of their business. For those pioneering new spaces, many things just might not be clear until a product or feature is already out there. 
 
-Maybe those are too extreme of scenarios expect stable insights. Maybe Kanban or Scrum are better suited to such sensitive environments. Still, I can't help but want the powerful metrics of Critical Path. 
+Maybe those are too extreme of scenarios to expect stable insights. Maybe Kanban or Scrum are better suited to such sensitive environments. Still, I can't help but want the powerful metrics of Critical Path. 
   
 # Asides for Math Nerds
 I focused on discrete math in my undergrad, so here are my mathy musings. 
@@ -247,11 +253,14 @@ I'd also be interested to see
  - what do we know about sub-graph patterns (like directed diamonds) that could be useful?
    - Could we identify complete bigraphs as a measure of risk or complexity?
  - does reachability tell us anything different than float?
- - is the number of leaves (sources) a meaningful measure of complexity or risk?
+ - is the number of leaves (sources in this case) a meaningful measure of complexity or risk?
  - are ears useful for compressing a graph? Splitting projects?
 
 Observations that are probably minimally helpful
 - the only sink should be the end of the project. 
   - I suppose this could be multiple tasks if you don't have a final milestone node
 - Any cycles signify self-dependent activities and are impossible to schedule
-- The critical path is the graph's diameter (since there is effectively one sink, the critical path is going to be the shortest path to that final sink from it's furthest node, so yes, that is the diameter)
+
+Other math notes from the book
+ - The point of minimum decompression is the inflection point of the risk curve. In other words, it is the point where decrease in risk for time added has zero acceleration. Any point before that will have increasing returns for added time and any point after will have decreasing returns.
+ - Risk-Cost Crossover: The derivatives of risk and direct cost should cross over at two points (because risk is cubic and cost is quadradic). These are where the risk limits of .3 and .75 are estimated from. 
