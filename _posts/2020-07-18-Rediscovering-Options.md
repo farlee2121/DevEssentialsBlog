@@ -1,4 +1,3 @@
-Setup what i've tried, what i've landed on, and then use specific cases to demonstrate the difference
 ---
 layout: post
 tags: [Architecture, DDD, iDesign, Reading Notes]
