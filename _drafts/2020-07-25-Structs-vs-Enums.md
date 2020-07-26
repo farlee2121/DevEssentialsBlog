@@ -80,7 +80,7 @@ It's worth noting that you wouldn't have to use a struct. The same would work wi
 Discriminated unions can also accomodate this scenario and are overall a much more powerful tool. Alas, most OO languages are not graced with them yet.
 
 ## Design Comparison
-Thishis situation highlighted three design alternatives. Here is their stengths and weaknesses in table form
+This situation highlighted three design alternatives. Here is their stengths and weaknesses in table form
 
 <style>
 td{ text-align:center;}
