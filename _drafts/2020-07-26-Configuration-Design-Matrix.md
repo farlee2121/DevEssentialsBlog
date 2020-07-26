@@ -17,7 +17,6 @@ For review, the design options are
 - Accessor: Easy-ish: Add a method to the relevant type. Potentially create a new config accessor and add it to the composition root
 - Options: Easy: Add a property to the relevant type. Potentially create a new config data type and inject it to the composition root 
 
-TODO: try normalizing the location of the icon in the cell, perhaps increasing size
 <style>
 td{ text-align:center;}
 .good:before,.ok:before,.bad:before,.very-bad:before{
@@ -65,17 +64,17 @@ td{ text-align:center;}
     </tr>
     <tr>
         <td><strong>Change config storage (i.e. database, json, xml)</strong></td>
-        <td><span class="very-bad"><span>must change every module that uses configuration<td>
+        <td><span class="very-bad"><span>Must change every module that uses configuration<td>
         <td><span class="ok"><span>Only need to change the static configuration helper, but every caller is potentially exposed to changed behavior or errors.<td>
         <td><span class="good"><span>The source can be changed per configuration value independently. Only the changed values need to be tested and redeployed. <td>
         <td><span class="good"><span>The source can be changed per configuration value independently. Only the changed values need to be tested and redeployed. It is likely that you will fetch all configuration values for a given type from the same sources though. Still only affects the one component<td>
     </tr>
     <tr>
         <td><strong>Pull from multiple config sources. (different values from different stores)</strong></td>
-        <td><span class="bad"><span>possible, have must change every component that wants a different store<td>
-        <td><span class="ok"><span>possible but awkward. Requires internal lookup of config keys to expected store<td>
-        <td><span class="good"><span>easily defined per value<td>
-        <td><span class="good"><span>easily defined per type and not very hard per value<td>
+        <td><span class="bad"><span>Possible, have must change every component that wants a different store<td>
+        <td><span class="ok"><span>Possible but awkward. Requires internal lookup of config keys to expected store<td>
+        <td><span class="good"><span>Easily defined per value<td>
+        <td><span class="good"><span>Easily defined per type and not very hard per value<td>
     </tr>
     <tr>
         <td><strong>Pull from multiple config sources (same value coming from a prioritized list of sources)</strong></td>
@@ -87,16 +86,16 @@ td{ text-align:center;}
     <tr>
         <td><strong>Run parallel tests with different configuration values</strong></td>
         <td><span class="very-bad"><span>Depends on framework. Probably not possible or at least non-trivial<td>
-        <td><span class="very-bad"><span>not possible<td>
-        <td><span class="good"><span>possible, requires mocking<td>
+        <td><span class="very-bad"><span>Not possible<td>
+        <td><span class="good"><span>Possible, requires mocking<td>
         <td><span class="good"><span>Possible, does not require mocking<td>
     </tr>
     <tr>
         <td><strong>Use same component with different configuration in different parts of the system (i.e. Connect to two databases to transfer data. Access a different data store with same schema for different use cases)</strong></td>
         <td><span class="very-bad"><span>Not possible<td>
         <td><span class="very-bad"><span>Not possible<td>
-        <td><span class="ok"><span>possible but not elegant<td>
-        <td><span class="good"><span>possible and easy<td>
+        <td><span class="ok"><span>Possible but not elegant<td>
+        <td><span class="good"><span>Possible and easy<td>
     </tr>
     <tr>
         <td><strong>Enable configuration values per culture/language</strong></td>
@@ -108,16 +107,16 @@ td{ text-align:center;}
     <tr>
         <td><strong>White label platform, load config per whitelabel customer allowing shared infrastructure with different behavior and potentionally different storage/resources</strong></td>
         <td><span class="very-bad"><span>Same as above<td>
-        <td><span class="very-bad"><span>Cannot reliably manage more than one customer per deployment since static values are shared between threads and instances. Causes significant concurrency issues.<td>
+        <td><span class="very-bad"><span>Significant concurrency issues.<td>
         <td><span class="good"><span>Same as above<td>
         <td><span class="good"><span>Same as above<td>
     </tr>
     <tr>
         <td><strong>Re-use component directly from a new client (i.e. console app as a quick utility)</strong></td>
         <td><span class="very-bad"><span>configuration needed by component is completely opaque. Have to look at code or run it and see errors to know what values are needed. The new client must reference the same configuration framework and have the same configuration resources (i.e. files)<td>
-        <td><span class="very-bad"><span>same as direct, must also drag the static config utility into the new client. Helper likely exposes all of the possible configuration values from the rest of the system whether relevant or not.<td>
+        <td><span class="very-bad"><span>Same as direct, must also drag the static config utility into the new client. Helper likely exposes all of the possible configuration values from the rest of the system whether relevant or not.<td>
         <td><span class="bad"><span>Either implement a new accessor or setup the same resources as the old use case.<td>
-        <td><span class="good"><span>trivial to manually bind configuration or use a different binding framework.<td>
+        <td><span class="good"><span>Trivial to manually bind configuration or use a different binding framework.<td>
     </tr>
     <tr>
         <td><strong>Move component to a new system</strong></td>
