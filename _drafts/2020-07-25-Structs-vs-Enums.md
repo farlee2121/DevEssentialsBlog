@@ -80,23 +80,85 @@ It's worth noting that you wouldn't have to use a struct. The same would work wi
 Discriminated unions can also accomodate this scenario and are overall a much more powerful tool. Alas, most OO languages are not graced with them yet.
 
 ## Design Comparison
-At the it's heart, this situation brought three design alternatives to light and highlighted their stengths and weaknesses
-- Enums, primitive named constants, struct named constants
+Thishis situation highlighted three design alternatives. Here is their stengths and weaknesses in table form
 
-volatilities
-- add value at write time
-  - write-time only for enum
-- Accomodate Unknown values / Add values at runtime
-- Consistent, discoverable write-time references
-- remove value
-- Type enforced
-- Shared operations (i.e. get display string, map to different type, etc)
-  - sorta for all, named constants is more convention-based
-- Additional properties
-  - just structs
-- Guarenteed limited set of values 
-- enumerate values when you don't control the executing code
-
+<style>
+td{ text-align:center;}
+.good:before {
+    color: green;
+    content: "\2713\0020";
+}
+.ok:before{
+    color: yellow;
+    content: "~ "
+}
+.bad:before{
+    color: red;
+    content: "X ";
+}
+</style>
+<table>
+    <tr>
+        <th width="200px"></th>
+        <th>Enums<th>
+        <th>Primitive Constants<th>
+        <th>Struct Constants<th>
+    </tr>
+    <tr>
+        <td><strong>Add values at write time</strong></td>
+        <td><span class="good"><span><td>
+        <td><span class="good"><span><td>
+        <td><span class="good"><span><td>
+    </tr>
+    <tr>
+        <td><strong>Add values at runtime (accomodate unknown values)</strong></td>
+        <td><span class="bad"><span><td>
+        <td><span class="good"><span><td>
+        <td><span class="good"><span><td>
+    </tr>
+    <tr>
+        <td><strong>Consistent, discoverable write-time refrences</strong></td>
+        <td><span class="good"><span><td>
+        <td><span class="good"><span><td>
+        <td><span class="good"><span><td>
+    </tr>
+    <tr>
+        <td><strong>Remove Values</strong></td>
+        <td><span class="good"><span>The most restricted, thus easiest<td>
+        <td><span class="good"><span><td>
+        <td><span class="good"><span><td>
+    </tr>
+    <tr>
+        <td><strong>Type Enforced</strong></td>
+        <td><span class="good"><span><td>
+        <td><span class="bad"><span><td>
+        <td><span class="good"><span><td>
+    </tr>
+    <tr>
+        <td><strong>Centralized operations (i.e. get display string, mapping, etc)</strong></td>
+        <td><span class="ok"><span> A bit awkard in C# because of special typing<td>
+        <td><span class="ok"><span>By convention<td>
+        <td><span class="good"><span><td>
+    </tr>
+    <tr>
+        <td><strong>Additional Properties</strong></td>
+        <td><span class="bad"><span><td>
+        <td><span class="bad"><span><td>
+        <td><span class="good"><span><td>
+    </tr>
+    <tr>
+        <td><strong>Guaranteed limited set of values</strong></td>
+        <td><span class="good"><span><td>
+        <td><span class="bad"><span><td>
+        <td><span class="ok"><span>Can use a class instead to make all constructors private<td>
+    </tr>
+    <tr>
+        <td><strong>Enumerate values when you don't control the executing code</strong></td>
+        <td><span class="bad"><span><td>
+        <td><span class="good"><span><td>
+        <td><span class="ok"><span>Can have the raw value as a property<td>
+    </tr>
+</table>
 
 Note the situation of not controlling the executing code. This is an important scenario. Frameworks may allow you to customize your usage through consistent use of values. For example, tagging or configuration where values are referenced by keys. In this case you do not own the code being extended and do not control the types that it uses. However, you do own the semantics for you're well known scenarios created on top of its type system. This is a prime case for primitive named constants. The named constants allow you to organize and enumerate your customizations while maintaining easy integration with the framework's existing types. 
 
