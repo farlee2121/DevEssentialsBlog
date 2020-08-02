@@ -16,6 +16,9 @@ Should I just pose this as a checkin?
     - think of token provider 
     - thing about notifications. went from managers knowing about emails and organizing their generation to only firing an event. anything could happen off that event. It's hard for it to screw up passing just an id and an event type
   - thinking only of service and not knowing specific needs of callers means that extensibility is more generic. Can't goof anything related to consumers because you don't know about any of their concerns. I.e. messaging system can't mess up grabbing campaign data because it doesn't know that it's organized by campaign. Or think of token provider. Can't internally cross token purposes because it doesn't know about any specific ones. Purposes are always from the caller 
+- Where do Utilities live? Resources?
+  - utilities are external frameworks essentially, consumed via adapters against service interfaces. possibly shared abstractions
+  - What about resources? iDesign they supposedly live below accessors, but also behind utilities. It's pretty much the same here. It's just less spatially clear
 
 general scheme of post(s)
 Post 1: design changes 
