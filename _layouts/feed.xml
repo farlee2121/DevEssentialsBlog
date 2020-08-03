@@ -11,7 +11,7 @@
             <title>{{ post.title | xml_escape }}</title>
             <link>{{ post.url | relative_url }}</link>
             <guid isPermaLink="true">{{ post.url | relative_url }}</guid>
-            <description>{{ post.content | xml_escape }}</description>
+            <description>{{ post.excerpt | xml_escape }}</description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         </item>
         {% endfor %}
