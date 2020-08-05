@@ -5,7 +5,7 @@ tags: [Architecture, Patterns, Design thinking, Volatility Analysis, Case Study]
 
 # Why Static Structs are Better Than Enums
 
-C# (and Java) offer a type call Enum. It represents a fixed list of possible values and is a powerful tool for communicating intentions through the type system. However, a recent legacy project forced me to face Enum's shortcomings and realize an even more powerful pattern, struct named constants.
+C# (and Java) offer a type call Enum (aka enumeration). It represents a fixed list of possible values and is a powerful tool for communicating intentions through the type system. However, a recent legacy project forced me to face Enum's shortcomings and realize an even more powerful pattern, struct named constants.
 
 ## The Problem
 I was working on an old golf-related program. This code was... special. One of it's many problems was the inconsistent use of literals all throughout the code. It was common to see sections like
@@ -14,7 +14,7 @@ if(club.Type == "I") //...
 else if (club.Type == "W")//...
 else if (club.Type == "D")//...
 ```
-First, the use of literals is a very bad idea. Every time club type is referenced is rife with chances for bugs: 
+First, the use of literals is a very bad idea. Every time these literals are referenced is rife with chances for bugs: 
 - what if you type it lower case?
 - what if you don't remember all of the potential cases?
 - what if the literals aren't obvious and someone mis-remembers? (Does `W` mean wedge or wood? who knows)
@@ -23,7 +23,7 @@ Also, good luck trying to track down and change the literals used to represent e
 
 *Deep breath*. Ok, next rant. 
 
-The next issue was that this Enum-like use of literals was not consistent. Different parts of the program had different representations of the same concepts. For example, club type might be represented in one place as `I, Wdg, D, F, Wd, H`, and `Iron, Wedge, Driver, Fairway, Wood, Hybrid`. I counted at least four different representative sets for club type, completely undocumented. Conversion was done hodge podge for specific values that a section of code needed.
+The next issue was that this Enum-like use of literals was not consistent. Different parts of the program had different representations of the same concepts. For example, club type might be represented as `I, Wdg, D, F, Wd, H` in one place and as `Iron, Wedge, Driver, Fairway, Wood, Hybrid` in another. I counted at least four different representative sets for club type, completely undocumented. Conversion was done hodge podge for specific values that a section of code needed.
 
 There were also types like club material or manufacturer. Sometimes we would make decisions based on known club materials or manufacturer, but the list of potential values changes over time.
 
@@ -90,7 +90,7 @@ td{ text-align:center;}
 }
 .ok:before{
     color: yellow;
-    content: "~ "
+    content: "\1F610 "
 }
 .bad:before{
     color: red;
@@ -164,6 +164,6 @@ Note the situation of not controlling the executing code. This is an important s
 
 ## Summary
 Primitive named constants, enums, and struct named constants all have situations where they shine the best. 
-However, struct named constants follow the Open-Closed Principle, allowing extension of the type without direct modification while also enjoying the strong typing. Enums are not extensible, and primitive named constants do not enjoy strong typing.
+However, struct named constants follow the Open-Closed Principle, allowing extension of the type without direct modification while also enjoying strong typing. Conversely, Enums are not extensible, and primitive named constants do not enjoy strong typing.
 
 For this reason, I believe that struct named constants are the best solution for representing a related set of known values.
