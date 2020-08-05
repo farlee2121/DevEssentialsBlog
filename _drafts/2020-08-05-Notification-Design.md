@@ -5,14 +5,14 @@ tags: [Architecture, Patterns, Design thinking, SOLID Structure, Case Study]
 
 # SOLID Notification Refactor and Ideal Design
 
-A clear and general design for integrating notifications (email, text, push, etc) has long eluded me. However, a recent refactor using the concepts of [Synthesizing Project Organization Methods]({%post_url 2020-07-10-Synthesizing-Structure %}) has settled my search. Here I'll explore my refactoring experience and why the conceptual shift is generically more stable. 
+A clear and general design for integrating notifications (email, text, push, etc) has long eluded me. However, a recent refactor using the concepts of [Synthesizing Project Organization Methods](2020-07-10-Synthesizing-Structure.md) has settled my search. Here I'll explore my refactoring experience and why the conceptual shift is generically more stable. 
 
-*Note*: I now use SOLID Structure as the name for the code organization pattern described in [Synthesizing Project Organization Methods]({%post_url 2020-07-10-Synthesizing-Structure %}). 
+*Note*: I now use SOLID Structure as the name for the code organization pattern described in [Synthesizing Project Organization Methods](2020-07-10-Synthesizing-Structure.md). 
 
 ## Current System
 
 The system I'm working on tries to abstract notifications through an EmailAccessor that hides the SMTP framework and an EmailGenerationEngine that creates email content from data and hides a templating framework. The EmailGenerationEngine returns contracts containing address information and the full html email, which can be passed to the EmailAccessor. Some of the notifications are also made background tasks by queueing a message to a a bus and processing it in a general NotificationManager.
-[!Diagram here]()
+![Current system diagram](../post-media/Notifications-Design/Old-System-Diagram.drawio.svg)
 
 ## New Constraints
 The company I'm working for now needed to white label our system. Emails need to branded per white label customer and adapted quickly to changing product positioning. Requiring feedback cycles between developers and business people for every email just isn't a tenable solution. Instead we wanted to define email on a remote service where we could edit them visually. This meant emails must be sent by calling an api with the template ID and data instead of generated locally (at least for the popular and trusted services we researched).
@@ -42,6 +42,8 @@ We could have the notification system take a base object or a generic type param
 We could have the service implement some generic handler registration, but that pushes concrete notification implementations back into each of the services and distributes framework or medium-specific code to every service. 
 
 The notification system is trying to juggle the needs of too many consumers and has no stable solution.
+
+![New system diagram](../post-media/Notifications-Design/New-System-Diagram.drawio.svg)
 
 ## Solution 
 Now let's abandon the idea of a central generalized notification/event system. Instead let's use the SOLID Structure concepts. 
