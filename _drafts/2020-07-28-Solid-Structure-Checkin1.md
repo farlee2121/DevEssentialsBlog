@@ -1,3 +1,60 @@
+# SOLID Structure - Checkin 1
+
+I posted about [Synthesizing Project Organization Methods]({%post_url 2020-07-10-Synthesizing-Structure %}) a few weeks ago. Well, I've been busy the last several weeks putting it to practice in my own code. The results have been been beyond my expectations!
+
+You may be wondering where SOLID Structure came from. I needed a name for referring to this organization method. I landed on SOLID Structure since SOLID principles comprised many of the guiding principles, and it sounds nice.
+
+Let's look at what's been going well.
+
+## Limited Design Scope
+I originally concieved of this idea as a way to resolve the conflicting needs of calling and consumed services. Callers want only the most limited interface for their dependency and the consumed service wants to be as re-usable as possible.
+
+I didn't anticipate how powerful this method would be for isolating design decisions. The caller defines it's own abstractions for dependencies it needs. Likewise, the called service is not concerned about who's calling it. I only define it's outbound abstractions based on the current services needs. Any flexibility for the caller is provided generically. Now realize that each service is a caller and called service.
+
+This means I don't have to look outside of the singular service when making a design decision. In fact, this pattern encourages me not to.
+I can make all decisions without jumping between code components. This makes for very fast and focused work. It simplifies write-time decisions, minimizes read-time scope (likely to a single assembly), and means that refactoring never leaks beyond the singlular service and its adapters. 
+
+The fundamental power of this pattern is limiting design considerations scope.
+
+## Pushy SRP
+
+Two common concerns I've long struggled to slot into my systems are email notifications and background processing. SOLID Structure has made both of these clear.
+
+The underlying problem here is that notifications and background processing are actually separate utility-like services of their own.
+
+Lets consider notifications. The system I'm working on tries to abstract notifications through an EmailAccessor that hides the SMTP framework and an EmailGenerationEngine that creates email content from data and hides a templating framework. These seem like reasonable services trying to hide reasonable decisions, but they don't hide that we rely on email or that the emails are generated locally. Further, using these services is the lowest energy decision when relying directly on external dependencies. This causes the coupling to spread to many consumers.  
+
+I felt the pain of this when I needed to change my system so emails were defined on a remote service where we could edit them visually. This meant emails were sent by calling an api with the template ID and data instead of generated locally. This is a reasonable desire and completely in line with the system's notification needs, but it completely blew up the system's notification design. Every service that sent a notification directly knew about organizing data for an email and had to be changed. 
+
+I would argue that this isn't just a flaw of the system I was working on but a general issue with trying to directly consume a shared notification service. 
+
+Suppose we choose a better event-like design. Only minimal data is included on the event and the event subscriber uses that information to look up the rest of the information it needs to compose and send a notification. This further abstracts the notification medium, message construction, and number of recipients from the business flow. The flaw is the event data. Every component of the system will have different events and 
+
+// now look at the general case as to why a directly consumed notification system is not a likely scenario
+No business flow intrinsically needs to send an email. It it more fundamentally an event. One or more recievers may want to know about that However, creating a notification service that can be directly consumed by every service in our system is extremely complex. Suppose we 
+
+However, when our dependency abstractions are defined externally, we want to cater to abstractions we already have. Creating a well-abstracted notification system that serves every component of our system is hard. So we usually start with simpler, like a service that abstracts email frameworks. Thus, the lowest energy decision my service can make is to create and send an email using the existing email service.
+
+Solid structure flips this paradigm.
+
+The key is the selfish dependency abstractions. Writing the dependency interface for just my current consumer  
+
+## Decorator and Aspect Friendly
+
+This has the consequence that I'm pushed to accomodate any customization needs in a generic way. This actually makes writing the code easier and safer. 
+
+Post 1: design changes 
+ - checkin
+ - most critical factor is reduced scope of design decisions
+   - the selfishness pushes cross-cutting concerns out
+   - pushed out cross-cutting concerns centralize and are easier to map to generalized services
+   - if a generalized service didn't exist, you've now made one that you could sell or reuse
+   - since each dependency interface is smaller and more focused, it's easier to swap, easier to decorate
+   - since services themselves care less about direct callers, they're more general and expose more reusable functionality
+ - also makes for easier factoring, easier outsourcing, easier parallel work
+
+
+
 blog idea: discovering the scalability of my new design architecture
  - minimal interfaces with adapters -> smaller interfaces 
  - working on notifications -> realized that notifications are just an event system that happens to send an email as result
