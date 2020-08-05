@@ -12,6 +12,7 @@ A clear and general design for integrating notifications (email, text, push, etc
 ## Current System
 
 The system I'm working on tries to abstract notifications through an EmailAccessor that hides the SMTP framework and an EmailGenerationEngine that creates email content from data and hides a templating framework. The EmailGenerationEngine returns contracts containing address information and the full html email, which can be passed to the EmailAccessor. Some of the notifications are also made background tasks by queueing a message to a a bus and processing it in a general NotificationManager.
+
 ![Current system diagram](../post-media/Notifications-Design/Old-System-Diagram.drawio.svg)
 
 ## New Constraints
@@ -43,8 +44,6 @@ We could have the service implement some generic handler registration, but that 
 
 The notification system is trying to juggle the needs of too many consumers and has no stable solution.
 
-![New system diagram](../post-media/Notifications-Design/New-System-Diagram.drawio.svg)
-
 ## Solution 
 Now let's abandon the idea of a central generalized notification/event system. Instead let's use the SOLID Structure concepts. 
 
@@ -73,6 +72,8 @@ It's not hard to see that implementing multiple notification event handler would
 The adapter has also stayed thin and focused. It is only concerned with mapping the events to the email service: ensuring the right templates are registered, fetching data needed for the template, and calling the email service with the right template ID and data.
 
 Further, the dependency we've defined is much simpler and more generic. It better represents the idea of notifying some event in the service, allowing us to extend the service with many tightly focused implementations.
+
+![New system diagram](../post-media/Notifications-Design/New-System-Diagram.drawio.svg)
 
 ## Summary Notes
 
