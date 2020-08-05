@@ -47,4 +47,15 @@ Post 2
      - adapters: segmented largely by the service they provide functionality to. Easily divisible into packages in Service.Implementation pattern. Can group for simplicity without too much worry for splitting later because all implementations are very light. Most libraries live here. Scaling decisions like using a bus, remote calls, etc live here
      - Clients: where everything ties together. focused on the actual consuption of services (really just the manager layer, getting data back and forth). Maybe runtime focused? A bit weird since they live on both spectrums. Probably shouldn't need adapters between manager and client since the managers are effectively the client adpaters (they organize use cases). There are cases for like event registration though where a client relies not on a manager, but on an adapter abstraction. I.e. bus registrations, the client knows nothing of use cases but collects bus handling registrations with interface defined in adapters, contrasted with a website which is use-case driven and preferrably mostly scale agnostic
    - Theoretically faster builds because of high degree of parallization in and fixed number of dependency layers and fewer lib copies (most framework in adapter layer and only copied to client, not up unknown layers)
-   - 
+
+
+
+Open questions
+- is it always worth having having concrete managers that aren't just adapters?
+  - I'd say probably, but not sure. The big thing here is that managers are the head of the system. I suppose the abstractions are the head of the system and it doesn't really matter how their implemented
+- accessors fulfilling each others dependencies
+  - my thought is no. Cases where it feels like yes... 
+    - the language name provider, but this is a case created by misrepresenting language as an entity instead of value type
+    - influencer cache for search, this is just a quick corner cut. It won't scale performance-wise and we should be keeping the search cache in a form tailored to this rather distinct use case
+- How much adaptation should be done for the clients 
+  - the managers are use case adapters, but there is always an adaptation layer for the UI. It usually lives in the controllers 
