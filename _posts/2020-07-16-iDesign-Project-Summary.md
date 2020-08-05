@@ -10,7 +10,7 @@ Part 2 of Righting software presents the most complete theory of project managem
 
 It originated in the 1940's out of the Manhattan project and is based on understanding project dependencies as a graph or network. For example,
 
-![Network example]({{site.url}}/post-media/IDesign-Projects/Network-Effort.svg).
+![Network example](../post-media/IDesign-Projects/Network-Effort.svg)
 
  While conceptually simple, we can now lean on all the power of [graph theory](https://en.wikipedia.org/wiki/Graph_theory) for understanding properties of our projects like: duration, cost, stability, and staffing. These insights take the guess work out of planning, allowing us to quantify the difference between plans and the impact of requested changes.
 
@@ -30,7 +30,7 @@ The most basic info to build the graph is
 
 These components are then represented in the graph as
 
-![Labeled graph parts]({{site.url}}/post-media/IDesign-Projects/Network-LabeledParts.svg)
+![Labeled graph parts](../post-media/IDesign-Projects/Network-LabeledParts.svg)
 
 To interpret the graph you should also record 
   - Planning Assumptions
@@ -39,11 +39,11 @@ To interpret the graph you should also record
 
 Here's the example for making chili.
 
-![Chili activity network]({{site.url}}/post-media/IDesign-Projects/Network-Effort.svg)
+![Chili activity network](../post-media/IDesign-Projects/Network-Effort.svg)
 
 Notice that the activities are the edges and dependencies are nodes. That's because the common scenario of many-to-many dependencies where a collection of tasks all need to finish in order for any task in the next set to begin.
 
-![Arrow vs Node Graph]({{site.url}}/post-media/IDesign-Projects/Network-WhyArrowGraph.svg)
+![Arrow vs Node Graph](../post-media/IDesign-Projects/Network-WhyArrowGraph.svg)
 
 ---
 
@@ -54,7 +54,7 @@ The network represents a complete map of activity dependencies and estimates (as
 **Critical Path**  
 The minimum project length for any staffing is determined by the network's diameter, or the *critical path*. Formally stated, this is the length of the slowest minimal dependency chain in the network.
 
-![Critical Path Example]({{site.url}}/post-media/IDesign-Projects/Network-Floats.svg)
+![Critical Path Example](../post-media/IDesign-Projects/Network-Floats.svg)
 
 This path assumes you can complete every dependency off the critical path before it delays a critical activity.
 The project is *sub-critical* if you do not have enough staff to finish all dependencies before they delay the critical path. Being sub-critical effectively creates a new critical path by adding artificial (or resource-limitation) dependencies to any work that can't be done fast enough.
@@ -63,7 +63,7 @@ The project is *sub-critical* if you do not have enough staff to finish all depe
 
 For example, with one developer, every activity is critical because only one activity can be done at a time.
 
-![One developer scenario]({{site.url}}/post-media/IDesign-Projects/Network-Sub-critical.svg) 
+![One developer scenario](../post-media/IDesign-Projects/Network-Sub-critical.svg) 
 
 Everything off the critical path must have *float*: the amount of time the activity (and dependencies) can be put off before it delays the critical path (thus delaying the project). 
 The chili graph is simple enough that we can visually conclude 2 people would be enough to accomplish all non-critical activities in time for the critical path to keep moving. In fact, the second worker would really only be needed for about 16 minutes total.
@@ -80,15 +80,15 @@ Types of compression
 
 A common example would be splitting work around the UI. Consider this basic graph
 
-![Compressible Activity]({{site.url}}/post-media/IDesign-Projects/Network-Compressible.svg)
+![Compressible Activity](../post-media/IDesign-Projects/Network-Compressible.svg)
 
 We can increase parallel work and shorten the critical path by splitting out the UI design.
 
-![Split activity example]({{site.url}}/post-media/IDesign-Projects/Network-InternalSplit.svg)
+![Split activity example](../post-media/IDesign-Projects/Network-InternalSplit.svg)
 
 We can also completely parallelize UI and logic development by designing to a contract/simulator. Note that this incurs extra work to build a simulator and integrate the real logic later. It may not be worthwile unless the business logic is very time consuming.
 
-![Design to Contract example]({{site.url}}/post-media/IDesign-Projects/Network-SimulatorSplit.svg)
+![Design to Contract example](../post-media/IDesign-Projects/Network-SimulatorSplit.svg)
 
 Splitting tasks allows more parallel work, but may require more developers and increases complexity of running the project.  
 
@@ -104,7 +104,7 @@ Suppose we didn't make any assumptions about available staff. The network with o
 
 Here are some example scenarios and what they say about the project
 
-![Good and bad staff charts]({{site.url}}/post-media/IDesign-Projects/StaffExamples.png)
+![Good and bad staff charts](../post-media/IDesign-Projects/StaffExamples.png)
 
 If your staff curve is not practical you might 
  - compress to provide more parallel work options
@@ -123,7 +123,7 @@ The classic and surprisingly complex question, project cost. We've already seen 
 
 Note that while project design affects staffing, thus direct cost, the project duration also affects indirect cost. Thus adding staff to shorten a project can pay for itself, to a point.
 
-![Cost over Time]({{site.url}}/post-media/IDesign-Projects/CostCurves.png)
+![Cost over Time](../post-media/IDesign-Projects/CostCurves.png)
 
 ### Efficency
 In essence, efficiency is how much of your staff's time is idle versus actively contributing to project completion. The critical path method calculates *project efficiency* as the sum of all activity efforts without regard to workdays or idle time over the sum of actual effort accounting for idle time and workdays.
@@ -134,7 +134,7 @@ Target range is $15\% \le \text{efficiency} \le 25\%$. Over 30% is likely too ri
 *Earned value* is essentially % project completion over time. More specifically, it is the sum of the effort on completed tasks.
 
 The network allows us to plot the expected curve right away, which can reveal potential issues. For example
-![Earned value comparison]({{site.url}}/post-media/IDesign-Projects/EarnedValue.png)
+![Earned value comparison](../post-media/IDesign-Projects/EarnedValue.png)
 
 ### Complexity
 A project can be complicated to deliver for many reasons: politics, pandemics, changing markets, etc. 
@@ -150,8 +150,8 @@ Target values are $10 \le C \le 12$ and 15 is too complex to execute.
 
 Example: while both somewhat complex, I think it's clear which of these graphs has less entangled activity dependencies.
 
-![High Complexity]({{site.url}}/post-media/IDesign-Projects/Network-Complex.svg)
-![Lower Complexity]({{site.url}}/post-media/IDesign-Projects/Network-Simple.svg)
+![High Complexity](../post-media/IDesign-Projects/Network-Complex.svg)
+![Lower Complexity](../post-media/IDesign-Projects/Network-Simple.svg)
 
 ### Risk
 Schedule, cost, and staff are all measures that could be estimated from past experience (though with much less flexible decision power). However, reliably quantifying risk was previously unattainable. Now risk can be mechanically calculated using two main formulas: criticality risk and activity risk. 
@@ -208,7 +208,7 @@ Graph the cost vs duration for each compressed solution. Repeat until you start 
 - complexity is too high
 - costs exceed project limits
 
-![Cost vs duration]({{site.url}}/post-media/IDesign-Projects/CompressionPlot.png)
+![Cost vs duration](../post-media/IDesign-Projects/CompressionPlot.png)
 
 ### Decompress
 Decompress the normal solution and/or compressed solutions with favorable risk values. Try adding different amounts of float to see how each amount changs cost and risk. Plot risk and total cost versus duration for all solutions.
@@ -218,7 +218,7 @@ Stop condidions
  - passed likely project duration limits
  - risk starts decreasing slowly (much past point of minimum decompression)
 
-![Cost and Risk vs Duration]({{site.url}}/post-media/IDesign-Projects/CostAndRiskPlot.png)
+![Cost and Risk vs Duration](../post-media/IDesign-Projects/CostAndRiskPlot.png)
 
 ### Pick 3(ish)  
 Pick the solutions that give management the best value trade-offs between duration, cost, and risk from the Cost & Risk vs Project Duration plot assembled in previous steps.
@@ -227,7 +227,7 @@ It's also wise to use a regression tool to find a best-fit curve of the solution
 
 This serves as a guide for accepting project conditions. Any projects with cost and duration above the line are possible. Any under the line are impossible and should be killed immediately.
 
-![Total Cost vs duration]({{site.url}}/post-media/IDesign-Projects/DeathZone.png)
+![Total Cost vs duration](../post-media/IDesign-Projects/DeathZone.png)
 
 ---
 
