@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Architecture, Patterns, Configuration, Design thinking, Volatility Analysis]
+tags: [Architecture, Patterns, Configuration, Design thinking, Volatility Analysis, Case Study]
 ---
 
 # Rediscovering Options

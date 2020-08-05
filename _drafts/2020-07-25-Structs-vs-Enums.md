@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Architecture, Patterns, Design thinking, Volatility Analysis]
+tags: [Architecture, Patterns, Design thinking, Volatility Analysis, Case Study]
 ---
 
 # Why Static Structs are Better Than Enums
