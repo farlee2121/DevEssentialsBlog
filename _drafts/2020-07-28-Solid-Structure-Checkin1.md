@@ -1,3 +1,8 @@
+---
+layout: post
+tags: [Architecture, Design thinking, SOLID Structure]
+---
+
 # SOLID Structure - Checkin 1
 
 I posted about [Synthesizing Project Organization Methods]({%post_url 2020-07-10-Synthesizing-Structure %}) a few weeks ago. Well, I've been busy the last several weeks putting it to practice in my own code. The results have been been beyond my expectations!
@@ -16,32 +21,46 @@ I can make all decisions without jumping between code components. This makes for
 
 The fundamental power of this pattern is limiting design considerations scope.
 
-## Pushy SRP
+## Pushy Information Hiding
 
-Two common concerns I've long struggled to slot into my systems are email notifications and background processing. SOLID Structure has made both of these clear.
+Two common concerns I've long struggled to slot into my systems are email notifications and background processing. SOLID Structure has made both of these clear. You can see an in-depth exploration of notifications in [SOLID Notification Refactor and Ideal Design](2020-08-05-Notification-Design.md).
 
-The underlying problem here is that notifications and background processing are actually separate utility-like services of their own.
-
-Lets consider notifications. The system I'm working on tries to abstract notifications through an EmailAccessor that hides the SMTP framework and an EmailGenerationEngine that creates email content from data and hides a templating framework. These seem like reasonable services trying to hide reasonable decisions, but they don't hide that we rely on email or that the emails are generated locally. Further, using these services is the lowest energy decision when relying directly on external dependencies. This causes the coupling to spread to many consumers.  
-
-I felt the pain of this when I needed to change my system so emails were defined on a remote service where we could edit them visually. This meant emails were sent by calling an api with the template ID and data instead of generated locally. This is a reasonable desire and completely in line with the system's notification needs, but it completely blew up the system's notification design. Every service that sent a notification directly knew about organizing data for an email and had to be changed. 
-
-I would argue that this isn't just a flaw of the system I was working on but a general issue with trying to directly consume a shared notification service. 
-
-Suppose we choose a better event-like design. Only minimal data is included on the event and the event subscriber uses that information to look up the rest of the information it needs to compose and send a notification. This further abstracts the notification medium, message construction, and number of recipients from the business flow. The flaw is the event data. Every component of the system will have different events and 
-
-// now look at the general case as to why a directly consumed notification system is not a likely scenario
-No business flow intrinsically needs to send an email. It it more fundamentally an event. One or more recievers may want to know about that However, creating a notification service that can be directly consumed by every service in our system is extremely complex. Suppose we 
-
-However, when our dependency abstractions are defined externally, we want to cater to abstractions we already have. Creating a well-abstracted notification system that serves every component of our system is hard. So we usually start with simpler, like a service that abstracts email frameworks. Thus, the lowest energy decision my service can make is to create and send an email using the existing email service.
-
-Solid structure flips this paradigm.
-
-The key is the selfish dependency abstractions. Writing the dependency interface for just my current consumer  
+The underlying problem here is that notifications and background processing are actually separate utility-like services of their own. Defining dependency contracts in the calling service makes it easier to ignore these cross-cutting concerns than to weave them into the business process. This pushes cross-cutting concerns into the adapters where we can collect them into utilities.
 
 ## Decorator and Aspect Friendly
 
-This has the consequence that I'm pushed to accomodate any customization needs in a generic way. This actually makes writing the code easier and safer. 
+Defining dependencies contracts with only the calling service in mind produces contracts that are much smaller and more focused. This means that it is much easier to make new implementations and much more likely that usage constraints on all of the contract operations change together. This means that we can wrap a whole contract in some decorator without disrupting intent. Some potential decorators here being the classic AOP concerns: logging, security, async.
+
+> Aside: Functional users can accomplish this generically idea with monads. OO users can employ some DI framework magic to dynamically proxy objects for completely central operations.
+
+That is all pretty conceptual. Let's look at a concrete example from my code: indexing searchable entities asychronously. 
+
+// maybe make this it's own blog post too? It'd make sense to go more in depth on something I expect to be a standard pattern and key design decision
+
+**Case 1**: The action is part of a large generalized service that is called directly.  
+None of our options are great. We can
+ - bake the async knowledge into the calling service
+ - bake the async knowledge into the called service, making it async for all consumers
+ - implement a decorator on the large service, passing all the other methods through and only implementing async on the single one action.
+   -  May be difficult to still meet return value expectations
+   -  Involves more methods than likely need to be async
+Making the call async is tangles with the concerns and demands of other services. A concrete example from my work was search indexing. 
+// move concrete example up to the whole examination
+
+**Case 2**: We follow SOLID Structure. Services defines their own abstractions that an influencer should be indexed  
+-- the caller can adapt it's semantics and it's particular brand of async (i.e. use a thread if a value needs to be immediately returned, events if it can be done later )
+
+
+
+## Reusable Services
+- services become domain-specific libraries, essentially
+- create email framework
+- able to slot in a bus management framework
+- This has the consequence that I'm pushed to accomodate any customization needs in a generic way. This actually makes writing the code easier and safer. 
+  - actually makes testing easier. Everything has the same extension options, no specific paths based on other service knowledge
+
+
+
 
 Post 1: design changes 
  - checkin
