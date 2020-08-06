@@ -59,7 +59,19 @@ Making the call async is tangles with the concerns and demands of other services
 - This has the consequence that I'm pushed to accomodate any customization needs in a generic way. This actually makes writing the code easier and safer. 
   - actually makes testing easier. Everything has the same extension options, no specific paths based on other service knowledge
 
+## Event Friendly
+ - not Event Driven arch. the goal isn't to structure everything around events
+ - events very powerful design tool for decoupled and scalable system
+ - the reduced scope lends itself well to events
 
+## Same idea everywhere
+- the rules are simple and apply everywhere
+- closes gap between framework-style design and designing our own systems
+  - our services essentially become domain-specific libraries
+- Even applies to testing, link to Paul's post
+
+## Open questions
+- see list below
 
 
 Post 1: design changes 
@@ -135,3 +147,5 @@ Open questions
     - influencer cache for search, this is just a quick corner cut. It won't scale performance-wise and we should be keeping the search cache in a form tailored to this rather distinct use case
 - How much adaptation should be done for the clients 
   - the managers are use case adapters, but there is always an adaptation layer for the UI. It usually lives in the controllers 
+- Guidelines for when datacontracts should be shared
+  - so far i've gotten off with only primitive types in the dependency contracts because they reduce the scope so much
