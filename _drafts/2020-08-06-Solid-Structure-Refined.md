@@ -23,13 +23,16 @@ IDesign layers code by role in the business domain. Every layer and service repr
 
 **Clean Architecture**
 
-Clean Architecture layers based on relevance to the domain. The most stable business abstractions are the foundation, then uses cases, then adapting 
+Clean Architecture layers based on relevance to the domain. The most stable business abstractions are the foundation, then uses cases, then adapters, and finally external systems. This ordering emphasizes callers owning their abstractions.
+
 > Aside: creating SOLID structure is actually what helped me better understand Clean Architecture and how it differed from IDesign. The names in the layers can be distracting, focus on the names for the colored layers (also see [Robert Martin's post](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html))
 
 ![Clean Architecture diagram](../post-media/SolidStructure-Refined/CleanArchDiagram.png)
 
 
 **Solid Structure**
+
+// TODO: It may be that accessors are really just a class of manager dependency abstraction... Need to think about how that would mean with generalizing services with usecase change and also about potential code duplication. The short of this is that the IDesign service boundaries may not hold up and just clean arch will remain. I should resolve that concern before I publish
 
 Solid Structure turns the business services of IDesign into a reusable library for the domain. Pushes services to be self-contained and defers choices of scale, deployment, and runtime to other layers similar to Clean Architecture.
 
