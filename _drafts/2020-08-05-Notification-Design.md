@@ -3,7 +3,7 @@ layout: post
 tags: [Architecture, Patterns, Design thinking, SOLID Structure, Case Study]
 ---
 
-# SOLID Notification Refactor and Ideal Design
+# SOLID Notification Refactor Case Study
 
 A clear and general design for integrating notifications (email, text, push, etc) has long eluded me. However, a recent refactor using the concepts of [Synthesizing Project Organization Methods](2020-07-10-Synthesizing-Structure.md) has settled my search. Here I'll explore my refactoring experience and why the conceptual shift is generically more stable. 
 
