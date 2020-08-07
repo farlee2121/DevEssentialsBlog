@@ -63,6 +63,21 @@ Making the call async is tangles with the concerns and demands of other services
 - on one hand, more things might get mapped than before and that introduces a new place for errors. Outweighed by 
 - dependencies are simpler
 - More generic brings a conceptual purity that reduces room for error (link to mark seemann)
+  
+## Event Friendly
+ - not Event Driven arch. the goal isn't to structure everything around events
+ - events very powerful design tool for decoupled and scalable system
+ - the reduced scope lends itself well to events
+
+## Same idea everywhere
+- the rules are simple and apply everywhere
+- closes gap between framework-style design and designing our own systems
+  - our services essentially become domain-specific libraries
+- Even applies to testing, link to Paul's post
+
+## Open questions
+- see list below
+
 
 Post 1: design changes 
  - checkin
@@ -142,3 +157,5 @@ Open questions
   - the managers are use case adapters, but there is always an adaptation layer for the UI. It usually lives in the controllers 
 - What about accessor adapters?
   - do accessor implementations belong in the adapter section and only accessor abstractions in the domain category?
+- Guidelines for when datacontracts should be shared
+  - so far i've gotten off with only primitive types in the dependency contracts because they reduce the scope so much
