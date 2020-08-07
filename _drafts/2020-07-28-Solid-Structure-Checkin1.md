@@ -59,8 +59,10 @@ Making the call async is tangles with the concerns and demands of other services
 - This has the consequence that I'm pushed to accomodate any customization needs in a generic way. This actually makes writing the code easier and safer. 
   - actually makes testing easier. Everything has the same extension options, no specific paths based on other service knowledge
 
-
-
+## Less room for Bugs
+- on one hand, more things might get mapped than before and that introduces a new place for errors. Outweighed by 
+- dependencies are simpler
+- More generic brings a conceptual purity that reduces room for error (link to mark seemann)
 
 Post 1: design changes 
  - checkin
@@ -117,6 +119,9 @@ Post 2
    - before  dependency and service views where the same, now their orthogonal axes
      - services are business-related IH, with layers based on types of cohesion (sequential, functional, etc)
      - this new direction is integration/build related IH, focused on keeping services isolated, frameworks out of core logic, scale/communication concerns out of core logic 
+   - makes it more clear when certain decisions should be bound
+     - this also makes it easier to bind different decisions uniformly
+     - turns our own code into a library for the business domain
    - much more predictable dependency chain 
      - shared abstractions: should be only very general items to remove silly redundancy in abstraction definitions, like ILogger. Every service in most any system will have it and it shouldn't be defined by every service
      - services: no dependency on each other. Less likely to need big dependencies like communication frameworks. Only need libs for internal logic
@@ -135,3 +140,5 @@ Open questions
     - influencer cache for search, this is just a quick corner cut. It won't scale performance-wise and we should be keeping the search cache in a form tailored to this rather distinct use case
 - How much adaptation should be done for the clients 
   - the managers are use case adapters, but there is always an adaptation layer for the UI. It usually lives in the controllers 
+- What about accessor adapters?
+  - do accessor implementations belong in the adapter section and only accessor abstractions in the domain category?
