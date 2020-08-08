@@ -3,11 +3,9 @@ layout: post
 tags: [Architecture, Patterns, Design thinking, SOLID Structure, Case Study]
 ---
 
-# SOLID Notification Refactor Case Study
+# Notification Refactor Case Study
 
 A clear and general design for integrating notifications (email, text, push, etc) has long eluded me. However, a recent refactor using the concepts of [Synthesizing Project Organization Methods](2020-07-10-Synthesizing-Structure.md) has settled my search. Here I'll explore my refactoring experience and why the conceptual shift is generically more stable. 
-
-*Note*: I now use SOLID Structure as the name for the code organization pattern described in [Synthesizing Project Organization Methods](2020-07-10-Synthesizing-Structure.md). 
 
 ## Current System
 
@@ -45,7 +43,9 @@ We could have the service implement some generic handler registration, but that 
 The notification system is trying to juggle the needs of too many consumers and has no stable solution.
 
 ## Solution 
-Now let's abandon the idea of a central generalized notification/event system. Instead let's use the SOLID Structure concepts. 
+Now let's abandon the idea of a central generalized notification/event system. Instead let's use Clean Architecture and the rules of thumb from my previous post.
+
+>**Note**: I ended up realizing that what I did in [Synthesizing Project Organization Methods](2020-07-10-Synthesizing-Structure.md) was cross IDesign with [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html). This refactor mainly leans on Clean Architecture because it doesn't depend on the interaction of domain services.
 
 This means each service defines it's own dependency abstractions, exposes extensibility to callers generically, and uses thin adapters to bridge the gap (of generic outward interfaces to specific dependency abstractions).
 
@@ -77,6 +77,6 @@ Further, the dependency we've defined is much simpler and more generic. It bette
 
 ## Summary Notes
 
-Notice how emails started as part of the business flow and got pushed out, eventually resulting in a new and clear generalized service. The selfish service design of SOLID Structure makes Single Responsibility Principle (or Information Hiding) a more natural and low energy choice. This separates out cross-cutting concerns. The cross-cutting concerns can then be collected and addressed directly. This closes the gap between our own utility implementations and potential 3rd-party solutions. Many cases (e.g. user management, payments, feature flags, logging) already have robust 3rd-party solutions which this pattern can easily consume without mixing them into core services. You may still wrap some of these utility-like concerns for framework portability, but the wrapper hides much less of their power since we are wrapping them in line with their original purpose and defer business flow adaptation to the service adapter layer.
+Notice how emails started as part of the business flow and got pushed out, eventually resulting in a new and clear generalized service. The selfish service design rule makes Single Responsibility Principle (or Information Hiding) a more natural and low energy choice. This separates out cross-cutting concerns. The cross-cutting concerns can then be collected and addressed directly. This closes the gap between our own utility implementations and potential 3rd-party solutions. Many cases (e.g. user management, payments, feature flags, logging) already have robust 3rd-party solutions which this pattern can easily consume without mixing them into core services. You may still wrap some of these utility-like concerns for framework portability, but the wrapper hides much less of their power since we are wrapping them in line with their original purpose and defer business flow adaptation to the service adapter layer.
 
-In short, SOLID Structure helped me to discover a strong general notification system by focusing my design decisions to one service and making Information Hiding the lowest energy decision.
+In short, Clean Architecture and the new rules helped me to discover a strong general notification system by focusing my design decisions to one service and making Information Hiding the lowest energy decision.
