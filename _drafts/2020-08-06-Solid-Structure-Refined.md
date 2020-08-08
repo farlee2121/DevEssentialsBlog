@@ -59,7 +59,7 @@ Here are the Clean Architecture layers, but with more specificity to mesh with t
 - *Enterprise Rules / Shared Contracts and Entities*: These should only be the most fundamental and unchanging abstactions. For example, not every service needs it's own logging interface. Should be abstractions that could be shared between all company applications. 
 
 TODO need to re-evaluate this layer because clean arch has no frameworks in the logic layer
-- *Application Business Rules / Domain Truths*: The classic IDesign layers that encode the core domain. Should not directly reference external domain like utilities. May contain some limited frameworks for defining the business flows. Should never change for differences in scale or deployment. Each service should be self-contained.
+- *Application Business Rules / Domain Truths*: The classic IDesign layers that encode the core domain. Should not directly reference external domain like utilities. May contain some limited frameworks for defining the business flows (i.e. rules engine?). Should never change for differences in scale or deployment. Each service should be self-contained.
 - *Adapters*: Fulfills the domain dependency abstractions. May map to a lower-layer domain service or to a utility/external service. This is where decisions of scale like event systems, communication protocols, and remote calls are made. Also likely binds flexibility concerns like email or identity systems business people can manage.
 - *Clients, Frameworks, and drivers*: Determines the final mix of adapters needed to deliver a running product. These are the assemblies that will be deployed to concrete infrastructure. Responsible for configuring concrete resources like databases, log stores, files stores, etc. 
 
