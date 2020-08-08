@@ -5,7 +5,7 @@ tags: [Architecture, Patterns, Configuration, Design thinking, Volatility Analys
 
 # Rediscovering Options - Design Matrix
 
-I got to thinking about the [Rediscovering Options]({%post_url 2020-07-24-Rediscovering-Options %}) post. The volatility analysis portion is an important artifact of my design process. The current version requires reading the whole list to comprehend the results. How could I make it better?
+I got to thinking about the [Rediscovering Options](2020-07-24-Rediscovering-Options.md) post. The volatility analysis portion is an important artifact of my design process. The current version requires reading the whole list to comprehend the results. How could I make it better?
 
 The design process is generally not very clean or binary. Many avenues are explored and abandoned. Even the important criteria change as understanding changes. However, the cleaned-up anlysis in the post is tantilizingly reminicient of a product pricing & feature table. A bit of spatial organization and some colored icons should allow quick intuitive interpretation of results and better recall. 
 

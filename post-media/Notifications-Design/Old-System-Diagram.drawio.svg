@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="331px" height="281px" viewBox="-0.5 -0.5 331 281" content="&lt;mxfile host=&quot;953b6c1b-c232-4ba7-83a0-0d4d6878eae1&quot; modified=&quot;2020-08-05T23:02:49.708Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.1 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36&quot; etag=&quot;_rFNFKLfgrCU9jBdjh_5&quot; version=&quot;13.1.3&quot; pages=&quot;2&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;7Vnfd5owFP5reGwPEEV8tNZ23VnP1uPO2XMGKaQLXBZi1f31SyCIUZx0Wmrd8qDky6+b7+Z+ScBC42Rxy3EW30NImOXa4cJC15br+jaSvwpYlkCvb5dAxGlYQk4NTOkvosGq2oyGJDcqCgAmaGaCAaQpCYSBYc5hblZ7BGaOmuGIbAHTALNt9BsNRayn5Q5q/AOhUVyN7HjDsiTBVWU9kzzGIczXIDSx0JgDiPIpWYwJU9xVvJTtbnaUrgzjJBVtGtifM8jukq8Po4c884OR8/Hi6QLpeTxjNtMz1taKZUUBh1kaEtWLbaGreUwFmWY4UKVz6XOJxSJhMufIx0fK2BgYcJlPIZWVrkKcx0VzVZ4LDj9IVcNykV0kWaINIVyQxc4pOivi5IIjkBDBl7KKbuDammu92Jyhzs9r1zmexuJ1t/kaxHq5RKu+a0blgyb1JQR750QwOj1+++fEr+OYBLfl9xj0tiASuIghghSzTwCZJuSJCLHUwo1nAkw6Te73kbfFlBweZjzQ42uLBOYR0bV6JURCQ8a3CeaEYUGfTVU/hK4WwqmMmuqsXkomHX/B5xkxODwXBv23YtBtYNBjQqkYyCmoU1E1S+/nTB00rur5rkFepP9xotQw/Z6rv6k0SPZxj1N5yOFVz9KmsvOq0bHEVlp2IxNCTT5yrwde4SM19hr+WKQ/+W5Lj3eL7+buZjeor9ugvt6rbW69l4VIHQ2TGn3NiMllGIiROmbLgoDhPKdBBd9QNdliTJKGVSUdxRJZK2+Mn72R6G9HYjOLqKNw9I8ajneTBFM2CgKS59BJ+I2L9Fbht7oo6fBbXQHfLvzQUR36/vx52GVs059Nh9lu/dm0X/6XU2KcA/fLaVenm6bN71A5vSUp4dJMSGX7SRpRSV9HkWg3XoC6UNb+yQmrc1TXFp6Vjd6rcw+S2U3ndqmyTotL8Ku/M2ijc+uiVtp4gH7ppl+AFku1ejXm9i89f+DaaDB0et7QMdyCNukulVf3scH4yqh2Tmg6dp7APfqf98uJvt94sV8O3e93+MU3hQsN+pe+vZYGR3KMzNYfWcrq9ZcqNPkN&lt;/diagram&gt;&lt;diagram id=&quot;Xr3ELkSGvqdyfuuXjse1&quot; name=&quot;Async version&quot;&gt;7Vtfc6IwEP80PvYGEkB9vKq1nWl7vfHh2qebVCKkjcQLsWo//QUIAkr9r7EtPChZliXZX3az7IYabA2nXY5G/h1zMa0Bw53WYLsGQMOA8jcizBKCZRsJwePETUhmRuiRd6yIKduYuDgsMArGqCCjIrHPggD3RYGGOGeTItuA0eJTR8jDS4ReH9Fl6h/iCl8NKx1FRL/GxPPTJ5uGujJEKbMihD5y2SRHgp0abHHGRHI2nLYwjXSX6qWLSIO+dOHT+O9DBz3DX3/a7xeJsKttbpkPgeNA7C76qtlu3nQvhu371uND99UC11TdYrwhOlb6UmMVs1SBjAufeSxA9JaxkaSZNXj5goWYKbDRWDBJ8sWQqqucjQMXR881ZCsUnL3iFqOMxxKhER/ySvIs7C4huGagii9kY97HK0ZnqfmGuIfFCj4TzuGUZoDZEAs+kzdyTJEgb8XeITUhvTlfpnR5ovS+BQbmegwiFfVUM2ABXtLxDiBVsKyGBVSwfAAL0AkLrGAp57N1omKVoOJQ2d3LAZNaiJb3VHPOv3G0Yl5mOsyRHC/6v2eCDEhf9psF8t47FMhVmqcSZQcToQnzEvxFrCc+Ebg3QrGOJzLEKeI6IJTmUL2SB4RleIN23Ynxjp6dow/iY96PN8wFnu4wE5aRU1JgGn+oAMy07B92QplkAY2Zcvm5YMYxjgS3fVC4f4+xFAOMWxIKHGRAP/MMYwcNI+SC5zD6a1GC4xlw9AkB4dlPCMvQPBuc7+aS65uulEY5kKfxyfWDGmlP9urb+2KraHlN3ZbXWGlomU11Mur+dicVyGeP6v648RQ15KKkmu1p/mJ7Vlv3Huii0I97FIufEvGYO88Jl61MdtRIRR/b4M00c3HWQVhzOz98pOmhzy2nKaf1fvkDKz/R+35Z0mV3x3yThk8/+30chuwkvrkVH+fsm4FtaQ+TzbLUzv5xcgV0HmgIda/CZlmqaHeYO0NEaAWzZSzgbJ6BQZdln/ZHuhu99abZjk7gEfmCdCLQjdLITBvooL7gxa0zAL0subUAwycukpiNDaMmUNcaNZXlnL50luGzAPPt0j+bA+NoBaYsAVQBEzM2tQLTOGgUUVVL8slxWAwgTFt/tcQsS8xU5RJNM8LW/boIyvI/X9ovzzd+rV0wLZ1+GRw2XVNVTHLWlrpjQ7v1rTa2qmZyMKO3P0UwBrbcUPTlqiZg0w1GQGtxCxx2i1FVNSn1z8DRn28Dx9ldVAGdBxpq3zUEyvJGVdVk36qJuYAzOAODPuxOpKpqslQ1aZyy9i2b2Ucv8bXcl0Ow8x8=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="170" y="100" width="160" height="180" fill="none" stroke="#000000" stroke-dasharray="3 3" pointer-events="all"/>
+        <rect x="0" y="100" width="160" height="180" fill="none" stroke="#000000" stroke-dasharray="3 3" pointer-events="all"/>
+        <rect x="80" y="0" width="160" height="80" fill="none" stroke="#000000" stroke-dasharray="3 3" pointer-events="all"/>
+        <path d="M 138.18 70 L 105.56 114.85" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 102.48 119.1 L 103.76 111.38 L 105.56 114.85 L 109.42 115.49 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 138.18 70 L 105.56 114.85" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 102.48 119.1 L 103.76 111.38 L 105.56 114.85 L 109.42 115.49 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 184.55 70 L 221.42 115.07" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 224.75 119.13 L 217.61 115.93 L 221.42 115.07 L 223.02 111.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="100" y="10" width="120" height="60" fill="#ffff33" stroke="#2d7600" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 40px; margin-left: 101px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <font color="#000000">
+                                     Some Manager
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="160" y="44" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                     Some Manager
+                </text>
+            </switch>
+        </g>
+        <path d="M 250 186.37 L 250 200 L 250 180 L 250 200" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 250 181.12 L 253.5 188.12 L 250 186.37 L 246.5 188.12 Z" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="190" y="120" width="120" height="60" fill="#cccccc" stroke="#2d7600" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 150px; margin-left: 191px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <font color="#000000">
+                                    IEmailAccessor
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="250" y="154" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    IEmailAccessor
+                </text>
+            </switch>
+        </g>
+        <rect x="190" y="200" width="120" height="60" fill="#cccccc" stroke="#2d7600" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 230px; margin-left: 191px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <font color="#000000">
+                                    EmailAccessor
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="250" y="234" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    EmailAccessor
+                </text>
+            </switch>
+        </g>
+        <path d="M 80 186.37 L 80 200 L 80 180 L 80 200" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 80 181.12 L 83.5 188.12 L 80 186.37 L 76.5 188.12 Z" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="20" y="120" width="120" height="60" fill="#cccc00" stroke="#2d7600" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 150px; margin-left: 21px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <font color="#000000">
+                                    IEmailGeneration Engine
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="154" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    IEmailGeneration Eng...
+                </text>
+            </switch>
+        </g>
+        <rect x="20" y="200" width="120" height="60" fill="#cccc00" stroke="#2d7600" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 230px; margin-left: 21px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <font color="#000000">
+                                    Email Generation Engine
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="234" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Email Generation Eng...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

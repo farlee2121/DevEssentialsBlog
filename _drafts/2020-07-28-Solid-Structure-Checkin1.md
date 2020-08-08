@@ -1,3 +1,96 @@
+---
+layout: post
+tags: [Architecture, Design thinking, SOLID Structure]
+---
+
+# SOLID Structure - Checkin 1
+
+I posted about [Synthesizing Project Organization Methods]({%post_url 2020-07-10-Synthesizing-Structure %}) a few weeks ago. Well, I've been busy the last several weeks putting it to practice in my own code. The results have been been beyond my expectations!
+
+You may be wondering where SOLID Structure came from. I needed a name for referring to this organization method. I landed on SOLID Structure since SOLID principles comprised many of the guiding principles, and it sounds nice.
+
+Let's look at what's been going well.
+
+## Limited Design Scope
+I originally concieved of this idea as a way to resolve the conflicting needs of calling and consumed services. Callers want only the most limited interface for their dependency and the consumed service wants to be as re-usable as possible.
+
+I didn't anticipate how powerful this method would be for isolating design decisions. The caller defines it's own abstractions for dependencies it needs. Likewise, the called service is not concerned about who's calling it. I only define it's outbound abstractions based on the current services needs. Any flexibility for the caller is provided generically. Now realize that each service is a caller and called service.
+
+This means I don't have to look outside of the singular service when making a design decision. In fact, this pattern encourages me not to.
+I can make all decisions without jumping between code components. This makes for very fast and focused work. It simplifies write-time decisions, minimizes read-time scope (likely to a single assembly), and means that refactoring never leaks beyond the singlular service and its adapters. 
+
+The fundamental power of this pattern is limiting design considerations scope.
+
+## Pushy Information Hiding
+
+Two common concerns I've long struggled to slot into my systems are email notifications and background processing. SOLID Structure has made both of these clear. You can see an in-depth exploration of notifications in [SOLID Notification Refactor and Ideal Design](2020-08-05-Notification-Design.md).
+
+The underlying problem here is that notifications and background processing are actually separate utility-like services of their own. Defining dependency contracts in the calling service makes it easier to ignore these cross-cutting concerns than to weave them into the business process. This pushes cross-cutting concerns into the adapters where we can collect them into utilities.
+
+## Decorator and Aspect Friendly
+
+Defining dependencies contracts with only the calling service in mind produces contracts that are much smaller and more focused. This means that it is much easier to make new implementations and much more likely that usage constraints on all of the contract operations change together. This means that we can wrap a whole contract in some decorator without disrupting intent. Some potential decorators here being the classic AOP concerns: logging, security, async.
+
+> Aside: Functional users can accomplish this generically idea with monads. OO users can employ some DI framework magic to dynamically proxy objects for completely central operations.
+
+That is all pretty conceptual. Let's look at a concrete example from my code: indexing searchable entities asychronously. 
+
+// maybe make this it's own blog post too? It'd make sense to go more in depth on something I expect to be a standard pattern and key design decision
+
+**Case 1**: The action is part of a large generalized service that is called directly.  
+None of our options are great. We can
+ - bake the async knowledge into the calling service
+ - bake the async knowledge into the called service, making it async for all consumers
+ - implement a decorator on the large service, passing all the other methods through and only implementing async on the single one action.
+   -  May be difficult to still meet return value expectations
+   -  Involves more methods than likely need to be async
+Making the call async is tangles with the concerns and demands of other services. A concrete example from my work was search indexing. 
+// move concrete example up to the whole examination
+
+**Case 2**: We follow SOLID Structure. Services defines their own abstractions that an influencer should be indexed  
+-- the caller can adapt it's semantics and it's particular brand of async (i.e. use a thread if a value needs to be immediately returned, events if it can be done later )
+
+
+
+## Reusable Services
+- services become domain-specific libraries, essentially
+- create email framework
+- able to slot in a bus management framework
+- This has the consequence that I'm pushed to accomodate any customization needs in a generic way. This actually makes writing the code easier and safer. 
+  - actually makes testing easier. Everything has the same extension options, no specific paths based on other service knowledge
+
+## Less room for Bugs
+- on one hand, more things might get mapped than before and that introduces a new place for errors. Outweighed by 
+- dependencies are simpler
+- More generic brings a conceptual purity that reduces room for error (link to mark seemann)
+  
+## Event Friendly
+ - not Event Driven arch. the goal isn't to structure everything around events
+ - events very powerful design tool for decoupled and scalable system
+ - the reduced scope lends itself well to events
+
+## Same idea everywhere
+- the rules are simple and apply everywhere
+- closes gap between framework-style design and designing our own systems
+  - our services essentially become domain-specific libraries
+- Even applies to testing, link to Paul's post
+
+## Open questions
+- see list below
+
+
+Post 1: design changes 
+ - checkin
+ - most critical factor is reduced scope of design decisions
+   - the selfishness pushes cross-cutting concerns out
+   - pushed out cross-cutting concerns centralize and are easier to map to generalized services
+   - if a generalized service didn't exist, you've now made one that you could sell or reuse
+   - since each dependency interface is smaller and more focused, it's easier to swap, easier to decorate
+   - since services themselves care less about direct callers, they're more general and expose more reusable functionality
+ - also makes for easier factoring, easier outsourcing, easier parallel work
+
+
+
 blog idea: discovering the scalability of my new design architecture
  - minimal interfaces with adapters -> smaller interfaces 
  - working on notifications -> realized that notifications are just an event system that happens to send an email as result
@@ -41,6 +134,9 @@ Post 2
    - before  dependency and service views where the same, now their orthogonal axes
      - services are business-related IH, with layers based on types of cohesion (sequential, functional, etc)
      - this new direction is integration/build related IH, focused on keeping services isolated, frameworks out of core logic, scale/communication concerns out of core logic 
+   - makes it more clear when certain decisions should be bound
+     - this also makes it easier to bind different decisions uniformly
+     - turns our own code into a library for the business domain
    - much more predictable dependency chain 
      - shared abstractions: should be only very general items to remove silly redundancy in abstraction definitions, like ILogger. Every service in most any system will have it and it shouldn't be defined by every service
      - services: no dependency on each other. Less likely to need big dependencies like communication frameworks. Only need libs for internal logic
@@ -59,3 +155,7 @@ Open questions
     - influencer cache for search, this is just a quick corner cut. It won't scale performance-wise and we should be keeping the search cache in a form tailored to this rather distinct use case
 - How much adaptation should be done for the clients 
   - the managers are use case adapters, but there is always an adaptation layer for the UI. It usually lives in the controllers 
+- What about accessor adapters?
+  - do accessor implementations belong in the adapter section and only accessor abstractions in the domain category?
+- Guidelines for when datacontracts should be shared
+  - so far i've gotten off with only primitive types in the dependency contracts because they reduce the scope so much
