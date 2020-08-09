@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Architecture, Design thinking, Case Study]
+tags: [Design thinking, Case Study, SOLID, Open-Closed Principle]
 ---
 
 # Chat Library Case Study: Open-Closed Application
