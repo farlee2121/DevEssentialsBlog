@@ -35,7 +35,7 @@ Paul expected various benefits from this pattern.
 
 **Breaks the Fragile Test Problem**: 
 - The short version, the test api reduces the connections points between our tests and our system, reducing the number of changes to keep the two in sync.
-- The formal version. Suppose there are $N$ tests and $M$ code components. If the tests know directly about the system then any one of the $M$ components could break any number of the $N$ tests. There are $N*M$ potential points of change. Since both sides are unbounded that's a complexity of $O(N*M)$. Suppose we add test apis. Now changes in the tests do not affect the system, just a test api. Similarly, changes in the system do not affect the tests, just the test api implementations. Only one layer is subject to change so the potential number of changed components is just the number of test apis. In otherwords, we have a complexity of $O(n)$.
+- The formal version. Suppose there are $N$ tests and $M$ code components. If the tests know directly about the system then any one of the $M$ components could break any number of the $N$ tests. There are $N*M$ potential points of change. Since both sides are unbounded that's a complexity of $O(N*M)$. Suppose we add test apis. Now changes in the tests do not affect the system, just a test api. Similarly, changes in the system do not affect the tests, just the test api implementations. Only one layer is subject to change so the potential number of changed components is just the number of test apis. In otherwords, we have a complexity of $O(N)$.
 
 
 ## Early scepticism
