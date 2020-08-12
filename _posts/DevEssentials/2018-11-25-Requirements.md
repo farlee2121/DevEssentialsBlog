@@ -1,12 +1,6 @@
 ---
 layout: post
 tags: [Project Management, Dev Essentials, Process]
-excerpt: "Requirements are the first step of any project.
-
-The above intern project failed because we never considered what we were
-accomplishing, in other words, our requirements. Requirements set out the
-vision, and we had none. With no vision, the software had no where to go from
-the start."
 ---
 
 # Requirements
@@ -15,6 +9,8 @@ the start."
 > about what you are trying to build. - Bjarne Stroustrup (inventor of c++)
 
 > Plans are worthless, but planning is everything. - Dwight D. Eisenhower
+
+<!-- more -->
 
 I was once on an intern team tasked with detecting open parking spots with cameras. This team had a “just code” mentality. Code was the metric that mattered and taking time to get on the same page, better understand the problem, or test was just slowing us down.
 

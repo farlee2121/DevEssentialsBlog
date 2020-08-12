@@ -1,8 +1,6 @@
 ---
 layout: post
 tags: [Construction, Dev Essentials, Naming, Code Style, Readability]
-excerpt: "Who do we write code for? This question is not often 
-considered, and so the answer is usually nobody. Thus, nobody is about who can understand and change the code."
 ---
 # Semantic Naming
 
@@ -10,6 +8,8 @@ considered, and so the answer is usually nobody. Thus, nobody is about who can u
 
 Who do we write code for? This question is not often not
 considered, and so the answer is usually nobody. Thus, nobody is who understands the code.
+
+<!-- more -->
 
 Naming doesn’t seem like a complicated activity at first blush. However, maintainability and comprehensibility are core concerns of software development (Parnas, On the Criteria for Decomposition...) and naming is deeply tied to how we understand our programs.
 
@@ -27,7 +27,7 @@ Bad names also stem from a mis-prioritization of shortness over clarity. Shortne
 You’ve probably seen names like
 
 | **Examples**            | **Flaw**                                                                                                                                       |
-|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | ManageController, Count | The name is ambiguous. What is being managed? What is being counted?                                                                           |
 | x, l, or mc, aoc        | The name has no meaning. Only the writer or, possibly, someone very familiar with the problem has any idea what these mean                     |
 | AliasEngine             | This could be good if aliasing has a clear definition in your system. In my case, it was actually normalizing data, which makes it a bad name. |

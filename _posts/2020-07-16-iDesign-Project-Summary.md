@@ -1,12 +1,11 @@
 ---
 layout: post
 tags: [Architecture, DDD, iDesign, Reading Notes]
-excerpt: "Part 2 of Righting Software presents the most complete theory of project management I've seen: the Critical Path Method."
-strip_title: false
 ---
 # Righting Software - Project Design Summary
 
 Part 2 of Righting software presents the most complete theory of project management I've seen: the [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method). 
+<!-- more -->
 
 It originated in the 1940's out of the Manhattan project and is based on understanding project dependencies as a graph or network. For example,
 

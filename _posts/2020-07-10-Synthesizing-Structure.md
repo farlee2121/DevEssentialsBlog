@@ -1,13 +1,13 @@
 ---
 layout: post
 tags: [Design Thinking, System Structure, Project Structure, Synthesizing, Design Theory]
-excerpt: "A theory on project structure from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, ..."
-strip_title: false
 ---
 
 # Synthesizing Project Organization Methods
 
 How to organize code into projects/packages can be a challenge. Here's an interesting idea I thought of from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, and how many nuget packages are organized.
+
+<!-- more -->
 
 The ideas:
 - Services as Legal Contract / Stand-alone api for part of the business nature
