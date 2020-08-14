@@ -25,7 +25,13 @@ Making the call async is tangles with the concerns and demands of other services
 
 
 notes from the refactor
- - improved the design of more services than expected. Hadn't gone in looking for all those opportunities (network import, social data import, search index)
- - separating async concerns ended up bringing the two import flows much closer together and illuminated the path for eventually merging them
- - disentangle async concerns from testing perspective
-   - one component is only logic tests, no worry for async complexities
+- improved the design of more services than expected. Hadn't gone in looking for all those opportunities (network import, social data import, search index)
+- separating async concerns ended up bringing the two import flows much closer together and illuminated the path for eventually merging them
+- disentangle async concerns from testing perspective
+  - one component is only logic tests, no worry for async complexities
+- Should talk through three stages
+  - what santi wrote
+  - what i did with hangfire
+    - actually pretty understandable. very isolated scope
+    - makes for nasty public interface, much of which isn't meant for general consumers 
+  - what I did now with SOLID Structure
