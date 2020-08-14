@@ -22,3 +22,10 @@ Making the call async is tangles with the concerns and demands of other services
 
 **Case 2**: We follow SOLID Structure. Services defines their own abstractions that an influencer should be indexed  
 -- the caller can adapt it's semantics and it's particular brand of async (i.e. use a thread if a value needs to be immediately returned, events if it can be done later )
+
+
+notes from the refactor
+ - improved the design of more services than expected. Hadn't gone in looking for all those opportunities (network import, social data import, search index)
+ - separating async concerns ended up bringing the two import flows much closer together and illuminated the path for eventually merging them
+ - disentangle async concerns from testing perspective
+   - one component is only logic tests, no worry for async complexities
