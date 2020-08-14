@@ -1,10 +1,6 @@
 ---
 layout: post
 tags: [Construction, Dev Essentials, Testing]
-excerpt: "In the words of Pragmatic Programmer, “We want to
-start testing as soon as we have code.”
-Testing changes the way we write code. It forces us to see the code from the
-point of the consumer. This makes our code easier to understand and to use."
 ---
 
 # Test-Centered Development
@@ -14,6 +10,8 @@ point of the consumer. This makes our code easier to understand and to use."
 >   “The act of writing a unit test closes a remarkable number of feedback
 >   loops, the least of which is the one pertaining to verification of the
 >   function” – Robert Martin
+
+<!-- more -->
 
 Test-Centered Development? Yeah. Test-Driven Development may be a popular term, but writing tests first is a bit controversial. However, testing as a central part of development is not. In the words of Pragmatic Programmer, “We want to start testing as soon as we have code.”
 

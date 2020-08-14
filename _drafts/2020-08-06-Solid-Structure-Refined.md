@@ -23,11 +23,19 @@ IDesign layers code by role in the business domain. Every layer and service repr
 
 **Clean Architecture**
 
-Clean Architecture layers based on relevance to the domain. The most stable business abstractions are the foundation, then uses cases, then adapters, and finally external systems. This ordering emphasizes callers owning their abstractions.
+Clean Architecture layers based on relevance to the domain. The most stable business abstractions are the foundation, then uses cases, then adapters, and finally external "mechanisms". This ordering emphasizes callers owning their abstractions so that the system moves to the convenience of the more fundamental business rules.
 
 > Aside: creating SOLID structure is actually what helped me better understand Clean Architecture and how it differed from IDesign. The names in the layers can be distracting, focus on the names for the colored layers (also see [Robert Martin's post](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html))
 
 ![Clean Architecture diagram](../post-media/SolidStructure-Refined/CleanArchDiagram.png)
+
+*Enterprise Business Rules*: sadf
+
+*Application Business Rules*: adfa
+
+*Interface Adapters*: asdf
+
+*Frameworks and Drivers*: asdf
 
 
 **Solid Structure**
@@ -47,10 +55,28 @@ Layout
 
 ![Structure Table](../post-media/SolidStructure-Refined/SolidStructureTable.png)
 
-- *Shared Contracts and Entities*: These should only be the most fundamental and unchanging abstactions. For example, not every service needs it's own logging interface. 
-- *Domain Truths*: The classic IDesign layers that encode the core domain. Should not directly reference external domain like utilities. May contain some limited frameworks for defining the business flows. Should never change for differences in scale or deployment. Each service should be self-contained.
-- Adapters: Fulfills the domain dependency abstractions. May map to a lower-layer domain service or to a utility/external service. This is where decisions of scale like event systems, communication protocols, and remote calls are made. Also likely binds flexibility concerns like email or identity systems business people can manage.
-- Clients: Determines the final mix of adapters needed to deliver a running product. These are the assemblies that will be deployed to concrete infrastructure. Responsible for configuring concrete resources like databases, log stores, files stores, etc. 
+Here are the Clean Architecture layers, but with more specificity to mesh with the IDesign Layers and clarify decision-time categories.
+- *Enterprise Rules / Shared Contracts and Entities*
+  - These should only be the most fundamental and unchanging abstactions. For example, not every service needs it's own logging interface.
+  - Should be abstractions that could be shared between all sub-domain applications. 
+  - Facilitates smooth experience for most fundamental tasks between company systems
+
+- *Application Business Rules / Domain Truths*: The classic IDesign layers that encode the core domain. 
+  - Should not directly reference external domain like utilities. May contain some limited frameworks for defining the business flows (i.e. rules engine?).
+  - TODO need to re-evaluate this layer because clean arch has no frameworks in the logic layer
+  - Should never change for differences in scale or deployment.
+  - Each service should be self-contained.
+
+- *Adapters*: Fulfills the domain dependency abstractions.
+  -  May map to a lower-layer domain service or to a utility/external service.
+  - Adapters should not call each other, an adapter may call another implementation of the same abstraction in a decorator-like fashion.
+  - This is where decisions of scale like event systems, communication protocols, and remote calls are made.
+  - Also likely binds flexibility concerns like email or identity systems business people can manage.
+  - 
+- *Clients, Frameworks, and drivers*
+  - Determines the final mix of adapters needed to deliver a running product. 
+  - These are the assemblies that will be deployed to concrete infrastructure. 
+  - Responsible for configuring concrete resources like databases, log stores, files stores, etc. 
 
 ## Consequences
 - Guidelines for every piece of code

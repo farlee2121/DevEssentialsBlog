@@ -2,13 +2,13 @@
 layout: post
 tags: [Languages, Functional Programming, Design Thinking,
         Pivotal Insights]
-excerpt: null
 series: Language-Limited Thought
 series_description: Exploring how different languages equip us to solve different design problems
 ---
 # Language Limited Thought
 
 This series is about how I internalized the value of different programming languages. Specifically, my transition to functional-style thinking. Functional programming tutorials can be lofty and theory-laden, but I'll be diving into concrete design problems and how FP trivialized my long-standing struggle with them.
+<!-- more -->
 
 ## Background
 

@@ -1,11 +1,6 @@
 ---
 layout: post
 tags: [Project Management, Dev Essentials, Process, Review, Collaboration, Pair Programming]
-excerpt: "IBM found that every hour of code inspection saved 100 hours of related work. Pair programmers produce higher quality, more
-maintainable, code in 15% more time than an individual,
-and inspected systems require 1/10th the maintenance of non-inspected systems.
-
-These a few of stats supporting collaboration and review in software. Teams that regularly collaborate work faster, learn faster, and have fewer defects."
 ---
 
 # Technical Collaboration
@@ -17,6 +12,8 @@ These a few of stats supporting collaboration and review in software. Teams that
 
 IBM found that every hour of code inspection saved 100 hours of related work (Code Complete, p.480). Pair programmers produce higher quality, more maintainable, code in only 15% more time than an individual (Pair Programming Benefits), and inspected systems require 1/10th the maintenance of non-inspected systems
 (Code Complete, p. 485).
+
+<!-- more -->
 
 These are a few of the stats supporting collaboration and review in software. Teams that regularly collaborate work faster, learn faster, and have fewer defects.
 

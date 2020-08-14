@@ -1,15 +1,14 @@
 ---
 layout: post
 tags: [Construction, Dev Essentials, Naming, Code Style, Readability, Documentation, Testing]
-# NOTE: I accidentally broke my excerpts when I moved titles into headers, but I actually think the quotes make better hooks
-# excerpt: "The code is the one guaranteed source for how the program operates, everything else is out of date the moment the code changes. Good programmers hate repeating themselves, so the code should be made a sufficient document to avoid documentation catchup."
-
 ---
 # Self-Documenting Code
 
 >   “There are two ways of constructing a software design: One way is to make it
 >   so simple that there are obviously no deficiencies and the other way is to
 >   make it so complicated that there are no obvious deficiencies.” – C.A.R. Hoare
+
+<!-- more -->
 
 Last time we established the importance of understandability, and thus naming.
 

@@ -1,13 +1,6 @@
 ---
 layout: post
 tags: [Construction, Dev Essentials, Process]
-excerpt: "You know that feeling where you write a bunch of code, run it, and it just
-works? Neither do I.
-
-Software is a creative process. There isn’t one static understanding of the
-software problems. Rather, we tend to understand the problem better as we
-understand the solutions. The more time between concept and test, the more the
-implementation can drift from expectations."
 ---
 # Iteration
 
@@ -20,6 +13,8 @@ implementation can drift from expectations."
 >   formulation of the problem and ideas for its solution, with constant
 >   iteration of analysis, synthesis, and evaluation process between the two
 >   “spaces” – problem and solution.” - Nigel Cross and Kees Dorst
+
+<!-- more -->
 
 You know that feeling where you write a bunch of code, run it, and it just works? Neither do I.
 
