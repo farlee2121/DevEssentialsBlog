@@ -14,6 +14,7 @@ id
   - generic and awkward
     - newing up an id
     - doesn't quite handle different types right
+  - alias would work, but it doesn't actually hide the type. Can couple with operations
 - hard beccause
 - discriminated union 
   - OR types with one containted type

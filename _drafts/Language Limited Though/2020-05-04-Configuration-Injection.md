@@ -8,6 +8,7 @@ series_description: Exploring how different languages equip us to solve differen
 ---
 Configuration
 
+
 - previous design
   - ConfigManager (strings be nasty, no IH, can't mock)
   - service-locator style (no IH, excessive enums, config needed for service is unclear)
