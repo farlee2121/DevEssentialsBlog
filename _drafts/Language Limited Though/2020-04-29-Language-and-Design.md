@@ -32,7 +32,13 @@ This connected with my knowledge of spoken languages. The Sapir–Whorf hypothes
 
 The very same concept applies to programming. Designers fashion languages around the problems that they want to be easy to solve. By understanding the approach of major language types, we expand our very ability to express and think about design problems.
 
-> The rest of this series will be breaking down the design problems that led to this insight. Mainly contrasting attempted solutions in OO to the solutions in FP and the difference in core ideas that simplifies the problem.
+
+## Functional Thinking
+Functional turtiorials can be intimidating. A big piece of this is just from unfamiliarity. Another big piece can be references to theory. Functional programming has deep roots in mathematics. This is a very good and powerful, but overwhelming when a learner is just starting out.
+
+I'll do my best to approach just enough of the underpinning ideas and with much context.
+
+The rest of this series will be breaking down the design problems helped me understand the value of languages. We'll contrast attempted solutions in OO to the solutions in FP and the difference in core ideas that simplifies the problem.
 
 
 
