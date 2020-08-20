@@ -9,12 +9,15 @@ series_description: Exploring how different languages equip us to solve differen
 
 # Service-Orientation and Functional Programming
 
-Service-Oriented Programming is a rising design paradigm that divides the software into self-contained "services" or groups functionality. Services also apply in functional programming, rather, service-like behavior is enforced all the way to the foundational concepts.
+Service-Oriented Programming is my primary programing paradigm. It divides the software into self-contained "services" or groups functionality. Services also apply in functional programming, rather, service-like behavior is enforced all the way to the foundational concepts.
+
+To be clear, Service-Orientation isn't a concept I struggled with in C#. It is facinating how service-oriented principles that surfaced in response to object-oriented issues align so well with functional programming.
 
 ## What is Service-Orientation
 My background in service-orientation requires that
  - services have clear boundaries
  - services only communicate through contracts (interfaces and data-contracts)
+   - separation of function and data 
  - services are self-contained / understanding the service doesn't require looking at any other services
  - services are stateless... well... more like transactional
    - For example, a service could certainly save some data that was previously unknown and allow it to be retrieved by some reference. Each call musts be a complete transaction though. Save should not be split over two operations that expect to be called in sequence.
@@ -44,14 +47,27 @@ This is now known to be an unsustainable way of design. It results in state hidi
 
 ## Functional Foundations
 
+Functional programming is strongly inspired by mathematics. This means
+- functions are *not* algorithms, they are tranformation from input to output
+- a function always has an output value, even if that value is "nothing"
+- the trasformation should be stateless. The same input always produces the same output
+  - this is known as referential transparency
+- a function does not effect the state of it's caller / data is immutable
+- All expectations of a function should be passed as arguments. There are no hidden inputs.
+  - conversely functions are not operations on internal data like methods are in OO
 
 
-also do a post of service orientation??
- - purity/statelessness
- - separation of data and operations
- - DI/IH
+## FP to SOP
+You can probably already see similarities to service orientation, but let's lay it out.
+- Services have clear boundaries
+  - Not guaranteed by functional paradigms, but stylistically encouraged. Referential transparancy discourages stateful coupling and encourages a clear contracts between components. It sorta makes every function a mini-service that can be grouped with like mini-services. 
+- Separation of function and data defitions
+  - Functional data types are immutable. You cannot expose changable data properties on a module. Changes in data are accomplished through function calls (like service calls).
+  - Functions are a type of data, though, and can be passed around on instances of data records. I have not seen this done before, and it isn't a managable code organization scheme like functions on objects is.
+- Services are self-contained
+  - Again, referential transparency plus immutability encourages each function to be self-contained. Higher levels of grouping are accomplished with modules.
+- Stateless/Transactional
+  - Functional data types are immutable. Most functional languages disallow variables. Instead they offer "binding" values to names. It can feel a lot like variables, but they value assigned to the name does not change. Instead, you are encouraged to bind values to new names (which is what you should do in any language anyway). This also means that any values passed into a function will not change, just like you wouldn't expect a json object to mutate when you pass it to an API. Instead you must reflect any updates in the function's return value.
 
-Other
- - not reusing variables
- - talk about composition as something I try to do, but struggle with because there isn't a clear expression for it (managers are basically the pipelines scott shows, organize flow and error handling)
-   - not all composition equal, in c# it leads to lots of nesting, which means the composition often gets lumped together
+Almost every property listed for SOP requires self-discipline to ignore (or even work around) prominent object-oriented tools. Tools like referential mutability, surfacing data and actions together, and statefulness. Functional programming, however, enforces some and encourages all of the Service-Oriented values.
+
