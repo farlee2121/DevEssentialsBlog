@@ -22,3 +22,4 @@ id
   - alias isn't as good
 
 
+// co varient returns would solve the problem in C#
