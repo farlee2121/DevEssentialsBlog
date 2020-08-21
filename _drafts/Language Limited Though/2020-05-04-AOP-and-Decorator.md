@@ -143,5 +143,6 @@ AOP and decorators are definitely possible and beneficial in OO, but much more w
 The simplicity of AOP in F# helped me to finally wrap my head around the paradigm as a practical tool.
 
 ## Further Reading
-- https://fsharpforfunandprofit.com/posts/conciseness-functions-as-building-blocks/
-- https://fsharpforfunandprofit.com/fppatterns/
+- A nice exploration of the AOP options in C#. I did not cover them all here because there are a lot https://www.dotnetcurry.com/patterns-practices/1305/aspect-oriented-programming-aop-csharp-using-solid
+- Composition as decorator https://fsharpforfunandprofit.com/posts/conciseness-functions-as-building-blocks/
+- Mapping OO patterns to FP https://fsharpforfunandprofit.com/fppatterns/
