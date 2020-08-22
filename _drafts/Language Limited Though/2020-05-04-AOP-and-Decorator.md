@@ -2,7 +2,6 @@
 layout: post
 tags: [Languages, Functional Programming, Design Thinking,
         Pivotal Insights]
-excerpt: null
 series: Language-Limited Thought
 series_description: Exploring how different languages equip us to solve different design problems
 ---
