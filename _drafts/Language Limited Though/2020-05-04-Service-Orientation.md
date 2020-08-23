@@ -21,6 +21,7 @@ My background in service-orientation requires that
  - Process-unaware / Self-contained operations
    - Every operation is a complete transaction
    - For example, a service could certainly save some data that was previously unknown and allow it to be retrieved by some reference. Each call musts be a complete transaction though. Save should not be split over two operations that expect to be called in sequence.
+   - The Values of Values by Rich Hickey is a great talk for understanding this property.
 
 A helpful trick, imagine you were to offer every component of your software as a REST API.  The api would obviously be a set of operations that accepts and returns determined data structures. Each operation would need to be clear and complete. For scale and reliability, it wouldn't be able to rely on keeping state server-side.
 
@@ -70,7 +71,7 @@ You can probably already see similarities to service orientation, but let's lay 
     - Functions are a type of data, though, and can be passed around on instances of data records. I have not seen this done before, and it isn't a managable code organization scheme like functions on objects is.
 - Services are self-contained
     - Again, referential transparency plus immutability encourages each function to be self-contained. Higher levels of grouping are accomplished with modules.
-- Stateless/Transactional
+- Process-unaware / Self-contained operations
     - Functional data types are immutable. Most functional languages disallow variables. Instead they offer "binding" values to names. It can feel a lot like variables, but they value assigned to the name does not change. Instead, you are encouraged to bind values to new names (which is what you should do in any language anyway). This also means that any values passed into a function will not change, just like you wouldn't expect a json object to mutate when you pass it to an API. Instead you must reflect any updates in the function's return value.
 
 Almost every property listed for SOP requires self-discipline to ignore (or even work around) prominent object-oriented tools. Tools like referential mutability, surfacing data and actions together, and statefulness. Functional programming, however, enforces some and encourages all of the Service-Oriented values.
