@@ -2,7 +2,6 @@
 layout: post
 tags: [Languages, Functional Programming, Design Thinking,
         Pivotal Insights]
-excerpt: null
 series: Language-Limited Thought
 series_description: Exploring how different languages equip us to solve different design problems
 ---
@@ -253,7 +252,7 @@ Result.Ok(5)
 We can keep adding operations on plain integers without worrying about error states until the whole chain is done. 
 We completely remove error handling from our core logic without sacrificing safety.
 
-Scott Wlaschin calls this Railway-Oriented Programming.
+Scott Wlaschin calls this [Railway-Oriented Programming](https://fsharpforfunandprofit.com/rop/).
 
 
 ## Mapping back

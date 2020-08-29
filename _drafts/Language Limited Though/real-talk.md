@@ -2,9 +2,6 @@ My results post lacks focus. I need to orient myself to make these posts worth w
 as my opener states, each post needs to be centered around FP ideas and why the FP ideas bring clarity
 Should probably split nullable in some way. Either give it it's own solution section or make another post
 
-// split off another post for multiple valid input types (string/ConnectionString)
- - actually fairly easy in c#, but creates expanding interfaces. Multiple such arguments cause a signature explosion. Can handle via objects, but a requires some mind wrapping (do you cast? )
- - also have to reprensent the multiple possible types through several layers (possibly)
 
 // absense of value not a first class notion
 // I feel like each of these posts should focus on some concept that functional languages embody and OO doesn't
@@ -13,6 +10,18 @@ Should probably split nullable in some way. Either give it it's own solution sec
  - Id => more a nice side-effect of discrimintated unions
  - Service orientation -> referential transparency, statelessness means separation of data and function
  - AOP => composition, the idea of functions not as an instruction set, but as transforms or operations. Also monads and the idea of unit / space translations
+
+TODO
+- [ ] edit for consistency between the posts 
+  - [ ] how problem is introduced
+  - [ ] how problem is spec'd
+  - [ ] how functional concept is introduced
+  - [ ] and reveals solution
+- [ ] 
+
+
+
+
 
 composition post
 

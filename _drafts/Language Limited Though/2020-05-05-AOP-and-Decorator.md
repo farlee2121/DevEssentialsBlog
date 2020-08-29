@@ -2,14 +2,13 @@
 layout: post
 tags: [Languages, Functional Programming, Design Thinking,
         Pivotal Insights]
-excerpt: null
 series: Language-Limited Thought
 series_description: Exploring how different languages equip us to solve different design problems
 ---
 
 # Functional Composition, Decorator, and Aspect-Oriented Programming
 
-Aspect-Oriented programming has captivated my imagination for years. C#, however, does not support AOP.  Even conceptually realizing benefits of the paradigm proved difficult. Then, I experienced functional composition.
+Aspect-Oriented programming has captivated my imagination for years. C#, however, does not support AOP. Even conceptually realizing benefits of the paradigm proved difficult. Then, I experienced functional composition.
 
 ## What is Aspect-Orientation
 The heart of Aspect-Orientated Programming (AOP) is cross-cutting concerns. The creators saw concerns like logging, authorization, authentication, and transaction mananagement. They asked why these needed to be spread through the program. 
