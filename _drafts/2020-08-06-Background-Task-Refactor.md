@@ -35,3 +35,4 @@ notes from the refactor
     - actually pretty understandable. very isolated scope
     - makes for nasty public interface, much of which isn't meant for general consumers 
   - what I did now with SOLID Structure
+- When I doubted switch to masstransit/queue, I realized it was now easy to choose hangfire instead. The places to change were clear and separate. I could create a hangfire implementation and a masstransit implementation and swap them without any other changes if I really wanted.
