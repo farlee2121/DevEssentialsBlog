@@ -60,48 +60,10 @@ CQRS (Command-Query Responsibility Segregation) is a formalization of the idea t
 
 IDesign is an extension of service-orientation that tries to separate out coordination (managers), transformation (engines), and recording (accessors).
 
-Clean architecture separates out an Interface Adapter layer. My recent grappling with the pattern has pushed me to move concerns like coordination, communications, fault management, and large value "references" out of core services and into the adapter layer to be decided by the consumer. The consumer generally being system-level coordination when consumed internally. 
+Clean architecture separates out an Interface Adapter layer. My recent grappling with the pattern has pushed me to move concerns like coordination, communications, fault management, and large value "references" out of core services and into the adapter layer to be decided by the consumer. This mirrors the system-level "core library" concerns that should be centrally determined and plugged into services.
 
 ## Conclusion
 
 The corrolation between Rich Hickey's system-level design paradigms and recent design principles seems like it is no accident. I believe that we are seeing the emergence of the next paradigm shift like Structured Programming. Robert Martin argues in [A Little Structure](https://blog.cleancoder.com/uncle-bob/2015/09/23/ALittleStructure.html) that advancements are made by taking tools away. These new principles are all oriented at taking away the "privledge" that individual programs have for local place-oriented coordination.
 
 I conclude that place-oriented programming will eventually die or be greatly contrained just like structure programming eliminated goto. This doesn't mean object-oriented and imperative langauges will die. However, I believe it will involve a shift to languages and language features that favor these service-like and distribution-friendly properties.
-
-
-What key points stood out to me
-- Separation of communications
-  - programmer to programmer
-  - programmer to computer (generally a lesser concern that can be taken care of)
-  - program to program
-- analogy of runtime and core libs to system level
-  - "simple services"
-- Qualities of System-level 
-  - No central control
-    - semantics live in the connections
-  - communicate with values
-    - service orientation 
-  - names are global (they have to be)
-  - failure (partial and independent)
-- System level SRP
-  - transform
-  - move
-  - Route
-  - Record
-- what about system interfaces
-  - the struggle is so real here
-
-
-Core theme could be taking away a design tool
- - taking away the privlege of availability assumptions, complete central orchestration,  
- - https://blog.cleancoder.com/uncle-bob/2015/09/23/ALittleStructure.html
-
-
-What clarity do I feel like this video brought?
-- A clear framework for the properies of systems, why it's different, and how to address it
-
-
-For me, better understanding Clean Arch has brought my service orientation much more in line with the system level concepts Rich is talking about
-- let people specify their own communication, persistence, etc
-- simple services seem to fall into the interface adapter layer
-  
