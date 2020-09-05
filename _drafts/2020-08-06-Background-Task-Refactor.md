@@ -2,6 +2,7 @@
 layout: post
 tags: [Architecture, Design thinking, SOLID Structure, Case Study, Scaling]
 ---
+# Title here
 Defining dependencies contracts with only the calling service in mind produces contracts that are much smaller and more focused. This means that it is much easier to make new implementations and much more likely that usage constraints on all of the contract operations change together. This means that we can wrap a whole contract in some decorator without disrupting intent. Some potential decorators here being the classic AOP concerns: logging, security, async.
 
 > Aside: Functional users can accomplish this generically idea with monads. OO users can employ some DI framework magic to dynamically proxy objects for completely central operations.
