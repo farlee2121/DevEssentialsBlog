@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="181px" height="231px" viewBox="-0.5 -0.5 181 231" content="&lt;mxfile host=&quot;&quot; modified=&quot;2020-09-06T19:59:22.784Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.46.0 Chrome/78.0.3904.130 Electron/7.3.1 Safari/537.36&quot; etag=&quot;S4LovOWVkGR746tVJebV&quot; version=&quot;13.1.3&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;5VZLk5QwEP41VOnFArLz2OPO7Kxa5Z7m4O4xQg9EAz2GsIC/3g5JBqhl1SpRD3Ih/fXXST8DAdsX7VvFz/k9piCDOEzbgN0GcRyFV4xeBukssrq6tkCmROpIA3AU38BbOrQWKVQTokaUWpynYIJlCYmeYFwpbKa0E8rpqWeewTPgmHD5HP0oUp1bdBtvBvwdiCz3J0drF1/BPdlFUuU8xWYEsUPA9gpR21XR7kGa5Pm8WLu7F7QXxxSU+lcMttbgicvaxeb80p0PVmFdpmD4YcB2TS40HM88MdqGyktYrgtJUkTLk5ByjxIVySWWRNqlvMp7c6N3x4HS0L7ocnRJBHUQYAFadURxBsx3gW8eJzZDJaKtw/JRFWLmQO6qn122HhJEC5ej+Xytf54vSKlXnIhK55hhyeVhQHfTjA6cD4hnl6fPoHXnGp/XGqdZrjRX+sY08pDmHrsTxvN+WyhTz0gkryqRWHBEsa4bf39cCgoPa5U4louYjsvAsVbzBVMguRZP091/J/vxTPbXUpu+Q/LYDLxtPYK/1maGKEYW9s8YWmfmfc9LGlQVmBGxu3xSXveqEdRMcXhTdWXy2uvJP3uQJS03KuQlsGQbhn0hFX6BkWYXXq96jTl7hJ/6Z6GhYtOhijYzUxXPTNV6gaFaLVrW95e6/m9F+5s12/yLew9aoR+M+ZuVkx5HmtvWX31G6C73IEX24GlGeBx2MOJg1kvebqE7dubrt8CFG/+ZC5fE4dej141+4NjhOw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="0" y="0" width="180" height="230" fill="none" stroke="#000000" stroke-dasharray="3 3" pointer-events="all"/>
+        <path d="M 80 120 L 80 86.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 80 81.12 L 83.5 88.12 L 80 86.37 L 76.5 88.12 Z" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="20" y="120" width="120" height="60" fill="#e3c800" stroke="#b09500" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 150px; margin-left: 21px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <font color="#000000">
+                                    Manager 
+                                    <br/>
+                                    (with Async)
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="154" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Manager...
+                </text>
+            </switch>
+        </g>
+        <rect x="20" y="20" width="120" height="60" fill="#e3c800" stroke="#b09500" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 50px; margin-left: 21px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                <font color="#000000">
+                                    IManager
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="54" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    IManager
+                </text>
+            </switch>
+        </g>
+        <path d="M 80 180 L 80 200 L 160 200 L 160 150 L 146.37 150" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 141.12 150 L 148.12 146.5 L 146.37 150 L 148.12 153.5 Z" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

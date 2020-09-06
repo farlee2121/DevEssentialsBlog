@@ -26,23 +26,20 @@ Goals include
 
 This code base originally managed async work through a QueueAccessor. Some manager would directly call a known event on the queue accessor with message data, then the queue accessor would publish to a queue, trigger a handler defined in a client, and run another manager method with the given data.
 
-![Queue Accessor Diagram]()
+![Queue Accessor Diagram](../post-media/Background-Task-Refactor/QueueAccessor.drawio.svg)
 
 This solution fails because
 - It directly couples the notion of the communication method
-- A queue is never a natural part of a business flow
+  - Cannot be used in other scenarios with a non-queued fulfillment
+- A queue is never a natural part of a business flow. 
+  - "Queueing" is not a business activity to be reused or evolved. At best this abstraction hides a library decision.
 - The flow is opaque
   - The queue broadcast and event handler must be separated to prevent cyclical service dependencies
-- The division of events between caller is unclear. It is tempting to reuse events between callers in unexpected ways
+- The division of events between caller is unclear. It is tempting to reuse events between callers in unexpected ways. Centralizing the "queueing" responsibility encourages coupling between the many unrelated callers
 
-I had previously refactored a portion of this pattern for index updates using Hangfire. Rather than split up the async code
+I had previously refactored a portion of the index updates to Hangfire. I opted to implement async calls as references back to the concrete manager rather than split up the async code and couple to the queue accessor. This did make the async work clearer, centralized, and prevent coupling to unrelated modules. However, it left my business logic coupled to async concerns and libraries.
 
-  - what i did with hangfire
-    - actually pretty understandable. very isolated scope
-    - makes for nasty public interface, much of which isn't meant for general consumers 
-![Hangfire Diagram]()
-
-// should show diagrams of the three alternatives, queue accessor, in-manager, and decorator/aspect
+![Hangfire Diagram](../post-media/Background-Task-Refactor/Hangfire.drawio.svg)
 
 ## Design Shift
 
@@ -60,9 +57,10 @@ Shifting to define dependencies contracts with only the calling service in mind 
 
 In essence, we can leverage Aspect-Orientation to apply powerups to our contracts without changing the original implementation.
 
-![Decorator Diagram]()
+![Decorator Diagram](../post-media/Background-Task-Refactor/Decorator.drawio.svg)
+<!-- making this diagram makes me realize that the IHandlerRegistration interface belongs to the handler client, but source dependencies are only supposed to point in... How are adapters supposed to consume libraries? It seems silly to abstract every framework from the adapters that are specifically there to bridge the frameworks into the use cases. Nevermind. The adapter is the library that is being extended. It provides the abstraction for the client to consume  -->
 
-> Aside: Functional users can accomplish this generically idea with monads. OO users can employ some DI framework magic to dynamically proxy objects for completely central operations.
+> Aside: Functional users can accomplish decorator more generically with monads. OO users have to made decorators per interface or employ employ some DI framework magic to dynamically proxy objects for completely central operations.
 
 
 ## Realized Benefits
