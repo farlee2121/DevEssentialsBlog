@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Architecture, Design thinking, SOLID Structure]
+tags: [Architecture, Design thinking, Clean Architecture, SOLID Structure]
 ---
 
 # Clean Architecture+: Checkin and Benefits 
