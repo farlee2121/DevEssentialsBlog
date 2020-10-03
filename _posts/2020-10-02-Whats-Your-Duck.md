@@ -24,19 +24,27 @@ Even so
 
 Programming is such a flexible medium that our designs are pretty much only limited by our imagination. We need constraints and communication to refine our ideas. 
 
-In Design of Design, Brooks outlines the core process of all design activities.
+In Design of Design, Brooks outlines the core process of all design activities. 
 
 First, identify
- - Primary goals (must haves)
- - Desiderata (nice to haves)
- - Contraints (not goals, but have to be met)
- - A utility function (for evaluating solutions against goals and contraints)
+ - **Primary goals**: Must haves. These must be addressed in order for the problem to be considered solved
+ - **Desiderata**: Nice to haves or secondary goals. Not essential, but desired.
+ - **Contraints**: Not essential to the problem in general, but must be met in this case. Things like budgets, timelines, and team limitations. Two available developers is not a general property of building a recipe app, but may be all you have.
+ - **A utility function**: Some way of evaluating solutions against goals and contraints
 
-The designer then uses a pseudo-depth-first consideration of solutions to choose between design groups. The best design possiblilities are iteratively narrowed and more is known about the final design. This often informs the goals and constraints, in essence refining our definition of the problem that we are solving.
+Jumping to full solutions is a lot of wasted work if the one you pick doesn't meet the goals and constraints. At the same time, considering every alternative before moving to the next decision is impossible.
+
+Realistically, the designer uses a pseudo-depth-first approach.
+ - Choose a key decision branch
+ - Identify likely solutions
+ - Consideration the alternatives deeply to choose between design groups.
+ - Narrow to the best design and repeat
+  
+The best design possiblilities are iteratively narrowed and more is known about the final design. This often informs the goals and constraints, in essence refining our definition of the problem that we are solving.
 
 ## Practical Adaptation
 
-I've spent a lot of time in small team and startup environments. I often had no one pair program with or discuss ideas with to refine them. 
+I've spent a lot of time in small team and startup environments. I often had no one pair program or discuss ideas with to refine them. 
 
 Thus, I started pairing with a text document. This helped be to keep track of my ideas while simultaneously documenting my design considerations. The duck doc could be cleaned up and condensed if the task needed a more peranent documentation for other contributors.
 
@@ -51,9 +59,9 @@ The standard outline is
 - Unknowns (that I likely need to figure out)
 - Solution Explorations
 
-Duck docs always start with a through compilation of the requirements. Considering solutions is useless if you don't understand the problem being solved. The problem statement needs to be explicity in order to make consistent judgments and so that it can be refined. Any gaps that are left implicit will be filled with assumptions, often leading to the solving the wrong problem. 
-<!-- todo: need to consolidate these sections -->
-I don't mean to promote waterfall-ish requirements. The point is a clear communication of the problem that all stakeholder can read and know their trying to solve the same problem. Then gaps can be mended instead of unnoticed. I highly recommend chaper 9 of Design of Design: User Models - Better Wrong Than Vague.
+Duck docs always start with a through compilation of the requirements. Any solution is useless if you don't first identify the right problem to solve. An explicit problem statement allows the problem to be refined and debated. This exposes differences in understanding whereas unstated assumptions often go unchecked until a solution is already complete. I highly recommend chaper 9 of Design of Design: User Models - Better Wrong Than Vague.
+
+Identifying knowns and unknowns helps me to orient. If there are too many unknowns then I need to back up to an earlier design phase. If there are many knowns, I may be able to skip to a more detailed phase of design. Knowns and unknowns also prime my lines of thought for solution exploration.
 
 Solution exploration looks different for every task. The general idea is to iteratively fill in your most important unknowns and narrow your choices. By the time you've run out of unknowns, the task is done and the problem solved. Iteratively tackling the most important unknowns help to minimize wasted effort from working on solutions that don't meet your goals.
 
@@ -70,6 +78,7 @@ Here are some common considerations by task type
 **Architecture**
 - Scale expectations
 - Reliability and availability expections
+- Security expectations
 - Team boundaries
 - Domain/Non-Domain solution properties
 - Volatility / likely changes
@@ -80,14 +89,16 @@ Here are some common considerations by task type
 - Is it a Domain or Non-domain feature?
 - What code already exists?
 - What are the high level operations that allow me to read the code naturally?
-- What can libraries solve for me, and what components do I need to hide them from?
+- What can libraries solve for me, and how can I limit their scope in my system?
 
-**Test Design**
-- Threat matrix, how likely is a issue versus how impactful
-
+**Test Engineering**
+- Threat matrix, how likely is an issue versus how impactful
+- What are the reliability and quality expections?
+- What data do we have on previous errors? What components have the highest defect rates?
+- Who might attack the system and why?
 
 ## What's Your Duck?
 
-Duck docs have been an invaluable tool for me to organize my thoughts. Communicating the problem and solutions identifies issues earlier and creates a persistent record for future collaboration or extention. 
+Duck docs have been an invaluable tool for me to organize my thoughts. Communicating flushes out issues earlier and creates a persistent record for future collaboration or extention. 
 
 There are certainly many viable alternitives: pair programming, inspections, walk throughs, design specs, actual rubber ducks, and more. What's your duck?
