@@ -58,10 +58,10 @@ The concept he proposes is the separation of **schema** and **selection**.
 ### Type-only membership 
 First, this requires decoupling our data from named or positional data containers. That mean no properties like in records and classes and no positional reliance like tuples.
 
-This can be solved with type-based aggregates, known as `spec/keys` in clojure.
+This can be solved with type-based aggregates, accomplished with `spec/keys` in clojure.
 
 ```clojure
-; example here
+(spec/def ::coordinate )
 ```
 
 This is brilliant. Accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existance of the data. 
@@ -96,8 +96,56 @@ While I believe this idea is powerful, I still have questions and reservations.
 
 What about the case where an aggregate uses two of the same type, but with different semantic intent? For example, a `ToAddress` and `FromAddress` or `User Author` `User Recipient`. One could make sub-types for these cases, but that feels a bit wrong.
 
+I also believe that names are an important communication of intent. I suppose the argument here is that you express that intent in the type name and can reuse it instead of a fixed-context property name. I feel like I'd need to use it to get a good sense for how I actually feel about the shift.
+
 The general schema also feels like a strong temptation to break service boundaries and tie services through the general schema. I suppose this is already a temptation and it will always be up to the designers on where to draw hard boundaries.
 
 
 ## Conclusion
 Articulating that optionality belongs to the consuming context is a powerful conceptual advance. I think Rich's proposal for separating general **schema** and required member **selection** per-context is promising for more expressive and less redundant type systems!
+
+
+<!-- 
+```clojure
+(ns cljtest.core
+  (:require [clojure.spec.alpha :as s])
+  (:gen-class))
+
+(def lat-regex #"^(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)$")
+(s/def ::lat (s/or
+              :lat-string (s/and string? #(re-matches lat-regex %))
+              :lat-float (s/and float? #(<= -90 %) #(<= % 90))))
+(def lon-regex #"^(\-?\d+(\.\d+)?),\s*(\-?\d+(\.\d+)?)$")
+(s/def ::lon (s/or
+              :lon-string (s/and string? #(re-matches lat-regex %))
+              :lon-float (s/and float? #(<= -180 %) #(<= % 180)))
+       )
+(s/def ::coordinate (s/keys :req [::lat ::lon]))
+
+(s/def ::street (s/and string? not-empty))
+(s/def ::city string?)
+(s/def ::state string?)
+(s/def ::zip (s/or
+              :zip-string string?
+              :zip-int (s/and int? #(<= 10000 %) #(<= % 99999)))
+       )
+(s/def ::address (s/keys :req [::street ::city ::state ::zip]))
+
+(s/def ::location (s/or ::coordinate ::address))
+(s/def ::location-list (s/* ::location))
+
+(s/def ::some-enum #{:opt1 :opt2 :opt3})
+
+
+;;test with (s/verify? spec value)
+
+(defn -main
+  "I don't do a whole lot ... yet."
+  [& args]
+  (println "Hello, World!")
+  (s/valid? ::lon 170.0)
+  (s/explain ::address {::street "151 N 8th" ::city "" ::state "" ::zip 68555})
+)
+
+```
+ -->
