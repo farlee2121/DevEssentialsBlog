@@ -39,3 +39,5 @@ clojure
 - Design by contract
 - essentially a parsing mentality. I make sure my input matches the requirements I need
 - it is dynamic in clojure, but doesn't need to be. A compiler could check the compatability of contracts and throw errors if there is a mismatch 
+- the contracts are stronger than generally found in static system
+- removes the extraneous names from comparison, just types and values
