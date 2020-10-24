@@ -30,7 +30,7 @@ Sadly, all roads seem to lead to extra types. Common solutions are in the vein o
 ```cs
 class TodoListSaveContract{
     string Title;
-    DateTime CreateDate;
+    DateTime CreatedDate;
     // all direct properties, no tasks
 }
 //Alternatively
@@ -58,10 +58,20 @@ The concept he proposes is the separation of **schema** and **selection**.
 ### Type-only membership 
 First, this requires decoupling our data from named or positional data containers. That mean no properties like in records and classes and no positional reliance like tuples.
 
-This can be solved with type-based aggregates, accomplished with `spec/keys` in clojure.
+This can be solved with type-based aggregates, accomplished with `spec/def` and `spec/keys` in clojure.
 
 ```clojure
-(spec/def ::coordinate )
+;; lat is a float between -90 and 90 
+(s/def ::lat (s/and float? #(<= -90 %) #(<= % 90))) 
+;; lon is a float between -180 and 180
+(s/def ::lon (s/and float? #(<= -180 %) #(<= % 180)))
+;; a coordinate should have a lat and a lon 
+(s/def ::coordinate (s/keys :req [::lat ::lon]))
+
+(def yosemiteCoords {::lat 37.748837 ::long -119.58723})
+;; now how to access a value. I think this is key https://clojure.org/guides/spec#_a_game_of_cards
+
+(print (::lat yosemiteCoords)) ;; print the latitude
 ```
 
 This is brilliant. Accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existance of the data. 
@@ -84,7 +94,19 @@ http://lexi-lambda.github.io/blog/2020/01/19/no-dynamic-type-systems-are-not-inh
 This all pulls together into a prototype language syntax for separating **schema** generally and **selection** per-context.
 
 ```clojure
-(s/spec this sfasdf)
+;; build up a task schema
+(s/def ::title string?)
+(s/def ::is-done bool?)
+(s/def ::task (s/schema [[::title ::is-done]]))
+
+;; build up a todo-list schema
+(s/def ::task-list (s/* ::task))
+(s/def ::date inst?)
+(s/def ::list-id int?)
+(s/def ::todo-list (s/schema [[::list-id ::date ::task-list ::title]]))
+
+;; require only properties needed for saving in the method contract
+(save-todo-list todo-list => (s/select ::todo-list [::list-id ::date ::title]))
 ```
 
 This allows maximial reuse of the same data types without compromising on clarity of required information in each usecase.
