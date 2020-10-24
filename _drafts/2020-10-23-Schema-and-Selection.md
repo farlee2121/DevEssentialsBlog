@@ -74,7 +74,7 @@ This can be solved with type-based aggregates, accomplished with `spec/def` and 
 (print (::lat yosemiteCoords)) ;; print the latitude
 ```
 
-This is brilliant. Accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existance of the data. 
+This is brilliant. Accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existance of the data. Clojure can even generate property-based tests since the guarantees are communicated directly in code.
 
 ### Who owns optionality
 Optionality is represented by presense or absense of a key. If a key is required and doesn't exist, the compiler or runtime can throw an error. If optional, the consumer checks for the presense of the key.
