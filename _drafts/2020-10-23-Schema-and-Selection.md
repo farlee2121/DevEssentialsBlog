@@ -69,9 +69,9 @@ This can be solved with type-based aggregates, accomplished with `spec/def` and 
 (s/def ::coordinate (s/keys :req [::lat ::lon]))
 
 (def yosemiteCoords {::lat 37.748837 ::long -119.58723})
-;; now how to access a value. I think this is key https://clojure.org/guides/spec#_a_game_of_cards
 
-(print (::lat yosemiteCoords)) ;; print the latitude
+;; print the latitude
+(print (::lat yosemiteCoords)) 
 ```
 
 This is brilliant. Accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existance of the data. Clojure can even generate property-based tests since the guarantees are communicated directly in code.

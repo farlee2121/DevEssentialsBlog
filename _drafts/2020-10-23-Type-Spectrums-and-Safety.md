@@ -1,17 +1,3 @@
-# Meta-Programming and Type Dynamics
-
-I recently learned the difference between Structural and Nominal typing. 
-I connected this to the difference between action like copying, cloning, and proxying in Javascript vs C#. (Js objects are basically dictionaries)
-But the deeper I dug the more I realized that the dynamic vs static spectrum as playing a bigger role.
-
-There needs to be a means of iterating type members, but dynamic systems come with flexible meta-programming pretty much for free. Just copy over some 
-Static type systems need more hoops to enable meta-programming. Code needs to be examined and generated, often costing speed.
-
-Is this a fundamental advantage of dynamic systems?
-No. It is a limitation in the tooling. Implicit or explicit, the program needs to represent the aspects it needs to know to operate it can't work on something that is completely unknown. Generally all the information needed for meta-programming like proxying, cloning, mapping, is available at write time. We can see it as programmers but the code isn't smart enough to harness it. 
-That's why i'm so excited about c# 9 Source Generators. They effectively operate as compile-time reflection. We can create code using our code as data, or using external data sources. 
-
-
 
 other post idea (Corrolated Type spectrums?)
 
