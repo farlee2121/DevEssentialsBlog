@@ -8,11 +8,12 @@ series_description: Exploring how different languages equip us to solve differen
 
 # Result Types
 
-I want to be cleanly represent predictable failure states as part of my functions operation. To let consumers know right away what scenarios they should expect. This is a classic functional approach, reprented in F# as the Result pattern. Representing the same idea in C#, however, is non-trivial. 
+I want to cleanly represent predictable failure states as part of my function contracts. This lets consumers know right away what scenarios they should expect without documentation or looking through code. F# encourages this pattern and normalizes it with the Result type. Representing the same idea in C#, however, is non-trivial. 
 
+This post will first specify the problem(s), look at failed solutions in C#, cover F# solutions, and try to map functional ideas back to C#. 
 
 ## Problem Statement
-This is a pretty common scenario. There is some happy path that should return a value, but there are also expected ways that operation might go wrong.
+Consider this common scenario: there is some happy path that should return a value, but there are also expected ways that operation might go wrong.
 
 Concrete examples
 
@@ -27,21 +28,22 @@ Concrete examples
    - Failures -> don't save and tell caller what happened
      - Unauthorized
      - Validation error
+     - resource error
 -  Network calls 
-   - Success -> /value
+   - Success -> value
    - Failures ->
      - Not available
      - Request returned an error code (e.g. 500 server error, 402 not found)
      - Invalid connection configuration
 
-It's important to recognize that we have two problems here
-1. Maybe-Pattern: An operation that may or may not have a value. Success or failure is only determined by the presense of a value. It comes down to representing "Nothing"
-   1. E.g Find or parse. They generally don't care about reporting error states
-2. Result-Pattern: Distinct information is needed for success and failure cases. Comes down to representing failure
-   1. E.g. Validation, Network calls, etc
+These examples surface two core scenarios
+1. Maybe-Pattern: An operation that may or may not have a value. Success or failure is only determined by the presense of a value. It comes down to representing "Something" and "Nothing"
+   - E.g Find or parse. They generally don't care about reporting error states
+2. Result-Pattern: Distinct information is needed for success and failure cases. Comes down to representing multiple potential states of failure
+   - E.g. Validation, Network calls, etc
 
 ## Not the only one
-I know that I'm also not the only OO programmer to wrestle with this problem. I've seen it at several places I've worked. Questions threads on the topic can be found if you know the right keywords (like [here](https://codereview.stackexchange.com/questions/69377/result-class-which-wraps-another-object)).
+I know that I'm also not the only OO programmer to wrestle with this problem. I've seen it at several places I've worked. Questions threads can also be found if you know the right keywords (like [here](https://codereview.stackexchange.com/questions/69377/result-class-which-wraps-another-object)).
 
 However, the only people I've seen offering strong solutions in the OO world are people bringing ideas back from functional languages. For example,
 - https://github.com/vkhorikov/CSharpFunctionalExtensions
@@ -57,12 +59,26 @@ Requirements
 - Can be used with any type
 - Can simply access the value if one is present
 
+
 C# Solutions 
 - **Null for reference types**: Really just a special "none" value. Does not communicate intent, is not optional, and is a minefield of potential excpetions
 - **Nullables**: in C# are equivalent to Maybe or Option types in functional languages. They only work for value types. It would be a fantastic solution if only it worked uniformly across value and reference types.
 
-Solution
-The solution is to properly implement Nullable like Maybe or Option types work in functional languages. It doesn't benefit from the nice syntax sugar though. It looks something like
+F# Solution
+```fs
+let parseInt (input : string) : int option =
+  if System.String.IsNullOrEmpty(input)
+  then Option<int>.None
+  else Option.Some(42)
+
+match parse "yo ho" with
+| Some n -> printfn "I have value %i" n
+| None -> printfn "I have no value"
+```
+
+Back to C#  
+
+Mimicking Options/Maybe in C# is pretty easy. The following example is essentially Nullable, but for all types. It doesn't benefit from the nice syntax though. 
 ```cs
 public class Maybe<T>{
    public T Value {get; set;}
@@ -100,7 +116,7 @@ This is not really a solution, but it's what I see happen most commonly. There i
 
 **Solution 2: Sematic values** The idea here is to indicate status by using special values of the type normally returned on success. Null is common, and a bit of a special case. I often see 0 as the implicit default ID. `-1` is also somewhat common for operations that are suppose to return positive numbers. 
 
-Semantic values are a bad idea. Null is a minefield of null reference exceptions, but at least an expected failure value in many languages. Other kinds of semantic values undermine a consumers expectation about how your code works and create likely scenarios for errors states to propegate through a system undetected. Thank you Code Complete for teaching me this early.
+These semantic values are a bad idea. Null is a minefield of null reference exceptions, but at least an expected failure value in many languages. Other kinds of semantic values undermine a consumers expectation about how your code works and create likely scenarios for errors states to propegate through a system undetected. Thank you Code Complete for teaching me this early.
 
 **Solution 3: Exceptions** Exceptions have their place. It is often right to terminate a call chain when something truely unexpected happens rather than risk propegating errors. However, exceptions are like "cascading gotos". They surrender control flow to callers in a way this is often difficult to predict and reason about when used widely.
 
@@ -169,7 +185,7 @@ Functional languages take strong inspiration from mathematical concepts. This me
 This all adds up to functional languages needing to represent state in their inputs and outputs. Thus, they created good tools to do so.
 
 ### Discriminated Unions
-The most general an flexible tool is a Discriminated Union. Think of it like an OR type. I can be a string OR a bool OR an int
+The most general and flexible tool is a Discriminated Union. Think of it like an OR type. I can be a string OR a bool OR an int
 ```fsharp
 type Truthy = 
   | Bool of bool
@@ -260,7 +276,9 @@ Our final C# result-type was close. A little functional inspiration resolves the
  - Constructor type conflicts => Static methods for clear state initialization
  - Noisy success checking => apply-like action binders
 
-We can take this even further by standardizing methods of combining multiple results. For example, if we want to run 5 validators, only succeed if all succeed, and return all errors if not.
+We can take this even further by standardizing methods for combining multiple results. For example, if we want to run 5 validators and only succeed if all succeed, but return errors from each failure if not.
+
+The core issue with C# is still the polymorphic behavior between implementations. Using one generically typed result class ends up with a tiring amount of type parameters. However, deriving results with specified types doesn't work because the child can't override the return type of it's inherited methods.
 
 ## Summary
 
