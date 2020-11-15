@@ -1,3 +1,7 @@
+---
+layout: post
+tags: [Programming Languages, Type Systems, Language properties]
+---
 # Meta-Programming and Type Dynamics
 
 Dynamically typed systems effectively come with meta-programming capabilities for free, but are dynamic systems fundamentally better at meta-programming?

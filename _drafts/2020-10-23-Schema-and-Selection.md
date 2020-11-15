@@ -1,3 +1,7 @@
+---
+layout: post
+tags: [Language properties, Type systems]
+---
 # Schema and Selection
 
 <!-- As programmers, we naturally see semantic equivalencies between our data types, but need different sets or represntations for each scenario.  -->
