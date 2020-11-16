@@ -40,6 +40,15 @@ Clean Architecture layers based on relevance to the domain. The most stable busi
 
 **Solid Structure**
 
+
+<!-- 
+    When introducing SOLID Structure. 
+    - Meshes IDesign and Clean Architecture (Ports and Adapters)
+      - I feel iDesign is just missing some important guidelines. It helps organize domain code, but leaves code organization, portability, and extensibility vague.
+      - Clean Architecture is left intentionally *schematic*. While i think it's useful to know that many solutions can fit well with the Ports and Adapters pattern, I also think it is not perscriptive enough for many developers to understand and implement without further guidance. It provides no guidance on organizing domain code.
+      - By meshing the two together, I create a more perscriptive pattern that, hopefully, fills each the gaps of each and makes it easier for developers to create durable codebases even without need for person-to-person soft skill training.
+      - This is not the one true code organization. It is a set of smart defaults and guidelines to help you kickstart your own understanding of good design.
+ -->
 // TODO: It may be that accessors are really just a class of manager dependency abstraction... Need to think about how that would mean with generalizing services with usecase change and also about potential code duplication. The short of this is that the IDesign service boundaries may not hold up and just clean arch will remain. I should resolve that concern before I publish
 
 Solid Structure turns the business services of IDesign into a reusable library for the domain. Pushes services to be self-contained and defers choices of scale, deployment, and runtime to other layers similar to Clean Architecture.
