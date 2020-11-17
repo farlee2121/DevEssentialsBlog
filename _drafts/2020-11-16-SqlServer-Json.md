@@ -5,9 +5,9 @@ tags: [Sql, SqlServer, JSON, how-to]
 
 # Getting Started with JSON in MS SQL Server
 
-Document vs Sql databases are no longer an either-or. Many tools allow mixed-model to bridge the benefits of both paradigms. Postgre seems to be the RDBMS of choice for those who want to use json columns as a bridge for document-like scenarios. However, i'm using Sql Server and migrating isn't an option in the medium-term. Sql server has Json features, but I've found little conversation about them and the documentation examples are pretty contrived. Here's some simple practical examples to get started.
+Document vs Sql databases are no longer an either-or. Many tools allow mixed-model to bridge the benefits of both paradigms. Postgre seems to be the RDBMS of choice for those who want to use json columns as a bridge for document-like scenarios. However, i'm using Sql Server and migrating isn't an option in the medium-term. Sql server has Json features, but I've found little conversation about them and the documentation examples a bit lacking. Here's some simple practical examples to get started.
 
-I'm not much of one for technology how-to posts, but getting started with json in sql server was enough of a mess that I feel it deserved it. Let's look at some more practical examples than what the docs offer.
+I'm not much of one for technology how-to posts, but getting started with json in sql server was enough of a mess that I feel it deserved it.
 
 ## Available Methods
 
@@ -28,22 +28,33 @@ select JSON_VALUE([column], "$.firstlevel.some_array.[0].propety") from [Table]
 
 > Note that that JSON doesn't have a special column type in SQL Server like it does in other Sql engines. Use the same column type you would if it was just a string.
 
+
+
 These methods layout operations internal to the JSON, but allow very limited interop between the SQL and JSON worlds. That's where the last method comes in. Pretty much all complex management is done with
 
-**Open_Json**: Access a json field as if it were a table. [Docs](https://docs.microsoft.com/en-us/sql/t-sql/functions/openjson-transact-sql)
+**OpenJson**: Access a json field as if it were a table. [Docs](https://docs.microsoft.com/en-us/sql/t-sql/functions/openjson-transact-sql)
 
 The documentation is pretty sparse about how different values are transformed into tables or how to make meaningful queries on json in a table column. So, that's what we cover next.
 
-## Practical Open_Json Examples
-The key bit to remember when using Open_Json is that is produces a table, and only fits in your queries where a table would fit. Specifically, not in the select portion of your query. Expect to use a lot of nexted queries. 
-
-### 
-
-
+## How JSON values map to Tables
 Here are how different values map to a table
+
+Object-valued columns
+
+
 
 - json arrays opened as [key, value, ?] // need to revisit this to double check
 - objects opened as row with properties
+- scalar value
+
+<!-- probably show it with a table variable and a few inserted, or otherwise show the table contents and the query reqsult  -->
+
+## Practical OpenJson Examples
+The key bit to remember when using OpenJson is that is produces a table, and only fits in your queries where a table would fit. Specifically, not in the select portion of your query. Expect to use a lot of nexted queries. 
+
+
+
+<!-- need a better understanding of https://docs.microsoft.com/en-us/sql/t-sql/functions/openjson-transact-sql?view=sql-server-ver15#return-value -->
 
 Here are some useful examples
 - self note, look at FOR JSON as way of converting data back to json

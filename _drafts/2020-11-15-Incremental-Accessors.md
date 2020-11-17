@@ -22,3 +22,5 @@ If you want to know more, here are other articles on this journey to-date:
 - [Notification case study](../_posts/2020-08-14-Notification-Design.md)
 - [Background task case study](../_posts/2020-09-11-Background-Task-Refactor.md)
 - [Pros & Cons after a few months](../_posts/2020-09-17-Solid-Structure-Checkin.md)
+
+Those unfamiliar with iDesign can checkout [my visual summary of the official book](../_posts/2020-07-03-iDesign-Visual-Summary.md).
