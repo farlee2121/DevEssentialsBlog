@@ -14,7 +14,7 @@ However, I realized there was another critical quality enabling these meta-progr
 
 This led me to a hard question: are dynamic systems fundamentally better at meta-programming?
 
-Well, static languages I know rely on reflection for meta-programming. Unfortunately, reflection is often slow and arcane. 
+Well, the static languages I know rely on reflection for meta-programming. Unfortunately, reflection is often slow and arcane. 
 
 Some thought experiments
 - Do static languages fundamentally need to rely on reflection to enumerate type members?
@@ -24,10 +24,12 @@ Some thought experiments
 - Can the types be generated at compile time?
   - This is a hard question that is well explored in [this article](http://lexi-lambda.github.io/blog/2020/01/19/no-dynamic-type-systems-are-not-inherently-more-open/). In short, yes. Our program can't operate on something that is entirely unknown. Static languages force us to make our assumptions explicit. Even if they are very loose expectations. Dynamic languages often let us leave assumptions of structure and type implicit, but still necessary for the code to execute. Since we encode these assumptions when we write the code, the information is present at write-time. 
 
-This leads me to conclude that static languages are more limited at meta-programming than dynamic ones. It is a limitation in the tooling that prevents our code from utilizing itself as information to generate code at compile-time.
+This leads me to conclude that static languages can theoretically meta-program as well dynamic languages. It is a limitation in the tooling that prevents our code from utilizing itself as information to generate code at compile-time.
 
 Think of examples like proxying, cloning, and mapping. We programmers can see the relationships and generic process for implementing them, but the language isn't smart enough to harness it. 
 
-That's why i'm so excited about C# 9 Source Generators. They fill this expression gap by effectively operating as compile-time reflection. We can create code using our code as data! It is not limited to our own code though, we can generate code based on any data at compile-time! 
+## Dream Come True
+
+While pondering this I came across C# 9 Source Generators. They fill this expression gap by working like compile-time reflection. We can create code using our code as data! It is not limited to our own code though, we can generate code based on any data at compile-time! 
 
 In summary, dynamic languages are not fundamentally better at meta-programming than static ones and C# 9 will be closing the practical gap with Source Generators.

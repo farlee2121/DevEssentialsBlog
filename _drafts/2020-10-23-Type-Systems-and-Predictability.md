@@ -84,10 +84,10 @@ Inspired by a [Scott Wlaschin talk](https://youtu.be/KPa8Yw_Navk?t=1862), I real
 - structured programming is more predictable than gotos
 
 ## Another Way?
-Clojure take a unique approach to structural typing with its spec system. Types are 
-  - defined without property names
-  - may include functional constraints like numeric range, regular expressions, or explicit valid values
-  - Aggregate and access properties by type names
+Clojure take a unique approach to structural typing with its spec system. 
+  - Types are defined without property names
+  - Each type may include functional constraints like numeric range, regular expressions, or explicit valid values
+  - Values are aggregated and accessed by their type names
 
 ```clojure
 ;; lat is a float between -90 and 90 

@@ -55,7 +55,7 @@ I've limited mapping in my system through the deliniation of service purposes, b
 
 ## The Alternative
 
-Rich Hickey continues to impress me with the way he re-examines the fundamental concepts of and communication though programming languages.
+Rich Hickey continues to impress me with the way he thinks deeply about the fundamental concepts of and communication though programming languages.
 
 The concept he proposes is the separation of **schema** and **selection**. 
 
