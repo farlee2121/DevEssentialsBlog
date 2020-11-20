@@ -9,16 +9,16 @@ I love the [Ports and Adapters metaphor](./2020-11-14-Ports-and-Adapters.md) for
 
 Each service defines it's ports for extension based on only it's own needs. You can think of it as every service has it's own port standards for both input and output.
 
-[port standards]()
+[port standards](../post-media/Ports-And-Adapters-Visual/port-lineup.drawio.svg)
 
 Fortunately, port adapters are easy to make in software. All we need is a thin layer for mapping between standards. 
 
-[adapter example]()
+[adapter example](../post-media/Ports-And-Adapters-Visual/adapter.drawio.svg)
 
 *For those familiar with OO patterns, the Adapter, Facade, and Bridge patterns all satisfy this hardware-ish idea of adapter. It could be any of them since we aren't picky about the semantics of what is mapped to.*
 
 Different kinds of service layers liken to different kinds of hardware we might connect
-- **Clients -> Monitor and keyboard:** Responsible for communication to and from a consumer of the system
+- **Clients -> Monitor and keyboard:** Responsible for communication to and from a consumer of the system. Kinda like an adapter to and from the user. It should mostly just pass on to a manager.
 - **Managers -> Computer:** The heart of the system responsible for organizing and delegating usecases.
 - **Engines & Accessors -> Custom peripheral devices:** Could do just about anything that we want to reuse. Should be self-contained so they can be moved around. Different from utilities in that these likely can't be bought standard as they're specific to our line of business.
 - **Utilities -> Standard peripherals:** Common pluggable extensions many systems would use. Wireless communication, user verification, printing, ...  
@@ -59,4 +59,11 @@ port types I could use / easily visualize
 - usb-c
 - usb-b
 - could probably find micro-usb icon
+- 
+
+
+how can i differentiate the ports?
+- shape 
+- color
+- outline
 - 
