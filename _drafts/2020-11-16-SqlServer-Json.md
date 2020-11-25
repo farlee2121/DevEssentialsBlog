@@ -5,9 +5,9 @@ tags: [Sql, SqlServer, JSON, how-to]
 
 # Getting Started with JSON in MS SQL Server
 
-Document vs Sql databases are no longer an either-or. Many tools allow mixed-model to bridge the benefits of both paradigms. Postgre seems to be the RDBMS of choice for those who want to use json columns as a bridge for document-like scenarios. However, i'm using Sql Server and migrating isn't an option in the medium-term. Sql server has Json features, but I've found little conversation about them and the documentation examples a bit lacking. Here's some simple practical examples to get started.
+Document vs Sql databases are no longer an either-or. Many tools allow mixed-model to bridge the benefits of both paradigms. Postgre seems to be the RDBMS of choice for those who want to use json columns as a bridge for document-like scenarios. However, I'm using Sql Server and migrating isn't an option in the medium-term. This post outlines some practical examples to get started.
 
-I'm not much of one for technology how-to posts, but getting started with json in sql server was enough of a mess that I feel it deserved it.
+I'm not much of one for technology how-to posts, but I had a hard enough time I felt this topic deserved it.
 
 ## Available Methods
 
@@ -16,6 +16,7 @@ First, a quick review of the available methods. The first four are pretty straig
 ```sql
 select * from [Table] where IsJson([Column])
 ``` 
+
 **Json_Value**: Extract a simple value (e.g. strings, numbers, bools) from a JSON string. The [docs](https://docs.microsoft.com/en-us/sql/t-sql/functions/json-value-transact-sql) give decent examples
 
 ```sql
@@ -24,13 +25,13 @@ select JSON_VALUE([column], "$.firstlevel.some_array.[0].propety") from [Table]
 
 **Json_Query**: Extract an object or array from a JSON string. It somewhat confusingly returns a JSON sub-string, since SQL has no objects or arrays. I find the name misleading, and it appears to be separate form Json_Value to help Json_Modify differentiate update cases.
 
-**Json_Modify**: Use the same path syntax as Json_Value to update the JSON string. Works for setting any kind of json type, but complex values (arrays and objects) will be treated as a string unless you wrap them in Json_Query.
+**Json_Modify**: Uses the same path syntax as Json_Value to update the JSON string. Works for setting any kind of json type, but complex values (arrays and objects) will be treated as a string unless you wrap them in Json_Query.
 
 > Note that that JSON doesn't have a special column type in SQL Server like it does in other Sql engines. Use the same column type you would if it was just a string.
 
 
 
-These methods layout operations internal to the JSON, but allow very limited interop between the SQL and JSON worlds. That's where the last method comes in. Pretty much all complex management is done with
+These methods layout operations internal to the JSON string, but allow very limited interop between the SQL and JSON worlds. That's where the last method comes in. Pretty much all complex management is done with
 
 **OpenJson**: Access a json field as if it were a table. [Docs](https://docs.microsoft.com/en-us/sql/t-sql/functions/openjson-transact-sql)
 
@@ -49,7 +50,7 @@ Object-valued columns
 
 <!-- probably show it with a table variable and a few inserted, or otherwise show the table contents and the query reqsult  -->
 
-## Practical OpenJson Examples
+## Query Examples
 The key bit to remember when using OpenJson is that is produces a table, and only fits in your queries where a table would fit. Specifically, not in the select portion of your query. Expect to use a lot of nexted queries. 
 
 

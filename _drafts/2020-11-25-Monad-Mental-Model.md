@@ -1,0 +1,58 @@
+---
+layout: post
+tags: [math, functional programming]
+---
+# Building a Monad Intuition
+
+Like most people, I've found monads hard to pin down. I know things I can do with them, but I don't understand them at an intuitive and flexible level. Here I'll try to build my mental model by relating to other tools.
+
+Monads are originally a math concept, but I learned about them in a programming context and want to use them practically as a developer. However, they just aren't like other programming structures I know. It isn't a statement, nor really a datastructure. It is a type, but its type-ness isn't about performance, hardware representation, or syntax. What makes a monad special is the behavioral properties that live outside of the obvious syntax or structures.
+
+Relating to programming structures just isn't cutting it, so instead, let's lean on my math background to try to build an understanding.
+
+## Isomorphism?
+
+Scott Wlaschin likes to talk the functional way of "lifting" into the monad world, and keeping it there as long as possible before converting back.
+
+[lifting]()
+
+This makes me think of an isomorphism. An isomorphism is "structure-preserving mapping between two structures of the same type that can be reversed by an inverse mapping". In simpler terms, it is a set of actions that are effectively the same for two different types, and you can map between the types. It's like a shift cipher (where you assign each letter to a different letter). The new alphabet looks different but acts the same as the original and can always be mapped back no matter how much we re-arrange the letters.
+
+So are monads an isomorphism? No, result-types prove that they aren't. Result-types take advantage of the "lifting" to let us define a series of actions that might have errors, and not worry about the errors until we need to extract the final result.
+```fs
+// divide by zero example
+```
+
+In this example the result may not always map back to a number. It may map back to an error instead. Thus, we can't always guarantee monad values always map back to the original typespace. We can, however, alway map values and functions from the original typespace to the monad space.
+
+While not accurate, this is a useful parallel for how the lifting works. We map values to a more useful form to operate and map back. We just need to mind additional cases on the return map.
+
+## Injective?
+
+We noticed early that we can always map from the original typespace to the monadic typespace. Are monads injective?
+That is, does every value of the original type map to a distinct value of the monad type?
+
+Again, no. If I understand right, the following example is techically a proper monad. It just maps everything the the empty list.
+```fs
+let return val = EmptyMonad ([])
+let bind f x = EmptyMonad([])
+```
+
+Injectivity isn't a good parallel, but it does highlight something. The map isn't as important as the fact that we get values into the monad and then we can always perform operations that also return values in the same monad.
+
+## Ring?
+
+The fact that we can reliably apply functions to a monad value and get another monad value is very useful. This allows us to chain without fear that some step will return a "new kind" of value we can't operate on just as we were before. 
+
+This is why the result-type is so powerful. It allows us to ignore error states until the very end, producing simple and readable code.
+
+This reminds me of rings in Group Theory. There are some specific rules, but the basic idea is that you have a set of operations that will always produce the same kind of value they were given. In this way monads are very much like rings.
+
+## Conclusion
+
+Most are propbably satisfied to know
+- Monads are always chainable (like rings)
+- Monads are let us transform a values into a more useful for our computations then map back (async, lists, error-handling, etc)
+  - We can always map to, but need to be careful for extra cases mapping back from a monad
+
+However, I find the parallel to other math concepts helps me feel a deeper intuition for why monads work and what they are useful for.
