@@ -6,7 +6,9 @@ tags: [math, functional programming]
 
 Like most people, I've found monads hard to pin down. I know things I can do with them, but I don't understand them at an intuitive and flexible level. Here I'll try to build my mental model by relating to other tools.
 
-Monads are originally a math concept, but I learned about them in a programming context and want to use them practically as a developer. However, they just aren't like other programming structures I know. It isn't a statement, nor really a datastructure. It is a type, but its type-ness isn't about performance, hardware representation, or syntax. What makes a monad special is the behavioral properties that live outside of the obvious syntax or structures.
+Monads are originally a math concept, but I learned about them in a programming context and want to use them practically as a developer. However, they just aren't like other programming structures I know. It isn't really a statement, datastructure, or type. What makes a monad special is the behavioral properties that live outside of the obvious syntax or structures.
+
+It is like a pattern, but it doesn't relate closely to any patterns I know. This may be because patterns reduce common solutions, and often feel familiar. There usually don't have strong conceptual consequences. On the other hand, Monads aren't something you'd easily deduce. They stem from a theoretical construct whose useful consequences filtered down into practice. 
 
 Relating to programming structures just isn't cutting it, so instead, let's lean on my math background to try to build an understanding.
 
@@ -52,7 +54,7 @@ This reminds me of rings in Group Theory. There are some specific rules, but the
 
 Most are propbably satisfied to know
 - Monads are always chainable (like rings)
-- Monads are let us transform a values into a more useful for our computations then map back (async, lists, error-handling, etc)
+- Monads are let us transform values to fit our usecase, then map back (e.g. async, lists, error-handling, etc)
   - We can always map to, but need to be careful for extra cases mapping back from a monad
 
 However, I find the parallel to other math concepts helps me feel a deeper intuition for why monads work and what they are useful for.
