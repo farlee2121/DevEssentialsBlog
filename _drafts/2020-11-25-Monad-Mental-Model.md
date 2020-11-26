@@ -14,6 +14,12 @@ Relating to programming structures just isn't cutting it, so instead, let's lean
 
 ## Isomorphism?
 
+<!-- TODO: I concluded that they aren't an isomorphism, but the wikipedia article states that every monad is formed by a set of adjunctions, and adjuctions are a pair of bijectional functions between two sets. This means they would be an isomorphism... I'm confused
+
+I think the mistake i'm making is that result types are actually monads of the (Success + Error) space
+
+Ah. I see my mistake. A bijections is only the same as an isomorphism for an unstructured set. We also have operations that apply to each type set. Those operations could fail for the one side or the other and thus bijection != isomorphism
+ -->
 Scott Wlaschin likes to talk the functional way of "lifting" into the monad world, and keeping it there as long as possible before converting back.
 
 [lifting]()
@@ -25,11 +31,17 @@ So are monads an isomorphism? No, result-types prove that they aren't. Result-ty
 // divide by zero example
 ```
 
-In this example the result may not always map back to a number. It may map back to an error instead. Thus, we can't always guarantee monad values always map back to the original typespace. We can, however, alway map values and functions from the original typespace to the monad space.
+This threw me for a loop for a bit. I originally thought it wasn't an isomorphism because I assumed the starting domain to only be success values (e.g. numbers if we're calculating). 
+Then I realized that the monad actually maps to and from the sum of the success and error typespaces. 
 
-While not accurate, this is a useful parallel for how the lifting works. We map values to a more useful form to operate and map back. We just need to mind additional cases on the return map.
+Now we have to make an important distinction. The monad forms a bijection, where every monad value corresponds to a distinct value in the original typespace. However, we can't perform the same operations in either typespace and expect to get the same result. The whole point of the result monad is that there could be breaking errors. Since the operations are not always equivalent, it is not an isomorphism.
+
+We can, however, always map operations from the original typespace to the monadic typespace. 
+
+While an isomorphism wasn't quite accurate, this is a useful parallel for how the lifting works. We map values to a more useful form to operate and map back. Mapping back from the monad even helps us discover cases that aren't intuitive in the original typespace.
 
 ## Injective?
+<!-- TODO: i'm not sure if this is right. I don't think my example is a real monad, but i'm not sure yet  -->
 
 We noticed early that we can always map from the original typespace to the monadic typespace. Are monads injective?
 That is, does every value of the original type map to a distinct value of the monad type?
@@ -43,6 +55,8 @@ let bind f x = EmptyMonad([])
 Injectivity isn't a good parallel, but it does highlight something. The map isn't as important as the fact that we get values into the monad and then we can always perform operations that also return values in the same monad.
 
 ## Ring?
+
+<!-- !!!:TODO: it forms a closure -->
 
 The fact that we can reliably apply functions to a monad value and get another monad value is very useful. This allows us to chain without fear that some step will return a "new kind" of value we can't operate on just as we were before. 
 
@@ -58,3 +72,5 @@ Most are propbably satisfied to know
   - We can always map to, but need to be careful for extra cases mapping back from a monad
 
 However, I find the parallel to other math concepts helps me feel a deeper intuition for why monads work and what they are useful for.
+
+Ah, it feels good to math again.
