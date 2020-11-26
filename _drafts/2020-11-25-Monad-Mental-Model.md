@@ -29,48 +29,129 @@ This makes me think of an isomorphism. An isomorphism is "structure-preserving m
 So are monads an isomorphism? No, result-types prove that they aren't. Result-types take advantage of the "lifting" to let us define a series of actions that might have errors, and not worry about the errors until we need to extract the final result.
 ```fs
 // divide by zero example
+
+let map f = 
+    fun resultInstance -> 
+        match resultInstance with
+        | Ok okVal -> Ok (f okVal)
+        | Error errVal -> Error errVal
+
+
+let safeDivide (divisor:int) (dividend:Result<int, string>): Result<int, string> = 
+    if divisor = 0
+    then Result.Error "Can't divide by zero"
+    else (map (fun x -> x / divisor) dividend) 
+
+let result = 
+    Result.Ok 50 
+    |> safeDivide 2
+    |> safeDivide 0
+    |> safeDivide 5
+
+match result with
+| Ok success -> printfn "%i" success
+| Error message -> printfn "%s" message
+// prints "Can't divide by zero"
+
 ```
 
 This threw me for a loop for a bit. I originally thought it wasn't an isomorphism because I assumed the starting domain to only be success values (e.g. numbers if we're calculating). 
 Then I realized that the monad actually maps to and from the sum of the success and error typespaces. 
 
-Now we have to make an important distinction. The monad forms a bijection, where every monad value corresponds to a distinct value in the original typespace. However, we can't perform the same operations in either typespace and expect to get the same result. The whole point of the result monad is that there could be breaking errors. Since the operations are not always equivalent, it is not an isomorphism.
-
-We can, however, always map operations from the original typespace to the monadic typespace. 
+However, it still isn't an isomorphism even though the value mapping isn't broken. We can't perform the same operations in either typespace and expect to get the same result. The whole point of the result monad is that there could be breaking errors in the original typespace. Since the operations are not always equivalent, it is not an isomorphism.
 
 While an isomorphism wasn't quite accurate, this is a useful parallel for how the lifting works. We map values to a more useful form to operate and map back. Mapping back from the monad even helps us discover cases that aren't intuitive in the original typespace.
 
+## Bijection?
+
+Now we have to make an important distinction. A bijection would mean every monad value corresponds to a distinct value in the original typespace. It is similar to isomorphism, but only requires an equivalence between values, not operations.
+
+This gets pretty murky. Monads are defined to be a bijection in the [cateogry theory definition](https://en.wikipedia.org/wiki/Monad_(category_theory)). The [programming version](https://wiki.haskell.org/Monad_laws), however, says nothing about an inverse map from the monad to original typespaces. 
+
+Can we decide to add a reverse map and make into a bijection? Well, first we need to guarantee that the monad is injective.
+
 ## Injective?
-<!-- TODO: i'm not sure if this is right. I don't think my example is a real monad, but i'm not sure yet  -->
 
-We noticed early that we can always map from the original typespace to the monadic typespace. Are monads injective?
-That is, does every value of the original type map to a distinct value of the monad type?
+The monad laws require a `return` method for elevating any value into the monad space. However, many of the definitions I was reading were unclear. I couldn't find out if a `bind` and `return` that simply mapped everything to a constant value made a valid monad.
 
-Again, no. If I understand right, the following example is techically a proper monad. It just maps everything the the empty list.
 ```fs
-let return val = EmptyMonad ([])
-let bind f x = EmptyMonad([])
+let return val = ConstantMonad.Value
+let bind f x = ConstantMonad.Value
 ```
 
-Injectivity isn't a good parallel, but it does highlight something. The map isn't as important as the fact that we get values into the monad and then we can always perform operations that also return values in the same monad.
+I refactored [monad laws from the FsCheck test suite](https://github.com/fscheck/FsCheck/blob/9cc51c65ab0051e6d90cba4e138b96f5da980397/tests/FsCheck.Test/Gen.fs#L403) to take an arbitrary return and bind. Then I plugged in the constant monad. It passed. 
+
+I think, however, that this is a limitation of the test rather than a true monad. [This definition](https://wiki.haskell.org/Monad_laws) is the clearest I've seen so far. It clarifies that the unit tests are looking for return (and bind) to produce semantically equivalent values. I think of this as, if we did unwrap the monad, the value would be the same as the original. This also is more in line with the original concept of a monad from category theory. 
+
+This clarification of the rule means that not only is the monad injective, it is also expected to be bijective.
+
+This means we can always map values into the monad. We can also expect the monad values to map back to distinct values in the original typespaces.
+
+This is important, but it's missing something. It's great that we can map, but just mapping isn't more valuable than other datastructures. 
 
 ## Ring?
 
-<!-- !!!:TODO: it forms a closure -->
+This draws focus to the other function in the monad rule, bind. Bind lets us map operations into the monad space and guarantee that they return values in the monad.
 
-The fact that we can reliably apply functions to a monad value and get another monad value is very useful. This allows us to chain without fear that some step will return a "new kind" of value we can't operate on just as we were before. 
+The fact that we can reliably apply functions to a monad value and get another monad value is very useful. This allows us to chain without fear that some step will return a "new kind" of value. We can always continue to operate just as we were before. 
 
 This is why the result-type is so powerful. It allows us to ignore error states until the very end, producing simple and readable code.
 
-This reminds me of rings in Group Theory. There are some specific rules, but the basic idea is that you have a set of operations that will always produce the same kind of value they were given. In this way monads are very much like rings.
+This reminds me of rings in Group Theory. There are some specific rules, but the basic idea is that you have a set of operations that will always produce the same kind of value they were given. That property is called closure. In this way monads are very much like rings.
 
 ## Conclusion
 
 Most are propbably satisfied to know
-- Monads are always chainable (like rings)
-- Monads are let us transform values to fit our usecase, then map back (e.g. async, lists, error-handling, etc)
-  - We can always map to, but need to be careful for extra cases mapping back from a monad
+- We can always map to and from a monad (but be careful for extra cases mapping back)
+- Monads are always chainable
+- Monads are let us transform values to fit our usecase, operate, then map back (e.g. async, lists, error-handling, etc)
 
 However, I find the parallel to other math concepts helps me feel a deeper intuition for why monads work and what they are useful for.
 
 Ah, it feels good to math again.
+
+
+
+<!-- 
+adapted from https://github.com/fscheck/FsCheck/blob/9cc51c65ab0051e6d90cba4e138b96f5da980397/tests/FsCheck.Test/Gen.fs#L403
+
+let sample n = Gen.sample 1000 n
+
+let sample1 gn = sample 1 gn |> List.head
+
+module MonadLaws =
+    let LeftIdentity bind _return (a:'a) (f:'a -> 'b) =
+        let f = f >> _return
+        let left = (bind (_return a)  f)
+        let right = f a
+        left = right 
+    let RightIdentity bind _return (a:'a) =
+        let m = _return a
+        let left = bind m _return
+        let right = m
+        left = right
+    let Associativity bind _return (a:'a) (f:'a->'b) (g:'b->'c) =
+        let m = _return a
+        let f = f >> _return
+        let g = g >> _return
+        let left = bind (bind m f) g
+        let right =  bind m (fun x -> bind (f x)  g)
+        left = right
+
+    let All bind _return =
+        (LeftIdentity bind _return) |@ "Left Identity"
+        .&. (RightIdentity bind _return) |@ "RightIdentity"
+        .&. (Associativity bind _return) |@ "Associativity"
+
+type EmptyMonad<'a> = 
+    | Empty
+
+[<Fact>]
+let ``should satisfy Monad laws``() =
+    //let bind = (>>=)
+    //let _return = Gen.constant
+    let bind x f = Empty
+    let _return x = Empty
+    Check.Quick (MonadLaws.All bind _return)
+
+ -->
