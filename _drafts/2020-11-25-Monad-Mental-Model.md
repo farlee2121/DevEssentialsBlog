@@ -82,6 +82,7 @@ let bind f x = ConstantMonad.Value
 I refactored [monad laws from the FsCheck test suite](https://github.com/fscheck/FsCheck/blob/9cc51c65ab0051e6d90cba4e138b96f5da980397/tests/FsCheck.Test/Gen.fs#L403) to take an arbitrary return and bind. Then I plugged in the constant monad. It passed. 
 
 I think, however, that this is a limitation of the test rather than a true monad. [This definition](https://wiki.haskell.org/Monad_laws) is the clearest I've seen so far. It clarifies that the unit tests are looking for return (and bind) to produce semantically equivalent values. I think of this as, if we did unwrap the monad, the value would be the same as the original. This also is more in line with the original concept of a monad from category theory. 
+<!-- This article also helps clarify the rules https://www.sitepoint.com/how-optional-breaks-the-monad-laws-and-why-it-matters -->
 
 This clarification of the rule means that not only is the monad injective, it is also expected to be bijective.
 
