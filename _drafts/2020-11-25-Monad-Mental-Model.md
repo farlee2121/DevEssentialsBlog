@@ -81,14 +81,19 @@ let bind f x = ConstantMonad.Value
 
 I refactored [monad laws from the FsCheck test suite](https://github.com/fscheck/FsCheck/blob/9cc51c65ab0051e6d90cba4e138b96f5da980397/tests/FsCheck.Test/Gen.fs#L403) to take an arbitrary return and bind. Then I plugged in the constant monad. It passed. 
 
-I think, however, that this is a limitation of the test rather than a true monad. [This definition](https://wiki.haskell.org/Monad_laws) is the clearest I've seen so far. It clarifies that the unit tests are looking for return (and bind) to produce semantically equivalent values. I think of this as, if we did unwrap the monad, the value would be the same as the original. This also is more in line with the original concept of a monad from category theory. 
-<!-- This article also helps clarify the rules https://www.sitepoint.com/how-optional-breaks-the-monad-laws-and-why-it-matters -->
+I think, however, that this is a limitation of the test rather than a true monad. [This definition](https://wiki.haskell.org/Monad_laws) is the clearest I've seen so far and [Scott Wlaschin has an excellent explanation](https://fsharpforfunandprofit.com/posts/elevated-world-2/#the-properties-of-a-correct-bindreturn-implementation). It clarifies that the unit tests are looking for return (and bind) to produce semantically equivalent values. I think of this as, if we did unwrap the monad, the value would be the same as the original.
+
+Similarly, if we mapped the identity function into the monad world, it would be the same as directly implmenting the identity function in the monad world. It should be a function that returns whatever it was given. This also is more in line with the original concept of a monad from category theory. 
+
+<!--
+The clearest formal definition i've seen: https://wiki.haskell.org/Monad_laws
+ This article also helps clarify the rules https://www.sitepoint.com/how-optional-breaks-the-monad-laws-and-why-it-matters -->
 
 This clarification of the rule means that not only is the monad injective, it is also expected to be bijective.
 
 This means we can always map values into the monad. We can also expect the monad values to map back to distinct values in the original typespaces.
 
-This is important, but it's missing something. It's great that we can map, but just mapping isn't more valuable than other datastructures. 
+This is important, but it's missing something. It's great that we can map, but just mapping isn't more valuable than other data structures. 
 
 ## Ring?
 
@@ -110,6 +115,12 @@ Most are propbably satisfied to know
 However, I find the parallel to other math concepts helps me feel a deeper intuition for why monads work and what they are useful for.
 
 Ah, it feels good to math again.
+
+
+## Further Reading
+- A gentle breakdown of monads https://fsharpforfunandprofit.com/posts/elevated-world
+  - Would have greatly simplified research for this post if I had read this first. It explains the intent of the laws in an easy-to-understand way. Particularly, these explanations of the the unit laws [Applicative version](https://fsharpforfunandprofit.com/posts/elevated-world/#the-properties-of-a-correct-applyreturn-implementation), [Monad version](https://fsharpforfunandprofit.com/posts/elevated-world-2/#the-properties-of-a-correct-bindreturn-implementation)
+- A gentle breakdown of monoids (which are not the same but still useful) https://fsharpforfunandprofit.com/posts/monoids-without-tears/
 
 
 
