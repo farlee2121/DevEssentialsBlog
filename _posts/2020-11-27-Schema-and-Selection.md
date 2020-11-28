@@ -5,12 +5,12 @@ tags: [Language properties, Type systems]
 # Schema and Selection
 
 <!-- As programmers, we naturally see semantic equivalencies between our data types, but need different sets or represntations for each scenario.  -->
-I commonly struggle with systems that have a half-dozen data types that, semantically, represent about the same information. Different usecases call for different views or combinations of the data (especially clients). I always assumed this was unavoidable to achieve clarity. However, Rich Hickey proposes a new take on the problem.
+I commonly struggle with "proliferation of types". Different usecases call for different views of the data (especially clients). This leads to a half dozen data types that represent about the same information. I always assumed this was unavoidable to achieve safety and clarity. However, Rich Hickey proposes a new take on the problem.
 
 This post is a response to [Maybe not](https://www.youtube.com/watch?v=YR5WdGrpoug) by Rick Hickey.
 
 ## The Problem
-First, a few clarifying examples
+First, a few clarifying examples.
 
 Suppose we have a todo list application. It's not so unusual that we might want to fetch the todo list details along with the individual tasks. 
 
@@ -26,9 +26,11 @@ class TodoList{
 
 The problem is that this contract always implies the existence of child tasks. However, that isn't always desirable
 - If we want to save, are the tasks saved in the same call as the TodoList? If not, they shouldn't be there.
-- What about showing all TodoLists for a user? We don't want to require the whole hierarchy when we only need a fraction of the info. But we shouldn't leave it to the programmer to implicitly know when that data isn't present.
+- What about showing all TodoLists for a user? We don't want to require the whole hierarchy when we only need a fraction of the info. 
 
-The same can be said for the non-complex properties of a type. If we're suggesting lists in a search field, we probably only want the title and Id. Everything else is extraneous.
+We shouldn't leave it to the programmer to implicitly know when that data should be present.
+
+The same can be said for the non-complex properties of a type. We probably only want the title and ID if we're suggesting todo lists from a search field. Everything else is extraneous.
 
 Sadly, all roads seem to lead to extra types. Common solutions are in the vein of 
 ```cs
@@ -49,7 +51,7 @@ class TodoListSuggestionModel{
 }
 ```
 
-Types can multiply quickly and mapping is both tedious and error prone. It is easy for each model to slightly vary the parameter names too, which hurts understandability.
+Types can multiply quickly and mapping is both tedious and error-prone. It is easy for each model to slightly vary the parameter names too, which hurts understandability.
 
 I've limited mapping in my system through the deliniation of service purposes, but it still feels bad every time I need to map a contract for a new scenario. Though it feels much less bad than the system getting entangled by unnecessary data connections.
 
@@ -60,9 +62,9 @@ Rich Hickey continues to impress me with the way he thinks deeply about the fund
 The concept he proposes is the separation of **schema** and **selection**. 
 
 ### Type-only membership 
-First, this requires decoupling our data from named or positional data containers. That mean no properties like in records and classes and no positional reliance like tuples.
+First, this requires decoupling our data from named or positional data containers. That means no properties like in records and classes, and no positional reliance like tuples.
 
-This can be solved with type-based aggregates, accomplished with `spec/def` and `spec/keys` in clojure.
+This can be solved with type-based aggregates. Clojure accompishes it via  `spec/def` and `spec/keys`.
 
 ```clojure
 ;; lat is a float between -90 and 90 
@@ -78,7 +80,9 @@ This can be solved with type-based aggregates, accomplished with `spec/def` and 
 (print (::lat yosemiteCoords)) 
 ```
 
-This is brilliant. Accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existance of the data. Clojure can even generate property-based tests since the guarantees are communicated directly in code.
+Data is accessed and aggregated by type name.
+
+This is great because accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existance of the data. Clojure can even generate property-based tests since the guarantees are communicated directly in code.
 
 ### Who owns optionality
 Optionality is represented by presense or absense of a key. If a key is required and doesn't exist, the compiler or runtime can throw an error. If optional, the consumer checks for the presense of the key.
@@ -88,9 +92,9 @@ This strikes at an important question: who owns optionality?
 Consider Rich's example. If a Car type has a make and model, when are those properties optional? We don't know. It depends on the context. Some cases will need that info and others won't. Thus, optionality is context-dependent and cannot be part of a generally usable type scheme.
 
 
-In short, it is always up to the consuming context to declare what it does and doesn't need and decide if the data meets those criteria. Like if you parse a JSON file, you decide how to interpret a missing property. Further, data sources don't need to know about optional properties if they don't use them.
+In short, it is always up to the consuming context to declare what it does and doesn't need, and decide if the data meets those criteria. Like when you parse a JSON file, the programmer has to decide how to interpret a missing property. Further, data sources don't need to know about optional properties if they don't use them.
 
-This clicks with the haskell concepts of "parse, not validate" from [this delightful article](
+This clicks with the haskell concept of "parse, not validate" from [this delightful article](
 http://lexi-lambda.github.io/blog/2020/01/19/no-dynamic-type-systems-are-not-inherently-more-open/).
 
 ### Partial Contracts
@@ -115,14 +119,14 @@ This all pulls together into a prototype language syntax for separating **schema
 
 This allows maximial reuse of the same data types without compromising on clarity of required information in each usecase.
 
-At the time of the presentation, this was just a proposal. Briefly examining the documentation also indicates that this is not finished as of writing this post. The idea, however, is powerful and I hope to see it gain ground.
+At the time of the presentation, this was just a proposal. Briefly examining the documentation also indicates that this is not finished as of writing this post. The idea, however, is powerful and I hope to see it mature.
 
 ## Reservations 
 While I believe this idea is powerful, I still have questions and reservations.
 
-What about the case where an aggregate uses two of the same type, but with different semantic intent? For example, a `ToAddress` and `FromAddress` or `User Author` `User Recipient`. One could make sub-types for these cases, but that feels a bit wrong.
+What about the case where an aggregate uses two of the same type, but with different semantic intent? For example, a `ToAddress` and `FromAddress` or `Author (a user)` `Recipient (a user)`. One could make sub-types for these cases, but that feels a bit weird.
 
-I also believe that names are an important communication of intent. I suppose the argument here is that you express that intent in the type name and can reuse it instead of a fixed-context property name. I feel like I'd need to use it to get a good sense for how I actually feel about the shift.
+I also believe that names are an important communication of intent. I suppose the argument here is that you express that intent in the type name and can reuse it instead of a fixed-context name like with property names. I feel like I'd need to use it to get a good sense for how I actually feel about the shift.
 
 The general schema also feels like a strong temptation to break service boundaries and tie services through the general schema. I suppose this is already a temptation and it will always be up to the designers on where to draw hard boundaries.
 
