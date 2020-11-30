@@ -75,29 +75,37 @@ Can we decide to add a reverse map and make into a bijection? Well, first we nee
 The monad laws require a `return` method for elevating any value into the monad space. However, many of the definitions I was reading were unclear. I couldn't find out if a `bind` and `return` that simply mapped everything to a constant value made a valid monad.
 
 ```fs
-let return val = ConstantMonad.Value
-let bind f x = ConstantMonad.Value
+let return val = ForgetfulMonad.Unit
+let bind f x = ForgetfulMonad.Unit
 ```
 
 I refactored [monad laws from the FsCheck test suite](https://github.com/fscheck/FsCheck/blob/9cc51c65ab0051e6d90cba4e138b96f5da980397/tests/FsCheck.Test/Gen.fs#L403) to take an arbitrary return and bind. Then I plugged in the constant monad. It passed. 
 
-I think, however, that this is a limitation of the test rather than a true monad. [This definition](https://wiki.haskell.org/Monad_laws) is the clearest I've seen so far and [Scott Wlaschin has an excellent explanation](https://fsharpforfunandprofit.com/posts/elevated-world-2/#the-properties-of-a-correct-bindreturn-implementation). It clarifies that the unit tests are looking for return (and bind) to produce semantically equivalent values. I think of this as, if we did unwrap the monad, the value would be the same as the original.
+[This definition](https://wiki.haskell.org/Monad_laws) is the clearest I've seen so far and [Scott Wlaschin has an excellent explanation](https://fsharpforfunandprofit.com/posts/elevated-world-2/#the-properties-of-a-correct-bindreturn-implementation). It clarifies that the unit laws are looking for return (and bind) to produce semantically equivalent values. 
 
-Similarly, if we mapped the identity function into the monad world, it would be the same as directly implmenting the identity function in the monad world. It should be a function that returns whatever it was given. This also is more in line with the original concept of a monad from category theory. 
+In other words, if we mapped the identity function into the monad world, it would be the same as directly implmenting the identity function in the monad world. It should be a function that returns whatever it was given. This also is more in line with the original concept of a monad from category theory.
+
+Notice that our definition from before can actually be rewritten
+```fs
+let return val = ForgetfulMonad.Unit
+let bind f x = x
+```
+
+Nothing changes because the only possible value of `x` and the only possible return value of `f` is `ForgetfulMonad.Unit`. For this reason, [my ForgetfulMonad is a valid monad](https://stackoverflow.com/questions/11530412/monad-for-const). It would not be valid if any other values were allowed in the monad.
 
 <!--
 The clearest formal definition i've seen: https://wiki.haskell.org/Monad_laws
  This article also helps clarify the rules https://www.sitepoint.com/how-optional-breaks-the-monad-laws-and-why-it-matters -->
 
-This clarification of the rule means that not only is the monad injective, it is also expected to be bijective.
+This clarification of the rule means that the programming definition of a monad is neither injective nor bijective by necessity. However, the `return` function by definition at least guarantees monads are into projections. We can always map any value into the monad, but we may have limited values that can be mapped back.
 
-This means we can always map values into the monad. We can also expect the monad values to map back to distinct values in the original typespaces.
+In practice, useful monads will allow you to map meaningful information back to normal typespaces. However, it may not be as simple as just wrapping then unwrapping to get the original value.
 
-This is important, but it's missing something. It's great that we can map, but just mapping isn't more valuable than other data structures. 
+This is interesting, but it's missing something. It's great that we can map, but just mapping isn't more valuable than other data structures. 
 
 ## Ring?
 
-This draws focus to the other function in the monad rule, bind. Bind lets us map operations into the monad space and guarantee that they return values in the monad.
+This draws focus to `bind`. Bind lets us map operations into the monad space and guarantee that they return values in the monad.
 
 The fact that we can reliably apply functions to a monad value and get another monad value is very useful. This allows us to chain without fear that some step will return a "new kind" of value. We can always continue to operate just as we were before. 
 
@@ -108,9 +116,9 @@ This reminds me of rings in Group Theory. There are some specific rules, but the
 ## Conclusion
 
 Most are propbably satisfied to know
-- We can always map to and from a monad (but be careful for extra cases mapping back)
+- We can always map to a monad (but be careful for extra cases mapping back)
 - Monads are always chainable
-- Monads are let us transform values to fit our usecase, operate, then map back (e.g. async, lists, error-handling, etc)
+- Monads are let us transform values to fit our usecase, operate error-free, then map back (e.g. async, lists, error-handling, etc)
 
 However, I find the parallel to other math concepts helps me feel a deeper intuition for why monads work and what they are useful for.
 
