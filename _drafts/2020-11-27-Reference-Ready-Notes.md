@@ -1,3 +1,7 @@
+---
+layout: post
+tags: [tools, markdown, process]
+---
 
 # Notes as Data
 
