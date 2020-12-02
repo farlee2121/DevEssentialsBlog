@@ -9,11 +9,13 @@ I love the [Ports and Adapters metaphor](./2020-11-14-Ports-and-Adapters.md) for
 
 Each service defines it's ports for extension based on only it's own needs. You can think of it as every service has it's own port standards for both input and output.
 
-[port standards](../post-media/Ports-And-Adapters-Visual/port-lineup.drawio.svg)
+![port standards](../post-media/Ports-And-Adapters-Visual/port-lineup.drawio.svg)
+*Since using a bunch of port icons is a pain, I'll be relying on letters as valid port types.*
+
 
 Fortunately, port adapters are easy to make in software. All we need is a thin layer for mapping between standards. 
 
-[adapter example](../post-media/Ports-And-Adapters-Visual/adapter.drawio.svg)
+![adapter example](../post-media/Ports-And-Adapters-Visual/adapter.drawio.svg)
 
 *For those familiar with OO patterns, the Adapter, Facade, and Bridge patterns all satisfy this hardware-ish idea of adapter. It could be any of them since we aren't picky about the semantics of what is mapped to.*
 
@@ -23,20 +25,20 @@ Different kinds of service layers liken to different kinds of hardware we might 
 - **Engines & Accessors -> Custom peripheral devices:** Could do just about anything that we want to reuse. Should be self-contained so they can be moved around. Different from utilities in that these likely can't be bought standard as they're specific to our line of business.
 - **Utilities -> Standard peripherals:** Common pluggable extensions many systems would use. Wireless communication, user verification, printing, ...  
 
-[System visual]()
+![System visual](../post-media/Ports-And-Adapters-Visual/system.drawio.svg)
 
 
 New connections just require new adapters. Adapters can also connect multiple devices.
 
-[New Connections]()
+![New Connections]()
 
 Replacing a peripheral just means a new adapter, the core manager doesn't change. A peripheral can also change how it works without system change as long as it keeps the same port standard.
 
-[Replacing Service]()
+![Replacing Service]()
 
 Adapters don't have to just be wired. They can change the communication, like wireless adapters or diagnostic tools do. A system might practically implement this as remote api calls or message queues.
 
-[Remote adapters]()
+![Remote adapters]()
 <!-- is this where i put and adapter adapter like logging? -->
 
 ## Wrap up
@@ -46,7 +48,7 @@ Not a perfect analogy, as always, but I look forward to seeing how it facillitat
 
 
 
-
+<!-- 
 
 things that could be accessories
 - thumb drive
@@ -65,5 +67,5 @@ port types I could use / easily visualize
 how can i differentiate the ports?
 - shape 
 - color
-- outline
-- 
+- outline 
+-->
