@@ -24,7 +24,9 @@ A familiar example of structural typing would be JSON. Consider
   "age": 5
 }
 ```
-The two json objects can be used interchangably because they have the same properties. It doens't matter if one is intended as a `Person` class and the other a `Robot` class. Javascript is not completely structural though, since equivalence is reference-based rather than structure-based.
+The two json objects can be used interchangably because they have the same properties. It doens't matter if one is intended as a `Person` class and the other a `Robot` class.
+
+Javascript is not completely structural though, since equivalence is reference-based rather than structure-based.
 
 Javascript, python, clojure, and other popular dynamic languages lean on a strong helping structural typing.
 
@@ -51,37 +53,43 @@ Checkout [this article](http://wiki.c2.com/?NominativeAndStructuralTyping) for a
 
 ## Dynamic vs Static
 **Static typing**: types are checked at compile-time.
+
 **Dynamic typing**: types are checked at run-time.
 
 I think this is fairly common concept. If you want to explore it further, checkout [this article](https://hackernoon.com/i-finally-understand-static-vs-dynamic-typing-and-you-will-too-ad0c2bd0acc7).
 
 ## Correlation
-Back to my realization that these typing choices seem to be correlated. Is there an inherent relationship between structural and dynamic types and nominal and static?
+Back to my realization that these typing choices seem to be correlated.
 
-No. It is entirely possible to have a dynamic type system where types are built at run-time but must be explicitly named and inherited. Similarly, it is possible to have a type system where type relationships are inferred by members, but all types must be determined at run time (like F#).
+Is there an inherent relationship between structural and dynamic types and nominal and static?
+
+No. It is entirely possible to have a dynamic type system where types are built at run-time but must be explicitly named and inherited. Similarly, it is possible to have a type system where type relationships are inferred by members, but all types must be determined at compile-time (like F#).
 
 So why, then, is there such a strong corrolation?
 
 I believe it has to do with a trade-off is preference for minimal specification vs predictability. Though, I think advocates would generally phrase it "flexibility" vs "safety".
 
-Python is an example of the flexibility side. They've dubbed their combo of dynamic and structural typing as "duck" typing. The idea being that if it quacks like a duck it must be a duck. There is a desire to immediately leverage implicit relationships known to the developer without extra syntax.
+Python is an example of the "flexibility" side. Python dubbed their combo of dynamic and structural typing as "duck" typing. The idea being that if it quacks like a duck it must be a duck. There is a desire to immediately leverage implicit relationships known to the developer without extra syntax.
 
-Both dynamic and structural types lend themselves to this implicit, run-if-you-can style. The danger here is that no warnings will be thrown if an expected method or property name is changed. Failure is put off util the last possible moment. This make it hard to discover partially mis-specified system, but means you can run all the other paths still.
+Both dynamic and structural types lend themselves to this implicit, run-if-you-can style. The danger here is that no warnings will be thrown if an expected method or property name is changed. Failure is put off util the last possible moment. This make it hard to discover partially mis-specified system, but means you can still run all the other paths even if something is broken.
 
 The predictability side prefers to make their decisions explicit. Changes like renaming shouldn't cause unseen side-effects. If an assumption is violated, then the system should tell you right away.
 
-Both static and nominal types lend themselves to explicit fail-early style. The downside is more verbose syntax and less wiggle room for partially-functional systems.
+Both static and nominal types lend themselves to explicit fail-early style. The downside is more verbose syntax and less wiggle room for partially-functioning systems.
 
 Each style has its ups and downs. I definitely fall on explicit side for programs larger than simple scripts. 
 
 ## Predictability and General Type Properties
 Inspired by a [Scott Wlaschin talk](https://youtu.be/KPa8Yw_Navk?t=1862), I realized that this relationship extends to many language properties
-- nominal typing is more predictable than structural typing
-- strong typing is more predictable than weak typing
-- static typing is more predictable than dynamic typing
-- immutability is more predictable than mutability
-- managed memory is more predictable than pointers
-- structured programming is more predictable than gotos
+
+| More Predictable | Less Predictable |
+|------------------|---------------- |
+| Nominal typing | Structural typing
+| Strong typing | Weak typing
+| Static typing | Dynamic Typing
+| Immutability | Mutability
+| Managed Memory | pointers and memory allocation
+| Structured programming | gotos 
 
 ## Another Way?
 Clojure take a unique approach to structural typing with its spec system. 
@@ -109,7 +117,7 @@ The Clojure team is exploring modifications on this system to combat the prolife
 
 
 ## Conclusion
-In summary, there is no intrinsic property that couples dynamic and structural or static and nominal type systems. Rather the corrolation appears to be based on a preference for predictable vs implicit design.
+In summary, there is no intrinsic property that couples dynamic and structural or static and nominal type systems. Rather the corrolation appears to be based on a preference for predictable vs implicit design, and the duality can be applied to many language properties.
 
 
 <!-- the predictability verbiage was inspired by Scott Wlaschin https://youtu.be/KPa8Yw_Navk?t=1862 -->
