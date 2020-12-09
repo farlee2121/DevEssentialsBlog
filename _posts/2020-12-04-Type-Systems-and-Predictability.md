@@ -32,7 +32,7 @@ Javascript, python, clojure, and other popular dynamic languages lean on a stron
 
 **Nominal typing**: A type system where "compatibility and equivalence of data types is determined by explicit declarations and/or the name of the types", and not their members ([source](https://en.wikipedia.org/wiki/Nominal_type_system)).
 
-In nominal typing two classes are not interchangable even if they have the same members. This is what users of Java, C#, Haskell, and many static languages are used to (not F# though).
+In nominal typing two classes are not interchangable even if they have the same members. This is what users of Java, C#, Haskell, and many static languages are used to.
 
 ```cs
 class Person{
@@ -63,7 +63,7 @@ Back to my realization that these typing choices seem to be correlated.
 
 Is there an inherent relationship between structural and dynamic types and nominal and static?
 
-No. It is entirely possible to have a dynamic type system where types are built at run-time but must be explicitly named and inherited. Similarly, it is possible to have a type system where type relationships are inferred by members, but all types must be determined at compile-time (like F#).
+No. It is entirely possible to have a dynamic type system where types are built at run-time but must be explicitly named and inherited. Similarly, it is possible to have a type system where type relationships are inferred by members, but all types must be determined at compile-time.
 
 So why, then, is there such a strong corrolation?
 
