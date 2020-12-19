@@ -86,7 +86,8 @@ Here are tools and tips for working in F#
 - Unit tests: xUnit
   - I like to explore via unit tests. I find them more durable and visual than a REPL, especially once I've gotten into sample apps
   - xUnit has better IDE support and should be more familiar for C# users than Expecto
-  - If you're new to VSCode and don't have a test runner, try [.NET Core Test explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
+  - If you're new to VSCode and don't have a test runner, try [.NET Core Test explorer](https://marketplace.visualstudio.com/items?itemName=derivitec-ltd.vscode-dotnet-adapter)
+    - WARNING: you need to set a search path for tests (e.g. `**/*Tests.dll`) or it'll take forever to discover tests
 
 
 
