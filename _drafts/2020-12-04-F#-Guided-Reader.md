@@ -62,8 +62,19 @@ If you'd rather just dive in, then his videos are a great place to start. His vi
   - [Dr. Frankenfunctor and the Monadster](https://vimeo.com/162054542) is another good example to follow up with 
 - [Monoids Without Tears](https://fsharpforfunandprofit.com/posts/monoids-without-tears/)
   - Understand another underlying concept for effective data structuring
-- Optional: [Computation Expressions](https://fsharpforfunandprofit.com/series/computation-expressions.html)
+
+Advanced Topics
+- [Recursive Types and Folds](https://fsharpforfunandprofit.com/series/recursive-types-and-folds.html)
+  - A deeper look at how to build recursive types and hide the recursion behind one method
+  - Very useful. I ran into this issue sooner than I thought. Recursion happens in natural models more than expected
+- [Computation Expressions](https://fsharpforfunandprofit.com/series/computation-expressions.html)
   - A deeper dive into implementing computation expressions (the language mechanism for simplifying monads)
+- [Type Size and Design](https://fsharpforfunandprofit.com/posts/type-size-and-design/)
+  - A useful look at the equivalence/mappability of different types or design choices
+- [Dependency Cycles](https://fsharpforfunandprofit.com/series/dependency-cycles.html)
+  - Not really advanced. If you're having a hard time buying into file ordering in F#, this explains why it the language does it and why it is useful.
+- [Swapping type-safety for high performance using compiler directives](https://fsharpforfunandprofit.com/posts/typesafe-performance-with-compiler-directives/)
+  - A experiment for low-disruption optimization of type-driven designs. A good read if you're worried about theoretical performance, but shouldn't be used unless proven it's needed
 
 ### Tools for Experimenting
 I highly recommend you try out these ideas as you work through the readings. It is a lot to digest and the best way to process it is by doing.
@@ -103,13 +114,4 @@ Here are tools and tips for working in F#
   - Not a progression from the others. Just a nice way to have your mind blown seeing the difference between many paradigms
 
 
-
-
-
-Where does recipe for a functional app go? 
-
-Make a guided reader of Scott's blog
-- Actually, languages from 40 years ago is first
-- Thinking Functionally is totes first
-- ???
 
