@@ -1,9 +1,10 @@
+---
+layout: post
+tags: [C# 9]
+---
+# Result-type Update for C# 9
 
-# Results in C# 9
-
-I [previously wrote](./2020-05-07-Result-Types.md) on the difficulties of normalized result types in C#. !!! consider creating a joined intro in the ID post and referencing that in all the others
-
-Let me be clear, result types are still not great in C#, but I consider the upgrade in C# to make them at least practical.
+I [previously wrote](./2020-05-07-Result-Types.md) on the difficulties of normalized result types in C#. Let me be clear, result types are still not great in C#, but C# 9 at least makes them practical.
 
 When I'm thinking practical, I mean
  - It's easy enough to create a result type that I don't hesitate
