@@ -50,6 +50,7 @@ If you'd rather just dive in, then his videos are a great place to start. His vi
   - Takes type-driven design a step further to limit potential security and design abuse
 - [Enterprise Tic-Tac-Toe](https://vimeo.com/131196782)
   - Pulls most of the ideas together into a worked example. A nice example of the thought process and some practical bits like information hiding techiques
+  - [Calculator Walkthrough](https://fsharpforfunandprofit.com/posts/calculator-design/) is a similar example
 - [Code Review/Refactor](https://www.youtube.com/watch?v=nxIRlf4AtcA)
   - Review of the major concepts with very helpful hightlight of smells and refactorings
   - You'll want to have tried making a small system by now
