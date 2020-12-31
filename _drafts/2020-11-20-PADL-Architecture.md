@@ -3,6 +3,17 @@ layout: post
 tags: [Architecture, Design thinking, SOLID Structure, Patterns]
 ---
 
+<!-- 
+  Paul didn't pickup what I was putting down at all. He thought it was basically just IDesign
+  He made a good point that overall architecture systems are pretty much impossible to maintain at large companies like amazon.
+  What's more important is understanding the mechanism of decoupling.
+  I overall agree, but that is still a high bar. How can I reposition to make it unambiguous that I'm building more specific decision processes
+  as a ramp up to that understanding?
+  Maybe split the general overview into its own post, focusing hard on just the two decisions I take from IDesign and Ports and adapters
+  Then, in a second post, go hard on context-specific rules
+  Also, list the past posts as concrete examples
+ -->
+
 # Ports and Adapters + Domains Layers
 
 I've been on a journey to combine iDesign and Clean Architecture (or Ports and Adapters-type architecture). The goal is a repeatable process for flexible architecture and domain organization, even with relatively low architecture experience. This requires simple rules and intuition for where each piece of code should live.
@@ -33,7 +44,7 @@ While domain layers are clear, I feel iDesign doesn't provide guidance on how to
 
 ### Clean Architecture
 
-Clean Architecture layers based on relevance to the domain. The most stable business abstractions are the foundation, then uses cases, then adapters, and finally external "mechanisms". This ordering emphasizes callers owning their abstractions so that the system moves to the convenience of the more fundamental business rules.
+Clean Architecture layers are based on relevance to the domain. The most stable business abstractions are the foundation, then uses cases, then adapters, and finally external "mechanisms". This ordering emphasizes callers owning their abstractions so that the system moves to the convenience of the more fundamental business rules.
 
 At its heart, clean architecture is about Port and Adapter-style plugin architecture. Each service owns it's own ports for extension and others adapt to fit those ports. This keeps services self-contained and composable. 
 
@@ -189,3 +200,81 @@ I suspect PADL will improve build times and produce more deterministic dependenc
 
 ## Conclusion
 This is by no means the one true code organization. It is a set of smart defaults and guidelines to kickstart an understanding of good design. The combination concepts creates a more complete ruleset to standardize design decisions not essential to the core problem being solved. 
+
+
+
+
+
+
+
+# V2
+
+Architecture is hard. There are few well-perscribed methods and those that exist are complex to understand. I've been on a journey to combine two methods I enjoy: iDesign and Clean Architecture (or Ports and Adapters-type architecture). Here I'll boil them down to their essense and glue them together.
+
+In this post I'll try to firmly establish the most core ideas clearly. Focusing on the underlying nuggets also prevents me from exploring context-specific advice that helps build up practical understanding. So, we'll follow up with a post all about context-specific decisions and benefits. The overall goal is to lead into a working understanding of the more general ideas here by breaking out smaller scenarios. I call the sum of these context-specific guided processes PADL (Ports and Adapters with Domain Layers).
+
+IDesign and Clean Architecture both define a variety of guidance, but I'm reducing them to what I see as the essense
+- Clean architecture -> use ports and adapters to create pluggable components
+- IDesign -> rules for dividing domain responsibilities consistently
+
+This roughly corrolates to two key questions
+- How do I make changes not suck (minimal impact)?
+- How do I reliably find things in my code?
+
+I think the first question is harder and more important. Given an answer to the first, people are decent at figuring out the second.
+
+## More on Ports and Adapters or Anti-Corruption Layers
+<!-- I don't think I need a deeper idesign section. Really I just need to clarify ports and adapters, then go to the core loop where I can specify different domain type criteria -->
+
+The core of Clean Architecture is a plug-in extensibility. That extensibility comes from one key mechanism
+
+> Components own the definitions for how they can be extended
+
+I like the ports and adapters analogy because I think it strikes at the core mechanism. Our current component should define "ports" that expose how the current component can be extended. Other components fit into those ports by using adapters.
+
+Ports can be many things based on the type of extension. Some major ones are
+- Interfaces or function signatures for behaviors
+  - Events
+  - CRUD
+  - Data Transforms
+- Type definitions for groups of data
+  - Configuration 
+  - Entities
+  - Event data
+
+These are then injected so the defining service isn't tied to one implementation. Commonly injection methods are constructor injection and function parameterization.
+
+The most important bit is that the component that concretely references the port is the one that defines it. Any component that concetely uses the port definition will change together. Adapters use the port definition, but their whole responsibility is mapping it as thinly as possible so other, more complex, services are completely insulated.
+
+Anti-corruption layers are a similar idea from Domain-Driven Design. The idea is that a calling component protects itself from external change by wrapping the called component in an abstraction that suites the caller's need. Really the same idea from a different view.
+
+## Core Decision Loop
+
+The core development loop revolves around the caller owning the abstractions. I like to think of it as selfish design. 
+
+Start with the top-level usecase.
+
+Always design only to your present need no matter where you are, a function, service, class, etc.
+- Need some data? define it yourself.
+- Have a behavior that could change? Accept an interface to accomplish it
+
+This builds up your list of ports.
+
+The second phase comes when fulfilling the ports with adapters.
+- Is there an existing component close to our need?
+  - consider adapting to it
+  - Potentially generalize the service (under it's own terms) to also include our need
+- Consider fulfilling the contract directly in the adapter
+  - trivial implemenations
+  - trivially mapping to external frameworks and services
+  - moderate one-off needs
+- If there is some duplication between adapters -> combine duplicated logic into a new selfish component and categorize it by domain responsibility -> Adjust adapter to map to the new component
+  - repeated domain operations are Engines
+  - repeated domain entities belong to Accessors
+  - repeated non-domain operations are Utilities
+
+I went to the extreme and said everything should be selfish, but there is a point of shared volatility when pieces will not likely change independently and being selfish isn't practical. Finding that point is what makes architecture an art. There is no general criteria for finding it. I definitely prefer to err on the selfish side. The context-specific examples should provide some rules of thumb.
+
+## Summary
+
+Combining the core mechanism of Ports and Adapters with iDesign domain layers gives us strong guidance for shaping systems. The selfish ports keep components independent and composable. The domain layers help us evolve the adapters into organized services of their own.
