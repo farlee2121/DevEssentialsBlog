@@ -8,17 +8,17 @@ tags: [Architecture, SOLID Structure, IDesign, Clean Architecture]
 I've been on a long journey of meshing IDesign with Clean Architecture. Managers, engines, and utilites fit nicely, but accessors seemed too substantial for an adapter and not independent enough for a true service. At last, I've realized the place of accessors by building off [their relationship to utilities](./2020-11-15-Incremental-Accessors.md). Accessors are independent services, not servants to managers.
 
 ## The problem
-IDesign separates domain services into several layers. Managers encapsulate the system usecases and all sequential coupling of domain activities. Accessors hide resources like frameworks and database from managers by providing an abstraction layer.
+IDesign separates domain services into several layers. Managers encapsulate the system usecases and all sequential coupling of domain activities. Accessors hide resources like frameworks and databases from managers by providing an abstraction layer.
 
-I viewed accessors as a tool for the managers to directly get the entities they needed without knowing about hte concrete storage mechanism. This meant
+So far, I viewed accessors as a tool for the managers to directly get the entities they needed without knowing about the concrete storage mechanism. This meant
 - shared contracts between accessors and managers
 - accessors were responsible for entity relationships
   - includes queries that needed to return hierarchies 
 - new manager requirements often led to changes in accessors
 - different requirements of different managers cause similar, but separate accessor operations
 
-These qualities seemed natural and unavoidable, if sometimes annoying, while only considering IDesign. However, the same properties disqualify clash with Clean Architecture.
-Each service should define their own abstractions, both operations and data contracts. In general, it was also wrong that changes in my manager services regularly propigate to the accessors. Services are ment to stand on their own.
+These qualities seemed natural and unavoidable under iDesign. However, the same properties disqualify clash with Clean Architecture.
+Each service should define their own abstractions, both operations and data contracts. It is also wrong that changes in my manager services regularly propagate to the accessors. Services are ment to stand on their own.
 
 This left accessors in a gray area. Did they belong as services anymore? I considered many options, but they mainly fell into two camps
 - Accessors may just be adapters for manager contracts, but that prevents a lot of data access reuse
@@ -26,14 +26,14 @@ This left accessors in a gray area. Did they belong as services anymore? I consi
 
 ## New Paradigm
 
-Then I realized accessors [could be incrementaly refactored from adapters just like utilites](./2020-11-15-Incremental-Accessors.md). This led me to think about cases I would do so and how the accessor could obey the Open-Closed Principle by accomodating specific constraints with generic extension options.
+Then I realized accessors [could be incrementaly refactored from adapters just like utilites](./2020-11-15-Incremental-Accessors.md). This led me to think about cases I would do so and how an accessor could obey the Open-Closed Principle by accomodating specific constraints with generic extension options.
 
 This led me to realize that my previous concept of accessors were not services at all. They were simply exporting the responsibility of data access and relationship management from the managers. My accessors were intrinsically tied to the needs of my managers. They implicitly required the same entity relationship assumptions.
 
 The new paradigm elevates accessors to true services. The new rules are
 - There is one accessor for one core domain entity
 - The accessor manages all data types that are naturally owned by the core type (e.g. a message naturally owns its attachments and they don't belong to anything else)
-- All access to the sub-domain must go through the accessor
+- All access to the entity sub-domain must go through the accessor
   - The accessor must expose the complete set of operations for the data sub-domain
   - Do not split entity logic across multiple accessors or provide "side-access" from another accessor
 - The accessor owns all of it's own contracts
@@ -55,10 +55,10 @@ It wasn't obvious to me that accessors as true services were capable of all oper
   - Yes. By exposing a method such as `GetEntityWithTag(Tag[])` the tags effectively act as a join and we can fetch a consistent data set in only two database calls (or one extra call per related type)
 - Can we page a list of entities and reliably associate related data? 
   - Yes. The same tag system works. The relationship query only cares about the given parent entity list, not the query that produced it.  
-- Can we the parent entity list by properties of its relationships?
+- Can we query the parent entities by properties of their relationships?
   - Yes. The tags system still works, and much like the database query would. We start with the type we want to match on and use the tags to fetch parent entities with a method like `ParentEntity[] GetById(Id[])`
 - Can we query based on properties of multiple levels of the relationship hierarchy?
-  - Yes, but it can get tricky. Adding tags with all necessary query properties on a single entity, reduces this case to the same number of calls as any other query at the cost of more complex tags. You may consider if some of the properties should actually be represented in the sub-domain even if there is a bit of data duplication. 
+  - Yes, but it can get tricky. Adding tags with all necessary query properties on a single entity reduces this case to the same number of calls as any other query at the cost of more complex tags. You may consider if some of the properties should actually be represented in the sub-domain even if there is a bit of data duplication. 
 
 In short, all the same queries can be performed with a constant number of a database calls without returning excess records. The relationship behavior is moved to up into business logic over tag- and id-based calls. The resultant accessor methods are also generically useful for many other cases.
 
@@ -69,16 +69,16 @@ That said, is this style of access sufficiently performant? The main differences
 
 Our previous query exploration showed that the first two are not major concerns. We can achieve a constant number of calls without excess records.
 
-But the excess data per-record and hot-path performance are not addressed. In fact, if you always query the data from the database it will likely be slower. However, [well factored systems are performant because they are cache-friendly](https://www.infoq.com/presentations/top-10-performance-myths/). The true-service paradigm is much more cache-friendly because each manager defines only the data it needs and an external component is responsible for assembling it. This new paradigm could even add caching as a generic decorator, allowing simple and exact caching for most any path in the system.
+But the excess data per-record and hot-path performance are not addressed. In fact, if you always query the data from the database this new method will likely be slower. However, [well factored systems are performant because they are cache-friendly](https://www.infoq.com/presentations/top-10-performance-myths/). The true-service paradigm is much more cache-friendly because each manager defines only the data it needs and an external component is responsible for assembling it. This new paradigm could even add caching as a generic decorator, allowing simple and exact caching for most any path in the system.
 
 ## Consequences (Pros/Cons)
 We've established that accessors as true services are theoretically capable of completely replacing servant accessors without destroying performance. Now, let's consider if and how the paradigm is actually better
 
 Pros:
 - More natural and complete responsiblity separation
-  - It is less tempting to to share contracts between services the high-level relationships aren't exposed in a low-level component.
-  - Managers can change entity relationships and usage without changing the accessors. No longer pushes part of the orchestration decisions into entity managment
-  - Pushes the engines to be even more pure (not tempted to re-use existing accessor entity mixes)
+  - It is less tempting to to share contracts between services. The high-level relationships aren't exposed in a low-level component.
+  - Managers can change entity relationships and usage without changing the accessors. Managers no longer push part of the orchestration decisions into entity managment
+  - Engines are likely to be even more pure (not tempted to re-use existing accessor entity mixes)
   - Much easier to reason about accessors independently, they represent a complete operation set
   - Less testing overlap between accessors and managers
   - Accessors become portable. Since it's a self-contained sub-domain it could be dropped into a different application without change
@@ -88,12 +88,12 @@ Pros:
   - As different consumers require more of the entity, it pushes generalization rather than more specific paths. The added features can be optionally enrich all the connected systems rather than making them fall out of sync
 - Reduce sneaky coupling at the resource layer.
   - Each store is easier to migrate and update (in old model it wasn't really practical to put most data anywhere but the database because all the relationships depended on it)
-  - Don't have to separate owned data just because of separate resource needs (i.e. attachments prefer a blob-type store while messages and threads prefer something more queryable) 
+  - Don't have to separate owned data just because of separate resource needs (i.e. attachments prefer a blob-type store while messages and threads prefer something more queryable. This storage separation is a choice internal to the accessor now) 
 - Forces you to actually make relational behavior decisions
   - before deletion could be an implicit decision. Now you have to make it explicit, but you make the decision instead of letting the store make the decision for you
 - More scalable
-  -  pushes the important synchronization to the manager where they should be so you can handle things like eventual consistency and distributed error states
-  - assuming global consistency breaks down and is on of the more disruptive performance blocks later on any
+  - pushes the important synchronization to the manager where they should be so you can handle things like eventual consistency and distributed error states
+  - Can't assume global transactional consistency, which is one of the most disruptive performance blocks later on
 
 Cons: 
 - Easier to forget behaviors like deletion and let entities get out of sync
@@ -135,7 +135,7 @@ We'll assume aggregate metrics are calculated elsewhere for now.
 
 *Service Accessor*
 
-First off, is a post intrinsically owned by an influencer in our domain? No, a post could reasonably belong to a brand, or to an advertsing campaign without needing to know the associated influencer. There are likely future cases where posts naturally belong to other entity types, so it does not belong under the influencer accessor.
+First off, is a post intrinsically owned by an influencer in our domain? No, a post could reasonably belong to a brand, or to an advertsing campaign without needing to know the associated influencer. There are likely future cases where posts naturally belong to other entity types, so it does not belong under the influencer accessor. We must represent the influencer relationship generically. In this case, with tags.
 ```cs
 class Post{
     public PostId Id {get; set;}
@@ -165,7 +165,7 @@ The adapter then creates some tag for influencerIds.
 
 
 ### New Requirement: Ad Campaign Tracking
-Now we want to let companies track posts for an ad campaign. We do not want to require an influencer to go with the post. The influencer may not be in the system or the post may not be associated with a specific person at all. 
+Now we want to let companies track posts for an ad campaign. We do not want to require an influencer to be associated with the post. The influencer may not be in the system or the post may not be associated with a specific person at all. 
 
 *Servant Accessor*
 
@@ -230,16 +230,20 @@ interface CampaignPostAccessor{
 
 Notes seem like a reasonable general feature for a post. We can add it to the core PostAccessor. The InfluencerManager and its adapter remain unchanged. The CampaignManager updates its data contract and the adapter appropriately maps the new field.
 ```cs
-class CampaignPost {
+// PostAccessor
+class Post {
+    //...
     public string Notes {get; set;}
 }
-class Post {
+// CampaignManager
+class CampaignPost {
+    //...
     public string Notes {get; set;}
 }
 ```
 
 ### New Requirement: Post Media
-Posts in all use cases should now allow media like images to be attached to a post.
+Posts in all use cases should now allow media, like images, to be attached to a post.
 
 *Servant*
 
@@ -255,13 +259,13 @@ interface IPostMediaAccessor{
 ```
 Hmm, this is sneaky and it assumes that all the post accessors use interoperable ids. The other services now cannot independently change their ids without causing painful refactoring.
 
-It also fragments the post type. Media conceptually only belongs to a post yet is only available through a separate accessor. Composing the two get push up into the managers and is likely to become duplicate code across managers.
+It also fragments the post type. Media conceptually only belongs to a post yet is only available through a separate accessor. Composing the two accessors gets pushed up into the managers and is likely to become duplicate code across managers.
 
 *Service*
 
 The post media clearly belongs to a post and to nothing else. It is an owned type of a post. This means it belongs in the same accessor as posts. This also gives us the freedom to group media with post operations if it makes sense.
 
-Since the accessor is a proper service, it isn't wierd that it defines its own dependencies. The Post accessor can define a contract for managing posts if it wants the resource for storing media to evolve and be configured separately from the posts. 
+Since the accessor is a proper service, it isn't wierd that it defines its own dependencies. The Post accessor can define a dependency abstraction for managing posts if it wants to enable separate storage mediums. 
 
 ```cs
 interface PostAccessor{
@@ -314,13 +318,13 @@ The accessors are not supposed to be tied to one manager. They are open for any 
 
 *Service*
 
-We clearly decorate the `CampaignPostProvider` that belongs only to the usecase's manager. Future contributors know where the caching occurs and it is clear when data changes that affect the cache are implemented. The cache contains exactly the data needed for the use case. Invalidation policies and optimizations only need to cater to one scenario.
+We clearly decorate the `CampaignPostProvider` that belongs only to the usecase's manager. Future contributors know where the caching occurs and it is clear when changes impact the cache. The cache contains exactly the data needed for the use case. Invalidation policies and optimizations only need to cater to one scenario.
 
 ### Volatility Analysis
 
-I didn't include implementations because this example would get enormous. Still there is a substantial difference in invisible details between these two cases. They have a relatively similar number of abstract contracts in each case. However, the servant accessor is prone to implementation churn, widespread contract changes, and hard decisions. The service accessor with adapters keeps volitile decisions as local as possible, has little implementation churn, and generally has a clear decision path for extension. 
+I didn't include implementations because this example would get enormous. Still there is a substantial difference between the invisible details of these two cases. They have a relatively similar number of abstract contracts in each case. However, the servant accessor is prone to implementation churn, widespread contract changes, and hard decisions. The service accessor with adapters keeps volitile decisions as local as possible, has little implementation churn, and generally has a clear decision path for extension. 
 
-From another view, the servant solutions diverge over time, while the service solutions converge over time.
+From another view, the servant solutions *diverge* over time, while the service solutions *converge* over time.
 
 It is also interesting that the servant-type accessor eventually wants to become the service-type accessor, but it can't because the refactoring cost at any point is too high.
 
