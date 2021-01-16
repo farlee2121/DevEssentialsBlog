@@ -26,7 +26,7 @@ class BaseId{
     }
 }
 
-class DerivedId{
+class DerivedId : BaseId {
 
     public override DerivedId Default() {
         // This is a proper override that will be executed even when the instance is called as a BaseId
@@ -92,7 +92,7 @@ Note that we end up with
 Generic result types enable arbitrary success/failure combos with strong typing. This is especially useful when aggregating result types.
 
 There is also minimal generic type argument to deal with. They need only be specified once, when the result type is defined.
-We also benefit from chained actions on the result type, since our actions can alway return a copy of the same result type.
+We also benefit from chained actions on the result type, since even inherited operations can return the derived type.
 
 The downside is that result actions are tied to particular types. There is no way to nicely share a static module of functions between result types.
 This means our code looks more like `new SavePersonResult().Fail("oops")` rather than `Result<SavePersonResult>.Fail("oops")` or `Result.Fail("oops")`.
