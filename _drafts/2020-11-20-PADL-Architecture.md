@@ -209,6 +209,11 @@ This is by no means the one true code organization. It is a set of smart default
 
 # V2
 
+```yml
+layout: post
+series: PADL
+```
+
 Architecture is hard. There are few well-perscribed methods and those that exist are complex to understand. I've been on a journey to combine two methods I enjoy: iDesign and Clean Architecture (or Ports and Adapters-type architecture). Here I'll boil them down to their essense and glue them together.
 
 In this post I'll try to firmly establish the most core ideas clearly. Focusing on the underlying nuggets also prevents me from exploring context-specific advice that helps build up practical understanding. So, we'll follow up with a post all about context-specific decisions and benefits. The overall goal is to lead into a working understanding of the more general ideas here by breaking out smaller scenarios. I call the sum of these context-specific guided processes PADL (Ports and Adapters with Domain Layers).
@@ -229,6 +234,7 @@ I think the first question is harder and more important. Given an answer to the 
 The core of Clean Architecture is a plug-in extensibility. That extensibility comes from one key mechanism
 
 > Components own the definitions for how they can be extended
+<!-- Components define their own mechanisms for extension, and on their own terms? -->
 
 I like the ports and adapters analogy because I think it strikes at the core mechanism. Our current component should define "ports" that expose how the current component can be extended. Other components fit into those ports by using adapters.
 
@@ -278,3 +284,77 @@ I went to the extreme and said everything should be selfish, but there is a poin
 ## Summary
 
 Combining the core mechanism of Ports and Adapters with iDesign domain layers gives us strong guidance for shaping systems. The selfish ports keep components independent and composable. The domain layers help us evolve the adapters into organized services of their own.
+
+
+```yml
+layout: post
+tags: [PADL, Ports and Adapters, Architecture]
+series: PADL
+```
+# Dependencies and Bind-times in layered architectures
+
+Clean Architecture, Onion Architecture, and Hexagonal Archicture talk about how dependencies can only point inward. This is ... true, but a bit confusing. Let's clear it up by elaborating on types of dependencies and how they affect when descisions are made.
+
+## Concrete vs Abstract Dependencies
+For reference on what "in means" here are some diagrams of the previously mentioned architectures
+![Clean Architecture]()  ![Onion Architecture]() ![Hexagonal Architecture]()
+
+Essentially, the inner most layer is your core domain, outer layers are external resources (e.g databases, users, other systems), and middle layers are ways of mapping between the domain and outer layers.
+
+*Concrete* dependencies only point in. The outer layers contain references to the assemblies, namespaces, types, and other constructs of the inner layers. 
+
+I always found this a bit hard to understand, since my workflows appear to have the most dependencies. Managers (the high-level workflows) certainly inject the most dependencies of any component type. But there is a key word there, *inject*.
+
+While *concrete* dependencies point in, *abstract* dependencies point out. The inner domain layers have lots of dependencies, but it owns the abstractions for them and relies on some concrete consumer to fulfil them.
+
+## Bind-time flexibility
+
+This strict opposing flow of abstract and concrete dependency has powerful consequences. It creates a predictable stratefication (aka layering) of when certain kinds of decisions are bound.
+- Domain layer: 
+  - binds the most stable and fundamental truths about the domain
+  - never binds volatile concerns like frameworks, data schemas
+- Adapter layers:
+  - binds our *option set* for concrete implementations (e.g. each determines a framework, system, schema, or other details to implement the domain dependency)
+- Outer layer
+  - binds the concrete mix of implementations to be used in deployment
+
+Seen another way
+- Domain layer -> business decisions
+- Adapter layers -> implementation choices
+- Outer layer -> deployment decisions
+
+## What about domain divisions?
+
+The dependency rules of the above architectures push systems that are very flexible under different deployment, resource, or service compositions. This plug-in style enables flexiblity independent of the software domain. 
+
+Still, domains can be very complex. It is useful to have rules of thumb that highlight when it is time to split off responsiblities in the domain. I work to combine these two concerns with [PADL](). The short version for domain layering is
+  - managers are business workflows, and where each use-case starts
+  - repeated domain operations are Engines
+  - repeated domain entities belong to Accessors
+  - repeated non-domain operations are Utilities
+
+The top level managers can be split up per DDD guidelines for sub-domains. That is, sub-domains are gernerally identifiable by how the business splits itself into teams. 
+
+Here's a graphic I made for PADL. It depicts both bind-time layering and layering of domain activites
+![PADL bind-time]()
+
+
+```yml
+layout: post
+tags: []
+series: PADL
+```
+# Contextual Architecture Guidance: Integration and Layering
+- further guidance on how layers do and don't interact with each other
+- really focus on the adapt to integrate here
+
+# Contextual Architecture Guidance: File organization
+project boundaries, use of namespaces 
+
+# Contextual Architecture Guidance: Cross-Cutting Concerns
+ripped from above
+
+# Contextual Architecture Guidance: Accessors
+probably a refinement of the services not servants post
+
+
