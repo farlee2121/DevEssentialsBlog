@@ -216,8 +216,6 @@ series: PADL
 
 Architecture is hard. There are few well-perscribed methods and those that exist are complex to understand. I've been on a journey to combine two methods I enjoy: iDesign and Clean Architecture (or Ports and Adapters-type architecture). Here I'll boil them down to their essense and glue them together.
 
-In this post I'll try to firmly establish the most core ideas clearly. Focusing on the underlying nuggets also prevents me from exploring context-specific advice that helps build up practical understanding. So, we'll follow up with a post all about context-specific decisions and benefits. The overall goal is to lead into a working understanding of the more general ideas here by breaking out smaller scenarios. I call the sum of these context-specific guided processes PADL (Ports and Adapters with Domain Layers).
-
 IDesign and Clean Architecture both define a variety of guidance, but I'm reducing them to what I see as the essense
 - Clean architecture -> use ports and adapters to create pluggable components
 - IDesign -> rules for dividing domain responsibilities consistently
@@ -357,4 +355,22 @@ ripped from above
 # Contextual Architecture Guidance: Accessors
 probably a refinement of the services not servants post
 
+# How deep does it go?
+FP as the extreme of this model. The paradigm focuses on making small independent pieces and tools for integrating them with confidence and without hating the process
 
+point to the ROP, elevated worlds posts as examples
+
+
+<!-- TODO: talk about accessibility somewhere. Both in understandability and usability. No question of "Can I apply this when...". The answer is yes. Your company, the state of your code, the phase of coding don't matter. You can always use this  -->
+
+
+# Notes from Doug's review
+He feels there is usefulness lurking in the post, but he wants more concrete examples and analogies. He doesn't feel like he gets it.
+
+This makes me think I could add a posts such as
+- show implementations of ports and adapters: DI in C#, parameterization in F#, computer ports as a hardare example
+- perhaps add the computer analogy back to this first post
+- Perhaps distill more focused versions of my previous case studies
+- probably walk through an example of the core loop
+
+Overall, I think I need to build more context in each post for where they are in the process as a whole
