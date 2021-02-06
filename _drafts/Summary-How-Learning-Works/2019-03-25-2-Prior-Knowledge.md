@@ -40,7 +40,7 @@ However, inaccurate knowledge that is reinforced over time and different
 contexts is called a **misconception** (e.g. conspiracy theories).
 Misconceptions are not fixed by formal instruction.
 
-*Misconceptions are not corrected by formal instruction.*
+> *Misconceptions are not corrected by formal instruction.*
 
 The most powerful tools for fixing misconceptions are time and
 repetition. Essentially, the same process as how the incorrect knowledge

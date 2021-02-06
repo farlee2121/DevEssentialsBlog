@@ -32,15 +32,17 @@ Consider, mastery is composed of four stages:
 Further, the goal is ‘**far transfer**’, or the ability to connect and
 apply knowledge in diverse contexts.
 
+![Competence stages](../../post-media/How-Learning-Works/competence-stages.png)
+
 Notice that both sides of this spectrum are ‘unconscious’. On one hand,
 this is necessary for building skills. When a skill is internalized to
 the point of habit, it frees up mental energy to focus on other aspects
 of a task.
 
-Both novices and masters lack awareness. The novice does not know what
-they need to learn and cannot communicate why they are lost. The master
-can no longer recognizes all the steps they perform and connections they
-make.
+> Both novices and masters lack awareness. The novice does not know what
+> they need to learn and cannot communicate why they are lost. The master
+> can no longer recognizes all the steps they perform and connections they
+> make.
 
 On the other hand, this causes challenging disconnects between masters
 and novices, or teachers and students. The novice does even know what
@@ -70,10 +72,10 @@ other.
 Further, mastering a skill or concept has distinct stages
 
 1.  Learn component skills
-
 2.  Integrate components
-
 3.  Know when to apply
+
+![Skill mastery stages](../../post-media/How-Learning-Works/skill-mastery-stages.png)
 
 Isolating weak component skills can greatly improve the overall mastery
 of a skill. Singling out integration and application can also improve
@@ -96,6 +98,8 @@ transfer. Even suggesting a relationship between concepts can be enough.
 The teacher plays a different role in each stage of student mastery.
 Building a Discipling Culture summarizes these roles in terms of the
 ‘square’.
+
+![Learning and teaching square](../../post-media/How-Learning-Works/square.png)
 
 S1: The process starts with modelling and is aimed at making the student
 aware of what they will learn.

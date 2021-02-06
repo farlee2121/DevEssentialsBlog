@@ -4,6 +4,19 @@ tags: [Learning, Book Review]
 series: How Learning Works
 ---
 
+<style>
+.sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+</style>
+
 # Motivation and Goals
 
 I come from the world of startups. Companies with interesting products
@@ -46,11 +59,17 @@ effort.
 Perception of support also plays a key role. Here is a nice summative
 chart
 
+![efficacy table](../../post-media/How-Learning-Works/efficacy-table.png)
+
+<div class="sr-only" aria-label="efficacy table">
+
 |                 |      | <u>Not Supportive</u> | <u>Supportive</u> |                 |           |
 | --------------- | ---- | --------------------- | ----------------- | --------------- | --------- |
 | <u>Efficacy</u> |      | Don't see value       | See Value         | Don't See Value | See Value |
 |                 | Low  | Rejecting             | Hopeless          | Rejecting       | Fragile   |
-|                 | High | Evading               | Defiant           | Evading         | Motivated |
+|                 | High | Evading               | Defiant           | Evading         | **Motivated** |
+
+</div>
 
 ## Signs of Failure
 

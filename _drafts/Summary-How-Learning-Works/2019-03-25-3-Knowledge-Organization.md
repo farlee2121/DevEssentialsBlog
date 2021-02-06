@@ -42,7 +42,7 @@ fill different roles in a person’s life.
 Thus, information should be intentionally presented in each way students
 are expected to use it.
 
-Knowledge structures form to fit their use
+> Knowledge structures form to fit their use
 
 ## Signs of Failure
 

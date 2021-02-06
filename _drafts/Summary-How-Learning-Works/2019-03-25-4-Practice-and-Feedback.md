@@ -16,7 +16,7 @@ However, this fault does not fall wholly on the student. Feedback and
 practice are two halve of one process. Feedback is not effective without
 an opportunity to practice.
 
-Feedback is not effective without an opportunity to practice
+> Feedback is not effective without an opportunity to practice
 
 Not all feedback and practice are equal. Too much feedback can overload
 a student.

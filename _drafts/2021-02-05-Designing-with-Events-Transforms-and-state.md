@@ -92,4 +92,4 @@ The approach definitely takes some adjustment to how you think, but in a very go
 
 This event, transform, and state oriented design is an all around winner. It is easier to model the domain, more information is uncovered during modeling, and the resulting code is both safer and easier to write.
 
-If you want more in-depth info, then read [Domain Modeling Made Functional](). It describes the process accessibly and with lots of concrete examples.
+I highly recommend [Domain Modeling Made Functional]() for further exploration. It describes the process accessibly and with lots of concrete examples.

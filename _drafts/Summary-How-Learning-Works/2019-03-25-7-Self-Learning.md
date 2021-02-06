@@ -33,6 +33,8 @@ The component skills of self-learning are.
 
   - Reflect and make changes based for future attempts
 
+![self learning cycle](../../post-media/How-Learning-Works/self-learning-cycle.png)
+
 These boil down to monitoring and controlling one’s own actions. In
 Japanese culture, the process of constantly monitoring and making small
 improvements is called *kaizen*.
@@ -41,7 +43,7 @@ I favor a variant of this process by Building a Discipling Culture
 called the circle. It builds in accountability and feedback in addition
 to personal monitoring and control.
 
-![](./learning101/media/image1.png)
+![kairos circle](../../post-media/How-Learning-Works/kairos.png)
 
 Research shows that masters spend proportionately much more time
 planning an approach while novices tend to blindly apply whatever
