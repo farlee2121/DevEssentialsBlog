@@ -7,19 +7,11 @@ series: How Learning Works
 # Self-learning
 
 Software has an idea called a ‘bus factor’. The bus factor is how many
-people can be hit by a bus before the software can no longer ship. Bus
+people can be hit by a bus before the software can no longer ship to customers. Bus
 factors have many contributors. One of them is the team’s comfort in
 learning independently.
 
-I once worked at a company where there was always pressure to deliver
-fast. Thus, I ended up giving answers to development questions rather
-than helping developers find answers. This was faster at first, but it
-ended up bogging down my time because they never learned to solve hard
-problems independently. In fact, they still came to me with questions
-even after I left the company.
-
-The issue here is self-learning. **Learning is a skill like any other**.
-It requires practice, feedback, and ways of organizing knowledge.
+**Learning is a skill like any other**. It requires practice, feedback, and ways of organizing knowledge.
 
 The component skills of self-learning are.
 
