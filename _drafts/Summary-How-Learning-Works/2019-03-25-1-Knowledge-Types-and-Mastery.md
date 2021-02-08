@@ -94,6 +94,8 @@ S4: The student is now competent. The teacher should give the student space to w
   - Teaching Assistants: TAs are halfway between an expert and novice perspective. They can help bridge the gap in understanding for both sides.
 
   - Structured Peer Review: Have peers think critically about each other’s work and provide feedback
+    - Note [Formal Inspections](https://en.wikipedia.org/wiki/Software_inspection) are a well research means to overcome skill and opinion gaps without contest of egos. See [Peer Reviews in Software](https://www.amazon.com/Peer-Reviews-Software-Practical-Guide/dp/0201734850).
+
 
   - Why Questions: structured comparisons, explain pre-worked examples, boundary conditions, elaborative interrogation, hypothesis/test cycles
 

@@ -20,7 +20,7 @@ If you'd rather just dive in, then his videos are a great place to start. His vi
   - Also desirable langauge properties
 - [Learning F#](https://fsharpforfunandprofit.com/learning-fsharp/)
   - Good advice on the mindset for learning F# or any functional language
-  - Also leads into so starter series
+  - Also leads into the starter series
 - [Functional Design Patterns](https://vimeo.com/113588389)
   - Introduces functional concepts in an approachable way that leans on knowledge from OO patterns. Helped me feel like I wasn't throwing away all the practices I built up
 - [Why F#](https://fsharpforfunandprofit.com/series/why-use-fsharp.html)
@@ -45,7 +45,6 @@ If you'd rather just dive in, then his videos are a great place to start. His vi
   - Starts to pull together the techniques into the bigger picture of a system
 - [Functional Approaches to Dependency Injection](https://fsharpforfunandprofit.com/posts/dependency-injection-1/)
   - DI is a big part of how I comprehend systems in the C# world. This article helped me come to terms with how the same concerns are preserved in a functional world, a big step toward making larger systems.
-- Is there a more intermediate composition post to go here?
 - [Designing with Capabilities](https://vimeo.com/162209391)
   - Takes type-driven design a step further to limit potential security and design abuse
 - [Enterprise Tic-Tac-Toe](https://vimeo.com/131196782)
@@ -67,7 +66,7 @@ If you'd rather just dive in, then his videos are a great place to start. His vi
 Advanced Topics
 - [Recursive Types and Folds](https://fsharpforfunandprofit.com/series/recursive-types-and-folds.html)
   - A deeper look at how to build recursive types and hide the recursion behind one method
-  - Very useful. I ran into this issue sooner than I thought. Recursion happens in natural models more than expected
+  - Very useful. I ran into this issue sooner than I thought. Recursion happens in domain models more than expected
 - [Computation Expressions](https://fsharpforfunandprofit.com/series/computation-expressions.html)
   - A deeper dive into implementing computation expressions (the language mechanism for simplifying monads)
 - [Type Size and Design](https://fsharpforfunandprofit.com/posts/type-size-and-design/)
@@ -77,7 +76,7 @@ Advanced Topics
 - [Swapping type-safety for high performance using compiler directives](https://fsharpforfunandprofit.com/posts/typesafe-performance-with-compiler-directives/)
   - A experiment for low-disruption optimization of type-driven designs. A good read if you're worried about theoretical performance, but shouldn't be used unless proven it's needed
 
-### Tools for Experimenting
+## Tools for Experimenting
 I highly recommend you try out these ideas as you work through the readings. It is a lot to digest and the best way to process it is by doing.
 Scott Wlaschin has [a similar post](https://fsharpforfunandprofit.com/installing-and-using/), but a lot has changed since then.
 
@@ -95,7 +94,7 @@ Here are tools and tips for working in F#
     - beware that you many need to rebuild to get some errors to go away
   - I think the most invaluable part is the type signature lenses. Implicit typing causes some of the hardest errors to adjust to upfront. Seeing the type signatures inline makes those errors much easier to spot
   - Visual Studio is fine if jumping IDEs is too much to start with
-- Unit tests: xUnit
+- Unit tests: xUnit or Expecto
   - I like to explore via unit tests. I find them more durable and visual than a REPL, especially once I've gotten into sample apps
   - xUnit has better IDE support and should be more familiar for C# users than Expecto
   - If you're new to VSCode and don't have a test runner, try [.NET Core Test explorer](https://marketplace.visualstudio.com/items?itemName=derivitec-ltd.vscode-dotnet-adapter)

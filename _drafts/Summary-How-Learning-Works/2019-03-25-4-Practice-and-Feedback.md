@@ -38,6 +38,7 @@ Shorter feedback-practice cycles tend to cement a concept more quickly. Longer c
 
   - Practice Reflections – Ask students to assess how their practice factored into their performance on an assignment and how they can improve it next time.
 
-  - Structured Peer Feedback – Have students assess each other’s work with some process guidance. Students also learn by identifying good and bad qualities in peer work
+  - Structured Peer Feedback – Have students assess each other’s work with some process guidance. Students also learn by identifying good and bad qualities in peer work.
+    -  Note that research demonstrates [Formal Inspections](https://en.wikipedia.org/wiki/Software_inspection) as one of the most effective defect detection methods as well as a powerful way to spread knowledge in a team. See [Peer Reviews in Software](https://www.amazon.com/Peer-Reviews-Software-Practical-Guide/dp/0201734850).
 
   - Rubrics – Helps students create their own feedback loop by providing clear expectations
