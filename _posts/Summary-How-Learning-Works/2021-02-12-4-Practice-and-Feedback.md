@@ -6,15 +6,13 @@ series: How Learning Works
 
 # Practice & Feedback
 
-Repeatedly explaining some idea without perceived progress is frustrating for both the teacher and student. Ideas feel compelling and actionable, but remember, knowledge is both factual and procedural.
-
-Thus, feedback and practice are two halve of one process. Feedback is not effective without an opportunity to practice.
+Repeatedly explaining some idea without perceived progress is frustrating for both the teacher and student. Ideas feel compelling and actionable, but remember, knowledge is both declarative and procedural. Thus, feedback and practice are two halves of one process. Feedback is not effective without an opportunity to practice.
 
 > Keypoint: Feedback is not effective without an opportunity to practice
 
 Not all feedback and practice are equal. Too much feedback can overload a student.
 
-Rather, effective feedback and practice
+Effective feedback and practice
 
   - Is centered around an explicit set of goals for the student
 

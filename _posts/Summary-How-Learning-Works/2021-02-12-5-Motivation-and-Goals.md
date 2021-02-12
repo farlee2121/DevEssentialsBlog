@@ -2,7 +2,10 @@
 layout: post
 tags: [Learning, Book Review]
 series: How Learning Works
+excerpt_separator: <!--more--> 
 ---
+
+# Motivation and Goals
 
 <style>
 .sr-only {
@@ -17,13 +20,12 @@ series: How Learning Works
       }
 </style>
 
-# Motivation and Goals
-
 I come from the world of startups. Companies with interesting products fail every day. Despite novel products, customers are disinterested and avoidant.
 
 In software, unit tests are widely acknowledged to be good practice. However, few developers write them.
 
 These two cases are prime examples of motivation failures.
+<!--more-->
 
 Motivation has two main components
 
@@ -33,7 +35,7 @@ Motivation has two main components
 
 Value propositions are a core concept in the business and sales. Customers, employees, etc. all bring their goals and beliefs into an interaction. Mis-aligned goals cause frustration and disinterest. It feels like there is no unified purpose or value.
 
-A clear value proposition addresses this disconnect. Know the value your product/lesson provides and identify overlap the student’s goals. Goals will never align completely, but highlighting the overlap clarifies a relationship and aligns individuals to a common outcome.
+A clear value proposition addresses this disconnect. Know the value your product or lesson provides and identify overlap with the student’s goals. Goals will never align completely, but highlighting the overlap clarifies a relationship and aligns individuals to a common outcome.
 
 Efficacy is sneakier. It is one’s belief in their ability to accomplish a given outcome. Low efficacy is often identified by statements like “I’m not good at…” or “I can’t…”.
 
@@ -59,7 +61,7 @@ Perception of support also plays a key role. Here is a nice summative chart
 
   - Undermining or guarded behavior
 
-  - “I not good at \_\_”, “I’m not a \_\_”, “\_\_ isn’t my subject”
+  - “I not good at __”, “I’m not a __”, “_\_ isn’t my subject”
 
 ## Tools
 

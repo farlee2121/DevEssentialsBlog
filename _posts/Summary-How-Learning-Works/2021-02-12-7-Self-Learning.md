@@ -6,7 +6,7 @@ series: How Learning Works
 
 # Self-learning
 
-Software has an idea called a ‘bus factor’. The bus factor is how many people can be hit by a bus before the software can no longer ship to customers. Bus factors have many contributors. One of them is the team’s comfort in learning independently.
+I see programming as an extendend application of problem solving, and problem solving is just a different view on self-learning. Encouraging self-learning makes a team skillfull and robust.
 
 **Learning is a skill like any other**. It requires practice, feedback, and ways of organizing knowledge.
 
@@ -32,7 +32,7 @@ I favor a variant of this process by Building a Discipling Culture called the ci
 
 Research shows that masters spend proportionately much more time planning an approach while novices tend to blindly apply whatever approach they think of first. Further, more mature problem solvers will recognize when an approach is failing and try a new one. Immature problem solvers with try the same approach many times independent of the result.
 
-Kaizen, or metacognitive, process can be developed in students by asking why questions and providing self-learning frameworks. This causes students to reflect on their own processes and equips them to improve.
+Kaizen or metacognitive process can be developed in students by asking why questions and providing self-learning frameworks. This causes students to reflect on their own processes and equips them to improve.
 
 It is also important to address views on knowledge. Students perform better when they see knowledge as malleable, as something that can be intentionally improved. Statements of that paint knowledge as static should be addressed (e.g. “I’m not good at math”, “Math isn’t my subject”).
 

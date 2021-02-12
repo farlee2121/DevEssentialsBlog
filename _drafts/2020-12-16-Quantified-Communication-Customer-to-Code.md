@@ -8,6 +8,12 @@ tags: [Testing, BDD, Example-Based testing, Generative testing, Type-Driven Deve
 
 <!-- I don't focus much on quantifying, maybe I should rename it to Verifying?-->
 
+<!-- TODO: add realization that type-drive and mutation testing are complimentary. One ensures branch coverage. One ensure representative data coverage. Example-based testing is also complementary, covering expected behavior.
+- example & property tests -> behavior
+- type-drive -> robustness under inputs
+- mutation -> completeness of testing suite
+  -->
+
 Learning funcitonal programming has included significant quality time with Type-Driven Development and property-based testing. These paradigms highlighted a gap in my previous testing techniques. It led me to better classify types of communication errors between customers and code, and the toolset for addressing each type.
 
 There are three key players that can miscommunicate when making a business system: customers (and their reps), developers, and the code. Miss communications can happen between each group.

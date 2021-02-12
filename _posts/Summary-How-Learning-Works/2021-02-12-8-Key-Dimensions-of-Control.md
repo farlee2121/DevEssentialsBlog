@@ -14,7 +14,7 @@ Tools: Concept Inventories, Self-Assessments, Diagnostic Assessments, Brainstorm
 
 Tools: Structured Peer Review, Self-Assessment Strategies, Practice Plans, Practice Journals, Project Checkpoints
 
-**Clarity** – The degree to which understand expected outcomes, blind spots, and communicate expectations
+**Clarity** – The degree to which we define expected outcomes, seek blind spots, and communicate expectations
 
 Tools: Rubrics, Checklists, Advance Organizers, Class Rules, Consistent Grading, Syllabi, Office Hours/how and when they may approach you for help
 

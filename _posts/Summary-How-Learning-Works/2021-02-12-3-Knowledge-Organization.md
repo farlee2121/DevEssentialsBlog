@@ -2,13 +2,14 @@
 layout: post
 tags: [Learning, Book Review]
 series: How Learning Works
+excerpt_separator: <!--more--> 
 ---
 
 # Knowledge Organization
 
-Think back to [the first post on mastery](./2019-03-25-1-Knowledge-Types-and-Mastery.md). Expert blindspot is caused by information obvious to the master and imperceptable to the student, causing both sides to be baffled by the behavior of the other.
+Think back to [the first post on mastery](./2019-03-25-1-Knowledge-Types-and-Mastery.md). Expert blindspot is caused by information obvious to the master and imperceptable to the student, causing both sides to be baffled by the behavior of the other. 
 
-This can be an issue with knowledge organization. Students may know pieces of information, but don’t have enough connections to recall them at the right time or reason an appropriate action. In fact, one of the core differences between novices and masters is the quality and density of connections between facts.
+This can be an issue with knowledge organization. <!--more-->  Students may know pieces of information, but don’t have enough connections to recall them at the right time or reason an appropriate action. In fact, one of the core differences between novices and masters is the quality and density of connections between facts.
 
 Research demonstrates that conflicting beliefs are more common with a low density of connections. In contrast, connection-dense knowledge reduces conflicts, improves recall speed, and improves recall in correct situations. Isolated knowledge must be recalled directly. However, experts can use connected knowledge to reason new information without directly recalling it.
 

@@ -8,7 +8,7 @@ series: How Learning Works
 
 *Defn: Mastery - a high degree of competence in a particular area.*
 
-Mastery is desired goal of learning, but it can also be a barrier to teaching.
+Mastery is a goal of learning, but it can also be a barrier to teaching.
 
 Consider, mastery is composed of four stages:
 
@@ -27,11 +27,11 @@ Further, the goal is ‘**far transfer**’, or the ability to connect and apply
 
 ![Competence stages](../../post-media/How-Learning-Works/competence-stages.png)
 
-Notice that both sides of this spectrum are ‘unconscious’. On one hand, this is necessary for building skills. When a skill is internalized to the point of habit, it frees up mental energy to focus on other aspects of a task.
-
-> Both novices and masters lack awareness. The novice does not know what they need to learn and cannot communicate why they are lost. The master can no longer recognizes all the steps they perform and connections they make.
+Notice that both sides of this spectrum are ‘unconscious’. On one hand, this is necessary for building skills. Internalizing a skill to the point of habit frees up mental energy to focus on other aspects of a task.
 
 On the other hand, this causes challenging disconnects between masters and novices known as **expert blind spot**. The novice does even know what they need to learn and cannot communicate why they are lost. The master can no longer recognize all the step they perform and connections they make. This complicates communication and frustrates both sides.
+
+> Both novices and masters lack awareness. The novice does not know what they need to learn and cannot communicate why they are lost. The master can no longer recognizes all the steps they perform and connections they make.
 
 ## Knowledge Types
 
@@ -57,7 +57,7 @@ Isolating weak component skills can greatly improve the overall mastery of a ski
 
 ## Far Transfer
 
-Students do not automatically recognize a concept in new contexts. Transfer must be taught for if it is an expected result.
+Students do not automatically recognize a concept in new contexts. Transfer must be taught for, if it is an expected result.
 
 Students can learn to transfer knowledge through critical thinking processes. Questions like boundary conditions, structured comparisons, diverse applications, or distinctly highlighting which aspects are general principles and which are contextual examples all improve transfer. Even suggesting a relationship between concepts can be enough.
 
@@ -67,7 +67,7 @@ The teacher plays a different role in each stage of student mastery. Building a 
 
 ![Learning and teaching square](../../post-media/How-Learning-Works/square.png)
 
-S1: The process starts with modelling and is aimed at making the student aware of what they will learn.
+S1: The process starts with modeling and is aimed at making the student aware of what they will learn.
 
 S2: This stage is referred to as the ‘pit’. The student takes on responsibility but should be closely supported. The student does not have competence to perform independently and can lose hope in accomplishing the goal
 
@@ -94,7 +94,7 @@ S4: The student is now competent. The teacher should give the student space to w
   - Teaching Assistants: TAs are halfway between an expert and novice perspective. They can help bridge the gap in understanding for both sides.
 
   - Structured Peer Review: Have peers think critically about each other’s work and provide feedback
-    - Note [Formal Inspections](https://en.wikipedia.org/wiki/Software_inspection) are a well research means to overcome skill and opinion gaps without contest of egos. See [Peer Reviews in Software](https://www.amazon.com/Peer-Reviews-Software-Practical-Guide/dp/0201734850).
+    - Note: [Formal Inspections](https://en.wikipedia.org/wiki/Software_inspection) are a well researched means to overcome skill and opinion gaps without contest of egos. See [Peer Reviews in Software](https://www.amazon.com/Peer-Reviews-Software-Practical-Guide/dp/0201734850).
 
 
   - Why Questions: structured comparisons, explain pre-worked examples, boundary conditions, elaborative interrogation, hypothesis/test cycles
