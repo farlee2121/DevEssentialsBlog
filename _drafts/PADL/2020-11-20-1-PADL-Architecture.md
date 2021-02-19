@@ -1,14 +1,13 @@
 ---
 layout: post
 tags: [Architecture, Design thinking, SOLID Structure, Patterns]
+series: PADL
+
 ---
 
 # PADL: Ports and Adapters + Domains Layers
 
-```yml
-layout: post
-series: PADL
-```
+<!-- TODO: talk about accessibility somewhere. Both in understandability and usability. No question of "Can I apply this when...". The answer is yes. Your company, the state of your code, the phase of coding don't matter. You can always use this  -->
 
 Architecture is hard. There are few well-perscribed methods and those that exist are complex to understand. I've been on a journey to combine two methods I enjoy: iDesign and Clean Architecture (or Ports and Adapters-type architecture). Here I'll boil them down to their essense and glue them together.
 
@@ -23,12 +22,10 @@ This roughly corrolates to two key questions
 I think the first question is harder and more important. Given an answer to the first, people are decent at figuring out the second. For both, a high-quality convention facilitates incremental decomposition.
 
 ## More on Ports and Adapters or Anti-Corruption Layers
-<!-- I don't think I need a deeper idesign section. Really I just need to clarify ports and adapters, then go to the core loop where I can specify different domain type criteria -->
 
 The core of Clean Architecture is a plug-in extensibility. That extensibility comes from one key mechanism
 
 > Components own the definitions for how they can be extended
-<!-- Components define their own mechanisms for extension, and on their own terms? -->
 
 I like the ports and adapters analogy because I think it strikes at the core mechanism. I picture how a computer defines a physical set of ports, and devices that don't fit needs adapters. Our current component should define "ports" that expose how the current component can be extended. Other components fit into those ports by using adapters.
 
@@ -76,6 +73,14 @@ The second phase comes when fulfilling the ports with adapters.
 
 I went to the extreme and said everything should be selfish. However, there is a point of useful shared volatility when pieces will not likely change independently.  Finding that point is what makes architecture an art. There is no general criteria for finding it. I definitely prefer to err on the selfish side. 
 
+## Incremental Evolution
+
+One of the best qualities of this paradigm is that I can be applied incrementally independent of existing code.
+
+The key activity is all about isolating each service on it's own terms, then adapting. Each service is requisitely blind to how "legacy" the rest of the system may be. Any awkwardness of integration is handled in the adapters.
+
+This makes refactoring a minimal and stable activity. No global rules are required for each piece to be complete. Each refactoring, no matter how small, is a complete and stable step toward a better system. 
+
 ## Summary
 
 Combining the core mechanism of Ports and Adapters with iDesign domain layers gives us strong guidance for shaping systems. The selfish ports keep components independent and composable. The domain layers help us evolve the adapters into organized services of their own.
@@ -84,34 +89,5 @@ I'll refer to this combination of ideas as PADL in comming posts.
 
 In the next post I'll clear up how dependencies flow in port-style architectures. Later posts will dig into more contextual examinations of PADL in use. 
 
-
-
-```yml
-layout: post
-tags: []
-series: PADL
-```
-
-
-
-
-# Contextual Architecture Guidance: Cross-Cutting Concerns
-ripped from above
-
-# Contextual Architecture Guidance: Accessors
-make this a very short version that links to extended previous post
-[nya](../_posts/2021-01-01-Accessors-Services-Not-Servants.md)
-
-# Case Studies
-- I'll accumulate extended explorations of applications here
-- mayb just put the accessor post here.
-
-# How deep does it go?
-FP as the extreme of this model. The paradigm focuses on making small independent pieces and tools for integrating them with confidence and without hating the process
-
-point to the ROP, elevated worlds posts as examples
-
-
-<!-- TODO: talk about accessibility somewhere. Both in understandability and usability. No question of "Can I apply this when...". The answer is yes. Your company, the state of your code, the phase of coding don't matter. You can always use this  -->
 
 
