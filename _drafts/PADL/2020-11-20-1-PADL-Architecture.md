@@ -85,7 +85,7 @@ This makes refactoring a minimal and stable activity. No global rules are requir
 
 Combining the core mechanism of Ports and Adapters with iDesign domain layers gives us strong guidance for shaping systems. The selfish ports keep components independent and composable. The domain layers help us evolve the adapters into organized services of their own.
 
-I'll refer to this combination of ideas as PADL in comming posts.
+I'll refer to this combination of ideas as PADL in coming posts.
 
 In the next post I'll clear up how dependencies flow in port-style architectures. Later posts will dig into more contextual examinations of PADL in use. 
 
