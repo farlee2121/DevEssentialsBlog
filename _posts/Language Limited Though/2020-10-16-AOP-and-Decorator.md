@@ -11,7 +11,7 @@ series_description: Exploring how different languages equip us to solve differen
 Aspect-Oriented programming has captivated my imagination for years. C#, however, does not support AOP. Even conceptually realizing benefits of the paradigm proved difficult. Then, I experienced functional composition.
 
 ## What is Aspect-Orientation
-The heart of Aspect-Orientated Programming (AOP) is cross-cutting concerns. The creators saw concerns like logging, authorization, authentication, and transaction mananagement. They asked why these needed to be spread through the program. 
+The heart of Aspect-Orientated Programming (AOP) is cross-cutting concerns. The creators saw concerns like logging, authorization, authentication, and transaction management. They asked why these needed to be spread through the program. 
  - Their implementation is nearly identical everywhere
  - They are not intrinsic to the business logic. They distract from the semantic clarity of a function
  - They are needed through most components of the system
@@ -20,14 +20,14 @@ The idea is to run these cross-cutting concerns as a sort of add-on or intercept
 
 ## What is a Decorator
 
-Decorator is an Object-Oriented pattern similar in motivation to AOP. The idea is that you take some core functionality and "decorate" it with additional functionallity. The core logic is unchanged and many decorators can be used together to create complex functionality.
+Decorator is an Object-Oriented pattern similar in motivation to AOP. The idea is that you take some core functionality and "decorate" it with additional functionality. The core logic is unchanged and many decorators can be used together to create complex functionality.
 
 A good example (stolen from Steve Tockey) is the Java filestream. At the base is the filestream. Then, you can add a Compressed decorator to get a compressed filestream. Add an encrypted decorator and you get an encrypted compressed filestream. So on and so on.
 
 ## C# difficulties
 AOP requires some mechanism for "weaving" the cross-cutting concerns back into core functionality. C# has no built-in solution for proxying methods or specifying behavior before or after a method call.
 
-That is a bit of a lie. Attributes can be triggered before a function call. They can interupt execution with an exception, but don't have access to the function inputs or outputs.
+That is a bit of a lie. Attributes can be triggered before a function call. They can interrupt execution with an exception, but don't have access to the function inputs or outputs.
 
 Two options to get around this were 
  - [Post-sharp](https://www.postsharp.net/): runs at build-time by re-writing the compiled IL
@@ -67,7 +67,7 @@ class CompositionRoot{
 
 This works. It works well for relatively isolated scenarios or common shared interfaces (i.e. INotifier). It does not work well for activities that would be shared between many components that don't share an interface. It would end up requiring decorator implementations for every abstraction in the system.
 
-Some DI frameworks cater to this specific scenario. Autofac and Castle-Windsor allow you to register decorators where the framework takes care of generating dynamic proxies to adapt the decorator on to any component in the system. My issue with this solution is the heavy reliance on reflection. Relying on relection in the heart of my system seemed like a performance minefield. 
+Some DI frameworks cater to this specific scenario. Autofac and Castle-Windsor allow you to register decorators where the framework takes care of generating dynamic proxies to adapt the decorator on to any component in the system. My issue with this solution is the heavy reliance on reflection. Relying on reflection in the heart of my system seemed like a performance minefield. 
 
 ## Lack of Clarity
 
@@ -75,7 +75,7 @@ The above issues are not unique to C#. They exist in most OO languages because t
 
 I was facing a deeper issue though. I lacked clarity about how to practically use AOP. My expectations were to write decorators for all my components at once, but also to be able to access specific properties.
 
-Authorization is a good example. Authorization often depends on some identifying information about the user. A decorator could grab the user id from the arguments and then make a decision based on that info. Sounds good, but how does it do that generally for any function that takes a user id? It requires name/type based reflection (which would not be great security practice). The code can't interpret your intended semantics without a consitent convention or annotation. 
+Authorization is a good example. Authorization often depends on some identifying information about the user. A decorator could grab the user id from the arguments and then make a decision based on that info. Sounds good, but how does it do that generally for any function that takes a user id? It requires name/type based reflection (which would not be great security practice). The code can't interpret your intended semantics without a consistent convention or annotation. 
 
 ## Functional Composition
 I'd pretty much given up on AOP when I started to learn functional programming. Then, I witnessed composition in F#. 
@@ -84,7 +84,7 @@ In functional languages
  - functions are transformations from input to output, *not* an algorithm or set of instructions
  - the transformation is referentially immutable, it should always return the same output for given input
  - functions are data too. They can be assigned and operated on
-   - To operate on functions normally, functions with the same type signatures are implicitly interchangable (i.e. you may have `sprint` in mind but specifying an `int -> string` will accept any function `int -> string`)
+   - To operate on functions normally, functions with the same type signatures are implicitly interchangeable (i.e. you may have `sprint` in mind but specifying an `int -> string` will accept any function `int -> string`)
    - arguments can be determined implicitly. For example, binding a function from one name to the other does will implicitly impart arguments to the new function   
    ```fsharp
      let nya = (+) // nya takes two ints and outputs an int
@@ -95,7 +95,7 @@ This adds up for some powerful consequences. It means that the decorator pattern
 Here's the core idea, if a function is a transformation that always produces that same thing, then why not connect multiple transformations to make a new transformation?
 
 ```fsharp
-let setModifedDate now, user = 
+let setModifiedDate now, user = 
     user.ModifiedDate = now()
     user
 let setDeleted user = 
@@ -126,18 +126,18 @@ This is a stark contrast to decorator in OO that requires a new type definition,
 ## Gaining Clarity
 The functional AOP implementation is very much lighter and nicer than the OO one. However, I haven't gained any abilities not available to me in C#. Well... I suppose I gained generic decorators with built-in language functionality.
 
-This doesn't resolve the genric decorators vs specific data conundrum.
+This doesn't resolve the generic decorators vs specific data conundrum.
 
 The easy of implementation did, however, make it much easier to play and test my thoughts. I ended up realizing that there is a fundamental divide in AOP-style decorators. 
 
-The first class is completely generic. They cannot depend on specifics of the functions that they are modifying. This class of decorators is great for centralizing tasks like peformance tracking, default authentication behavior, or error logging. Some crafty dependency injection can also achieve this for role- and component-based authentication.
+The first class is completely generic. They cannot depend on specifics of the functions that they are modifying. This class of decorators is great for centralizing tasks like performance tracking, default authentication behavior, or error logging. Some crafty dependency injection can also achieve this for role- and component-based authentication.
 
 The second class relies on some specific information of the function being decorated. There is not and never was a way to get around creating a custom implementation or configuration for this scenario. An example would be authenticating a method call based on current user and id of the entity being acted on, which is passed as an argument.
 
 This is not a reason to be dismayed. The completely generic decorators are already a significant win. The specific decorators also end up small and focused. They often aren't much more work than baking the concern into the core logic, but result in much more flexibility for change. In fact, the decorators can be decided at configuration time, where baked-in can only be decided at write time.
 
 ## Summary
-AOP and decorators are definitely possible and beneficial in OO, but much more work. The functional focus on tranformations and composition makes AOP both natural and simple to implement. 
+AOP and decorators are definitely possible and beneficial in OO, but much more work. The functional focus on transformations and composition makes AOP both natural and simple to implement. 
 
 The simplicity of AOP in F# helped me to finally wrap my head around the paradigm as a practical tool.
 

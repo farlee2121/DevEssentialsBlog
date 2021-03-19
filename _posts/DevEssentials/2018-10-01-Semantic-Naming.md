@@ -90,7 +90,7 @@ Underscore or Dash Separation: some languages prefer to separate words with a de
 
 I Prefix: often used to indicate an interface
 
-Boolean Names: Start Boolean names with Is or Can (e.g. IsMapAvailble, CanDeleteUser)
+Boolean Names: Start Boolean names with Is or Can (e.g. IsMapAvailable, CanDeleteUser)
 
 TL;DR
 -----

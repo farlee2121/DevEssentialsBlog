@@ -6,7 +6,7 @@ tags: [Math, Functional Programming, Design Patterns]
 
 Like most people, I've found monads hard to pin down. I know things I can do with them, but I don't understand them at an intuitive and flexible level. Here I'll try to build my mental model by relating to other tools.
 
-Monads are originally a math concept, but I learned about them in a programming context and want to use them practically as a developer. However, they aren't like other programming structures I know. It isn't really a statement, datastructure, or type. What makes a monad special is the behavioral properties that live outside of the obvious syntax or structures.
+Monads are originally a math concept, but I learned about them in a programming context and want to use them practically as a developer. However, they aren't like other programming structures I know. It isn't really a statement, data structure, or type. What makes a monad special is the behavioral properties that live outside of the obvious syntax or structures.
 
 It is like a pattern, but it doesn't relate closely to any patterns I know. This may be because patterns reduce common solutions and often feel familiar. Patterns usually don't have strong conceptual consequences. On the other hand, Monads aren't something you'd easily deduce. They stem from a theoretical construct whose useful consequences filtered down into practice. 
 
@@ -84,7 +84,7 @@ I factored out the [monad laws from the FsCheck test suite](https://github.com/f
 
 [This definition](https://wiki.haskell.org/Monad_laws) is the clearest I've seen so far and [Scott Wlaschin has an excellent explanation](https://fsharpforfunandprofit.com/posts/elevated-world-2/#the-properties-of-a-correct-bindreturn-implementation). It clarifies that the unit laws are looking for return (and bind) to produce semantically equivalent values. 
 
-In other words, if we mapped the identity function into the monad world, it would be the same as directly implmenting the identity function in the monad world. It should be a function that returns whatever it was given. This also is more in line with the original concept of a monad from category theory.
+In other words, if we mapped the identity function into the monad world, it would be the same as directly implementing the identity function in the monad world. It should be a function that returns whatever it was given. This also is more in line with the original concept of a monad from category theory.
 
 Notice that our definition from before can actually be rewritten
 ```fs
@@ -116,7 +116,7 @@ This reminds me of rings in Group Theory. The basic idea is that you have a set 
 
 ## Conclusion
 
-Most people are propbably satisfied with knowing
+Most people are probably satisfied with knowing
 - We can always map to a monad (but be careful for extra cases mapping back)
 - Monads are always chainable
 - Monads let us transform values to fit our usecase, operate error-free, then map back (e.g. async, lists, error-handling, etc)

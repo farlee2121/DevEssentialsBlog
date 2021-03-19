@@ -10,7 +10,7 @@ First let's ground ourselves with some definitions
 
 ## Nominal vs Structural
 
-**Structual typing**: A type system where "compatibility and equivalence are determined by the type's actual structure or definition and not by other characteristics such as its name or place of declaration" ([source](https://en.wikipedia.org/wiki/Structural_type_system))
+**Structural typing**: A type system where "compatibility and equivalence are determined by the type's actual structure or definition and not by other characteristics such as its name or place of declaration" ([source](https://en.wikipedia.org/wiki/Structural_type_system))
 
 A familiar example of structural typing would be JSON. Consider 
 ```json
@@ -24,7 +24,7 @@ A familiar example of structural typing would be JSON. Consider
   "age": 5
 }
 ```
-The two json objects can be used interchangably because they have the same properties. It doens't matter if one is intended as a `Person` class and the other a `Robot` class.
+The two json objects can be used interchangeably because they have the same properties. It doesn't matter if one is intended as a `Person` class and the other a `Robot` class.
 
 Javascript is not completely structural though, since equivalence is reference-based rather than structure-based.
 
@@ -32,7 +32,7 @@ Javascript, python, clojure, and other popular dynamic languages lean on a stron
 
 **Nominal typing**: A type system where "compatibility and equivalence of data types is determined by explicit declarations and/or the name of the types", and not their members ([source](https://en.wikipedia.org/wiki/Nominal_type_system)).
 
-In nominal typing two classes are not interchangable even if they have the same members. This is what users of Java, C#, Haskell, and many static languages are used to.
+In nominal typing two classes are not interchangeable even if they have the same members. This is what users of Java, C#, Haskell, and many static languages are used to.
 
 ```cs
 class Person{
@@ -65,7 +65,7 @@ Is there an inherent relationship between structural and dynamic types and nomin
 
 No. It is entirely possible to have a dynamic type system where types are built at run-time but must be explicitly named and inherited. Similarly, it is possible to have a type system where type relationships are inferred by members, but all types must be determined at compile-time.
 
-So why, then, is there such a strong corrolation?
+So why, then, is there such a strong correlation?
 
 I believe it has to do with a trade-off is preference for minimal specification vs predictability. Though, I think advocates would generally phrase it "flexibility" vs "safety".
 
@@ -117,7 +117,7 @@ The Clojure team is exploring modifications on this system to combat the prolife
 
 
 ## Conclusion
-In summary, there is no intrinsic property that couples dynamic and structural or static and nominal type systems. Rather the corrolation appears to be based on a preference for predictable vs implicit design, and the duality can be applied to many language properties.
+In summary, there is no intrinsic property that couples dynamic and structural or static and nominal type systems. Rather the correlation appears to be based on a preference for predictable vs implicit design, and the duality can be applied to many language properties.
 
 
 <!-- the predictability verbiage was inspired by Scott Wlaschin https://youtu.be/KPa8Yw_Navk?t=1862 -->

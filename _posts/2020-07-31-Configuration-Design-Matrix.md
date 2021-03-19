@@ -7,7 +7,7 @@ tags: [Architecture, Patterns, Configuration, Design thinking, Volatility Analys
 
 I got to thinking about the [Rediscovering Options](2020-07-24-Rediscovering-Options.md) post. The volatility analysis portion is an important artifact of my design process. The current version requires reading the whole list to comprehend the results. How could I make it better?
 
-The design process is generally not very clean or binary. Many avenues are explored and abandoned. Even the important criteria change as understanding changes. However, the cleaned-up anlysis in the post is tantilizingly reminicient of a product pricing & feature table. A bit of spatial organization and some colored icons should allow quick intuitive interpretation of results and better recall. 
+The design process is generally not very clean or binary. Many avenues are explored and abandoned. Even the important criteria change as understanding changes. However, the cleaned-up analysis in the post is tantalizingly reminiscent of a product pricing & feature table. A bit of spatial organization and some colored icons should allow quick intuitive interpretation of results and better recall. 
 
 Here's my pedagogical periodical prototype.
 
@@ -59,7 +59,7 @@ td{ text-align:center;}
     <tr>
         <td><strong>Remove a configuration value</strong></td>
         <td><span class="bad"></span>Unsafe. Configuration can be referenced from anywhere and so all code is susceptible to change. You must search and test the whole system to ensure the value is no longer used. Any remaining references will throw a runtime error</td>
-        <td><span class="ok"></span>Unsafe, but easier. Configuration can be referenced from anywhere. You must check and test the every system that uses the configuration helper throughly because all code is susceptible to change. The search is aided by tooling. Remaining references will cause a compiler error because we're using named constants as value keys.</td>
+        <td><span class="ok"></span>Unsafe, but easier. Configuration can be referenced from anywhere. You must check and test the every system that uses the configuration helper thoroughly because all code is susceptible to change. The search is aided by tooling. Remaining references will cause a compiler error because we're using named constants as value keys.</td>
         <td><span class="good"></span>Easy, safe. Any missed usage of deleted method will be caught at compile time. Since the accessor is created for a certain component, only that component needs to be retested.</td>
         <td><span class="good"></span>Easy, safe. Any missed usage of deleted method will be caught at compile time. Since the type is created for a certain component, only that component needs to be retested.</td>
     </tr>

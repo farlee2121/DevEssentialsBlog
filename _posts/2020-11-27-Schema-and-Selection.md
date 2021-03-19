@@ -4,7 +4,7 @@ tags: [Language properties, Type systems]
 ---
 # Schema and Selection
 
-<!-- As programmers, we naturally see semantic equivalencies between our data types, but need different sets or represntations for each scenario.  -->
+<!-- As programmers, we naturally see semantic equivalencies between our data types, but need different sets or representations for each scenario.  -->
 I commonly struggle with "proliferation of types". Different usecases call for different views of the data (especially clients). This leads to a half dozen data types that represent about the same information. I always assumed this was unavoidable to achieve safety and clarity. However, Rich Hickey proposes a new take on the problem.
 
 This post is a response to [Maybe not](https://www.youtube.com/watch?v=YR5WdGrpoug) by Rick Hickey.
@@ -53,7 +53,7 @@ class TodoListSuggestionModel{
 
 Types can multiply quickly and mapping is both tedious and error-prone. It is easy for each model to slightly vary the parameter names too, which hurts understandability.
 
-I've limited mapping in my system through the deliniation of service purposes, but it still feels bad every time I need to map a contract for a new scenario. Though it feels much less bad than the system getting entangled by unnecessary data connections.
+I've limited mapping in my system through the delineation of service purposes, but it still feels bad every time I need to map a contract for a new scenario. Though it feels much less bad than the system getting entangled by unnecessary data connections.
 
 ## The Alternative
 
@@ -64,7 +64,7 @@ The concept he proposes is the separation of **schema** and **selection**.
 ### Type-only membership 
 First, this requires decoupling our data from named or positional data containers. That means no properties like in records and classes, and no positional reliance like tuples.
 
-This can be solved with type-based aggregates. Clojure accompishes it via  `spec/def` and `spec/keys`.
+This can be solved with type-based aggregates. Clojure accomplishes it via  `spec/def` and `spec/keys`.
 
 ```clojure
 ;; lat is a float between -90 and 90 
@@ -82,10 +82,10 @@ This can be solved with type-based aggregates. Clojure accompishes it via  `spec
 
 Data is accessed and aggregated by type name.
 
-This is great because accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existance of the data. Clojure can even generate property-based tests since the guarantees are communicated directly in code.
+This is great because accessing data requires only the bear conceptual minimum: an idea of what guarantees the data meets and existence of the data. Clojure can even generate property-based tests since the guarantees are communicated directly in code.
 
 ### Who owns optionality
-Optionality is represented by presense or absense of a key. If a key is required and doesn't exist, the compiler or runtime can throw an error. If optional, the consumer checks for the presense of the key.
+Optionality is represented by presence or absence of a key. If a key is required and doesn't exist, the compiler or runtime can throw an error. If optional, the consumer checks for the presence of the key.
 
 This strikes at an important question: who owns optionality?
 

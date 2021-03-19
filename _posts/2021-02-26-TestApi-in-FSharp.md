@@ -5,7 +5,7 @@ tags: [Testing, Test Api, F#]
 
 # Test Api in F#
 
-[Paul's Test Api](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) [permentantly changed the way that I test](../_posts/2020-08-21-Test-Api-InPractice.md). It's only natural I'd want to bring the pattern over to F# with me. Here's how I did it and a few extra testing tips for F#. 
+[Paul's Test Api](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) [permanently changed the way that I test](../_posts/2020-08-21-Test-Api-InPractice.md). It's only natural I'd want to bring the pattern over to F# with me. Here's how I did it and a few extra testing tips for F#. 
 
 
 ## Testing Framework
@@ -114,7 +114,7 @@ In general, I use record types to pair the operations as a test api.
 ## Additional Discoveries
 I really pushed my knowledge of F# with the project. Here are a few useful discoveries
 - Function parameters can only infer to one type. 
-  - I got used to the magic of function calls infering to different types based on their caller. This is more limited when the function is passed as a parameter. The passed function must have a *single* concrete type higher function call. Thus all uses of the passed function in the higher function must have consistent types.
+  - I got used to the magic of function calls inferring to different types based on their caller. This is more limited when the function is passed as a parameter. The passed function must have a *single* concrete type higher function call. Thus all uses of the passed function in the higher function must have consistent types.
 - Classes need not define every type parameter at the top level like C#. You can just throw a generic in the details of some class member and F# will figure it out
 - Classes do not play well with type inference. Their members have a degree of type inference, but references to the class by other functions require explicit type annotations. I think this is because inheritance makes inference indeterminate.
 - Class constructors are functions too. They can be used like any other function

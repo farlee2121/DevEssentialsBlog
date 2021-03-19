@@ -37,7 +37,7 @@ Concrete examples
      - Invalid connection configuration
 
 These examples surface two core scenarios
-1. Maybe-Pattern: An operation that may or may not have a value. Success or failure is only determined by the presense of a value. It comes down to representing "Something" and "Nothing"
+1. Maybe-Pattern: An operation that may or may not have a value. Success or failure is only determined by the presence of a value. It comes down to representing "Something" and "Nothing"
    - E.g Find or parse. They generally don't care about reporting error states
 2. Result-Pattern: Distinct information is needed for success and failure cases. Comes down to representing multiple potential states of failure
    - E.g. Validation, Network calls, etc
@@ -61,7 +61,7 @@ Requirements
 
 
 C# Solutions 
-- **Null for reference types**: Really just a special "none" value. Does not communicate intent, is not optional, and is a minefield of potential excpetions
+- **Null for reference types**: Really just a special "none" value. Does not communicate intent, is not optional, and is a minefield of potential exceptions
 - **Nullables**: in C# are equivalent to Maybe or Option types in functional languages. They only work for value types. It would be a fantastic solution if only it worked uniformly across value and reference types.
 
 F# Solution
@@ -106,7 +106,7 @@ The rest of this post will be about the result pattern. Result type solution req
   - Not re-implemented for every scenario. Rather define a base type with reusable operations. Success and error types strongly determined for each usage at write-time.
   - Operate on result types polymorphically
   - Combination operators/functions for scenarios with related results (e.g. validation)
-  - Minimal type verbocity
+  - Minimal type verbosity
   - Avoid explicit success checks in every step of a multi-stage operation  
 
 ### Sudo-Solutions in C#
@@ -116,16 +116,16 @@ This is not really a solution, but it's what I see happen most commonly. There i
 
 **Solution 2: Sematic values** The idea here is to indicate status by using special values of the type normally returned on success. Null is common, and a bit of a special case. I often see 0 as the implicit default ID. `-1` is also somewhat common for operations that are suppose to return positive numbers. 
 
-These semantic values are a bad idea. Null is a minefield of null reference exceptions, but at least an expected failure value in many languages. Other kinds of semantic values undermine a consumers expectation about how your code works and create likely scenarios for errors states to propegate through a system undetected. Thank you Code Complete for teaching me this early.
+These semantic values are a bad idea. Null is a minefield of null reference exceptions, but at least an expected failure value in many languages. Other kinds of semantic values undermine a consumers expectation about how your code works and create likely scenarios for errors states to propagate through a system undetected. Thank you Code Complete for teaching me this early.
 
-**Solution 3: Exceptions** Exceptions have their place. It is often right to terminate a call chain when something truely unexpected happens rather than risk propegating errors. However, exceptions are like "cascading gotos". They surrender control flow to callers in a way this is often difficult to predict and reason about when used widely.
+**Solution 3: Exceptions** Exceptions have their place. It is often right to terminate a call chain when something truly unexpected happens rather than risk propagating errors. However, exceptions are like "cascading gotos". They surrender control flow to callers in a way this is often difficult to predict and reason about when used widely.
 
 **Solution 4: Referential mutation** This is how the .NET parsers work. They return a bool to indicate success and assign the actual output to variables by reference. I've always found this pattern unintuitive. It can get real hard to follow if used in multiple layers.
 
 ## Attempts at the result pattern
 I tried many approaches to the result pattern over the years. An OO design approach never yielded great results though.
 
-I started with one-off result objects. These work well for individual scenrios, but they result in a lot of duplicate code. Implementations can easily be a bit different each time, making it conceptually hard to use.
+I started with one-off result objects. These work well for individual scenarios, but they result in a lot of duplicate code. Implementations can easily be a bit different each time, making it conceptually hard to use.
 ```cs
 enum UserSaveErrors{
   //...
@@ -165,7 +165,7 @@ class Result<TSuccess, TError>
 }
 ```
 
-All of these solutions also create unpleasent complexity of frequently checking success states, especially in multi-step processes. I'm sure we've all seen this kind of code before
+All of these solutions also create unpleasant complexity of frequently checking success states, especially in multi-step processes. I'm sure we've all seen this kind of code before
 ```cs
 var result1 = //...
 if(result2.IsSuccess){
@@ -177,7 +177,7 @@ if(result2.IsSuccess){
 
 ## Functional Approach
 Functional languages take strong inspiration from mathematical concepts. This means that 
-- functions are *not* algorithms, they are tranformation from input to output
+- functions are *not* algorithms, they are transformation from input to output
 - a function always has an output value, even if that value is "nothing"
 - the transformation should be stateless. The same input always produces the same output
 - a function does not effect the state of it's caller / data is immutable
@@ -230,7 +230,7 @@ This is a good time to mention monads. There are some specific rules, but for no
 
 > For the math nerds out there, picture as it as a projection into another type space. Because of referential transparency, the map is bijectional. In the case of result types, it is bijectional between result-space and the sum of the success and error space. This allows us to operate on the result without worrying about it's success and failure states, then map back once.
 
-This lets us solve nasy repeated check for success. Perhaps it is best learned through example. Let's look at the simple case of division.
+This lets us solve nasty repeated checks for success. Perhaps it is best learned through example. Let's look at the simple case of division.
 ```fsharp
 module Result = 
   // If success, apply the function and return value, else forward the error 

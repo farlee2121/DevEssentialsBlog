@@ -16,12 +16,12 @@ Thus far this only includes the System Design portion of the book.
 ![Rule of Thumb Grid](../post-media/IDesign-System/iDesignRuleofThumbGrid.png)
 
 ## Sub-system Guidelines
-![Sub-sytem breakdown](../post-media/IDesign-System/iDesignSubsystems.png)
+![Sub-system breakdown](../post-media/IDesign-System/iDesignSubsystems.png)
 
- - Systems are kept small to be intellectually managable. They are split on a cohesive vertical callchain, which is based around a manager and thus generally a sub-domain
+ - Systems are kept small to be intellectually manageable. They are split on a cohesive vertical call-chain, which is based around a manager and thus generally a sub-domain
  - "2% activities" are the activities that aren't the nature of you're business and so you spend little time on them. Thus, you'll never be an expert at them and you should keep them separated so that you can utilize pre-packaged solutions if needed (even if you custom implement at first). 
    - i.e. templated emails, message bus, role management, logging, task scheduling
-   - This orthogonalization of concerns makes very re-usable and composible components rather than patching ancillary concerns into domain flows
+   - This orthogonalization of concerns makes very re-usable and composable components rather than patching ancillary concerns into domain flows
    - Jives with Open-Closed Principal, More Generic -> Fewer opportunities for error, Single Responsibility Principal, Information Hiding, Unit of reuse is unit of release
 
 ## Other things

@@ -27,7 +27,7 @@ An ideal solution would
   - DefaultId
   - Sortable
   - Equatable
-- Accept different underlying types without having to reimplement core behaviors
+- Accept different underlying types without having to re-implement core behaviors
 - Easily convert to and from the underlying type at periphery of system
 
 ## Issues in C#
@@ -44,7 +44,7 @@ class UserId : Id<int>{}
 ```
 
 Looks great... but all of the methods return type `Id<int>` and not `UserId`.
-C# allows overrides, but it does not allow co-varient overrides. This means that UserId cannot override `NewId()` to return a `UserId` even though `UserId` inherits `Id<int>`. 
+C# allows overrides, but it does not allow co-variant overrides. This means that UserId cannot override `NewId()` to return a `UserId` even though `UserId` inherits `Id<int>`. 
 
 We can get creative with the generic type system.
 ```cs
@@ -56,7 +56,7 @@ class Id<T, TDerived>{
 class UserId : Id<int, UserId>{}
 ```
 
-However, This creates a dangerous illusion of polymorphism while violating liskov substitution. It is also just weird and a bit hard to follow.
+However, This creates a dangerous illusion of polymorphism while violating Liskov substitution. It is also just weird and a bit hard to follow.
 
 ## Functional Approach
 
@@ -65,8 +65,8 @@ The functional solution isn't based in some fundamentally different concept. Rat
 However, no one said we have to include multiple types in the union. Adding just one type gives us a convenient alias-like construct that
 - is strongly typed
 - hides the underlying type
-- has conventient instantiation from the underlying type
-- provides a convinient and safe way to unwrap the underlying value
+- has convenient instantiation from the underlying type
+- provides a convenient and safe way to unwrap the underlying value
 
 ```fsharp
 type UserId = | Id of Guid

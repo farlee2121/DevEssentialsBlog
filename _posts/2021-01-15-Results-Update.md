@@ -36,7 +36,7 @@ class DerivedId : BaseId {
 ```
 
 
-This allows some shennanigans with the generic system that result in practically usable result types.  Observe
+This allows some shenanigans with the generic system that result in practically usable result types.  Observe
 
 ```cs
 interface IResult

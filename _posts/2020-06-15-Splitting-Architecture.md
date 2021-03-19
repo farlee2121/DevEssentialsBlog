@@ -26,14 +26,14 @@ This brings us back to a paradigm I skipped earlier: Domain Driven Design (aka D
 For a good long while I lumped DDD in the same group as iDesign. But, I started testing it partnered with iDesign and it changed how I was writing code. This led to an epiphany and the world of architecture split in two.
 
 Certainly, DDD addresses some of the rich concerns of the other patterns with ideas like anti-corruption layers. However, DDD is a fundamentally different beast. Here's why
- - iDesign et.al. give guidance to univeral kinds of coupling relevant to every application, but little advice for separating out sub-problems of your specific application
+ - iDesign et.al. give guidance to universal kinds of coupling relevant to every application, but little advice for separating out sub-problems of your specific application
  - DDD bends around identifying your sub-problems and  protecting them from each other
 
-These are orthogonal problems. Consider hexagonal architecture for the convienience of visual metaphor. DDD helps you decide what your hexagons are and how they play nice. Hexagonal architecture helps you decide how to structure the code within that vertical/hexagon. 
+These are orthogonal problems. Consider hexagonal architecture for the convenience of visual metaphor. DDD helps you decide what your hexagons are and how they play nice. Hexagonal architecture helps you decide how to structure the code within that vertical/hexagon. 
 
-My feeling that email templating and identity management both needed to be used in my other verticals and needed a vertical of their own was correct. They are *separate domains*. They are a re-usable problem that should be Open and Closed. They should draw a boundary and offer generically flexible behavior that allows your other domains to extend them without changing them. They are they large scale of the Single Responsiblity Principle.
+My feeling that email templating and identity management both needed to be used in my other verticals and needed a vertical of their own was correct. They are *separate domains*. They are a re-usable problem that should be Open and Closed. They should draw a boundary and offer generically flexible behavior that allows your other domains to extend them without changing them. They are they large scale of the Single Responsibility Principle.
 
-My view of architecture has been split into domains and intra-domain organization. They were really always separate but now the difference is clear and beautiful. More importantly, we have the power to leverage it to make understandable and flexible systems ([the classic critera for modularization](https://prl.ccs.neu.edu/img/p-tr-1971.pdf)).
+My view of architecture has been split into domains and intra-domain organization. They were really always separate but now the difference is clear and beautiful. More importantly, we have the power to leverage it to make understandable and flexible systems ([the classic criteria for modularization](https://prl.ccs.neu.edu/img/p-tr-1971.pdf)).
 
 ### Other "Architectures" footnote
 There are of course other paradigms that use the name architecture, but I find they are too tied to some detail, like a communication or deployment method. The world of iDesign et. al. are intended to hide these concerns and use them as needed from behind abstractions.

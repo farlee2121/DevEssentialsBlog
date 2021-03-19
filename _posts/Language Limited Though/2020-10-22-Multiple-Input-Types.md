@@ -12,7 +12,7 @@ Sometimes a constructor or function can naturally accept multiple types. The cla
 
 A common example is the database connection. .Net offers a strongly typed DbConnection type, but the connection is usually stored as a string. There may also be framework-specific representations. Different users will have different opinions about how they want to represent the connection string and forcing users to convert every time would be frustrating.
 
-The overload types may not always be directly interchangable. Configuration is a common source of this pattern force. For example, when a user might just want to specify the number of concurrent connections, or they may need to be specific about concurrency, lifetime scope, resource division, and more. 
+The overload types may not always be directly interchangeable. Configuration is a common source of this pattern force. For example, when a user might just want to specify the number of concurrent connections, or they may need to be specific about concurrency, lifetime scope, resource division, and more. 
 
 
 <!-- Similar scenarios might apply for mostly-polymorphic behavior. Consider passing a ... instead of caseing on type, could clearly communicate the  -->

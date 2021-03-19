@@ -15,7 +15,7 @@ I thought about splitting accessor: putting contracts in the the core services, 
 
 Then it hit me, accessors are much like utilities. Utilities evolve from collecting non-domain activities that repeat in adapters. Accessors can be incrementally developed the same way. Not all data in your system will be a core domain entity. We can discover the core domain entities by seeing what data is similar between managers, then collecting those operations up into an accessor. In that way accessors are like domain utilities focused on entities. Entities that don't repeat can stay as adapters, which also reduces the system complexity.
 
-A similar aproach applies to engines. They are repeated domain utilities focused on a computation.
+A similar approach applies to engines. They are repeated domain utilities focused on a computation.
 
 If you want to know more, here are other articles on this journey to-date:
 - [Original realization](../_posts/2020-07-10-Synthesizing-Structure.md)

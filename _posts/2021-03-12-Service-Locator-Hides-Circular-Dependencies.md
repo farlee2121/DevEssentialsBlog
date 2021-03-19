@@ -17,18 +17,18 @@ In short, service locator couples all components that depend on the locator and 
 
 At least four systems I've consulted on have suffered from nasty circular dependencies. All of them used the service locator pattern.
 
-This is not a coincidence. Let's clarify by constrasting against constructor injection.
+This is not a coincidence. Let's clarify by contrasting against constructor injection.
 
 ### Constructor injection
-**Eager**: Constructor Injection requires all dependencies to be defined when a component in instantiated. This leds itself to an eager dependency approach. Any circular dependencies would be triggered in the composition root. This most likely means the system fails on startup, or at latest when the broken component is first created.
+**Eager**: Constructor Injection requires all dependencies to be defined when a component in instantiated. This lends itself to an eager dependency approach. Any circular dependencies would be triggered in the composition root. This most likely means the system fails on startup, or at latest when the broken component is first created.
 
-**Explicit**: Constructor Injection is also explict about dependencies. All dependencies are (usually) assembled in a composition root. Trying to create one of the circular dependencies will immediately force the developer to realize that they can't create all the dependencies needed without already having the type they're trying to create.
+**Explicit**: Constructor Injection is also explicit about dependencies. All dependencies are (usually) assembled in a composition root. Trying to create one of the circular dependencies will immediately force the developer to realize that they can't create all the dependencies needed without already having the type they're trying to create.
 
 ### Service Locator
 
 The properties that prevent circular dependencies in Constructor Injection are opposed by Service Locator.
 
-**Lazy**: A dependency isn't created until the dependency is requested. It is tempting to create services per-method or even ad-hoc for each call. Any dependencies not directly invoked will not be constucted. This means that circular depenencies only trigger when specific methods repeatedly invoke each other. 
+**Lazy**: A dependency isn't created until the dependency is requested. It is tempting to create services per-method or even ad-hoc for each call. Any dependencies not directly invoked will not be constructed. This means that circular dependencies only trigger when specific methods repeatedly invoke each other. 
 
 **Hidden**: Constructing a component doesn't require any dependencies. They are registered somewhere unknown for the system at large. We don't know what the current component depends on unless we examine the code. Any missed dependencies won't error until they are invoked.
 
@@ -39,7 +39,7 @@ Conversely, Service Locator ensures that we find dependency errors at the last m
 
 Circular dependencies are rarely direct. The only way a developer can be sure there are no circular dependencies with Service Locator is to trace every dependency chain every time they add a dependency. 
 
-I don't know any developers who are that disciplined. That also sounds like a boring, time consuming, and unsustainable practice. It is no surprise that some developer eventually sees a method they need, and takes it without considering downstream dependencies. This behavior accumulates over time, increasing the chance of cirular dependency until they are almost a guarantee. The longer the system lives, the more this happens, and the harder it is to fix.
+I don't know any developers who are that disciplined. That also sounds like a boring, time consuming, and unsustainable practice. It is no surprise that some developer eventually sees a method they need, and takes it without considering downstream dependencies. This behavior accumulates over time, increasing the chance of circular dependency until they are almost a guarantee. The longer the system lives, the more this happens, and the harder it is to fix.
 
 ## Conclusion
 

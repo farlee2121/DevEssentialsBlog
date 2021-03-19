@@ -9,4 +9,4 @@ tags: [Design thinking, TDD, Reading Notes]
 
 ![Cycles of TDD diagram](../post-media/Cycles-Of-TDD/tdd-cycles.drawio.svg) 
 
-<!-- Should address not only time scale but code scale (line by line, expection, operation, service) -->
+<!-- Should address not only time scale but code scale (line by line, expectation, operation, service) -->

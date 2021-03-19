@@ -5,7 +5,7 @@ tags: [tools, markdown, process]
 
 # Notes as Data
 
-I've fallen in love with Markdown and it is slowly permiating all of my documents. The latest addition is notes, which Markdown makes easy to reference either manually or programmatically!
+I've fallen in love with Markdown and it is slowly permeating all of my documents. The latest addition is notes, which Markdown makes easy to reference either manually or programmatically!
 
 
 ## How I got here
@@ -70,7 +70,7 @@ link: link to blog, video, etc
 referred-by: name or link that led me here
 rating: 3 # 0 to 5
 tags: [performance, design, ...]
-# or anythign else
+# or anything else
 ----
 ```
 
@@ -102,11 +102,12 @@ Some of the common tokens I use are
 - TECH: (for technique, a bit confusing)
 - GOLD: or !!!: (for key ideas I want to remember)
 - READ: (referenced material I want to read)
+- CROSS: for cross references
 
 The benefit of these tokens is that they can be placed anywhere. I don't have to think about structure or categorization while I'm writing. They're refactor-friendly, moving with the content they modify and easily backed in to existing documents.
 
 
-## Maximimally Portable
+## Maximally Portable
 
 Since all the data is all just text, editors like VsCode can easily surface it in search. Same with searching from a file system, code repositories, or any other place we access the notes that supports text search. That includes most tools since text is generally the lowest common denominator.
 

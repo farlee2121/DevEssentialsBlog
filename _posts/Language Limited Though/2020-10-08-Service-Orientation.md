@@ -10,7 +10,7 @@ series_description: Exploring how different languages equip us to solve differen
 
 Service-Oriented Programming is my primary programming paradigm. It divides the software into self-contained "services" or groups of functionality. Services also apply in functional programming, rather, service-like behavior is enforced all the way to the foundational functional concepts.
 
-To be clear, Service-Orientation isn't a concept I struggled with in C#. Rather, it is facinating how service-oriented principles that surfaced in response to object-oriented issues align so well with concepts of functional programming. Let's look at the two methods, then compare them.
+To be clear, Service-Orientation isn't a concept I struggled with in C#. Rather, it is fascinating how service-oriented principles that surfaced in response to object-oriented issues align so well with concepts of functional programming. Let's look at the two methods, then compare them.
 
 ## What is Service-Orientation
 First, let's look at properties of service-orientation.
@@ -25,7 +25,7 @@ First, let's look at properties of service-orientation.
 
 A helpful trick, imagine you were to offer every component of your software as a REST API.  The api would obviously be a set of operations that accepts and returns determined data structures. Each operation would need to be clear and complete. For scale and reliability, it wouldn't be able to rely on keeping state server-side.
 
-The [service-orientation wikipedia article](https://en.wikipedia.org/wiki/Service-orientation) is suprisingly helpful and succinct.
+The [service-orientation wikipedia article](https://en.wikipedia.org/wiki/Service-orientation) is surprisingly helpful and succinct.
 
 ## Replaced Object-Oriented Ideas
 It helps to understand the Object-Oriented approach that service-orientation is replacing. Just about every OO tutorial will have some animal-based example. We'll say turtles. First you ask what a turtle has, what a turtle does, and what it is. 
@@ -51,8 +51,8 @@ Rick Hickey refers to this as Place-Oriented Programming (PLOP).
 ## Functional Foundations
 
 Functional programming is strongly inspired by mathematics. This means
-- Functions are *not* algorithms, they are tranformation from input to output
-- The trasformation should be stateless. The same input always produces the same output
+- Functions are *not* algorithms, they are transformation from input to output
+- The transformation should be stateless. The same input always produces the same output
   - This is known as referential transparency
 - A function always has an output value, even if that value is "nothing"
 - All expectations of a function should be passed as arguments. There are no hidden inputs.
@@ -65,9 +65,9 @@ Functional programming is strongly inspired by mathematics. This means
 ## FP to SOP
 You can probably already see similarities to service orientation, but let's lay it out.
 - Services have clear boundaries
-    - Not guaranteed by functional paradigms, but stylistically encouraged. Referential transparancy discourages stateful coupling and encourages a clear contract between components. It sorta makes every function a mini-service that can be grouped with like mini-services. 
+    - Not guaranteed by functional paradigms, but stylistically encouraged. Referential transparency discourages stateful coupling and encourages a clear contract between components. It sorta makes every function a mini-service that can be grouped with like mini-services. 
 - Separated data and operations contracts
-    - Functional data types are immutable. You cannot expose changable data properties on a module. Changes in data are accomplished through function calls (like with service or api calls).
+    - Functional data types are immutable. You cannot expose changeable data properties on a module. Changes in data are accomplished through function calls (like with service or api calls).
     - One difference, functional programs treat functions as a type of data. They can be passed around on instances of data records. I have not seen this done before, and it neither causes locals state nor is a viable code organization scheme like methods on objects is.
 - Services are self-contained
     - Again, referential transparency plus immutability encourages each function to be self-contained. Higher levels of grouping are accomplished with modules.

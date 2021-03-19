@@ -16,7 +16,7 @@ Clean Architecture-family structures are the same. The caller defines "ports" wh
 
 Other services define their public contracts, which act like their "plug". If the plug doesn't fit, then programmers provide an "adapter" to connect the plug to the port. The adapter works for any two services as long as they meet the same "plug" and "port" standards.
 
-Side-note: I feel like this is where IDesign comes in handy. Engines, accessors, and utilities look for those consistent "plugs" in system activities. For example, there might be many implementations for a chat system, but they are interchangable to the system as long as they meet the same plug standard.
+Side-note: I feel like this is where IDesign comes in handy. Engines, accessors, and utilities look for those consistent "plugs" in system activities. For example, there might be many implementations for a chat system, but they are interchangeable to the system as long as they meet the same plug standard.
 
 ## Visualization
 I love this analogy because it lends itself to a familiar visualization. The visual imparts a tangible feel for why the structure is flexible and how it's suppose to work. It's like our hardware.
@@ -27,7 +27,7 @@ I love this analogy because it lends itself to a familiar visualization. The vis
 
 The visual also reveals other properties we may not have seen at first. For example, the connection between components really matters. A slow cable means slow processing. Operations that needs to be really fast should be handled with specialized hardware connections. This may mean making both parts internal to one device.
 
-On the flip side, more standard connections are cheaper, easier, and more flexible. Many peripherals can be made wireless using adapers for common port standards.
+On the flip side, more standard connections are cheaper, easier, and more flexible. Many peripherals can be made wireless using adapters for common port standards.
 In the same way, how our services communicate can be hidden by the adapter. The adapter may put the other service behind a queue for reliability or run code on a different server for scalability. 
 
 ## Language-Agnostic
@@ -43,4 +43,4 @@ However, the Ports and Adapters doesn't say anything about interfaces. It only r
 
 I consider Clean Architecture an indispensible tool for how I think about systems, but I found it difficult to comprehend and communicate. Ports and Adapters imparts the same core benefits and structure, but comes with the added benefit of a strong visual analogy to communicate the pattern with fellow developers!
 
-<!-- A great solid structure explanation would be to put different idesign services on different hardare devices (probably managers as the core computer, client as monitor) and show them plugging in -->
+<!-- A great solid structure explanation would be to put different iDesign services on different hardware devices (probably managers as the core computer, client as monitor) and show them plugging in -->

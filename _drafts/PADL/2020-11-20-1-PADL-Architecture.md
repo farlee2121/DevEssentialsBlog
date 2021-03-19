@@ -9,13 +9,13 @@ series: PADL
 
 <!-- TODO: talk about accessibility somewhere. Both in understandability and usability. No question of "Can I apply this when...". The answer is yes. Your company, the state of your code, the phase of coding don't matter. You can always use this  -->
 
-Architecture is hard. There are few well-perscribed methods and those that exist are complex to understand. I've been on a journey to combine two methods I enjoy: iDesign and Clean Architecture (or Ports and Adapters-type architecture). Here I'll boil them down to their essense and glue them together.
+Architecture is hard. There are few well-prescribed methods and those that exist are complex to understand. I've been on a journey to combine two methods I enjoy: iDesign and Clean Architecture (or Ports and Adapters-type architecture). Here I'll boil them down to their essence and glue them together.
 
-IDesign and Clean Architecture both define a variety of guidance, but I'm reducing each to what I see as its essense
+IDesign and Clean Architecture both define a variety of guidance, but I'm reducing each to what I see as its essence
 - Clean architecture -> use ports and adapters to create pluggable components
 - IDesign -> rules for dividing domain responsibilities consistently
 
-This roughly corrolates to two key questions
+This roughly correlates to two key questions
 - How do I make changes not suck (minimal impact)?
 - How do I reliably find things in my code?
 
@@ -41,7 +41,7 @@ Ports can be many things based on the type of extension. Some major ones are
 
 These are then injected so the defining service isn't tied to one implementation. Common injection methods are constructor injection and function parameterization.
 
-The most important bit: the component that concretely references the port is the one that defines it. Any component that concetely uses the port definition will change together. Adapters also use the port definition, but their whole responsibility is mapping the port as thinly as possible so that more complex services are completely insulated.
+The most important bit: the component that concretely references the port is the one that defines it. Any component that concretely uses the port definition will change together. Adapters also use the port definition, but their whole responsibility is mapping the port as thinly as possible so that more complex services are completely insulated.
 
 Anti-corruption layers are a similar idea from Domain-Driven Design. A calling component protects itself from external change by wrapping the called component in an abstraction that suits the caller's need. It's really the same idea from a different view.
 
@@ -62,7 +62,7 @@ The second phase comes when fulfilling the ports with adapters.
   - consider adapting to it
   - Potentially generalize the service (under it's own terms) to also include our need
 - Consider fulfilling the contract directly in the adapter for
-  - trivial implemenations
+  - trivial implementations
   - trivially mapping to external frameworks and services
   - moderate one-off needs
 - If there is some duplication between adapters?
