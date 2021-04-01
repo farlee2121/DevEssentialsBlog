@@ -71,7 +71,7 @@ Here are some common considerations by task type
 - Who are we building this for?
 - Why do they want it?
 - What must the software do to meet their goal?
-- When: what timeframe is a solution relevant in?
+- When: what time frame is a solution relevant in?
 - How much is it worth to them?
 - Is the trio of what, when, and cost feasible?
 
@@ -101,4 +101,4 @@ Here are some common considerations by task type
 
 Duck docs have been an invaluable tool for me to organize my thoughts. Communicating flushes out issues earlier and creates a persistent record for future collaboration or extension. 
 
-There are certainly many viable alternatives: pair programming, inspections, walk throughs, design specs, actual rubber ducks, and more. What's your duck?
+There are certainly many viable alternatives: pair programming, inspections, walk-throughs, design specs, actual rubber ducks, and more. What's your duck?

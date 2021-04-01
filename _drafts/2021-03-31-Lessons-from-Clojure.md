@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Clojure]
+tags: [Clojure, Retrospective, Meta-programming, Functional]
 ---
 
 # Lessons From Clojure
@@ -83,6 +83,8 @@ This makes sense. Clojure manages immutable data transforms under the hood as a 
 In fact, [Datomic](https://www.datomic.com/) leverages the same idea to turn Clojure data structures into a transactional database.
 
 This approach makes Clojure and datomic a natural fit for [Event Sourcing](https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing) or cases that benefit from a history of changes and not just the latest state.
+
+<!-- TODO: Transducers? -->
 
 ## Summary
 
