@@ -29,28 +29,29 @@ Event storming is meant to ease communication between many people. I, however, w
 
 ```txt
 Timeline
-- User finds a recipe they want online
-- Recipe shared
-- Received shared recipe
-  - recipe ignored
-  - recipe saved
-- Recipe saved
-- Recipe modified
-- User cooked Recipe
-- Recipe exported
-- Searched Recipes
-  - no recipe found
-  - CMD: Search Recipe, 
-- Searched friends
-- Recipe rated
-- Recipe tagged
-- Alternative linked
-- Collection created
-  - collection shared
-  - Recipe Added To Collection
-  - Collection Removed
-  - Collection Un-followed
-  - Collection Updated
+- Site determined distracting/negative
+  - Source: User
+  - Command: CreateSiteBlock
+  - Event: block hours set 
+- block hours updated
+  - source: user
+  - Command: UpdateBlockSchedule
+  - REQ: if block running, finish the current block period before applying updates
+- ScheduledBlockStarted
+  - Source: time / saved schedule
+  - Time: `BlockStarted` triggered by registered schedule
+  - note: minimum block increment is 1 minute. Expect blocks to be enforced to the minute.
+- ScheduledBlockEnded
+  - source: time / saved schedule
+  - `BlockEnded`
+- BlockRulesViewed
+  - command: ListBlockRules
+- BlockPaused 
+  - source: user
+  - command: `PauseBlock`
+- BlockDeleted
+  - source: user
+  - REQ: if block running, don't remove until normal period finished or end of day
 ```
 
 
@@ -68,7 +69,55 @@ A few quick rules for understanding the text model
 
 The workflows from before become transforms, which take the related command as input and return the related events. This makes for an easy translation of the event storm into a format where we can start filling in details.
 
+Here's the high-level translation.
 ```fs
+type CreateBlockRule = CreateBlockRuleCommand -> Result<RuleCreated, CreateRuleError list>
+type UpdateRuleSchedule = UpdateRuleCommand -> Result<RuleUpdated, ValidateRuleError list>
+type DeleteBlockRule = DeleteBlockRuleCommand -> Result<RuleDeleted, RuleDeletedError>
+type UpdateRuleActivations = RuleActivationTrigger -> RuleActivationEvent list
+
+type ListBlockRules = unit -> RuleListItemModel list
+```
+
+<!-- TODO: i think I should reduce the first sample to show more of a raw transform view (no error cases and such). Fill those in next section -->
+Then we can start filling in details
+```fs
+type CreateBlockRule = CreateBlockRuleCommand -> Result<RuleCreated, CreateRuleError list>
+type Command<'data> = {
+    TimeStamp: DateTime;
+    Data: 'data
+}
+
+// Command Input
+type CreateBlockRuleCommand = Command<UnvalidatedBlockRule>
+type UnvalidatedBlockRule = {
+    Name: string
+    Targets: UnvalidatedBlockTarget list;
+    BlockTriggers: UnvalidatedBlockTrigger list
+}
+type UnvalidatedBlockTarget = Site of string
+type UnvalidatedBlockTrigger = Time of (DateTime * DateTime)
+
+// Successful Creation Output
+type RuleCreated = RuleCreated of ValidatedBlockRule
+type ValidatedBlockRule = {
+    Name: RuleName
+    Site: ValidatedBlockTarget list;
+    BlockTriggers: ValidatedBlockTrigger list
+}
+type RuleName = RuleName of string
+type ValidatedBlockTarget = Site of string
+type ValidatedBlockTrigger = TimeTrigger of TimeTrigger
+type TimeTrigger =  { Start: Time; End: Time }
+//NOTE: we only care about time resolution to the nearest minute
+type Time = { Hour: int; Minute: int } 
+
+// Creation Error cases
+type CreateRuleError = 
+    | InvalidName of ErrorReason
+    | InvalidTarget of (UnvalidatedBlockTarget * ErrorReason) 
+    | InvalidTrigger of (UnvalidatedBlockTrigger * ErrorReason) 
+type ErrorReason = string
 ```
 
 ## Refining the design: Values, State Machines, & Constraints
@@ -86,6 +135,7 @@ In any case, we can represent all of this information in our text format. Differ
 
 We can also represent the actions that happen for each state with `state -> handled state` transforms
 
+<!-- TODO: probably split the examples into multiple sections, validations, dependencies, failure and state cases -->
 ```fs
 ```
 
@@ -102,6 +152,9 @@ This approach also isn't limited to functional languages. Changes in C# 9 make m
     - big step toward total functions
 - [Positional records](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#record-types) as simple types
 
+
+My full experiment source is available [on github](https://github.com/farlee2121/BlockScheduler).
+
 ## Personal Take
 This technique is amazing. I've never used a modeling paradigm that encoded the domain with such ease and clarity. So much domain information can be encoded just in type signatures that many more issues can be detected before coding ever starts, and the gap to code is so much smaller once coding actually starts. Most domain rules are enforced by the type signatures, which reduces the errors that developers can make from misunderstanding or accident.
 
@@ -113,4 +166,4 @@ The approach definitely takes some adjustment to how you think, but in a very go
 
 This event, transform, and state oriented design is an all around winner. It is easier to model the domain, more information is uncovered during modeling, and the resulting code is both safer and easier to write.
 
-I highly recommend [Domain Modeling Made Functional]() for further exploration. It describes the process accessibly and with lots of concrete examples.
+I highly recommend [Domain Modeling Made Functional](https://pragprog.com/titles/swdddf/domain-modeling-made-functional/) for further exploration. It describes the process accessibly and with lots of concrete examples.
