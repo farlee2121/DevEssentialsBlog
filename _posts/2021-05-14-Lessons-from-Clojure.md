@@ -90,3 +90,22 @@ This approach makes Clojure and datomic a natural fit for [Event Sourcing](https
 ## Summary
 
 Clojure is a lovingly crafted language. It is full of high-concepts that pushed my perception of programming. Macros, set semantics, and transactions were merely the most impactful for me. Clojure is worth a look for learning experience, even if doesn't end up in your daily toolbox.
+
+
+
+<!-- 
+Secret Bonus: Downsides of clojure
+- I spend a lot of time wresting with errors that would immediately raise type errors in a static language.
+  - Admittedly, this could be address with a different tooling approach around spec
+- I don't like the style conventions
+  - i've spent less time counting parentheses in the whole rest of my career than in my bit with clojure
+  - It's like the clojure community read ch 31 of code complete and chose all the styles it recommends against: aligning continuations a variable amount aligning right side of statements, piling up expression end markers on one line
+    - It makes it hard to read and edit
+- Arcane and short naming is conventional
+- The community seems to like cleverness more than clarity
+- There is a tendency to rebuild things
+  - this is partially because the macro system is powerful enough to make building significant extensions easy (which is cool)
+  - It also means there are a lot of different ways to do one thing. For example, it took me so long to figure out the different project management paradigms
+- Tooling and documentation are loose
+  - repl drives a lot of the tooling, but the repl is not a substitute for tests. REPL state can build up not reflecting the real system state. It also provide safety as the system changes, and clojure already has reduced safety because there is no type checking. It's easy to make small changes that cause subtle breaks  
+ -->
