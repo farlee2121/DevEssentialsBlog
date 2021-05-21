@@ -96,6 +96,7 @@ Clojure is a lovingly crafted language. It is full of high-concepts that pushed 
 <!-- 
 Secret Bonus: Downsides of clojure
 - I spend a lot of time wresting with errors that would immediately raise type errors in a static language.
+  - the system feels kinda like building with sand. I'm never quite sure when something will stay in place and I'm never quite sure if i've satisfied the needs of what i'm calling. 
   - Admittedly, this could be address with a different tooling approach around spec
 - I don't like the style conventions
   - i've spent less time counting parentheses in the whole rest of my career than in my bit with clojure
@@ -108,4 +109,9 @@ Secret Bonus: Downsides of clojure
   - It also means there are a lot of different ways to do one thing. For example, it took me so long to figure out the different project management paradigms
 - Tooling and documentation are loose
   - repl drives a lot of the tooling, but the repl is not a substitute for tests. REPL state can build up not reflecting the real system state. It also provide safety as the system changes, and clojure already has reduced safety because there is no type checking. It's easy to make small changes that cause subtle breaks  
+
+
+I think that the use of commands and events reduces the benefit of set semantics. The commands and events act like selection from the schema. A global schema is a bit of a lie anyway. There are only local selections. The actual data could be split across multiple sources
+- It is definitely easier to validate fully qualified key maps
+  - maybe type providers can fix this for me in F#? Avoid runtime cost but still use type reflection instead of manual mapping
  -->

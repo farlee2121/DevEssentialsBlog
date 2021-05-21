@@ -6,9 +6,9 @@ excerpt_separator: <!--more-->
 
 # Duck Structure
 
-The design process is messy. It's hard to impose a meaningful structure because much of design is about discovering the structure of the subject.
+Good designs generally reflect the nature of the problem they solve, and the same applies to designing a process for design. Design is messy, incremental, and has spurts of both broad and deep exploration.
 
-My [duck docs](./../_posts/2020-10-02-Whats-Your-Duck.md) have evolved a simple and flexible organization structure to meet the challenge.
+Here I'll describe the simple and flexible organization structure my [duck docs](./../_posts/2020-10-02-Whats-Your-Duck.md) evolved to capture design thoughts for reference without impeding exploration.
 
 <!--more-->
 
@@ -17,7 +17,7 @@ The organization scheme consists of two main mechanisms: sections and tags.
 ## Sections
 
 The sections largely reflect steps of design, but also a few frequent-reference items.
-- **Motivation**: Every doc starts with a high-level motivation statement. It's important to know the why behind the work so that the right problem is solved. A great place to link pre-existing materials for the task
+- **Motivation**: Every doc starts with a high-level motivation statement. It's important to know the why behind the work so that the right problem is solved. This section is a great place to link pre-existing materials for the task
 - **Requirements and constraints**: Starts breaking the motivation down into a checklist of success criteria. Could also be considered a "definition of done".
 - **Exploration** (a.k.a. knowns and unknowns): This section is the meat of the document. Questions and facts are collected until there is a clear enough picture to make a solid plan
 - **Plan**: Outline the conclusion of the explorations. Often a checklist. Makes an easy reference for implementation and future readers.
@@ -27,7 +27,7 @@ The sections largely reflect steps of design, but also a few frequent-reference 
 
 ## Tags
 
-Textual tags tame the tangle, providing enough structure to reference key pieces of information without imposing so much that interferes with the rapid flow of thought. 
+Textual tags tame the tangle, providing enough structure to reference key pieces of information without pulling the author out their rapid flow of thought. Tags only require a local decision and can be backfilled easily
 
 
 My duck docs have refined a fairly small but powerful set of tags over time.
@@ -39,7 +39,7 @@ My duck docs have refined a fairly small but powerful set of tags over time.
 - **K:** -> Known. For recording facts about the problem
 - **REQ:** -> Requirement. Mostly used to mark new requirements discovered in the flow of exploration. These should be copied up to the requirements section at a convenient time.
 - **SOURCE:** -> some reference used to inform the design or a question. 
-- **PROBLEM / OPT:** Very similar to Q:, but used for unforeseen plan issues rather than refinements. Also usually phrased as more of a statement about current behavior than a question. A good way to get unstuck.
+- **PROBLEM: / OPT:** Very similar to Q:, but used for unforeseen issues in a previous decision rather than general exploration. Also usually phrased as more of a statement about current behavior than a question. A good way to get unstuck.
 
 The Exploration and Implementation section are usually just a nested list of questions. The additional tags help index the raw chain of thought, simplifying reference to previous decisions, sources, and alternatives.
 
@@ -79,7 +79,7 @@ current domain requirements don't seem to require much coordination... We'll sta
 
 U: How to use datomic
 K: basic idea of building an API with Clojure. See clj-test repository for example
-- http://clojure-doc.org/articles/tutorials/basic_web_development.html
+- SOURCE: http://clojure-doc.org/articles/tutorials/basic_web_development.html
 
 U: Architecture and overall design
 - It seems to make sense that I use what I learned from Domain Modeling Made Functional. 
@@ -106,7 +106,7 @@ U: How do I want to represent the recipe parts?
   - con?: They can add pretty much whatever, it need not be a recipe
   - con: maybe harder to dig out info. I also can't really migrate away once I choose this route
   - pro: better matches the pretty free-form nature of recipes
-  - Q: Would it feel natural for users to enter different
+  - Q: Would it feel natural for users to enter the recipe across multiple fields?
     - A: this is a sample for myself. I think it's fine
   - Q: should I strip image links?
     - seems wise. I don't plan to self-host the images
