@@ -1,0 +1,101 @@
+---
+layout: post
+tags: []
+---
+
+# Construx Career Ladder
+
+The [Construx Professional Development Ladder](https://www.construx.com/professional-development-ladder/) is a comprehensive and clear road map for software career development. It mixes community standards, respected literature, and experiential learning to create a framework for reasoning about and acquiring software competency. I would recommend this short reading to every young developer. Let's look at what makes it so good.
+
+
+
+
+## What is the career ladder?
+
+The [career ladder white paper](https://www.construx.com/professional-development-ladder/) is only 32 pages (as of this writing) and well worth your time, but I'll summarize it here anyway.
+
+The premise of the ladder is that the software developers need three key types of knowledge 
+- Technologies/frameworks
+- Domain / business
+- Best Practices
+
+The first two are naturally acquired in the course of work, but also don't transfer well between projects. Best practices can be applied and built up consistently across projects and jobs.
+
+Best practices are well studied, but aren't broadly known or applied. Thus, average practice is closer to worst practice. The key to raising average practice is a methodical path to career grow, muck like lawyers, accountants, doctors and other professions.
+
+Construx builds this path on their Professional Development Matrix, which crosses Knowledge Areas with levels of capability. Each knowledge area is based on the [IEEE Software Engineering Body of Knowledge](https://www.sebokwiki.org/wiki/An_Overview_of_the_SWEBOK_Guide#Software_Requirements).
+
+Matrix
+
+
+
+The path defines knowledge to achieve each cell in the matrix. Each cell includes
+- readings
+- trainings
+- "defined experience" - a description of practical experiences encountered in the course of application
+
+Overall skill is measured by aggregate competency in knowledge areas. For example
+- Junior Developer: has introductory capability in all knowledge areas and competence in two
+- Senior Developer: must have competence in at least 6 knowledge areas and leadership in 2
+
+
+## What does the career ladder do well?
+
+The Professional Development Matrix establishes a framework for software experience at large without conflating many of the details of each capability into the overall view. It is well organized and easy to understand. 
+
+TODO: some kind of transition
+
+- **Cross-specialty**: Many types of software professionals can guide their growth without changing the learning activities for each skill.
+- **Competence areas**: The matrix separates measures for different skills and levels of mastery. This accommodates different specialties and diagnoses missing concepts in otherwise competent professionals, which is all too common with haphazard software education.
+- **Multiple types of learning**: Considers factual and procedural knowledge as well as feedback cycles
+- **Customizable**: It is easy to imagine how the matrix can be modified without throwing out lots of work. Knowledge areas can be added or dropped and the required experience for each cell can be modified
+  - The ladder is made of *incremental and stable* pieces
+- **Clear expectations**:
+  - Sets defined time expectations. Helps learners know what to expect progress wise.
+  - Defines a clear framework for reasoning about and communicating both skill level and suitability of skills to different roles
+- **Individual Choice**: Still gives learners autonomy to order their own learning and focus on their own interests without sacrificing clarity of overall capabilities
+- **Standards-based**: Based on SWEBOK and impartial community standards more than a personal philosophy of development
+
+
+## What would I do differently?
+
+I think the Construx ladder accomplishes its goals very well. That said, I think there is value in different approaches to a career path. Here are a few things I would do differently
+
+**Fundamental Knowledge**: I believe some ideas are more fundamental than any of the knowledge areas, and calling them out explicitly would improve learning. Fundamentals like thinking skills, views on what software is, the state of our industry, what our industry could be, and responsibilities of individual developers.
+
+To be fair, some of these are touched on in the white doc.
+
+**Emphasize Thinking Skills**: I believe thinking skills are foundational. Awareness and control over one's thought process amplifies every other skill. This reflective improvement process also directly powers many of the contextual techniques of each knowledge area. Mastery takes time, but emphasizing this underlying connection could prime students to be effective learners and transfer skills between contexts.
+
+**Individual over Company focus**: The career ladder is made with companies in mind. I supports training programs, promotion paths, hiring assessment, and more. These are all great. An individual can also evaluate themselves and try to arrange path experience on their own.
+
+However, many of the qualities that make the ladder great for companies make it less approachable to individuals. Emphasizing standards with little personal experience reduces relational connection to concepts. Separating specific practices from the general map delays connections to experience. Accommodating multiple roles is at odds with compact and targeted messaging. Overall, its hard to paint a concrete picture of a top-notch process.
+
+I'd like to see a work geared toward bootstrapping developers with a good set of default practices. Opinionated enough to be concrete without abandoning foundation in, and acknowledgement of, the wider body of best practices.
+
+
+## Conclusion
+
+The Construx Professional Development Ladder is by far best framework for software experience that I've seen. It balances different specialties and flexibility with standards and clarity. It is a significant contribution to our field and an important step to becoming a mature industry. 
+
+I highly recommend the paper to any developer who wants to gauge and methodically improve their abilities (which I hope is everyone).
+ 
+
+
+## Professional software development
+
+What did the book try to do? 
+what were the major concepts I saw? Which ones stood out to me as fundamental relatable lessons
+
+Good
+- sets up a schema, fundamental beliefs, about what the software industry is currently like and what it could be like
+  - also some of the critical ways of thinking about software (no silver bullet, essence/accident)
+- More personal, good to hear about his path to professionalism
+
+
+Would would I do differently?
+- want more about practices. focuses on the industry and doesn't talk much about the knowledge/techniques that have been accumulated and should be used
+
+Very influenced by brooks
+mapping of chapters to blog posts
+
