@@ -27,7 +27,8 @@ Other benefits include
   - don't have to compare state with the current database
   - At simplest, keep all pending transactions in some persistent queue. Then push them when available and pull latest state
 
-Obviously it isn't all up sides. Theses databases require a lot of storage. That doesn't matter in the cloud, but is restrictive for embedded scenarios.
+Obviously it isn't all up sides. Theses databases require a lot of storage. That doesn't matter in the cloud, but is restrictive for embedded scenarios. Keeping all past data also means keeping old schema. In practice, many companies already don't remove data or schema for the sake of safety. Still, this kind of store wouldn't be a fit for data that changes shape frequently.
+
 I've otherwise struggled to find downsides. In fact, most ACID-compliant databases must implement this differential paradigm to some degree, else concurrent transactions would be impossible and every change would be a locking change.
 
 ## Practical Adoption

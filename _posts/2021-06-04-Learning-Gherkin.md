@@ -5,9 +5,7 @@ tags: [Testing, BDD, Gherkin, DDD, TestApi]
 
 # Getting started with Gherkin (and Gherkin vs Test API)
 
-I finally got hands-on experience with Gherkin, the common language for Behavior-driven Development (BDD). Getting started was more of struggle than I anticipated. Here are solutions to some of my main hangups
-
-<!-- I think this should be split into two posts -->
+I finally got hands-on experience with Gherkin, the common language for Behavior-driven Development (BDD). Getting started was more of a struggle than I anticipated. Here are solutions to some of my main hangups.
 
 ## Struggles
 
@@ -25,7 +23,7 @@ This forces a lot of decisions
 - How much should I trade reusable steps for readable test definitions?
 - How do I parse these sentences to ensure I get the right info without harming the readability?
 
-This slew of questions paralyzed me at first. It felt like every question I answered raised several more. Every new test added unforeseen complexity that to be addressed. I couldn't get a good grasp of what my final test suite should look like, and mostly had to discover it through gradual refactoring.
+This slew of questions paralyzed me at first. It felt like every question I answered raised several more. Every new test added unforeseen complexity. I couldn't get a good grasp of what my final test suite should look like, and mostly had to discover it through gradual refactoring.
 
 ## Step Definition Scope: System Wide
 
@@ -35,7 +33,7 @@ In effect, their approach creates a client to the system. It's like a rest api o
 
 ## Managing State: Rediscovering Variables
 
-Cucumber's recommendation for global scope forced me to consider how each step should not need to know about previous steps, but must still be able to access state from previous steps.
+Cucumber's recommendation for global scope forced me to consider how each step should not know about previous steps, but must still be able to access state from previous steps.
 
 Programming languages solved this issue long ago by binding values to names. We generally call these variables.
 It turns out that we can require steps to define variables too
@@ -50,9 +48,9 @@ Named entities can be added to a registry available to all steps in a scenario. 
 
 ## Conventions and Ubiquitous Language
 
-One of the primary benefits of Gherkin is that it can be understood by all contributors, developer and non-developers.
+One of the primary benefits of Gherkin is that it can be understood by all contributors, developers and non-developers. This means that conventions for step definitions should cater to a shared, but precise, language.
 
-This means that conventions for step definitions should also cater to creating a shared, but precise, language. This shared language is exactly the job of a Ubiquitous Language from Domain Driven Design (DDD). 
+This shared language is exactly the job of a Ubiquitous Language from Domain Driven Design (DDD). 
 
 The DDD community has created numerous techniques, like [Event Storming](https://www.eventstorming.com/) for discovering Ubiquitous Language. This language should contain names for data types, high-level operations, and even system states.
 
