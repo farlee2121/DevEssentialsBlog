@@ -29,7 +29,7 @@ This is where I want to propose two potential advances.
 
 I've been studying Elmish, a framework based on Elm. The core idea is creating UIs as a modularized state machine. This means that any state in the UI can be achieved programmatically by setting values in the state data structure. If the state data is also annotated with types, then we can use existing tools to generate statistically significant samples of the system states. 
 
-On it's own, this could quickly create a comprehensive set of visual comparison tests *programmatically*. The developer wouldn't write any explicit tests. The team could approve all the screenshots or just treat it as a baseline to detect changes. This baseline would improve as errors were discovered over time.
+On it's own, this could quickly create a comprehensive set of visual comparison tests *programmatically*. The developer wouldn't write any explicit tests. The team could approve all the screenshots or just treat it as a baseline to detect changes. This baseline would improve as errors were discovered over time. 
 
 This method could, of course, be used to define a fixed set of states to test, with much less effort than required for Cypress and no dependence on the markup structure. It does not, however, test workflows or behaviors like Cypress does.
 
@@ -40,6 +40,12 @@ Mutation testing was created to measure the quality of test suites. Some tooling
 The same kind of testing could be applied to measure the quality of visual tests. Some tool could be used to change element ids, tag types, css values, and more. Then any UI tests are run. If the test suite doesn't fail, then that mutation is a gap in the test suite.
 
 I don't know how thorough UI tests should be. However, a tool like this would create a *numeric measure of quality*. This would allow companies to decide their own tolerance for UI issues and set a clear quality goal.
+
+## State Machine Quality Metric
+
+UIs using a state machined-based UIs (like in idea 1) could also use the state machine to compute a numeric measure of test quality. Techniques have been studied for computing the total states of a state machine and how many of them are covered by tests. Such techniques wouldn't be any different for a UI state machine.
+
+The state machine-based metric would likely be less computationally expensive than mutation testing. However, it is limited to UIs based on state machines or that can be modeled as state machines. Markup mutations could be paired with any kind UI tests. This also makes mutations superior as a benchmark for evolution from an untested UI.
 
 ## Conclusion
 
