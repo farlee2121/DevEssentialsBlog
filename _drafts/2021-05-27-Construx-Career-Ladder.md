@@ -8,8 +8,6 @@ tags: []
 The [Construx Professional Development Ladder](https://www.construx.com/professional-development-ladder/) is a comprehensive and clear road map for software career development. It mixes community standards, respected literature, and experiential learning to create a framework for reasoning about and acquiring software competency. I would recommend this short reading to every young developer. Let's look at what makes it so good.
 
 
-
-
 ## What is the career ladder?
 
 The [career ladder white paper](https://www.construx.com/professional-development-ladder/) is only 32 pages (as of this writing) and well worth your time, but I'll summarize it here anyway.
@@ -19,14 +17,14 @@ The premise of the ladder is that the software developers need three key types o
 - Domain / business
 - Best Practices
 
-The first two are naturally acquired in the course of work, but also don't transfer well between projects. Best practices can be applied and built up consistently across projects and jobs.
+The first two are naturally acquired in the course of work, but also don't transfer well between projects. Conversely, best practices can be applied and built up consistently across projects and jobs.
 
-Best practices are well studied, but aren't broadly known or applied. Thus, average practice is closer to worst practice. The key to raising average practice is a methodical path to career grow, muck like lawyers, accountants, doctors and other professions.
+Best practices are well studied, but not broadly known or applied. Thus, average practice is closer to worst practice. The key to raising average practice is a methodical path to career grow, muck like lawyers, accountants, doctors and other professions.
 
 Construx builds this path on their Professional Development Matrix, which crosses Knowledge Areas with levels of capability. Each knowledge area is based on the [IEEE Software Engineering Body of Knowledge](https://www.sebokwiki.org/wiki/An_Overview_of_the_SWEBOK_Guide#Software_Requirements).
 
 Matrix
-
+TODO
 
 
 The path defines knowledge to achieve each cell in the matrix. Each cell includes
