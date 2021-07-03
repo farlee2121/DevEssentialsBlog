@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: []
+tags: [Concept Map, Reading Review]
 ---
 
 # Construx Career Ladder

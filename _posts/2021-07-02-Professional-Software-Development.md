@@ -1,11 +1,11 @@
 ---
 layout: post
-tags: []
+tags: [Concept Map, Reading Review]
 ---
 
 # Reading Review: Professional Software Development
 
-Steve McConnell is best known for Code Complete, a powerful but dense and long read. Professional Software Development is a much lighter packaging of McConnell's core philosophy. It establishes up a well-founded view on what the software industry is and could be. Here I'll highlight some of my key takeaways from the book.
+Steve McConnell is best known for Code Complete. Professional Software Development is a much lighter packaging of McConnell's core philosophy. It establishes up a well-founded view on what the software industry is and could be. Here I'll highlight some of my key takeaways from the book.
 
 ## Book Premise
 
@@ -29,12 +29,12 @@ The fundamental lessons that I picked out where
 
 - [Essence vs Accident](http://worrydream.com/refs/Brooks-NoSilverBullet.pdf)
   - This is probably the most fundamental question I frequently ask during design
-- [No Silver Bullet](http://worrydream.com/refs/Brooks-NoSilverBullet.pdf) / no technology will solve your development problems now or ever
+- [No Silver Bullet](http://worrydream.com/refs/Brooks-NoSilverBullet.pdf) / no technology will solve all your development problems now or ever
 - There is more than 10x difference in productivity between high-end and low-end developers
 - Average practice is close to worst practice
 - Best practices are available, but not well known
 - Software Engineering is different from Computer Science, and sorely needed
-- Form (outward appearance) without understanding of a technique rarely works
+- Form (outward appearance) without understanding rarely works for any technique
 - Better practices are one of the highest return investments a company can make 
   - Scrappy development is not faster or cheaper
 - Bad software is a matter of ethics
@@ -44,7 +44,7 @@ The fundamental lessons that I picked out where
 
 While generally well-sourced, the book introduces two keys materials for advancing our industry I wish I had know about a long time ago.
 
-The first is the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3). SWEBOK is commissioned community standard that enumerates established best practices for creating software. It is meant to be well-established ideas with research backing, not cutting edge. Still, many of techniques are more effective than what our industry uses at large. 
+The first is the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3). SWEBOK is a commissioned community standard that enumerates best practices for creating software. It is meant to collect well-established ideas with research backing, not cutting edge idea. Still, many of techniques are more effective than what our industry uses at large. 
 
 Having an agreed kernel of critical knowledge for creating software facilitates possible certifications, trainings, educational programs, and other ways of leveling up our industry.
 
