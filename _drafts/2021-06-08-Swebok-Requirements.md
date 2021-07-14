@@ -61,4 +61,6 @@ content
 
 high-level impression: design and architecture didn't seem very helpful. Not sure the value of separating maintenance. SCM, Quality, process, testing were all quite good. 
 I think this relects an actual gap in standards for design/architecture, or at least in communicating those standards versus other software concerns
+
+Highly recommend 13.1, 13.2, 13.3
  -->
