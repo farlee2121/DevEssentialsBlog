@@ -8,16 +8,18 @@ tags: [Architecture, SOLID Structure, IDesign, Clean Architecture]
 I've been on a long journey of meshing IDesign with Clean Architecture. Managers, engines, and utilities fit nicely, but accessors seemed too substantial for an adapter and not independent enough for a true service. At last, I've realized the place of accessors by building off [their relationship to utilities](./2020-11-15-Incremental-Accessors.md). Accessors are independent services, not servants to managers.
 
 ## The problem
-IDesign separates domain services into several layers. Managers encapsulate the system usecases and all sequential coupling of domain activities. Accessors hide resources like frameworks and databases from managers by providing an abstraction layer.
+IDesign separates domain services into several layers. Were concerned with
+- Managers: encapsulate the system use cases and all sequential coupling of domain activities
+- Accessors: hide resources like frameworks and databases from managers by providing an abstraction layer
 
-So far, I viewed accessors as a tool for the managers to directly get the entities they needed without knowing about the concrete storage mechanism. This meant
+So far, I viewed accessors as a tool for the managers to directly fetch the entities they needed without knowing about the concrete storage mechanism. This meant
 - shared contracts between accessors and managers
 - accessors were responsible for entity relationships
   - includes queries that needed to return hierarchies 
 - new manager requirements often led to changes in accessors
 - different requirements of different managers cause similar, but separate accessor operations
 
-These qualities seemed natural and unavoidable under iDesign. However, the same properties disqualify clash with Clean Architecture.
+These qualities seemed natural and unavoidable under iDesign. However, the same properties are not allowed in Clean Architecture.
 Each service should define their own abstractions, both operations and data contracts. It is also wrong that changes in my manager services regularly propagate to the accessors. Services are meant to stand on their own.
 
 This left accessors in a gray area. Did they belong as services anymore? I considered many options, but they mainly fell into two camps
