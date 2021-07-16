@@ -53,14 +53,4 @@ content
 </section>
 </article>
 
-<!-- core swebok post
-- not for general audiences
-- it even talks about how it is a standard for creating other materials (certs, accrediations, ...)
-- great citation and reference 
-- further readings good for learning the enumerated concepts. Concisely states the value of each further reading 
 
-high-level impression: design and architecture didn't seem very helpful. Not sure the value of separating maintenance. SCM, Quality, process, testing were all quite good. 
-I think this relects an actual gap in standards for design/architecture, or at least in communicating those standards versus other software concerns
-
-Highly recommend 13.1, 13.2, 13.3
- -->
