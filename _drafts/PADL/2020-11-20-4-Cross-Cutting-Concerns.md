@@ -1,5 +1,5 @@
 ---
-excerpt-separator: <!--more-->
+excerpt_separator: <!--more-->
 ---
 
 # PADL: Cross-Cutting Concerns

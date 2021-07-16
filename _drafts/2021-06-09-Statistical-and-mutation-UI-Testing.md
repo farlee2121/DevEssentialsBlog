@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [Testing, functional, state machines, UI]
-excerpt-separator: "<!--more-->"
+excerpt_separator: "<!--more-->"
 ---
 
 # Hypothesis: Statistical and Mutation are Achievable for Visual UI Testing

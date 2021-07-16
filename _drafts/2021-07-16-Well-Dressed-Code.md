@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [Style, Construction, Self-documenting code, naming]
-excerpt-separator: <!--more-->
+excerpt_separator: <!--more-->
 ---
 
 # Sharp-Dressed Code
