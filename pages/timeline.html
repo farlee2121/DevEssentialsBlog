@@ -2,7 +2,8 @@
 layout: default
 permalink: /timeline/
 ---
-
+<article>
+    <h1>Post Timeline</h1>
 {% for post in site.posts %}
 
         {% capture year_of_current_post %}
@@ -32,3 +33,5 @@ permalink: /timeline/
         {% endif %}
 
 {% endfor %}
+
+</article>
