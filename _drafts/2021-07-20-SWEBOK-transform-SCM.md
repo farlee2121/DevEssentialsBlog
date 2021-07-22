@@ -34,7 +34,7 @@ SWEBOK's Cross-cutting concerns include
 However, most of these concerns can be expressed in terms of Quality and Configuration Management.
 - **Management**: evaluates measurements from from software process to project outcomes and make changes as needed. Any measurement worth steering the project is an indicator of Quality. Configuration Management (change control) provides the checkpoints for evaluating quality and changing course.
 - **Process**: process is more of a meta structure that determines frequency and rigor of Quality and Change Control activities.
-- **Maintenance**: maintenance can be a lifecycle state or a cross cutting concern depending on the viewer's interests. A a lifecycle stage, Maintenance mostly replays the lifecycle process with additional constraints and a different cost profile. As a cross-cutting concern, maintenance is a kind of Quality focusing on ease of continued modification.
+- **Maintenance**: maintenance can be a lifecycle state or a cross cutting concern depending on the viewer's interests. As a lifecycle stage, Maintenance mostly replays the lifecycle process with additional constraints and a different cost profile. As a cross-cutting concern, maintenance is a kind of Quality focusing on ease of continued modification.
 - **Models and Methods**: Models and methods guide the kinds of artifacts we use to represent each lifecycle stage. SWEBOK provides relatively few concrete practices per lifecycle state. So, most of these data points are my own options.
 
 

@@ -9,31 +9,22 @@ The Software Engineering Body of Knowledge (SWEBOK) defines the major categories
 
 <!-- I think I should release this post before the transform artifact post -->
 
+Note that these categorizations are not SWEBOK sanctioned. The lifecycle stages are discussed in SEBOK 13.3.1. Math, Computer Science, and Engineering are explicitly called out as foundations. All other categorizations are my own attempt to organize the topics in the book.
+
 ![Hierarchy diagram](../post-media/SWEBOK-hierarchy/topic-hierarchy.drawio.svg)
 
 
 The tiers are layered based on how fundamental the topics are
-- *Foundations* are precursor topics to Software Engineering. Topics in this level may be repackaged 
-- *Cross-cutting activities* happen at every stage of the software lifecycle. They shape the lifecycle and inform decisions at every level.
-- *Lifecycle stages* represent major checkpoints in how much we know about the final solution. The stages commonly overlap, but are typically used to categorize software activities and progress.
+- *Foundations* are precursor topics to Software Engineering. They inform the root problems solving approaches and the theoretical toolkit. These topics often underpin software-specific practices rather actively shaping our mental model during application.
+- *Cross-cutting activities* occur at every stage of the software lifecycle. They inform stage-specific practices, but are also considered across lifecycle stages to ensure healthy overall practices. 
+- *Lifecycle stages* are major checkpoints in completed work and verified knowledge. Concrete practices are often categorized and applied by current stage. Stages commonly overlap and many practices range across several lifecycle stages.
 
-Tiers based on how fundamental each is 
-- mid tier built on concepts and measures of bottom tier
-- outer tier integrates the middle tier at every stage
-- outer tier is the general form of the software process loop. That loop may be very short and on smaller decisions in some methodologies
-- true center tier is problem solving (13.1.1 everything is problem solving and specialized techniques separate out into disciplines), but problem solving isn't a Knowledge Area
 
-Econ is actually in management and not in foundations, but economics is the differentiation between engineering and science
-Maintenance is in management section, not sure if I should include it in the middle or outer tier...
-- everything is maintained, and maintenance is more of a perspective, but it sorta has a position in the process flow
+The true center tier is problem solving (SWEBOK 13.1.1), but problem solving isn't a Knowledge Area. Thus it is not included in the diagram.
+
+Also, also note that Maintenance shows up twice. 
+- As a lifecycle stage, Maintenance mostly replays the lifecycle process with additional constraints and a different cost profile
+- As a cross-cutting concern, maintenance is a kind of Quality focusing on ease of continued modification
 
 <!-- I like how Construx separates out cross-cutting *activities* and cross-cutting *concerns*
 - their visual makes more sense to me now -->
-
-
-
-
-
-
-- should probably indicate that i'm not sold on where maintenance lives
-- moved economics to foundations because it factors into most decision processes.  
