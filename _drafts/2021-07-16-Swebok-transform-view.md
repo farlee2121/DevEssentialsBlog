@@ -5,12 +5,7 @@ tags:  [SWEBOK, Design, Design Process]
 
 # Software Engineering as Problem Translation
 
-Pinning down a concrete view of software design can be difficult. All the way from requirements to code are just different phases of one design. SWEBOK formalizes this idea in several different ways that may shed some light on the deeper understanding.
-
-
-## Transformation View
-
-SWEBOK states the goal of software engineering is to transform problems stated in natural language to problems stated in electrical current.
+The Software Engineering Body of Knowledge (SWEBOK) states the goal of software engineering is transforming problems stated in natural language to problems stated in electrical current. This view emphasizes the continuity of the design process and intermediate artifacts.
 
 > Abstractly speaking, problem solving using a computer can be considered as a process of problem transformation - in other words, the step-by-step transformation of a problem statement into a problem solution. To the discipline of software engineering, the ultimate objective of problem solving is to transform a problem expressed in natural language into electrons running around a circuit. - SWEBOK 13.1.5
 
@@ -20,103 +15,43 @@ The major steps of this process are
 - Convert the problem statement into algorithms
 - Convert the algorithms into machine instructions
 
+## Compilers Make Machine Code
 I don't know about you, but I never find myself hand assembling code into machine instructions. That's what compilers are for, and they're good at their job.
 The entirety of a typical software process lives in those two first steps, defining the problem and translating it into rigorous code. 
 
 In fact, Jack Reeves has a famous article about this very topic called [What is Software Design?](https://www.developerdotstar.com/mag/articles/reeves_design.html).
 
-No part of the development process is a prescriptive, mechanical construction process. Every stage is related to further defining and expressing the problem being solved.
+## Everything else is design
 
-SWEBOK Section 13.3.1 elaborates on the breakdown of SWEBOK itself related to this transformation view. It frames typical development phases as transformations creating a problem statement one step closer to machine code.
+Software is great at automation. That includes our own processes. Any mechanical steps, like compilation, get automated away.
+
+This means no part of the development process is a prescriptive, mechanical construction process. Every stage is related to further defining and expressing the problem being solved. The original problem must be understood all the way through or translations end up like [repeated google translations](https://www.youtube.com/watch?v=LMkJuDVJdTw&).
+
+Messy real-world processes can't always be mapped into precise processes, or the mapping may not be economic. These challenges may not be apparent until detailed design or even until the code is written. Developers at all phases have to work with stakeholders to evaluate trade-offs and approximations.
+
+
+SWEBOK Section 13.3.1 elaborates on the breakdown of SWEBOK itself related to this transformation view. It frames typical development phases (and book chapters) as transformations creating a problem statement one step closer to machine code.
 
 ![transform pipeline](../post-media/SWEBOK-transform/transform-pipe.drawio.svg)
 
-How small and frequent one loops between these stages depends on the type of process. In general, smaller tighter loops are better, thus the popularity of methods like agile.
+## Relation to common process
 
-## Decision Process View
+How small and frequent one loops between these stages depends on the type of process. 
+- Kanban maintains a constant loop based on tasks
+- Scrum partitions cycles into short fixed-time increments (~1-2 weeks) 
+- Phased delivery methods break work into larger deliverables (on the scale of months)
+- Waterfall attempts to address each transform only once for the whole project 
 
-Checkout this diagram generalized business decision making.
+The documents generated are thematically the same, but at varying levels of formality.
 
-![SWEBOK figure 12.3](../post-media/SWEBOK-transform/SWEBOK-decision-process.png)
-
-This may seem a bit familiar, it maps pretty closely to the transform view.
-
-<!-- TODO: I'm doubting this visual now. The analog is less than I thought
-
-What views would I consider...
-- stage view is much like transform view
-- decision view is kind of a simplified design tree view with this loop in each stage and the stage determining which base assumptions we deal with.
-
-what really differentiates different views
-- who performs a task
-- what tasks are performed
-- what value is generated
-- pre & post conditions to get out of a stage
-
-So
-- Resource/Implementation view (requirements, Db schema, UI, business logic)
-- Money view? Upfront vs continuing costs. Also sprints and milestones
-
- -->
-
-![Transform to decision view comparison](../post-media/SWEBOK-transform/SWEBOK-decision-process-software-labels.png)
-
-This makes sense because software engineering is "the step-by-step transformation of a problem statement into a problem solution". In other words, a design process. Design is all about understanding the problem, and making decisions based on that understanding. The transforms are specific expression of a decision making process.
-
-> "It's useful to think of the architectural design process from a decision-making perspective rather than from an activity perspective" - SWEBOK 2.3.4
-<!-- 
-This is a bit of a lie though, since this decision making process happens repeatedly in each stage of the process as well. -->
-
-
-
-
-## Design Tree View
-
-The decision and transform views dovetail nicely into my favorite model of the software process.
-
-I see the overall process as a spectrum from unknown to known. Each of the transforms is a checkpoint in how much known information we've uncovered.
-
-![Design spectrum, unknown -> known](../post-media/SWEBOK-transform/spectrum.png)
-
-Known information can be of all kinds
-- User expectations
-- Expected tradeoffs between conflicting expectations
-- How to map messy expectations into precise process
-- Key segments of a process
-- How the processes and expectations are stated with code
-- Economical decisions (build vs buy, can expectations be loosened to shorten timelines)
-- Measuring how well the solution actually meets expectations
-
-Each of these choices can be modeled into a *Design tree*. The design tree represents all possible decisions that can be made. A solution is some leaf, or furthest node, in any particular path of the tree.
-
-Progress along the spectrum is measured in how many decisions we've made toward a single leaf (full solution) that meets all of the requirements. This kind of progress is hard to track quantitatively, but it does illuminate some significant consequences for how we make decisions.
-
-Humans naturally gravitate toward two approaches that don't work in practice
-- Depth-first approach: Trying to jump straight to full-solutions is likely to throw away lots of work
-- Breadth-first approach: There are nearly infinite possibilities. We can't evaluate them all
-
-The optimal process is a repeated loop of limited-choice comparisons.
-- Identify some key decision 
-- Enumerate a few likely alternatives
-- Evaluate alternatives in enough depth to make a decision
-- Lock in a choice
-- Identify the next key decision on that path
-
-Decisions naturally get more fine grained as the loop locks in more decisions. Some decisions will inevitably be wrong, but we throw away minimal work because we can back up to the closest key decision that still works.
-
-![search pattern view](../post-media/SWEBOK-transform/search-methods.drawio.svg)
+Tighter loops are better for most cases, thus the popularity of agile methods.
+The methods are also not completely exclusive. It is common to plan rigorously at the scale of weeks, and less specifically over the course of a quarter, and thematically over several years.
 
 
 
 ## Conclusion
 
-There are many different views of software process that capture different truths. Each view colors concepts of progress and artifacts. However, they all share an emphasis on understanding the underlying problem, increments of progress, and executable machine code as the final output.
-
-Ultimately, writing software is a design process that transforms messy real-world processes into precise automated processes.
-
-
-
-
+There are many views of software process that capture different truths. I think the SWEBOK transform view captures the nature of software as a problem-clarification process. Every step must understand the original problem and handle messy design trade-offs. The intermediate representations provide checkpoints for feedback and documentation.
 
 
 <!-- 

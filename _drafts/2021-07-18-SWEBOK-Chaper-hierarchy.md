@@ -3,7 +3,10 @@ layout: post
 tags: [SWEBOK]
 ---
 
-# Hierarchy of chapters (separate post)
+# Hierarchy of chapters 
+
+SWEBOK divides c
+
 
 Tiers based on how fundamental each is 
 - mid tier built on concepts and measures of bottom tier
@@ -23,6 +26,26 @@ intro divides sections into
 - management
 - Professional Practice
 - foundations
+
+- Software Foundations
+  - computing foundations
+  - Mathematical Foundations
+  - Engineering Foundations
+- Software Management
+  - Software Maintenance
+  - Configuration Management
+  - Engineering Management
+  - Engineering Process
+- Software Development
+  - Requirements
+  - Design
+  - Construction
+  - Testing
+- Software Professional Practice
+  - Engineering Economics
+  - Software Quality
+  - Engineering Methods
+  - Professional Practices
 
 
 - should probably indicate that i'm not sold on where maintenance lives
