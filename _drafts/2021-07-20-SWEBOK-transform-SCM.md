@@ -3,6 +3,7 @@ layout: post
 tags: [SWEBOK, Design Process, SCM, Quality]
 ---
 
+
 # Lifecycle Artifacts and Cross-Cutting Concerns
 
 The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](./2021-07-16-Swebok-transform-view.md). Each transform creates an artifact. These artifacts are key connecting cross-cutting concerns into the lifecycle phases.
@@ -41,115 +42,161 @@ However, most of these concerns can be expressed in terms of Quality and Configu
 
 Without further ado, here are the life cycle phases with their cross-cutting concerns. Note that I have extrapolated some general SWEBOK examples to specific practice for understandability and concrete application
 
+<!-- TODO: Another post formatting this into a table would probably be nice -->
+<!-- <style>
+  .section-table{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .section-item{
+    width: 250px;
+  }
+</style> -->
+<div class="section-table">
+<div class="section-item">
+
 **Requirements** (Ch 1.5.3, 1.6, 1.7)
-  - SCM: 
-    - Inspection (other reviews)
-    - Bug trackers and Work trackers
-    - Change control boards or work-item triage
-    - Estimation/priority ownership separation
-  - Quality: 
-    - Inspections
-    - Prototyping
-    - Formal models
-    - Language analysis (e.g. find ambiguity indicators see SWEBOK)
-    - Acceptance testing
-  - Models and Methods
-    - Formal modeling
-    - User Stories
-    - Activity decompositions and graphs
-    - Goal statements
-    - Process flow charts
-    - Mocks, prototypes
-    - Throughput, reliability, responsiveness, and other non-functional requirement goals
-    - Estimates, category tagging, and other requirement measures
-    - Definition of done document
+
+SCM: 
+  - Inspection (other reviews)
+  - Bug trackers and Work trackers
+  - Change control boards or work-item triage
+  - Estimation/priority ownership separation
+
+Quality: 
+  - Inspections
+  - Prototyping
+  - Formal models
+  - Language analysis (e.g. find ambiguity indicators see SWEBOK)
+  - Acceptance testing
+
+Models and Methods:
+  - Formal modeling
+  - User Stories
+  - Activity decompositions and graphs
+  - Goal statements
+  - Process flow charts
+  - Mocks, prototypes
+  - Throughput, reliability, responsiveness, and other non-functional requirement goals
+  - Estimates, category tagging, and other requirement measures
+  - Definition of done document
+
+</div>
+<div class="section-item">
+
 
 **Design** (Ch 2.5)
-  - SCM: 
-    - Inspections (& other reviews)
-    - Source controlled design docs or other versioning systems (e.g. wikis, versioned file system, specialized software)
-  - Quality: 
-    - Inspections (& other reviews)
-    - Translation to tests
-    - Prototyping
-    - Model analysis (e.g. Fan-in & Fan-out for component stability, cycle detection)
-  - Models and Methods
-    - Prototypes
-    - Tradeoff analysis records
-    - Component diagrams
-    - Activity Diagrams
-    - Schemas / Data relationship diagrams
-    - Public component contracts and expectations
-    - Design decision records 
-      - Request for Creation (RFC)
-      - Architure Design Records
-    - Architectural models (e.g. layer models, pipe and filters, IDesign, Ports and Adapters, design analogies)
-    - [Duck docs](../_posts/2020-10-02-Whats-Your-Duck.md)
-  
+
+SCM: 
+  - Inspections (& other reviews)
+  - Source controlled design docs or other versioning systems (e.g. wikis, versioned file system, specialized software)
+
+Quality: 
+  - Inspections (& other reviews)
+  - Translation to tests
+  - Prototyping
+  - Model analysis (e.g. Fan-in & Fan-out for component stability, cycle detection)
+
+Models and Methods:
+  - Prototypes
+  - Tradeoff analysis records
+  - Component diagrams
+  - Activity Diagrams
+  - Schemas / Data relationship diagrams
+  - Public component contracts and expectations
+  - Design decision records 
+    - Request for Creation (RFC)
+    - Architure Design Records
+  - Architectural models (e.g. layer models, pipe and filters, IDesign, Ports and Adapters, design analogies)
+  - [Duck docs](../_posts/2020-10-02-Whats-Your-Duck.md)
+
+</div>
+<div class="section-item">
+
 **Construction** (Mostly Ch 3.1, 3.2, 3.3.7)
-  - SCM: 
-    - Source Control
-    - Inspections (& other reviews)
-    - Pull requests
-  - Quality:
-    - Inspections (& other reviews)
-    - Compiler
-    - Static Analyzers
-    - Auto formatting (i.e. editorconfig)
-    - Style guides
-    - Automated testing
-    - Fault handling
-    - Cyclomatic complexity
-    - Defect density (requires review and/or bug tracking)
-    - Fan-in & Fan-out (component stability)
-    - Variable lifetime (lines between declaration and final usage)
-    - Variable scope (How much code can access a given non-constant data field. E.g. Global, class, function, block,...)
-    - Code Churn
-    - Cyclical reference detection
-    - Code block size
-  - Models and Methods
-    - Source Code
-    - Component and system documentation
-    - Outputs of Quality measurements
-    - Statistical analysis of Quality measurements
-    - Component diagrams
+
+SCM: 
+  - Source Control
+  - Inspections (& other reviews)
+  - Pull requests
+
+Quality:
+  - Inspections (& other reviews)
+  - Compiler
+  - Static Analyzers
+  - Auto formatting (i.e. editorconfig)
+  - Style guides
+  - Automated testing
+  - Fault handling
+  - Cyclomatic complexity
+  - Defect density (requires review and/or bug tracking)
+  - Fan-in & Fan-out (component stability)
+  - Variable lifetime (lines between declaration and final usage)
+  - Variable scope (How much code can access a given non-constant data field. E.g. Global, class, function, block,...)
+  - Code Churn
+  - Cyclical reference detection
+  - Code block size
+
+Models and Methods:
+  - Source Code
+  - Component and system documentation
+  - Outputs of Quality measurements
+  - Statistical analysis of Quality measurements
+  - Component diagrams
+
+</div>
+<div class="section-item">
 
 **Testing** (ch 4.4, 4.5)
-  - SCM: 
-    - Source control
-    - Inspections (& other reviews)
-  - Quality:
-    - Inspections/review
-    - Acceptance testing
-    - Mutation testing
-    - Test counting methods (state machine, branch, boundary cases,...)
-    - Quality assurance process (multiple verification, standard process, measurement standards, reporting, sign-off)
-    - Time between failures
-  - Models and Methods
-    - Automated test code
-    - Test plans
-    - Test result outputs
-    - Statistical analysis of test outputs
-    - Fault analysis, branch analysis, or other models determining completeness of tests
+
+SCM: 
+  - Source control
+  - Inspections (& other reviews)
+
+Quality:
+  - Inspections/review
+  - Acceptance testing
+  - Mutation testing
+  - Test counting methods (state machine, branch, boundary cases,...)
+  - Quality assurance process (multiple verification, standard process, measurement standards, reporting, sign-off)
+  - Time between failures
+
+Models and Methods:
+  - Automated test code
+  - Test plans
+  - Test result outputs
+  - Statistical analysis of test outputs
+  - Fault analysis, branch analysis, or other models determining completeness of tests
+
+</div>
+<div class="section-item">
 
 **Delivery** (not well covered in SWEBOK)
-  - SCM: 
-    - Source control (version history and control deployment definition changes)
-    - Gated releases
-    - Feature flags
-    - Deployments as code (Azure Devops yaml, etc)
-    - Infrastructure as code (docker, ARM, cloud formation,...)
-  - Quality:
-    - Logging
-    - Uptime monitors
-    - Canary testing
-    - Backups
-    - Redundancy
-    - Staged release
-  - Models and Methods
-    - Deployment as code (scripts, yaml, containerization, etc)
-    - Infrastructure as code
-    - Process checklists
+
+SCM: 
+  - Source control (version history and control deployment definition changes)
+  - Gated releases
+  - Feature flags
+  - Deployments as code (Azure Devops yaml, etc)
+  - Infrastructure as code (docker, ARM, cloud formation,...)
+
+Quality:
+  - Logging
+  - Uptime monitors
+  - Canary testing
+  - Backups
+  - Redundancy
+  - Staged release
+
+Models and Methods:
+  - Deployment as code (scripts, yaml, containerization, etc)
+  - Infrastructure as code
+  - Process checklists
+
+</div>
+</div>
 
 It's worth noting that the overall software process can also be managed with Configuration Management and Quality measures.
 

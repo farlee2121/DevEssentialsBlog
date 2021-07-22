@@ -86,10 +86,6 @@ IDEA: I could make cross-sectional cheatsheets of swebok
 
 What is my blog post lineup?
 
-- SWEBOK Summative review
-- Swebok topic hierarchy
-- SWEBOK transform view
-- SWEBOK cross-cutting activity table
 - Focused concept map 
   - limited to layout and few key ideas. Focused on application view (routine process view)
 - Chapter cheat sheets
@@ -101,4 +97,5 @@ What is my blog post lineup?
   - Quality
   - Config management?
 - "Good Enough" target
+  - maybe this should be key concepts I've forgotten I had to learn (also include design for verification)
 - Concept map -->
