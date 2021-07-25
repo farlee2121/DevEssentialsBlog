@@ -4,7 +4,7 @@ tags: [Testing, functional, state machines, UI]
 excerpt_separator: "<!--more-->"
 ---
 
-# Hypothesis: Statistical and Mutation are Achievable for Visual UI Testing
+# Hypothesis: Statistical and Mutation Testing are Achievable for Visual UI Testing
 
 I have a wide range of techniques for testing code behavior. I can reliably increase quality over time no matter how large the feature set grows and even measure the completeness of my test suite (mutation testing).
 
@@ -31,7 +31,7 @@ I've been studying Elmish, a framework based on Elm. The core idea is creating U
 
 On it's own, this could quickly create a comprehensive set of visual comparison tests *programmatically*. The developer wouldn't write any explicit tests. The team could approve all the screenshots or just treat it as a baseline to detect changes. This baseline would improve as errors were discovered over time. 
 
-This method could, of course, be used to define a fixed set of states to test, with much less effort than required for Cypress and no dependence on the markup structure. It does not, however, test workflows or behaviors like Cypress does.
+This method could, of course, be used to define a fixed set of states to test with much less effort than required for Cypress and no dependence on the markup structure. It does not, however, test workflows or behaviors like Cypress does.
 
 ## Idea 2: Markup mutations
 
@@ -52,3 +52,12 @@ The state machine-based metric would likely be less computationally expensive th
 These ideas are pretty raw and the return on investment is uncertain. Tests of this kind would take significant time and computer capacity to execute. The number of potential mutations in css and html are enormous. Research would be needed to select the most useful set of mutations.
 
 Still, I am encouraged to know that there are theoretical approaches that would bring the same level of quality control to program UIs as can be achieved on the backend.
+
+
+<!-- 
+RESEARCH: This post presents some opportunities for collaborating with academics
+- studying rules for minimal failing transitions in state machines, like how we have for values in property tests
+  - most likely a very similar technique. I'd guess that the parameters of a function can be considered a state machine. 
+- Studying mutations to markup
+  - dropping all classes would be a good first test
+ -->
