@@ -12,6 +12,7 @@ Scott Wlaschin posted an [incredible series](https://fsharpforfunandprofit.com/p
 Here is a quick overview of the techniques. I highly recommend Scott's article for a deeper view.
 - **Dependency Retention**: Hard-coded dependencies
 - **Dependency Rejection**: No dependencies. Only data in an data out. (more feasible in languages with union types)
+  - Advanced versions may be likened to batch systems, which are like interpreter without control flow.
 - **Dependency Parameterization**: Pass strategy implementations as function parameters (Think `List.map` or most anything LINQ in C#)
 - **Reader Monad**: Similar to constructor injection in OO. Build up functionality that is waiting on some implementations.
 - **Dependency Interpretation**: Return more advanced data structures that represent a series of actions to be enacted later
