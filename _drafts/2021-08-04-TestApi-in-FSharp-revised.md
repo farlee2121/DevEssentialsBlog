@@ -130,6 +130,10 @@ let testPropertyWithEnv name (ftest: 'api -> 'argtuple -> 'a) (testEnv :ITestEnv
 }
 ```
 
+## Library
+
+These new improvements made the code so general that I split it out into it's own project and put it [up on Github](https://github.com/farlee2121/Expecto.TestApi).
+
 ## Conclusion
 
 These insights simplify test api in F# significantly. It aligns overall syntax with the host test library (Expecto in my case) and centralize all the tricky bits into a reusable library.
