@@ -5,11 +5,11 @@ tags: [SWEBOK]
 
 # SWEBOK: Hierarchy of chapters 
 
-The Software Engineering Body of Knowledge (SWEBOK) defines the major categories of software knowledge. It even talks about relationships between topics a bit. However, the overall picture is never very clearly explored. I hope to remedy that.
+The Software Engineering Body of Knowledge (SWEBOK) defines the major categories of software knowledge. It even talks about relationships between topics here and there. However, the overall picture is never very clearly explored. I hope to remedy that.
 
 <!-- I think I should release this post before the transform artifact post -->
 
-Note that these categorizations are not SWEBOK sanctioned. The lifecycle stages are discussed in SEBOK 13.3.1. Math, Computer Science, and Engineering are explicitly called out as foundations. All other categorizations are my own attempt to organize the topics in the book.
+Note that these categorizations are not SWEBOK official. The lifecycle stages are discussed in SEBOK 13.3.1. Foundations of Math, Computer Science, and Engineering are explicitly called out. All other categorizations are my own attempt to organize the topics in the book.
 
 ![Hierarchy diagram](../post-media/SWEBOK-hierarchy/topic-hierarchy.drawio.svg)
 
