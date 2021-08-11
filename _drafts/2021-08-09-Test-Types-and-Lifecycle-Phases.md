@@ -13,7 +13,7 @@ Terms for different kinds of testing are often used many contradictory ways. I'l
 - [Robert Martin's definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html)
 
 
-![Test to role map]()
+![Test to role map](../post-media/SWEBOK/cycle-test-map.drawio.svg)
 
 ## The core
 Quality assurance (QA) is responsible for... assuring quality. They are the heart that coordinates and verifies quality activities across the many roles and phases of the software process. This may mean that a QA rep does little testing themselves and instead cooperates with individuals in more specialized roles. 
