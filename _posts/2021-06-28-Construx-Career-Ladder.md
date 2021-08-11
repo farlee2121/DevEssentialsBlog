@@ -29,7 +29,7 @@ Construx builds this path on their Professional Development Matrix, which crosse
   margin-top: 50px;
 }
 .skill-matrix .ka-row th span{
-  transform: rotate(-90deg);
+  transform: rotate(-60deg);
   position: relative;
   display: flex;
   max-width: 30px;

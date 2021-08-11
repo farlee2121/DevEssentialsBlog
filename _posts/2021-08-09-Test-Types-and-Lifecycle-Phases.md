@@ -30,7 +30,7 @@ Some common techniques to this end are
 - **Review**: Reviews use other experts to ensure quality of methods used. They may be internal between members of similar roles or by external auditors.
 - **Function/behavioral tests**: Behavioral tests decouple the test definition from the test implementation. They can be used across system configurations to verify consistent satisfaction of expectations.
 - **Regression Tests**: Formalize errors that have slipped through testing before to ensure that they don't slip through again. May be implemented as many different kinds of tests.
-- **Example and Property Tests**: Example-based tests verify behavior given a specific case. Property tests are their compliment. They verify some relationship between inputs and behavior across many samples of data. For example, `a + b = b +a` for all numbers.
+- **Example and Property Tests**: Example-based tests verify behavior given a specific case. Property tests are their compliment. They verify some relationship between inputs and behavior across many samples of data. For example, `a + b = b + a` for all numbers.
 
 
 ## Requirements
@@ -95,6 +95,7 @@ Techniques
 - **Canary Testing**: Release changes to a small portion of users. Revert if errors spike for the test group, or increase the sample until all users are on the new version.
 - **Chaos Testing**: Intentionally cause environment issues to test fallback behaviors (e.g. take down infrastructure, fail http calls, fill up drive or memory space)
 - **Load Testing**: Intentionally flood a site with traffic to test the limits of system capacity. 
+- **Health Checks**: Simple frequent tests of a live system. Verify that a portion of the system is still up and running, or sound an alarm if they aren't.
 - Mutation testing could be used to measure completeness to system tests too (mess with configuration, take down infrastructure, etc). I have never seen it done though.
 
 <!-- [Quantified Communication](../_posts/../_site/2021/03/19/Quantified-Communication-Customer-to-Code/index.html) -->
