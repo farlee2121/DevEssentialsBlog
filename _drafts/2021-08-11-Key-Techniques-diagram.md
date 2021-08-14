@@ -10,7 +10,10 @@
 
  -->
 
-<!-- TODO: I want to differentiate standard vs my recommendation -->
+<!-- TODO: I want to differentiate standard vs my recommendation
+
+Do I even want to tackle this before enumerating the standard?
+ -->
 
 Key Techniques
 
@@ -18,9 +21,37 @@ Key Techniques
 
 Can pull from testing post
 
+
+Event Storming
+Prototypes
+Mockups
+Stories
+
+
 ## Design
+
+Req: Duck docs and incremental tree search
+
+Plugin Architecture (Clean Architecture)
+
+Prototypes 
+Mockups
+Threat matrix
 
 
 ## Construction
+
+- Style standards
+- TDD
+- Pseudo-Code programming process
+- 
+
+## Testing
+
+- Test Api
+- BDD
+- 
+
+## Delivery
 
 ## 
