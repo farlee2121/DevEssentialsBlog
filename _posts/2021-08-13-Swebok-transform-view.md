@@ -34,7 +34,8 @@ Developers at all phases have to work with stakeholders to evaluate trade-offs a
 
 SWEBOK Section 13.3.1 elaborates on the breakdown of SWEBOK itself based on this transformation view. It frames typical development phases (and book chapters) as transformations creating a problem statement one step closer to machine code.
 
-Consequently, this view highlights artifacts that can be controlled and measured at every lifecycle phase.
+Consequently, this view highlights artifacts that each stage produces. It also underscores an important quality measure: each artifact should communicate effectively the same knowledge, because each is a restatement of the same problem.
+In turn, it underscores the importance of understandable artifacts and reflection of the domain in code ([see DDD](https://www.dddcommunity.org/learning-ddd/what_is_ddd/)).
 
 ![transform pipeline](../post-media/SWEBOK-transform/transform-pipe.drawio.svg)
 
@@ -53,7 +54,7 @@ Process loop lengths are also not completely exclusive. It is common in many met
 
 ## Conclusion
 
-There are many views of software process that capture different truths. I think the SWEBOK transform view captures the nature of software as a problem-clarification process. Every step must understand the original problem and handle messy design trade-offs. The intermediate artifacts provide crucial checkpoints for feedback, measurement, documentation, and control.
+There are many views of software process that capture different truths. I think the SWEBOK transform view captures the nature of software as a problem-clarification process. Every step must understand the original problem and handle messy design trade-offs. It also clarifies that each stage artifact should communicate the same fundamental problem, just in progressively more detail.
 
 
 <!-- 
