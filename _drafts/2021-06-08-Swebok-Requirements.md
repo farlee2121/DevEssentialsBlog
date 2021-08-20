@@ -3,12 +3,13 @@
 ---
 
 <style>
+
 .sheet{
     /* a4 paper */
     height: 8.3in;
     width: 11.7in;
     background-color: white;
-    padding: .5in;
+    padding: .25in;
     box-sizing: border-box;
 
 }
@@ -46,7 +47,7 @@ GOAL: Self-reference for building a concept map
 <section class="table">
 <section>
 
-# Introduction 
+## Introduction 
 The Software Requirements knowledge area (KA) is concerned with the elicitation, analysis, specification, and validation of software requirements as well as the management of requirements during the whole life cycle of the software product.
 - software projects are critically vulnerable when the requirements-
 related activities are poorly performed
@@ -81,6 +82,9 @@ related activities are poorly performed
 - DEFN: Software requirements: requirements for a particular component (this isn't well defined)
 
 <!-- idea: split into defs and properties. hmm, the contrast can be helpful though -->
+</section>
+
+<section> 
 
 ## (2 Reqs Process) 2.1 Process models
 - is not a discrete front-end activity of the software life cycle, but rather a process initiated at the beginning of a project that continues to be refined throughout the life cycle;
@@ -96,6 +100,9 @@ practices a other products of the software life cycle processes;
 - measures and benchmarks
 - improvement programs
 
+</section>
+
+<section>
 
 ## 3 Requirements Elicitation
 
@@ -137,6 +144,10 @@ GOAL: A critical element of requirements elicitation is informing the project sc
   - user stories
   - Analyze competitors
   - Customer request databases
+
+</section>
+
+<section>
 
 ## 4 Requirements analysis
 4.0
@@ -190,6 +201,10 @@ REstate: "in almost all cases, it is useful to start by building a model of the 
 - use for: high stakes systems
 - don't use: for unstable requirements
 
+</section>
+
+<section>
+
 ## 5 Requirements specification
 - DEFN: "production of a document that can be systematically reviewed, evaluated, and approved"
 - As many as three distinct documents, usually only software requirements
@@ -203,6 +218,10 @@ REstate: "in almost all cases, it is useful to start by building a model of the 
 - Quality indicators
   - Per-req: imperatives, directives, weak phrases, options, and continuances
   - overall: size, readability, specificity, depth, text structure
+
+</section>
+
+<section>
 
 ## 6 Requirements Validation
 6.0
@@ -220,7 +239,11 @@ Techniques
 - Prototyping (E.g. wire frames, mocks)
 - Model Validation (depends on models used. E.g. formal language models, object models, workflow models)
 - Acceptance tests: verification of requirements executed by customer representatives
-- 
+
+</section>
+
+<section>
+
 ## 7 Practical Considerations
 7.0
 - The requirements process  spans  the  whole software life cycle
@@ -260,6 +283,9 @@ Examples
 - TECH: Functional Size Measurement
 - CROSS: Software Engineering Process KA
 
+</section>
+<section>
+
 ## 8 Tools
 - modeling tools
 - management tools (e.g. Issue trackers)
@@ -269,11 +295,7 @@ TODO
 
 </section>
 
-<section>
 
-content
-
-</section>
 
 </section>
 </article>

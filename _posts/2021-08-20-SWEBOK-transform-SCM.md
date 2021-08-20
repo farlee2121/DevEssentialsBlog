@@ -6,7 +6,7 @@ tags: [SWEBOK, Design Process, SCM, Quality]
 
 # Lifecycle Artifacts and Cross-Cutting Concerns
 
-The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](./2021-07-16-Swebok-transform-view.md). Each transform creates an artifact. These artifacts are key connecting cross-cutting concerns into the lifecycle phases.
+The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](../_posts/2021-08-13-Swebok-transform-view.md). Each transform creates an artifact. These artifacts are key to connecting cross-cutting concerns into the lifecycle phases.
 
 ## Life-cycle Artifacts
 
@@ -17,7 +17,7 @@ A quick review on the transformation lifecycle. The input is plain-language requ
 
 The key here is that each step is a transform, and must have an output that represents the problem being solved.
 
-This is a perfect fit for Configuration Management and Quality.
+This is a perfect fit for Configuration Management and Quality processes.
 - Configuration Management (change control) sets up rules for controlling updates to artifacts
 - Quality process can evaluate artifacts to verify expected outcomes
 
@@ -35,12 +35,12 @@ However, most of these concerns can be expressed in terms of Quality and Configu
 - **Management**: evaluates measurements from from software process to project outcomes and make changes as needed. Any measurement worth steering the project is an indicator of Quality. Configuration Management (change control) provides the checkpoints for evaluating quality and changing course.
 - **Process**: process is more of a meta structure that determines frequency and rigor of Quality and Change Control activities.
 - **Maintenance**: maintenance can be a lifecycle state or a cross cutting concern depending on the viewer's interests. As a lifecycle stage, Maintenance mostly replays the lifecycle process with additional constraints and a different cost profile. As a cross-cutting concern, maintenance is a kind of Quality focusing on ease of continued modification.
-- **Models and Methods**: Models and methods guide the kinds of artifacts we use to represent each lifecycle stage. SWEBOK provides relatively few concrete practices per lifecycle state. So, most of these data points are my own options.
-
+- **Models and Methods**: Models and methods guide the kinds of artifacts we use to represent each lifecycle stage. 
 
 ## Life-cycle Cross-over
 
-Without further ado, here are the life cycle phases with their cross-cutting concerns. Note that I have extrapolated some general SWEBOK examples to specific practice for understandability and concrete application
+Here I list every life cycle phase with it's cross-cutting concerns. Note that I have extrapolated some general SWEBOK examples to specific practice for understandability and concrete application. Many Models and Methods are my own opinion because SWEBOK lists relatively few per knowledge area.
+
 
 <!-- TODO: Another post formatting this into a table would probably be nice -->
 <!-- <style>
@@ -60,7 +60,7 @@ Without further ado, here are the life cycle phases with their cross-cutting con
 **Requirements** (Ch 1.5.3, 1.6, 1.7)
 
 SCM: 
-  - Inspection (other reviews)
+  - Inspection (& other reviews)
   - Bug trackers and Work trackers
   - Change control boards or work-item triage
   - Estimation/priority ownership separation
@@ -114,6 +114,7 @@ Models and Methods:
 
 </div>
 <div class="section-item">
+
 
 **Construction** (Mostly Ch 3.1, 3.2, 3.3.7)
 
