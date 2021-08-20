@@ -6,7 +6,7 @@ tags: [SWEBOK, Design Process, SCM, Quality]
 
 # Lifecycle Artifacts and Cross-Cutting Concerns
 
-The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](../_posts/2021-08-13-Swebok-transform-view.md). Each transform creates an artifact. These artifacts are key to connecting cross-cutting concerns into the lifecycle phases.
+The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](../_posts/2021-08-13-Swebok-transform-view.md). I realized that each transform creates an artifact, and these artifacts are key to connecting cross-cutting concerns into the lifecycle phases.
 
 ## Life-cycle Artifacts
 
@@ -23,7 +23,7 @@ This is a perfect fit for Configuration Management and Quality processes.
 
 ## Concerns of interest
 
-SWEBOK's Cross-cutting concerns include 
+SWEBOK's list numerous cross-cutting concerns 
 - Management
 - Configuration Management (Change Control)
 - Models and Methods
@@ -35,11 +35,16 @@ However, most of these concerns can be expressed in terms of Quality and Configu
 - **Management**: evaluates measurements from from software process to project outcomes and make changes as needed. Any measurement worth steering the project is an indicator of Quality. Configuration Management (change control) provides the checkpoints for evaluating quality and changing course.
 - **Process**: process is more of a meta structure that determines frequency and rigor of Quality and Change Control activities.
 - **Maintenance**: maintenance can be a lifecycle state or a cross cutting concern depending on the viewer's interests. As a lifecycle stage, Maintenance mostly replays the lifecycle process with additional constraints and a different cost profile. As a cross-cutting concern, maintenance is a kind of Quality focusing on ease of continued modification.
-- **Models and Methods**: Models and methods guide the kinds of artifacts we use to represent each lifecycle stage. 
+
+The outlier is **Models and Methods** which guide the artifacts we use to represent each lifecycle stage.
 
 ## Life-cycle Cross-over
 
-Here I list every life cycle phase with it's cross-cutting concerns. Note that I have extrapolated some general SWEBOK examples to specific practice for understandability and concrete application. Many Models and Methods are my own opinion because SWEBOK lists relatively few per knowledge area.
+Pulling these ideas together creates a fairly comprehensive framework for reasoning about where standard practices live in the software lifecycle and what each is trying to accomplish. This helps identify alternative practices for a given stage and find the right mix for our current process. It also provides structure for teaching and learning most software techniques.
+
+Below is a first attempt at that mental framework. I list every life cycle phase with it's cross-cutting concerns and standard practices for each concern. This is not exhaustive, my hope is to prime a mental framework for organizing practices. 
+
+Note that I have extrapolated some general SWEBOK examples to specific practice for understandability and concrete application. Many Models and Methods are my own opinion because SWEBOK lists relatively few per knowledge area.
 
 
 <!-- TODO: Another post formatting this into a table would probably be nice -->
@@ -218,4 +223,6 @@ It's worth noting that the overall software process can also be managed with Con
 
 ## Conclusion
 
-The transform view of the software lifecycle highlights the overlap between cross-cutting concerns and the lifecycle stages. Models and Methods guide the artifacts produced by each transform. Quality and Configuration Management act on the artifacts of each transform to enable Management and high-level Process.
+The transform view of the software lifecycle highlights the overlap between cross-cutting concerns and the lifecycle stages. Each transform produces an artifact guided by Models and Methods. Quality and Configuration Management act on the artifacts of each transform to enable Management and high-level Process.
+
+All together, this transform/artifact lifecycle forms a comprehensive framework for reasoning about practices and their role in the software process 
