@@ -65,7 +65,7 @@ bootstrap: true
             </a>
           </h1>
           <p class="meta">
-            {{ post.date | date: "%B %-d, %Y" }}
+            {{ post.date | date: "%B %-d, %Y" }} | Read Time: {{post.content |  reading_time_as_i }}
           </p>
         </header>
         <div class="excerpt">
