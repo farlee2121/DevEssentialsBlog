@@ -10,14 +10,14 @@ Here is my latest attempt incorporating insights from previous visuals.
 
 ![Topic Diagram](../post-media/SWEBOK/topic-hierarchy-slim-cycle-separate%20process.drawio.svg)
 
-My goal with this image are to
+My goals with this diagram are to
 - Stay rooted in accepted standards
 - Impart practical understanding of how software topics relate
 - Be approachable
-- Create a base visual that can be modified to explain specific topic in the context of the larger mental map
+- Create a base visual that can be modified to explain specific topics in the context of the larger mental map
 - Reason about where specific topics belong and thus how it fits into our overall view of software
 
-This diagram mostly builds on SWEBOK with a few pieces inferred
+This diagram mostly builds on SWEBOK with a few inferred pieces 
 - Critical thinking is the core. SWEBOK states this in ch 13.1.1 but does not account for it in the book structure
 - Delivery has been added as a lifecycle phase. Delivery is not explicitly addressed by SWEBOK, but is implied and commonly understood as a step between delivery and maintenance
 - Monitor replaces maintenance as a lifecycle. This seemed appropriate because monitoring is the half of maintenance that measures the need for change. The lifecycle stars over once a needed change is identified. This also aligns with the general decision process in ch 12.1.5. Every decision is followed by monitoring for quality of the outcomes.
