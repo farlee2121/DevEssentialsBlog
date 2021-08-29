@@ -5,7 +5,7 @@ layout: default
   <header id="main" style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
     <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
     <p class="meta">
-    {{ page.date | date: "%B %-d, %Y" }}
+    {{ page.date | date: "%B %-d, %Y" }} | Read Time: {{page.content |  reading_time_as_i }}
     {% if page.author %} - {{ page.author }}{% endif %}
     </p>
   </header>

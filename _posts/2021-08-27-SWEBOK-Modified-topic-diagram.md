@@ -8,7 +8,7 @@ tags: [SWEBOK, Software Engineering Body of Knowledge, Visual]
 I've been wrestling with the Software Engineering Body of Knowledge (SWEBOK) to distill an intuitive mental image for software knowledge.
 Here is my latest attempt incorporating insights from previous visuals.
 
-![Topic Diagram](../post-media/SWEBOK/topic-hierarchy-slim-cycle-separate%20process.drawio.svg)
+![Topic Diagram](../post-media/SWEBOK/topic-hierarchy-slim-cycle-separate-process.drawio.svg)
 
 My goals with this diagram are to
 - Stay rooted in accepted standards
