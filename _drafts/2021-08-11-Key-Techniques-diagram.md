@@ -44,11 +44,14 @@ Threat matrix
 - Style standards
 - TDD
 - Pseudo-Code programming process
-- 
+- Expressions
+  - clean handoffs
+  - easy to refactor piece-wise
 
 ## Testing
 
 - Test Api
+  - efficient at both individual and team level. Scales to inter-team contracts with minimal extra complexity
 - BDD
 - 
 

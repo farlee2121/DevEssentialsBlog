@@ -5,7 +5,7 @@ tags: [Testing, Quality, Software Lifecycle, Team Organization]
 
 # Test Types and Lifecycle Phases
 
-I was thinking about responsibility for different kinds of quality in an organization and I noticed that different kinds of testing line up well with particular roles and [software lifecycle phases](TODO). I've summed it all up in a quick visual. 
+I was thinking about responsibility for different kinds of quality in an organization and I noticed that different kinds of testing line up well with particular roles and [software lifecycle phases](../_posts/2021-08-27-SWEBOK-Modified-topic-diagram.md). I've summed it all up in a quick visual. 
 
 Terms for different kinds of testing are often used many contradictory ways. I'll be leaning on the following sources, which largely agree with each other
 - [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3) Chapter 4.2
@@ -18,19 +18,23 @@ Terms for different kinds of testing are often used many contradictory ways. I'l
 ## The core
 Quality assurance (QA) is responsible for... assuring quality. They are the heart that coordinates and verifies quality activities across the many roles and phases of the software process. This may mean that a QA rep does little testing themselves and instead cooperates with individuals in more specialized roles. 
 
-Test Engineers similarly ranges across many stages and kinds of tests to fully verify a system. The role may vary, but it seems implied that test engineers are more focused on enacting verification rather than coordinating overall quality activities.
+Test Engineers similarly range across many stages and kinds of tests to fully verify a system. The role may vary, but it seems implied that test engineers are more focused on enacting verification rather than coordinating overall quality activities.
 
 ## Cross-Cutting
-Test can be wrong just like any other kind of code. Part of quality assurance is verifying that our test verify what we expect them to.
+
+Some mindsets and testing techniques are used across all types of testing.
+- **Functional/Behavioral tests**: Behavioral tests decouple the test definition from the test implementation. They can be used across system configurations to verify consistent satisfaction of expectations.
+- **Regression Tests**: Formalize errors that have slipped through testing before to ensure that they don't slip through again. May be implemented as many different kinds of tests.
+- **Example and Property Tests**: Example-based tests verify behavior given a specific case. Property tests are their compliment. They verify some relationship between inputs and behavior across many samples of data. For example, commutativity of addition is `a + b = b + a` for all numbers.
+
+Tests can be wrong just like any other kind of code. Part of quality assurance is verifying that our test verify what we expect them to.
 
 Some common techniques to this end are
+- **Functional/Behavioral tests**: Behavioral tests closely reflect requirements. This allows multiple parties, including non-developers, to verify they share the same understanding of requirements.
 - **Mutation testing** (and other coverage measures): verify completeness of our test suite. In other words, that our tests cover the code thoroughly and would fail if errors were present.
 - **Multi-party verification**: Multiple groups separately verify the correctness of the system. This is somewhat inherent in having different roles test separately.
 - **Multi-technique verification**: Use independent techniques to verify the same expectation.
-- **Review**: Reviews use other experts to ensure quality of methods used. They may be internal between members of similar roles or by external auditors.
-- **Function/behavioral tests**: Behavioral tests decouple the test definition from the test implementation. They can be used across system configurations to verify consistent satisfaction of expectations.
-- **Regression Tests**: Formalize errors that have slipped through testing before to ensure that they don't slip through again. May be implemented as many different kinds of tests.
-- **Example and Property Tests**: Example-based tests verify behavior given a specific case. Property tests are their compliment. They verify some relationship between inputs and behavior across many samples of data. For example, `a + b = b + a` for all numbers.
+- **Review**: Reviews use experts to ensure quality of methods used. They may be internal peers or external auditors.
 
 
 ## Requirements
@@ -41,7 +45,7 @@ Some common techniques to this end are
 
 **Acceptance Tests** verify that the system meets requirements as specified and that the developer understanding of requirements matches the customer understanding.
   - Tool: Behavior Driven Development (e.g. Gherkin)
-  - mutation tests can measure the completeness of acceptance tests
+  - Mutation tests can measure the completeness of acceptance tests
   - Expected behaviors may be either examples or properties
 
 Customer reps may also verify the quality of requirements. These techniques are generally not labelled as testing because they do not exercise the system. They may used before any system exists. For example,
