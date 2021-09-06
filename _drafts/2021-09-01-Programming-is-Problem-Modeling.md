@@ -58,12 +58,13 @@ Customer need defines "correct" software (heart of design process)
 
 Software Engineering is Problem Modeling
 - Ch 1.2.1 Requirements are refined through all lifecycle phases
-- Ch 13.1.5 Software Engineering is a set of translations from plain language to executable code
+- Ch 13.1.5 Software Engineering is a set of translations from plain language to executable code. The lifecycle phases refine the problem statement
 - Ch 1.3.2 "The software engineer, first of all, must determine the real purpose of the software"
 
 Problem understanding is fundamentally progressive
 - Ch 1.7.1 Iteration is Fundamental
 - Ch 1.7.1 Requirements *will* change
+- Ch 1.7.1 No perfect requirement specification
 - Ch 2.3.4 Design less of an activity more of a decision process
 - Ch 12.5.1 "Good Enough" principle and RACE Reduce Accidents and Control Essence
 
@@ -75,10 +76,18 @@ It explores the discovery and application process in much more detail than I can
 - Ch 4.intro "Software testing is, or should be, pervasive throughout the entire development and maintenance lifecycle" -->
 
 ## Lifecycle Visual
-- I think I need to abandon my tier circle. I need better emphasis on intermediates
-  - alt: I could widen the chevrons to make room.
-  - need to decide how much description i'm including for phase refinement 
 
+![Lifecycle stages of problem refinement](../post-media/SWEBOK/problem-refinement-cycle.drawio.svg)
+
+This first visual focuses on the relationship of lifecycle stages to problem modeling. 
+
+The core is Refining the problem, which is defined by customer need and achieved through critical thinking. Each phase outputs some artifact, and all artifacts are a restatement of the problem with additional details we've uncovered. In the middle I state how [each phase refines the problem](../_posts/2021-08-13-Swebok-transform-view.md). 
+- Requirements define the problem enough that we are well informed to consider solutions (SWEBOK chapter 1 intro or 1.7.1)
+- Design refines the problem by considering tradeoffs between different solutions (SWEBOK 2.3.4). Tradeoffs should be weighed with stakeholders (SWEBOK 11.1.9)
+- Construction states the problem in code (precise processes). Construction further refines the problem by weighing tradeoffs between potential solutions
+- Testing measures how well our code matches our mental model for behavior and other expectation measures (SWEBOK 4.intro)
+- Delivery make our solution available for application by end users. Application to the real problem is the most important measure of success.
+- Monitoring watches for changes in the problem or improvements in understanding that must be addressed in our solution.
 
 ## Underlying Scientific Method
 
