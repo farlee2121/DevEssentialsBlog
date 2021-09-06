@@ -1,12 +1,21 @@
 # Programming is Problem Modeling
 
-Code is often considered the goal of programming. This abjectly false. Programming is about understanding and representing problems. This belief is expressed by many experts, but the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
+Code is often considered the goal of programming. This abjectly false. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
 
 
-I've long conceptualized the software lifecycle as a spectrum. We start with much unknown and iterate until there is enough known to deliver a solution.
+## Past Attempts
+
+I've written numerous previous posts covering different views on this underlying idea.
+- [SWEBOK: Software Engineering As Problem Translation](../_posts/2021-08-13-Swebok-transform-view.md)
+- [Going Fast is Going Well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md)
+- [What's your duck?](../_posts/2020-10-02-Whats-Your-Duck.md)
+- [Requirements](../_posts/DevEssentials/2018-11-25-Requirements.md)
+- [Quantified Communication (from customer to code)](../_posts/2021-03-19-Quantified-Communication-Customer-to-Code.md)
+
+My previous visual was the software lifecycle as a spectrum. We start with much unknown and iterate until there is enough known to deliver a solution.
 ![unknown to known spectrum](../post-media/Going-Fast/spectrum.png)
 
-This is an evolution of that idea, hopefully filling in more detail.
+I hope to evolve this idea and cover more detail.
 
 ## Goals
 
@@ -59,10 +68,16 @@ Problem understanding is fundamentally progressive
 - Ch 12.5.1 "Good Enough" principle and RACE Reduce Accidents and Control Essence
 
 
+I also strongly recommend learning [Domain Driven Design (DDD)](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215). DDD is a popular design philosophy all about clearly coupling our designs to domain (problem) understanding.
+It explores the discovery and application process in much more detail than I can here. 
+
 <!-- Testing isn't optional
 - Ch 4.intro "Software testing is, or should be, pervasive throughout the entire development and maintenance lifecycle" -->
 
 ## Lifecycle Visual
+- I think I need to abandon my tier circle. I need better emphasis on intermediates
+  - alt: I could widen the chevrons to make room.
+  - need to decide how much description i'm including for phase refinement 
 
 
 ## Underlying Scientific Method
@@ -76,7 +91,7 @@ Notice how the lifecycle repeatedly refines understanding through
 
 This is the scientific process.
 
-![Scientific process]()
+<a title="Efbrazil, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:The_Scientific_Method.svg"><img width="512" alt="The Scientific Method" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/The_Scientific_Method.svg/512px-The_Scientific_Method.svg.png"></a>
 
 These question/hypothesis/test loops underlie not only the lifecycle, but each individual activity as well.
 
@@ -137,15 +152,6 @@ DDD: A design reflecting domain will likely lead to deeper insights and changes 
 
 Maybe explicitly connect hypothesis/test cycles from problem solving as even more fundamental version of this
 
-
-## Further reading
-
-Here are some of my past posts relevant communicating similar ideas
-- [SWEBOK: Software Engineering As Problem Translation](../_posts/2021-08-13-Swebok-transform-view.md)
-- [Going Fast is Going Well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md)
-- [What's your duck?](../_posts/2020-10-02-Whats-Your-Duck.md)
-- [Requirements](../_posts/DevEssentials/2018-11-25-Requirements.md)
-- [Quantified Communication (from customer to code)](../_posts/2021-03-19-Quantified-Communication-Customer-to-Code.md)
 
 
 
