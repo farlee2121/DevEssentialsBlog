@@ -1,5 +1,6 @@
 # Programming is Problem Modeling
 
+<!-- TODO: align overall angle. The post is half visual experimentation, half dissertation on modeling -->
 Code is often considered the goal of programming. This abjectly false. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
 
 
@@ -34,20 +35,20 @@ The primary ideas I want to communicate are
 - Common ways lifecycle stages help refine the problem
 - Lifecycle stages as an accumulation of problem clarity
 
-
+<!-- 
 Secondary ideas I'd like to communicate 
 
 - Software/developer needs constrain solutions to the problem, but are secondary
-  <!-- - Examples: 
+  - Examples: 
     - Developer time impacts schedule, but not individual functional expectations
     - Qual
-    - maintainability impacts velocity and developer happiness -->
-- There is no perfect design
+    - maintainability impacts velocity and developer happiness
+- There is no perfect design -->
 
 
 ## Sources
 
-> "The besetting mistake of expert designers is not designing the thing wrong, but designing the wrong thing" - Design of Design p. 167
+> "The besetting mistake of expert designers is not designing the thing wrong, but designing the wrong thing" - Fred Brooks, Design of Design p. 167
 
 I don't expect you to take these statements of software truth on my word. Here are many of the key points taken directly from the [Software Engineering Body of Knowledge](../_posts/2021-07-30-SWEBOK-review.md).
 
@@ -91,7 +92,7 @@ The core is Refining the problem, which is defined by customer need and achieved
 
 ## Underlying Scientific Method
 
-Notice how the lifecycle repeatedly refines understanding through 
+Notice how the lifecycle repeatedly refines understanding.
 - identify a need
 - identify a solution
 - test the solution to make sure it fits the need
@@ -102,8 +103,7 @@ This is the scientific process.
 
 <a title="Efbrazil, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:The_Scientific_Method.svg"><img width="512" alt="The Scientific Method" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/The_Scientific_Method.svg/512px-The_Scientific_Method.svg.png"></a>
 
-These question/hypothesis/test loops underlie not only the lifecycle, but each individual activity as well.
-
+These question/hypothesis/test loops underlie not only the lifecycle, but each individual activity as well. Each prototype, shadowing, user story, tradeoff analysis, unit test, and so on is a hypothesis about the problem allowing us to test our understanding against reality. These small tests add up and push us to a solution one increment at a time.
 
 
 ## Good Enough
@@ -114,66 +114,36 @@ Conversely, this shows that satisfying requirements is our stop condition to con
 
 Requirements need not only be functional requirements (behavior expectations). They should also include quality measurements like maintainability and defect rates. Quantifying and benchmarking these requirements is a whole topic of it's own.
 
-![Good Enough target]()
-- idea: lines on design tree indicating phase transfers (maybe phase through phase artifacts)
+![Good Enough target](../post-media/SWEBOK/iterative-good-enough.drawio.svg)
 
-Note that lifecycle stages can be seen as benchmarks in understanding. Each stage is about underst
-- swebok quote on refining requirements enough to perform design
-- design is a decision process, often tied to construction
-- testing is a review to check what we did
-- delivery is the ultimate test where our understanding is put into practice 
-- monitor is waiting for new understanding
+Note the connection to lifecycle as benchmarks in understanding. Understanding is made in increments, and certain amounts of understanding may trigger review, change in process, or transfer of work that we see as lifecycle stages.
 
-Remember that the programming lifecycle refines the problem understanding. It is likely that new requirements will be added to the "definition of done" as developers work.
+Remember that the programming lifecycle refines the problem understanding. It is likely that new requirements will be added to the "definition of done" as contributors work.
 Undoubtedly, more requirements will also appear after work is delivered. This shifts target of "good enough" and we iterate to reach the new target just like before. 
 
-testing
+## Volatility Analysis
 
+Many problems in software stem from hypotheses that were never tested. These assumptions are built on, amplifying the impact if they turn out to be false.
 
+However, we also know that problems change. This is where problem modeling kicks up a notch. A key part of modeling is separating essence from accident. That is, what is fundamental to a problem versus what is temporary or situational. 
 
+A good example is notifications. It is often fundamental to a process that people must be alerted of a software event. However, whether that notification is by email, text, mail (legal notice?), or triggers a company representative to make contact is very likely to change. Notifying is fundamental, delivery mechanism is "accident".
 
+Understanding what is least likely to change in our system is an act of understanding the true nature of the problem we are solving. Aligning our code with that nature maximizes long term adaptability.
 
-Requirements
-- interviews, prototypes, shadowing, acceptance tests, ....
+![Volatility analysis](../site-media/../post-media/IDesign-System/iDesignSolutionScubbing.png)
 
-Design / Construction
-- Specificity reveals hidden assumptions
-- weigh tradeoffs with customer
-- Areas of flexibility reveal nature of business (volatility vs change)
-
-Testing
-- echoes developer understanding of requirements
-- The right techniques let customers review test suites
-- acceptance tests probs belong here in this view?
-
-Maintenance 
-- adjust to changes in need
-- adjust to changes in understanding 
-
-
-
-DDD: A design reflecting domain will likely lead to deeper insights and changes in the design. Design is, in a way, becoming an expert in the field you are representing.
+## Further Reading
+- [No Silver Bullets](https://www.cs.unc.edu/techreports/86-020.pdf) (article)
+- [What is Software Design](https://www.developerdotstar.com/mag/articles/reeves_design.html) (article)
+- [Design of Design](https://www.amazon.com/Design-Essays-Computer-Scientist/dp/0201362988) (book)
+- [Domain Driven Design](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) (book)
 
 
 
 
 
 
-Maybe explicitly connect hypothesis/test cycles from problem solving as even more fundamental version of this
+<!-- "The quality of your questions determines the quality of your decisions"
 
-
-
-
-"The quality of your questions determines the quality of your decisions"
-
-Q: Should it be a spiral toward "good enough"?
-- maybe it's two visuals?
-- !!! spiral is the design tree with some failed paths, gradually incrementing to "good enough"
-  - in this vein, one visual is responsible for communicating connection to problem understanding, the other to progression of the understanding over time
-
-Where does problem understanding come from: most often the customers.
-
-
-This is to address carlos' reaction to the transformation view. It also helps emphasize a very critical belief that the problem we're solving is king and present in every stage
-
-This should be specific practices, not just the general increase in detail.
+  - in this vein, one visual is responsible for communicating connection to problem understanding, the other to progression of the understanding over time -->
