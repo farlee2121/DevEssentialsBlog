@@ -84,8 +84,24 @@ These question/hypothesis/test loops underlie not only the lifecycle, but each i
 
 ## Good Enough
 
+Each hypothesis/test cycle tells us something about the problem and solutions. These increments of progress interpolate us to a final solution.
+However, there is no single perfect solution. Instead, there is a target of "good enough". Any solution that meets all known requirements falls in "good enough".
+Conversely, this shows that satisfying requirements is our stop condition to consider work complete.
+
+Requirements need not only be functional requirements (behavior expectations). They should also include quality measurements like maintainability and defect rates. Quantifying and benchmarking these requirements is a whole topic of it's own.
+
 ![Good Enough target]()
-- idea lines on design tree indicating phase transfers (maybe phase through phase artifacts)
+- idea: lines on design tree indicating phase transfers (maybe phase through phase artifacts)
+
+Note that lifecycle stages can be seen as benchmarks in understanding. Each stage is about underst
+- swebok quote on refining requirements enough to perform design
+- design is a decision process, often tied to construction
+- testing is a review to check what we did
+- delivery is the ultimate test where our understanding is put into practice 
+- monitor is waiting for new understanding
+
+Remember that the programming lifecycle refines the problem understanding. It is likely that new requirements will be added to the "definition of done" as developers work.
+Undoubtedly, more requirements will also appear after work is delivered. This shifts target of "good enough" and we iterate to reach the new target just like before. 
 
 testing
 

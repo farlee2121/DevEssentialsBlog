@@ -59,8 +59,6 @@ Note that I have extrapolated some general SWEBOK examples to specific practice 
     width: 250px;
   }
 </style> -->
-<div class="section-table">
-<div class="section-item">
 
 **Requirements** (Ch 1.5.3, 1.6, 1.7)
 
@@ -88,8 +86,6 @@ Models and Methods:
   - Estimates, category tagging, and other requirement measures
   - Definition of done document
 
-</div>
-<div class="section-item">
 
 
 **Design** (Ch 2.5)
@@ -117,8 +113,7 @@ Models and Methods:
   - Architectural models (e.g. layer models, pipe and filters, IDesign, Ports and Adapters, design analogies)
   - [Duck docs](../_posts/2020-10-02-Whats-Your-Duck.md)
 
-</div>
-<div class="section-item">
+
 
 
 **Construction** (Mostly Ch 3.1, 3.2, 3.3.7)
@@ -152,8 +147,6 @@ Models and Methods:
   - Statistical analysis of Quality measurements
   - Component diagrams
 
-</div>
-<div class="section-item">
 
 **Testing** (ch 4.4, 4.5)
 
@@ -176,8 +169,7 @@ Models and Methods:
   - Statistical analysis of test outputs
   - Fault analysis, branch analysis, or other models determining completeness of tests
 
-</div>
-<div class="section-item">
+
 
 **Delivery** (not well covered in SWEBOK)
 
@@ -201,8 +193,7 @@ Models and Methods:
   - Infrastructure as code
   - Process checklists
 
-</div>
-</div>
+
 
 It's worth noting that the overall software process can also be managed with Configuration Management and Quality measures.
 
