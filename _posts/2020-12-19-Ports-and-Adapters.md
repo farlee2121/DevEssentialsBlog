@@ -21,7 +21,7 @@ Side-note: I feel like this is where IDesign comes in handy. Engines, accessors,
 ## Visualization
 I love this analogy because it lends itself to a familiar visualization. The visual imparts a tangible feel for why the structure is flexible and how it's suppose to work. It's like our hardware.
 - We separate the features we want to be portable into pluggable devices
-- No one like lots of cable plugging. Each device should include everything it needs to meet its primary usecases with minimal plugging.
+- No one likes lots of cable plugging. Each device should include everything it needs to meet its primary use cases with minimal plugging.
 - The more things a device (and service) does, the more expensive it'll be
 - Outlier requirements often need specialized connections (like extreme performance or tightly related activities)
 

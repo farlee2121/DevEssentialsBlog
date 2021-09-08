@@ -49,7 +49,7 @@ Anti-corruption layers are a similar idea from Domain-Driven Design. A calling c
 
 The core development loop revolves around the caller owning the abstractions. I like to think of it as selfish design. 
 
-Start with the top-level usecase.
+Start with the top-level use case.
 
 Always design only to your present need no matter where you are, a function, service, class, etc.
 - Need some data? define it yourself.
