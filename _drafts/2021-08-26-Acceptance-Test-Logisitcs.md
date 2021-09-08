@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: []
+tags: [Acceptance Tests, BDD, Team Process, Quality]
 ---
 
 # Thoughts on Acceptance Test Logistics

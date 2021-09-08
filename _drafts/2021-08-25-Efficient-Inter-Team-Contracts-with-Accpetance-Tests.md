@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: []
+tags: [Acceptance Tests, BDD, Team Process, Quality]
 ---
 
 # Efficient Inter-team Contracts with Acceptance Tests

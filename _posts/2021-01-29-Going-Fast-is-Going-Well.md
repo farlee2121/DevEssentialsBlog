@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: []
+tags: [Design Thinking, Requirements]
 ---
 
 # Going Fast is Going Well

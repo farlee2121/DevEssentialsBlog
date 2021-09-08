@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: []
+tags: [Design Process, Design Thinking]
 ---
 
 # Design and Requirements as Negotiation
