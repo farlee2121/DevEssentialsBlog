@@ -1,4 +1,5 @@
 ---
+layout: post
 ---
 
 <!-- How do I handle key techniques for cross-cutting concerns? critical thought?
