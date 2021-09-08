@@ -1,5 +1,6 @@
 # Programming is Problem Modeling
 
+<!-- TODO: this is a post worth having reviewed before I release it -->
 <!-- TODO: align overall angle. The post is half visual experimentation, half dissertation on modeling -->
 Code is often considered the goal of programming. This abjectly false. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
 
@@ -138,8 +139,6 @@ Understanding what is least likely to change in our system is an act of understa
 - [What is Software Design](https://www.developerdotstar.com/mag/articles/reeves_design.html) (article)
 - [Design of Design](https://www.amazon.com/Design-Essays-Computer-Scientist/dp/0201362988) (book)
 - [Domain Driven Design](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) (book)
-
-
 
 
 
