@@ -1,12 +1,20 @@
+---
+layout: post
+tags: [Design Thinking]
+---
+
 # Progressive Design
 
+<!-- TODO: consider my presentations to make sure i'm not beyond my expertise. Especially on company organization. I don't want to trivialize long-standing hard problems when I haven't actually done so -->
+
 Choosing the right amount of process is an art. Too much process is smothering and too little is a mess. However, I think [incremental, stable, and additive processes](TODO) naturally start simple and mature *progressively* with our demands.
-<!-- todo: maybe this is a separate post. I want to give examples demonstrating progressive design -->
+
 
 Progressive value is a guarantee if our system isn't deeply affected by change (stable), changes in small complete chunks (incremental), and the increments mostly build on each other (additive).
 
-All these properties together enable **Progressive Design**. We can design to what we know right now with minimized complexity, but adjust to change without massive rework.
+All these properties together enable **progressive design**. We can design to what we know right now with minimized complexity, but adjust to change without massive rework.
 
+<!-- Is this next section even necessary? -->
 
 This progressive value must be backed up by a structure that enables it. Consider these corollaries.
 - stable + incremental -> contained
