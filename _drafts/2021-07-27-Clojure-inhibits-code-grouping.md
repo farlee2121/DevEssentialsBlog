@@ -4,9 +4,9 @@ tags: [Clojure, F#]
 # series: 
 ---
 
-# Clojure Inhibits Code Grouping
+# Clojure Namespaces Inhibit Code Grouping
 
-I've spent most of this year in Clojure after years of .NET. Much of my F# design skills made the jump, but one language difference has notably changed how I write programs. Specifically, two key choices inhibit my tendency to inclination to explicitly group small sections of related code. I believe this coupling choice has broad implications for program structure and naming.
+I've spent most of this year in Clojure after years of .NET. Much of my F# design skills made the jump, but one language difference has notably changed how I write programs. Specifically, two key choices inhibit my inclination to explicitly group small sections of related code. This broadly impacted both program structure and naming.
 
 ## No Nested Modules
 
@@ -62,6 +62,10 @@ let isValidCart = Checkout.Validation.validateCart cart
 Relative namespaces aren't just about convenience. The namespace is also part of the context that defines a symbol. Using partial namespace access creates as sliding scale of clear and consistent context for global symbols. Clojure covers symbol context with aliased imports. 
 
 <!-- I feel like a beginner would struggle to get anything out of this article. Too much expectation they understand namespacing -->
+
+## Upside of Clojure Technique
+
+I do want to give Clojure some credit. Explicit imports of all dependencies does simplify dependency tracing, especially when tooling doesn't support conveniences like find all references and go to definition. Namespaces can be changed with high confidence simply through find and replace. I would almost certainly prefer the clojure approach if I expected to be working with primitive editors.
 
 ## Conclusion
 

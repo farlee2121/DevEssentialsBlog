@@ -5,7 +5,7 @@ tags: [SWEBOK, Design, Fundamentals]
 
 # Implicit Fundamentals
 
-I recently gave a presentation of the Software Engineering Body of Knowledge focused on road maps for software learning.
+I recently gave a presentation on the Software Engineering Body of Knowledge focused on road maps for software learning.
 This involves much philosophy on how we think about software. The conversation surfaced many crucial fundamental views that often go unstated.
 I've enumerated them here.
 
@@ -17,7 +17,7 @@ I've enumerated them here.
 - Change in requirements is unavoidable and actually good
   - Corollary: There is no perfect set of requirements
 - Critical Thinking -> try to disprove your ideas
-  - Corollary: Testing can't prove a system works. They can only show existence of errors. The posture for testing is to disprove your system works. At some point you decide you've sufficiently proved it works and accept remaining risk (Extra note: the risk can be quantified. One such technique is mutation tests)
+  - Corollary: Testing can't prove a system works. They can only show existence of errors. The posture for testing is to disprove that your system works. At some point you decide you have enough evidence that it works and accept remaining risk (Extra note: the risk can be quantified. One such technique is mutation tests)
 - Major artifacts of the software process (requirements, design, code) are restatements of the original problem
   - Corollary: A significant portion of quality is how well our artifacts communicate the real-world problem
   - Further reading: [SWEBOK Transform View](../_posts/2021-08-13-Swebok-transform-view.md)
@@ -28,6 +28,6 @@ I've enumerated them here.
 - Different classes of problems require different amounts and kinds of process
 
 
-Theres was also significant discussion on the difficulty of choosing the right amount of process for the given problem. Some key critical thinking skill for this were
-- SWOT Analysis
+Theres was also significant discussion on the difficulty of choosing the right amount of process for the given problem. Some key critical thinking skill to guide such decisions are
+- [SWOT Analysis](https://en.wikipedia.org/wiki/SWOT_analysis)
 - Threat matrixes ([example](../post-media/threat-matrix.png))
