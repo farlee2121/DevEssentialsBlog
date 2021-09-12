@@ -5,7 +5,7 @@
   - was in an environment that didn't really invest in tool making
   - 
 - similar to Code, at first i was unimpressed. I was used to my editor doing more out of the box and I failed to see the canvas
-
+- my optinion started to change when I read Pragmatic Programmer
 
 - even with the ease, the console is still a UI, and it deserves a good UX
   - dragonfruit, System.Console take care of it for you

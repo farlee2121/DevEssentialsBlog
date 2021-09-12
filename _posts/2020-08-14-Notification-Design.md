@@ -19,7 +19,7 @@ We now needed to white label our system. Emails need to be branded per white lab
 ## The Problem
 This is a reasonable desire and completely in line with the system's notification needs, but it blew up the system's notification design.
 
-The original design seems like reasonable services trying to hide reasonable decisions, but it only hides frameworks and doesn't hide that we rely on email or that the emails are generated locally. The EmailGenerationEngine also implicity couples every component that uses it because it defines concrete flows for every caller. Further, coupling to these services is the lowest energy decision when we allow our services to depend on external abstractions. This causes the coupling to spread to many consumers. The result is that every service that sent a notification had to be changed. 
+The original design seems like reasonable services trying to hide reasonable decisions, but it only hides frameworks and doesn't hide that we rely on email or that the emails are generated locally. The EmailGenerationEngine also implicitly couples every component that uses it because it defines concrete flows for every caller. Further, coupling to these services is the lowest energy decision when we allow our services to depend on external abstractions. This causes the coupling to spread to many consumers. The result is that every service that sent a notification had to be changed. 
 
 I would argue that this isn't just a flaw of the system I was working on but a general issue with trying to directly consume a shared notification service. 
 
