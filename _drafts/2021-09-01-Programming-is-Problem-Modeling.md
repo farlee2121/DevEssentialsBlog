@@ -130,6 +130,14 @@ A good example is notifications. It is often fundamental to a process that peopl
 
 Understanding what is least likely to change in our system is an act of understanding the true nature of the problem we are solving. Aligning our code with that nature maximizes long term adaptability.
 
+
+## Conclusion
+
+Programming is an exercise in understanding and modeling problems. At the it's most fundamental, this is cycles of the hypothesis testing and collaboration with customers to incrementally translate their problem into a solution. There is no perfect solution. Rather, a solution is good enough when it meets the needs of the customers. Long term durability of a design often depends on how well it matches the nature of the problem being solved, centralizing the core nature of the business while keeping temporary details flexible.
+
+Software lifecycle stages are not sequential self-contained steps. Rather, they are checkpoints of clarity while incrementally translating the problem to software. These checkpoints often trigger new techniques for clarification, and possibly team process to capture progress and verify quality.
+
+
 ## Past Attempts
 
 I've written a variety of previous posts covering different views on this underlying idea.
