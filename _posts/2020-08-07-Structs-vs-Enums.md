@@ -30,22 +30,22 @@ There were also types like club material or manufacturer. Sometimes we would mak
 ## The Solution
 
 First some additional constraints on my solution. 
- - Not all related type sets were interchangable. For example, not all club type sets divided clubs the same way (took me forever to figure out metal woods).
+ - Not all related type sets were interchangeable. For example, not all club type sets divided clubs the same way (took me forever to figure out metal woods).
  - There were no clear bounds to where these values were used
    - All of these type literals were saved in data stores.
    - Many of the type literals were used in the UI for making decisions
    - It was unclear how many places these values could originate from and what might break if old representations were globally changed
  - I wanted to introduce type safety, slowly converting sections of code to only well-known values
- - I couldn't guarentee I knew all the potential values for a given type literal without looking through the whole program. I only knew what values a section of code used. 
+ - I couldn't guarantee I knew all the potential values for a given type literal without looking through the whole program. I only knew what values a section of code used. 
 
-My trusty fallback for these limited-option type representations were enums. However, enums clearly wouldn't work for this scenario because they can only accomodate a fixed set of options decided at design time.
+My trusty fallback for these limited-option type representations were enums. However, enums clearly wouldn't work for this scenario because they can only accommodate a fixed set of options decided at design time.
 
 My first step was to at least move all of these literals into named constants. This was a big step forward. 
  - I could now see a clear list of known values (thus expected cases)
  - I could map between related sets in a centralized and normalized way
  - It removed the chance for typing or forgetfulness errors. Values were guaranteed consistency by the compiler
  - Function signatures, property types, and variable types were left alone creating little rework
-   - Original values and typing were left unchanged, accomodating for still unknown or changing values
+   - Original values and typing were left unchanged, accommodating for still unknown or changing values
 
 Still, this solution lacked type enforcement. Which variation constants a component required had to be communicated through argument or property naming.
 
@@ -69,7 +69,7 @@ This solution meets all the constraints and desired properties.
  - I can see the known values
  - I can reference known values in a consistent and compiler-checked way
  - I can clearly communicate expected values of an argument by using the type system
- - I can create instances with arbitrary values to accomodate change or potential missed values
+ - I can create instances with arbitrary values to accommodate change or potential missed values
  - I can implement consistent operations on the type, including mapping, getting display values, etc
 
 Turns out this is not a new idea. It's actually how [System.Drawing.Color](https://github.com/dotnet/runtime/blob/6072e4d3a7a2a1493f514cdf4be75a3d56580e84/src/libraries/System.Drawing.Primitives/src/System/Drawing/Color.cs) is implemented for .NET.
@@ -77,10 +77,10 @@ Turns out this is not a new idea. It's actually how [System.Drawing.Color](https
 
 It's worth noting that you wouldn't have to use a struct. The same would work with a class, but the value-type semantics of a struct fit this scenario well and provide some nice benefits like value-based equality.
 
-Discriminated unions can also accomodate this scenario and are overall a much more powerful tool. Alas, most OO languages are not graced with them yet.
+Discriminated unions can also accommodate this scenario and are overall a much more powerful tool. Alas, most OO languages are not graced with them yet.
 
 ## Design Comparison
-This situation highlighted three design alternatives. Here is their stengths and weaknesses in table form
+This situation highlighted three design alternatives. Here is their strengths and weaknesses in table form
 
 <style>
 td{ text-align:center;}
@@ -111,13 +111,13 @@ td{ text-align:center;}
         <td><span class="good"><span><td>
     </tr>
     <tr>
-        <td><strong>Add values at runtime (accomodate unknown values)</strong></td>
+        <td><strong>Add values at runtime (accommodate unknown values)</strong></td>
         <td><span class="bad"><span><td>
         <td><span class="good"><span><td>
         <td><span class="good"><span><td>
     </tr>
     <tr>
-        <td><strong>Consistent, discoverable write-time refrences</strong></td>
+        <td><strong>Consistent, discoverable write-time references</strong></td>
         <td><span class="good"><span><td>
         <td><span class="good"><span><td>
         <td><span class="good"><span><td>
@@ -136,7 +136,7 @@ td{ text-align:center;}
     </tr>
     <tr>
         <td><strong>Centralized operations (i.e. get display string, mapping, etc)</strong></td>
-        <td><span class="ok"><span> A bit awkard in C# because of special typing<td>
+        <td><span class="ok"><span> A bit awkward in C# because of special typing<td>
         <td><span class="ok"><span>By convention<td>
         <td><span class="good"><span><td>
     </tr>

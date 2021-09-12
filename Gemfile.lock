@@ -43,6 +43,8 @@ GEM
     jekyll-seo-tag (2.6.1)
       jekyll (>= 3.3, < 5.0)
     jekyll-series (1.0.3)
+    jekyll-time-to-read (0.1.2)
+      jekyll
     jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
@@ -79,6 +81,7 @@ DEPENDENCIES
   bundler (~> 2.1.4)
   jekyll-relative-links (~> 0.6.1)
   jekyll-series (~> 1.0)
+  jekyll-time-to-read (~> 0.1.2)
   jekyll-titles-from-headings (~> 0.5.3)
   kramdown-parser-gfm
   rake (~> 10.0)

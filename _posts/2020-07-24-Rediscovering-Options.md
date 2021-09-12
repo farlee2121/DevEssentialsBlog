@@ -22,14 +22,14 @@ In my early days, I used the .NET `ConfigurationManager` class to access configu
 It's worth noting that this also makes the dependency on the configuration values completely opaque. You have to either look at the code or run it and get errors to know what configuration values it needs.
 
 **Config Accessors**  
-This led me to my second design iteration, configuration accessors. The idea was to hide configuration behind a bunch of functions. This was modeled after the iDesign accessor concept (which is much like an anti-corrution layer).
+This led me to my second design iteration, configuration accessors. The idea was to hide configuration behind a bunch of functions. This was modeled after the iDesign accessor concept (which is much like an anti-corruption layer).
 
 This was much easier to test because it could be injected like any other dependency, and thus mocked like any other dependency. It also made configuration usage more readable because each configuration scenario was given a context-relevant name. The downside was implementing so many functions to access configuration. I also realized that implementing a function-based interface exposed my expectation that config values would come from a data store. Passing configuration values decided at write time or passed from the calling function required the excessive ceremony of a whole new accessor implementation. 
 
 
 ## Other designs
 Here are some other configuration designs that I ruled out for my own work, but I have seen and experienced.
-- **Static config wrapper**: A static `Configuration` class with methods like `GetConfigValue(KeyType key)`. This does effectively centralize descisions like config storage. It can also avoid constants and improve discoverability by using named constants for the keys. However, is still hard to test, creates an implicit config dependency, and is prone to leak knowledge of config values around the system. It also locks all consumers into the same configuration decisions.  
+- **Static config wrapper**: A static `Configuration` class with methods like `GetConfigValue(KeyType key)`. This does effectively centralize decisions like config storage. It can also avoid constants and improve discoverability by using named constants for the keys. However, is still hard to test, creates an implicit config dependency, and is prone to leak knowledge of config values around the system. It also locks all consumers into the same configuration decisions.  
 Using strings for the keys is a strictly inferior version that litters the program with literals.
 - **Injected config utility**: Use key-based access to any configuration, but inject the helper instead of statically accessing the helper. This is easier to mock than the static version and allows different configuration implementations for different parts of the system. However, still falls short in making necessary configuration values clear. 
 - **Config values as constructor parameters**: really just a sub-type of Options. The major weakness here is that directly using system types (like string, int, etc) can pile up fast and is more awkard to inject using reflection-based frameworks.
@@ -55,7 +55,7 @@ I set out to see if there was a framework that would help me bind configuration 
 
 
 ## Volatility comparison
-Now let's look at various ways we might change our expections and see how the different designs hold up. I'll be comparing: 
+Now let's look at various ways we might change our expectations and see how the different designs hold up. I'll be comparing: 
 - Direct: Using a tool like ConfigurationManager to directly access configuration
 - Static: Using a global static utility for accessing configuration. We'll assume named constant keys.
 - Accessor: Using a module-specific type for injecting configuration. Values are returned by methods
@@ -71,7 +71,7 @@ Add a configuration value
 
 Remove a configuration value
 - Direct: Unsafe. Configuration can be referenced from anywhere and so all code is susceptible to change. You must search and test the whole system to ensure the value is no longer used. Any remaining references will throw a runtime error.
-- Static: Unsafe, but easier. Configuration can be referenced from anywhere. You must check and test the every system that uses the configuration helper throughly because all code is susceptible to change. The search is aided by tooling. Remaining references will cause a compiler error because we're using named constants as value keys.
+- Static: Unsafe, but easier. Configuration can be referenced from anywhere. You must check and test the every system that uses the configuration helper thoroughly because all code is susceptible to change. The search is aided by tooling. Remaining references will cause a compiler error because we're using named constants as value keys.
 - Accessor: Easy, safe. Any missed usage of deleted method will be caught at compile time. Since the accessor is created for a certain component, only that component needs to be retested.
 - Options: Easy, safe. Any missed usage of deleted method will be caught at compile time. Since the type is created for a certain component, only that component needs to be retested.
 
@@ -111,7 +111,7 @@ Enable configuration values per culture/language
 - Accessor: Possible and easy (can always inject the culture). At most need to change every config accessor
 - Options: Possible and easy. Probably only need to change composition root.
 
-White label platform, load config per whitelabel customer allowing shared infrastructure with different behavior and potentionally different storage/resources
+White label platform, load config per whitelabel customer allowing shared infrastructure with different behavior and potentially different storage/resources
 - effectively the same question as culture except...
 - Static: Cannot reliably manage more than one customer per deployment since static values are shared between threads and instances. Causes significant concurrency issues.
 

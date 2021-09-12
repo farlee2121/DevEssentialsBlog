@@ -5,7 +5,7 @@ layout: default
   <header id="main" style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
     <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
     <p class="meta">
-    {{ page.date | date: "%B %-d, %Y" }}
+    {{ page.date | date: "%B %-d, %Y" }} | Read Time: {{page.content |  reading_time_as_i }}
     {% if page.author %} - {{ page.author }}{% endif %}
     </p>
   </header>
@@ -21,7 +21,21 @@ layout: default
   {% if page.series %}
   <section class="series-list">
     <header>Series</header>
-    {% series %}
+    <ul>
+      {% assign count = '0' %}
+      {% for post in site.posts reversed %}
+      {% if post.series == page.series %}
+          {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+          <li>
+          {% if page.url == post.url %}
+              {{ post.title }}
+          {% else %}
+              <a href="{{post.url}}">{{post.title}}</a>
+          {% endif %}
+          </li>
+      {% endif %}
+      {% endfor %}
+      </ul>
   </section>
   {% endif %}
 

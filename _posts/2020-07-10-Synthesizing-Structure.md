@@ -5,7 +5,7 @@ tags: [Design Thinking, System Structure, Project Structure, Synthesizing, Desig
 
 # Synthesizing Project Organization Methods
 
-How to organize code into projects/packages can be a challenge. Here's an interesting idea I thought of from synthsizing ideas from Robert Martin, Juval Lowy, Mark Seemann, and how many nuget packages are organized.
+How to organize code into projects/packages can be a challenge. Here's an interesting idea I thought of from synthesizing ideas from Robert Martin, Juval Lowy, Mark Seemann, and how many nuget packages are organized.
 
 <!-- more -->
 
@@ -21,9 +21,9 @@ The ideas:
 ### Maximize Reuse 
 IDesign emphasizes the stand-alone reusability of services. Each service is, in a way, an api for some aspect of the nature of the business. Thus, a service shouldn't be orienting its flows to specific callers. Rather, it should favor becoming general to satisfy additional caller use-cases over adding specific paths (generalized methods are more resistant to change whereas more specific methods increase vulnerability to change).
 
-This makes sense, tests are really our first consumer of code. So, just as code get's more general to accomodate more specific tests, services get more general to accomodate more specific use cases.
+This makes sense, tests are really our first consumer of code. So, just as code gets more general to accommodate more specific tests, services get more general to accommodate more specific use cases.
 
-It also meshes with the Open-Closed principle. The services offer genralized extensibility to their callers without changing their internals workings to meet caller needs.
+It also meshes with the Open-Closed principle. The services offer generalized extensibility to their callers without changing their internals workings to meet caller needs.
 
 ### Minimize Dependency
 However, this conflicts with upstream callers requiring as little as possible of their dependencies. We don't want to expose callers to unrelated changes, or depend on unneeded features. That makes it harder to swap dependency implementations.
@@ -36,7 +36,7 @@ In this way, each service defines its own dependency contracts. Callers own thei
 
 This also happens to be the general mode of functional programming. Functions specify dependencies on other functions as a signature of arguments to output. Higher flows then partially apply, bind, or otherwise adapt functions to meet each others signatures. 
 
-From an assembly organization standpoint, this looks kinda like the `Library.Core` and `Library.ImplementationDetail` split. Each service depends on its own abstractions and has no design-time depenency on any other service.  
+From an assembly organization standpoint, this looks kinda like the `Library.Core` and `Library.ImplementationDetail` split. Each service depends on its own abstractions and has no design-time dependency on any other service.  
 
 A separate project/assembly with a dependency on both the calling service and the implementing service. It defines the adapters between the caller abstractions and the implementer. This adapter project is ultimately what gets referenced when constructing the composition root in the final client.
 

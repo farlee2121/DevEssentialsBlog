@@ -5,7 +5,7 @@ tags: [Design thinking, Case Study, SOLID, Open-Closed Principle]
 
 # Chat Library Case Study: Open-Closed Application
 
-This is a throw back to one of my earlier wrestlings with the Open-Closed principle and writting extensible frameworks. The goal is to shed some light on an important realization that let me to understanding the Open-Closed Principle.
+This is a throw back to one of my earlier wrestlings with the Open-Closed principle and writing extensible frameworks. The goal is to shed some light on an important realization that let me to understanding the Open-Closed Principle.
 
 ## The Problem
 
@@ -18,8 +18,8 @@ Requirements
  - Recipient should be able to respond via email
  - Recipient contact information should not be exposed
  - Both app and email should maintain conversation thread
- - Must accomodate attachments on messages in both directions
- - A sender and reciever can have multiple conversations
+ - Must accommodate attachments on messages in both directions
+ - A sender and receiver can have multiple conversations
  - Conversations are segmented by certain in app entities. The app should be able to display conversations by these entity divisions
  - We needed to store some specific information on users and conversations to be displayed in the UI. These extra properties were not generally chat related.
    - May also search or filter on those extra properties.
@@ -51,13 +51,13 @@ Fortunately, I have some smart friends who are willing to talk sense into me. On
 
 Tags. Nothing more than a collection of strings pairs associated with the entity. 
 
-My friend commented that accomodating every unknown case increases complexity too much (if it's even possible). The library should know about the flexibility it offers.
+My friend commented that accommodating every unknown case increases complexity too much (if it's even possible). The library should know about the flexibility it offers.
 
-That is the key difference between my earlier solutions an tags. My solutions were trying to invite consumers concerns into my system. The nature of extension was hidden from my library and thus uncontrolable. Tags, however, are fully known to my system. I can reason about and act on them in predictable ways. 
+That is the key difference between my earlier solutions an tags. My solutions were trying to invite consumers concerns into my system. The nature of extension was hidden from my library and thus uncontrollable. Tags, however, are fully known to my system. I can reason about and act on them in predictable ways. 
 
 The library consumer also doesn't loose any flexibility. They can keep any referential information they want in the tags, be it filters, display information, metadata, etc. The consumer is responsible for it's interpretation of the provided extension points.
 
-I was able to accomplish a clean separation of the chat and core domains. Emails, entity filters, and display properties all fit nicely in tags. I was also later able to  accomodate special SMTP headers for threading without making changes to the chat library.
+I was able to accomplish a clean separation of the chat and core domains. Emails, entity filters, and display properties all fit nicely in tags. I was also later able to accommodate special SMTP headers for threading without making changes to the chat library.
 
 ## The Open-Closed Principle
 

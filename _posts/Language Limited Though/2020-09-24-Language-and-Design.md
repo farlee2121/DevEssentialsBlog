@@ -24,7 +24,7 @@ I got frustrated about 15 minutes into a Clojure tutorial because it hadn't even
 
 This broadened my perspective and convinced me to evaluate FP for practical use. F# is the obvious choice for a .NET developer and it led me to Scott Wlaschin's blog, https://fsharpforfunandprofit.com/. I recommend you start [here](https://fsharpforfunandprofit.com/fppatterns/).
 
-Scott Wlaschin is a hero. His blog is undertandable and practical. He directly addresses best practices from OO languages and how they map to FP while helping you shift your thinking to an FP mindset.
+Scott Wlaschin is a hero. His blog is understandable and practical. He directly addresses best practices from OO languages and how they map to FP while helping you shift your thinking to an FP mindset.
 
 ## The Turning Point
 
@@ -35,7 +35,7 @@ This connects with my knowledge of spoken languages. The Sapir–Whorf hypothesi
 The very same concept applies to programming. Designers fashion languages around the problems that they want to solve. By understanding the approach of major language types, we expand our very ability to express and think about design problems.
 
 ## Functional Thinking
-Functional turtiorials can be intimidating. A big piece of this is just unfamiliarity. Another big piece can be references to theory. Functional programming has deep roots in mathematics. This is very good and powerful, but overwhelming when a learner is just starting out.
+Functional tutorials can be intimidating. A big piece of this is just unfamiliarity. Another big piece can be references to theory. Functional programming has deep roots in mathematics. This is very good and powerful, but overwhelming when a learner is just starting out.
 
 I'll do my best to approach just enough of the underpinning ideas and focus on concrete problems.
 

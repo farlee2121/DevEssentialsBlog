@@ -85,7 +85,7 @@ We can increase parallel work and shorten the critical path by splitting out the
 
 ![Split activity example](../post-media/IDesign-Projects/Network-InternalSplit.svg)
 
-We can also completely parallelize UI and logic development by designing to a contract/simulator. Note that this incurs extra work to build a simulator and integrate the real logic later. It may not be worthwile unless the business logic is very time consuming.
+We can also completely parallelize UI and logic development by designing to a contract/simulator. Note that this incurs extra work to build a simulator and integrate the real logic later. It may not be worthwhile unless the business logic is very time consuming.
 
 ![Design to Contract example](../post-media/IDesign-Projects/Network-SimulatorSplit.svg)
 
@@ -116,7 +116,7 @@ The classic and surprisingly complex question, project cost. We've already seen 
 - *Direct Cost*: Cost incurred on activities in the network. More generally, cost for work that advances project completion. Think developer time.  
  Our network dependencies allow us to calculate how much work is available when. This can be compared against staffing options to calculate active working time and idle time for a given solution. Some projects count idle time as direct cost some as indirect.
 
-- *Indirect Cost*: Costs like office space, supplies, utilities, tooling, PTO, managers. These costs tend to be constant with time, or cummulatively linear over time.
+- *Indirect Cost*: Costs like office space, supplies, utilities, tooling, PTO, managers. These costs tend to be constant with time, or cumulatively linear over time.
 
 - *Total Cost*: Sum of direct and indirect costs 
 
@@ -124,7 +124,7 @@ Note that while project design affects staffing, thus direct cost, the project d
 
 ![Cost over Time](../post-media/IDesign-Projects/CostCurves.png)
 
-### Efficency
+### Efficiency
 In essence, efficiency is how much of your staff's time is idle versus actively contributing to project completion. The critical path method calculates *project efficiency* as the sum of all activity efforts without regard to workdays or idle time over the sum of actual effort accounting for idle time and workdays.
 
 Target range is $15\% \le \text{efficiency} \le 25\%$. Over 30% is likely too rigorous for any team to execute and high-risk. This number is much lower than expected, largely due to the difference between the work week and raw sum off effort without respect to work days.
@@ -157,7 +157,7 @@ Schedule, cost, and staff are all measures that could be estimated from past exp
 
 Risk as a decision tool is best understood when piecing everything together. We'll revisit risk in the [All Together](#all-together) section, but the general rule is that risk should be $0.4 \le \text{risk} \le 0.75$
 
-Keep in mind that risk is not a probability, but an index. It only shows relative likelyhood of failure.  
+Keep in mind that risk is not a probability, but an index. It only shows relative likelihood of failure.  
 
 **Criticality risk**  
 *Criticality risk* is based on grouping the activity floats into G groups and assigning a weight to each group. Typically $G = 4$ and the groups are critical=4, high=3, medium=3, and low=1.
@@ -198,7 +198,7 @@ Some common tweaks to make a project possible are
 - Decompress as necessary
 
 ### Compress
-With normal established, start trying to compress the graph. Realize that each iteration of compression may change the critical path, thus changing likely compression candiates. Compressing may also change the desired staff distribution.
+With normal established, start trying to compress the graph. Realize that each iteration of compression may change the critical path, thus changing likely compression candidates. Compressing may also change the desired staff distribution.
 
 Graph the cost vs duration for each compressed solution. Repeat until you start hitting a limit. This could be
 - ~25-30% project duration reduction from normal
@@ -210,9 +210,9 @@ Graph the cost vs duration for each compressed solution. Repeat until you start 
 ![Cost vs duration](../post-media/IDesign-Projects/CompressionPlot.png)
 
 ### Decompress
-Decompress the normal solution and/or compressed solutions with favorable risk values. Try adding different amounts of float to see how each amount changs cost and risk. Plot risk and total cost versus duration for all solutions.
+Decompress the normal solution and/or compressed solutions with favorable risk values. Try adding different amounts of float to see how each amount changes cost and risk. Plot risk and total cost versus duration for all solutions.
 
-Stop condidions
+Stop conditions
  - hit bottom of target risk range ($.4 \le risk \le .75$)
  - passed likely project duration limits
  - risk starts decreasing slowly (much past point of minimum decompression)
@@ -262,4 +262,4 @@ Observations that are probably minimally helpful
 
 Other math notes from the book
  - The point of minimum decompression is the inflection point of the risk curve. In other words, it is the point where decrease in risk for time added has zero acceleration. Any point before that will have increasing returns for added time and any point after will have decreasing returns.
- - Risk-Cost Crossover: The derivatives of risk and direct cost should cross over at two points (because risk is cubic and cost is quadradic). These are where the risk limits of .3 and .75 are estimated from. 
+ - Risk-Cost Crossover: The derivatives of risk and direct cost should cross over at two points (because risk is cubic and cost is quadratic). These are where the risk limits of .3 and .75 are estimated from. 
