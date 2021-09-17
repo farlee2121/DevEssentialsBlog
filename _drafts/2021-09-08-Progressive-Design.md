@@ -7,7 +7,8 @@ tags: [Design Thinking]
 
 <!-- TODO: consider my presentations to make sure i'm not beyond my expertise. Especially on company organization. I don't want to trivialize long-standing hard problems when I haven't actually done so
 - extra reference? https://blog.ploeh.dk/2012/01/03/SOLIDisAppend-only/
-- https://blog.ploeh.dk/2012/02/02/LooseCouplingandtheBigPicture/ -->
+- https://blog.ploeh.dk/2012/02/02/LooseCouplingandtheBigPicture/
+- https://blog.ploeh.dk/2012/12/18/ZookeepersmustbecomeRangers/ -->
 
 Choosing the right amount of process is an art. Too much process is smothering and too little is a mess. However, I think [incremental, stable, and additive processes](TODO) naturally start simple and mature *progressively* with our demands.
 

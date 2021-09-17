@@ -10,7 +10,7 @@ I learned some powerful concepts, but the takeaways were not what I expected. Ov
 
 ## What are Macros
 
-There are many kinds of macros. The kind I'm talking about in clojure are syntactic macros. In short, this kind of macro is like a function that takes code as input and returns code as output. These code-modifying functions are run at compile time instead of runtime. Macros effectively allow language users to extend the language's syntax without modifying the language itself.
+There are many kinds of macros. The kind I'm talking about in clojure are syntactic macros. In short, this kind of macro is like a function that takes code as input and returns code as output. These code-modifying functions run at compile time instead of runtime. Macros effectively allow language users to extend the language's syntax without modifying the language itself.
 
 The Rust docs have a nice general [introduction to macros](https://doc.rust-lang.org/stable/book/ch19-06-macros.html). A Clojure-specific introduction can be found [here](http://clojure-doc.org/articles/language/macros.html).
 
@@ -33,9 +33,9 @@ Macros also hurt understanding buy raising the ceiling for cleverness. Code that
 
 The vast options created by macros are also not always a good thing. Constraints sometimes lead to better solutions.
 
-One example is my experience with Clojure versus F# unit tests. Clojure test libraries lean on macros to define tests like functions and expand them with fixtures and other niceties. The global approach to defining tests pushes the macros to register tests in a global hidden variable to maintain the abstraction. Tests can be reused and operated on with additional macros, but it gets complicated very quickly.
+One example is my experience with Clojure unit tests versus F# unit tests. Clojure test libraries lean on macros to define tests like functions and expand them with fixtures and other niceties. The global approach to defining tests pushes the macros to register tests in a global hidden variable to maintain the abstraction. Tests can be reused and operated on with additional macros, but it gets complicated very quickly.
 
-F# doesn't have macros. Libraries, like [Expecto](https://github.com/haf/expecto), instead represent tests as data structures. Tests are defined as lists. Test lists and can be operated on, reused, and aggregated like any other list of data structures. This made [test api](TODO) rather simple to setup for standard unit tests in F#. It's very easy to reason about how the tests are being reused for all future contributors.
+F# doesn't have macros. Libraries, like [Expecto](https://github.com/haf/expecto), instead represent tests as data structures. Tests are defined as lists. Test lists and can be operated on, reused, and aggregated like any other list of data structures. This made [test api](../_posts/2021-02-26-TestApi-in-FSharp.md) rather simple to setup for standard unit tests in F#. It's very easy to reason about how the tests are being reused for all future contributors.
 
 ## Conclusion
 
