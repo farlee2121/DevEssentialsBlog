@@ -12,7 +12,7 @@ excerpt_separator: <!-- more -->
 Understanding why things work is exceptionally important for developers. Our [job is about modeling problems](TODO) and the variety of problems we solve requires a wide range of processes. The [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3) states
 "No ideal process, or set of processes, exists" "Software processes must be selected, adapted, and applied as appropriate for each project and each organizational context." (Ch 1.1 intro), and process without understanding leads to [frustrating lack of results](https://stevemcconnell.com/articles/cargo-cult-software-engineering/).
 
-I believe that a common set of properties underlie the most successful practices in software. These practices are all incremental, stable, and additive.
+I hypothesize that a common set of properties underlie the most successful practices in software. These practices are all incremental, stable, and additive.
 
 <!-- more -->
 
