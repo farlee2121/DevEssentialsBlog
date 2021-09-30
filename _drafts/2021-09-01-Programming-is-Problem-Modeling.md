@@ -88,6 +88,8 @@ Once can consider lifecycle stages as benchmarks in these accumulated increments
 Note that there is no single perfect solution. Instead, there is a target of "good enough". Any solution that meets all known requirements falls in "good enough".
 Conversely, satisfying requirements is our stop condition to consider work complete. 
 
+> A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away. - Antoine de Saint-Exupery
+
 Good requirements are essential. Bad requirements cause us to narrow in on the wrong solutions and consider work finished before it meets the actual customer need. The further off our requirements, the worse our solutions.
 
 Fortunately, requirements mostly need to limit explorations to the right area. Problem understanding is refined through the programming lifecycle, adding new requirements to the "definition of done". This will shift our final "good enough" target, but also enables progressive discovery.
