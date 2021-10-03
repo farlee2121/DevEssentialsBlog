@@ -1,4 +1,8 @@
-
+---
+layout: post
+tags: [Testing, Quality, Measurement]
+excerpt_separator: <!-- more -->
+---
 
 A dev raising that my test diagram doesn't show quality process improvement. Real efficiency achieved through repeatedly identifying the root cause of an issue, and changing your process to solve it permanently. Identifying issues and solving them can't be done with just intuition, it requires measurement.
 
