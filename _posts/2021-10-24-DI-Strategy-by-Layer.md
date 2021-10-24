@@ -5,7 +5,7 @@ tags: [F#, DI, Dependency Injection, iDesign, Layered Architecture]
 
 # Theory: Dependency Injection Scheme is Determined by Responsibility Layer 
 
-Scott Wlaschin posted an [incredible series](https://fsharpforfunandprofit.com/posts/dependencies/) on dependency injection. It clarified the different techniques and cases where each is useful. I noticed an interesting relationship between the techniques situations and the layers I use to categorize services.
+Scott Wlaschin posted an [incredible series](https://fsharpforfunandprofit.com/posts/dependencies/) on dependency injection. It clarifies the different techniques and cases where each is useful. I noticed an interesting relationship between the techniques and the layers I use to categorize services.
 
 # Techniques
 
@@ -24,16 +24,16 @@ Overall, he recommends avoiding Reader Monad and Dependency Interpretation unles
 A quick review of iDesign layers. Each separates out a kind of cohesion or responsibility in the system.
 - **Managers**: encapsulate composition of business rules into workflows
 - **Engines**: encapsulate repeated business rules, especially those that may have alternative strategies.
-- **Accessors**: each encapsulate key actions on some domain concept. They build up "atomic actions" of a domain type.
+- **Accessors**: encapsulate key "atomic" actions on some domain concept. They build up the basic units of change for that domain type.
 
 
-## The Theory
+## The Conjecture
 
-He mentions that Dependency Parameterization is good for I/O heavy workflows.
+Scott mentions that Dependency Parameterization is good for I/O heavy workflows.
 
 This got me to thinking of accessors in iDesign. Then I realized that each iDesign layer represents a type of cohesion. Thus, it would make sense that each layer typically wants the same kind of dependency injection pattern.
 
-- Accessory -> strategy
+- Accessory -> parameterization
 - Engines -> pure / rejection
 - Managers -> 
   - rejection
@@ -41,17 +41,18 @@ This got me to thinking of accessors in iDesign. Then I realized that each iDesi
 
 
 I've been using dependency rejection and data structure-focused techniques for managers since reading Domain Modeling Made Functional (also by Scott Wlaschin and amazing). 
-I know I like it
+
+I know I like it because
 - It reduces mocks
 - It's transaction friendly (nothing committed until whole logic flow is finished)
 - The domain is more evident. Harder to hide decisions in side-effects nested somewhere in a call-chain
 - It's portable and composable by default
 
-The exception to Dependency rejection for managers is when I have a swappable pure behavior. In other words, when I want to use an engine.
+The exception to dependency rejection for managers is when I have a swappable pure behavior. In other words, when I want to use an engine.
 
-I've tried keeping my engines to pure data-in data-out for a long time.
+I've tried keeping my engines to pure data-in data-out for a long time. The [CQRS](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation) principle is a good explanation for why.
 
-Accessors are the uncertain one here. Dependency rejection greatly reduces the need for centralized storage services. My accessors have been fewer an smaller when using this pattern, so the issues haven't really popped up. It would make sense that Accessors would use parameterization because they are IO heavy. Any transactional guarantees that can't be met in a parameterized dependency are probably going to require stateful, imperative workflows.
+Accessors are the uncertain one here. Dependency rejection in managers greatly reduces the need for centralized storage services. My accessors have been fewer and smaller when using this pattern, so the issues haven't really popped up. It would make sense that accessors would use parameterization or reader monad because they are IO heavy. Any transactional guarantees at this level of interfacing with infrastructure probably require stateful, imperative workflows.
 
 ## Conclusion
 
