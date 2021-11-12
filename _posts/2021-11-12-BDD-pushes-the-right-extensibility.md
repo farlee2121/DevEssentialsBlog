@@ -19,18 +19,5 @@ Behavior-Driven testing writes tests in terms of the problem without worrying ab
 In short, behavioral-driven tests push our system to have the extensibility most suited for the problem we are solving.
 
 <!-- 
-Potential extra post. I love test api because it hits key concerns across most lifecycle phases. The singular technique combines
-- understanding requirements
-- driving design from understanding the problem  
-- incremental, stable progress (of requirements and code)
-- Self-documenting code
-- progressive design
-  - pushes problem-based extensibility
-  - tests are stable across implementations so we can minimally implement and expand later as new expectations arise
-- (De)Composability: Since tests aren't coupled to implementations, I can refactor out expectations that are common to many components without compromising test quality
-- Scales to multi-team systems
-
-Maybe a bit more effort upfront than other ways of testing, but the single effort covers so many outcomes and is stable under so many changes that the efficiency is much higher even in the short-term
-
 Q: maybe keep it more focused on lifecycle stages
  -->
