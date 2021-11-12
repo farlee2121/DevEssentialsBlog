@@ -6,8 +6,7 @@ tags: [Tools, Process, Quality]
 TODO: rename file to match final title
 # Foundation of Measurement
 
-
-Software Engineers are differentiated from other programming disciplines by economical, repeatable, and reliable results. Such consistency requires measurement, data on which to make informed decisions. I propose that source control an work item tracking are the minimal kernel of such process.
+Software Engineers are differentiated from other programming disciplines by economical, repeatable, and reliable results. Such consistency requires measurement, data on which to make informed decisions. I propose that source control an work item tracking are the kernel of such process.
 
 First, what are the goals of a refined process? What do we want refine through measurement?
 - Delivery of expected value
@@ -17,22 +16,48 @@ First, what are the goals of a refined process? What do we want refine through m
   - Cause of defects that slip through
   - effectiveness of defect prevention techniques
 
-Let's consider common tools
-- **Automated tests**: Extremely valuable for quantifying expectations and preventing defects, but just one kind of measure. 
-- **Debugger**: Convenient, but unnecessary. Some even [argue](https://www.artima.com/weblogs/viewpost.jsp?thread=23476) they should be avoided.
-- **IDE**: Convenient, but unnecessary. Does not bar us from measurement and successful delivery. 
-- **Compiler**: Code can be delivered without ever compiling and no measurability is lost. Though, leaning on a compiler for feedback is convenient.
-- **Frameworks & package management**: Inherently replaceable. Facilitate faster implementation, not quality measurement.
-- **Loggers**: Extremely valuable for runtime measurement. Could I still rate a team as mature without logging? Yes. For example, tightly constrained low-level systems may not have the option to leverage logging.
-- **Work tracking**: Without work tracking, we lose the why and when of work done. Estimates and value delivered have no basis for comparison. Coordination is haphazard and project information is permanently lost.
-- **Source control**: Without we lose the what/how. We can't characterize quality over time, sources of defects, or 
+Let's consider common tool categories
+- automated tests
+- debugger
+- IDE
+- compiler
+- frameworks & package management
+- loggers
+- work tracking
+- source control
+- performance profilers
+- CI/CD or build and deployment
+- Infrastructure (servers, etc)
 
+We can divide these into several categories.
 
-Note: my argument for source control and work tracking doesn't seem very tight. It feels like tests and logs could have similar amounts of support/necessity.
+Those that are convenient, but not inherent to measurement and refinement: debuggers, IDE, compilers, frameworks & package managers, build and deployment, and infrastructure.
+
+A team can control improvement over time and deliver consistently without these tools under the right conditions. For example, build, deployment, compilers and infrastructure are not necessary if a team only delivers code and not running software.
+
+The remaining tools are useful for measurement: automated tests, loggers, work tracking, source control, performance profilers
+
+I see one key difference that splits our remaining tools. Tests, logs, and performance profiles can all be done later so long as the right artifacts are available. On the other hand, work item tracking and source control collect information that is irreplaceable. They are the tools that collect the artifacts other tools measure for quality and progress.
+- Work item tracking captures what was done (at need level), when it was done, why it was done, who did it, and who they did it for. None of this information is replaceable with any other type of tool.
+- Source control captures what code met a need (thus design and code quality), who implemented it, and often who approved it. Good source control allows measurements to be backfilled for any state of the system over time.
+
+<!-- measurements could be taken at a point in time and still allow quantitative demonstration of improvement -->
+
+## Conclusion
+I conclude that work item tracking and source control are the most foundational tools for a software engineering process. Together, they record a holistic history of a project. Having both in place allows the team to evolve their measurement and quality processes over time without loss of information. However, taking one away causes a permanent gap in project analysis.
+
+<!-- Note: my argument for source control and work tracking doesn't seem very tight. It feels like tests and logs could have similar amounts of support/necessity.
 - I suppose if we can recreate a system version, we can reproduce logs and backfill tests
 - should be clear I think the other tools (especially tests and logs) are important. It's just that work tracking and source control are the only tools who's value can't be replicated later
 
-Instead of explaining each tool. Divide them into groups
+Instead of explaining each tool. Divide them into groups -->
+
+<!-- : Extremely valuable for runtime measurement. Could I still rate a team as mature without logging? Yes. For example, tightly constrained low-level systems may not have the option to leverage logging. 
+
+ Without work tracking, we lose the why and when of work done. Estimates and value delivered have no basis for comparison. Coordination is haphazard and project information is permanently lost.
+ 
+ Without we lose the what/how. We can't characterize quality over time, sources of defects, or 
+-->
 
 <!-- Programming is a discipline overflowing with tools. Picking which to use and why can be overwhelming. I propose that the most fundamental tools are source control and work item tracking. These two form the foundation of measurement.
 
