@@ -18,7 +18,9 @@ Emergencies and misunderstanding happen from time to time, but frequent occurren
 
 This task churn is a vicious cycle. Long term improvements and personal growth are usually the first to get dropped for tackling emergencies. This cuts off the improvement that could lift a team out of the emergency cycle. Compounding the issue, task churn increases context switching and decreases implicit commitment to the deliverable, which reduces productivity in the short term too.
 
+I don't mean to discount continuous priority systems (e.g [Kanban](https://docs.microsoft.com/en-us/devops/plan/what-is-kanban)). Such methods still define controls to limit switching once work items are in-progress. However, I think fixed-length sprints are a sharper tool for teams dealing with high uncertainty. Sprints require less intentionality and include more scheduled opportunity to recognize issues with priority and planning. Sprints also set a simple expectation to regulate customer-developer relationships while giving both parties appropriate control.
+
+
 ## Conclusion
 I still believe that sprints should be stable, and now I have a clearer picture of why. Sprint stability is a indicator of how well we understand our customer and how well we plan. It is the basis of shared expectations, and predictability for wider planning.
 
-<!-- Even in a more continuous priority system (like fourstarzz). I work on a task until it's done. A task should rarely be interrupted once started -->
