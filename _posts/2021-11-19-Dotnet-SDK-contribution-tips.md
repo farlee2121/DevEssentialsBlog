@@ -10,7 +10,7 @@ Here are a few lessons I've learned that simplify working on the project.
 
 
 ## Solution Filters
- Some of the sub-projects (like dotnet-watch) have their own solution filter files (e.g. `dotnet-watch.slnf`). Use these, Visual Studio will run much faster
+Some of the sub-projects (like dotnet-watch) have their own solution filter files (e.g. `dotnet-watch.slnf`). Use these, Visual Studio will run much faster
 
 ## Partial Build/Test
 - The full test suite takes forever (more than an hour), focus to only the tests you want.
@@ -19,10 +19,11 @@ Here are a few lessons I've learned that simplify working on the project.
   ```ps1
   ./build.cmd -test -projects path/to/test/project.csproj
   ```
+  - Tests can supposedly be run with `dotnet test` or Visual Studio after running `dogfood.cmd` or `sdk-build-env.bat`. I've not had luck with it
   
-- Test can supposedly be run with `dotnet test` or Visual Studio after running `dogfood.cmd` or `sdk-build-env.bat`. I've not had luck with it
-  - Partial builds can also be done with `./build.cmd -projects path/to/test/project.csproj`
+- Partial builds can also be done with `./build.cmd -projects path/to/test/project.csproj`
   - [This file](https://github.com/dotnet/sdk/blob/main/eng/common/build.sh) is the core build script. It's a useful reference. 
+  
 
 
 ## Tool Aliases
@@ -40,7 +41,7 @@ SDK-specific tools like `dogfood.cmd` and `build.cmd` will be used all the time.
     ```
 
 ## Global Tool Gotcha
- Use dogfood.cmd over directly invoking the built dotnet.exe. Direct invocation will not use the local build of tools (like dotnet-watch)
+Use dogfood.cmd over directly invoking the locally built dotnet.exe. Direct invocation will run the local core executable, but does not configure the core SDK executable to use locally built versions of built-in tools (like dotnet-watch)
 
 ## Different ways to use the local SDK
   - `dogfood.cmd` is the easiest route
@@ -48,9 +49,7 @@ SDK-specific tools like `dogfood.cmd` and `build.cmd` will be used all the time.
   - `dogfood.ps1` can setup the local build in your current powershell instance similar to `sdk-build-env.bat` does for Command Prompt
   - Directly setup environment variables
     - This would allow the settings to persist across all shells
-    ```json
-    TODO
-    ```
+    - Proper environment variables can be found in [dogfood.ps1](https://github.com/dotnet/sdk/blob/main/eng/dogfood.ps1)
 
 
 ## Using from VSCode
