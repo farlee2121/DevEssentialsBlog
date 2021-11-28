@@ -83,7 +83,8 @@ gulp.task("theme-default", gulp.parallel(['js', 'img']), function () {
 
 
 //NOTE: I moved the bootstrap isolation to the sass folder so it's done as part of the build. 
-//   We can move it back to a one-off task if it increases the build time too much. The file shouldn't change often and regenerating it is simple
+//      We can move it back to a one-off task if it increases the build time too much (current estimate looks like 5s).
+//      The file shouldn't change often and regenerating it is simple
 gulp.task("default", gulp.series(['isolate-bootstrap-css', 'minify-bootstrap-css']), function () {
     return gutil.log('... Gulp is running!');
 });
