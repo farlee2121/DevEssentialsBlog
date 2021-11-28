@@ -11,10 +11,12 @@ const shell = require('gulp-shell');
 const less = require('gulp-less');
 const cssmin = require('gulp-cssmin')
 const replace = require('gulp-replace');
+var sass = require('gulp-sass')(require('sass'));
 
-gulp.task('js', function () {
+
+gulp.task('js', function() {
     gutil.log('... Minifying js');
-    gulp.src(['js/partials/**.js'])
+    return gulp.src(['js/partials/**.js'])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .on('error', (err) => {
@@ -23,9 +25,9 @@ gulp.task('js', function () {
         .pipe(gulp.dest("js/"))
 });
 
-gulp.task("img", function () {
+gulp.task("img", function() {
     gutil.log('... Minifying images');
-    gulp.src('img/**/*.{png,svg,jpg,gif}')
+    return gulp.src('img/**/*.{png,svg,jpg,gif}')
         .pipe(imagemin())
         .on('error', (err) => {
             gutil.log(gutil.colors.red('[Error]'), err.toString());
@@ -33,9 +35,9 @@ gulp.task("img", function () {
         .pipe(gulp.dest('img/'))
 });
 
-gulp.task('minify-bootstrap-css', function () {
+gulp.task('minify-bootstrap-css', function() {
     gutil.log('... Minifying isolated bootstrap');
-    gulp.src('css/vendor/bootstrap-iso.css')
+    return gulp.src('css/vendor/bootstrap-iso.css')
         .pipe(cssmin())
         .on('error', (err) => {
             gutil.log(gutil.colors.red('[Error]'), err.toString());
@@ -44,24 +46,29 @@ gulp.task('minify-bootstrap-css', function () {
         .pipe(gulp.dest('css/vendor/'));
 })
 
-gulp.task("isolate-bootstrap-css", ['minify-bootstrap-css'], function () {
+gulp.task("isolate-bootstrap-css", function() {
     gutil.log('... Generating isolated bootstrap');
-    gulp.src('css/bootstrap-iso.less')
-        .pipe(less())
+    return gulp.src('css/bootstrap-iso.scss')
+        .pipe(sass())
         .pipe(replace('.bootstrap-iso html', ''))
         .pipe(replace('.bootstrap-iso body', ''))
         .pipe(gulp.dest('css/vendor/'));
 });
 
-gulp.task("serve", function () {
+gulp.task("serve", function() {
     gutil.log('... Launching Web browser');
     gutil.log('... Starting Jelyll');
-    shell.task([
+    let task = shell.task([
         "python -m webbrowser 'http://localhost:4000/Type-on-Strap/'; cd .. && bundle exec jekyll serve --watch"
     ])
     gutil.log('... If you still see this, it might not be working well');
+    return task;
 });
 
-gulp.task("default", ['js', 'img'], function () {
+gulp.task("theme-default", gulp.parallel(['js', 'img']), function() {
+    return gutil.log('... Gulp is running!');
+});
+
+gulp.task("default", gulp.series(['isolate-bootstrap-css', 'minify-bootstrap-css']), function() {
     return gutil.log('... Gulp is running!');
 });

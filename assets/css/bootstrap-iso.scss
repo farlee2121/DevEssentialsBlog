@@ -1,0 +1,12 @@
+/*
+ To create an isolated version of Bootstrap
+ Use Gulp (npm install) in order to compile it:
+
+  gulp isolate-bootstrap-css
+
+*/
+
+.bootstrap-iso {
+    @import 'vendor/bootstrap'; //.css extension must be omitted https://www.sass-lang.com/blog/feature-watchcss-imports-and-css-compatibility
+    /*@import (less) 'vendor/bootstrap-theme.css';  //optional */
+}
