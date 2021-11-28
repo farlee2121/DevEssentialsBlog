@@ -123,6 +123,10 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
+  implementation: sass-embedded
+  load_paths:
+    - _sass/vendor
+  sourcemap: always
 plugins: 
   - jekyll-relative-links
   - jekyll-paginate

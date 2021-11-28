@@ -14,7 +14,7 @@ const replace = require('gulp-replace');
 var sass = require('gulp-sass')(require('sass'));
 
 
-gulp.task('js', function() {
+gulp.task('js', function () {
     gutil.log('... Minifying js');
     return gulp.src(['js/partials/**.js'])
         .pipe(concat('main.min.js'))
@@ -25,7 +25,7 @@ gulp.task('js', function() {
         .pipe(gulp.dest("js/"))
 });
 
-gulp.task("img", function() {
+gulp.task("img", function () {
     gutil.log('... Minifying images');
     return gulp.src('img/**/*.{png,svg,jpg,gif}')
         .pipe(imagemin())
@@ -35,7 +35,7 @@ gulp.task("img", function() {
         .pipe(gulp.dest('img/'))
 });
 
-gulp.task('minify-bootstrap-css', function() {
+gulp.task('minify-bootstrap-css', function () {
     gutil.log('... Minifying isolated bootstrap');
     return gulp.src('css/vendor/bootstrap-iso.css')
         .pipe(cssmin())
@@ -46,7 +46,7 @@ gulp.task('minify-bootstrap-css', function() {
         .pipe(gulp.dest('css/vendor/'));
 })
 
-gulp.task("isolate-bootstrap-css", function() {
+gulp.task("isolate-bootstrap-css", function () {
     gutil.log('... Generating isolated bootstrap');
     return gulp.src('css/bootstrap-iso.scss')
         .pipe(sass())
@@ -55,7 +55,18 @@ gulp.task("isolate-bootstrap-css", function() {
         .pipe(gulp.dest('css/vendor/'));
 });
 
-gulp.task("serve", function() {
+gulp.task('remove-unused-css', () => {
+    return gulp
+        .src('src/**/*.css')
+        .pipe(
+            purgecss({
+                content: ['src/**/*.html']
+            })
+        )
+        .pipe(gulp.dest('build/'));
+});
+
+gulp.task("serve", function () {
     gutil.log('... Launching Web browser');
     gutil.log('... Starting Jelyll');
     let task = shell.task([
@@ -65,10 +76,14 @@ gulp.task("serve", function() {
     return task;
 });
 
-gulp.task("theme-default", gulp.parallel(['js', 'img']), function() {
+gulp.task("theme-default", gulp.parallel(['js', 'img']), function () {
     return gutil.log('... Gulp is running!');
 });
 
-gulp.task("default", gulp.series(['isolate-bootstrap-css', 'minify-bootstrap-css']), function() {
+
+
+//NOTE: I moved the bootstrap isolation to the sass folder so it's done as part of the build. 
+//   We can move it back to a one-off task if it increases the build time too much. The file shouldn't change often and regenerating it is simple
+gulp.task("default", gulp.series(['isolate-bootstrap-css', 'minify-bootstrap-css']), function () {
     return gutil.log('... Gulp is running!');
 });
