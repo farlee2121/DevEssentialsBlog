@@ -7,6 +7,6 @@
 */
 
 .bootstrap-iso {
-    @import 'bootstrap'; //.css extension must be omitted https://www.sass-lang.com/blog/feature-watchcss-imports-and-css-compatibility
+    @import './vendor/bootstrap'; //.css extension must be omitted https://www.sass-lang.com/blog/feature-watchcss-imports-and-css-compatibility
     /*@import (less) 'vendor/bootstrap-theme.css';  //optional */
 }

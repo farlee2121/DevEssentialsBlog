@@ -5,14 +5,15 @@
     <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
     <script defer=true src="{{ site.baseurl }}/assets/js/main.min.js"></script>
 
-    <!-- CSS -->
+    <!-- CSS
+        could be inlined if deemed necessary https://www.sitepoint.com/inline-css-in-jekyll/ -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
     <!--Favicon-->
     <link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.theme_settings.favicon }}" type="image/x-icon">
 
     <!-- Canonical -->
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | downcase }}">
 
     <!-- RSS -->
     <link rel="alternate" type="application/atom+xml" title="{{ site.theme_settings.title }}" href="{{ site.url }}/{{ site.baseurl }}//feed.xml" />
@@ -21,13 +22,13 @@
     <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/vendor/font-awesome.min.css"> {% if page.bootstrap != false %}
     <!-- Bootstrap isolation CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/vendor/bootstrap-iso.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/vendor/bootstrap-iso.min.css" media="print" onload="this.media='all'">
     <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     {% endif %}
 
     <!-- Google Fonts -->
     {% if site.theme_settings.google_fonts %}
-    <link href="//fonts.googleapis.com/css?family={{ site.theme_settings.google_fonts }}" rel="stylesheet" type="text/css"> {% endif %}
+    <link href="//fonts.googleapis.com/css?family={{ site.theme_settings.google_fonts }}" rel="stylesheet" type="text/css" media="print" onload="this.media='all'"> {% endif %}
 
     <!-- KaTeX 0.8.3 -->
     {% if site.theme_settings.katex %}
