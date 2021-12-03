@@ -60,7 +60,7 @@ bootstrap: true
             <span>
         <header>
           <h1>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl | downcase }}">
               {{ post.title }}
             </a>
           </h1>
