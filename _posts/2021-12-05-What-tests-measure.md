@@ -1,12 +1,11 @@
 ---
 layout: post
 tags: [Testing, Quality, Measurement]
-# excerpt_separator: <!-- more -->
 ---
 
 <!-- TODO: inconsistent repetition of test type in the paragraph -->
 
-## What Tests Measure
+# What Tests Measure
 
 My [test types diagram](../_posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) sparked concern that mature process focuses on repeated measured improvement, not specific techniques. This is right, but I don't see the conflict. Tests are a kind of measure, and the diagram identifies common tests (measures) certain actors leverage to meet larger goals. This raises the question, what do the different kinds of tests measure? Consequently, what do they tell us about our system?
 
@@ -25,9 +24,9 @@ Repeated failure of acceptance tests often suggest insufficient or unclear custo
 
 **Developer tests**: measure how well code matches the developer's mental model. 
 
-Repeated failure of developer tests often indicate code quality and maintainability issues. Failing tests are expected during development. In fact, [TDD](https://en.wikipedia.org/wiki/Test-driven_development) expects developers to first fail a test so they know a subsequent pass means the test measures what they expect it to.
+Repeated failure of developer tests often indicate code quality and maintainability issues. Failing tests are expected during development. In fact, [TDD](https://en.wikipedia.org/wiki/Test-driven_development) expects developers to first fail a test before they write code to make it pass.
 
-**System tests**: measure how well and consistently system expectations are met in the full operational configuration.
+**System tests**: measure how well and how consistently system expectations are met in the full operational configuration.
 
 System tests can be quite broad, but common reasons for repeated system test failure are
 - fragile configuration
@@ -38,9 +37,9 @@ These potential outcomes are similar to chaos testing because users are similar 
 
 ## Cross-cutting Techniques
 
-Most testing techniques we think of are focused on a certain kind of information, independent of the tester. Some of them have strong associations to a certain role category (e.g. behavior tests with acceptance tests), but they can really be used by any actor to a similar effect.
+Most testing techniques we think of are focused on a certain kind of information, and are independent of the tester. Some techniques have a strong association to a certain role category (e.g. behavior tests with acceptance tests), but they can really be used by any actor to a similar effect.
 
-Keep in mind that a test can fit multiple categories. For example, most tests we think of are behaviorally-focused example-based unit tests that can also be run over time as regression tests.
+Keep in mind that a test can fit multiple categories. For example, most tests we think of are behaviorally-focused example-based unit tests written by developers that can also be run over time as regression tests.
 
 
 **Regression tests**: tell us when we've broken previously functioning expectations. When regression tests frequently fail it can indicate
@@ -52,7 +51,7 @@ Keep in mind that a test can fit multiple categories. For example, most tests we
 
 **Unit vs Integration tests**: Unit tests verify requirements on a component in isolation while integration tests verify behaviors when components are integrated. The contrast between these two levels measures consistency of behavior across context.
 
-Frequent inconsistent results between the levels may indicate
+Frequent inconsistent results between the two levels may indicate
 - unclear or error-prone composition
 - unexpected coupling of components leading to non-deterministic behavior (e.g. multiple components mutating the same data). This is an encapsulation failure or a leaky abstraction.
 
@@ -64,9 +63,9 @@ Frequent failure of examples, but not properties may indicate excess coupling to
 
 Frequent failure of properties, but not examples, may indicate unenforced data constraints, uncommunicated data constraints, difficult boundary cases, poor assumptions about data baked into implementations, and other similar issues.
 
-**Behavioral Tests**: Encode functional requirements as in terms of consumer expectations, generally independent of the system being tested. Gherkin is a common tool that defined the given, when, then pattern of describing an expectation. 
+**Behavioral Tests**: encode requirements in terms of consumer expectations, generally independent of the system being tested. Gherkin is a common tool that introduced the given, when, then pattern of describing an expectation. 
 
-Behavior tests are most commonly used for acceptance testing. They are more generally used for encoding requirements as stable test definitions. Developer tests written this way can be reused as unit or integration tests.
+Behavior tests are most commonly used for acceptance testing. They are more generally used for encoding requirements as stable test definitions. [Developer tests written this way](../_posts/2020-08-21-Test-Api-InPractice.md) can be reused as unit or integration tests.
 
 Failure trends may indicate
 - unstable requirements
@@ -88,9 +87,9 @@ Repeated failure to meet performance benchmarks can mean
 
 **Multiple Verification**: measures how consistent and reliable our testing process is by comparing results from multiple techniques or testers.
 
-Inconsistent results between tester or approaches may indicate faulty tests, faulty/dishonest reporting, or unclear process.
+Inconsistent results between testers or approaches may indicate faulty tests, faulty/dishonest reporting, or unclear process.
 
-**Reviews**: a broad category of methods where work is verified by other experts.  Reviews can catch a wide range of issues. Most basically, they guard against individual contributor error and improve consistency of practices across a team.
+**Reviews**: are a broad category of methods where work is verified by other experts.  Reviews can catch a wide range of issues. Most basically, they guard against individual contributor error and improve consistency of practices across a team.
 
 A large volume of review errors may suggest unclear expectations within a team or insufficient training.
 
