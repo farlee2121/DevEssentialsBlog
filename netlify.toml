@@ -17,6 +17,16 @@
     """
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer-when-downgrade"
-    Permissions-Policy = "geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; vibrate 'none';"
+    Permissions-Policy = """\
+        geolocation=(), \
+        midi=(), \
+        notifications=(), \
+        push=(), \
+        microphone=(), \
+        camera=(), \
+        magnetometer=(), \
+        gyroscope=(), \
+        vibrate=()\
+    """
     
     
