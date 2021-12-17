@@ -1,10 +1,10 @@
 ---
 layout: post
-tags: [Checklist, ]
+tags: [Checklist, Critical Thinking, Duck docs, Process]
 ---
 # Development Cycles Checklist
 
-A junior developer recently asked for a daily responsibilities checklist. This question made no sense to me at first. A developer's job isn't so routine as a daily checklist. However, it sparked me to think about how a developers daily activities can be quantified. 
+A junior developer recently asked for a daily responsibilities checklist. This question made no sense to me at first. A developer's job isn't so routine as a daily checklist. However, it sparked me to think about how a developer's regular responsibilities activities can be quantified. 
 
 The model I came up with is a riff on [Cycles of TDD](https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html) by Robert Martin. I also previously [visualized the Cycles of TDD](../_posts/2020-11-13-Cycles-Of-TDD.md).
 
@@ -38,6 +38,8 @@ Short
 
 Expanded
 - Are mini-investigations clarifying my bigger questions?
+- Has my understanding shifted?
+  - Does any work need refactored?
 - What are the most important remaining questions?
   - What is most likely to undermine my task?
   - What would add the next most value?
@@ -91,6 +93,8 @@ Expanded
 
 
 ## Week
+
+<!-- TODO: peer Review processes should be top of mind for the week -->
 
 Short
 - Iteration Planning
