@@ -13,7 +13,7 @@ Below I cover each of SWEBOK's key knowledge areas with
 - A defining excerpt from the book
 
 <!-- 
-TODO: Highlight key bits in the swebok excerpts 
+TODO: Add updates referencing this post from my other swebok posts
  -->
 
 
