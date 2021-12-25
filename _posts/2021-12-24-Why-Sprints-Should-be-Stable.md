@@ -22,5 +22,5 @@ I don't mean to discount continuous priority systems (e.g [Kanban](https://docs.
 
 
 ## Conclusion
-I still believe that sprints should be stable, and now I have a clearer picture of why. Sprint stability is a indicator of how well we understand our customer and how well we plan. It is the basis of shared expectations, and predictability for wider planning.
+I still believe that work planned for a sprint should be stable, and now I have a clearer picture of why. Churn and stability are indicators of how well we understand our customer and how well we plan. A firm process for containing churn is the foundation for shared expectations, delivery forcasting, and wider planning predictability.
 
