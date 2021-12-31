@@ -3,7 +3,7 @@ layout: post
 tags: [Tools, Process, Quality]
 ---
 
-# Foundation of Team Measurement
+# Foundation of Software Measurement
 
 Software Engineers are differentiated from other programming disciplines by economical, repeatable, and reliable results. Such consistency requires measurement, data on which to make informed decisions. I propose that source control and work item tracking are the kernel of such process.
 
@@ -45,6 +45,6 @@ I find it appropriate that these are also the most common tools for collaboratio
 <!-- measurements could be taken at a point in time and still allow quantitative demonstration of improvement -->
 
 ## Conclusion
-I conclude that work item tracking and source control are the most foundational tools for a software engineering process. Together, they record a holistic history of a project. Having both in place allows the team to evolve their measurement and quality processes over time without loss of information. However, taking one away causes a permanent gap in project analysis.
+I conclude that work item tracking and source control are the most foundational tools for a software engineering process. Together, they record a holistic history of a project. Having both in place allows the team to evolve their measurement and quality processes over time without loss of information. However, taking one away causes a permanent gap in project analysis. 
 
 <!-- These tools should be standard at this point. Negligence on either tool shows a lack of understanding. I'd argue anyone who does not value these tools cannot be called a professional -->
