@@ -3,10 +3,9 @@ layout: post
 tags: [Tools, Process, Quality]
 ---
 
-TODO: rename file to match final title
-# Foundation of Measurement
+# Foundation of Team Measurement
 
-Software Engineers are differentiated from other programming disciplines by economical, repeatable, and reliable results. Such consistency requires measurement, data on which to make informed decisions. I propose that source control an work item tracking are the kernel of such process.
+Software Engineers are differentiated from other programming disciplines by economical, repeatable, and reliable results. Such consistency requires measurement, data on which to make informed decisions. I propose that source control and work item tracking are the kernel of such process.
 
 First, what are the goals of a refined process? What do we want refine through measurement?
 - Delivery of expected value
@@ -14,7 +13,7 @@ First, what are the goals of a refined process? What do we want refine through m
 - Estimates, schedule expectations
 - Minimize software defects
   - Cause of defects that slip through
-  - effectiveness of defect prevention techniques
+  - Effectiveness of defect prevention techniques
 
 Let's consider common tool categories
 - automated tests
@@ -33,7 +32,7 @@ We can divide these into several categories.
 
 Those that are convenient, but not inherent to measurement and refinement: debuggers, IDE, compilers, frameworks & package managers, build and deployment, and infrastructure.
 
-A team can control improvement over time and deliver consistently without these tools under the right conditions. For example, build, deployment, compilers and infrastructure are not necessary if a team only delivers code and not running software.
+A team can control improvement over time and deliver consistently without these tools under the right conditions. For example, build, deployment, compilers and infrastructure are not necessary if a team only delivers a design, or other pre-executable artifacts.
 
 The remaining tools are useful for measurement: automated tests, loggers, work tracking, source control, performance profilers
 
