@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Testing]
+tags: [Testing, Test Selection]
 ---
 
 # Test Case Selection Guide
