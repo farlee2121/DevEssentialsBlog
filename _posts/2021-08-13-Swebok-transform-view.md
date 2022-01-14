@@ -7,6 +7,8 @@ tags:  [SWEBOK, Design, Design Process]
 
 The Software Engineering Body of Knowledge (SWEBOK) states that software engineering transforms problems stated in natural language to problems stated in electrical current. This transform view emphasizes the continuity of the design process and highlights intermediate artifacts.
 
+> Update 2022-01-14: Here's [SWEBOK term definitions](../_posts/2022-01-14-SWEBOK-term-definitions.md) if needed
+
 > Abstractly speaking, problem solving using a computer can be considered as a process of problem transformation - in other words, the step-by-step transformation of a problem statement into a problem solution. To the discipline of software engineering, the ultimate objective of problem solving is to transform a problem expressed in natural language into electrons running around a circuit. - SWEBOK 13.1.5
 
 

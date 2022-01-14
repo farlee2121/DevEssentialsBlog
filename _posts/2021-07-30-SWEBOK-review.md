@@ -45,6 +45,8 @@ SWEBOK is also an exceedingly good index of topic resources. Each chapter define
 The further readings are generally aimed at learning topics introduced by the chapter, and each comes with an explanation of what you should learn from that reading.
 The reference table maps every topic to a specific section of relevant source materials.
 
+> Update 2022-01-14: Here's [SWEBOK term definitions](../_posts/2022-01-14-SWEBOK-term-definitions.md) for a quick overview of SWEBOK topics
+
 ## Personal Takeaways
 
 ### Confidence and Reference

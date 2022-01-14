@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [SWEBOK, ]
+tags: [SWEBOK, Software Engineering]
 ---
 
 # SWEBOK Key Definitions
@@ -11,10 +11,6 @@ Below I cover each of SWEBOK's key knowledge areas with
 - An informal definition
 - Some examples for context
 - A defining excerpt from the book
-
-<!-- 
-TODO: Add updates referencing this post from my other swebok posts
- -->
 
 
 ## Software Requirements 
@@ -31,11 +27,11 @@ as well as the management of requirements **during the whole life cycle** of the
 
 ## Software Design
 
-Design starts to compare customer need (requirements) against high-level solutions. Often the phase where major divisions of the software are discovered and underlying required qualities like scalability, robustness, security approaches, and similar are decided.
+Design starts to compare customer need (requirements) against high-level solutions. Design often defines major divisions of the software and underlying non-functional requirements like scalability, robustness, security approaches, and similar.
 
-Design is diverse based on the needs of the software, but some common key activities include
+Design is diverse and based on the needs of the software, but some common key activities include
 - Identifying self-contained sub-systems
-- Isolatign and outlining key domain (business) workflows
+- Isolating and outlining key domain (business) workflows
 - Identifying transaction boundaries (what units succeed or fail together)
 - Overarching error handling strategies
 - Producing component diagrams, activity diagrams, security diagrams, etc
@@ -49,7 +45,7 @@ Design is diverse based on the needs of the software, but some common key activi
 ## Software Construction
 Construction transitions our solution from high-level designs to computer-executable code. 
 
-This is not a mechanical process. The detail of implementation often reveals undiscovered requirements and tradeoffs that must be resolved with the customer. Component, method level design, and developer tests are also a major factor in system understandability and quality.
+This is not a mechanical process. The detail of implementation often reveals undiscovered requirements and tradeoffs that must be resolved with the customer. Component design, method-level design, and developer tests are also a major factor in system understandability and quality.
 
 Examples
 - Test-Driven Development (TDD) loop
@@ -64,7 +60,7 @@ Examples
 ## Software Testing
 Testing executes the software to verify expectations.
 
-SWEBOK includes debugging (running the software with ability to stop at certain lines of code & inspect values) in this category. Most often this category refers to automated tests (e.g. unit tests). I have several good posts on [different kinds of tests](../_posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) and [when to use them](../_posts/2021-12-05-What-tests-measure.md).
+SWEBOK includes debugging (running the software with ability to stop at certain lines of code & inspect values) in this category. Most often this category refers to automated tests (e.g. unit tests). I have several posts on [different kinds of tests](../_posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) and [when to use them](../_posts/2021-12-05-What-tests-measure.md).
 
 Examples
 - Debugging
@@ -81,7 +77,7 @@ Examples
 
 
 ## Software Maintenance:
-Maintenace includes ongoing changes and support of existing software. 
+Maintenace includes ongoing changes to and support of existing software. 
 
 This includes monitoring for new or changed understanding of the problem, then running through the software lifecycle to adapt to the change. It also includes most documentation and devops concerns (e.g. deployment, monitoring).
 
@@ -96,14 +92,14 @@ Examples
 
 > In this Guide, software maintenance is defined as the totality of **activities required to provide cost-effective support to software**. Activities are performed during the predelivery stage as well as during the postdelivery stage. Predelivery activities include planning for postdelivery operations, maintainability, and logistics determination for transition activities. Postdelivery activities include software modification, training, and operating or interfacing to a help desk.
 > 
-> Software development efforts result in the delivery of a software product that satisfies user requirements. Accordingly, **the software product must change or evolve**. Once in operation, defects are uncovered, operating environments change, and new user requirements surface. The maintenance phase of the life cycle begins following a warranty period or postimplementation support delivery, but maintenance activities occur much earlier. 
+> Software development efforts result in the delivery of a software product that satisfies user requirements. **Accordingly, the software product must change or evolve**. Once in operation, defects are uncovered, operating environments change, and new user requirements surface. The maintenance phase of the life cycle begins following a warranty period or postimplementation support delivery, but maintenance activities occur much earlier. 
 
 
 
 ## Software Configuration Management
 Think change control and tracking.
 
-Configuration management is relatively unknown term among software professionals. Configuration management is largely about controlling changes to key artifacts and processes. For example,
+Configuration management is a relatively unknown term among software professionals, but a common activity. Configuration management is largely about controlling changes to key artifacts and processes. For example,
 - source control (e.g. Git)
 - work item trackers (e.g. Jira, Github issues)
 - software deployment techniques (CI/CD -> continuous integration / continuous deployment)
@@ -114,14 +110,14 @@ Configuration management is relatively unknown term among software professionals
 > Software configuration management (SCM) is a supporting-software life cycle process that benefits project management, development and maintenance activities, quality assurance activities, as well as the customers and users of the end product. 
 
 ## Software Engineering Management
-Software engineering management is mostly management in the general sense. It's about how we track our projects against goals and course correct to stay on track
+Software engineering management is mostly management in the general sense. It's about how we track our projects against goals and course correct to stay on track.
 
 > Software engineering management can be defined as the **application of management activities**—planning, coordinating, measuring, monitoring, controlling, and reporting to ensure that software products and software engineering services are **delivered efficiently, effectively, and to the benefit of stakeholders**.
 
 ## Software Engineering Process
-SE process is effectively process in the general sense.
+Software Engineering Process is effectively process in the general sense.
 
-It's how we go about executing our activities and how that feeds into accomplishing our desired outcomes. This includes the software development lifecycle, but also the selection and arrangement of controls and measures within that lifecycle, as well as process improvement practices.
+It's how we go about executing our activities and how that feeds into accomplishing desired outcomes. This includes the software development lifecycle, but also the selection and arrangement of controls and measures within that lifecycle, as well as process improvement practices.
 
 I've previously discussed software development as [a series of problem transformations](../_posts/2021-08-13-Swebok-transform-view.md) and how this process [produces artifacts for control](../_posts/2021-08-20-SWEBOK-transform-SCM.md).
 
@@ -157,7 +153,7 @@ Examples
 ## Software Quality
 Quality defines how good our software and process is.
 
-"How good" can mean many things. Software engineering should follow a measured and continually refined approach with quantified quality goals (e.g. time between defects).
+"How good" can mean many things. In general, software engineers should quantify quality goals (e.g. time between defects) and continually refine practices based on those measures.
 
 Examples
 - Time between defects
@@ -174,7 +170,7 @@ Examples
 
 
 ## Software Engineering Professional Practices:
-Largely about ethics, regulations, knowing the baseline expectations of a professional.
+Largely about ethics, regulations, and knowing the baseline expectations of a professional.
 
 Examples
 - Certifications, baseline of competence
@@ -184,7 +180,7 @@ Examples
 - Use industry best practices
 - Effective communication
 
-> The Software Engineering Professional Practice knowledge area (KA) is concerned with the knowledge, skills, and attitudes that software engineers must possess to practice software engineering in **a professional, responsible, and ethical manner**.
+> The Software Engineering Professional Practice knowledge area (KA) is concerned with the knowledge, skills, and attitudes that software engineers must possess to practice software **engineering in a professional, responsible, and ethical manner**.
 
 
 ## Foundations
@@ -192,12 +188,7 @@ Examples
 The last four key areas are foundations, which I figured don't need definitions. Instead I list a few of the referenced techniques
 
 - **Economics**: economic decision models, cost/benefit analysis, earned value, estimation techniques, "good enough" principle
-
-Software engineering economics is about mak-
-ing decisions related to software engineering in a 
-business context. The success of a software prod-
-uct, service, and solution depends on good busi-
-ness management.
+    >Software engineering economics is about making decisions related to software engineering in a business context. The success of a software product, service, and solution depends on good business management.
 
 - **Computing Foundations**: structured programming, problem solving approaches, principles (abstraction, encapsulation, etc), programming paradigms (object-oriented, functional, imperative, etc), security basics
 - **Math Foundations**: proof techniques, finite state machines, complexity classes, set theory, formal logic 

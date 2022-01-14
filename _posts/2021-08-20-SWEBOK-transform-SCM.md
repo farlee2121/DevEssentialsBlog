@@ -8,6 +8,8 @@ tags: [SWEBOK, Design Process, SCM, Quality]
 
 The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](../_posts/2021-08-13-Swebok-transform-view.md). I realized that each transform creates an artifact, and these artifacts are key to connecting cross-cutting concerns into the lifecycle phases.
 
+> Update 2022-01-14: Here's [SWEBOK term definitions](../_posts/2022-01-14-SWEBOK-term-definitions.md) if needed
+
 ## Life-cycle Artifacts
 
 A quick review on the transformation lifecycle. The input is plain-language requirements, and the output is machine instructions. Each transform translates the problem one step closer to machine code, resolving ambiguities and disconnects as needed.
