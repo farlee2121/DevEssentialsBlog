@@ -3,8 +3,9 @@ layout: post
 tags: [Documentation, Process]
 ---
 
-<!-- TODO: Reconsider the title, clarify this is developer documentation, not user docs -->
 # Levels of Documentation
+
+<!-- TODO: Reconsider the title, clarify this is developer documentation, not user docs -->
 
 A friend has been struggling with under-documented projects (\*cough\* [zoo software](https://blog.ploeh.dk/2012/12/18/RangersandZookeepers/)). This raised the question, what makes good documentation? And what is a good documentation system? Here's my opinion backed with some sources.
 

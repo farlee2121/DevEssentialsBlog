@@ -3,6 +3,8 @@ layout: post
 tags: [C#, F#, interop]
 ---
 
+<!-- I'm not entirely sure this stands. PropertyMapBinder (and the wrapper in Notedown) was able to handle inferred conversion from functions to lambdas fairly well. Even a passed 'a -> 'b was implicitly converted to a Func<'a,'b> -->
+
 Today I tried to test my C# from F#. Most function calls were easy enough to invoke cross-language, but passing lambdas to C# got messy real quick. Fortunately, a little helper function can mediate types between paradigms and keep things simple on both ends.
 
 Normal function calls from F# to C# code just look like a tupled argument. 
@@ -10,7 +12,7 @@ Normal function calls from F# to C# code just look like a tupled argument.
 let returnedValue = CSharpClass.Method(param1, param2)
 ```
 
-However, functional programming has been leaking into C# and a lot more functions get passed around as `Action` or `Func`.
+However, functional programming has leaked into C# and a lot more functions get passed around as `Action` or `Func`.
 
 For example, I'm trying to test this generic tree reduce function
 ```cs
@@ -31,7 +33,8 @@ Calling this from C# isn't too bad. I can use a Lambda and most types will be in
 Tree.Fold(tree, (node) => node.Children(), (aggregate, node) => ..., new List<int>());
 ```
 
-However, C# lambdas and F# lambdas are not the same type. C# uses `Func` and `Action` while F# uses `FSharpFunc`. The main reason for the difference here is F#'s need for partial application.   
+However, C# lambdas and F# lambdas are not the same type. C# uses `Func` and `Action` while F# uses `FSharpFunc`. The main reason for the difference here is F#'s need for partial application. 
+
 
 > Aside, lambdas are anonymous functions. Think of it as functions we can pass around as values. Both C# and F# treat these differently under the hood than they do named functions on a class or module.
 

@@ -4,7 +4,7 @@ tags: [Checklist, Critical Thinking, Duck docs, Process]
 ---
 # Development Cycles Checklist
 
-A junior developer recently asked for a daily responsibilities checklist. This question made no sense to me at first. A developer's job isn't so routine as a daily checklist. However, it sparked me to think about how a developer's regular responsibilities activities can be quantified. 
+A junior developer recently asked for a daily responsibilities checklist. This question made no sense to me at first. A developer's job isn't so routine as a daily checklist. However, it sparked me to think about how a developer's regular activities can be described concisely. 
 
 The model I came up with is a riff on [Cycles of TDD](https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html) by Robert Martin. I also previously [visualized the Cycles of TDD](../_posts/2020-11-13-Cycles-Of-TDD.md).
 
@@ -14,8 +14,6 @@ The format
 - An expansion of questions to ask in that timeframe
 
 <!-- TODO: create a copy of the list that only has the most critical questions as reference, something printable 
-
-IDEA: I should brain storm questions for each section, then boil each down to one or two questions
 -->
 
 
@@ -28,8 +26,8 @@ Expanded
 - Can I clearly communicate what I'm solving?
 - What are my alternatives?
 - What are the pros and cons of each option?
+- Where would my assumptions break down?
 - What is the next most important question?
-Tools: are things like pro/con, boundary cases, finding documentation
 
 ## Deca-minutes (order of 10min)
 Short
@@ -40,6 +38,7 @@ Expanded
 - Are mini-investigations clarifying my bigger questions?
 - Has my understanding shifted?
   - Does any work need refactored?
+  - Do any earlier questions need revisited?
 - What are the most important remaining questions?
   - What is most likely to undermine my task?
   - What would add the next most value?
@@ -49,9 +48,10 @@ Expanded
   - Are there other promising paths that may be less work?
 
 ## Hour
-Short version
+Short
 - Have I done work worth committing?
 - Is my task in danger?
+- Can I move on to a later phase?
 
 Expanded
 - Have I completed one or more meaningful stable increments of work?
@@ -80,7 +80,7 @@ Short
 
 Expanded
 - Are my work items on track?
-  - This is typically gauged against work assigned in 1-2 iterations. More continuous prioritization requires better developer intuition for the impact of work timelines.
+  - This is typically gauged against work assigned in 1-2 week iterations. More continuous prioritization requires better developer intuition for the impact of work timelines.
 - What do I expect to accomplish today?
 - What did I expect to accomplish yesterday, and how did it differ from reality?
 - What increments of progress have I *completed* towards my tasks?
@@ -94,12 +94,11 @@ Expanded
 
 ## Week
 
-<!-- TODO: peer Review processes should be top of mind for the week -->
-
 Short
 - Iteration Planning
+  - How does my work need reviewed?
   - Did we deliver the expected customer value last week?
-  - Does an incomplete work need intervention?
+  - Does any incomplete work need intervention?
   - What are the next units of customer value?
 
 
@@ -115,11 +114,19 @@ Expanded
 - How much work can the team handle in the next week?
 - Are there priorities within the work assigned this week?
 - Are we on track to meet broader customer expectations (e.g. contracts, release schedules, milestones, general customer satisfaction)?
+- How does my work need reviewed?
+  - pull requests?
+  - Testing?
+  - QA collaboration?
+  - Acceptance tests?
+  - Any security, api versioning, compatibility, performance reviews?
+  - Special deployment concerns (e.g. phased release, user testing)?
 
 ## Month(s)
 Short
 - Is the team delivering sustainably?
 - Do I like my career trajectory?
+- Did I do anything to grow as a developer?
 
 
 Expanded
@@ -153,9 +160,9 @@ Expanded
 
 ## Personal Takeaways
 
-This was a surprisingly fruitful exercise. A developer balances many tools and techniques across diverse scenarios. However, a robust core of critical thinking and clarification skills bubbles to the top at all time scales and across activities. 
+This was a surprisingly fruitful exercise. A developer balances many tools and techniques across diverse scenarios. However, a robust core of critical thinking and clarification skills bubble to the top at all time scales and across activities. 
 
-I was delighted to find a dividing line at appropriately one day. Everything one day and above is governed by common team rituals. Everything below a day forms the core of my [duck docs](../_posts/2020-10-02-Whats-Your-Duck.md). I have yet to blog the design tree bits of my presentation. That may need to become a priority.
+I was delighted to find a dividing line, appropriately, at one day. Everything one day and above is governed by common team rituals. Everything below a day is covered by my [duck docs](../_posts/2020-10-02-Whats-Your-Duck.md). I have yet to blog the design tree bits of my presentation. That may need to become a priority.
 
 This divide makes sense. Under a day is personal process. Managing more tightly would be impractical. Process over a day gradually increases in scope from team, to department, and company-wide alignment.
 
@@ -164,4 +171,45 @@ This divide makes sense. Under a day is personal process. Managing more tightly 
 
 A daily checklist of expectations still doesn't seem plausible for developers.
 However, a series of time-based cycles does provide a decent picture of developer activities. These cycles also highlight the importance of critical thinking for developers. Technologies come and go based on task, but the thought process is the same.
+
+
+
+
+----
+## Abbreviated Cycle view
+
+Minute
+- what am I proving?
+- what can I do to prove/disprove it?
+
+Deca-Minute
+- Is the end solution clearer?
+- Am I stuck?
+
+Hour
+- Have I done work worth committing?
+- Is my task in danger?
+- Can I move on to a later phase?
+
+Day (Standup)
+- What progress would the team care about?
+- Will all my work likely finish by end of iteration?
+- Any blockers?
+
+Week (Iteration Planning)
+- How does my work need reviewed?
+- Did we deliver the expected customer value last week?
+- Does any incomplete work need intervention?
+- What are the next units of customer value?
+
+Month(s)
+- Is the team delivering sustainably?
+- Do I like my career trajectory?
+- Did I do anything to grow as a developer?
+
+Year
+- Reflect on large-scale trajectories of projects, business, and personal growth
+
+
+
 
