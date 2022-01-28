@@ -6,7 +6,7 @@ tags: [Design Thinking]
 
 <!-- TODO: this is a post worth having reviewed before I release it -->
 <!-- TODO: align overall angle. The post is half visual experimentation, half dissertation on modeling -->
-Code is often considered the goal of programming. This abjectly false. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
+Code is not the goal of programming. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
 
 ## Goals
 
@@ -53,7 +53,7 @@ The core is understanding the problem, which is defined by customer need and ach
 The outer layer is the lifecycle phases. Each phase outputs some artifact, and all artifacts are a restatement of the problem with additional details we've uncovered.
 
 The middle layer states how [each lifecycle phase refines the problem](../_posts/2021-08-13-Swebok-transform-view.md). 
-- Requirements define the problem enough to effectively consider solutions (SWEBOK chapter 1 intro or 1.7.1)
+- Requirements formalize the problem enough to effectively consider solutions (SWEBOK chapter 1 intro or 1.7.1)
 - Design refines the problem by considering tradeoffs between different solutions (SWEBOK 2.3.4). Tradeoffs should be weighed with stakeholders (SWEBOK 11.1.9)
 - Construction states the problem in code (precise processes). Construction further refines the problem by weighing tradeoffs between potential solutions and forcing resolution of ambiguity 
 - Testing measures how well our code matches our mental model for behavior and other expectation measures (SWEBOK 4.intro)
@@ -81,9 +81,9 @@ These question/hypothesis/test loops underlie not only the lifecycle, but each i
 ![Good Enough target](../post-media/SWEBOK/iterative-good-enough.drawio.svg)
 
 
-Each hypothesis/test cycle tells us something about the problem and solutions. These increments of progress interpolate to a final solution.
+Each hypothesis/test cycle tells us something about the problem and solutions. These increments progressively interpolate to a final solution.
 
-Once can consider lifecycle stages as benchmarks in these accumulated increments of understanding. Certain amounts of understanding may trigger review, change in process, or transfer of work that we see as lifecycle stages.
+We can consider lifecycle stages as benchmarks in these accumulated increments of understanding. Certain amounts of understanding may trigger review, change in process, or transfer of work that we see as lifecycle stages.
 
 Note that there is no single perfect solution. Instead, there is a target of "good enough". Any solution that meets all known requirements falls in "good enough".
 Conversely, satisfying requirements is our stop condition to consider work complete. 
@@ -109,7 +109,7 @@ Needs naturally change over time. New technologies are invented, regulations are
 
 The key is how well the software adapts to the changes it faces, and how well our software adapts is largely dependent on how well we separate the true nature of our business from temporary coincidences. The traditional design terms are essence (true nature) and accident (coincidental qualities).
 
-The true nature of the problem is often referred to as the "core domain" of our system. It is the fundamental business rules and should be stable. The coincidental qualities should be contained in as little of our system as possible. 
+The true nature of the problem is often referred to as the "core domain" of our system. It represents the fundamental business rules, and should be stable. The coincidental qualities should be contained in as little of our system design as possible. 
 
 Put another way, understanding what is least likely to change in our system is an act of understanding the true nature of the problem we are solving. Aligning our code with that nature maximizes long term adaptability.
 
