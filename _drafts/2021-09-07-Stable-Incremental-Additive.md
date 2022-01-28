@@ -5,7 +5,7 @@ tags: [Design Thinking, Principles]
 excerpt_separator: <!-- more -->
 ---
 
-# Stable, Incremental, Additive
+# Process Quality Drivers: Stable, Incremental, Additive
 
 <!-- TODO: This is one worth having reviewed before I release it -->
 
