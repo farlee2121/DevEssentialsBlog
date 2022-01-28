@@ -63,7 +63,7 @@ Test selection is not a once-size-fits-all activity. However, I've developed a f
 - Add a test any time a bug is found
 - Use mutation testing to objectively quantify completeness and head off sneaky errors
 
-I typically don't use code-based methods because I believe mosts [tests should be decoupled from the inner structure of the system](https://spencerfarley.com/2020/08/21/test-api-inpractice/), and instead focus on stable expected behaviors.
+I typically don't use code-based methods because I believe mosts [tests should be decoupled from the inner structure of the system](../_posts/2020-08-21-Test-Api-InPractice.md), and instead focus on stable expected behaviors.
 
 In general, I think a quality system doesn't need code-based techniques. The consumer expectations, public API, and test cases should all be in alignment.
 
