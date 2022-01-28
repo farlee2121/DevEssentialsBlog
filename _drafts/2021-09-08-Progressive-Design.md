@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [Design Thinking]
+tags: [Design Thinking, Architecture, Software Design]
 ---
 
 # Progressive Design
