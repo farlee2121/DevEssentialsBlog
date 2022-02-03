@@ -5,13 +5,13 @@ tags: [.NET, C#, Language Design]
 
 # Case for Static Class Extension in C#
 
-Working on [System.CommandLine.PropertyMapBinder](https://github.com/farlee2121/System.CommandLine.PropertyMapBinder) has led me to believe C# is missing a powerful feature, static class extensions. This post explains my usecase, and balances some of the tradeoffs.
+Working on [System.CommandLine.PropertyMapBinder](https://github.com/farlee2121/System.CommandLine.PropertyMapBinder) has led me to believe C# is missing a powerful feature: static class extensions. This post explains my usecase, and balances some of the tradeoffs.
 
 
 ## Context
-A quick rundown of the context. [System.CommandLine](https://github.com/dotnet/command-line-api) is a library for creating good user experiences in the console. The user declares what inputs they want, and the library takes care of parsing, help menus, completions, etc. My PropertyMapBinder project is an experiment to build on this library and create an intuitive and extensible experience for mapping the CLI inputs into code models.
+A quick rundown of the context. [System.CommandLine](https://github.com/dotnet/command-line-api) is a library for creating good user experiences in the console. The user declares what inputs they want, and the library takes care of parsing, help menus, completions, etc. My PropertyMapBinder seeks to create an intuitive and extensible experience for mapping the CLI inputs into code models with this library.
 
-I was thinking it'd be a discoverable and intuitive experience to construct different kinds of command handlers and property maps from functions on static classes. For example
+I was thinking it would be a discoverable and intuitive experience to construct different kinds of command handlers and property maps from functions on static classes. For example
 ```cs
 rootCommand.Handler = CommandHandler.FromPropertyMap(SuchHandler,
     new BinderPipeline<SuchInput>{
@@ -33,8 +33,7 @@ However, I quickly ran into a problem. Static classes cannot be extended in C#. 
 This means that any users who want to add new handlers or maps have to add them somewhere besides `CommandHandler` and `PropertyMap`. Thus, the discoverability is undermined.
 
 
-I'll admit. This is a very F# way of thinking. It's not very idiomatic to [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming).
-I can see a case that adding static extensions would open up a new code organization style, creating less consistency in the C# community.
+I'll admit. This is a very F# way of thinking. It's not very idiomatic to [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming). Adding static extensions would potentially open up a new code organization style, creating less consistency in the C# community.
 
 ## Issues With an OO Approach
 
@@ -42,7 +41,7 @@ Along this line of thought, I explored transitioning these functions to classes,
 
 The key issue is that many kinds of handlers (and some maps) can be constructed different ways, each with different possible generic type arguments. Class constructors don't accept additional type arguments, and thus diverse overloads are not possible. I'd end up with an explosion of classes trying to handle different scenarios.
 
-Here's some a motivating example. I want to be able to run the binder pipeline accommodate many kinds of code models: simple classes, binding to existing instances, classes with no default constructor. 
+Here's some a motivating example. I want to be able to run the binder pipeline against simple classes, existing instances, and classes with no default constructor. 
 ```cs
 CommandHandler.FromPropertyMap(handlerFunc, pipeline)
 CommandHandler.FromPropertyMap(handlerFunc, pipeline, inputModel)
@@ -54,9 +53,13 @@ The first approach requires a `new()` type constraint, he second has no constrai
 The function-approach allows me to define just one function per set of type constraints. All of those functions can be discovered together on the same class or treated as overloads.
 ```cs
 ICommandHandler FromPropertyMap<InputModel, T>(Func<InputModel, T> handler, IPropertyBinder<InputModel> propertyBinder) where InputModel : new(); 
+
 ICommandHandler FromPropertyMap<InputModel, T>(Func<InputModel, T> handler, IPropertyBinder<InputModel> propertyBinder, InputModel inputModel);
+
 ICommandHandler FromPropertyMap<InputModel, T>(Func<InputModel, T> handler, IPropertyBinder<InputModel> propertyBinder, IModelFactory<InputModel> inputFactory);
+
     IModelFactory<InputModel> FromSymbolMap<T1,InputModel>(Func<T1,InputModel> factory, params Symbol[] symbols);
+    
     IModelFactory<InputModel> FromSymbolMap<T1,T2,InputModel>(Func<T1,T2,InputModel> factory, params Symbol[] symbols);
 ```
 
