@@ -8,19 +8,18 @@ tags: [Checklist]
 This is my attempt to communicate what I consider when looking at a pull request.
 
 I've tried to frame the list as a series of questions. Not all lines of investigation 
-are always relevant. The list instead tried to prompt the right lines of thought and 
-defer to separate processes if specialized knowledge is needed.
+are always relevant. The list instead tries to prompt the right lines of thought and defer to separate processes if specialized knowledge is needed.
 
 I also tried to format core questions such that it creates a level of accountability.
 The developer effectively signs-off that they considered an aspect of quality and found it sufficient.
-If we later find quality lacking, then we can look at signoffs to know if the problem is 
+If we later find lacking quality, then we can look at signoffs to classify the problem as 
 insufficient review checklists or insufficient review quality.
 
 I'm excited to hear opinions on this list and what others consider in code review.
 
 ## The Checklist
 
-Highlevel
+### Highlevel
 - right work got done / work matches spec
 - code is tested with the right kind of tests
 - consider any specialists that may need to review the work
@@ -31,7 +30,7 @@ Highlevel
   - regulatory
 - right people are notified of changes or process is in place so that update are graceful
 - General architecture and style, understandability
-- Frequent errors or error prone modules
+- Check for frequent errors or error prone modules
 
 Understandability, requirements, and testing should be in every review. Most other things should be a quick check to make sure less frequent, but important bits don't get forgotten. 
 
@@ -40,8 +39,8 @@ Understandability, requirements, and testing should be in every review. Most oth
 ### Things that should be automatic
 - [ ] Build Succeeded
 - [ ] Automated tests succeeded
-- [ ] mutation tests or other completeness
-  - [ ] Test coverage or other completeness measure has not decreased
+- [ ] Mutation tests or other completeness measures
+  - [ ] completeness measure has not decreased
 - [ ] Deploy to a QA / testing environment succeeded
 - [ ] Static analysis succeeded
   - [ ] Possible flags for code over a certain cyclomatic complexity
@@ -52,7 +51,7 @@ Understandability, requirements, and testing should be in every review. Most oth
 - [ ] Flag error prone modules for closer review
 - [ ] Flag potential performance risks
   - [ ] Flag cyclomatic complexity over a given threshold
-  - [ ] resource calls in loops
+  - [ ] possibly flag resource calls in loops?
 - [ ] Could probably flag potential CQRS violations
 
 
