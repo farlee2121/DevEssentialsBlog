@@ -19,7 +19,7 @@ The software development life cycle stages can be seen as a cycle of actions to 
 - Design refines the problem by considering tradeoffs between different high-level solutions (SWEBOK 2.3.4). Tradeoffs should be weighed with stakeholders (SWEBOK 11.1.9)
 - Construction states the problem in code (precise processes). Construction further refines the problem by weighing tradeoffs between potential solutions and forcing resolution of ambiguity 
 - Testing measures how well our code matches our mental model of expected behavior and other expectation measures (SWEBOK 4.intro)
-- Delivery makes our solution available for application by end users. Application to the real problem is the most important measure of success.
+- Delivery makes our solution available for end users. Application to the real problem is the most important measure of success.
 - Monitoring watches for changes in the problem or improvements in understanding that must be addressed in our solution
 
 The core is understanding the problem, which is defined by customer need and achieved through critical thinking. All progress is made by better understanding what our customer needs and how we can satisfy that need through our product or processes.
@@ -44,11 +44,11 @@ These question/hypothesis/test loops underlie not only the life cycle, but each 
 
 ![Good Enough target](../post-media/SWEBOK/iterative-good-enough.drawio.svg)
 
-Each hypothesis/test cycle tells us something about the problem and solutions. These increments progressively interpolate to a final solution.
+Each hypothesis/test cycle tells us something about the problem and our solutions. These increments progressively interpolate to a final solution.
 
 We can consider life cycle stages as benchmarks in these accumulated increments of understanding. Certain amounts of understanding may trigger review, change in process, or transfer of work that we see as life cycle stages.
 
-Note that there is no single perfect solution. Instead, there is a target of "good enough". Any solution that meets all known requirements falls in "good enough".
+Note that there is no perfect solution. Instead, there is a target of "good enough". Any solution that meets all known requirements falls in "good enough".
 Conversely, satisfying requirements is our stop condition to consider work complete ("definition of done"). 
 
 > A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away. - Antoine de Saint-Exupery
@@ -59,9 +59,9 @@ Good requirements are essential. Bad requirements cause us to narrow in on the w
 
 Fortunately, requirements mostly limit explorations to the right area. [As shown in the first section](#software-life-cycle-of-problem-understanding), life cycle stages progressively refine the problem as we work on it. Our "good enough" target gets better as we go, so long as we pay attention to trade-offs and feedback.
 
-Undoubtedly, more requirements will also appear after work is delivered. This is the "monitor" stage of the life cycle. This shifts target of "good enough" and we iterate to reach the new target just like before. 
+Undoubtedly, more requirements will also appear after work is delivered. This is the "monitor" stage of the life cycle. This shifts the target of "good enough" and we iterate to reach the new target just like before. 
 
-It's important to note, requirements in our "definition of done" are not just behavior expectations ("functional requirements"). They should also include quality measurements like maintainability and defect rates. The customer may not realize how these non-functional requirements effect their outcomes, but they likely do want the results. For example, maintained productivity, low failure rates, and secure software. Quantifying and benchmarking these requirements is a whole topic of it's own. 
+It's important to note, requirements in our "definition of done" are not just behavior expectations ("functional requirements"). They should also include quality measurements like maintainability and defect rates. The customer may not realize how these non-functional requirements effect their outcomes, but they likely do want the results. Results like maintained productivity, low failure rates, and secure software. Quantifying and benchmarking these requirements is a whole topic of it's own. 
 
 
 ## Adaptability: Volatility Analysis as Essence Discovery
@@ -72,7 +72,7 @@ So far we've mostly explored how problem modeling applies to incremental story-l
 
 Needs naturally change over time. New technologies are invented, regulations are enacted, businesses expand, etc. Businesses and software solutions must change to stay relevant. 
 
-The key is how well the software adapts to the changes it faces. How well our software adapts is largely dependent on how well we separate the true nature of our business from temporary coincidences. The traditional design terms are essence (true nature) and accident (coincidental qualities).
+How well the software adapts to the changes is key. How well our software adapts is largely dependent on how well we separate the true nature of our business from temporary coincidences. The traditional design terms are essence (true nature) and accident (coincidental qualities).
 
 The true nature of the problem is often referred to as the "core domain" of our system. It represents the fundamental business rules, and should be stable. The coincidental qualities should be contained in as little of our system design as possible. 
 
@@ -80,15 +80,15 @@ Put another way, understanding what is least likely to change in our system is a
 
 A good example is notifications. It is often fundamental to a process that people must be alerted of a software event. However, whether that notification is by email, text, mail (legal notice?), or triggers a company representative to make contact is very likely to change. Notifying is fundamental, the delivery mechanism is "accident".
 
-[Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) and [Clean/hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) are two popular techniques that try to bring structure to this process.
+[Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) and [Clean/hexagonal Architecture](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/) are two popular techniques that try to bring structure to this process.
 
 
 ## Recap 
 Problem definition cannot be confined to requirements. Rather, every life cycle stage polishes a refined statement of the original problem.
   
-Questions, tradeoffs between implementations, and other myriad decisions during the life cycle are really hypotheses we test against the real problem to refine our understanding. 
+Questions, tradeoffs between implementations, and other myriad decisions during the life cycle are hypotheses we test against the real problem to refine our understanding. 
 
-There is no perfect solution. Rather, these answered hypotheses incrementally push us toward a "good enough" solution where "done" is defined by meeting user need as we understand it. Life cycle stages are checkpoints in this understanding that often trigger review, handoffs, and different techniques.
+There is no perfect solution. Rather, these answered hypotheses incrementally push us toward a "good enough" solution where "done" is defined by meeting user need as we understand them. Life cycle stages are checkpoints in this understanding that often trigger review, handoffs, and different techniques.
 Understanding naturally changes and shifts our definition of done.
 
 Long term durability of software often depends on how well the design matches the nature of the problem being solved, centralizing the core nature of the business while keeping temporary details flexible.
@@ -102,6 +102,8 @@ Programming is a discipline understanding and modeling problems. This view satis
 - [What is Software Design](https://www.developerdotstar.com/mag/articles/reeves_design.html) (article)
 - [Design of Design](https://www.amazon.com/Design-Essays-Computer-Scientist/dp/0201362988) (book)
 - [Domain Driven Design](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) (book)
+- [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional) (book)
+- [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) (article)
 
 ## Similar Past Posts (from me) 
 
