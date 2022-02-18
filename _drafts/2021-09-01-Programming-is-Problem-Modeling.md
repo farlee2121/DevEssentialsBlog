@@ -51,19 +51,16 @@ Secondary ideas I'd like to communicate
 ![Lifecycle stages of problem refinement](../post-media/SWEBOK/problem-refinement-cycle.drawio.svg)
 
 
-This first visual focuses on the relationship of lifecycle stages to problem modeling. 
+The software development lifecycle stages can be seen as a cycle of actions to better understand our problem, where [each lifecycle stage outputs a refined statement of the problem](../_posts/2021-08-13-Swebok-transform-view.md).
 
-The core is understanding the problem, which is defined by customer need and achieved through critical thinking. All progress is made by better understanding what our customer needs and how we can satisfy that need through our product or processes.
-
-The outer layer is the lifecycle phases. Each phase outputs some artifact, and all artifacts are a restatement of the problem with additional details we've uncovered.
-
-The middle layer states how [each lifecycle phase refines the problem](../_posts/2021-08-13-Swebok-transform-view.md). 
 - Requirements formalize the problem enough to effectively consider solutions (SWEBOK chapter 1 intro or 1.7.1)
 - Design refines the problem by considering tradeoffs between different high-level solutions (SWEBOK 2.3.4). Tradeoffs should be weighed with stakeholders (SWEBOK 11.1.9)
 - Construction states the problem in code (precise processes). Construction further refines the problem by weighing tradeoffs between potential solutions and forcing resolution of ambiguity 
 - Testing measures how well our code matches our mental model of expected behavior and other expectation measures (SWEBOK 4.intro)
 - Delivery makes our solution available for application by end users. Application to the real problem is the most important measure of success.
 - Monitoring watches for changes in the problem or improvements in understanding that must be addressed in our solution
+
+The core is understanding the problem, which is defined by customer need and achieved through critical thinking. All progress is made by better understanding what our customer needs and how we can satisfy that need through our product or processes.
 
 ## Underlying Scientific Method
 
@@ -85,19 +82,18 @@ These question/hypothesis/test loops underlie not only the lifecycle, but each i
 
 ![Good Enough target](../post-media/SWEBOK/iterative-good-enough.drawio.svg)
 
-
 Each hypothesis/test cycle tells us something about the problem and solutions. These increments progressively interpolate to a final solution.
 
 We can consider lifecycle stages as benchmarks in these accumulated increments of understanding. Certain amounts of understanding may trigger review, change in process, or transfer of work that we see as lifecycle stages.
 
 Note that there is no single perfect solution. Instead, there is a target of "good enough". Any solution that meets all known requirements falls in "good enough".
-Conversely, satisfying requirements is our stop condition to consider work complete. 
+Conversely, satisfying requirements is our stop condition to consider work complete ("definition of done"). 
 
 > A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away. - Antoine de Saint-Exupery
 
 Good requirements are essential. Bad requirements cause us to narrow in on the wrong solutions and consider work finished before it meets the actual customer need. The further off our requirements, the worse our solutions.
 
-Fortunately, requirements mostly need to limit explorations to the right area. [As shown in the first section](#software-lifecycle-of-problem-understanding), we progressively refine the problem as we work on it. Our "good enough" target gets better as we go, so long as we pay attention to trade-offs and feedback.
+Fortunately, requirements mostly limit explorations to the right area. [As shown in the first section](#software-lifecycle-of-problem-understanding), lifecycle stages progressively refine the problem as we work on it. Our "good enough" target gets better as we go, so long as we pay attention to trade-offs and feedback.
 
 Undoubtedly, more requirements will also appear after work is delivered. This is the "monitor" stage of the lifecycle. This shifts target of "good enough" and we iterate to reach the new target just like before. 
 
@@ -112,7 +108,7 @@ So far we've mostly explored how problem modeling applies to incremental story-l
 
 Needs naturally change over time. New technologies are invented, regulations are enacted, businesses expand, etc. Businesses and software solutions must change to stay relevant. 
 
-The key is how well the software adapts to the changes it faces, and how well our software adapts is largely dependent on how well we separate the true nature of our business from temporary coincidences. The traditional design terms are essence (true nature) and accident (coincidental qualities).
+The key is how well the software adapts to the changes it faces. How well our software adapts is largely dependent on how well we separate the true nature of our business from temporary coincidences. The traditional design terms are essence (true nature) and accident (coincidental qualities).
 
 The true nature of the problem is often referred to as the "core domain" of our system. It represents the fundamental business rules, and should be stable. The coincidental qualities should be contained in as little of our system design as possible. 
 
