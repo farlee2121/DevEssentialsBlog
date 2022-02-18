@@ -4,47 +4,9 @@ tags: [Design Thinking]
 ---
 # Programming is Problem Modeling
 
-<!-- TODO: this is a post worth having reviewed before I release it -->
-<!-- TODO: align overall angle. The post is half visual experimentation, half dissertation on modeling -->
 Code is not the goal of programming. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
 
-<!-- idea: later sections don't expicitly call out their visual. Consider reframing the first section to be more fluid.
-
-idea: consider reframing goals to "recap" -->
-
-## Goals
-
-Problem modeling permeates all aspects of software development. 
-The primary ideas I want to communicate are
-
-- Problem understanding evolves through the whole software lifecycle
-  - Problem understanding can't be confined to requirements 
-- Lifecycle / process artifacts are restatements of the same problem
-- The problem is defined by user need
-  - Success is defined by satisfaction of user need
-- Problem understanding is fundamentally progressive
-  - The problem changes over time
-  - Understanding is naturally incomplete
-- Lifecycle stages are not strictly sequential
-- Lifecycle stages are an accumulation of problem clarity
-- How each lifecycle stage refines the problem
-
-I found this was too much to communicate in a single visual. So, I've split the idea across three key visuals and an established process:
-- the software lifecycle as problem refinement
-- the scientific method
-- modeling as incremental progress to "good enough"
-- volatility analysis as deeper understanding and sustainability
-
-<!-- 
-Secondary ideas I'd like to communicate 
-
-- Software/developer needs constrain solutions to the problem, but are secondary
-  - Examples: 
-    - Developer time impacts schedule, but not individual functional expectations
-    - Qual
-    - maintainability impacts velocity and developer happiness
-- There is no perfect design -->
-
+We'll examine how problem modelling relates to development lifecycle stages, informs how we iterate on work, defines when work is done, and clarifies the long-term adaptability of our systems.
 
 ## Software Lifecycle of Problem Understanding
 
@@ -93,6 +55,8 @@ Conversely, satisfying requirements is our stop condition to consider work compl
 
 Good requirements are essential. Bad requirements cause us to narrow in on the wrong solutions and consider work finished before it meets the actual customer need. The further off our requirements, the worse our solutions.
 
+> "The besetting mistake of expert designers is not designing the thing wrong, but designing the wrong thing" - Fred Brooks, Design of Design p. 167
+
 Fortunately, requirements mostly limit explorations to the right area. [As shown in the first section](#software-lifecycle-of-problem-understanding), lifecycle stages progressively refine the problem as we work on it. Our "good enough" target gets better as we go, so long as we pay attention to trade-offs and feedback.
 
 Undoubtedly, more requirements will also appear after work is delivered. This is the "monitor" stage of the lifecycle. This shifts target of "good enough" and we iterate to reach the new target just like before. 
@@ -100,7 +64,7 @@ Undoubtedly, more requirements will also appear after work is delivered. This is
 It's important to note, requirements in our "definition of done" are not just behavior expectations ("functional requirements"). They should also include quality measurements like maintainability and defect rates. The customer may not realize how these non-functional requirements effect their outcomes, but they likely do want the results. For example, maintained productivity, low failure rates, and secure software. Quantifying and benchmarking these requirements is a whole topic of it's own. 
 
 
-## Volatility Analysis as Essence Discovery
+## Adaptability: Volatility Analysis as Essence Discovery
  
 ![Volatility analysis](../site-media/../post-media/IDesign-System/iDesignSolutionScubbing.png)
 
@@ -119,17 +83,19 @@ A good example is notifications. It is often fundamental to a process that peopl
 [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) and [Clean/hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) are two popular techniques that try to bring structure to this process.
 
 
-## Conclusion
+## Recap 
+Problem definition cannot be confined to requirements. Rather, every life cycle stage polishes a refined statement of the original problem.
+  
+Questions, tradeoffs between implementations, and other myriad decisions during the life cycle are really hypotheses we test against the real problem to refine our understanding. 
 
-Programming is an exercise in understanding and modeling problems. 
-
-At the it's most fundamental, this is cycles of the hypothesis testing and collaboration with customers to incrementally translate their problem into a solution. There is no perfect solution. Rather, a solution is good enough when it meets the needs of the customers.
-
-Software lifecycle stages are not sequential self-contained steps. Rather, they are checkpoints of clarity while incrementally translating the problem to software. These checkpoints often trigger new techniques for clarification, and possibly team process to capture progress and verify quality.
+There is no perfect solution. Rather, these answered hypotheses incrementally push us toward a "good enough" solution where "done" is defined by meeting user need as we understand it. Life cycle stages are checkpoints in this understanding that often trigger review, handoffs, and different techniques.
+Understanding naturally changes and shifts our definition of done.
 
 Long term durability of software often depends on how well the design matches the nature of the problem being solved, centralizing the core nature of the business while keeping temporary details flexible.
 
+## Conclusion
 
+Programming is a discipline understanding and modeling problems. This view satisfactorily explains key problems in software, and why many key techniques solve those problems effectively. I believe this view provides a unified mental model to reason about software techniques and make effective process decisions.
 
 ## Further Reading
 - [No Silver Bullets](https://www.cs.unc.edu/techreports/86-020.pdf) (article)
@@ -148,7 +114,6 @@ I've written a variety of previous posts covering different views on this underl
 
 ## SWEBOK Citations
 
-<!-- > "The besetting mistake of expert designers is not designing the thing wrong, but designing the wrong thing" - Fred Brooks, Design of Design p. 167 -->
 
 I don't expect you to take these statements of software truth on my word. Here are many of the key points taken directly from the [Software Engineering Body of Knowledge](../_posts/2021-07-30-SWEBOK-review.md).
 
