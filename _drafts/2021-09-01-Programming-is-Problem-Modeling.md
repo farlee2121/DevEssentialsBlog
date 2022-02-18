@@ -6,14 +6,14 @@ tags: [Design Thinking]
 
 Code is not the goal of programming. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
 
-We'll examine how problem modelling relates to development lifecycle stages, informs how we iterate on work, defines when work is done, and clarifies the long-term adaptability of our systems.
+We'll examine how problem modeling relates to development life cycle stages, informs how we iterate on work, defines when work is done, and clarifies the long-term adaptability of our systems.
 
-## Software Lifecycle of Problem Understanding
+## Software Life Cycle of Problem Understanding
 
-![Lifecycle stages of problem refinement](../post-media/SWEBOK/problem-refinement-cycle.drawio.svg)
+![Life cycle stages of problem refinement](../post-media/SWEBOK/problem-refinement-cycle.drawio.svg)
 
 
-The software development lifecycle stages can be seen as a cycle of actions to better understand our problem, where [each lifecycle stage outputs a refined statement of the problem](../_posts/2021-08-13-Swebok-transform-view.md).
+The software development life cycle stages can be seen as a cycle of actions to better understand our problem, where [each life cycle stage outputs a refined statement of the problem](../_posts/2021-08-13-Swebok-transform-view.md).
 
 - Requirements formalize the problem enough to effectively consider solutions (SWEBOK chapter 1 intro or 1.7.1)
 - Design refines the problem by considering tradeoffs between different high-level solutions (SWEBOK 2.3.4). Tradeoffs should be weighed with stakeholders (SWEBOK 11.1.9)
@@ -26,18 +26,18 @@ The core is understanding the problem, which is defined by customer need and ach
 
 ## Underlying Scientific Method
 
-Notice how the lifecycle repeatedly refines understanding.
+Notice how the life cycle repeatedly refines understanding.
 - identify a need
 - identify a solution
 - test the solution to make sure it fits the need
 - Deliver the solution
 - Repeat
 
-The software lifecycle is the scientific process.
+The software life cycle is the scientific process.
 
 <a title="Efbrazil, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:The_Scientific_Method.svg"><img width="512" alt="The Scientific Method" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/The_Scientific_Method.svg/512px-The_Scientific_Method.svg.png"></a>
 
-These question/hypothesis/test loops underlie not only the lifecycle, but each individual activity as well. Each prototype, shadowing, user story, tradeoff analysis, unit test, and so on is a hypothesis about the problem. Testing each hypothesis compares our understanding against reality and refines what we know. These small tests add up and push us to a solution one increment at a time.
+These question/hypothesis/test loops underlie not only the life cycle, but each individual activity as well. Each prototype, shadowing, user story, tradeoff analysis, unit test, and so on is a hypothesis about the problem. Testing each hypothesis compares our understanding against reality and refines what we know. These small tests add up and push us to a solution one increment at a time.
 
 
 ## Increment to Good Enough
@@ -46,7 +46,7 @@ These question/hypothesis/test loops underlie not only the lifecycle, but each i
 
 Each hypothesis/test cycle tells us something about the problem and solutions. These increments progressively interpolate to a final solution.
 
-We can consider lifecycle stages as benchmarks in these accumulated increments of understanding. Certain amounts of understanding may trigger review, change in process, or transfer of work that we see as lifecycle stages.
+We can consider life cycle stages as benchmarks in these accumulated increments of understanding. Certain amounts of understanding may trigger review, change in process, or transfer of work that we see as life cycle stages.
 
 Note that there is no single perfect solution. Instead, there is a target of "good enough". Any solution that meets all known requirements falls in "good enough".
 Conversely, satisfying requirements is our stop condition to consider work complete ("definition of done"). 
@@ -57,9 +57,9 @@ Good requirements are essential. Bad requirements cause us to narrow in on the w
 
 > "The besetting mistake of expert designers is not designing the thing wrong, but designing the wrong thing" - Fred Brooks, Design of Design p. 167
 
-Fortunately, requirements mostly limit explorations to the right area. [As shown in the first section](#software-lifecycle-of-problem-understanding), lifecycle stages progressively refine the problem as we work on it. Our "good enough" target gets better as we go, so long as we pay attention to trade-offs and feedback.
+Fortunately, requirements mostly limit explorations to the right area. [As shown in the first section](#software-life-cycle-of-problem-understanding), life cycle stages progressively refine the problem as we work on it. Our "good enough" target gets better as we go, so long as we pay attention to trade-offs and feedback.
 
-Undoubtedly, more requirements will also appear after work is delivered. This is the "monitor" stage of the lifecycle. This shifts target of "good enough" and we iterate to reach the new target just like before. 
+Undoubtedly, more requirements will also appear after work is delivered. This is the "monitor" stage of the life cycle. This shifts target of "good enough" and we iterate to reach the new target just like before. 
 
 It's important to note, requirements in our "definition of done" are not just behavior expectations ("functional requirements"). They should also include quality measurements like maintainability and defect rates. The customer may not realize how these non-functional requirements effect their outcomes, but they likely do want the results. For example, maintained productivity, low failure rates, and secure software. Quantifying and benchmarking these requirements is a whole topic of it's own. 
 
