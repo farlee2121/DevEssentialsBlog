@@ -8,6 +8,10 @@ tags: [Design Thinking]
 <!-- TODO: align overall angle. The post is half visual experimentation, half dissertation on modeling -->
 Code is not the goal of programming. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.
 
+<!-- idea: later sections don't expicitly call out their visual. Consider reframing the first section to be more fluid.
+
+idea: consider reframing goals to "recap" -->
+
 ## Goals
 
 Problem modeling permeates all aspects of software development. 
@@ -16,14 +20,14 @@ The primary ideas I want to communicate are
 - Problem understanding evolves through the whole software lifecycle
   - Problem understanding can't be confined to requirements 
 - Lifecycle / process artifacts are restatements of the same problem
+- The problem is defined by user need
+  - Success is defined by satisfaction of user need
 - Problem understanding is fundamentally progressive
   - The problem changes over time
   - Understanding is naturally incomplete
 - Lifecycle stages are not strictly sequential
-- The problem is defined by user need
-  - Success is defined by satisfaction of user need
-- How each lifecycle stage refines the problem
 - Lifecycle stages are an accumulation of problem clarity
+- How each lifecycle stage refines the problem
 
 I found this was too much to communicate in a single visual. So, I've split the idea across three key visuals and an established process:
 - the software lifecycle as problem refinement
@@ -46,6 +50,7 @@ Secondary ideas I'd like to communicate
 
 ![Lifecycle stages of problem refinement](../post-media/SWEBOK/problem-refinement-cycle.drawio.svg)
 
+
 This first visual focuses on the relationship of lifecycle stages to problem modeling. 
 
 The core is understanding the problem, which is defined by customer need and achieved through critical thinking. All progress is made by better understanding what our customer needs and how we can satisfy that need through our product or processes.
@@ -54,9 +59,9 @@ The outer layer is the lifecycle phases. Each phase outputs some artifact, and a
 
 The middle layer states how [each lifecycle phase refines the problem](../_posts/2021-08-13-Swebok-transform-view.md). 
 - Requirements formalize the problem enough to effectively consider solutions (SWEBOK chapter 1 intro or 1.7.1)
-- Design refines the problem by considering tradeoffs between different solutions (SWEBOK 2.3.4). Tradeoffs should be weighed with stakeholders (SWEBOK 11.1.9)
+- Design refines the problem by considering tradeoffs between different high-level solutions (SWEBOK 2.3.4). Tradeoffs should be weighed with stakeholders (SWEBOK 11.1.9)
 - Construction states the problem in code (precise processes). Construction further refines the problem by weighing tradeoffs between potential solutions and forcing resolution of ambiguity 
-- Testing measures how well our code matches our mental model for behavior and other expectation measures (SWEBOK 4.intro)
+- Testing measures how well our code matches our mental model of expected behavior and other expectation measures (SWEBOK 4.intro)
 - Delivery makes our solution available for application by end users. Application to the real problem is the most important measure of success.
 - Monitoring watches for changes in the problem or improvements in understanding that must be addressed in our solution
 
@@ -92,9 +97,9 @@ Conversely, satisfying requirements is our stop condition to consider work compl
 
 Good requirements are essential. Bad requirements cause us to narrow in on the wrong solutions and consider work finished before it meets the actual customer need. The further off our requirements, the worse our solutions.
 
-Fortunately, requirements mostly need to limit explorations to the right area. Problem understanding is refined through the programming lifecycle, adding new requirements to the "definition of done". This will shift our final "good enough" target, but also enables progressive discovery.
+Fortunately, requirements mostly need to limit explorations to the right area. [As shown in the first section](#software-lifecycle-of-problem-understanding), we progressively refine the problem as we work on it. Our "good enough" target gets better as we go, so long as we pay attention to trade-offs and feedback.
 
-Undoubtedly, more requirements will also appear after work is delivered. This shifts target of "good enough" and we iterate to reach the new target just like before. 
+Undoubtedly, more requirements will also appear after work is delivered. This is the "monitor" stage of the lifecycle. This shifts target of "good enough" and we iterate to reach the new target just like before. 
 
 It's important to note, requirements in our "definition of done" are not just behavior expectations ("functional requirements"). They should also include quality measurements like maintainability and defect rates. The customer may not realize how these non-functional requirements effect their outcomes, but they likely do want the results. For example, maintained productivity, low failure rates, and secure software. Quantifying and benchmarking these requirements is a whole topic of it's own. 
 
@@ -103,7 +108,7 @@ It's important to note, requirements in our "definition of done" are not just be
  
 ![Volatility analysis](../site-media/../post-media/IDesign-System/iDesignSolutionScubbing.png)
 
-So far we've mostly explored how problem modeling applies to present work. However, problem modeling is even more important for managing the big picture of inevitable change.
+So far we've mostly explored how problem modeling applies to incremental story-level work. However, problem modeling is even more important for managing the big picture of inevitable change.
 
 Needs naturally change over time. New technologies are invented, regulations are enacted, businesses expand, etc. Businesses and software solutions must change to stay relevant. 
 
@@ -113,7 +118,7 @@ The true nature of the problem is often referred to as the "core domain" of our 
 
 Put another way, understanding what is least likely to change in our system is an act of understanding the true nature of the problem we are solving. Aligning our code with that nature maximizes long term adaptability.
 
-A good example is notifications. It is often fundamental to a process that people must be alerted of a software event. However, whether that notification is by email, text, mail (legal notice?), or triggers a company representative to make contact is very likely to change. Notifying is fundamental, delivery mechanism is "accident".
+A good example is notifications. It is often fundamental to a process that people must be alerted of a software event. However, whether that notification is by email, text, mail (legal notice?), or triggers a company representative to make contact is very likely to change. Notifying is fundamental, the delivery mechanism is "accident".
 
 [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) and [Clean/hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) are two popular techniques that try to bring structure to this process.
 
