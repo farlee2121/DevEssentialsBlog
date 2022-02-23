@@ -72,7 +72,7 @@ theme_settings:
       text: "Search"
     tags:
       icon: "tags"
-      enabled: true
+      enabled: false
       text: "Tags"
   
   # Localization strings

@@ -5,8 +5,43 @@
                 <ul>
                 <!-- Social icons from Font Awesome, if enabled -->
                 {% include icons.html %}
+
+                <li>
+                    <a href="{{site.url}}/tags" title="tag cloud">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-tag fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
                 </ul>
             </div>
+            <!-- <style>
+                .footer-links{
+                    display: flex;
+                    justify-content: center; 
+                    list-style: none; 
+                    flex-wrap: wrap;
+                }
+
+                .footer-links li{
+                    margin-right: 10px;
+                    height: 30px;
+                }
+
+            </style>
+            <ul class="footer-links">
+                <li>
+                    <a href="{{site.url}}/tags">
+                        <i class="fa fa-tag"></i>tags
+                    </a>
+                </li>
+                <li> 
+                    <a href="{{site.url}}/favorite-posts">
+                        <i class="fa fa-star"></i>favorites
+                    </a>
+                </li>
+            </ul> -->
 </footer>
 {% endif %}
 
