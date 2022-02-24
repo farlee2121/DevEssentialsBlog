@@ -3,6 +3,8 @@ layout: post
 tags: [Logging, Monitoring]
 ---
 
+# A Few Logging Ideas
+
 This post is mostly a reminder to think more on a few logging ideas I encountered. I figured others might benefit from them too.
 
 
