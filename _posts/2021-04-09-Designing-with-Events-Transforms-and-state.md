@@ -1,3 +1,7 @@
+---
+layout: post
+tags: [Domain Driven Design, Events, Functional Programming]
+---
 # Progressive Modeling with Events, Transforms, and State
 
 I just finished reading [Domain Modeling Made Functional](https://pragprog.com/titles/swdddf/domain-modeling-made-functional/). Wow, the technique in this book just feels right. It wraps up a bunch of development values I already had in a technique that is clear, thorough, and fluid. Here I'll overview the method and recount a bit of my experience applying it.

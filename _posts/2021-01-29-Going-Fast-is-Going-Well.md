@@ -11,7 +11,7 @@ I want to directly address the idea that moving quickly means bad code. The oppo
 It's generally accepted that bad code slows you down, eventually. The [design stamina hypothesis](https://www.martinfowler.com/bliki/DesignStaminaHypothesis.html) represents the general relationship well. 
 
 <figure class="image">
-  <img src="https://www.martinfowler.com/bliki/images/designStaminaGraph.gif" alt="Design Stamina Hypothesis">
+  <img src="../post-media/Going-Fast/designStaminaGraph.gif" alt="Design Stamina Hypothesis">
   <figcaption>Source: https://www.martinfowler.com/bliki/images/designStaminaGraph.gif</figcaption>
 </figure>
 
