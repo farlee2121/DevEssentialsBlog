@@ -11,9 +11,10 @@ I want to directly address the idea that moving quickly means bad code. The oppo
 It's generally accepted that bad code slows you down, eventually. The [design stamina hypothesis](https://www.martinfowler.com/bliki/DesignStaminaHypothesis.html) represents the general relationship well. 
 
 <figure class="image">
-  <img src="../post-media/Going-Fast/designStaminaGraph.gif" alt="Design Stamina Hypothesis">
+  <img src="{{site.url}}/post-media/Going-Fast/designStaminaGraph.gif" alt="Design Stamina Hypothesis">
   <figcaption>Source: https://www.martinfowler.com/bliki/images/designStaminaGraph.gif</figcaption>
 </figure>
+<br />
 
 I believe the trade-off happens very fast. The first time you have to rip out code you're both throwing away the previous work, adding work to remove it, and doing the new work. The more thrown-together code you have the more frequent and complex these challenges become.
 
