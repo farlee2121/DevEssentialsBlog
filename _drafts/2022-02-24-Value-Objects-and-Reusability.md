@@ -52,6 +52,6 @@ In both cases, representing the concept with a type also allows us to start reas
 Phone, name, and address may be obvious, but I've found that looking for related properties helps me discover domain concepts I hadn't considered before. It primes me to better understand the nature of the problem I'm working on and how users reason about the process.
 
 The astute reader may also recognize that the `User` example constains implied business rules and states. For example, probable authentication flows around phone or email.
-Scott Wlaschin explains how to model these implicit rules and other scenarios with types in [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional) or his blog post series [Designing With Types](https://fsharpforfunandprofit.com/posts/designing-with-types-intro/).
+Scott Wlaschin explains how to model these implicit rules and other scenarios with types in his book [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional). Shorter versions of the idea are available in his blog post series [Designing With Types](https://fsharpforfunandprofit.com/posts/designing-with-types-intro/) or his talk [Domain Modeling Made Functional](https://www.youtube.com/watch?v=Up7LcbGZFuo&ab_channel=NDCConferences).
 
 
