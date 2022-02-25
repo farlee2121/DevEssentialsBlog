@@ -6,6 +6,7 @@ title: Favorite Posts
 
 ## Ideas and Exploration
 - [Programming is Problem Modeling](../_posts/2022-02-18-Programming-is-Problem-Modeling.md)
+- [Stable, Incremental, Additive](../_posts/2022-02-25-Stable-Incremental-Additive.md)
 - [Efficient Inter-Team Acceptance Tests](../_posts/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md)
 - [Test Types and Life Cycle Phases](../_posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md)
 - [Test Api In Practice](../_posts/2020-08-21-Test-Api-InPractice.md)
