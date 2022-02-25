@@ -15,6 +15,7 @@ title: Favorite Posts
 - [Righting Software - Project Design Summary](../_posts/2020-07-16-iDesign-Project-Summary.md)
 - [Event Stores: An Advance in Data Safety](../_posts/2021-05-28-Transaction-Databases.md)
   
+<!-- Split mental model and techniques into separate sections? -->
   
 <!-- 
 - Gherkin-named Tests as Low-bar Acceptance Tests?
