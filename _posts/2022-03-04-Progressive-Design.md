@@ -37,6 +37,8 @@ Further, code-related processes like code ownership, quality measurement, approv
 
 In short, system complexity and process formality progressively grow as demands on our system grow.
 
+I don't want to give the impression such process magics away all pain. It's natural for the course of a business to change, and for our understanding of it to change. These progressive and well-insulated services help to minimize scope of such changes. Versioning is also a critical tool for progressively managing such change. Stipe tells a good story of how they [experienced business change](https://stripe.com/blog/payment-api-design) and [minimize change impact](https://stripe.com/blog/api-versioning) with stable, incremental, additive versioning.
+
 ## Examples with Companies
 
 [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law) states that systems structures reflect the organizations that built them.
@@ -49,13 +51,13 @@ Management is simplified because ownership of outcomes is very clear (which team
 
 A product could start with a single team, and then split out new teams as services within the system become complex. Such teams are almost guaranteed to have maximally independent and focused work. The company can discover it's minimal and well-divided set of teams overtime without guesswork. 
 
-This is, of course, a bit idealistic. Similar concerns may be addressed in multiple sections of the company. Bringing those solutions together is often painful and complex. However, the choice of when (or if) to bring them together becomes a business question (i.e. Is there enough long-term overlap to justify the investment?).
+This is, of course, a bit idealistic. Similar concerns may be addressed in multiple sections of the company. Bringing those solutions together is often painful and complex. However, the choice of when (or if) to bring them together becomes a business question (i.e. Is there enough long-term overlap to justify the investment?). 
 
 ## Example with testing
 I've [previously explored](../_posts/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) how behavior-driven acceptance tests might be used to progressively formalize testing process without restructuring tests.
 
 ## Conclusion
-Choosing the right amount of process is hard. However, incremental, stable, and additive processes naturally lead to progressive systems that allow us to minimize immediate process *and* increase process as needed without restructuring our systems. This is true for code, and probably also for organizations and tests!
+Choosing the right amount of process is hard. However, incremental, stable, and additive processes naturally lead to progressive systems that allow us to minimize immediate process *and* increase process as needed without restructuring our systems. This is true for code, and possibly also for organizations and tests!
 
 
 <!-- - extra reference? 
