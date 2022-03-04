@@ -5,16 +5,16 @@ tags: [Design Thinking, Architecture, Software Design]
 
 # Progressive Design
 
-Choosing the right amount of process is an art. Too much process is smothering and too little is a mess. However, I think [incremental, stable, and additive processes](TODO) naturally start simple and mature *progressively* with our demands.
+Choosing the right amount of process is an art. Too much process is smothering and too little is a mess. However, I think [incremental, stable, and additive processes](../_posts/2022-02-25-Stable-Incremental-Additive.md) naturally start simple and mature *progressively* with our demands.
 
 
-Progressive value is a guarantee if our system isn't deeply affected by change (stable), changes in small complete chunks (incremental), and the increments mostly build on each other (additive).
+Progressive value is inherent if our system isn't deeply affected by change (stable), changes in small complete chunks (incremental), and the increments mostly build on each other (additive).
 
 All these properties together enable **progressive design**. We can design to what we know right now with minimized complexity, but adjust to change without massive rework.
 
 ## Examples with Architecture
 
-To make this a bit more concrete. Lets consider a design flow with [Ports and Adapters architecture](https://spencerfarley.com/2020/12/19/ports-and-adapters) and other plugin-style architectures.
+To make this a bit more concrete. Lets consider a design flow with [Ports and Adapters architecture](../_posts/2020-12-19-Ports-and-Adapters.md) and [similar plugin-style architectures](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/).
 
 Start with the top-level use case. The workflow is our first component.
 
