@@ -9,7 +9,7 @@ Small teaching is an engaging and practical condensation of learning research in
 
 ## Core Concept
 
-Small teaching is built around the same idea as small-ball in baseball. The idea that small and mundane but constent plays
+Small teaching is built around the same idea as small-ball in baseball. The idea that small, but consistent, plays
 can add up into a championship-winning strategy.
 
 Teachers often work long hours ourside of their official positions. They're too mired in the day-to-day to make big 
@@ -19,12 +19,12 @@ This is a problem. Any large-scale change in education requires accessibility to
 
 This is where Small Teaching shines. The book has sifted down learning research into a small set of techniques that are easy to adopt 
 and show research-proven results. Each skill has potential for significant gains, but the set of techniques also reinforce each other to create
-a system great than it's parts.
+a system greater than it's parts.
 
 
 All concepts in the book must satisfy
 - some foundation in research
-- positive impact in real-world educational environments
+- proven impact in real-world educational environments
 - the author personally experienced results from the technique
 
 In general, the concrete techniques are
@@ -36,17 +36,20 @@ The book is built for repeated reference and application. Each chapter cleanly o
 
 ## Concept Overview
 
-Here I'll summarize the key concepts and some of their techniques. The summaries may be enough to pique interest, but are more of a reference tool and way for me to condense my learning. 
+Here I'll summarize the key concepts and some of their techniques. The summaries may be enough to pique interest, but are mostly a reference tool and way for me to condense my learning. 
 The book is very much worth the read if you find any of these concepts intriguing.
 
 ### Retrieving
 Repeated input does not lead to better memory. To remember information, we have to practice remembering it. "The more times that you practice remembering something, the more capable you become of remembering that thing in the future." Small and frequent assessments of knowledge help students to retain information long-term. The more active thinking on the information, the stronger the effect.
 
-Tools: quizzes (multiple choice or short answer), closing questions, discussion prompts + written response 
+Tools: 
+- quizzes (multiple choice or short answer)
+- closing questions
+- discussion prompts + written response 
 
 ### Predicting
 
-"Making predictions about material that you wish to learn increases your ability to understand that material and retrieve it later". Prediction causes our brains to call on information we already have and prepares us to connect what we learn to what we know. It can also break "fluency illusion" where students mistake familiarity with subject mastery. Additionally, curiosity is shown to boost memory for a time, even if the following content is not related. Pre-testing has a similar effect to predicting.
+"Making predictions about material that you wish to learn increases your ability to understand that material and retrieve it later". Prediction causes our brains to call on information we already have and prepares us to connect what we learn to what we already know. It can also break "fluency illusion" where students mistake familiarity with subject mastery. Additionally, curiosity is shown to boost memory for a time, even if the following content is not related. Pre-testing has a similar effect to predicting.
 <!-- , showing student improvements of about 10%. -->
 
 Tools: 
@@ -57,7 +60,7 @@ Tools:
 Instead of block modules (e.g. all topic A, all topic B, all topic C), intermix the topics (e.g. A+B+C intro, topic A, topic B, A+B quiz, topic C, review all + exam). The spacing and mixing promotes retrieval practice, and requires students to recognize what skill applies to what problems. This dramatically improves student ability to recognize and apply each skill in real contexts.
 
 Tools: 
-- split topics between sessions with exercise in the middle
+- split topics between class sessions with an exercise in the middle of class 
 - cumulative assessments (quiz or tests)
 - open with students highlighting previous notes
 
@@ -88,6 +91,7 @@ Tools:
 - "Why are you doing that?"
 - peer instruction
 - clickers (answer, discuss, re-answer)
+- [duck docs](../_posts/2021-05-21-Duck-Structure.md)
 
 ### Motivation
 Motivation is key for engaging and sustaining learners. Motivation often stems from emotions. Purpose, especially purpose beyond self, is the most powerful emotion for extended motivation.
