@@ -67,11 +67,10 @@ The difference between novice and expert knowledge is density and quality of con
 Tools: 
 - concept maps
 - minute thesis (pick concept from each column and connect them)
-- Advanced organizers (partial diagrams, hierarchies, notes, etc)
+- advanced organizers (partial diagrams, hierarchies, notes, etc)
 
 ### Practice
-Students often don't know how to practice effectively, or understand its value. Common strategies include repeatedly read notes (which doesn't strengthen retrieval), cramming all at once, or repetition of incorrect habits. Setting the pace for them to repeat content often and over time builds effective learning habits across subject. Recognize that the students may not have all component skills for your content. Break the skill down and make sure critical components are practiced. Like sports or music coaching, Some practice should be done with an instructor for quick feedback on developing habits.  
-
+Students often don't know how to practice effectively, or understand its value. Common strategies include repeatedly read notes (which doesn't strengthen retrieval), cramming all at once, or repetition of incorrect habits. Setting the pace for them to repeat content often and over time builds effective learning habits across subject. Recognize that the students may not have all component skills for your content. Break the skill down and make sure critical components are practiced. Like sports or music coaching, some practice should be done with an instructor for quick feedback on developing habits.  
 
 Tools:
 - Frequent low-pressure application (e.g. quizzes)
@@ -82,6 +81,8 @@ Tools:
 
 ### Self-explaining
 "Learners benefit from explaining out loud (to themselves or to others) what they are doing during the completion of a learning task". Good self-explaining includes why, not just what. Self-explaining helps students monitor their own understanding and fill gaps. It also connects general principles to the specific worked examples, and to their own knowledge.
+
+I use a written variation of this that I call [duck docs](../_posts/2021-05-21-Duck-Structure.md).
 
 Tools: 
 - "Why are you doing that?"
