@@ -12,6 +12,8 @@ I want to cleanly represent predictable failure states as part of my function co
 
 This post will first specify the problem(s), look at failed solutions in C#, cover F# solutions, and try to map functional ideas back to C#. 
 
+> UPDATE: [C# 9 can simplify result types](../_posts/../2021-01-15-Results-Update.md)
+
 ## Problem Statement
 Consider this common scenario: there is some happy path that should return a value, but there are also expected ways that operation might go wrong.
 
