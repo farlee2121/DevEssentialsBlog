@@ -50,4 +50,9 @@ I'd guess this has to do with potential state. Rust traits only support function
 Potential state leaves us with bad options. A type could implement two traits with conflicting data members (i.e. same name). The conflicting members could share state, but this would break their independence and cause unclear coupling between contexts. Alternatively, different trait implementations could ignore each others state, but this likely creates an illusion of expected shared state. The rules for mutating data become muddy either way.
 
 
+
+TODO: consider sneaking in https://www.withouttheloop.com/articles/2014-10-21-fsharp-adhoc-polymorphism/
+
 TODO: I'm not confident in this assessment. 
+
+IDEA: maybe post this as-is with an addendum refering to Don Syme's post on type classes and how he sees them as often fostering unhealthy programming patterns, like trying too hard to type class everything
