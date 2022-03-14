@@ -18,7 +18,8 @@ I'll compare F# against the article's listed good qualities of Rust to demonstra
   - 
 - ✅ [Generics](https://fsharpforfunandprofit.com/posts/completeness-anything-csharp-can-do/#generics)
 - ✅ [Optionals](https://fsharpforfunandprofit.com/posts/the-option-type/)
-- ✅ [Late-bound inheritance (traits)](TODO)
+- ❌/🟨 Ad-hoc polymorphism (traits)
+  - It's possible with static member constraints, but not great
 - 🟨/✅ Results over Exceptions
   - F# treats exceptions similar to Rust. Results are preferred, but exceptions are still available. Rust just calls them [panic](https://doc.rust-lang.org/std/macro.panic.html).
 - ✅ [Functional programming constructs (lambda, collection functions)](https://docs.microsoft.com/en-us/dotnet/fsharp/tutorials/functional-programming-concept)
