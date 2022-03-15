@@ -12,7 +12,7 @@ Small teaching is an engaging and practical condensation of learning research in
 Small teaching is built around the same idea as small-ball in baseball. The idea that small, but consistent, plays
 can add up into a championship-winning strategy.
 
-Teachers often work long hours ourside of their official positions. They're too mired in the day-to-day to make big 
+Teachers often work long hours outside of their official positions. They're too mired in the day-to-day to make big 
 flashy changes, especially ones that aren't guaranteed to payoff.
 
 This is a problem. Any large-scale change in education requires accessibility to the typical working teacher.
@@ -30,7 +30,7 @@ All concepts in the book must satisfy
 In general, the concrete techniques are
 - 5-10 minute activities
 - one-time interventions
-- small modification is course design or communication w/ students
+- small modification in course design or communication w/ students
 
 The book is built for repeated reference and application. Each chapter cleanly organizes personal examples, underlying theory, techniques, and a summary of key points.
 
