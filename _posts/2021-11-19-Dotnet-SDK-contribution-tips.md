@@ -59,6 +59,7 @@ Testing with VsCode can be tricky. Test from the console instead if you can. Oth
 
 
 <!-- 
-build and test tools are a separate project https://github.com/dotnet/arcade -->
+build and test tools are a separate project https://github.com/dotnet/arcade
 
-
+Update: it looks like you can use Visual Studio and the dotnet sdk to test and debug if you match the version explicitly required via global.json
+ -->
