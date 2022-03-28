@@ -94,19 +94,20 @@ Tests-as-values enable more than testing customizations. It also means that our 
 
 I currently use a kind of test factory to reuse a test list across different implementations of an interface ([test api in F#](../_posts/2021-10-08-TestApi-in-FSharp-revised.md) or [the C# approximation w/ motivational example](TODO)). 
 
-I have hopes that this kind of reuse and composition can raise our level of abstraction in testing. For example, I commonly write very similar and fairly complex tests for fetching some object based on an intersection of tags. Such tests get even more complicated if there are both include and exclude tags. 
+I have hopes that this kind of reuse and composition can raise our level of abstraction in testing. For example, I commonly write very similar and fairly complex tests for fetching some object based on an intersection of tags. Such tests get even more complicated if there are both include and exclude tags. A similar case is filter, sort, and search combinations.
 
-This kind of test seems ripe for reuse. It depends very little on the tagged entity, it's a common set theory problem, and has fairly complex behaviors. I'd love to compose a test suite like
+This kind of test seems ripe for reuse. Behavior varies very little between uses, yet the behaviors are complex with sneaky edge cases. I'd love to compose a test suite like
 ```fs
 testList "FooServiceTests" [
     FooBehaviorRequirements
-    StandardTagIntersectionTests,
-    StandardPerformanceBaselineTests,
+    StandardTagIntersectionTests
+    StandardPerformanceBaselineTests
+    StandardFilterAndSort
     StandardEntityCRUDTests
 ]
 ```
 
-The question is how many tests scenarios are really worth the indirection of separating out a standard suite and connecting by some adapter. It's a whole new mindset to approach tests with. 
+The question is how many tests scenarios are really worth the indirection of separating out a standard suite then mapping into that suite's abstractions. It's a whole new mindset to approach tests with. 
 
 ## Conclusion
 I find it wonderful that all the semi-mysterious actions of a testing framework become clear and accessible with tests-as-values. Easy access to the testing pipeline empowers developers to make powerful customizations to their own usage, like my [test api library for F#](../_posts/2021-10-08-TestApi-in-FSharp-revised.md). Looking forward, I hope that test values will improve isolation of cross-cutting expectations into reusable test suites. 
