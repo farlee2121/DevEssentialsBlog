@@ -35,7 +35,8 @@ Notice how the life cycle repeatedly refines understanding.
 
 The software life cycle is the scientific process.
 
-<a title="Efbrazil, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:The_Scientific_Method.svg"><img width="512" alt="The Scientific Method" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/The_Scientific_Method.svg/512px-The_Scientific_Method.svg.png"></a>
+
+[![The Scientific Method - Efbrazil, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons](../post-media/Programming-is-Problem-Modeling/The_Scientific_Method.svg.png)](https://commons.wikimedia.org/wiki/File:The_Scientific_Method.svg)
 
 These question/hypothesis/test loops underlie not only the life cycle, but each individual activity as well. Each prototype, shadowing, user story, tradeoff analysis, unit test, and so on is a hypothesis about the problem. Testing each hypothesis compares our understanding against reality and refines what we know. These small tests add up and push us to a solution one increment at a time.
 
