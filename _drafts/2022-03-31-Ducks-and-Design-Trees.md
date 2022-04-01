@@ -268,4 +268,14 @@ Techniques
   - How do I change my system so it's easy to add the feature I want? 
 
 
+## Conclusion
 
+The main goal of this post was to build a mental model for healthy software design process.
+
+Software if fundamentally a design activity trying to model problems in automated processes.
+Banish vague notions is a primary responsibility for programmers, who incrementally break of
+unknowns from the problem to zero in on clear and satisfactory solutions. 
+There is no perfect solution, only solutions that meet our known needs.
+
+Communicating ideas clearly is central to effective process at all stages. Duck docs are but one
+flexible technique for getting ideas out of our heads, making them clear, and balancing solutions against our problem's goals and constraints.
