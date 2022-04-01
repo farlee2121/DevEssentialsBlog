@@ -12,6 +12,17 @@ tags: [Design Process, Ducks]
 
 <!-- TODO: consider title, feels like current name leaves out too many other concepts. What's your duck is the core question -->
 
+
+<!-- Meta thoughts
+This feels so much different from writing my other posts. I can see all the effort I put into connecting back 
+
+Thinking about this as a potential series causes me to write each section intro like a blog intro and forge stronger context clarity
+
+TODO: do I need to create more rigorous lesson plans for jack so I can be always connecting into that framework?
+
+It's a lot of work, but I think I need to learn to write more posts like this. 
+ -->
+
 # Ducks and Design Trees (What's your Duck)
 
 This post is about design process and organizing our thoughts for effective development. The main goal is to establish a healthy mental model and intuition for effective design process. The duck bit will be explained later.
@@ -188,26 +199,73 @@ I like to approach questions with the 5ish interrogatives
 
 The trio of what, when, and how much inform if a solution is even worth pursuing.
 
-This can, of course, be broken down much finer. There are many established techniques for trying to iron out details,and I can't hope to explain it better than such dedicated techniques. 
+Most requirement techniques attempt to answer these questions with enough granularity for development. It's also critical to align understanding of them between customers and developers. Again, it's better to be wrong than vague. Producing artifacts (sketches, descriptions, diagrams, etc) that both you and the customer understand helps surface differences in understanding early and saves pain for everyone later.
 
 Techniques
 - Event Storming ([original overview](http://ziobrando.blogspot.com/2013/11/introducing-event-storming.html)) ([official resources](https://www.eventstorming.com/resources/))
-- Wire Frames
+- [Wire Frames](https://en.wikipedia.org/wiki/Website_wireframe)
+- [Prototyping](https://en.wikipedia.org/wiki/Software_prototyping)
+- [User Stories](https://en.wikipedia.org/wiki/User_story)
+- Interviews
+- Shadowing
 
 ## Questions for Architecture and High-level Design
 
+I make a point to ask people about their views on architecture. Often, I get responses about X framework or Y technology stack. [These are not architecture](https://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html).
+
+I like how Robert Martin broadly describes architecture as making the important decisions that allow you to put off the unimportant decisions. Unimportant decisions being things that shouldn't control the overall structure of your program.
+
+Unimportant 
+- Data Schema
+- Language
+- Frameworks & Storage
+
+Important
+- Domain / Non-Domain properties
+- Details to defer
+- Likely design changes
+- Project scale
+
+Seen another way, architecture is understanding the problem domain. [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) is one of the most popular design methodologies. Prescribes that software should reflect the problem it solves and provides various techniques.
+
+My main tools include
+- [Essence vs accident](http://worrydream.com/refs/Brooks-NoSilverBullet.pdf): What is a fundamental part of the problem, versus what could change by circumstance
+  - Could we be a (company type) if we didn't (activity)?
+- [Volatility Analysis](../_posts/2022-02-18-Programming-is-Problem-Modeling.md#adaptability-volatility-analysis-as-essence-discovery): Using likelihood of change to understand how fundamental concepts are to a problem
+  - Note: frameworks, data stores, data schemas, communication protocols, UI organization, and similar are almost never essential to a problem and likely to change. They are poor foundations for organizing a system
+- [Information Hiding](https://en.wikipedia.org/wiki/Information_hiding): How can I minimize the scope a programmer needs to consider to understand a given piece of the system 
+- [SOLID](https://en.wikipedia.org/wiki/SOLID): A set of design principles that guide ways to avoid key design problems.
+
+
+I describe much of my design process in these posts
+- [Programming is Problem Modeling](../_posts/2022-02-18-Programming-is-Problem-Modeling.md)
+- [Stable, Incremental, Additive](../_posts/2022-02-25-Stable-Incremental-Additive.md)
+- [Patterns in practice](../_posts/2021-07-09-Patterns-in-Practice.md)
+
+Design approaches
+- [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) ([book](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215))
+  - I highly recommend [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional). It covers a modeling process from end to end in digestable increments.
+- [Ports and Adapters, Clean Architecture, Hexagonal Architecture](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/)
+- [IDesign](../_posts/2020-07-03-iDesign-Visual-Summary.md)
+
+
 ## Questions for Construction
 
+Many of the architecture and high-level design questions trickle down to construction, just at a smaller scale with more detail.
+
+The main questions I ask myself while coding are
+- **Testing**: How can I write automated tests for this code?
+- **Understandability**: How can I communicate my intent clearly in code so future contributors can correctly modify the system?
+- **Coupling and Cohesion**: Another view of volatility analysis and information hiding. How can I separate activities so each chunk is independently understandable and future change has minimal impact? How can I minimize expections between components?
+- **Design Patterns**: what established [patterns](https://en.wikipedia.org/wiki/Software_design_pattern) can I use to maximize understandability.
+
+Techniques
+- [Test-Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)
+- Pseudo-code Programming Process (Code Complete 2nd ed chapter 9)
+  - Use pseudo-code to progressively understand a process. Aids consistent abstraction / code that reads like a sentence and conceptually well-factored code 
+- [Pair Programming](https://en.wikipedia.org/wiki/Pair_programming)
+- Preparatory Refactoring (Refactoring Ch 2): 
+  - How do I change my system so it's easy to add the feature I want? 
 
 
-
-<!-- Meta thoughts
-This feels so much different from writing my other posts. I can see all the effort I put into connecting back 
-
-Thinking about this as a potential series causes me to write each section intro like a blog intro and forge stronger context clarity
-
-TODO: do I need to create more rigorous lesson plans for jack so I can be always connecting into that framework?
-
-It's a lot of work, but I think I need to learn to write more posts like this. 
- -->
 
