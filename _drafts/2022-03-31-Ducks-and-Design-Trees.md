@@ -36,9 +36,7 @@ First, here are a few motivational questions.
 - Can software be perfect?
 - What makes software good?
 
-I'd encourage you to take a few minutes and form your own thoughts on these questions before moving ahead. You don't have to know the answer. Connecting and theorizing [aid the learning process](../_posts/2022-03-07-Small-Teaching-Review.md#predicting). Any expert readers can prepare to correct me.
-
-<!-- address something to experts here so they still fell welcome -->
+I'd encourage you to take a few minutes and organize your own thoughts on these questions before moving ahead. You don't have to have an answer, thoughts and questions are good too. Connecting and theorizing [aid the learning process](../_posts/2022-03-07-Small-Teaching-Review.md#predicting).
 
 ## The Nature of Software 
 
@@ -51,13 +49,9 @@ I'm a firm believer that [programming is problem modeling](../_posts/2022-02-18-
 
 As programmers, we take problems of all kinds and we translate them into the exact language of software.
 
-We can encode almost anything our imagination can grapple. Real world problems are often messy and partially self-conflicting. Unwinding the many facets of such problems into automated processes is a difficult, non-deterministic, and beautiful act of design.
+We can encode almost anything our imagination can grapple. Real world problems are often messy and partially self-conflicting. Unwinding the many facets of such problems into automated processes is a difficult, non-deterministic, and beautiful [act of design](https://www.developerdotstar.com/mag/articles/reeves_design.html).
 
 Software Engineering is then the repeatable process for encoding ideas in software both economically and reliably. 
-
-<!-- TODO: reference What is software by jack reeves 
-https://www.developerdotstar.com/mag/articles/reeves_design.html
--->
 
 ## Better Wrong Than Vague
 
@@ -66,8 +60,7 @@ https://www.developerdotstar.com/mag/articles/reeves_design.html
 
 This quote is the single most important idea you can take from this post. If you remember nothing else, remember it's better to be wrong than vague.
 
-Software is a complex design activity. We deal with messy problems and problems that often change. It's inevitable that we will get some elements wrong. What matters is when and how we discover errors.
-<!-- TODO: can I find a public reference (McConnell) on cost of later discovery? -->
+Software is a complex design activity. We deal with messy problems and problems that often change. It's inevitable that we will get some elements wrong. What matters is [when and how we discover errors](https://stevemcconnell.com/articles/an-ounce-of-prevention/).
 
 Vague ideas can still be wrong, it's just less likely that anyone will notice. Vague problems get swept down the line and pile up until they're nearly insurmountable. Software has coined the derogatory term "legacy" for such software, and it's often a place projects go to die.
 
@@ -184,11 +177,10 @@ The process has evolved a [flexible structure](../_posts/2021-05-21-Duck-Structu
 
 The next sections talk about techniques for specific software life cycle phases. You can also check out an [example duck](../_posts/2021-05-21-Duck-Structure.md#sample).
 
-<!-- Do I talk about Move onto stage-specific questions
-    - I feel like no if it's one post, yes if it's a series
- -->
 
 ### Questions For Requirements
+
+<!-- TODO: consider normalizing how I talk about questions to ask and ways of communicating thoughts to gain clarity -->
 
 I like to approach questions with the 5ish interrogatives
 - Who (am I solving a problem for)
@@ -209,7 +201,7 @@ Techniques
 - Interviews
 - Shadowing
 
-<!-- split artifacts and methods? -->
+<!-- TODO: split artifacts and methods? -->
 
 ## Questions for Architecture and High-level Design
 
