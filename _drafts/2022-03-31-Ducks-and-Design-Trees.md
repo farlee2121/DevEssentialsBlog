@@ -182,7 +182,7 @@ Knowns and unknowns lead into questions and sub-problems, which lead to hypothes
 
 The process has evolved a [flexible structure](../_posts/2021-05-21-Duck-Structure.md) that doesn't inhibit my flow of thought, but promotes easy reference to later extract key information. I've even [built tools](https://github.com/farlee2121/Notedown) to leverage this structure since it effective [turns notes into data](../_posts/2021-03-05-Reference-Ready-Notes.md).
 
-The next sections talk about specific questions for work in different software life cycle phases. You can also check out an [example duck](../_posts/2021-05-21-Duck-Structure.md#sample).
+The next sections talk about techniques for specific software life cycle phases. You can also check out an [example duck](../_posts/2021-05-21-Duck-Structure.md#sample).
 
 <!-- Do I talk about Move onto stage-specific questions
     - I feel like no if it's one post, yes if it's a series
@@ -208,6 +208,8 @@ Techniques
 - [User Stories](https://en.wikipedia.org/wiki/User_story)
 - Interviews
 - Shadowing
+
+<!-- split artifacts and methods? -->
 
 ## Questions for Architecture and High-level Design
 
@@ -236,6 +238,14 @@ My main tools include
 - [Information Hiding](https://en.wikipedia.org/wiki/Information_hiding): How can I minimize the scope a programmer needs to consider to understand a given piece of the system 
 - [SOLID](https://en.wikipedia.org/wiki/SOLID): A set of design principles that guide ways to avoid key design problems.
 
+The artifacts used to communicate ideas in this phase include
+- Service Diagrams: Enumerate the major reusable sub-domains and how they interact
+- Component signatures:
+  - the methods on a service
+  - the inputs and outputs of each method
+  - data contracts (any complex data types used as input or output to a service)
+  - expected side-effects of an action (i.e. exceptions, events)
+- Activity diagrams: lay out the steps of a process, if a process is sufficiently complex to design before construction. I rarely use these
 
 I describe much of my design process in these posts
 - [Programming is Problem Modeling](../_posts/2022-02-18-Programming-is-Problem-Modeling.md)
@@ -259,12 +269,14 @@ The main questions I ask myself while coding are
 - **Coupling and Cohesion**: Another view of volatility analysis and information hiding. How can I separate activities so each chunk is independently understandable and future change has minimal impact? How can I minimize expections between components?
 - **Design Patterns**: what established [patterns](https://en.wikipedia.org/wiki/Software_design_pattern) can I use to maximize understandability.
 
+The primary artifact for construction is code and tests. Anything others should understand about the system should be made evident in the system itself.
+
 Techniques
 - [Test-Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)
 - Pseudo-code Programming Process (Code Complete 2nd ed chapter 9)
   - Use pseudo-code to progressively understand a process. Aids consistent abstraction / code that reads like a sentence and conceptually well-factored code 
 - [Pair Programming](https://en.wikipedia.org/wiki/Pair_programming)
-- Preparatory Refactoring (Refactoring Ch 2): 
+- Preparatory Refactoring ([Refactoring](https://refactoring.com/) Ch 2): 
   - How do I change my system so it's easy to add the feature I want? 
 
 
