@@ -15,6 +15,8 @@ This post is about design process and organizing our thoughts for effective deve
  IDEA: make this post a series to make it more approachable / smaller increments
   TODO: Do I need to group section by what I think belongs in one post? Clearly delineate chunks that need to be taken as a whole
   I think at least the stage-specific techniques might be good as a separate post. Most everything up to there flows pretty well
+
+  TODO: Revisit consistency of questions and artifacts in the stage-specific sections
   -->
 
 
