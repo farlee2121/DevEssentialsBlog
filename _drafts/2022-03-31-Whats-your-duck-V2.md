@@ -278,10 +278,17 @@ Techniques
 
 ## Conclusion
 
+<!-- TODO: Revisit motivational questions -->
 The main goal of this post was to build a mental model for healthy software design process.
 
-Software if fundamentally a design activity trying to model problems in automated processes.
-Banish vague notions is a primary responsibility for programmers, who incrementally break of
+To do this we explored
+- What is programming? Software Engineering?
+- How do we effectively break down problems?
+- Can software be perfect?
+- What makes software good?
+
+Software is fundamentally a design activity trying to model problems as automated processes.
+Banishing vague notions is a primary responsibility for programmers, who incrementally break of
 unknowns from the problem to zero in on clear and satisfactory solutions. 
 There is no perfect solution, only solutions that meet our known needs.
 
