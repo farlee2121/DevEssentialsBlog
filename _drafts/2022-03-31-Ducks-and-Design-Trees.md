@@ -193,6 +193,8 @@ The trio of what, when, and how much inform if a solution is even worth pursuing
 
 Most requirement techniques attempt to answer these questions with enough granularity for development. It's also critical to align understanding of them between customers and developers. Again, it's better to be wrong than vague. Producing artifacts (sketches, descriptions, diagrams, etc) that both you and the customer understand helps surface differences in understanding early and saves pain for everyone later.
 
+<!-- TODO: a key is that artifacts can be understood by both the user/customer and stakeholders who will implement (user stories, UI mockups) -->
+
 Techniques
 - Event Storming ([original overview](http://ziobrando.blogspot.com/2013/11/introducing-event-storming.html)) ([official resources](https://www.eventstorming.com/resources/))
 - [Wire Frames](https://en.wikipedia.org/wiki/Website_wireframe)
