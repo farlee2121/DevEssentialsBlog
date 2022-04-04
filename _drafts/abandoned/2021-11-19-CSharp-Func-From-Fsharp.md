@@ -8,7 +8,7 @@ tags: [C#, F#, interop]
 Today I tried to test my C# from F#. Most function calls were easy enough to invoke cross-language, but passing lambdas to C# got messy real quick. Fortunately, a little helper function can mediate types between paradigms and keep things simple on both ends.
 
 Normal function calls from F# to C# code just look like a tupled argument. 
-```fs
+```fsharp
 let returnedValue = CSharpClass.Method(param1, param2)
 ```
 
@@ -41,14 +41,14 @@ However, C# lambdas and F# lambdas are not the same type. C# uses `Func` and `Ac
 I can convert from an fsharp function to a C# action [using a constructor](https://devonburriss.me/converting-fsharp-csharp/) like `Func<'t, 'u>(fsharpFunction)`.
 
 But that gets gnarly real quick
-```fs
+```fsharp
 Tree.Fold(tree, Func<Tree<None, int>, IEnumerable<Tree<None,int>>>(getChildren), Func<IEnumerable<int>,Tree<None,int>,IEnumerable<int>>(flatten), [])
 ```
 
 Fortunately, we can write a set of generic converters that allow us to map F# functions to C# Funcs/Actions and let F# type inference do all the messy work.
 
 
-```fs
+```fsharp
 module csharp =
   let toFunc<'a, 'b> f =
       System.Func<'a, 'b> f
@@ -62,11 +62,11 @@ module csharp =
 
 Now the conversion looks like
 
-```fs
+```fsharp
 Tree.Fold(tree, getChildren |> toFunc, flatten |> toFunc2, [])
 ```
 
 This can also be used to make nice partial application-friendly wrappers of the original C# function
-```fs
+```fsharp
 let fold root getChildren aggFn initVal = Tree.Fold(root, getChildren |> toFunc, aggFn |> toFunc2, initVal)
 ```

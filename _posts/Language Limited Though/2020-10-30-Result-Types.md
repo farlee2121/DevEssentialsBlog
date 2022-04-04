@@ -67,7 +67,7 @@ C# Solutions
 - **Nullables**: in C# are equivalent to Maybe or Option types in functional languages. They only work for value types. It would be a fantastic solution if only it worked uniformly across value and reference types.
 
 F# Solution
-```fs
+```fsharp
 let parseInt (input : string) : int option =
   if System.String.IsNullOrEmpty(input)
   then Option<int>.None

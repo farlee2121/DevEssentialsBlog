@@ -32,7 +32,7 @@ My next lesson from Clojure expanded my concept of type systems.
 
 Clojure idiomatically uses "set semantics" for compound data types. Instead of classes or records, everything is a dictionary using keywords to differentiate properties. Keywords are a primitive type that represent a unique name like `:address`.
 
-```clj
+```clojure
 ;; a dictionary of data
 {
     :name "Anders"
@@ -47,7 +47,7 @@ However, set semantics alone leaves our typing completely open. It forces contra
 
 This is where Clojure.spec saves the day. Spec adds constraints onto keywords and functions. It can provide design-time feedback on component expectations without having to look at code or limit the non-essential properties of the type.
 
-```clj
+```clojure
 ;; phone must match regex
 (s/def :phone #(re-matches #"[\d{3}-\d{3}-\d{4}" %))
 ;; email must match regex

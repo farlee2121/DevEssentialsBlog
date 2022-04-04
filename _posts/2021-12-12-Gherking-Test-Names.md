@@ -13,7 +13,7 @@ The main advantage of TestApi (over Gherkin) is that it is much easier for devel
 
 This is where the middle solution comes in. TestApi tests can be named with Gherkin-style names. 
 
-```fs
+```fsharp
 let testList = 
 [
     test "Given thing B When I save B Then B shows in the thing list" {

@@ -30,7 +30,7 @@ record Color{
 ## Unions in F#
 First, a short rundown of union types. They're also called sum types and "or" types. They represent a limited set of alternatives. This could be enum-like 
 
-```fs
+```fsharp
 type Particles = 
 | Protons
 | Neutrons
@@ -38,7 +38,7 @@ type Particles =
 ```
 
 but cases can also come with different data
-```fs
+```fsharp
 type PaymentTypes = 
 | CreditCard of CardNumber * SecurityCode * Expiration * NameOnCard
 | ACH of (AccountNumber * RoutingNumber)
@@ -48,7 +48,7 @@ type PaymentTypes =
 The "cases" are all acceptable alternatives from some view. The union type allows us to treat them as one type, and break out cases only when it is important.
 
 Typically the union types is handled with pattern matching.
-```fs
+```fsharp
 let ProcessPayment paymentInfo = 
     match paymentInfo with
     | CreditCard cardInfo -> handleCard (cardInfo)

@@ -13,7 +13,7 @@ I've spent most of this year in Clojure after years of .NET. Much of my F# desig
 F# has a very flexible namespace system. Namespaces can contain modules and types, modules can contain most anything, and modules can be nested. Both namespaces and modules can be extended across multiple files. Both contribute to the full name of all their contents.
 
 This system is pretty simple and flexible. It allows quick grouping of definitions most anywhere.
-```f#
+```fsharp
 module EcommerceApp = 
    module Checkout = 
       module Validation = 
@@ -40,7 +40,7 @@ This leaves me with a few choices. I can leave code grouping implicit, I can use
 ## No Relative imports
 
 Clojure's module imports also raise barriers for grouping. Clojure requires every namespace to be imported separately. For example,
-```clj
+```clojure
 (:require [ECommerceApp :as e-app]
           [ECommerceApp.Checkout :as checkout]
           [ECommerceApp.Checkout.Validation :as checkout-validation])
@@ -53,7 +53,7 @@ This has both pros and cons. File dependencies are very explicit. It is easy to 
 However, this raises another strike against small groupings for the sake of clarity. Every grouping is another import in every file I want to use the code. As such, code that I want to use together pretty much has to exist in the same namespace. In fact, it pretty much has to live in the same file. Namespaces can be split between different files, but it is very awkward. Dependencies become unclear, tooling breaks, and each sub-file has to be loaded manually from a file with the primary namespace declaration.
 
 This contrasts to F# and C# where relative namespaces are the norm
-```fs
+```fsharp
 use ECommerceApp
 
 let isValidCart = Checkout.Validation.validateCart cart

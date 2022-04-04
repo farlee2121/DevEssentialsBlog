@@ -16,7 +16,7 @@ All the testing frameworks of C# (nUnit, xUnit,...) transfer over to F# pretty d
 
 So, I tried out [Expecto](https://github.com/haf/expecto). This delightful library makes it very easy to define test lists and compose them
 
-```fs
+```fsharp
 let list1 = testList "Name here - 1" [
   test "test name" {
     Expect.isTrue //...
@@ -46,7 +46,7 @@ A true solution requires
 
 This is super easy for unit tests. Just wrap the test list in a builder, and proxy the test builder method to add setup and cleanup
 
-```fs
+```fsharp
 let testWithApi setup cleanup name testCode = 
   let testWrap () =
     let (api, env) = setup ()
@@ -84,7 +84,7 @@ Possibilities
 
 This led me to my final solution: add a simple wrapper (closure) inside the property test. 
 
-```fs
+```fsharp
 let withEnv setup cleanup f = 
   let testWrap () =
     let (api, env) = setup ()

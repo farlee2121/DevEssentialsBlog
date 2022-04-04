@@ -57,7 +57,7 @@ My examples will be written using [Expecto](https://github.com/haf/expecto) and 
 
 Tests are just values in Expecto. This means we can put them in a list like we would with any other kind of value
 
-```fs
+```fsharp
 let tests = testList "Sample Tests" [
     test "I guess I'll multiply" {
         Expect.equal 6 (2*3)
@@ -69,12 +69,12 @@ let tests = testList "Sample Tests" [
 ```
 
 We can, of course, concat lists of tests together if we like
-```fs
+```fsharp
 let allTests = List.concat [testlist1; testlist2; ...; testlistN];
 ```
 
 We can run the list of tests
-```fs
+```fsharp
 open Expecto.Tests
 runTests defaultConfig allTests
 ```
@@ -97,7 +97,7 @@ I currently use a kind of test factory to reuse a test list across different imp
 I have hopes that this kind of reuse and composition can raise our level of abstraction in testing. For example, I commonly write very similar and fairly complex tests for fetching some object based on an intersection of tags. Such tests get even more complicated if there are both include and exclude tags. A similar case is filter, sort, and search combinations.
 
 This kind of test seems ripe for reuse. Behavior varies very little between uses, yet the behaviors are complex with sneaky edge cases. I'd love to compose a test suite like
-```fs
+```fsharp
 testList "FooServiceTests" [
     FooBehaviorRequirements
     StandardTagIntersectionTests

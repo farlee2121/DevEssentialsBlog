@@ -28,7 +28,7 @@ I also couldn't generically wrap my property tests in a controlled lifecycle bec
 
 I solved this before by using syntactic clojure. The `withApi` function controls environment lifetime while the enclosing function provides access to test case data.
 
-```fs
+```fsharp
 testProperty "prop test name" (fun list otherTestData -> withApi setup cleanup (fun testApi ->
       // relies on nested scope to define property as a function (testApi -> bool)
       testApi.WriteAll list
@@ -40,7 +40,7 @@ This works, but is verbose.
 
 My breakthrough is using deconstructed tuples to control function arity! For example
 
-```fs
+```fsharp
 testPropertyWithEnv setup cleanup "prop test name" (fun testApi (list, otherTestData) ->
       testApi.WriteAll list
       list = testApi.ReadAll ()
@@ -56,7 +56,7 @@ Flattening the definition to one layer hides the lifecycle complexity. It also n
 The normalized test signatures pave the way for using a reader monad. In short, instead of passing setup and cleanup to each test definition, I can have each definition return a "test waiting for an environment", then I can supply the environment just once. 
 
 Consider if we tweak the signature
-```fs
+```fsharp
 let testWithEnv setup cleanup name ftest = // returns Test
 
 // change to
@@ -68,7 +68,7 @@ let testPropertyWithEnv name ftest setup cleanup =
 ```
 
 Then we can define our test lists like
-```fs
+```fsharp
 let makeTestList setup cleanup = 
     testListWithEnv [
         testWithEnv "Name" (fun api -> )
@@ -80,7 +80,7 @@ let makeTestList setup cleanup =
 
 Compare that to a normal test list
 
-```fs
+```fsharp
 let makeTestList () = 
     testList [
         test "Name" (fun () -> )
@@ -92,7 +92,7 @@ let makeTestList () =
 
 The overall shape is nearly identical to a normal test list, no application of environments is spread through the list. There is no need to create a special function for building the environment test list either. Partially applying the test list without passing an environment would act the same.
 
-```fs
+```fsharp
 // Partial application implicitly makes a list builder function
 let makeTestList = 
     testListWithEnv [
@@ -114,7 +114,7 @@ I tried using an interface in the past, but ran into issue with type inference a
 
 Fortunately, I found an answer to this while [exploring Bolero](https://github.com/fsbolero/Bolero/blob/f4c5c05f8b4ac224325eb935db7cacc07d389abf/src/Bolero/Router.fs#L43). It's possible to implement an interface on a record! This gives us the best of type inference, while keeping possible implementations abstract. It also provides better C# compatibility.
 
-```fs
+```fsharp
 type ITestEnv<'api, 'env>  = 
         abstract Setup : unit -> ('api * 'env)
         abstract Cleanup : 'env -> unit

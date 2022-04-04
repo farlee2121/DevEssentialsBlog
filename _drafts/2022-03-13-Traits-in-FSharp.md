@@ -14,7 +14,7 @@ Traits can be seen as late-bound inheritance. It allows us to add new polymorphi
 ## Interface Inheritance
 In F#, interface inheritance is syntactically separate from class inheritance. 
 
-```fs
+```fsharp
 type Cat () =
     interface IMeow with
         member self.Meow () = "nya"
@@ -30,7 +30,7 @@ All together, we can always select the right implementation based on which inter
 ## Type Extension
 
 F# can [add members to a type at any time](https://fsharpforfunandprofit.com/posts/type-extensions/) as demonstrated below.
-```fs
+```fsharp
 type System.Int32 with
     static member IsOdd x = x % 2 = 1
 

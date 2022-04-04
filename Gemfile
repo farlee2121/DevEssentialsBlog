@@ -8,3 +8,4 @@ gem "jekyll-relative-links", "~> 0.6.1"
 gem "jekyll-time-to-read", "~> 0.1.2"
 
 gem "kramdown-parser-gfm"
+gem 'rouge', '~> 3.28'

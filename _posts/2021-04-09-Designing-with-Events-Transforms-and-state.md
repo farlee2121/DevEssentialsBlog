@@ -75,7 +75,7 @@ A few quick rules for understanding the text model
 The workflows from before become transforms, which take the related command as input and return the related events. This makes for an easy translation of the event storm into a format where we can start filling in details.
 
 Here's the high-level translation.
-```fs
+```fsharp
 type CreateBlockRule = CreateBlockRuleCommand -> RuleCreated
 type UpdateBlockRule = UpdateRuleCommand -> RuleUpdated
 type DeleteBlockRule = DeleteBlockRuleCommand -> RuleDeleted
@@ -98,7 +98,7 @@ Some of this might happen in the original event storm. In fact, some of it shoul
 ### Values
 Here are some of the commands and events filled in
 
-```fs
+```fsharp
 // Creation Input
 type CreateBlockRuleCommand = UnvalidatedBlockRule
 type UnvalidatedBlockRule = {
@@ -133,7 +133,7 @@ Hmm. A few things to notice
 
 Let's dig deeper into the validation. First, our workflows should make it clear when errors are possible. So let's update them
 
-```fs
+```fsharp
 type CreateBlockRule = CreateBlockRuleCommand -> Result<RuleCreated, CreateRuleError list>
 type UpdateBlockRule = UpdateRuleCommand -> Result<RuleUpdated, UpdateRuleError list>
 type DeleteBlockRule = DeleteBlockRuleCommand -> Result<RuleDeleted, DeleteRuleError>
@@ -144,7 +144,7 @@ type ListBlockRules = unit -> RuleListItemModel list
 
 Then we can identify different possible error cases
 
-```fs
+```fsharp
 type CreateRuleError = 
     | InvalidName of ErrorReason
     | InvalidTarget of (UnvalidatedBlockTarget * ErrorReason) 
@@ -164,7 +164,7 @@ type ErrorReason = string
 
 Note that both create and update share most of their failure cases. This hints at a shared sub-flow
 
-```fs
+```fsharp
 type ValidateBlockRule = UnvalidatedBlockRule -> Result<ValidatedBlockRule, RuleValidationError>
 
 type RuleValidationError = 
@@ -186,7 +186,7 @@ We probably also want to iron out the rule validation *constraints* with domain 
 - Rule Name should not contain tabs or newlines
 
 These constraints can also be represented
-```fs
+```fsharp
   let validateHour hour = 0 <= hour && hour <= 23
   let validateMinute minute = 0 <= minute && minute <= 59 
   //...
@@ -194,7 +194,7 @@ These constraints can also be represented
 
 We can also dig into the dependencies of different operations, like validating a block rule
 
-```fs
+```fsharp
 
 type ValidateBlockRule = ValidateTrigger -> ValidateName -> ValidateTarget
     UnvalidatedBlockRule -> Result<ValidatedBlockRule, RuleValidationError>
@@ -211,7 +211,7 @@ Each of these definitions uncovers more expectations of the domain clearly witho
 Let's think about the rule update workflow. Our notes from the event storm indicate that a block rule should not be updated or deleted while the rule is in effect. This is to prevent users from circumventing rules. 
 
 However, model does not currently indicate this rule
-```fs
+```fsharp
 type UpdateBlockRule = UpdateRuleCommand -> Result<RuleUpdated, UpdateRuleError list>
 ```
 
@@ -226,7 +226,7 @@ Our "domain expert" (me) says we want to apply the rule later. If the rule is al
 
 This means we really have two success criteria.
 
-```fs
+```fsharp
 type UpdateBlockRule = UpdateRuleCommand -> Result<RuleUpdatedEvents, UpdateRuleError list>
 
 type PendingRuleUpdate = { Current: ValidatedBlockRule; Pending of ValidatedBlockRule}
@@ -237,7 +237,7 @@ type RuleUpdatedEvents =
 
 This effects more parts of the design though. Our activation updater now needs to deal with multiple states. 
 
-```fs
+```fsharp
 type StatefulBlockRule = 
   | Active of ValidatedBlockRule
   | Inactive of ValidatedBlockRule

@@ -100,7 +100,7 @@ The previous post also explored how the absence of relative imports inhibits nat
 In light of this post, I'd say that relative imports are natural to program structure when files aren't considered. The namespaces themselves are contents of higher namespaces. As a namespace, I expect to access my own contents without having to re-specify my own name. Layered namespaces provide a sliding scale of context needed to be clear given the calling context.
 
 Consider F# where namespaces really can be nested syntactically.
-```f#
+```fsharp
 module EcommerceApp = 
    module Checkout = 
       module Validation = 
@@ -114,7 +114,7 @@ module EcommerceApp =
       let submitCart = //..
 ```
 If I had to call sub-components like
-```fs
+```fsharp
 module EcommerceApp = 
   module Checkout =
     module Validation = //...

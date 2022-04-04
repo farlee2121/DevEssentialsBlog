@@ -27,7 +27,7 @@ This makes me think of an isomorphism. An isomorphism is a "structure-preserving
 It's like a shift cipher (where you assign each letter to a different letter). The new alphabet looks different but acts the same as the original and can always be mapped back no matter how much we re-arrange the letters.
 
 So are monads an isomorphism? No, result-types prove that they aren't. Result-types take advantage of the "lifting" to let us define a series of actions that might have errors, and not worry about the errors until we need to extract the final result.
-```fs
+```fsharp
 // divide by zero example
 
 let map f = 
@@ -75,7 +75,7 @@ Can we decide to add a reverse map and make into a bijection? Well, first we nee
 
 The monad laws require a `return` method for elevating any value into the monad space. However, many of the definitions I was reading were unclear. I couldn't find out if a `bind` and `return` that simply mapped everything to a constant value made a valid monad.
 
-```fs
+```fsharp
 let return val = ForgetfulMonad.Unit
 let bind f x = ForgetfulMonad.Unit
 ```
@@ -87,7 +87,7 @@ I factored out the [monad laws from the FsCheck test suite](https://github.com/f
 In other words, if we mapped the identity function into the monad world, it would be the same as directly implementing the identity function in the monad world. It should be a function that returns whatever it was given. This also is more in line with the original concept of a monad from category theory.
 
 Notice that our definition from before can actually be rewritten
-```fs
+```fsharp
 let return val = ForgetfulMonad.Unit
 let bind f x = x
 ```
