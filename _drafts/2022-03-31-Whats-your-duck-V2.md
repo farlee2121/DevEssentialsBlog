@@ -3,16 +3,19 @@ layout: post
 tags: [Design Process, Ducks]
 ---
 
+# What's your Duck (Presentation Version)
+
+This post is about design process and organizing our thoughts for effective development. The main goal is to establish a healthy mental model and intuition for effective design process. The duck bit will be explained later.
+
 <!-- TODO: consider putting a warning in What's your duck pointing to this post as the presentation companion -->
-<!-- IDEA: make this post a series to make it more approachable / smaller increments -->
 <!-- TODO: make a forwarding link for embedding in the presentation
 - https://github.com/jekyll/jekyll-redirect-from
  -->
- <!-- TODO: Do I need to group section by what I think belongs in one post? Clearly delineate chunks that need to be taken as a whole
+ <!-- 
+ IDEA: make this post a series to make it more approachable / smaller increments
+  TODO: Do I need to group section by what I think belongs in one post? Clearly delineate chunks that need to be taken as a whole
   I think at least the stage-specific techniques might be good as a separate post. Most everything up to there flows pretty well
   -->
-
-<!-- TODO: consider title, feels like current name leaves out too many other concepts. What's your duck is the core question -->
 
 
 <!-- Meta thoughts
@@ -24,10 +27,6 @@ TODO: do I need to create more rigorous lesson plans for jack so I can be always
 
 It's a lot of work, but I think I need to learn to write more posts like this. 
  -->
-
-# What's your Duck (Presentation Version)
-
-This post is about design process and organizing our thoughts for effective development. The main goal is to establish a healthy mental model and intuition for effective design process. The duck bit will be explained later.
 
 
 ## Motivating Questions
