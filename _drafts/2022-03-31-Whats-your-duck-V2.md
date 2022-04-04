@@ -23,7 +23,7 @@ TODO: do I need to create more rigorous lesson plans for jack so I can be always
 It's a lot of work, but I think I need to learn to write more posts like this. 
  -->
 
-# Ducks and Design Trees (What's your Duck)
+# What's your Duck (Presentation Version)
 
 This post is about design process and organizing our thoughts for effective development. The main goal is to establish a healthy mental model and intuition for effective design process. The duck bit will be explained later.
 
@@ -36,20 +36,20 @@ First, here are a few motivational questions.
 - Can software be perfect?
 - What makes software good?
 
-I'd encourage you to take a few minutes and organize your own thoughts on these questions before moving ahead. You don't have to have an answer, thoughts and questions are good too. Connecting and theorizing [aid the learning process](../_posts/2022-03-07-Small-Teaching-Review.md#predicting).
+I'd encourage you to take a few minutes and organize your own thoughts on these questions before moving ahead. You don't have to have an answer, ideas and questions are good too. Connecting and theorizing [aid the learning process](../_posts/2022-03-07-Small-Teaching-Review.md#predicting).
 
 ## The Nature of Software 
 
-Let's tackle the first motivational question: "What is programming".
+Let's tackle the first motivational question: "What is programming?".
 
 I'm a firm believer that [programming is problem modeling](../_posts/2022-02-18-Programming-is-Problem-Modeling.md). I love the quote from Fred Brooks
 
 > The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. 
 > - Fred Brooks, Mythical Man-month
 
-As programmers, we take problems of all kinds and we translate them into the exact language of software.
+As programmers, we take problems of all kinds and we translate them into the exact language of software. We can encode almost anything our imagination can grapple.
 
-We can encode almost anything our imagination can grapple. Real world problems are often messy and partially self-conflicting. Unwinding the many facets of such problems into automated processes is a difficult, non-deterministic, and beautiful [act of design](https://www.developerdotstar.com/mag/articles/reeves_design.html).
+Real world problems are often messy and partially self-conflicting. Unwinding the many facets of such problems into automated processes is a difficult, non-deterministic, and beautiful [act of design](https://www.developerdotstar.com/mag/articles/reeves_design.html).
 
 Software Engineering is then the repeatable process for encoding ideas in software both economically and reliably. 
 
@@ -64,29 +64,29 @@ Software is a complex design activity. We deal with messy problems and problems 
 
 Vague ideas can still be wrong, it's just less likely that anyone will notice. Vague problems get swept down the line and pile up until they're nearly insurmountable. Software has coined the derogatory term "legacy" for such software, and it's often a place projects go to die.
 
-Favoring clarity means identifying and communicating our assumptions, what we think we know about the problem we're solving and how we're solving it. It's about ordering our thoughts well.
+Favoring clarity means identifying and communicating our assumptions. Encoding what we think we know about the problem we're solving and how we're solving it. It's about ordering our thoughts well.
 
-Clearly communicated ideas, unlike vague ideas, enable collaboration, idea comparison, reviews, and future reference.
+Clearly communicated ideas, unlike vague ideas, enable collaboration, comparison, reviews, and future reference.
 
-Everything that follows is about building a framework to order thoughts well.
+Everything that follows is builds a framework to order thoughts well.
 
 ## Spectrum of Clarity
 
-The high-level of software process is often known as the software development life cycle. The Software Engineering Body of Knowledge (SWEBOK)[imagines this process as a set of translations](../_posts/2021-08-13-Swebok-transform-view.md). I tend to view the software life cycle as a spectrum of clarity.
+The high-level of software process is often known as the software development life cycle. The Software Engineering Body of Knowledge (SWEBOK) [imagines this process as a set of translations](../_posts/2021-08-13-Swebok-transform-view.md). I tend to view the software life cycle as a spectrum of clarity.
 
 ![Spectrum of clarity](../post-media/Ducks-and-Design-Trees/spectrum.png)
 
-At the beginning, we know relatively little about the problem we're solving. Each development stage (i.e. requirements, design, construction, ...) is a [checkpoint in how well we've defined the problem](../_posts/2022-02-18-Programming-is-Problem-Modeling.md#increment-to-good-enough). 
+The spectrum starts with much unknown and ends with most elements known. At the beginning, we know relatively little about the problem we're solving. Each development stage (i.e. requirements, design, construction, ...) is a [checkpoint in how well we've defined the problem](../_posts/2022-02-18-Programming-is-Problem-Modeling.md#increment-to-good-enough). 
 
 I don't mean to profess a strict linear flow like waterfall. Remember that programming is a design activity and design is messy. It's common to uncover questions in a later phase that force us to reconsider decisions we made in an earlier phase. This is natural and part of understanding the problem. What we want to avoid is cycling back frequently or back multiple stages. Cycling back, especially multiple stages, undermines previous work and is expensive. 
 
-This spectrum from unknown to known plays out both at the work item level and system level. A work item is clarified through this spectrum until it can be released, and a system is clarified as completed work enables feedback.  Agile organizes complete units of work for this reason. Better wrong than vague, and try to discover "wrong" early.
+This spectrum from unknown to known plays out both at the work item level and system level. A work item is clarified through this spectrum until it can be released. A system is clarified as completed work enables feedback and new user abilities. Agile emphasizes small complete units of work for this reason. Better wrong than vague, and try to discover "wrong" early.
 
 ## Design Tree and Effective Work Increments
 
-A spectrum describes the big picture, but leaves fine-grained progress unclear. Design trees can help us zoom in and understand the second motivational question "How do we effectively break down problems?".
+A spectrum describes the general lifecycle progression, but leaves fine-grained progress unclear. Design trees can help us zoom in and understand the second motivational question "How do we effectively break down problems?".
 
-The design tree is an idea that we can represent possible design routes as a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)).
+The design tree is an idea that we can represent all possible design routes as a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)).
 - Each graph node is is a possible decision we could make
 - Edges show how later decisions depend on earlier ones
 - The furthest nodes in the graph (or leaves) represent complete solutions.
@@ -96,11 +96,11 @@ Every path to a leaf represents a series of decisions we can make to arrive at a
 ![Design tree search patterns](../post-media/Ducks-and-Design-Trees/search-methods.drawio.svg)
 
 
-It helps me to understand that humans have a natural tendency to depth-first approaches. We try to find complete solutions all at once.
+Humans have a natural tendency toward depth-first approaches. We try to find complete solutions all at once.
 
-The problem is that depth-first tends to lead to a lot of wasted work. We generally don't have all the information we need at first. Our solution probably wont meet our need, and a lot of work is undermined.
+The problem is that depth-first tends to lead to a lot of wasted work. We generally don't have all the information we need at first. Our solution probably wont quite match our need, and a lot of work is undermined.
 
-Breadth-first search, where every next option is considered before making a choices, is not feasible. There are often effectively infinite options for any given decision in a design. 
+Breadth-first search, where every next option is considered before making a choice, is not feasible. There are often effectively infinite options for any given decision in a design. 
 
 A healthy design process uses an incremental approach. 
 - First identify the next key decision
@@ -108,30 +108,30 @@ A healthy design process uses an incremental approach.
 - Explore each route in enough depth to lock in an answer
 - Lock in the answer and repeat until there are no more key decisions, at which point you have a complete solution.
 
-Such a process nearly guarantees we'll reach a solution that meets our current understanding of the problem with as little rework as possible. It meshes well with how our brains work. We break off smaller problems that are easier to solve. Each decision reduces the solution space, making downstream decisions easier with less to consider. 
+Such a process nearly guarantees we'll reach a solution that meets our current understanding of the problem with as little rework as possible. It also meshes well with how our brains work. We break off smaller problems that are easier to solve. Each decision reduces the solution space, making downstream decisions easier with less to consider. 
 
 
 ## Self-Similar Process
 
 <!-- TODO: This transition isn't good enough to start a post. Consider more connecting context, or maybe they'd be in the same post as the design tree -->
-Fortunately, each iteration along the design tree has about the same core process. In each increment we consider
+Fortunately, each iteration (or each sub-problem) along the design tree has about the same core process. In each increment we consider
 
 - **Must haves (Requirements)**: Any qualites that *must* be satisfied to consider the problem solved
 - **Nice to haves (Secondary goals)**: Qualities we'd like have, but are not essential to call the problem solved
 - **Constraints**: Qualities that aren't essential to the problem in all cases, but must be met in our case. Common examples include budgets, timelines, available personnel, and hardware limitations
 - **Solution Fit**: How we compare solutions against the enumerated goals and constraints.
 
-First enumerate any known requirements, goals, and constraints. The list may evolve as we explore solutions, but should serve as a strong filter for possible solutions.
+First enumerate any known requirements, goals, and constraints. The list will probably evolve as we explore solutions, but it should serve as a strong filter for possible solutions.
 
 Second, enumerate likely solutions. Consider how each solution category matches up to the goals and constraints. Possibly add new solutions based on your findings, and stop when you have a solution that meets all known needs.
 
 ## Thread Matrix: How much effort
 
-Enumerating requirements, goals, and constraints for evaluating solutions may sound like a lot of work, but it doesn't have to be. This process fall anywhere from a few options weighed in your head, to stick note, to design documents, to formal interviews and studies. A threat matrix helps us evaluate how important each decision is and how much effort we put into it.
+Enumerating requirements, goals, and constraints for evaluating solutions may sound like a lot of work, but it doesn't have to be. This process can fall anywhere from a few options weighed in your head, to sticky notes, to design documents, to expansive interviews and studies. A threat matrix helps us evaluate how important each decision is and how much effort we put into it.
 
 ![Threat matrix](../post-media/Ducks-and-Design-Trees/threat-matrix.drawio.svg)
 
-A threat matrix is a general decision making tool that I originally borrowed from evaluating security threats. On one axis we have impact should our decision be wrong, and on the other we have likelihood the decision is wrong. Decisions that are low-impact or unlikely to change don't need much consideration. Just pick something and move on. The higher impact or likelihood of change, the more time is worth investing to make sure the descision is right.
+On one axis we have impact should our decision be wrong, and on the other we have likelihood the decision is wrong. Decisions that are low-impact or unlikely to change don't need much consideration. Just pick something and move on. The higher impact or likelihood of change, the more time is worth investing to make sure the descision is right.
 
 
 ## Iterate to Good Enough
@@ -140,7 +140,7 @@ This brings us to our third and fourth motivating questions "Can software be per
 
 Think of how we iterate along the design tree. At each step we break off a problem, identify criteria we need to solve the problem, and stop when we have a solution that meets all criteria.
 
-This is true for the overall process too. There is no one perfect solution. There are only solutions that meet our need as we understand it. 
+This is true for the overall process too. There is no one perfect solution. There are only solutions that meet our need as we understand it.
 
 The increments help us refine our understanding of the problem, and step us closer to satisfactory solution. Our enumerated understanding of need creates a "definition of done". This definition of done is our benchmark for "good" work. Any solution that meets those critera is "good". Work below the line is not a complete solution. Any work beyond this definition is speculative "gold plating", which often translates into wasted work.
 
@@ -152,9 +152,9 @@ Now let's explain the ducks.
 
 There's an old programming joke that if you're stuck on a problem, you should explain it to a rubber duck and the duck will help you solve your problem.
 
-Rubber ducking is a bit silly, but actually a very useful technique. The reason is that it encourages you to be wrong rather than vague. Explaining your problem to the duck pushes you to organize your thoughts enough to explain. Organizing your thoughts exposes holes in your mental model and thus gets you unstuck.
+Rubber ducking is a bit silly, but actually a very useful technique. The reason is that it encourages us to be wrong rather than vague. Explaining our problem to the duck pushes us to organize our thoughts enough to explain. Organizing our thoughts exposes holes in our mental model and thus gets us unstuck.
 
-This process doesn't have to be done with a rubber duck. It can be a coworker, a design document, a drawing, or anything that causes you to organize and communicate your thoughts. 
+This process doesn't have to be done with a rubber duck. It can be a coworker, a design document, a drawing, or anything that causes you to organize and communicate your thoughts. Thus the question: "What's your duck?"
 
 ## Duck Docs
 
@@ -162,20 +162,20 @@ I use a process that I call [duck docing](../_posts/2021-05-21-Duck-Structure.md
 
 The structure is fairly loose, but the general structure is
 
-**Motivation**: Start by explaining the motivation of my current work in plain language
+**Motivation**: I always start by explaining the motivation of my current work in plain language
 
-**Requirements and Constraints**: As described in [Self-Similar Process](#self-similar-process), I enumerate known qualities of a solution. This forms a baseline definition of done. This may be provided by an up-stream requirements process.
+**Requirements and Constraints**: As described in [Self-Similar Process](#self-similar-process), next I enumerate known qualities of a solution. This forms a baseline definition of done. This may also be provided by an up-stream requirements process.
 
 **Knowns & Unknowns**: With core requirements in place I start exploring the problem by listing 
 - Knowns: what I already know about the problem and think will be helpful
 - Unknowns: anything I think I need to know about the problem but don't know. These often come in the form of questions.
 
-Knowns and unknowns lead into questions and sub-problems, which lead to hypotheses, experiments to prove or disprove my idea, and finally knowledge to fold back into the overarching goal.
+Knowns and unknowns lead into questions and sub-problems, which lead to hypotheses, experiments to prove or disprove my hypotheses, and finally knowledge to fold back into the overarching goal.
 
 
-The process has evolved a [flexible structure](../_posts/2021-05-21-Duck-Structure.md) that doesn't inhibit my flow of thought, but promotes easy reference to later extract key information. I've even [built tools](https://github.com/farlee2121/Notedown) to leverage this structure since it effective [turns notes into data](../_posts/2021-03-05-Reference-Ready-Notes.md).
+The process has evolved a [flexible structure](../_posts/2021-05-21-Duck-Structure.md) that doesn't inhibit my flow of thought, but promotes easy reference to later extract key information. I've even [built tools](https://github.com/farlee2121/Notedown) to leverage this structure since it effectively [turns notes into data](../_posts/2021-03-05-Reference-Ready-Notes.md).
 
-The next sections talk about techniques for specific software life cycle phases. You can also check out an [example duck](../_posts/2021-05-21-Duck-Structure.md#sample).
+The next sections talk about ducks for specific software life cycle phases. You can also check out an [example duck](../_posts/2021-05-21-Duck-Structure.md#sample).
 
 
 ### Questions For Requirements
