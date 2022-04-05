@@ -45,6 +45,12 @@ let pi = System.Double.Pi
 
 All the above qualities of F# look like it's primed for ad-hoc interface inheritance. However, F# does not support interface inheritance outside the initial declaration.
 
+```fsharp
+type Cat with //WONT COMPILE
+    interface IMeow with
+        member self.Meow () = "nya"
+```
+
 I'd guess this has to do with potential state. Rust traits only support functions, and leaves data members to separate type definitions. I forgot that C# and F# interfaces support data interface members because I effectively never use this feature.
 
 Potential state leaves us with bad options. A type could implement two traits with conflicting data members (i.e. same name). The conflicting members could share state, but this would break their independence and cause unclear coupling between contexts. Alternatively, different trait implementations could ignore each others state, but this likely creates an illusion of expected shared state. The rules for mutating data become muddy either way.
@@ -52,10 +58,17 @@ Potential state leaves us with bad options. A type could implement two traits wi
 With this in mind, we'd probably need a new language construct to safely achieve traits. A new construct opens a world of potential compatability issues with other .NET languages.
 
 
-TODO: consider sneaking in https://www.withouttheloop.com/articles/2014-10-21-fsharp-adhoc-polymorphism/
+## Update: Don Syme on Type Classes
 
-TODO: I'm not confident in this assessment. 
+I definitely need to spend more time with traits to understand them properly.
+However, I understand them to to be much like [type classes](https://en.wikipedia.org/wiki/Type_class).
+Don Syme has a good response to [why F# won't support type classing](https://en.wikipedia.org/wiki/Type_class).
+That said, there is limited support via [static member constraints](https://www.withouttheloop.com/articles/2014-10-21-fsharp-adhoc-polymorphism/)
 
-IDEA: maybe post this as-is with an addendum refering to Don Syme's post on type classes and how he sees them as often fostering unhealthy programming patterns, like trying too hard to type class everything
 
+
+<!-- 
 It looks like haskell can manage data members in type classes...
+
+Ad-hoc polymorphism is not defined like i'd expect https://en.wikipedia.org/wiki/Ad_hoc_polymorphism. It says examples are function or operator overloading. It's about operating on different parameters rather than operating different types invoking under some interface
+ -->
