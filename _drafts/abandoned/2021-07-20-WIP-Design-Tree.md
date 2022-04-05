@@ -3,7 +3,7 @@ layout: post
 tags: [Design Process, Ducks]
 ---
 
-<!-- change to Duck Design Process and expand to cover my What's your duck presentation -->
+<!-- Outmoded by What's your duck post -->
 
 <!-- TODO: 
 - add threat matrix
