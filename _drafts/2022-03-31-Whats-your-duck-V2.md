@@ -77,7 +77,7 @@ Everything that follows is builds a framework to order thoughts well.
 
 The high-level of software process is often known as the software development life cycle. The Software Engineering Body of Knowledge (SWEBOK) [imagines this process as a set of translations](../_posts/2021-08-13-Swebok-transform-view.md). I tend to view the software life cycle as a spectrum of clarity.
 
-![Spectrum of clarity](../post-media/Ducks-and-Design-Trees/spectrum.png)
+![Spectrum of clarity](../post-media/Whats-your-duck/spectrum.png)
 
 The spectrum starts with much unknown and ends with most elements known. At the beginning, we know relatively little about the problem we're solving. Each development stage (i.e. requirements, design, construction, ...) is a [checkpoint in how well we've defined the problem](../_posts/2022-02-18-Programming-is-Problem-Modeling.md#increment-to-good-enough). 
 
@@ -96,7 +96,7 @@ The design tree is an idea that we can represent all possible design routes as a
 
 Every path to a leaf represents a series of decisions we can make to arrive at a final solution.
 
-![Design tree search patterns](../post-media/Ducks-and-Design-Trees/search-methods.drawio.svg)
+![Design tree search patterns](../post-media/Whats-your-duck/search-methods.drawio.svg)
 
 
 Humans have a natural tendency toward depth-first approaches. We try to find complete solutions all at once.
@@ -132,7 +132,7 @@ Second, enumerate likely solutions. Consider how each solution category matches 
 
 Enumerating requirements, goals, and constraints for evaluating solutions may sound like a lot of work, but it doesn't have to be. This process can fall anywhere from a few options weighed in your head, to sticky notes, to design documents, to expansive interviews and studies. A threat matrix helps us evaluate how important each decision is and how much effort we put into it.
 
-![Threat matrix](../post-media/Ducks-and-Design-Trees/threat-matrix.drawio.svg)
+![Threat matrix](../post-media/Whats-your-duck/threat-matrix.drawio.svg)
 
 On one axis we have impact should our decision be wrong, and on the other we have likelihood the decision is wrong. Decisions that are low-impact or unlikely to change don't need much consideration. Just pick something and move on. The higher impact or likelihood of change, the more time is worth investing to make sure the descision is right.
 
@@ -147,7 +147,7 @@ This is true for the overall process too. There is no one perfect solution. Ther
 
 The increments help us refine our understanding of the problem, and step us closer to satisfactory solution. Our enumerated understanding of need creates a "definition of done". This definition of done is our benchmark for "good" work. Any solution that meets those critera is "good". Work below the line is not a complete solution. Any work beyond this definition is speculative "gold plating", which often translates into wasted work.
 
-![How iteration narrows in on done](../post-media/Ducks-and-Design-Trees/iterative-good-enough.drawio.svg)
+![How iteration narrows in on done](../post-media/Whats-your-duck/iterative-good-enough.drawio.svg)
 
 ## What's your duck?
 
