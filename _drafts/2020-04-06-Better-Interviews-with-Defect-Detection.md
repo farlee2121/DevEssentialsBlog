@@ -45,19 +45,23 @@ The depth of assessment can vary greatly based on the seniority of the position.
 
 The goals and non-goals lead me to a few issues with typical problem-based coding interviews.
 
-**Difficult to write:** Setting up a good interview requires a good problem to solve. The problem must be quick to pick up, but can't be trivial to solve. This leaves a pretty narrow problem space. The bar for a difficult problem is also very sensitive to candidate experience, making it difficult to reuse samples across positions. 
+### Difficult to write
+Setting up a good interview requires a good problem to solve. The problem must be quick to pick up, but can't be trivial to solve. This leaves a pretty narrow problem space. The bar for a difficult problem is also very sensitive to candidate experience, making it difficult to reuse samples across positions. 
 
 I emphasize [understanding a problem well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md) before writing code. As such, I often spend most of my coding interviews understanding the problem and writing very little code.
 
-**Too Open-ended & Inconsistent:** Often, companies want to assess certain skills in their candidates. For example, knowledge of testing patterns. Such objectives are difficult to consistently incorporate into a problem-based coding interview. Handing the candidate a problem and letting them code leaves us at their mercy for how they tackle the problem and what parts they tackle. This is great if we want to assess design straight from requirements, but it leaves a big gap for assessing construction-level abilities more commonly expected from junior to mid level developers. 
+### Too Open-ended & Inconsistent
+Often, companies want to assess certain skills in their candidates. For example, knowledge of testing patterns. Such objectives are difficult to consistently incorporate into a problem-based coding interview. Handing the candidate a problem and letting them code leaves us at their mercy for how they tackle the problem and what parts they tackle. This is great if we want to assess design straight from requirements, but it leaves a big gap for assessing construction-level abilities more commonly expected from junior to mid level developers. 
 
 Providing partial solutions can improve odds of observing target skills. However, this biases examinees toward practices they may not have considered otherwise. It also increases work to construct interviews. 
 
-**Difficult to tune:** Companies interview for many skill levels and kinds of positions. Adapting problem-based interviews to these scenarios is difficult because the problems are so sensitive to conditions. A little difference in position or skill level and the specified problem could be too large or too simple to appropriately assess the candidate.
+### Difficult to tune
+Companies interview for many skill levels and kinds of positions. Adapting problem-based interviews to these scenarios is difficult because the problems are so sensitive to conditions. A little difference in position or skill level and the specified problem could be too large or too simple to appropriately assess the candidate.
 
 Adding role-specific assessment goals can quickly spiral a problem out of attainable scope for the interview. The complexity does not compound linearly. Further, it's difficult to recover from a problem mismatched with the candidate's skill, leaving us will an inconclusive evaluation of the candidate's skill level (beyond classifying them as above or below assessment expectations).
 
-**Difficult to score:** The open-ended nature also spurs inconsistent interview experiences and difficulty objectively comparing candidates. Each candidate could focus on a different aspect of the problem. Some with demonstrate a few skills deeply, and others demonstrate many skill with little depth. 
+#### Difficult to score
+The open-ended nature also spurs inconsistent interview experiences and difficulty objectively comparing candidates. Each candidate could focus on a different aspect of the problem. Some with demonstrate a few skills deeply, and others demonstrate many skill with little depth. 
 
 Targeting specific skills at certain depths is effectively unattainable. My attempts at normalized grading have resulted in most skills ending as "inconclusive". Even with a normalized ruberic, skills will show up in diverse ways. Interviewers must apply heavy individual discretion as to what objectives are met.
 
@@ -100,21 +104,26 @@ Architecture-level
 
 Defect detection-based assessment addresses many of the core issues with problem-based assessment.
 
-**Plentiful Examples:** Defect samples can often be pull almost directly from our own systems. Most developers can recount many examples of bad design they've encountered. If not, [code smells](https://en.wikipedia.org/wiki/Code_smell) formalize common issue indicators in code. Examples of these smells are readily available online or can be seeded into code with relative ease.
+### Plentiful Examples
 
-**Controlled Scope:** Many defects are agnostic to the problem domain and can be demonstrated with fairly little motivating context. Also, we know each examinee is given the same code with the same issues. Targeting specific skills at certain depths can be planned out ahead of time with confidence.
+Defect samples can often be pull almost directly from our own systems. Most developers can recount many examples of bad design they've encountered. If not, [code smells](https://en.wikipedia.org/wiki/Code_smell) formalize common issue indicators in code. Examples of these smells are readily available online or can be seeded into code with relative ease.
 
-**Simple Assessment:** Code samples and their associated list of errors are known upfront. Evaluation is far more consistent between candidates. The results are also much easier to compare objectively. Examiners can report percentage of defects found. The defects found can even be categorized by target skill for more granular characterization of skills.
+### Controlled Scope
+Many defects are agnostic to the problem domain and can be demonstrated with fairly little motivating context. Also, we know each examinee is given the same code with the same issues. Targeting specific skills at certain depths can be planned out ahead of time with confidence.
+
+### Simple Assessment
+Code samples and their associated list of errors are known upfront. Evaluation is far more consistent between candidates. The results are also much easier to compare objectively. Examiners can report percentage of defects found. The defects found can even be categorized by target skill for more granular characterization of skills.
 
 Worries about reviewer bias are also easier to address. Multiple reviewers can independently assess against the same objective expectations, or candidate answers can be transcribed for later reviewers to compare against the target defects.
 
-**Modular and Composable:** Detection-based assessments are [increment, stable, and additive](../_posts/2022-02-25-Stable-Incremental-Additive.md) allowing [progressive design](../_posts/2022-03-04-Progressive-Design.md). Each code sample represents a self-contained assessment for specific defects. Larger exams can be composed by selecting many individual samples that target component skills.
+### Modular and Composable
+Detection-based assessments are [increment, stable, and additive](../_posts/2022-02-25-Stable-Incremental-Additive.md) allowing [progressive design](../_posts/2022-03-04-Progressive-Design.md). Each code sample represents a self-contained assessment for specific defects. Larger exams can be composed by selecting many individual samples that target component skills.
 
 Interviews for diverse roles can be constructed from the same base set of code samples. If target skills are missing, then simply add a new self-contained sample for that skill instead of modifying existing samples. If skills aren't needed for a role, simply drop the corresponding samples. 
 
 Such a system also responds much better to candidates that may be intersting, but are outside of the target role's expectations. Simply present harder or simpler samples until the samples match the candidate's skill level. Similarly, shift to samples from other roles if the candidate shows promise in a different specialty.
 
-
+### Evidence for Skill Categorization
 
 Defect detection rates are useful, but I also supplement them with more categorical or qualitative assessments. For example, I may categorize construction maturity  
 - Only sees syntax errors
