@@ -8,7 +8,7 @@ tags: [Interviews, eductation, Defect Detection]
 I've sat through many a coding interview as both examiner and examinee. The experience is usually sub-par on either side. 
 The results always feel incomplete, and the assessment of skill foggy and inconsistent. My recent experiments suggest a new approach that may be more effective: defect detection.
 
-<!-- TODO: I think I need to clarify problem-based interview meaning. Problem in the Problems with Coding Interviews section
+<!-- TODO: maybe transition problem-based to work-based?
 
 TODO: the major sections for why each method is good/bad are big blocks of text. Consider splitting up paragraphs (and maybe turn items into sub-headers)
  -->
@@ -43,7 +43,9 @@ The depth of assessment can vary greatly based on the seniority of the position.
 
 ## Problems with Coding Interviews
 
-The goals and non-goals lead me to a few issues with typical problem-based coding interviews.
+Most coding interviews I've experienced hand some set of requirements or a partial solution to a developer and ask them to code a complete solution. I'll refer to this as a problem-based approach.
+
+I think such approach have numerous obsticals in light of my goals and non-goals for interviews.
 
 ### Difficult to write
 Setting up a good interview requires a good problem to solve. The problem must be quick to pick up, but can't be trivial to solve. This leaves a pretty narrow problem space. The bar for a difficult problem is also very sensitive to candidate experience, making it difficult to reuse samples across positions. 
@@ -51,7 +53,9 @@ Setting up a good interview requires a good problem to solve. The problem must b
 I emphasize [understanding a problem well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md) before writing code. As such, I often spend most of my coding interviews understanding the problem and writing very little code.
 
 ### Too Open-ended & Inconsistent
-Often, companies want to assess certain skills in their candidates. For example, knowledge of testing patterns. Such objectives are difficult to consistently incorporate into a problem-based coding interview. Handing the candidate a problem and letting them code leaves us at their mercy for how they tackle the problem and what parts they tackle. This is great if we want to assess design straight from requirements, but it leaves a big gap for assessing construction-level abilities more commonly expected from junior to mid level developers. 
+Often, companies want to assess certain skills in their candidates (e.g. knowledge of testing patterns). Such objectives are difficult to consistently incorporate into a problem-based coding interview.
+
+Handing the candidate a problem and letting them code leaves us at their mercy for how they tackle the problem and what parts they tackle. This is great if we want to assess design straight from requirements, but it leaves a big gap for assessing construction-level abilities more commonly expected from junior to mid level developers. 
 
 Providing partial solutions can improve odds of observing target skills. However, this biases examinees toward practices they may not have considered otherwise. It also increases work to construct interviews. 
 
@@ -142,7 +146,6 @@ I've applied this defect-detection-based approach with previous clients, and als
 
 Defect-detection-based interviews leverage prepared code samples with known defects to assess skill. This approach delivers significant gains over traditional coding interviews. I've found them to be easier to prepare and adapt, more detailed and reliable in assessing of developer skills, and simpler to execute consistently.
 
-<!-- TODO: conclusion is a bit shakey -->
 
 <!-- 
 Educational followup
