@@ -21,7 +21,7 @@ The key difference is that Dependency Inversion mandates *abstractions belong to
 
 Let's look a few quick examples. 
 
-This code follows dependency injection, but not inversion. The `RecipeManager` does not own the `SendGridClient` type. In fact, the email client is owned by a 3rd party library. However, this code does follow dependency injection. `RecipeManager` doesn't know how `SendGridClient` is constructed. It doesn't know about api keys, or any other such concerns. It simply receives an instance an uses it.
+This code follows dependency injection, but not inversion. The `RecipeManager` does not own the `SendGridClient` type. In fact, the email client is owned by a 3rd party library. However, this code does follow dependency injection. `RecipeManager` doesn't know how `SendGridClient` is constructed. `RecipeManager` doesn't know about api keys or other configuration and dependencies of `SendGridClient`. It simply receives an instance an uses it.
 ```cs
 class RecipeManager{
 
@@ -62,7 +62,7 @@ public class SendGridRecipeAccessor : IRecipeAccessor{
 }
 ```
 
-An inversion-based approach requires the manager to define it's own abstraction. An adapter assembly depends on the service and maps the manager's need into some concrete implementation.
+An inversion-based approach requires the manager to define it's own abstraction. An adapter assembly depends on the `RecipeManager` service and maps the manager's need into some concrete implementation.
 
 ```cs
 // RecipeManager.cs
@@ -110,11 +110,12 @@ Dependency inversion reaps even greater benefits by requiring callers to define 
   - The smaller and more flexible adapters encapsulate responsibility for dependency changes
   - Services can more easily compose new behavior (e.g. new kinds of notification in the earlier sample) by adding adapters rather than modifying the service.
   - Services can more readily adapt to new environments. For example, new programs with different langauge versions, framework versions, different storage, different application goals. The core business rules are maximally portable with contextual concerns delegated to the abstract dependencies. 
+  - Non-shared behaviors are also simplified. They can be implemented directly in an adapter without worrying about speculative reuse or a general interface, and the service is still not coupled to an implementation.
 
 
-One of my favorite results is composition of adapters. Abstraction semantic focus is much tighter since the caller defines it's own dependencies. This also means it's more likely all actions of given dependency will change for the same reasons, or that we can reliably call multiple implementations that respond to the service need in different ways.
+One of my favorite results is composition of adapters. Semantic focus of abstractions is much tighter, since the caller defines it's own dependencies. This also improve changes that all actions on given dependency will change for the same reasons. Similarly, we can reliably call multiple implementations that respond to the service need in different ways, but for the same motivation.
 
-Events are a major application. They allow response to service actions without service knowing about subscribers, or subscribers knowing about each other. 
+Events are a major application. They allow response to service actions without the service knowing about subscribers, or subscribers knowing about each other. 
 
 Consider our earlier `IRecipeEventNotifier`. There could be separate notifiers for email, text, in-app alerts, or even internal system responses. Each approach is independent. The app can then configure as many or few of them as desired using a composite notifier 
 
