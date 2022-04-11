@@ -3,6 +3,8 @@ layout: post
 tags: [SOLID, Dependency Inversion, Software Design]
 ---
 
+# Dependency Inversion > Dependency Injection
+
 [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection) has gained popularity in recent years. This is a good this, but Dependency Injection does not enjoy the full benefit of [Dependency Inversion](https://en.wikipedia.org/wiki/Dependency_inversion_principle) perscribed the the [SOLID principles](https://en.wikipedia.org/wiki/SOLID). This post will clarify the difference and some of the addition power enjoyed by Dependency Inversion.
 
 <!-- 
