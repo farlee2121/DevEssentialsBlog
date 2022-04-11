@@ -111,7 +111,7 @@ public class LowestService
 
 Each layer only knows about it's direct dependencies. For example, `TopLevel` knows it needs `Mid1` and `Mid2`. However, it does not know that `Mid1` and `Mid2` have dependencies of their own. It knows nothing of `LowestService` or `Mid1.Config`.
 
-A running system can then be composed in the top level of the application. This is called the composition root.
+A running system can then be composed in the top level of the application. This is called the composition root. This sample is [available to clone and run](https://github.com/farlee2121/DependencyInversionExample/blob/65ddb973949131b1367d143e791bd378331a062e/test/RecipeManagementService.Tests/SmallConstructorInjectionSample.cs).
 
 ```cs
 public void SeeItRun(){
