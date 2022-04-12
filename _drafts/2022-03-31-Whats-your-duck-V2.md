@@ -47,8 +47,8 @@ Let's tackle the first motivational question: "What is programming?".
 
 I'm a firm believer that [programming is problem modeling](../_posts/2022-02-18-Programming-is-Problem-Modeling.md). I love the quote from Fred Brooks
 
-> The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination. 
-> - Fred Brooks, Mythical Man-month
+> The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination.  
+> \- Fred Brooks, Mythical Man-month
 
 As programmers, we take problems of all kinds and we translate them into the exact language of software. We can encode almost anything our imagination can grapple.
 
@@ -58,8 +58,8 @@ Software Engineering is then the repeatable process for encoding ideas in softwa
 
 ## Better Wrong Than Vague
 
-> Better wrong than vague
-> - Fred Brooks, Design of Design
+> Better wrong than vague  
+> \- Fred Brooks, Design of Design
 
 This quote is the single most important idea you can take from this post. If you remember nothing else, remember it's better to be wrong than vague.
 
@@ -67,7 +67,7 @@ Software is a complex design activity. We deal with messy problems and problems 
 
 Vague ideas can still be wrong, it's just less likely that anyone will notice. Vague problems get swept down the line and pile up until they're nearly insurmountable. Software has coined the derogatory term "legacy" for such software, and it's often a place projects go to die.
 
-Favoring clarity means identifying and communicating our assumptions. Encoding what we think we know about the problem we're solving and how we're solving it. It's about ordering our thoughts well.
+Favoring clarity means identifying and communicating our assumptions. It means encoding what we think we know about the problem we're solving and how we're solving it. It's about ordering our thoughts well.
 
 Clearly communicated ideas, unlike vague ideas, enable collaboration, comparison, reviews, and future reference.
 
@@ -124,7 +124,7 @@ Fortunately, each iteration (or each sub-problem) along the design tree has abou
 - **Constraints**: Qualities that aren't essential to the problem in all cases, but must be met in our case. Common examples include budgets, timelines, available personnel, and hardware limitations
 - **Solution Fit**: How we compare solutions against the enumerated goals and constraints.
 
-First enumerate any known requirements, goals, and constraints. The list will probably evolve as we explore solutions, but it should serve as a strong filter for possible solutions.
+First enumerate any known requirements, goals, and constraints. The list will probably evolve as we explore solutions, but it should serve as a strong initial filter for possible solutions.
 
 Second, enumerate likely solutions. Consider how each solution category matches up to the goals and constraints. Possibly add new solutions based on your findings, and stop when you have a solution that meets all known needs.
 
@@ -175,10 +175,11 @@ The structure is fairly loose, but the general structure is
 
 Knowns and unknowns lead into questions and sub-problems, which lead to hypotheses, experiments to prove or disprove my hypotheses, and finally knowledge to fold back into the overarching goal.
 
-
 The process has evolved a [flexible structure](../_posts/2021-05-21-Duck-Structure.md) that doesn't inhibit my flow of thought, but promotes easy reference to later extract key information. I've even [built tools](https://github.com/farlee2121/Notedown) to leverage this structure since it effectively [turns notes into data](../_posts/2021-03-05-Reference-Ready-Notes.md).
 
-The next sections talk about ducks for specific software life cycle phases. You can also check out an [example duck](../_posts/2021-05-21-Duck-Structure.md#sample).
+> The quality of your questions determine the quality of your answers
+
+Asking good questions that lead us to the heart of a problem is a valuable skill in itself. The next sections talk about questions and ducks techniques for specific software life cycle phases. You can also check out an [example duck](../_posts/2021-05-21-Duck-Structure.md#sample).
 
 
 ### Questions For Requirements
