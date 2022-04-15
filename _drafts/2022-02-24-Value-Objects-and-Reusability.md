@@ -5,10 +5,10 @@ tags: [Domain Driven Design]
 
 # Value Objects and Reuse
 
-Looking for value objects among entity properties is one of my favorite lessons from Domain Driven Design. Here's a quick overview.
+Looking for value objects among entity members is one of my favorite lessons from Domain Driven Design. Here's a quick overview.
 
 
-I can't count how many times I've seen types overflowing with properties, and the properties clearly have implicit groups. Spend a moment to list implicit concepts you see in `User`.
+I can't count how many times I've seen types overflowing with members, and the members clearly form implicit groups or concepts. Spend a moment identifying implicit concepts in the following `User` example.
 
 ```cs
 class User{
@@ -41,9 +41,9 @@ class User{
 }
 ```
 
-Name, coordinates, and address are easy spots for related property groups. There are also various types that clearly have expected constraints like phone and email.
+Name, coordinates, and address are easy spots for related property groups. There are also types with implicit expected constraints like phone and email.
 
-The astute reader may also recognize that the `User` example constains implied business rules and states. For example, probable authentication flows around phone or email.
+The astute reader may also recognize that the `User` example constains implied business rules and states. Namely, probable authentication flows around phone or email.
 
 A fully refactored `User` might look like
 ```cs
@@ -63,9 +63,9 @@ The refactored example certainly reads better, but it includes many other benefi
 
 These implicit value groups, like address, maybe seem fairly minor, but their cost can add up fast.
 
-These implicit groups are one conceptual whole. Splitting them across multiple members of a parent harms understanding. Conceptual units are also likely to be modified together and passed together. 
+These implicit groups are one conceptual whole. Splitting them across multiple members of a parent harms understanding. 
 
-Common operations on these concepts are hard to centralize when their components directly live on different parent types. Explicitly grouping related fields into a semantic value type improves understanding and simplifies operations on the conceptual unit.
+Conceptual units are also likely to be modified together and passed together. Common operations on these concepts are hard to centralize when their components directly live on various parent types. Explicitly grouping related fields into a semantic type improves understanding and simplifies operations on the conceptual unit.
 
 Concepts given their own type are easier to operate on and more likely to grow their own set of operations. Operations like formatting, validation, handling missing data, comparison, and copying can be centralized instead of littered around the code.
 
@@ -106,14 +106,14 @@ class PhoneNumber{
 
 ## Domain reasoning
 
-Some concepts will be obvious like phone, name, or address. However, others may not be. I've found analyzing entity properties for sub-concepts leads me to discover domain concepts I hadn't considered before. It primes me to better understand the nature of the problem I'm working on and how users reason about the process. 
+Some concepts will be obvious like phone, name, or address. However, others may not be. I've found analyzing entity properties for sub-concepts leads me to discover domain concepts I hadn't considered before. It primes me to better understand the nature of the problem I'm working on and how users reason about the process I'm encoding in software. 
 
-Calling out domain concepts has a cumulative effect. The added clarity surfaces new domain concepts that couldn't be seen through the details before. It also allows us to start reasoning about our toolbox of operations on domain concepts separate from their parents. It makes it easier to consider options like, say, verifying all addresses with the postal service or managing eventual need for phone numbers country codes. 
+Calling out domain concepts has a cumulative effect. The added clarity surfaces new domain concepts that couldn't be seen through the details before. It also allows us to start reasoning about our toolbox of operations on each domain concept separate from its parents. It makes it easier to consider options like, say, verifying all addresses with the postal service or managing eventual need for phone numbers country codes. 
 
 
 ## Enforcing implicit rules
 
-Domain concepts aren't limited to simple data values. Value types can also separate values with associated domain rules.
+Domain concepts aren't limited to simple data values. Value types can also encode values with associated domain state.
 
 For example, the `User` example constains authentication flows around phone or email.
 
@@ -145,7 +145,13 @@ Scott Wlaschin explains how to model these implicit rules and other scenarios wi
 
 ## Conclusion
 
-Domain Driven Design encourages us to collect latent concepts in our entity properties into explicit types. This practice clarifies code, reduces defensive programming, increases code reuse, and clears the way for deeper domain understanding.  
+Domain Driven Design encourages us to collect latent concepts in our entity properties into explicit types. This practice clarifies code, reduces defensive programming, increases code reuse, and clears the way for deeper domain understanding. The most common targets for this practice are semantically grouped values, values with semantic invariants, and even values with associated domain states.
+
+I highly recommend further exploration with Scott Wlaschin's works
+- [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional) (book)
+- [Designing With Types](https://fsharpforfunandprofit.com/posts/designing-with-types-intro/) (blog post) 
+- [Domain Modeling Made Functional](https://www.youtube.com/watch?v=Up7LcbGZFuo&ab_channel=NDCConferences) (presentation)
+
 
 <!-- ```cs
 class GeoCoordinate{
