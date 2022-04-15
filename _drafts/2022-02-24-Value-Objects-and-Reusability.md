@@ -5,10 +5,10 @@ tags: [Domain Driven Design]
 
 # Value Objects and Reuse
 
-Looking for value objects in entity properties is one of my favorite lessons from Domain Driven Design. Here's a quick overview.
+Looking for value objects among entity properties is one of my favorite lessons from Domain Driven Design. Here's a quick overview.
 
 
-I can't count how many times I've seen types overflowing with properties, and the properties clearly have implicit groups
+I can't count how many times I've seen types overflowing with properties, and the properties clearly have implicit groups. Spend a moment to list implicit concepts you see in `User`.
 
 ```cs
 class User{
@@ -41,17 +41,132 @@ class User{
 }
 ```
 
-Name and Address are easy spots for related property groups. These implicit groups seem fairly minor, but their cost can add up fast.
+Spoiler, a fully refactored `User` might look like
+```cs
+class User{
+    VerifiedAuthenticationMethod[] MFAMethodsInPriorityOrder;
+    UnverifiedAuthenticationMethod[] PendingAndExpiredMFAMethods;
+    
+    FullName Name;
+    PostalAddress Address;
+    PhoneNumber EmergencyPhone;
+}
+```
+
+## Centralized Operations
+
+Name, coordinates, and address are easy spots for related property groups in the initial `User` sample. These implicit groups seem fairly minor, but their cost can add up fast.
+
 Common operations on these concepts are hard to centralize when their components directly live on different parent types.
-Explicitly grouping concepts into their own type allows us to build up an operation set on those types. Operations like formatting, validation, handling missing data, comparison, and copying avoid being scattered around the code.
+Explicitly grouping concepts into their own type allows us to build up an operation set on those types. Operations like formatting, validation, handling missing data, comparison, and copying can be centralized instead of littered around the code.
 
-Even for concepts with only a single member, creating a value type is often beneficial. Consider members like phone and email. These members clearly have implicit content expectations (invariants), but we can't guarantee they are enforced. This forces us to validate those invariants defensively every time we use the value. Creating a value type allows us to enforce invariants when the type is created and avoid scattered validation. This scenario is known as the [primitive obsession smell](https://blog.ploeh.dk/2011/05/25/DesignSmellPrimitiveObsession/).
+## Reduced defensive programming
 
-In both cases, representing the concept with a type also allows us to start reasoning about our toolbox of operations on that type. It makes it easier to consider options like, say, verifying all addresses with the postal service. 
+Creating a value type is often beneficial, even for concepts with only a single member.
 
-Phone, name, and address may be obvious, but I've found that looking for related properties helps me discover domain concepts I hadn't considered before. It primes me to better understand the nature of the problem I'm working on and how users reason about the process.
+Consider members like phone and email. These members clearly have implicit content expectations (invariants), but we can't guarantee they are enforced within their primitive type. This forces defensive validation every time the value is used. This scenario is known as the [primitive obsession smell](https://blog.ploeh.dk/2011/05/25/DesignSmellPrimitiveObsession/). 
+
+Creating a value type for each semantic type allows us to enforce invariants when the type is created and avoid scattered validation. We can work with values, like phone numbers, never worrying if their contents meet expectations.
+
+```cs
+class PhoneNumber{
+    private string phoneNumber;
+
+    private PhoneNumber(string phoneNumber){
+        this.phoneNumber = phoneNumber;
+    }
+
+    public static Result<PhoneNumber, PhoneValidationError> ParseFromString(string phoneNumber){
+        PhoneValidationError? validationResult = Validate(phoneNumber);
+        if(validationResult != null) return Result.Fail(validationResult);
+        else return Result.Ok(new PhoneNumber(lat, long));
+    }
+
+    private PhoneValidationError? Validate(string phoneNumber){
+        // probably some regex...
+    }
+
+    public string GetAreaCode(){
+        // ...
+    }
+    public string GetCountryCode(){
+        // ...
+    }
+}
+```
+
+## Domain reasoning
+
+Representing latent concepts with a type clarifies intent in our code. It also allows us to start reasoning about our toolbox of operations on that type separate from their parent. It makes it easier to consider options like, say, verifying all addresses with the postal service or that phone numbers may eventually need country codes. 
+
+
+Some concepts will be obvious like phone, name, or address. However, others may not be. I've found analyzing entity properties for sub-concepts leads me to discover domain concepts I hadn't considered before. It primes me to better understand the nature of the problem I'm working on and how users reason about the process. 
+
+## Enforcing implicit rules
 
 The astute reader may also recognize that the `User` example constains implied business rules and states. For example, probable authentication flows around phone or email.
+
+The original `User` sample spreads these rules over a series of values and flags 
+
+```cs
+string Email;
+bool IsEmailVerified;
+DateTime LastEmailValidation;
+
+bool ShouldVerifyMFAWithEmail;
+
+string PhoneNumber;
+bool IsPhoneVerified;
+DateTime LastPhoneValidation;
+bool ShouldVerifyMFAWithPhone;
+```
+
+The refactored example clarifies and enforces these rules with only two members
+```cs
+VerifiedAuthenticationMethod[] MFAMethodsInPriorityOrder;
+UnverifiedAuthenticationMethod[] PendingAndExpiredMFAMethods;
+```
+
+The new representation is clearer, less prone to error, and is more flexible to support new types of verification.
+
+
 Scott Wlaschin explains how to model these implicit rules and other scenarios with types in his book [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional). Shorter versions of the idea are available in his blog post series [Designing With Types](https://fsharpforfunandprofit.com/posts/designing-with-types-intro/) or his talk [Domain Modeling Made Functional](https://www.youtube.com/watch?v=Up7LcbGZFuo&ab_channel=NDCConferences).
 
+## Conclusion
 
+
+
+<!-- ```cs
+class GeoCoordinate{
+
+    float Latitude;
+    float Longitude;
+
+    private GeoCoordinate(double lat, double long){
+        // !!! constructor is private
+        this.Latitude = lat;
+        this.Longitude = long;
+    }
+    public static Result<GeoCoordinate, FooError> FromLatLong(double lat, double long){
+        FooError? validationResult = Validate(lat, long);
+        if(validationResult != null) return Result.Fail(validationResult);
+        else return Result.Ok(new GeoCordinate(lat, long));
+    }
+    public FooError? Validate(double lat, double long){
+        // validation here...
+    }
+}
+
+class PostalAddress{
+    string Street;
+    string City;
+    string State;
+    string Zip;
+
+    // similar validation, construction, etc
+
+    public static GeoCoordinate ToCoordinates(PostalAddress address){
+        // some implementation...
+    }
+}
+``` -->
