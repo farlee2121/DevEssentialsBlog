@@ -15,6 +15,11 @@ I'm thinking about a presentation or a post where I have a limited amount of tim
   - principle of least surprise?
 - Contain side-effects?
 
+Process elements
+- Preparatory refactoring: small complete units of work to the max
+- scientific debugging
+- TDD / tests as refinement and speed enhancer
+
 
 Order of scope precedence (limit exposure)
 - function local (don't hesitate to break out private functions)
