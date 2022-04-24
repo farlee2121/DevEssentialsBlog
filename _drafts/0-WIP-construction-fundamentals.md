@@ -32,3 +32,8 @@ Order of scope precedence (limit exposure)
 - Never use
   - global mutable data
   - note: anything public on a class becomes part of the global namespace and can be depended on. Direct access of persisted data (e.g. database, file system) is also global access unless that responsibility is intentionally contained to one component
+
+
+If I could only pick 2:
+- naming
+- Preparatory refactoring
