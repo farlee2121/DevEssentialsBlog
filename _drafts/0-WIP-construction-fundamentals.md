@@ -18,7 +18,7 @@ I'm thinking about a presentation or a post where I have a limited amount of tim
 Process elements
 - Preparatory refactoring: small complete units of work to the max
 - scientific debugging
-- TDD / tests as refinement and speed enhancer
+- TDD / tests as refinement and speed enhancer (how would I split this with the testing responsibility)
 
 
 Order of scope precedence (limit exposure)
@@ -37,3 +37,45 @@ Order of scope precedence (limit exposure)
 If I could only pick 2:
 - naming
 - Preparatory refactoring
+
+
+## Design
+
+The most important concepts
+- ports and adapters
+- SOLID (strongly tied to ports and adapters)
+- information hiding (strongly tied to scope)
+- DDD (domain, encode understanding)
+
+Performance wise: CQRS, more about breaking immediate consistency and caching than local optimizations
+
+
+## Testing
+- case selection: 
+  - thorns around gold, requirements/BDD
+- When are you done? -> completeness measures (e.g. some decide with knowledge of code, but I think tests focus on the contract. Paired with total intrefaces you can write a good test suite from signature + BDD style requirements. Must consider sequence behavior, behavior for different data)
+  - property tests cover data well, mutation tests ensure logical coverage
+- testing as design, and as process driver (increment condition)
+
+## Maintenance
+
+- CI/CD
+- logging
+- ??? Should probably survey some devops people for this responsibility
+
+!!! OK, and probably good, to admit in some sections that I'm not an expert and that I've leaned on experts (and also experimented myself) to form practice list
+
+## SCM
+
+Source control, especially Git. Otherwise more tied to quality practices. Probably doesn't need it's own section
+
+## Quality
+
+- SQC / Formal Inspection
+- Retrospectives, process improvement boards
+  - should have some baseline so improvements accumulate instead of cycle
+
+## Process / Methods
+
+- Agile
+- Stable, incremental, additive
