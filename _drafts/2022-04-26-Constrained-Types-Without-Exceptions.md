@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [C#, Records, Type-Driven Development]
+tags: [C#, Type-Driven Development, Value Types]
 ---
 
 # Constrained Types without Exceptions
