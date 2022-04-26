@@ -13,6 +13,7 @@ It's pretty quick and easy to create a result type with a union approximation
 ```cs
 public record Result<TSuccess, TError>
 {
+    internal Result(){};
     public record Success(TSuccess data) : Result<TSuccess, TError>;
     public record Error(TError data) : Result<TSuccess, TError>;
 
@@ -34,7 +35,11 @@ result switch
     
 ```
 
-The main issue here is the `_` case. There is no way to limit the set of result derivative to just Success and Error. Therefore we must always handle the open-ended case when pattern matching. This breaks my mental model of what I expect from a result type. We can hide that detail by providing some `.Handle(onSuccess, onFailure)`, but then we loose the desired benefit of pattern matching over callbacks.
+The main issue here is pattern exhaustiveness (the `_` case). There is no way to limit the recognized derivatives to just Success and Error. Therefore we must always handle the open-ended case when pattern matching or surpress errors. This breaks my mental model of what I expect when matching on a result type. We can hide that detail by providing some `.Handle(onSuccess, onFailure)`, but then we loose the desired benefit of pattern matching over callbacks.
+
+Note that we can limit the actual possible derivatives. The `Result<TSuccess, TError>` constructor can be made `internal` to limit derivatives to the source assembly. We can even make the constructor to `private` and still derive nested types like Success and Error are nested above.
+
+It should be possible to improve the static analyzer to recognize limited derivatives based on constructor accessibility, but the current analyzer does not do so.
 
 ## Aliasing / Deriving
 
@@ -71,4 +76,4 @@ public record DerivableResult<TSuccess, TError, TResult> where TResult : Derivab
 
 ## Conclusion
 
-Overall, making a result type using union-like records is pretty quick and easy. Unfortunately, pattern matching is a bit awkward because we cannot enforce a closed set of result derivatives. Deriving from result also does not create workable types.
+Overall, making a result type using union-like records is pretty quick and easy. Unfortunately, pattern matching is a bit awkward and scenario-specific aliases cannot be derived from the root result type.
