@@ -62,9 +62,10 @@ Check.Quick (fn x y z ->
     (x+y)+ z = x + (y + z)
 )
 ```
+Scott Wlaschin has an excellent [introduction to property testing](https://fsharpforfunandprofit.com/posts/property-based-testing/).
 
 Systems that encode their input and output expectations well can take advantage of this kind of testing **without writing explicit tests**.
-For example, Clojure.spec has a function `instrument` that automatically tests every annotated function in the system with random generated values.
+For example, Clojure.spec has a function `instrument` that automatically tests every type-annotated function in the system with random generated values.
 
 What do tests like this really tell us?
 
@@ -79,7 +80,7 @@ This is a form of completeness complementary to mutation testing. Between mutati
 
 ## Use in static languages
 
-I've previously attempted to bring constrined data to F# in an experiment called [FsSpec]().
+I've previously attempted to bring constrined data to F# in an experiment called [FsSpec](https://github.com/farlee2121/FsSpec).
 
 Adding constraints to primitive types didn't work out. However, I realized that the constraints don't need a special construct. 
 Constraints live in the factories of their types. The constraints can be introspected from these factories and used to create automatic random tests without modifying the code base.
