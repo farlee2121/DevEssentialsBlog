@@ -24,6 +24,8 @@ record Color{
             Blue b => (0,0,255),
         };
     }
+
+    private Color() {} // private constructor can prevent derived cases from being defined elsewhere
 }
 ```
 
@@ -56,7 +58,7 @@ let ProcessPayment paymentInfo =
     | Paypal paypalInfo -> handlePaypal (paypalInfo)
 ```
 
-## OO Equivilent 
+## Object-Oriented Equivalent 
 
 The motivation of unions may sound familiar. Unions types are really about polymorphism. 
 
@@ -82,6 +84,7 @@ class Paypal : PaymentType{
 
 This works, but it has several downsides. 
 - We can't limit the number of cases, causing potentially unhandled data
+  - UPDATE: We actually can limit the number of cases by making the base class's constructor internal or private. Pattern matching in C# currently will not recognize that limitation, but we can prevent unhandled data and unexpected extension.
 - The intent as a set of alternatives isn't as clear
 - We can't prevent methods and behavior from being mixed with the data
 - Classes have reference equality, but unions usually want value semantics
@@ -114,15 +117,15 @@ paymentInfo switch {
     CreditCard cardInfo => //...
     ACH checkInfo => //...
     Paypal paypalInfo => //...
-}
+};
 ```
 
 C# 9 improves the union definition with positional record definitions, which also include value equality semantics by default
 ```cs
 record PaymentType{
-    record CreditCard(CardNumber CardNumber, SecurityCode CVV, Expiration ExpirationDate, NameOnCard Name) : PaymentType()
-    record ACH(AccountNumber AccountNumber, RoutingNumber RoutingNumber) : PaymentType()
-    record Paypal(IntentToken Token) : PaymentType()
+    public record CreditCard(CardNumber CardNumber, SecurityCode CVV, Expiration ExpirationDate, NameOnCard Name) : PaymentType();
+    public record ACH(AccountNumber AccountNumber, RoutingNumber RoutingNumber) : PaymentType();
+    public record Paypal(IntentToken Token) : PaymentType();
 }
 ```
 
@@ -130,9 +133,11 @@ As of C# 9, that makes the full example code shorter than the original type defi
 
 ```cs
 record PaymentType{
-    record CreditCard(CardNumber CardNumber, SecurityCode CVV, Expiration ExpirationDate, NameOnCard Name) : PaymentType()
-    record ACH(AccountNumber AccountNumber, RoutingNumber RoutingNumber) : PaymentType()
-    record Paypal(IntentToken Token) : PaymentType()
+    public record CreditCard(CardNumber CardNumber, SecurityCode CVV, Expiration ExpirationDate, NameOnCard Name) : PaymentType();
+    public record ACH(AccountNumber AccountNumber, RoutingNumber RoutingNumber) : PaymentType();
+    public record Paypal(IntentToken Token) : PaymentType();
+
+    private PaymentType(){} // private constructor can prevent derived cases from being defined elsewhere
 }
 
 public void HandlePayment(PaymentType paymentInfo){
@@ -140,7 +145,7 @@ public void HandlePayment(PaymentType paymentInfo){
         CreditCard cardInfo => //...
         ACH checkInfo => //...
         Paypal paypalInfo => //...
-    }
+    };
 }
 ```
 
