@@ -13,6 +13,8 @@ TODO: improve title
 
 TODO: read on event-driven architecture to make sure I understand it correctly https://en.wikipedia.org/wiki/Event-driven_architecture
 TODO: use 6 approaches to dependencies post as my progression from DI reference?
+
+TODO: is post still aligned with original introduction / framing? Can it be? Does it need reframed or split?
 -->
 
 # Pure Domains and High-Scale Event Streaming
@@ -34,7 +36,11 @@ Here's a quick sample API.
 
 ## Pure Domain is Event-driven
 
-todo: probably need to highlight in some way how state get's enacted (could directly be interpreted into a db transaction, could be thrown in a queue)
+<!-- TODO: probably need to highlight in some way how state get's enacted (could directly be interpreted into a db transaction, could be thrown in a queue) 
+
+Maybe blog about how dependency rejection turns the top level of our domain into an event producer. The domain rules, even the compositional layer (not really a manager anymore) is pure, it has no effect on system state. Instead it returns a structure that represents a change and the composition root can register any number and kinds of interpreting consumers.
+
+-->
 
 !!! identify of the domain action available in event
 
@@ -50,7 +56,7 @@ First, some general benefits of purity
 - Clear consequences: All expections and consequences of a pure function are advertized in the input and output. Programmers don't have to dig thorugh a call stack to understand how a function effects the system.
 
 Second, using events for all input and output of the domain enables maximal leverage of mature event streaming tooling
-- System History: Event streams or a event store can track the entire history of system states
+- System History: Event streams or a event store can track the entire history of system states, [which has many benefits](https://spencerfarley.com/2021/05/28/transaction-databases/)
 - Decoupled Uptime: the event stream acts as a queue and decouples uptime between producers and consumers
 - Flexible consumers: All decisions of the domain rule are contained in data. That data can be passed to any number or type of consumer without changing the domain. 
 - Central cross-cutting policies: Event tooling typically supports configuration for Policies like retry, error handling, and delivery guarantees without code changes. 
@@ -82,7 +88,9 @@ First consider batching. Suppose we have a system that supports offline editing.
 
 We also avoid potential conflicts with changes made on the server while the client was disconnected. We have each state delta and the time each state change was made. Therefore we can deterministically decide which change would be latest.
 
-Now consider nesting. Here's a sample set of commands
+
+We don't have to be offline to batch, we can also send a group of requests together simply because it's convenient. Consider the common scenario of an entity with child entities. Like a profile that contains a gallery of images 
+
 ```fsharp
 let AddGalleryImageCommand = { ProfileId: ProfileId; ImageRef: ImageRef}
 let RemoveGalleryImageCommand = { ProfileId: ProfileId; ImageRef: ImageRef}
@@ -104,12 +112,9 @@ let UpdateProfileCommand = {
 
 As demonstrated, one would assume that a profile must exist before images can be added or removed, and the images are updated in a separate call from updating the profile.
 
-This is a common struggle in defining APIs. How much should child entities be grouped with their parent versus separated.
+However, our domain commands don't rely on the profile request coming first. The commands could be sent as a batch, broken up into their respective domain commands, executed, and then aggregated back into batched response. Batched requests don't have to be batched as a sequence, they could also be batched as a hierarchy of events and achieve the same result.
 
-However, a pure and event-based domain can handle any arbitrary set of events just the same. If a request to add a profile also includes 
-- same domain actions in either case
-- just decompose aggregate action into sub-actions, run domain commands, recompose into an aggregate response
-- gives us flexibility in transaction size 
+Such batching or nesting gives us flexibility over request and transaction size. We can lump requests to reduce calls (e.g. a profile and add image request as one) or request them individually. Similarly, we can fail the group as a whole, or we can allow partial success. Such decisions could even be decided as parameter in the request (i.e.`{transaction-behavior: "allow-partial", events: []}`).
 
 
 ## Downsides
@@ -118,62 +123,23 @@ First off, it can be hard to think this way. This pure and event-based approach 
 
 ## Conclusion
 
+A pure domain
 
 
 
 
 
+<!-- A pure domain is perfectly parallelizable. Any orchestration of state change is made outside the domain. Retry, failure, batching, sequencing, etc can be handled by robust generic event systems and changed without changing the domain or any direct derivations of domain ports.  -->
 
 
-
-
-
-Stuck: think nesting/composition is related to purity, but needs more extended explanation
-
-- Command Composition (batching): Pure functions can be reliably composed
-  - !!! This means
- They also always return the same result given the same inputs, so actions canb
-
-
-- Simplifies domain, since it needs fewer dependencies. No need for mocking in testing
-- Commands / events become stackable/nestable 
-
-
-
-
-
-
-
-Maybe blog about how dependency rejection turns the top level of our domain into an event producer. The domain rules, even the compositional layer (not really a manager anymore) is pure, it has no effect on system state. Instead it returns a structure that represents a change and the composition root can register any number and kinds of interpreting consumers.
-
-I think I previously wrote on how this is a data gold mine. Using an event stream you can see the full history of system states.
-- reference https://spencerfarley.com/2021/05/28/transaction-databases/ ? 
-
-I also now realized the power this has to simplify difficult concurrency issues at scale. For example, limited stock of an item. Purchase events can be validated, queued, and handled in a deterministic order. If we have 100 stock left we can parallelize 100 purchases requests, then the worker can see if any failed and decide what to do with the failures and remaining queue. These requests can also form separate queues based on properties, like the fulfilling warehouse
-
-A pure domain is perfectly parallelizable. Any orchestration of state change is made outside the domain. Retry, failure, batching, sequencing, etc can be handled by robust generic event systems and changed without changing the domain or any direct derivations of domain ports. 
-- eventual consistency is up-front in the structuring
-
-Thought i'd written on it before, but I guess I only wrote it in my blocker system notes
-- https://github.com/farlee2121/BlockScheduler/blob/main/docs/Event-basedModel.md#key-takeaways
-- I realized that commands can nest. I could include a list of add-note/delete-note commands as part of the update-partner command. Then I could choose to call them together or separate without needing to write any new command handlers or event handlers 
-  - there is also no ambiguity in resolving against current state because each level is in terms of an action (or difference)
-- I'm realizing command convention (event-based) makes for very flexible invocation. Endpoints don't really matter. The identity is contained in the command (same goes for result). Thus
-  - events can be nested / batched
-    - easier to modulate transaction size
-  - events can be streamed/queued
-  - we could serialize any subset of commands pretty easily
-  - events can be invoked individually
-  - events can be held for later execution In a way, it makes our api a batch language
-
-
-## Progression of Dependency Ideas
+<!-- ## Progression of Dependency Ideas
 
 It may be difficult to picture a system with a completely pure domain. Our intuition wants to point to some place in the program as the orchestrator ordering 
 
 direct dependency -> injection -> inversion -> rejection
 - later, rejection ~= event/message based system. 
 - really, the data structure (both in and out) are events
-<!-- try to lead them to realize the idea is a progression from already popular ideas -->
 
-<!-- not sure this progression is necessary to explain the idea. I do find it really interesting though, and a good connection of existing knowledge. Most readers won't understand it though... Maybe I make it a separate (precursor?) post (Dependency Inversion + Purity -> Dependency Rejection). -->
+try to lead them to realize the idea is a progression from already popular ideas
+
+not sure this progression is necessary to explain the idea. I do find it really interesting though, and a good connection of existing knowledge. Most readers won't understand it though... Maybe I make it a separate (precursor?) post (Dependency Inversion + Purity -> Dependency Rejection). -->
