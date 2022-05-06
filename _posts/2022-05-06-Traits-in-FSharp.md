@@ -12,6 +12,8 @@ I fooled myself for a moment into thinking F# has ad-hoc polymorphism. Interface
 Traits can be seen as late-bound inheritance. It allows us to add new polymorphic behavior to pre-existing types at any time.
 
 ## Interface Inheritance
+The first contributor to my confusion was how F# notates inheritance. 
+
 In F#, interface inheritance is syntactically separate from class inheritance. 
 
 ```fsharp
@@ -20,16 +22,16 @@ type Cat () =
         member self.Meow () = "nya"
 ```
 
-Implementations are explicitly tied to their interface. There is no ambiguity about what implementation is linked to what interface. 
+Implementations are explicitly tied to their interface. There is no ambiguity about what implementation is linked to what interface.
+Interface inheritance also can't cause behavior conflicts, since interfaces don't contain behavior.
 
-Interface inheritance also can't cause behavior conflicts. Interfaces don't contain behavior.
+All together, there is no worry about member conflicts. We can always select the right implementation based on which interface the type is called as.
 
-All together, we can always select the right implementation based on which interface the type is called as. 
 
 
 ## Type Extension
 
-F# can [add members to a type at any time](https://fsharpforfunandprofit.com/posts/type-extensions/) as demonstrated below.
+The second contributor to my confusion was that F# can [add members to a type at any time](https://fsharpforfunandprofit.com/posts/type-extensions/) as demonstrated below.
 ```fsharp
 type System.Int32 with
     static member IsOdd x = x % 2 = 1
@@ -51,7 +53,7 @@ type Cat with //WONT COMPILE
         member self.Meow () = "nya"
 ```
 
-I'd guess this has to do with potential state. Rust traits only support functions, and leaves data members to separate type definitions. I forgot that C# and F# interfaces support data interface members because I effectively never use this feature.
+I'd guess this has to do with potential state. Rust traits only support functions and leaves data members to separate type definitions. I forgot that C# and F# interfaces support data interface members because I effectively never use this feature.
 
 Potential state leaves us with bad options. A type could implement two traits with conflicting data members (i.e. same name). The conflicting members could share state, but this would break their independence and cause unclear coupling between contexts. Alternatively, different trait implementations could ignore each others state, but this likely creates an illusion of expected shared state. The rules for mutating data become muddy either way.
 
