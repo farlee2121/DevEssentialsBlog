@@ -3,7 +3,7 @@ layout: post
 tags: [Rust, F#, Inheritance, Composition, Traits]
 ---
 
-# Why No Traits (Ad-hoc inheritance) in F#
+# Why No Traits (late-bound inheritance) in F#
 
 I fooled myself for a moment into thinking F# has ad-hoc polymorphism. Interface inheritance in F# looks a lot like traits in rust. So, why doesn't F# support trait-like polymorphism.
 
