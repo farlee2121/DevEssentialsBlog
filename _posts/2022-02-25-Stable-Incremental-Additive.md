@@ -22,7 +22,7 @@ I further believe that elegant design uses a few concepts combined powerfully.
 
 Contemplating why these core techniques work in this elegant design minset led me to notice a trend. At first, I noticed all of these techniques promote stable increments of work (e.g. commits, work items, services).
 
-However, I stable increments alone are insufficient to produce results. It's quite possible to work in increments that rewrite previous work and create little or no forward momentum. This kind of churn is common in systems that fail the open closed principle, or generally have high technical debt.
+However, stable increments alone are insufficient to produce results. It's quite possible to work in increments that rewrite previous work and create little or no forward momentum. This kind of churn is common in systems that fail the open closed principle, or generally have high technical debt.
 
 Increments must also be additions to some baseline that is already stable in itself. This is why commits should be complete units of work, why stories are self-contained increments of user value, why services expose extensibility through abstract ports, etc.
 
@@ -87,5 +87,6 @@ I believe stable, incremental, and additive are underlying properties driving pr
 At the very least, they've served as a useful guide for selecting and adapting a personal set of practices. 
 
 ## Further Reading
+- Update: I explore how these properties lead to [Progressive Design](../_posts/2022-03-04-Progressive-Design.md) in a later post 
 - I have [Design of Design](https://www.amazon.com/Design-Essays-Computer-Scientist/dp/B005YWVRE2) to thank for much of my understanding of design process and design across disciplines.
 - Mark Seemann has one of the best descriptions of [Open-Closed architecture](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/) I've encountered

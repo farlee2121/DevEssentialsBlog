@@ -5,7 +5,7 @@ tags: [Design Thinking, Requirements]
 
 # Going Fast is Going Well
 
-I want to directly address the idea that moving quickly means bad code. The opposite is also not heavy design process. To go fast is to go well, and that means fast incremental design.
+I want to directly address the idea that moving quickly means bad code. Heavy design process is also not the opposite of either speed or sloppy code. To go fast is to go well, and that means fast incremental design.
 
 ## Design Stamina
 It's generally accepted that bad code slows you down, eventually. The [design stamina hypothesis](https://www.martinfowler.com/bliki/DesignStaminaHypothesis.html) represents the general relationship well. 
@@ -16,7 +16,7 @@ It's generally accepted that bad code slows you down, eventually. The [design st
 </figure>
 <br />
 
-I believe the trade-off happens very fast. The first time you have to rip out code you're both throwing away the previous work, adding work to remove it, and doing the new work. The more thrown-together code you have the more frequent and complex these challenges become.
+I believe the trade-off happens very fast. The first time you have to rip out code, you're both throwing away the previous work, adding work to remove it, and doing the new work. The more thrown-together code you have the more frequent and complex these challenges become.
 
 ## Increments of Progress
 I think the issue stems from a false belief that progress is only made in terms of code.
@@ -30,7 +30,7 @@ I see it this way
 
 Thus, the speed limiter is how tight of a feedback loop you have with your customer, and progress is measured in understanding of the problem.
 
-![spectrum image?](../post-media/Going-Fast/spectrum.png)
+![spectrum image](../post-media/Going-Fast/spectrum.png)
 
 The fastest scenario is that you *are* your customer and you are constantly feeding backing into the development process. Still fast is that you can contact your customer whenever questions come up and work through a decision with them.
 
