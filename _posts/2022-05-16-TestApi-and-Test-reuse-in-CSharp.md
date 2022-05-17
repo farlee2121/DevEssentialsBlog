@@ -10,7 +10,7 @@ I've shown how I [use the pattern in F#](../_posts/2021-10-08-TestApi-in-FSharp-
 
 
 ## Motivating Context
-Suppose you're following [SOLID](https://en.wikipedia.org/wiki/SOLID) at the architectural level. This means a service pushes it's dependencies behind abstractions it owns and some later caller injects the concrete implementations. 
+Suppose you're following [SOLID](https://en.wikipedia.org/wiki/SOLID) at the architectural level. This means each service pushes it's dependencies behind abstractions that it owns and some later caller injects the concrete implementations. 
 
 ![Dependency Inversion Diagram](../post-media/TestApi-and-TestReuse-in-Csharp/dependency-inversion.drawio.svg)
 
@@ -46,12 +46,15 @@ One can imagine how some of the service dependencies could vary. For example, we
 
 Consider this example against `IUserAccess`
 ```cs
+// Service Assembly
 public interface IUserAccess{
     Profile GetUserProfile(UserId userId);
 }
 
 
-abstract class UserAccessTests{
+// Test Assembly
+
+public abstract class UserAccessTests{
 
     public abstract ITestApi SutFactory();
 
@@ -128,7 +131,7 @@ The same approach we used to test an abstract dependency applies for testing the
 
 The main difference is that the service usually won't have separate implementations. Instead, we want to test the service with different dependency configurations.
 
-This is even easier. We only need to write one test api implementation that accepts an injected instance of the service. We can then dervice test suites for any dependency configuration simply.
+This is even easier. We only need to write one test api implementation that accepts an injected instance of the service. We can then derive test suites for any dependency configuration simply.
 
 ```cs
 
