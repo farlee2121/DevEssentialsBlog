@@ -12,11 +12,13 @@ I've shown how I [use the pattern in F#](../_posts/2021-10-08-TestApi-in-FSharp-
 ## Motivating Context
 Suppose you're following [SOLID](https://en.wikipedia.org/wiki/SOLID) at the architectural level. This means a service pushes it's dependencies behind abstractions it owns and some later caller injects the concrete implementations. 
 
-The service likely expects all dependency implementations produce consistent effects, as far as this calling service is concerned. It's also likely that many expectations of the service itself are the same no matter what dependencies are configured.
+![Dependency Inversion Diagram](../post-media/TestApi-and-TestReuse-in-Csharp/dependency-inversion.drawio.svg)
+
+The calling service likely expects all dependency implementations to behave consistently from the perspective of the service. This includes queries and any side-effects the service would be effected by.
 
 TestApi allows us to write those shared behavior expectations once and verify them across many implementations or configurations.
 
-## Example
+## Example: Testing an abstract dependency
 
 Suppose we have a service
 ```cs
@@ -25,6 +27,7 @@ class ChatClient{
     IUserAccess userAccess;
     IAttachmentAccess attachmentAccess;
     IChatNotifier notifier;
+
     public ChatClient(IThreadAccess threadAccess, IUserAccess userAccess, IAttachmentAccess attachmentAccess, IChatNotifier notifier){
         //...
     }
@@ -54,6 +57,8 @@ abstract class UserAccessTests{
 
     [Fact]
     public void SavedUserProfilesCanFetched(){
+        ITestApi testApi = SutFactory();
+
         Profile expectedProfile = //...
         testApi.SaveUserProfile(profile);
         Profile actualProfile = testApi.GetUserProfile(profile.UserId);
@@ -70,34 +75,35 @@ abstract class UserAccessTests{
 
 A few things to notice. 
 - `TestApi != system interface`: Having the test suite define it's own api allows our test to define expectations differently than the system. In this case, it allows us to create users even if the system interface doesn't have a mechanism to do so.
-- **Abstract test class + SutFactory**: The test suite is defined as abstract and requires any derivatives to implement the SutFactory. This allows us to control all lifetimes of test api instances within the test suite while allowing derivative test suites to vary how the test subject is constructed.
+- `Abstract test class + SutFactory`: The test suite is defined as abstract and requires any derivatives to implement the SutFactory. This allows us to control all lifetimes of test api instances within the test suite while allowing derivative test suites to vary how the test subject is constructed.
 
 
 Here's a few example test api implementations
 ```cs
-class InMemoryUserAccessTests : UserAccessTests{
+public class InMemoryUserAccessTests : UserAccessTests{
     public override ITestApi SutFactory(){
         return InMemoryUserAccessTestApi();
     }
 
-    class InMemoryUserAccessTestApi : UserAccessTests.ITestApi{
+    public class InMemoryUserAccessTestApi : UserAccessTests.ITestApi{
         InMemoryUserAccess inMemoryUserStore = new InMemoryUserAccess();
         IUserAccess userAccess = inMemoryUserStore;
-        Profile GetUserProfile(UserId userId){
+
+        public Profile GetUserProfile(UserId userId){
             return userAccess.GetUserProfile(userId);
         }
-        void SaveUserProfile(Profile userProfile){
+        public void SaveUserProfile(Profile userProfile){
             inMemoryUserStore.SaveUserProfile(userProfile);
         }
     }
 }
 
-class SharedIdentityUserAccessTests : UserAccessTests{
+public class SharedIdentityUserAccessTests : UserAccessTests{
     public override ITestApi SutFactory(){
         return SharedIdentityUserAccessTestApi();
     }
 
-    class SharedIdentityUserAccessTestApi : UserAccessTests.ITestApi{
+    public class SharedIdentityUserAccessTestApi : UserAccessTests.ITestApi{
         SharedIdentityService identityService;
         IUserAccess userAccess;
         public InMemoryUserAccessTestApi(SharedIdentityService identityService){
@@ -105,35 +111,35 @@ class SharedIdentityUserAccessTests : UserAccessTests{
             userAccess = new SharedIdentityUserAccess(identityService);
         }
 
-        Profile GetUserProfile(UserId userId){
+        public Profile GetUserProfile(UserId userId){
             return userAccess.GetUserProfile(userId);
         }
-        void SaveUserProfile(Profile userProfile){
+        public void SaveUserProfile(Profile userProfile){
             identityService.SaveUser(UserFromProfile(userProfile));
         }
     }
 }
 ```
 
-This may seem like a lot of added code compared to directly testing a component. However, but these TestApis tend to be very slim and we get to share the core test suite across all implementations!
+This may seem like a lot of added code compared to directly testing a component. However, we get to share the core test suite across all implementations, resulting in overall less code!
 
-## Testing service with multiple configurations
-The same approach we used for an abstract dependency applies for testing the main service. We have an abstract test class with thin derivatives that just create an instance of the test subject.
+## Example: Testing a service with multiple configurations
+The same approach we used to test an abstract dependency applies for testing the main service. We have an abstract test class with thin derivatives that implement the test api.
 
-The main difference is that the service won't have separate implementations. Instead, we want to test the service with different dependency configurations.
+The main difference is that the service usually won't have separate implementations. Instead, we want to test the service with different dependency configurations.
 
-This is even easier. We can often get away with only one test api implementation that takes an instance of the service configured by different test suite derivatives.
+This is even easier. We only need to write one test api implementation that accepts an injected instance of the service. We can then dervice test suites for any dependency configuration simply.
 
 ```cs
 
 public class ChatClientTestApi: ChatClientTests.ITestApi{
-
+    // A test API
     ChatClient chatClient;
     public ChatClientTestApi(ChatClient chatClient){
         this.chatClient = chatClient;
     }
 
-    // implemented methods go here
+    // implemented api methods go here
 
 }
 

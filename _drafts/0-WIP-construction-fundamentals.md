@@ -18,6 +18,7 @@ I'm thinking about a presentation or a post where I have a limited amount of tim
 Process elements
 - Preparatory refactoring: small complete units of work to the max
 - scientific debugging
+  - can probably demote because I'll cover it in critical thinking
 - TDD / tests as refinement and speed enhancer (how would I split this with the testing responsibility)
 
 
@@ -79,3 +80,15 @@ Source control, especially Git. Otherwise more tied to quality practices. Probab
 
 - Agile
 - Stable, incremental, additive
+
+## Thinking skills
+- ducks
+  - pro/con
+  - boundary
+  - equivalence classes
+- threat matrix
+- essence vs accident
+
+
+TODO: consider revisiting a casual presentation on critical core of practices in view of SWEBOK overview
+- probably present before releasing as a blog post
