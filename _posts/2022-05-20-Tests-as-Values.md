@@ -48,7 +48,7 @@ This attribute-based approach works well with the right tooling. However, it cau
 ## Tests as Values
 
 All the above assumptions are not essential to tests. Tests can be values in much the same way we now use functions or objects as values.
-This allows test to be treated like any other value in our code. We can bring all of our good practices other coding tasks into testing too.
+This allows test to be treated like any other value in our code. We can bring all of our good practices from other coding tasks into testing too.
 
 Let's look at some examples of how test-values are useful.
 
@@ -68,9 +68,9 @@ let tests = testList "Sample Tests" [
 ]
 ```
 
-We can, of course, concat lists of tests together if we like
+We can, of course, combine lists of tests together if we like. 
 ```fsharp
-let allTests = List.concat [testlist1; testlist2; ...; testlistN];
+let allTests = testList "All tests / Reason for combined list" [testlist1; testlist2; ...; testlistN];
 ```
 
 We can run the list of tests
@@ -86,13 +86,29 @@ let filtered = Test.filter " " (fun testFullName -> testFullName.Contains("expec
 
 Test setup and teardown can be done just by mapping the tests with a new enclosing function. Tests names can also be dynamically prefixed or reformatted using a simple list map. 
 
-I've named just a few possibilities, and all of this is accomplished using the normal lists and functions we program with otherwise. There's no need for advanced meta programming to customize the testing process or operate on a set of tests. Of course, Expecto also provides some semi-magic options for integrating with other test frameworks like XUnit and their test runners.
+I've named just a few possibilities, and all of this is accomplished using the normal list operations and functions we program with otherwise. There's no need for advanced meta programming to customize the testing process or operate on a set of tests. Of course, Expecto also provides some semi-magic options for integrating with other test frameworks like XUnit and their test runners.
 
 ## Looking Forward: Composition
 
 Tests-as-values enable more than testing customizations. It also means that our tests can be created by factories, passed around, and composed into new test lists.
 
-I currently use a kind of test factory to reuse a single test list across different implementations of an interface. I've previously written examples in [Test API in F#](../_posts/2021-10-08-TestApi-in-FSharp-revised.md) or [Test API and Test Reuse in C#](../_posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md). The C# example isn't quite tests as values, but hits at the same kind of reuse.
+I currently use a kind of test factory to reuse a single test list across different implementations of an interface.
+
+```fsharp
+let recipeAccessTestFactory (env: ITestEnv<IRecipeAccessor, 'b>) =
+    testListWithEnv "IRecipeAccessor CRUD" [
+        etest "Given a new environment When I list recipes Then the list is empty" <| fun (api: IRecipeAccessor) ->
+            let actualRecipes = api.ListRecipes()
+            Expect.isEmpty actualRecipes "Recipe list should be empty by default"
+        etestProperty "Given a recipe When I save the recipe Then the recipe is listed" <| fun (api: IRecipeAccessor) (expectedRecipe:Recipe) ->
+            api.CreateOrUpdateRecipe(expectedRecipe)
+            let actualRecipes = api.ListRecipes()
+            Expect.sequenceEqual actualRecipes [expectedRecipe] "Saved recipe should be listed"
+        // more tests ...
+    ] env
+```
+
+I've previously written other examples in [Test API in F#](../_posts/2021-10-08-TestApi-in-FSharp-revised.md) or [Test API and Test Reuse in C#](../_posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md). The C# example isn't quite tests-as-values, but hits at the same kind of reuse.
 
 I have hopes that this kind of reuse and composition can raise our level of abstraction in testing. For example, I commonly write very similar and fairly complex tests for fetching some object based on an intersection of tags. Such tests get even more complicated if there are both include and exclude rules. 
 
