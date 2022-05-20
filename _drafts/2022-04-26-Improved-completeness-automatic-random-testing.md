@@ -5,7 +5,9 @@ tags: [Random Testing, Completeness]
 
 # Automated Random Testing and Improved Completeness
 
-Clojure has a unique type system based on specifications: [Clojure.spec](https://clojure.org/guides/spec). The type system includes constraints, and it can automatically test any spec-ed function to ensure valid inputs always produce valid outputs. I think this kind of testing can be brought to statically typed languages to improve completeness testing.
+Clojure has a unique type system based on specifications: [Clojure.spec](https://clojure.org/guides/spec). The type system includes constraints, and it can automatically test any spec-ed function to ensure valid inputs always produce valid outputs. I think this kind of testing can be brought to statically typed languages to improve test completeness.
+
+<!-- TODO: throw out Domain testing as a potential name, if this doesn't already have a name -->
 
 ## Mutation Testing
 
@@ -50,7 +52,7 @@ This sounds a bit obvious, but many programs do not follow this approach. Except
 
 Advertising our expectations well follows the [principle of least surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) and produces more intuitive systems.
 
-## Random Testing Expands Completeness Measures
+## Random Testing Expands Test Completeness
 
 A system that advertises expectations well can leverage a new kind of testing.
 
@@ -74,7 +76,7 @@ It can tell us if valid inputs result valid outputs, however well defined the co
 
 In other words, it tells us that our expected input domain is our actual input domain. Each function in our program is well behaved for every value it advertises that it supports.
 
-This is a form of completeness complementary to mutation testing. Between mutation testing and automated random testing we can verify 
+This is a form of test completeness complementary to mutation testing. Between mutation testing and automated random testing we can verify 
 - Broken logic doesn't slip through our test suite
 - Broken data can't be passed to our functions
 
@@ -85,8 +87,8 @@ I've previously attempted to bring constrined data to F# in an experiment called
 Adding constraints to primitive types didn't work out. However, I realized that the constraints don't need a special construct. 
 Constraints live in the factories of their types. The constraints can be introspected from these factories and used to create automatic random tests without modifying the code base.
 
-Systems that rely on exceptions can still use such testing, they'll just measure that their system has many hidden side-effects. 
-This kind of testing forms an impartial measurement for systems that want to migrate toward total function signatures.
+Systems that rely on exceptions can still use such testing, they'll just measure that their system has many hidden side-effects. For example, the testing tool could report a percentage of valid inputs that produced invalid outputs or system errors.
+This kind of testing forms an impartial measurement of unadvertised data constraints for systems that want to migrate toward total function signatures.
 
 
 ## Conclusion
@@ -95,6 +97,8 @@ Fully automated random testing should be achievable in statically typed systems.
 
 This approach to random testing objectively measures how well functions in our system actually handle advertised allowed inputs.
 
-This is a form of completeness complementary to mutation testing. Between mutation testing and automated random testing we can verify 
+This is a form of test completeness complementary to mutation testing. Between mutation testing and automated random testing we can verify 
 - Broken logic doesn't slip through our test suite
 - Broken data can't be passed to our functions
+
+These measures don't quite prove program correctness, but the methodic coverage of logic and data certainly makes the net much tighter. 
