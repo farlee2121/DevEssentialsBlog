@@ -55,6 +55,8 @@ Idea: should I ask questions here too like in duck?
 - What do you find difficult about tests? What hurdles are keeping you from these qualities?
 - What are tests meant to accomplish?
 
+Test API can be used with any system, but reuse only happens with a certain level of design maturity. The benefit before that comes in guiding to better design, as well as clean tests despite the messy system
+
 
 
 ## Paul concepts 

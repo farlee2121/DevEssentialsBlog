@@ -32,7 +32,10 @@ These languages take advantage of the constraints on types and functions to prov
 <!-- https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence -->
 
 
-<!-- - category used for formal math
+<!-- 
+Q: Do I want to define dependent types and refinement types?
+
+- category used for formal math
 - Some also used for formal specifications that can prove properties of a program or set of requirements
 - Didn't realize that this is a category with turing complete languages
 - do i mention resemblance to logic programming?
