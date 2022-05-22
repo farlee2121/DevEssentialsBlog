@@ -22,7 +22,7 @@ This had me wondering what else a constraint-aware type system could verify, and
 
 ## Proof-Oriented Languages and Formal Verification
 
-Mark Seemann was kind enough to [point me to several existing languages](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#aee72ce959654d9388b448023f469cbc). Turns out that there is a whole category of languages that have considered this problem.
+Mark Seemann was kind enough to [point me to several existing languages](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#aee72ce959654d9388b448023f469cbc). Turns out that there is a whole category of languages that have considered program verification with constrained types.
 
 Some are not turing-complete, and are primarily tools for proving assertions in conjunction with other languages, like [Coq](https://en.wikipedia.org/wiki/Coq). Some are only meant for [formal math proofs](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence).
 
