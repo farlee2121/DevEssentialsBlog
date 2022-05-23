@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: []
+tags: [Programming Paradigms, Language Features]
 ---
 
 # Proof-Oriented Programming
