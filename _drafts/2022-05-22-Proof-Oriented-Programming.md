@@ -22,14 +22,16 @@ This had me wondering what else a constraint-aware type system could verify, and
 
 ## Proof-Oriented Languages and Formal Verification
 
-Mark Seemann was kind enough to [point me to several existing languages](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#aee72ce959654d9388b448023f469cbc). Turns out that there is a whole category of languages that have considered program verification with constrained types.
+Mark Seemann was kind enough to [point me to several existing languages](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#aee72ce959654d9388b448023f469cbc). Turns out that there is a whole category of languages that have considered program verification with constrained types, or more generally with [dependent types](https://en.wikipedia.org/wiki/Dependent_type).
 
 Some are not turing-complete, and are primarily tools for proving assertions in conjunction with other languages, like [Coq](https://en.wikipedia.org/wiki/Coq). Some are only meant for [formal math proofs](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence).
 
 Others, like [Idris](https://www.idris-lang.org/) and [F*](http://www.fstar-lang.org/) are turing-complete languages.
 
 These languages take advantage of the constraints on types and functions to prove facts about the program. For example, ensuring that a function is pure (no unadvertised effects or state) and total (works for all advertized input). F* [says](http://www.fstar-lang.org/tutorial/book/index.html?highlight=security) it can verify security properties and bounds on resource usage!
-<!-- https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence -->
+<!-- https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence
+https://en.wikipedia.org/wiki/Dependent_type#Comparison_of_languages_with_dependent_types
+ -->
 
 
 <!-- 
