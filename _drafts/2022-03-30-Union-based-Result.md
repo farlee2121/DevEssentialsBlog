@@ -1,5 +1,11 @@
+---
+layout: post
+tags: [Union Types, C#, Discriminated Unions]
+---
 
-I previously wrote about [result types](../_posts/2021-01-15-Results-Update.md) and [union types](../_posts/2021-03-26-Unions-in-CSharp.md) in C#. I got wondering if union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.
+# Union-based Result Types in C#
+
+I previously wrote about [result types](../_posts/2021-01-15-Results-Update.md) and [union types](../_posts/2021-03-26-Unions-in-CSharp.md) in C#. I got wondering if a union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.
 
 Some of my previous goals for results types included
 - Low-barrier to creating result types
