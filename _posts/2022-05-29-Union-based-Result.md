@@ -5,7 +5,7 @@ tags: [Union Types, C#, Discriminated Unions]
 
 # Union-based Result Types in C#
 
-I previously wrote about [result types](../_posts/2021-01-15-Results-Update.md) and [union types](../_posts/2021-03-26-Unions-in-CSharp.md) in C#. I got wondering if a union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.
+I previously wrote about [result types](../_posts/2021-01-15-Results-Update.md) and [union types](../_posts/2021-03-26-Unions-in-CSharp.md) in C#. I got to wondering if a union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.
 
 Some of my previous goals for results types included
 - Low-barrier to creating result types
@@ -43,7 +43,7 @@ result switch
 
 The main issue here is pattern exhaustiveness (the `_` case). There is no way to limit the recognized derivatives to just Success and Error. Therefore we must always handle the open-ended case when pattern matching or surpress errors. This breaks my mental model of what I expect when matching on a result type. We can hide that detail by providing some `.Handle(onSuccess, onFailure)`, but then we loose the desired benefit of pattern matching over callbacks.
 
-Note that we can limit the actual possible derivatives. The `Result<TSuccess, TError>` constructor can be made `internal` to limit derivatives to the source assembly. We can even make the constructor to `private` and still derive nested types like Success and Error are nested above.
+Note that we can limit the actual possible derivatives. The `Result<TSuccess, TError>` constructor can be made `internal` to limit derivatives to the source assembly. We can even make the constructor to `private` and still derive nested types, like how Success and Error are nested above.
 
 It should be possible to improve the static analyzer to recognize limited derivatives based on constructor accessibility, but the current analyzer does not do so.
 
@@ -52,7 +52,7 @@ It should be possible to improve the static analyzer to recognize limited deriva
 C# does not allow type aliasing, so any named results have to be derived types of Result. 
 
 
-Deriving from our earlier result type leads to some issues. Mainly, `Success` and `Error` are `Result<int,string>` and not valid instances of derived type
+Deriving from our earlier result type leads to some issues. Mainly, `Success` and `Error` are `Result<int,string>` and not valid instances of the derived type
 ```cs
 public record DerivedResult : Result<int, string>
 {
@@ -65,7 +65,7 @@ public record DerivedResult : Result<int, string>
 DerivedResult.Ok(5); // !!! This creates Result<int, string> != DerivedResult
 ```
 
-This could be worked around in [the previous result experiment](../_posts/2021-01-15-Results-Update.md). However, a similar workaround does compile for the union-like approach because generic type parameters cannot be inherited from.
+This could be worked around in [the class-based result-type experiment](../_posts/2021-01-15-Results-Update.md). However, a similar workaround doesn't compile for the union-like approach. The success and failure types would need to inherit from arbitrary derivatives of Result, but generic type parameters cannot be inherited from.
 
 ```cs
 public record DerivableResult<TSuccess, TError, TResult> where TResult : DerivableResult<TSuccess, TError, TResult>
