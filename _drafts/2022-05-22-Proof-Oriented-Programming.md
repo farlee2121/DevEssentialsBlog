@@ -18,7 +18,7 @@ This seemed to cross over with [Clojure.spec](https://clojure.org/guides/spec), 
 
 I think this kind of testing, where pseudo-random values are sampled to ensure valid inputs produce valid outputs, effectively tests totality. [Total functions](https://en.wikipedia.org/wiki/Partial_function) being ones that map their whole domain (inputs) to a value into their range (output). Such functions generally follow the [principle of least surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) and are easier use correctly.
 
-This had me wondering what else a constraint-aware type system could verify, and how it could be [ported to static languages](TODO)
+This had me wondering what else a constraint-aware type system could verify, and how it could be [ported to static languages](../posts/2022-../_posts/2022-06-03-Improved-completeness-automatic-random-testing.md)
 
 ## Proof-Oriented Languages and Formal Verification
 
