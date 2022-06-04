@@ -11,23 +11,20 @@ This post is about design process and organizing our thoughts for effective deve
 <!-- TODO: make a forwarding link for embedding in the presentation
 - https://github.com/jekyll/jekyll-redirect-from
  -->
- <!-- 
- IDEA: make this post a series to make it more approachable / smaller increments
-  TODO: Do I need to group section by what I think belongs in one post? Clearly delineate chunks that need to be taken as a whole
-  I think at least the stage-specific techniques might be good as a separate post. Most everything up to there flows pretty well
 
-  TODO: Revisit consistency of questions and artifacts in the stage-specific sections
-  -->
+<!-- 
+IDEA: make this post a series to make it more approachable / smaller increments
+TODO: Do I need to group section by what I think belongs in one post? Clearly delineate chunks that need to be taken as a whole
+I think at least the stage-specific techniques might be good as a separate post. Most everything up to there flows pretty well
+
+TODO: Revisit consistency of questions and artifacts in the stage-specific sections
+-->
 
 
 <!-- Meta thoughts
 This feels so much different from writing my other posts. I can see all the effort I put into connecting back 
 
 Thinking about this as a potential series causes me to write each section intro like a blog intro and forge stronger context clarity
-
-TODO: do I need to create more rigorous lesson plans for jack so I can be always connecting into that framework?
-
-It's a lot of work, but I think I need to learn to write more posts like this. 
  -->
 
 
@@ -87,7 +84,7 @@ This spectrum from unknown to known plays out both at the work item level and sy
 
 ## Design Tree and Effective Work Increments
 
-A spectrum describes the general lifecycle progression, but leaves fine-grained progress unclear. Design trees can help us zoom in and understand the second motivational question "How do we effectively break down problems?".
+A spectrum describes the general lifecycle progression, but leaves the fine-grained progress unclear. Design trees can help us zoom in and understand the second motivational question "How do we effectively break down problems?".
 
 The design tree is an idea that we can represent all possible design routes as a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)).
 - Each graph node is is a possible decision we could make
