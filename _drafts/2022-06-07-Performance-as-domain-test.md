@@ -42,4 +42,6 @@ testProperty "Small int range" <| fun () ->
             Expect.isFasterThan optimized baseline "This constraint form should support generation faster than basic filtering"
 ```
 
+Expecto uses statistical techniques to be 99.99% sure there is a speed difference, preventing the flaky tests.
+
 Note that Expecto will also ensure the baseline and optimized versions also return consistent values, ensuring the optimization didn't change observable behavior.
