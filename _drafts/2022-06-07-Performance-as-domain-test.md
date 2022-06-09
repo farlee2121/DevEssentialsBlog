@@ -22,26 +22,19 @@ Then it hit me, the observable behavior of the optimizations is that they should
 It's even easy with Expecto
 
 ```fsharp
-testProperty "Small int range" <| fun () ->
-            let constraintTree = all [min 10; max 5000]
-            let sampleSize = 10
+testCase "Small int range" <| fun () ->
+    //...
 
-            let baseline () = 
-                Arb.generate<int> 
-                |> Gen.tryFilter (Constraint.isValid constraintTree) 
-                // tryFilter prevents possible non-termination. Could alternately use a timeout
-                |> Gen.sample 0 sampleSize
-                |> List.filter Option.isSome
-                |> List.length 
-                
-            let optimized () =
-                Gen.fromConstraint constraintTree
-                |> Gen.sample 0 sampleSize
-                |> List.length
-
-            Expect.isFasterThan optimized baseline "This constraint form should support generation faster than basic filtering"
+    Expect.isFasterThan optimized baseline "This constraint form should support generation faster than basic filtering"
 ```
 
-Expecto uses statistical techniques to be 99.99% sure there is a speed difference, preventing the flaky tests.
+Expecto uses statistical techniques to be 99.99% sure there is a speed difference, preventing flaky tests.
 
-Note that Expecto will also ensure the baseline and optimized versions also return consistent values, ensuring the optimization didn't change observable behavior.
+Note that Expecto will also ensure the baseline and optimized versions return consistent values, ensuring the optimization didn't change observable behavior.
+
+## Alternate Performance Proposition
+
+Cases like my generators actually have two potential performance properties.
+The approach previous ensured our standard generator is faster than an unoptimized generator. 
+
+We're also aiming to replace hand-coded generators that programmers would normally have to write themselves. We could also test that our constraint-based generator performs within a certain margin of a hand-constructed generator for the same criteria. Expecto doesn't currently allow users to tweak the comparison tolerance though, making this approach a bit fickle.
