@@ -1,17 +1,12 @@
 ---
 layout: post
-tags: [Interviews, eductation, Defect Detection]
+tags: [Interviews, Eductation, Defect Detection]
 ---
 
 # Better Software Interviews with Defect Detection
 
 I've sat through many a coding interview as both examiner and examinee. The experience is usually sub-par on either side. 
-The results always feel incomplete, and the assessment of skill foggy and inconsistent. My recent experiments suggest a new approach that may be more effective: defect detection.
-
-<!-- TODO: maybe transition problem-based to work-based?
-
-TODO: the major sections for why each method is good/bad are big blocks of text. Consider splitting up paragraphs (and maybe turn items into sub-headers)
- -->
+The results always feel incomplete, and the assessment of skill feels foggy and inconsistent. My recent experiments suggest a new approach that may be more effective: defect detection in code samples.
 
 ## Goals of a Technical Interview
 
@@ -24,8 +19,8 @@ My goals in a technical interview ususally include gauging
 - if candidate skill falls in the expected range for the position
 - role-specific expectations like: 
   - effective test case selection
-  - low-level design
-  - system architecture
+  - low-level design (e.g. naming, readability, function-level coupling and separation, ...)
+  - system architecture (e.g. service decoupling, events, CQRS, ...)
   - refining requirements
 
 A few non-goals usually include
@@ -43,7 +38,7 @@ The depth of assessment can vary greatly based on the seniority of the position.
 
 ## Problems with Coding Interviews
 
-Most coding interviews I've experienced hand some set of requirements or a partial solution to a developer and ask them to code a complete solution. I'll refer to this as a problem-based approach.
+Most coding interviews I've experienced hand some set of requirements or a partial solution to a developer and ask them to code a complete solution. I'll refer to this as a story-based approach.
 
 I think such approach have numerous obsticals in light of my goals and non-goals for interviews.
 
@@ -53,21 +48,26 @@ Setting up a good interview requires a good problem to solve. The problem must b
 I emphasize [understanding a problem well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md) before writing code. As such, I often spend most of my coding interviews understanding the problem and writing very little code.
 
 ### Too Open-ended & Inconsistent
-Often, companies want to assess certain skills in their candidates (e.g. knowledge of testing patterns). Such objectives are difficult to consistently incorporate into a problem-based coding interview.
+Often, companies want to assess certain skills in their candidates (e.g. knowledge of testing patterns). Such objectives are difficult to consistently incorporate into a story-based coding interview.
 
-Handing the candidate a problem and letting them code leaves us at their mercy for how they tackle the problem and what parts they tackle. This is great if we want to assess design straight from requirements, but it leaves a big gap for assessing construction-level abilities more commonly expected from junior to mid level developers. 
+Handing the candidate a problem and letting them code leaves interviewers at the candidate's mercy for how they tackle the problem and what parts they tackle. This is great if we want to assess design straight from requirements, but it leaves a big gap for assessing construction-level abilities more commonly expected from junior to mid level developers. 
 
 Providing partial solutions can improve odds of observing target skills. However, this biases examinees toward practices they may not have considered otherwise. It also increases work to construct interviews. 
 
 ### Difficult to tune
-Companies interview for many skill levels and kinds of positions. Adapting problem-based interviews to these scenarios is difficult because the problems are so sensitive to conditions. A little difference in position or skill level and the specified problem could be too large or too simple to appropriately assess the candidate.
+Companies interview for many skill levels and kinds of positions. Adapting story-based interviews to these scenarios is difficult because the problems are so sensitive to conditions.
 
-Adding role-specific assessment goals can quickly spiral a problem out of attainable scope for the interview. The complexity does not compound linearly. Further, it's difficult to recover from a problem mismatched with the candidate's skill, leaving us will an inconclusive evaluation of the candidate's skill level (beyond classifying them as above or below assessment expectations).
+Adding role-specific assessment goals can quickly spiral a problem out of attainable scope for the interview. The complexity does not compound linearly.
+
+Further, it's difficult to recover from a problem mismatched with the candidate's skill, leaving us will an inconclusive evaluation of the candidate's skill level (beyond classifying them as above or below assessment expectations).
 
 #### Difficult to score
 The open-ended nature also spurs inconsistent interview experiences and difficulty objectively comparing candidates. Each candidate could focus on a different aspect of the problem. Some with demonstrate a few skills deeply, and others demonstrate many skill with little depth. 
 
 Targeting specific skills at certain depths is effectively unattainable. My attempts at normalized grading have resulted in most skills ending as "inconclusive". Even with a normalized ruberic, skills will show up in diverse ways. Interviewers must apply heavy individual discretion as to what objectives are met.
+
+
+
 
 ## Defect Detection-based assessment
 
@@ -100,13 +100,13 @@ interface IBillCalculator{
 }
 ```
 
-Architecture-level
+Architecture-level (coupling, abstraction levels, Dependency Inversion, transaction bounds, CQRS, etc)
 ![simple architecture diagram for a chat system](../post-media/Better-interviews-with-defect-detection/architecture-sample.drawio.svg)
 
 
 ## Benefits of Defect Detection Approach
 
-Defect detection-based assessment addresses many of the core issues with problem-based assessment.
+Defect detection-based assessment addresses many of the core issues with story-based assessment.
 
 ### Plentiful Examples
 
@@ -121,9 +121,9 @@ Code samples and their associated list of errors are known upfront. Evaluation i
 Worries about reviewer bias are also easier to address. Multiple reviewers can independently assess against the same objective expectations, or candidate answers can be transcribed for later reviewers to compare against the target defects.
 
 ### Modular and Composable
-Detection-based assessments are [increment, stable, and additive](../_posts/2022-02-25-Stable-Incremental-Additive.md) allowing [progressive design](../_posts/2022-03-04-Progressive-Design.md). Each code sample represents a self-contained assessment for specific defects. Larger exams can be composed by selecting many individual samples that target component skills.
+Detection-based assessments are [increment, stable, and additive](../_posts/2022-02-25-Stable-Incremental-Additive.md) allowing [progressive design](../_posts/2022-03-04-Progressive-Design.md). Each code sample represents a self-contained assessment for specific skills. Larger exams can be composed by selecting many individual samples that target component skills.
 
-Interviews for diverse roles can be constructed from the same base set of code samples. If target skills are missing, then simply add a new self-contained sample for that skill instead of modifying existing samples. If skills aren't needed for a role, simply drop the corresponding samples. 
+Interviews for diverse roles can be constructed from the same base set of code samples. If target skills are missing, then simply add a new self-contained sample for that skill instead of modifying existing samples. If skills aren't needed for a role, simply drop their corresponding samples for the assessment. 
 
 Such a system also responds much better to candidates that may be intersting, but are outside of the target role's expectations. Simply present harder or simpler samples until the samples match the candidate's skill level. Similarly, shift to samples from other roles if the candidate shows promise in a different specialty.
 
@@ -135,7 +135,7 @@ Defect detection rates are useful, but I also supplement them with more categori
 - Sees low-level design errors like information hiding faults and coupling
 - Sees big picture issues like domain alignment, service coupling, scalability, etc
 
-Similar categories can be made for other skill areas like testing. These qualities don't have to explicitly derived from detection rates, but detection rates are powerful evidence for conclusions that would otherwise be purely opinion.
+Similar categories can be made for other skill areas like testing. These qualities don't have to explicitly derived from detected faults, but detection rates are powerful evidence for categorizations that would otherwise be purely opinion-based.
 
 
 ## Applied Experience
@@ -144,7 +144,7 @@ I've applied this defect-detection-based approach with previous clients, and als
 
 ## Conclusion
 
-Defect-detection-based interviews leverage prepared code samples with known defects to assess skill. This approach delivers significant gains over traditional coding interviews. I've found them to be easier to prepare and adapt, more detailed and reliable in assessing of developer skills, and simpler to execute consistently.
+Defect-detection-based interviews leverage prepared code samples with known defects to assess skill. This approach delivers significant gains over traditional coding interviews. I've found them to be easier to prepare and adapt, more detailed and reliable in assessing developer skills, and simpler to execute consistently.
 
 
 <!-- 
