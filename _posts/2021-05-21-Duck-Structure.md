@@ -41,7 +41,15 @@ My duck docs have refined a fairly small but powerful set of tags over time.
 - **SOURCE:** -> some reference used to inform the design or a question. 
 - **PROBLEM: / OPT:** Very similar to Q:, but used for unforeseen issues in a previous decision rather than general exploration. Also usually phrased as more of a statement about current behavior than a question. A good way to get unstuck.
 
-The Exploration and Implementation section are usually just a nested list of questions. The additional tags help index the raw chain of thought, simplifying reference to previous decisions, sources, and alternatives.
+The Exploration and Implementation section are usually just a nested list of questions. The additional tags help index the raw chain of thought, simplifying reference to previous decisions, sources, and alternatives. 
+
+You don't have to tag everything. Tag things you want to be able to find later. For example, 
+- newly discovered requirements or constraints
+- decisions about the solution
+- the conclusion of a line of questioning
+- and key pros or cons of alternate approaches
+
+It's best to get your thoughts out there, and tag them later if they end up being important.
 
 Textual tags are a much more general pattern. You can read about similar techniques [here](./../_posts/2021-03-05-Reference-Ready-Notes.md)
 
