@@ -7,7 +7,9 @@ tags: [Design Process, Ducks]
 
 This post is about design process and organizing our thoughts for effective development. The main goal is to establish a healthy mental model and intuition for effective design process. The duck bit will be explained later.
 
-<!-- TODO: consider putting a warning in What's your duck pointing to this post as the presentation companion -->
+<!-- 
+TODO: clarify self-similarity
+TODO: consider putting a warning in What's your duck pointing to this post as the presentation companion -->
 <!-- TODO: make a forwarding link for embedding in the presentation
 - https://github.com/jekyll/jekyll-redirect-from
  -->
