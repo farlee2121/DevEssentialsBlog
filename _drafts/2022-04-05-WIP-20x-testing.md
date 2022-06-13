@@ -5,6 +5,12 @@ layout: post
 
 # Title? Don't forget to change file name
 
+New title ideas
+- Anti-fragile testing
+  - Good test suites get better with every miss. because we reflect the domain requirements, the tests get better as we understand more. The same hold true of property testing and "tightening the net". Requires addressing fragile test problem
+
+
+
 motivations -> What should tests accomplish for us
 - Reduced bugs, early detection
 - Save time, move faster
