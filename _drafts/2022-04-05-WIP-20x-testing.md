@@ -8,6 +8,7 @@ layout: post
 New title ideas
 - Anti-fragile testing
   - Good test suites get better with every miss. because we reflect the domain requirements, the tests get better as we understand more. The same hold true of property testing and "tightening the net". Requires addressing fragile test problem
+  - Anti-fragility is a good summary of what good tests bring to our systems, and themselves. Though they also bring other things, like a clarity, a high quality bar, stop conditions. 
 
 
 
