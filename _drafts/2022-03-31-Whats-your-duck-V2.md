@@ -10,11 +10,7 @@ redirect_from:
 This post is about design process and organizing our thoughts for effective development. The main goal is to establish a healthy mental model and intuition for effective design process. The duck bit will be explained later.
 
 <!-- 
-TODO: clarify self-similarity
 TODO: consider putting a warning in What's your duck pointing to this post as the presentation companion -->
-<!-- TODO: make a forwarding link for embedding in the presentation
-- https://github.com/jekyll/jekyll-redirect-from
- -->
 
 <!-- 
 IDEA: make this post a series to make it more approachable / smaller increments
@@ -112,13 +108,13 @@ A healthy design process uses an incremental approach.
 - Explore each route in enough depth to lock in an answer
 - Lock in the answer and repeat until there are no more key decisions, at which point you have a complete solution.
 
-Such a process nearly guarantees we'll reach a solution that meets our current understanding of the problem with as little rework as possible. It also meshes well with how our brains work. We break off smaller problems that are easier to solve. Each decision reduces the solution space, making downstream decisions easier with less to consider. 
+Such a process nearly guarantees we'll reach a solution that meets our current understanding of the problem with as little rework as possible. It also meshes well with how our brains work. We break off smaller problems that are easier to solve. Each decision reduces the solution space, making downstream decisions easier with fewer unknowns to consider. 
 
 
 ## Self-Similar Process
 
 <!-- TODO: This transition isn't good enough to start a post. Consider more connecting context, or maybe they'd be in the same post as the design tree -->
-Fortunately, each iteration (or each sub-problem) along the design tree has about the same core process. In each increment we consider
+Fortunately, this design exploration is self-similar. The thought process is about the same no matter what scale or type of problem we face. This includes each sub-problem we explore while iterating through the design tree. In each increment we consider
 
 - **Must haves (Requirements)**: Any qualites that *must* be satisfied to consider the problem solved
 - **Nice to haves (Secondary goals)**: Qualities we'd like have, but are not essential to call the problem solved
@@ -127,7 +123,11 @@ Fortunately, each iteration (or each sub-problem) along the design tree has abou
 
 First enumerate any known requirements, goals, and constraints. The list will probably evolve as we explore solutions, but it should serve as a strong initial filter for possible solutions.
 
-Second, enumerate likely solutions. Consider how each solution category matches up to the goals and constraints. Possibly add new solutions based on your findings, and stop when you have a solution that meets all known needs.
+Second, enumerate likely solutions. Consider how each solution category matches up to the goals and constraints. Possibly add new solutions based on your findings, and stop when you have a solution that meets all known needs. 
+
+Break off another sub-problem if there isn't enough information to define the problem well or choose a solution. Repeat as until the higher-level problem is clear enough to solve.
+
+This process is similar for each sub-problem, but that doesn't mean it's mechanical or formulaic. Asking good questions identifying the nature of a problem is a skill like any other. It gets better with experience and practice.
 
 ## Thread Matrix: How much effort
 
