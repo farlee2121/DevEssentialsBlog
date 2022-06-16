@@ -16,8 +16,6 @@ TODO: consider putting a warning in What's your duck pointing to this post as th
 IDEA: make this post a series to make it more approachable / smaller increments
 TODO: Do I need to group section by what I think belongs in one post? Clearly delineate chunks that need to be taken as a whole
 I think at least the stage-specific techniques might be good as a separate post. Most everything up to there flows pretty well
-
-TODO: Revisit consistency of questions and artifacts in the stage-specific sections
 -->
 
 
@@ -185,8 +183,6 @@ Asking good questions that lead us to the heart of a problem is a valuable skill
 
 ### Questions For Requirements
 
-<!-- TODO: consider normalizing how I talk about questions to ask and ways of communicating thoughts to gain clarity -->
-
 I like to approach requirements with the 5ish interrogatives
 - Who (am I solving a problem for)
 - Why (is it important to them)
@@ -198,14 +194,14 @@ The trio of what, when, and how much [inform if a solution is even worth pursuin
 
 Most requirement techniques are different angles at these questions that try to achieve enough granularity for development. It's also critical to align understanding between customers and developers. Again, it's better to be wrong than vague. Producing artifacts (sketches, descriptions, diagrams, etc) that both implementers and the customer understand helps surface differences in understanding early and saves pain for everyone later.
 
-Common communication tools
+Common requirement communication tools include
 - [Wire Frames](https://en.wikipedia.org/wiki/Website_wireframe)
 - [Mockups](https://en.wikipedia.org/wiki/Mockup#Software_engineering)
 - [User Stories](https://en.wikipedia.org/wiki/User_story)
 - Semi-formal language like [Gherkin](https://specflow.org/learn/gherkin/)
 - [Prototypes](https://en.wikipedia.org/wiki/Software_prototyping)
 
-Approaches
+Requirement Approaches
 - Event Storming ([original overview](http://ziobrando.blogspot.com/2013/11/introducing-event-storming.html)) ([official resources](https://www.eventstorming.com/resources/))
 - [Behavior-Driven Development and Acceptance tests](https://en.wikipedia.org/wiki/Behavior-driven_development)
 - [Story Maps](https://en.wikipedia.org/wiki/User_story#Story_map) and [User Journey Maps](https://en.wikipedia.org/wiki/User_story#User_journey_map)
@@ -230,7 +226,7 @@ Important
 - Likely design changes
 - Project scale
 
-Seen another way, architecture is understanding the problem domain. [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) is one of the most popular design methodologies. It prescribes that software should reflect the problem it solves and provides various techniques. For example, sub-domains (or separable responsibilities of the problem domain) can often be discovered by considering business departments.
+Seen another way, architecture is [understanding the problem domain](../_posts/2022-02-18-Programming-is-Problem-Modeling.md). [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) is one of the most popular design methodologies. It prescribes that software should reflect the problem it solves and provides various techniques for understanding and reflecting the domain. For example, sub-domains (or separable responsibilities of the problem domain) can often be discovered by considering business departments.
 
 My main lines of thought include
 - [Essence vs accident](http://worrydream.com/refs/Brooks-NoSilverBullet.pdf): What is a fundamental part of the problem, versus what could change by circumstance
@@ -249,7 +245,7 @@ Common design communication tools include
   - expected side-effects of an action (i.e. exceptions, events)
 - [Activity diagrams](https://en.wikipedia.org/wiki/Activity_diagram): lay out the steps of a process, if a process is sufficiently complex to design before construction. I rarely use these
 
-Design approaches
+Design Approaches
 - [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) ([book](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215))
   - I highly recommend [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional). It covers a modeling process from end to end in digestable increments.
 - [Ports and Adapters, Clean Architecture, Hexagonal Architecture](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/)
