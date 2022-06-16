@@ -194,7 +194,7 @@ I like to approach requirements with the 5ish interrogatives
 - When (do they need it)
 - How much (are they willing to invest in a solution)
 
-The trio of what, when, and how much inform if a solution is even worth pursuing.
+The trio of what, when, and how much [inform if a solution is even worth pursuing](../_posts/2020-07-16-iDesign-Project-Summary.md).
 
 Most requirement techniques are different angles at these questions that try to achieve enough granularity for development. It's also critical to align understanding between customers and developers. Again, it's better to be wrong than vague. Producing artifacts (sketches, descriptions, diagrams, etc) that both implementers and the customer understand helps surface differences in understanding early and saves pain for everyone later.
 
