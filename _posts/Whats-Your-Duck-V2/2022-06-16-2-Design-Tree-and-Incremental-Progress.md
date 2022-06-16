@@ -4,15 +4,15 @@ tags: [Design Process, Ducks]
 series: What's your Duck v2
 ---
 
-# What's your Duck: Fundamental Questions
+# What's your Duck: The Design Tree and Incremental Progress
 
-This series is about design process and organizing our thoughts for effective development. The main goal is to establish a healthy mental model and intuition for effective design process. This post explores the fundamental questions "How do we effectively break down problems?", "Can software be perfect?", and "What makes software good?"
+This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post explores the fundamental questions "How do we effectively break down problems?", "Can software be perfect?", and "What makes software good?"
 
-If you haven't considered these questions yourself, take a few moments to write down your thoughts. It [boosts the learning process](../../_posts/2022-03-07-Small-Teaching-Review.md#predicting).
+If you haven't considered these questions yourself, take a few moments to write down your thoughts. It [aids the learning process](../../_posts/2022-03-07-Small-Teaching-Review.md#predicting).
 
 ## Design Tree and Effective Work Increments
 
-We previously explored how software is a design process, and the software lifecycle is a spectrum of clarity. This sets the big picture, but leaves the fine-grained process unclear. Design trees can help us zoom in and understand the second motivational question "How do we effectively break down problems?".
+We previously explored how software is a design process, and the software lifecycle is a spectrum of clarity. This sets the big picture, but leaves the fine-grained process unclear. The design tree can help us zoom in and understand the second motivational question "How do we effectively break down problems?".
 
 The design tree is the idea that we can represent all possible design routes as a [graph](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)).
 - Each graph node is is a possible decision we could make
@@ -41,7 +41,7 @@ Such a process nearly guarantees we'll reach a solution that meets our current u
 
 ## Self-Similar Process
 
-Fortunately, this design exploration is self-similar. The thought process is about the same no matter what scale or type of problem we face. This includes each sub-problem we explore while iterating through the design tree. In each increment we consider
+Fortunately, this design exploration is [self-similar](https://en.wikipedia.org/wiki/Self-similarity). The thought process is about the same no matter what scale or type of problem we face. This includes each sub-problem we explore while iterating through the design tree. In each increment we consider
 
 - **Must haves (Requirements)**: Any qualites that *must* be satisfied to consider the problem solved
 - **Nice to haves (Secondary goals)**: Qualities we'd like have, but are not essential to call the problem solved
@@ -73,9 +73,9 @@ Think of how we iterate along the design tree. At each step we break off a probl
 
 This is true for the overall process too. There is no one perfect solution. There are only solutions that meet our need as we understand it.
 
-The increments help us refine our understanding of the problem, and step us closer to satisfactory solution. Our enumerated understanding of need creates a "definition of done". This definition of done is our benchmark for "good" work. Any solution that meets those critera is "good". Any solution that doesn't meet the criteria is not a complete solution. Any work beyond this definition is speculative "gold plating". It solves a problem we don't currently need, which often translates into wasted work.
+The increments help us refine our understanding of the problem, and step us closer to a satisfactory solution. Our enumerated understanding of need creates a "definition of done". This definition of done is our benchmark for "good" work. Any solution that meets those critera is "good". Any solution that doesn't meet the criteria is not a complete solution. Any work beyond this definition is speculative "gold plating". It solves a problem we don't currently need, which often translates into wasted work.
 
 ![How iteration narrows in on done](../../post-media/Whats-your-duck/iterative-good-enough.drawio.svg)
 
-
+## Next
 With this we've established the core ideas for effective design process. Next up we'll look at a particular technique for applying them, [ducks](./2022-06-16-3-Ducks.md).
