@@ -28,10 +28,10 @@ title: Favorite Posts
  -->
 
 ## Educational And Overview Posts
+- [What's Your Duck (Series)](../_posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md)
 - [SWEBOK key Definitions](../_posts/2022-01-14-SWEBOK-term-definitions.md)
 - [Pull Request Checklist](../_posts/2022-02-11-Pull-Request-Checklist.md)
 - [Test Case Selection Guide](../_posts/2022-01-28-Test-Case-Selection.md)
 - [Development Cycles Checklist](../_posts/2022-01-21-Development-Cycles-Checklist.md)
 - [Sharp Dressed Code](../_posts/2021-07-16-Well-Dressed-Code.md)
-- [Patterns in Practice](../_posts/2021-07-09-Patterns-in-Practice.md)
 - [Going Fast is Going Well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md)
