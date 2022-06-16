@@ -11,3 +11,4 @@ gem 'jekyll-redirect-from', "0.16.0"
 
 gem "kramdown-parser-gfm"
 gem 'rouge', '~> 3.28'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
