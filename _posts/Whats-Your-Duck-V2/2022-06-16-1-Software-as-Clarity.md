@@ -52,7 +52,7 @@ Favoring clarity means identifying and communicating our assumptions. It means e
 
 Clearly communicated ideas, unlike vague ideas, enable collaboration, comparison, reviews, and future reference.
 
-Everything that follows in this series builds a framework to order thoughts well. The next step is achieving incremental progress using the [Design Tree](./2022-06-16-2-Design-Tree-and-Incremental-Progress.md.md).
+Everything that follows in this series builds a framework to order thoughts well. The next step is achieving incremental progress using the [Design Tree](./2022-06-16-2-Design-Tree-and-Incremental-Progress.md).
 
 
 
