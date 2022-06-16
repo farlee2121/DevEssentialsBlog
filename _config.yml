@@ -134,6 +134,7 @@ plugins:
   - jekyll-series
   - jekyll-titles-from-headings
   - jekyll-time-to-read
+  - jekyll-redirect-from
 #theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
 exclude: 
 - "Gemfile"

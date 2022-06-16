@@ -1,6 +1,8 @@
 ---
 layout: post
 tags: [Design Process, Ducks]
+redirect_from:
+- /posts/duck-v2
 ---
 
 # What's your Duck (Presentation Version)
