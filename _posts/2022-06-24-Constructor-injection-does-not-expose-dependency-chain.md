@@ -5,7 +5,7 @@ tags: [Dependency Injection, Constructor Injection]
 
 # Misconception: Constructor Injection Exposes Dependency Chains
 
-I've struggled with explaining Service Locator as an anti-pattern. I've addressed [cons of service locator](../_posts/2021-03-12-Service-Locator-Hides-Circular-Dependencies.md) and pros of constructor injection. However, I think I overlooked a fundamental misconception that would reasonably push developers away from constructor injection: a belief that constructor injection exposes dependency chains.
+I've struggled with explaining Service Locator as an anti-pattern. I've addressed [certain cons of service locator](../_posts/2021-03-12-Service-Locator-Hides-Circular-Dependencies.md) and pros of constructor injection. However, I think I overlooked a fundamental misconception that would reasonably push developers away from constructor injection: a belief that constructor injection exposes dependency chains across the system.
 
 ## The Misconception
 
@@ -38,9 +38,9 @@ It's understandable a developer would prefer service locator if this is the cons
 
 ## Misconception Debunked by Example
 
-Constructor injection is truly a form of dependency injection. It expects a component to define it's *direct* dependencies. Instances of those dependencies are provided ready-for-use. The consuming component has no knowledge of dependency configuration or construction, including dependencies of it's dependencies.
+Constructor injection is truly a form of dependency injection. It expects a component to define it's *direct* dependencies. Instances of those dependencies are then provided ready-for-use. The consuming component has no knowledge of dependency configuration or construction, including any dependencies of it's dependencies.
 
-Consider this dependency chain
+Consider the following dependency chain. This sample is also [available to clone and run](https://github.com/farlee2121/DependencyInversionExample/blob/65ddb973949131b1367d143e791bd378331a062e/test/RecipeManagementService.Tests/SmallConstructorInjectionSample.cs) if you want to experiment.
 
 ```cs
 public class TopLevel
@@ -111,7 +111,7 @@ public class LowestService
 
 Each layer only knows about it's direct dependencies. For example, `TopLevel` knows it needs `Mid1` and `Mid2`. However, it does not know that `Mid1` and `Mid2` have dependencies of their own. It knows nothing of `LowestService` or `Mid1.Config`.
 
-A running system can then be composed in the top level of the application. This is called the composition root. This sample is [available to clone and run](https://github.com/farlee2121/DependencyInversionExample/blob/65ddb973949131b1367d143e791bd378331a062e/test/RecipeManagementService.Tests/SmallConstructorInjectionSample.cs).
+A running system can then be composed in the top level of the application. This is called the composition root. Such a root usually only needs defined once per application, but how the root is referenced depends on the application model. 
 
 ```cs
 public void SeeItRun(){
@@ -136,4 +136,4 @@ Unlike Service Locator, each component makes it's dependencies clear through the
 
 ## Conclusion
 
-Constructor injection does **not** require consumers to know about 2nd+ order dependencies and couple our application to it's dependency chain. Each component only knows about it's direct dependencies and expect to receive ready-made instances. Thus, constructor injection provides the same about of information hiding between components as service locator with the added benefit of clear component requirements (via the constructor) across any context.
+Constructor injection does **not** require consumers to know about 2nd+ order dependencies and couple our application to it's dependency chain. Each component only knows about it's direct dependencies and should expect to receive ready-made instances. Thus, constructor injection provides the same about of information hiding between components as service locator with the added benefit of clear component requirements (via the constructor) across any context.
