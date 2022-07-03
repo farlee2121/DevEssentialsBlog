@@ -2,6 +2,8 @@
 layout: page
 permalink: /favorite-posts/
 title: Favorite Posts
+redirect_from:
+- /favorites
 ---
 
 ## Ideas and Exploration
