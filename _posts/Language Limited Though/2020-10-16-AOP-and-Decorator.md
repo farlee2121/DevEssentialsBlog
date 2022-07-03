@@ -71,11 +71,11 @@ Some DI frameworks cater to this specific scenario. Autofac and Castle-Windsor a
 
 ## Lack of Clarity
 
-The above issues are not unique to C#. They exist in most OO languages because there isn't a great concept for generically passing along info.
+The above issues are not unique to C#. They exist in most statically-typed OO languages because there isn't a great mechanism for generically passing along info.
 
 I was facing a deeper issue though. I lacked clarity about how to practically use AOP. My expectations were to write decorators for all my components at once, but also to be able to access specific properties.
 
-Authorization is a good example. Authorization often depends on some identifying information about the user. A decorator could grab the user id from the arguments and then make a decision based on that info. Sounds good, but how does it do that generally for any function that takes a user id? It requires name/type based reflection (which would not be great security practice). The code can't interpret your intended semantics without a consistent convention or annotation. 
+Authorization is a good example. Authorization often depends on some identifying information about the user. A decorator could grab the user id from the arguments and then make a decision based on that info. Sounds good, but how does it do that generally for any function that takes a user id? It requires name or type-based reflection (which would not be great security practice). The code can't interpret your intended semantics without a consistent convention or annotation. 
 
 ## Functional Composition
 I'd pretty much given up on AOP when I started to learn functional programming. Then, I witnessed composition in F#. 
@@ -85,7 +85,7 @@ In functional languages
  - the transformation is referentially immutable, it should always return the same output for given input
  - functions are data too. They can be assigned and operated on
    - To operate on functions normally, functions with the same type signatures are implicitly interchangeable (i.e. you may have `sprint` in mind but specifying an `int -> string` will accept any function `int -> string`)
-   - arguments can be determined implicitly. For example, binding a function from one name to the other does will implicitly impart arguments to the new function   
+   - arguments can be determined implicitly. For example, binding a function to a new name will implicitly impart arguments to the new function   
    ```fsharp
      let nya = (+) // nya takes two ints and outputs an int
    ```
@@ -128,13 +128,13 @@ The functional AOP implementation is very much lighter and nicer than the OO one
 
 This doesn't resolve the generic decorators vs specific data conundrum.
 
-The easy of implementation did, however, make it much easier to play and test my thoughts. I ended up realizing that there is a fundamental divide in AOP-style decorators. 
+The ease of implementation did, however, make it much easier to play and test my thoughts. I ended up realizing that there is a fundamental divide in AOP-style decorators. 
 
 The first class is completely generic. They cannot depend on specifics of the functions that they are modifying. This class of decorators is great for centralizing tasks like performance tracking, default authentication behavior, or error logging. Some crafty dependency injection can also achieve this for role- and component-based authentication.
 
-The second class relies on some specific information of the function being decorated. There is not and never was a way to get around creating a custom implementation or configuration for this scenario. An example would be authenticating a method call based on current user and id of the entity being acted on, which is passed as an argument.
+The second class relies on some specific information of the function being decorated. There is not, and never was, a way to get around creating a custom implementation or configuration for this scenario. An example would be authenticating a method call based on current user and id of the entity being acted on, which is passed as an argument.
 
-This is not a reason to be dismayed. The completely generic decorators are already a significant win. The specific decorators also end up small and focused. They often aren't much more work than baking the concern into the core logic, but result in much more flexibility for change. In fact, the decorators can be decided at configuration time, where baked-in can only be decided at write time.
+This is not a reason to be dismayed. The completely generic decorators are already a significant win. The specific decorators also end up small and focused. They're often require similar effort as baking the concern into the core logic, but result in much more flexibility for change. In fact, the decorators can be decided at configuration time, where a baked-in approach can only be decided at write time.
 
 ## Summary
 AOP and decorators are definitely possible and beneficial in OO, but much more work. The functional focus on transformations and composition makes AOP both natural and simple to implement. 
