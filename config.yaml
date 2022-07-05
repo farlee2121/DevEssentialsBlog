@@ -2,5 +2,10 @@ baseURL: https://spencerfarley.com
 # disablePathToLower: true
 languageCode: en-us
 title: 5min Dev Essentials
-theme: "github.com/halogenica/beautifulhugo"
+theme: "github.com/adityatelange/hugo-PaperMod"
+
+rss: true
+Params:
+  # Paper theme settings
+  ShowReadingTime: true
 

@@ -1,9 +1,11 @@
 ---
-layout: page
-permalink: /favorite-posts/
 title: Favorite Posts
+menu: main
+type: page
 redirect_from:
 - /favorites
+ShowReadingTime: false
+
 ---
 
 ## Ideas and Exploration
