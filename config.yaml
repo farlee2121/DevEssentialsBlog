@@ -5,6 +5,7 @@ title: 5min Dev Essentials
 theme: "github.com/adityatelange/hugo-PaperMod"
 
 enableRobotsTXT: true
+googleAnalytics: "G-YPSFPN3NJN"
 rss: true
 Params:
   # Paper theme settings
