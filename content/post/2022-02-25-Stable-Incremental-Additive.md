@@ -1,6 +1,5 @@
 ---
 date: "2022-02-25T00:00:00Z"
-excerpt_separator: <!-- more -->
 tags:
 - Design Thinking
 - Principles

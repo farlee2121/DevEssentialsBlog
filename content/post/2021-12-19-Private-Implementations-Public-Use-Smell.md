@@ -1,6 +1,5 @@
 ---
 date: "2021-12-19T00:00:00Z"
-excerpt_separator: <!-- more -->
 tags:
 - Software Design
 - Design Smells
