@@ -1,7 +1,8 @@
 ---
-title: Favorite Posts
+title: Favorites
 menu: main
 type: page
+url: /favorite-posts
 redirect_from:
 - /favorites
 ShowReadingTime: false
