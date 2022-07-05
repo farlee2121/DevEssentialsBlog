@@ -9,4 +9,11 @@ rss: true
 Params:
   # Paper theme settings
   ShowReadingTime: true
+  ShowCodeCopyButtons: true
 
+## Paper theme search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON 
