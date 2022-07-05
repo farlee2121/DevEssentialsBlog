@@ -1,0 +1,5 @@
+User-agent: Googlebot
+Disallow: /search/
+Disallow: /Search/
+
+Sitemap: {{.Site.BaseURL}}/sitemap/index.xml
