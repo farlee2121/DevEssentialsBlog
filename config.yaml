@@ -1,0 +1,5 @@
+baseURL: https://spencerfarley.com
+# disablePathToLower: true
+languageCode: en-us
+title: 5min Dev Essentials
+theme: beautifulhugo

@@ -1,0 +1,9 @@
+---
+permalink: /robots.txt
+---
+
+User-agent: Googlebot
+Disallow: /search/
+Disallow: /Search/
+
+Sitemap: {{site.url}}/sitemap/index.xml
