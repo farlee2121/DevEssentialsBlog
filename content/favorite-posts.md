@@ -3,7 +3,7 @@ title: Favorites
 menu: main
 type: page
 url: /favorite-posts
-redirect_from:
+aliases:
 - /favorites
 ShowReadingTime: false
 ---
