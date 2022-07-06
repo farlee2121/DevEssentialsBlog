@@ -1,5 +1,5 @@
 ---
-date: "2021-02-12T00:00:00Z"
+date: "2021-02-12T00:07:00Z"
 series: How Learning Works
 tags:
 - Learning
