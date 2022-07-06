@@ -19,7 +19,7 @@ It originated in the 1940's out of the Manhattan project and is based on underst
 
 Lets start with how to build the graph, then dive into the data and decisions we can make from it.
 
----
+----
 
 ## Building the graph
 The most basic info to build the graph is
@@ -48,7 +48,7 @@ Notice that the activities are the edges and dependencies are nodes. That's beca
 
 ![Arrow vs Node Graph](../../static/post-media/IDesign-Projects/Network-WhyArrowGraph.svg)
 
----
+----
 
 ## Making Decisions
 ### Schedule
