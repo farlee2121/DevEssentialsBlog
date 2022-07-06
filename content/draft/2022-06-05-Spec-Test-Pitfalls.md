@@ -9,7 +9,7 @@ tags:
 
 ## Spec Test Pitfalls in Static Languages
 
-I've been thinking about constrained values, and how those constraints could be used to [better test our systems](../post/2022-06-03-Improved-completeness-automatic-random-testing.md). Mark Seemann was gracious to [think through this with me](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#2c0403d1e69d43a496ee04c16bea282c) and point out some interesting conclusions.
+I've been thinking about constrained values, and how those constraints could be used to [better test our systems](../posts/2022-06-03-Improved-completeness-automatic-random-testing.md). Mark Seemann was gracious to [think through this with me](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#2c0403d1e69d43a496ee04c16bea282c) and point out some interesting conclusions.
 
 <!-- TODO: Consider renaming this post -->
 
@@ -19,10 +19,10 @@ A bit of background on my motivations. Clojure has a fascinating optional type s
 
 All expectations on what a type should look like are encoded in these specifications. This allows Clojure to automatically generate data and automatically test that spec-ed functions return valid data for each random value.
 
-Total functions, or functions that always map their input to an advertized output, are much easier to understand. My hope was that this kind of testing could help us [measure and promote totality in typical statically typed systems](../post/2022-06-03-Improved-completeness-automatic-random-testing.md).
+Total functions, or functions that always map their input to an advertized output, are much easier to understand. My hope was that this kind of testing could help us [measure and promote totality in typical statically typed systems](../posts/2022-06-03-Improved-completeness-automatic-random-testing.md).
 
 ## Totality can't be experimentally proven
-I originally framed this kind of testing to Mark as [experimental totality testing](../post/2022-06-03-Improved-completeness-automatic-random-testing.md).
+I originally framed this kind of testing to Mark as [experimental totality testing](../posts/2022-06-03-Improved-completeness-automatic-random-testing.md).
 
 However, Mark made the insightfull observation that such tests cannot prove totality. Most domains (e.g. strings, floats, etc) are effectively infinite. We could never detect adversarial cases targeting a small subset of values. At best this approach can help us double check our work for common violations of totality by exercising edge cases and common input scenarios.
 

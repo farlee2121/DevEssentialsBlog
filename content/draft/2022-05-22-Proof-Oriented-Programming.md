@@ -13,7 +13,7 @@ Turns out this has already been done, and there is a whole category of proof-ori
 
 ## My explorations
 
-My explorations started between [exploring](../post/2021-04-09-Designing-with-Events-Transforms-and-state.md) Scott Wlaschin's approach to [designing with types](https://fsharpforfunandprofit.com/series/designing-with-types/) and Clojure's unique optional type system, [clojure.spec](https://clojure.org/guides/spec).
+My explorations started between [exploring](../posts/2021-04-09-Designing-with-Events-Transforms-and-state.md) Scott Wlaschin's approach to [designing with types](https://fsharpforfunandprofit.com/series/designing-with-types/) and Clojure's unique optional type system, [clojure.spec](https://clojure.org/guides/spec).
 
 Scott's type-driven approach creates guarded domains with little internal defensive programming. Types are used to limit domain into to constricted values validated at the edge of the domain. 
 
@@ -21,7 +21,7 @@ This seemed to cross over with [Clojure.spec](https://clojure.org/guides/spec), 
 
 I think this kind of testing, where pseudo-random values are sampled to ensure valid inputs produce valid outputs, effectively tests totality. [Total functions](https://en.wikipedia.org/wiki/Partial_function) being ones that map their whole domain (inputs) to a value into their range (output). Such functions generally follow the [principle of least surprise](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) and are easier use correctly.
 
-This had me wondering what else a constraint-aware type system could verify, and how it could be [ported to static languages](../posts/2022-../post/2022-06-03-Improved-completeness-automatic-random-testing.md)
+This had me wondering what else a constraint-aware type system could verify, and how it could be [ported to static languages](../posts/2022-../posts/2022-06-03-Improved-completeness-automatic-random-testing.md)
 
 ## Proof-Oriented Languages and Formal Verification
 

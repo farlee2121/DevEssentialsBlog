@@ -46,7 +46,7 @@ Relying on data (commands and events) to create pure functions is an approach ca
 ## Examples
 
 I understand if such a system can be a bit hard to picture, but I does really work for most all kinds of business rules.
-[Domain Modeling Made Functional's](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional) is an accessible and fantastic overview to this kind of programming. I've also written a [sampling of the book's approach](../post/2021-04-09-Designing-with-Events-Transforms-and-state.md), and developed an [exploratory system](https://github.com/farlee2121/BlockScheduler) based on the approach.
+[Domain Modeling Made Functional's](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional) is an accessible and fantastic overview to this kind of programming. I've also written a [sampling of the book's approach](../posts/2021-04-09-Designing-with-Events-Transforms-and-state.md), and developed an [exploratory system](https://github.com/farlee2121/BlockScheduler) based on the approach.
 
 Here's a simple sample API.
 <!-- TODO: sample seems a bit weak. I should show something like a "already blocked" or "SiteWhiteListed". The trick is showing it as part of the command-->
