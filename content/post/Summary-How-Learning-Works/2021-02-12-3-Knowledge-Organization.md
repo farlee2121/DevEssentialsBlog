@@ -9,7 +9,7 @@ tags:
 
 # Knowledge Organization
 
-Think back to [the first post on mastery](./2019-03-25-1-Knowledge-Types-and-Mastery.md). Expert blindspot is caused by information obvious to the master and imperceptable to the student, causing both sides to be baffled by the behavior of the other. 
+Think back to [the first post on mastery](./2021-02-12-1-Knowledge-Types-and-Mastery.md). Expert blindspot is caused by information obvious to the master and imperceptible to the student, causing both sides to be baffled by the behavior of the other. 
 
 This can be an issue with knowledge organization. <!--more-->  Students may know pieces of information, but don’t have enough connections to recall them at the right time or reason an appropriate action. In fact, one of the core differences between novices and masters is the quality and density of connections between facts.
 

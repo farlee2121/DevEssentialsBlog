@@ -43,7 +43,7 @@ Let's examine the possibilities
   - Alternative decorators can be composed or swapped at configuration time
   - Incremental Evolution: The limited scope of each decorator makes it easy to start simple and add complexity only as it's needed.
 
-Read [AOP and Decorators](../../_posts/Language%20Limited%20Though/2020-10-16-AOP-and-Decorator.md) for more in-depth analysis.
+Read [AOP and Decorators](../../post/Language%20Limited%20Though/2020-10-16-AOP-and-Decorator.md) for more in-depth analysis.
 
 ## Practical Tips
 Default to decorating ports for the impacted usecase. Decorate a service if every call to the service should have the same behavior (per system configuration).

@@ -273,9 +273,9 @@ Now here's the best part. All those examples above are valid F# code.
 Using events, transforms, and state as the basis of our design captures domain requirements in a way that both parties can understand right up to the point where it becomes the high-level code design.
 
 This approach also isn't limited to functional languages. Changes in C# 9 make many of these techniques quite pleasant. 
-- For representing alternative values, see [my post on union types in c#](../_posts/2021-03-26-Unions-in-CSharp.md)
+- For representing alternative values, see [my post on union types in c#](../post/2021-03-26-Unions-in-CSharp.md)
     - These enable reasonable state machines and compositional polymorphism (wrap rather than inherit)
-- See my [post on result types in c#](../_posts/2021-01-15-Results-Update.md). A big step toward total functions
+- See my [post on result types in c#](../post/2021-01-15-Results-Update.md). A big step toward total functions
 - [Positional records](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#record-types) can be used to succinctly name and constrain simple types.
 
 

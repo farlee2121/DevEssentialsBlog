@@ -11,7 +11,7 @@ tags:
 
 Good designs generally reflect the nature of the problem they solve, and the same applies to designing a process for design. Design is messy, incremental, and has spurts of both broad and deep exploration.
 
-Here I'll describe the simple and flexible organization structure my [duck docs](./../_posts/2020-10-02-Whats-Your-Duck.md) evolved to capture design thoughts for reference without impeding exploration.
+Here I'll describe the simple and flexible organization structure my [duck docs](./../post/2020-10-02-Whats-Your-Duck.md) evolved to capture design thoughts for reference without impeding exploration.
 
 <!--more-->
 
@@ -54,7 +54,7 @@ You don't have to tag everything. Tag things you want to be able to find later. 
 
 It's best to get your thoughts out there, and tag them later if they end up being important.
 
-Textual tags are a much more general pattern. You can read about similar techniques [here](./../_posts/2021-03-05-Reference-Ready-Notes.md)
+Textual tags are a much more general pattern. You can read about similar techniques [here](./../post/2021-03-05-Reference-Ready-Notes.md)
 
 ## Sample
 

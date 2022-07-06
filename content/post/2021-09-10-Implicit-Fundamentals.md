@@ -23,14 +23,14 @@ I've enumerated them here.
   - Corollary: Testing can't prove a system works. They can only show existence of errors. The posture for testing is to disprove that your system works. At some point you decide you have enough evidence that it works and accept remaining risk (Extra note: the risk can be quantified. One such technique is mutation tests)
 - Major artifacts of the software process (requirements, design, code) are restatements of the original problem
   - Corollary: A significant portion of quality is how well our artifacts communicate the real-world problem
-  - Further reading: [SWEBOK Transform View](../_posts/2021-08-13-Swebok-transform-view.md)
+  - Further reading: [SWEBOK Transform View](../post/2021-08-13-Swebok-transform-view.md)
 - Going fast is understanding the customer (some disagreement about how to best achieve that)
   - Corollary: Cheapest feature is the one you don't write (from better understanding why)
-  - Further Reading: [Going Fast is Going Well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md)
+  - Further Reading: [Going Fast is Going Well](../post/2021-01-29-Going-Fast-is-Going-Well.md)
 - Software lifecycle phases overlap significantly
 - Different classes of problems require different amounts and kinds of process
 
 
 Theres was also significant discussion on the difficulty of choosing the right amount of process for the given problem. Some key critical thinking skill to guide such decisions are
 - [SWOT Analysis](https://en.wikipedia.org/wiki/SWOT_analysis)
-- Threat matrixes ([example](../post-media/threat-matrix.png))
+- Threat matrixes ([example](../../static/post-media/threat-matrix.png))

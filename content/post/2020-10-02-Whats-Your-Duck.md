@@ -10,7 +10,7 @@ tags:
 
 The Pragmatic Programmer tells the now legendary tale of talking with a rubber duck to overcome programming problems. This sounds a bit silly, but programming is a design activity all the way down to the source code implementations. Problems and possibilities often won't reveal themselves until we try to communicate them. Every programmer needs a duck. So what is yours?
 
-> Update 2022-06-03: I've published a [refined version](../_posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md) of this idea
+> Update 2022-06-03: I've published a [refined version](../post/Whats-Your-Duck-V2/2022-06-16-0-Intro.md) of this idea
 
 My duck is usually a text document. What I do isn't so formal as a requirements spec, design spec, or architecture document. It's not constrained to one phase of software process, or even to software at all. 
 

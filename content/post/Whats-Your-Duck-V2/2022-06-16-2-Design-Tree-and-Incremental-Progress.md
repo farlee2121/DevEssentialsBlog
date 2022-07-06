@@ -10,7 +10,7 @@ tags:
 
 This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post explores the fundamental questions "How do we effectively break down problems?", "Can software be perfect?", and "What makes software good?"
 
-If you haven't considered these questions yourself, take a few moments to write down your thoughts. It [aids the learning process](../../_posts/2022-03-07-Small-Teaching-Review.md#predicting).
+If you haven't considered these questions yourself, take a few moments to write down your thoughts. It [aids the learning process](../../post/2022-03-07-Small-Teaching-Review.md#predicting).
 
 ## Design Tree and Effective Work Increments
 
@@ -23,7 +23,7 @@ The design tree is the idea that we can represent all possible design routes as 
 
 Every path to a leaf represents a series of decisions we can make to arrive at a final solution.
 
-![Design tree search patterns](../../post-media/Whats-your-duck/search-methods.drawio.svg)
+![Design tree search patterns](../../../static/post-media/Whats-your-duck/search-methods.drawio.svg)
 
 
 Humans have a natural tendency toward depth-first approaches. We try to find complete solutions all at once.
@@ -62,7 +62,7 @@ This process is similar for each sub-problem, but that doesn't mean it's mechani
 
 Enumerating requirements, goals, and constraints for evaluating solutions may sound like a lot of work, but it doesn't have to be. This process can fall anywhere from a few options weighed in your head, to sticky notes, to design documents, to expansive interviews and studies. A threat matrix helps us evaluate how important each decision is and how much effort we put into it.
 
-![Threat matrix](../../post-media/Whats-your-duck/threat-matrix.drawio.svg)
+![Threat matrix](../../../static/post-media/Whats-your-duck/threat-matrix.drawio.svg)
 
 On one axis we have impact should our decision be wrong, and on the other we have likelihood the decision is wrong. Decisions that are low-impact or unlikely to change don't need much consideration. Just pick something and move on. The higher impact or likelihood of change, the more time is worth investing to make sure the descision is right.
 
@@ -77,7 +77,7 @@ This is true for the overall process too. There is no one perfect solution. Ther
 
 The increments help us refine our understanding of the problem, and step us closer to a satisfactory solution. Our enumerated understanding of need creates a "definition of done". This definition of done is our benchmark for "good" work. Any solution that meets those critera is "good". Any solution that doesn't meet the criteria is not a complete solution. Any work beyond this definition is speculative "gold plating". It solves a problem we don't currently need, which often translates into wasted work.
 
-![How iteration narrows in on done](../../post-media/Whats-your-duck/iterative-good-enough.drawio.svg)
+![How iteration narrows in on done](../../../static/post-media/Whats-your-duck/iterative-good-enough.drawio.svg)
 
 ## Next
 With this we've established the core ideas for effective design process. Next up we'll look at a particular technique for applying them, [ducks](./2022-06-16-3-Ducks.md).

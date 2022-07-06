@@ -9,7 +9,7 @@ tags:
 
 # Accessors: Services, Not Servants
 
-I've been on a long journey of meshing IDesign with Clean Architecture. Managers, engines, and utilities fit nicely, but accessors seemed too substantial for an adapter and not independent enough for a true service. At last, I've realized the place of accessors by building off [their relationship to utilities](./2020-11-15-Incremental-Accessors.md). Accessors are independent services, not servants to managers.
+I've been on a long journey of meshing IDesign with Clean Architecture. Managers, engines, and utilities fit nicely, but accessors seemed too substantial for an adapter and not independent enough for a true service. At last, I've realized the place of accessors by building off [their relationship to utilities](../post/2020-12-25-Incremental-Accessors.md). Accessors are independent services, not servants to managers.
 
 ## The problem
 IDesign separates domain services into several layers. Were concerned with
@@ -32,7 +32,7 @@ This left accessors in a gray area. Did they belong as services anymore? I consi
 
 ## New Paradigm
 
-Then I realized accessors [could be incrementally refactored from adapters just like utilites](./2020-11-15-Incremental-Accessors.md). This led me to think about cases I would do so and how an accessor could obey the Open-Closed Principle by accommodating specific constraints with generic extension options.
+Then I realized accessors [could be incrementally refactored from adapters just like utilities](../post/2020-12-25-Incremental-Accessors.md). This led me to think about cases I would do so and how an accessor could obey the Open-Closed Principle by accommodating specific constraints with generic extension options.
 
 This led me to realize that my previous concept of accessors were not services at all. They were simply exporting the responsibility of data access and relationship management from the managers. My accessors were intrinsically tied to the needs of my managers. They implicitly required the same entity relationship assumptions.
 
@@ -133,7 +133,7 @@ class Post{
     public int Comments {get; set;}
 }
 interface PostAccessor{
-    Post[] ListByInfluencer(InfluenerId influencerId);
+    Post[] ListByInfluencer(InfluencerId influencerId);
     PostId CreateOrUpdate(Post post); 
 }
 ```

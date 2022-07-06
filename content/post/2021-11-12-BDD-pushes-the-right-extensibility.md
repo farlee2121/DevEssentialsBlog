@@ -10,9 +10,9 @@ tags:
 
 I recently read Mark Seemann's post on how [Testability is the Open-Closed Principle](https://blog.ploeh.dk/2009/06/05/TestabilityIsReallyTheOpenClosedPrinciple/). This helped me realize the approach to testing directs the kinds of flexibility in our system, and behavior-based testing pushes the right kind of flexibility.
 
-Consider this visual on volatility analysis ([from this post on IDesign](../_posts/2020-07-03-iDesign-Visual-Summary.md)). 
+Consider this visual on volatility analysis ([from this post on IDesign](../post/2020-07-03-iDesign-Visual-Summary.md)). 
 
-![Spectrum of volatility](../post-media/IDesign-System/iDesignSolutionScubbing.png)
+![Spectrum of volatility](../../static/post-media/IDesign-System/iDesignSolutionScubbing.png)
 
 
 Software can choose an almost unlimited number of ways to be flexible, but not every kind of flexibility is relevant for a given project. Adding too much flexibility actually bogs down the system with unnecessary complexity. The most stable and high-return decompositions stem from understanding the fundamental nature of the problem we are solving. 

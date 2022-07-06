@@ -48,7 +48,7 @@ I think such approach have numerous obsticals in light of my goals and non-goals
 ### *Difficult to write / Few good examples*
 Setting up a good interview requires a good problem to solve. The problem must be quick to pick up, but can't be trivial to solve. This leaves a pretty narrow problem space. The bar for a difficult problem is also very sensitive to candidate experience, making it difficult to reuse samples across positions. 
 
-I emphasize [understanding a problem well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md) before writing code. As such, I often spend most of my coding interviews understanding the problem and writing very little code.
+I emphasize [understanding a problem well](../post/2021-01-29-Going-Fast-is-Going-Well.md) before writing code. As such, I often spend most of my coding interviews understanding the problem and writing very little code.
 
 ### *Open-ended & Inconsistent Scope*
 Often, companies want to assess certain skills in their candidates (e.g. knowledge of testing patterns). Such objectives are difficult to consistently incorporate into a story-based coding interview.
@@ -104,7 +104,7 @@ interface IBillCalculator{
 ```
 
 Architecture-level (coupling, abstraction levels, Dependency Inversion, transaction bounds, CQRS, etc)
-![simple architecture diagram for a chat system](../post-media/Better-interviews-with-defect-detection/architecture-sample.drawio.svg)
+![simple architecture diagram for a chat system](../../static/post-media/Better-interviews-with-defect-detection/architecture-sample.drawio.svg)
 
 
 ## Benefits of Defect Detection Approach
@@ -124,7 +124,7 @@ Code samples and their associated list of errors are known upfront. Evaluation i
 Worries about reviewer bias are also easier to address. Multiple reviewers can independently assess against the same objective expectations, or candidate answers can be transcribed for later reviewers to compare against the target defects.
 
 ### *Easy to Adapt / Modular and Composable*
-Detection-based assessments are [increment, stable, and additive](../_posts/2022-02-25-Stable-Incremental-Additive.md) allowing [progressive design](../_posts/2022-03-04-Progressive-Design.md). Each code sample represents a self-contained assessment for specific skills. Larger exams can be composed by selecting many individual samples that target component skills.
+Detection-based assessments are [increment, stable, and additive](../post/2022-02-25-Stable-Incremental-Additive.md) allowing [progressive design](../post/2022-03-04-Progressive-Design.md). Each code sample represents a self-contained assessment for specific skills. Larger exams can be composed by selecting many individual samples that target component skills.
 
 Interviews for diverse roles can be constructed from the same base set of code samples. If target skills are missing, then simply add a new self-contained sample for that skill instead of modifying existing samples. If skills aren't needed for a role, simply drop their corresponding samples for the assessment. 
 

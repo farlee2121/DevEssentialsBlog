@@ -64,7 +64,7 @@ As mentioned, I believe existing best practices satisfy these qualities. Here's 
 - Requirements: 
   - Stories are self-contained definitions of need (stable). Each story should satisfy a need and provide delivered value when it's completed (incremental). A story is only useful if it adds to the knowledge collected by previous stories (additive).
 - Testing: 
-  - Behavior-Driven testing like [TestApi](../_posts/2020-08-21-Test-Api-InPractice.md) or [Gherkin](https://specflow.org/learn/gherkin/) separate test definitions from code. The tests are thus much like stories, an expression of need independent from the system (stable). Each test provides value through verifying a new self-contained expectation (incremental, additive).
+  - Behavior-Driven testing like [TestApi](../post/2020-08-21-Test-Api-InPractice.md) or [Gherkin](https://specflow.org/learn/gherkin/) separate test definitions from code. The tests are thus much like stories, an expression of need independent from the system (stable). Each test provides value through verifying a new self-contained expectation (incremental, additive).
   - Automated regression testing encodes individual expectations as tests and each expectation can be verified independently (incremental, stable). New test cases are generally selected to cover new expectations or errors that slip through (additive). If one isn't careful about coupling tests to implementations, then it breaks stability/additivity and leads to the [Fragile Test Problem](http://xunitpatterns.com/Fragile%20Test.html)
 - Scientific Method: Each experiment defines a clear hypothesis then attempts to definitely prove or disprove it. Each experiment both establishes a fact and builds a foundation for further inquiry (stable, incremental, additive).
 - Team/organization structures: The advent of devops has pushed many team organizations to vertically integrated teams. Each team owns it's features from requirements to production. Products are composed of many such teams working in tandem and collaborating when needed. Each team is a stable unit delivering it's own unique value.
@@ -87,6 +87,6 @@ I believe stable, incremental, and additive are underlying properties driving pr
 At the very least, they've served as a useful guide for selecting and adapting a personal set of practices. 
 
 ## Further Reading
-- Update: I explore how these properties lead to [Progressive Design](../_posts/2022-03-04-Progressive-Design.md) in a later post 
+- Update: I explore how these properties lead to [Progressive Design](../post/2022-03-04-Progressive-Design.md) in a later post 
 - I have [Design of Design](https://www.amazon.com/Design-Essays-Computer-Scientist/dp/B005YWVRE2) to thank for much of my understanding of design process and design across disciplines.
 - Mark Seemann has one of the best descriptions of [Open-Closed architecture](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/) I've encountered

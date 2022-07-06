@@ -9,7 +9,7 @@ tags:
 
 # Thoughts on Acceptance Test Logistics
 
-I [previously wrote](../_posts/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) on how acceptance tests can streamline communication between developers and teams. 
+I [previously wrote](../post/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) on how acceptance tests can streamline communication between developers and teams. 
 I've been thinking about practical enactment of such a scheme and surfaced some interesting ideas.
 
 First, a clarification of terms from last post
@@ -54,7 +54,7 @@ In short,
 
 ## Responsibility and trust
 
-This exercise helped me realize I implicitly expected the dependent and dependency teams to share [TestApi](../_posts/2020-08-21-Test-Api-InPractice.md) adapter implementations. However, shared implementations contrast with our key goals. Shared test adapter implementations require one team to trust that the other team didn't game the test suite. It muddies ownership and responsibility.
+This exercise helped me realize I implicitly expected the dependent and dependency teams to share [TestApi](../post/2020-08-21-Test-Api-InPractice.md) adapter implementations. However, shared implementations contrast with our key goals. Shared test adapter implementations require one team to trust that the other team didn't game the test suite. It muddies ownership and responsibility.
 
 Separate adapter implementations for the same test suite both simplifies ownership concerns and eliminates the *need* for trust in another team. It builds in process assurance by having each team verify their shared outcomes. This also mirrors organizational responsibility: the dependency should meet the dependent's needs, but the dependant team is ultimately responsible for verifying its needs are met and its component works.
 

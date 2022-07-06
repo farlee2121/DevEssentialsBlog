@@ -8,14 +8,14 @@ tags:
 
 # TestApi and Test Reuse in C#
 
-The [TestApi](../_posts/2020-08-21-Test-Api-InPractice.md) pattern helps decouple tests from our system and enables more stable and reusable tests.
-I've shown how I [use the pattern in F#](../_posts/2021-10-08-TestApi-in-FSharp-revised.md). Now here's a similar example in C#.
+The [TestApi](../post/2020-08-21-Test-Api-InPractice.md) pattern helps decouple tests from our system and enables more stable and reusable tests.
+I've shown how I [use the pattern in F#](../post/2021-10-08-TestApi-in-FSharp-revised.md). Now here's a similar example in C#.
 
 
 ## Motivating Context
 Suppose you're following [SOLID](https://en.wikipedia.org/wiki/SOLID) at the architectural level. This means each service pushes it's dependencies behind abstractions that it owns and some later caller injects the concrete implementations. 
 
-![Dependency Inversion Diagram](../post-media/TestApi-and-TestReuse-in-Csharp/dependency-inversion.drawio.svg)
+![Dependency Inversion Diagram](../../static/post-media/TestApi-and-TestReuse-in-Csharp/dependency-inversion.drawio.svg)
 
 The calling service likely expects all dependency implementations to behave consistently from the perspective of the service. This includes queries and any side-effects the service would be effected by.
 

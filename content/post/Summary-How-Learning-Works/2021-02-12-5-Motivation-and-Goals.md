@@ -45,7 +45,7 @@ Efficacy is largely determined by one’s past experiences and the attribution f
 
 Perception of support also plays a key role. Here is a nice summative chart
 
-![efficacy table](../../post-media/How-Learning-Works/efficacy-table.png)
+![efficacy table](../../../static/post-media/How-Learning-Works/efficacy-table.png)
 
 <div class="sr-only" aria-label="efficacy table">
 

@@ -9,7 +9,7 @@ tags:
 
 # Test Api in F# Improved
 
-I [previously wrote](../_posts/2021-02-26-TestApi-in-FSharp.md) on the Test API behavioral testing in F#. More time and thinking has brought about a few key improvements, making the pattern both more concise and standardized.
+I [previously wrote](../post/2021-02-26-TestApi-in-FSharp.md) on the Test API behavioral testing in F#. More time and thinking has brought about a few key improvements, making the pattern both more concise and standardized.
 
 ## Test API Review
 
@@ -26,7 +26,7 @@ Key advantages include
 
 ## Solving arity with tuples
 
-Property tests were my biggest challenge when [initially mapping test API to F#](../_posts/2021-02-26-TestApi-in-FSharp.md). The key issue was that the test environment needed to be managed per-case of the property test, but the property test fixtures only ran before and after the whole set of cases.
+Property tests were my biggest challenge when [initially mapping test API to F#](../post/2021-02-26-TestApi-in-FSharp.md). The key issue was that the test environment needed to be managed per-case of the property test, but the property test fixtures only ran before and after the whole set of cases.
 
 I also couldn't generically wrap my property tests in a controlled lifecycle because case data is passed as arguments, and the function arity (number of arguments) is unknown.
 

@@ -27,7 +27,7 @@ Consider, mastery is composed of four stages:
 
 Further, the goal is ‘**far transfer**’, or the ability to connect and apply knowledge in diverse contexts.
 
-![Competence stages](../../post-media/How-Learning-Works/competence-stages.png)
+![Competence stages](../../../static/post-media/How-Learning-Works/competence-stages.png)
 
 Notice that both sides of this spectrum are ‘unconscious’. On one hand, this is necessary for building skills. Internalizing a skill to the point of habit frees up mental energy to focus on other aspects of a task.
 
@@ -53,7 +53,7 @@ Further, mastering a skill or concept has distinct stages
 2.  Integrate components
 3.  Know when to apply
 
-![Skill mastery stages](../../post-media/How-Learning-Works/skill-mastery-stages.png)
+![Skill mastery stages](../../../static/post-media/How-Learning-Works/skill-mastery-stages.png)
 
 Isolating weak component skills can greatly improve the overall mastery of a skill. Singling out integration and application can also improve learning. It is like juggling, starting with too many balls leads to them all being dropped.
 
@@ -67,7 +67,7 @@ Students can learn to transfer knowledge through critical thinking processes. Qu
 
 The teacher plays a different role in each stage of student mastery. Building a Discipling Culture summarizes these roles in terms of the ‘square’.
 
-![Learning and teaching square](../../post-media/How-Learning-Works/square.png)
+![Learning and teaching square](../../../static/post-media/How-Learning-Works/square.png)
 
 S1: The process starts with modeling and is aimed at making the student aware of what they will learn.
 

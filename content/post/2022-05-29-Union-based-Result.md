@@ -8,7 +8,7 @@ tags:
 
 # Union-based Result Types in C#
 
-I previously wrote about [result types](../_posts/2021-01-15-Results-Update.md) and [union types](../_posts/2021-03-26-Unions-in-CSharp.md) in C#. I got to wondering if a union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.
+I previously wrote about [result types](../post/2021-01-15-Results-Update.md) and [union types](../post/2021-03-26-Unions-in-CSharp.md) in C#. I got to wondering if a union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.
 
 Some of my previous goals for results types included
 - Low-barrier to creating result types
@@ -68,7 +68,7 @@ public record DerivedResult : Result<int, string>
 DerivedResult.Ok(5); // !!! This creates Result<int, string> != DerivedResult
 ```
 
-This could be worked around in [the class-based result-type experiment](../_posts/2021-01-15-Results-Update.md). However, a similar workaround doesn't compile for the union-like approach. The success and failure types would need to inherit from arbitrary derivatives of Result, but generic type parameters cannot be inherited from.
+This could be worked around in [the class-based result-type experiment](../post/2021-01-15-Results-Update.md). However, a similar workaround doesn't compile for the union-like approach. The success and failure types would need to inherit from arbitrary derivatives of Result, but generic type parameters cannot be inherited from.
 
 ```cs
 public record DerivableResult<TSuccess, TError, TResult> where TResult : DerivableResult<TSuccess, TError, TResult>

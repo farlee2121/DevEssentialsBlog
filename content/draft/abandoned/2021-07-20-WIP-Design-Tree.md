@@ -21,7 +21,7 @@ The decision and transform views dovetail nicely into my favorite model of the s
 
 I see the overall process as a spectrum from unknown to known. Each of the transforms is a checkpoint in how much known information we've uncovered.
 
-![Design spectrum, unknown -> known](../post-media/SWEBOK-transform/spectrum.png)
+![Design spectrum, unknown -> known](../../static/post-media/SWEBOK-transform/spectrum.png)
 
 Known information can be of all kinds
 - User expectations
@@ -49,4 +49,4 @@ The optimal process is a repeated loop of limited-choice comparisons.
 
 Decisions naturally get more fine grained as the loop locks in more decisions. Some decisions will inevitably be wrong, but we throw away minimal work because we can back up to the closest key decision that still works.
 
-![search pattern view](../post-media/SWEBOK-transform/search-methods.drawio.svg)
+![search pattern view](../../static/post-media/SWEBOK-transform/search-methods.drawio.svg)

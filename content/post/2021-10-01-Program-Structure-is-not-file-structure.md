@@ -11,7 +11,7 @@ tags:
 Naming is one of the most important activities in programming. Names are the primary vehicle for communicating intent and making code understandable.
 Names haves some sneaky counterparts: scope and context. I argue that our tools for scope and context impact how good our naming can be, and file-based modules force coupling between concerns that inhibit global name organization.
 
-I previously [wrote about](../_posts/2021-09-24-Clojure-inhibits-code-grouping.md) a specific encounter with this trouble in Clojure. However, I think the topic deserves a more general exploration.
+I previously [wrote about](../post/2021-09-24-Clojure-inhibits-code-grouping.md) a specific encounter with this trouble in Clojure. However, I think the topic deserves a more general exploration.
 
 ## Global names
 
@@ -91,7 +91,7 @@ The file division of code is also program structure, but in a very different way
 
 Here's the key point: program structure does not equal file structure.
 
-I [previously explored](../_posts/2021-09-24-Clojure-inhibits-code-grouping.md) how file-based module/namespace systems raise the bar for grouping code. This reduces long-term understandability.
+I [previously explored](../post/2021-09-24-Clojure-inhibits-code-grouping.md) how file-based module/namespace systems raise the bar for grouping code. This reduces long-term understandability.
 
 The more general view paints a clearer picture. Binding namespaces to file structure forces two concerns together that naturally change for different reasons.
 It forces us to trade-off between the best program organization for consumers, and the physical structure needed for maintenance and management.

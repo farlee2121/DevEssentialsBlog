@@ -8,9 +8,9 @@ tags:
 
 # Test Api in F#
 
-[Paul's Test Api](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) [permanently changed the way that I test](../_posts/2020-08-21-Test-Api-InPractice.md). It's only natural I'd want to bring the pattern over to F# with me. Here's how I did it and a few extra testing tips for F#. 
+[Paul's Test Api](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) [permanently changed the way that I test](../post/2020-08-21-Test-Api-InPractice.md). It's only natural I'd want to bring the pattern over to F# with me. Here's how I did it and a few extra testing tips for F#. 
 
-> 2021-10-07: The approach to property tests is superseded by a better method described [in a later post](../_posts/2021-10-08-TestApi-in-FSharp-revised.md)
+> 2021-10-07: The approach to property tests is superseded by a better method described [in a later post](../post/2021-10-08-TestApi-in-FSharp-revised.md)
 
 
 ## Testing Framework

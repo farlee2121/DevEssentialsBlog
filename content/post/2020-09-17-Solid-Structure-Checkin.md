@@ -32,7 +32,7 @@ The fundamental power of this pattern is limiting the scope of design considerat
 
 ## Pushy Information Hiding
 
-Two common concerns I've long struggled to slot into my systems are email notifications and background processing. These have both been made clear. You can see an in-depth exploration of these in [Notification Refactor Case Study](2020-08-05-Notification-Design.md) and [Async Task Refactor Case Study](2020-09-11-Background-Task-Refactor.md).
+Two common concerns I've long struggled to slot into my systems are email notifications and background processing. These have both been made clear. You can see an in-depth exploration of these in [Notification Refactor Case Study](../post/2020-08-14-Notification-Design.md) and [Async Task Refactor Case Study](../post/2020-09-11-Background-Task-Refactor.md).
 
 The underlying problem here is that notifications and background processing are actually separate utility-like services of their own. Caller-owned dependency contracts make it easier to ignore these cross-cutting concerns than to weave them into the business process. This pushes cross-cutting concerns into the adapters where we can collect them into utilities.
 

@@ -8,7 +8,7 @@ tags:
 
 # Progressive Design
 
-Choosing the right amount of process is an art. Too much process is smothering and too little is a mess. However, I think [incremental, stable, and additive processes](../_posts/2022-02-25-Stable-Incremental-Additive.md) naturally start simple and mature *progressively* with our demands.
+Choosing the right amount of process is an art. Too much process is smothering and too little is a mess. However, I think [incremental, stable, and additive processes](../post/2022-02-25-Stable-Incremental-Additive.md) naturally start simple and mature *progressively* with our demands.
 
 
 Progressive value is inherent if our system isn't deeply affected by change (stable), changes in small complete chunks (incremental), and the increments mostly build on each other (additive).
@@ -17,7 +17,7 @@ All these properties together enable **progressive design**. We can design to wh
 
 ## Examples with Architecture
 
-To make this a bit more concrete. Lets consider a design flow with [Ports and Adapters architecture](../_posts/2020-12-19-Ports-and-Adapters.md) and [similar plugin-style architectures](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/).
+To make this a bit more concrete. Lets consider a design flow with [Ports and Adapters architecture](../post/2020-12-19-Ports-and-Adapters.md) and [similar plugin-style architectures](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/).
 
 Start with the top-level use case. The workflow is our first component.
 
@@ -57,7 +57,7 @@ A product could start with a single team, and then split out new teams as servic
 This is, of course, a bit idealistic. Similar concerns may be addressed in multiple sections of the company. Bringing those solutions together is often painful and complex. However, the choice of when (or if) to bring them together becomes a business question (i.e. Is there enough long-term overlap to justify the investment?). 
 
 ## Example with testing
-I've [previously explored](../_posts/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) how behavior-driven acceptance tests might be used to progressively formalize testing process without restructuring tests.
+I've [previously explored](../post/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) how behavior-driven acceptance tests might be used to progressively formalize testing process without restructuring tests.
 
 ## Conclusion
 Choosing the right amount of process is hard. However, incremental, stable, and additive processes naturally lead to progressive systems that allow us to minimize immediate process *and* increase process as needed without restructuring our systems. This is true for code, and possibly also for organizations and tests!

@@ -9,9 +9,9 @@ tags:
 
 # Test Types and Lifecycle Phases
 
-I was thinking about responsibility for different kinds of quality in an organization and I noticed that different kinds of testing line up well with particular roles and [software lifecycle phases](../_posts/2021-08-27-SWEBOK-Modified-topic-diagram.md). I've summed it all up in a quick visual. 
+I was thinking about responsibility for different kinds of quality in an organization and I noticed that different kinds of testing line up well with particular roles and [software lifecycle phases](../post/2021-08-27-SWEBOK-Modified-topic-diagram.md). I've summed it all up in a quick visual. 
 
-> Update 2022-01-14: Here's [SWEBOK term definitions](../_posts/2022-01-14-SWEBOK-term-definitions.md) if needed
+> Update 2022-01-14: Here's [SWEBOK term definitions](../post/2022-01-14-SWEBOK-term-definitions.md) if needed
 
 Terms for different kinds of testing are often used many contradictory ways. I'll be leaning on the following sources, which largely agree with each other
 - [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3) Chapter 4.2
@@ -19,7 +19,7 @@ Terms for different kinds of testing are often used many contradictory ways. I'l
 - [Robert Martin's definitions](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html)
 
 
-![Test to role map](../post-media/SWEBOK/cycle-test-map.drawio.svg)
+![Test to role map](../../static/post-media/SWEBOK/cycle-test-map.drawio.svg)
 
 ## The core
 Quality assurance (QA) is responsible for... assuring quality. They are the heart that coordinates and verifies quality activities across the many roles and phases of the software process. This may mean that a QA rep does little testing themselves and instead cooperates with individuals in more specialized roles. 
@@ -108,4 +108,4 @@ Techniques
 - **Health Checks**: Simple frequent tests of a live system. Verify that a portion of the system is still up and running, or sound an alarm if they aren't.
 - Mutation testing could be used to measure completeness to system tests too (mess with configuration, take down infrastructure, etc). I have never seen it done though.
 
-<!-- [Quantified Communication](../_posts/../_site/2021/03/19/Quantified-Communication-Customer-to-Code/index.html) -->
+<!-- [Quantified Communication](../post/../_site/2021/03/19/Quantified-Communication-Customer-to-Code/index.html) -->

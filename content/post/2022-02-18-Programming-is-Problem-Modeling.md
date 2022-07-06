@@ -11,10 +11,10 @@ We'll examine how problem modeling relates to development life cycle stages, inf
 
 ## Software Life Cycle of Problem Understanding
 
-![Life cycle stages of problem refinement](../post-media/SWEBOK/problem-refinement-cycle.drawio.svg)
+![Life cycle stages of problem refinement](../../static/post-media/SWEBOK/problem-refinement-cycle.drawio.svg)
 
 
-The software development life cycle stages can be seen as a cycle of actions to better understand our problem, where [each life cycle stage outputs a refined statement of the problem](../_posts/2021-08-13-Swebok-transform-view.md).
+The software development life cycle stages can be seen as a cycle of actions to better understand our problem, where [each life cycle stage outputs a refined statement of the problem](../post/2021-08-13-Swebok-transform-view.md).
 
 - Requirements formalize the problem enough to effectively consider solutions (SWEBOK chapter 1 intro or 1.7.1)
 - Design refines the problem by considering tradeoffs between different high-level solutions (SWEBOK 2.3.4). Tradeoffs should be weighed with stakeholders (SWEBOK 11.1.9)
@@ -37,14 +37,14 @@ Notice how the life cycle repeatedly refines understanding.
 The software life cycle is the scientific process.
 
 
-[![The Scientific Method - Efbrazil, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons](../post-media/Programming-is-Problem-Modeling/The_Scientific_Method.svg.png)](https://commons.wikimedia.org/wiki/File:The_Scientific_Method.svg)
+[![The Scientific Method - Efbrazil, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons](../../static/post-media/Programming-is-Problem-Modeling/The_Scientific_Method.svg.png)](https://commons.wikimedia.org/wiki/File:The_Scientific_Method.svg)
 
 These question/hypothesis/test loops underlie not only the life cycle, but each individual activity as well. Each prototype, shadowing, user story, tradeoff analysis, unit test, and so on is a hypothesis about the problem. Testing each hypothesis compares our understanding against reality and refines what we know. These small tests add up and push us to a solution one increment at a time.
 
 
 ## Increment to Good Enough
 
-![Good Enough target](../post-media/SWEBOK/iterative-good-enough.drawio.svg)
+![Good Enough target](../../static/post-media/SWEBOK/iterative-good-enough.drawio.svg)
 
 Each hypothesis/test cycle tells us something about the problem and our solutions. These increments progressively interpolate to a final solution.
 
@@ -68,7 +68,7 @@ It's important to note, requirements in our "definition of done" are not just be
 
 ## Adaptability: Volatility Analysis as Essence Discovery
  
-![Volatility analysis](../site-media/../post-media/IDesign-System/iDesignSolutionScubbing.png)
+![Volatility analysis](../site-media/../../static/post-media/IDesign-System/iDesignSolutionScubbing.png)
 
 So far we've mostly explored how problem modeling applies to incremental story-level work. However, problem modeling is even more important for managing the big picture of inevitable change.
 
@@ -110,16 +110,16 @@ Programming is a discipline understanding and modeling problems. This view satis
 ## Similar Past Posts (from me) 
 
 I've written a variety of previous posts covering different views on this underlying idea.
-- [SWEBOK: Software Engineering As Problem Translation](../_posts/2021-08-13-Swebok-transform-view.md)
-- [Going Fast is Going Well](../_posts/2021-01-29-Going-Fast-is-Going-Well.md)
-- [What's your duck?](../_posts/2020-10-02-Whats-Your-Duck.md)
-- [Requirements](../_posts/DevEssentials/2018-11-25-Requirements.md)
-- [Quantified Communication (from customer to code)](../_posts/2021-03-19-Quantified-Communication-Customer-to-Code.md)
+- [SWEBOK: Software Engineering As Problem Translation](../post/2021-08-13-Swebok-transform-view.md)
+- [Going Fast is Going Well](../post/2021-01-29-Going-Fast-is-Going-Well.md)
+- [What's your duck?](../post/2020-10-02-Whats-Your-Duck.md)
+- [Requirements](../post/DevEssentials/2018-11-25-Requirements.md)
+- [Quantified Communication (from customer to code)](../post/2021-03-19-Quantified-Communication-Customer-to-Code.md)
 
 ## SWEBOK Citations
 
 
-I don't expect you to take these statements of software truth on my word. Here are many of the key points taken directly from the [Software Engineering Body of Knowledge](../_posts/2021-07-30-SWEBOK-review.md).
+I don't expect you to take these statements of software truth on my word. Here are many of the key points taken directly from the [Software Engineering Body of Knowledge](../post/2021-07-30-SWEBOK-review.md).
 
 Customer need defines "correct" software (heart of design process)
 - Ch 11.1.9 Tradeoff analysis - software engineer must evaluate tradeoffs with stakeholders

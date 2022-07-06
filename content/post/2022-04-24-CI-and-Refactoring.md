@@ -20,7 +20,7 @@ Preparatory refactoring, then adding the feature, reduces code base disruption t
 
 This blew my mind. I've long got the idea of integrating often, even daily. However, I didn't really think it possible for developers to constructively all work off the same branch. However, this mature development approach makes it both possible and beneficial!
 
-I've experienced how wide refactorings can become hard to merge even after a few days. I can see how reducing that pain would encourage more frequent refactoring. Plus, this scheme meshes delightfully with my process filter: [stable, incremental, additive](../_posts/2022-02-25-Stable-Incremental-Additive.md).
+I've experienced how wide refactorings can become hard to merge even after a few days. I can see how reducing that pain would encourage more frequent refactoring. Plus, this scheme meshes delightfully with my process filter: [stable, incremental, additive](../post/2022-02-25-Stable-Incremental-Additive.md).
 
 However, this method does not come with out some caveats. It requires
 - mature and trusted contributors

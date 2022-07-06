@@ -7,11 +7,11 @@ tags:
 
 # Test Case Selection Guide
 
-Testing is a broad and essential topic for Software Developers. There is a dizzying diversity of [testing approaches for different scenarios](../_posts/2021-12-05-What-tests-measure.md). However, the typical developer's inner loop focuses on a few kinds of tests and test selection. That is, choosing which tests need to be written.
+Testing is a broad and essential topic for Software Developers. There is a dizzying diversity of [testing approaches for different scenarios](../post/2021-12-05-What-tests-measure.md). However, the typical developer's inner loop focuses on a few kinds of tests and test selection. That is, choosing which tests need to be written.
 
 ## Differentiation & Context
 
-I previously wrote on [tests by role and lifecycle phase](../_posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) and [why we write certain kinds of tests](../_posts/2021-12-05-What-tests-measure.md).
+I previously wrote on [tests by role and lifecycle phase](../post/2021-08-30-Test-Types-and-Lifecycle-Phases.md) and [why we write certain kinds of tests](../post/2021-12-05-What-tests-measure.md).
 
 Both of those posts focus on the big picture. They examine where testing lives across the many activities of development.
 
@@ -65,11 +65,11 @@ Test selection is not a once-size-fits-all activity. However, I've developed a f
 - Add a test any time a bug is found
 - Use mutation testing to objectively quantify completeness and head off sneaky errors
 
-I typically don't use code-based methods because I believe mosts [tests should be decoupled from the inner structure of the system](../_posts/2020-08-21-Test-Api-InPractice.md), and instead focus on stable expected behaviors.
+I typically don't use code-based methods because I believe mosts [tests should be decoupled from the inner structure of the system](../post/2020-08-21-Test-Api-InPractice.md), and instead focus on stable expected behaviors.
 
 In general, I think a quality system doesn't need code-based techniques. The consumer expectations, public API, and test cases should all be in alignment.
 
-One benefit of this approach is that I can run many system configurations under the same test suite. For example, a service port for saving contact data could use the same test suite for any storage implementation. The service level tests could also be run with any configuration of mocked or real dependencies. The tests can even serve as [contracts between teams](../_posts/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) or [light-weight acceptance tests](../_posts/2021-12-12-Gherking-Test-Names.md).
+One benefit of this approach is that I can run many system configurations under the same test suite. For example, a service port for saving contact data could use the same test suite for any storage implementation. The service level tests could also be run with any configuration of mocked or real dependencies. The tests can even serve as [contracts between teams](../post/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) or [light-weight acceptance tests](../post/2021-12-12-Gherking-Test-Names.md).
 
 
 ## Conclusion

@@ -9,11 +9,11 @@ tags:
 
 # Gherkin-named Tests as Low-bar Acceptance Tests
 
-I [previously compared the tradeoffs](../_posts/2021-06-11-Gherkin-vs-TestApi.md) of Gherkin-based and TestApi-based behavior tests. Recently, I realized there is a simple in-between solution: TestApi with Gherkin-style names.
+I [previously compared the tradeoffs](../post/2021-06-11-Gherkin-vs-TestApi.md) of Gherkin-based and TestApi-based behavior tests. Recently, I realized there is a simple in-between solution: TestApi with Gherkin-style names.
 
 The main advantage of Gherkin tests is that they can be understood, and possibly even written by customer representatives. A well-designed gherkin suite also defines clauses generally such that it's hard to cheat when wiring the tests to the system. This boosts trusts that the tests verify what they're supposed to.
 
-The main advantage of TestApi (over Gherkin) is that it is much easier for developers to create rapidly and with low formality. However, it's harder for non-developers to review tests. They are more [developer tests than acceptance tests](../_posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md).
+The main advantage of TestApi (over Gherkin) is that it is much easier for developers to create rapidly and with low formality. However, it's harder for non-developers to review tests. They are more [developer tests than acceptance tests](../post/2021-08-30-Test-Types-and-Lifecycle-Phases.md).
 
 This is where the middle solution comes in. TestApi tests can be named with Gherkin-style names. 
 

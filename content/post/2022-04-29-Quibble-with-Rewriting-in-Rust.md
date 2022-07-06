@@ -33,7 +33,7 @@ I'll compare F# against the article's listed good qualities of Rust to demonstra
 - ✅ [Featured unit testing](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-test)
 - ✅ [Immutable by default](https://docs.microsoft.com/en-us/dotnet/fsharp/tutorials/functional-programming-concepts#immutability)
 - 🟨 Macros
-  - I'm not sure macros are a 100% positive. I've not gone deep with Rust macros, but other languages I've used with syntactic macros showed some [downsides along with the good](../_posts/2021-09-17-Macros-not-a-clear-win.md). F# does have [Type Providers](https://docs.microsoft.com/en-us/dotnet/fsharp/tutorials/type-providers/) and [Quotations](https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/code-quotations) for more constrained meta-programming. Introspection is available but executes at runtime and is relatively slow.
+  - I'm not sure macros are a 100% positive. I've not gone deep with Rust macros, but other languages I've used with syntactic macros showed some [downsides along with the good](../post/2021-09-17-Macros-not-a-clear-win.md). F# does have [Type Providers](https://docs.microsoft.com/en-us/dotnet/fsharp/tutorials/type-providers/) and [Quotations](https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/code-quotations) for more constrained meta-programming. Introspection is available but executes at runtime and is relatively slow.
 - ❌ Primitive arrays include length in type declaraion
   - F# doesn't have this, but I rarely care about fixed-length collections in F#
 - 🟨 Blazing fast

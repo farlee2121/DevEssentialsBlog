@@ -15,7 +15,7 @@ Fred Brooks once described elegant design as few ideas combined powerfully. Cloj
 
 My number one take-away is a better understanding of macros, and in turn symbolic programming.
 
-I previously [pondered](./../_posts/2020-11-20-Meta-programming-and-dynamics.md), why C#, Java, and other languages I knew didn't have compile-time meta-programming.
+I previously [pondered](./../post/2020-11-20-Meta-programming-and-dynamics.md), why C#, Java, and other languages I knew didn't have compile-time meta-programming.
 
 Turns out, many have considered this problem before. The core category of compile-time meta-programming is known as *macros*.
 

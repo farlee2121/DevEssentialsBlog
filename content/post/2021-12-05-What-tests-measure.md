@@ -8,7 +8,7 @@ tags:
 
 # What Tests Measure
 
-My [test types diagram](../_posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) sparked concern that mature process focuses on repeated measured improvement, not specific techniques. This is right, but I don't see the conflict. Tests are a kind of measure, and the diagram identifies common tests (measures) certain actors leverage to meet larger goals. This raises the question, what do the different kinds of tests measure? Consequently, what do they tell us about our system?
+My [test types diagram](../post/2021-08-30-Test-Types-and-Lifecycle-Phases.md) sparked concern that mature process focuses on repeated measured improvement, not specific techniques. This is right, but I don't see the conflict. Tests are a kind of measure, and the diagram identifies common tests (measures) certain actors leverage to meet larger goals. This raises the question, what do the different kinds of tests measure? Consequently, what do they tell us about our system?
 
 
 Measurement is a big part of what differentiates software *engineering*, from general practice. A good engineer has a wide variety of tools to choose from and knows when to apply them. Here I'll try to explain what different tests measure and why we use them.
@@ -17,7 +17,7 @@ Disclaimer: I'm not an expert in all these kinds of testing, so I apologize to a
 
 ## At the role level
 
-As my [prior diagram](../_posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) illustrates, who writes the tests is important. Having different roles independently write tests helps us [quantify communication issues](https://spencerfarley.com/2021/03/19/quantified-communication-customer-to-code/), as well as what process stage introduced the errors. 
+As my [prior diagram](../post/2021-08-30-Test-Types-and-Lifecycle-Phases.md) illustrates, who writes the tests is important. Having different roles independently write tests helps us [quantify communication issues](https://spencerfarley.com/2021/03/19/quantified-communication-customer-to-code/), as well as what process stage introduced the errors. 
 
 **Acceptance Tests**: measure how well developer understanding matches customer understanding.
 
@@ -66,7 +66,7 @@ Frequent failure of properties, but not examples, may indicate unenforced data c
 
 **Behavioral Tests**: encode requirements in terms of consumer expectations, generally independent of the system being tested. Gherkin is a common tool that introduced the given, when, then pattern of describing an expectation. 
 
-Behavior tests are most commonly used for acceptance testing. They are more generally used for encoding requirements as stable test definitions. [Developer tests written this way](../_posts/2020-08-21-Test-Api-InPractice.md) can be reused as unit or integration tests.
+Behavior tests are most commonly used for acceptance testing. They are more generally used for encoding requirements as stable test definitions. [Developer tests written this way](../post/2020-08-21-Test-Api-InPractice.md) can be reused as unit or integration tests.
 
 Failure trends may indicate
 - unstable requirements
