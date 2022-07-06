@@ -8,6 +8,8 @@ tags:
 - Functional Programming
 - Design Thinking
 - Pivotal Insights
+
+math: true
 ---
 
 # Functional Composition, Decorator, and Aspect-Oriented Programming

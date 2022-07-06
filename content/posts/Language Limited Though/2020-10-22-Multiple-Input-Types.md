@@ -8,6 +8,7 @@ tags:
 - Functional Programming
 - Design Thinking
 - Pivotal Insights
+math: true
 ---
 
 # Type Safety with Multiple Valid Input Types

@@ -12,7 +12,6 @@ Params:
   # Paper theme settings
   ShowReadingTime: true
   ShowCodeCopyButtons: true
-  math: true
 
 frontmatter:
   date: [ ":filename", ":default"] # https://github.com/gohugoio/hugo/pull/4494

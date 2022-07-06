@@ -5,6 +5,7 @@ tags:
 - DDD
 - iDesign
 - Reading Notes
+math: true
 ---
 # Righting Software - Project Design Summary
 
@@ -131,7 +132,7 @@ Note that while project design affects staffing, thus direct cost, the project d
 ### Efficiency
 In essence, efficiency is how much of your staff's time is idle versus actively contributing to project completion. The critical path method calculates *project efficiency* as the sum of all activity efforts without regard to workdays or idle time over the sum of actual effort accounting for idle time and workdays.
 
-Target range is $15\% \le \text{efficiency} \le 25\%$. Over 30% is likely too rigorous for any team to execute and high-risk. This number is much lower than expected, largely due to the difference between the work week and raw sum off effort without respect to work days.
+Target range is $15 \\% \le \text{efficiency} \le 25\\%$. Over 30% is likely too rigorous for any team to execute and high-risk. This number is much lower than expected, largely due to the difference between the work week and raw sum off effort without respect to work days.
 
 ### Earned Value
 *Earned value* is essentially % project completion over time. More specifically, it is the sum of the effort on completed tasks.
@@ -144,10 +145,11 @@ A project can be complicated to deliver for many reasons: politics, pandemics, c
 Many of these factors can't be calculated and are also consistent across project plans. However, the difficulty based on work distribution and communication very much depends on the project design.
 
 This is estimated from the network using *cyclomatic complexity*.
-$C = \text{Complexity} = (\text{\# Dependencies}) - (\text{\# Activities}) + (2 *  \text{\# Disconnected Subgraphs})$  
+
+$$C = \text{Complexity} = (\text{\\# Dependencies}) - (\text{\\# Activities}) + (2 \*  \text{\\# Disconnected Subgraphs})$$ 
 
 In practice, this should always be  
-$C = (\text{\# Dependencies}) - (\text{\# Activities}) + 2$
+ $C = (\text{\\# Dependencies}) - (\text{\\# Activities}) + 2$
 
 Target values are $10 \le C \le 12$ and 15 is too complex to execute.
 
@@ -166,7 +168,7 @@ Keep in mind that risk is not a probability, but an index. It only shows relativ
 **Criticality risk**  
 *Criticality risk* is based on grouping the activity floats into G groups and assigning a weight to each group. Typically $G = 4$ and the groups are critical=4, high=3, medium=3, and low=1.
 
-$$Risk = \frac{\sum\limits_{i=1}^G{W_i*\text{Count}_i}}{W_c*(\text{Total Activities})}$$
+$$Risk = \frac{\sum\limits_{i=1}^G{W_i\*\text{Count}_i}}{W_c\*(\text{Total Activities})}$$
 
 Effectively, the sum of activity risk weights over the sum if every activity were critical.  
 This method works well with even float distributions and has low sensitivity to outliers
@@ -174,7 +176,7 @@ This method works well with even float distributions and has low sensitivity to 
 **Activity risk**  
 *Activity risk* is the sum of all activity floats over the sum if every activity had the maximum float.
 
-$$Risk = 1-\frac{\sum\limits_{i=1}^N{Float_i}}{(\text{Max Float})*(\text{Total Activities})}$$ 
+$$Risk = 1-\frac{\sum\limits_{i=1}^N{Float_i}}{(\text{Max Float})\*(\text{Total Activities})}$$ 
 
 This method is more sensitive to individual activities. It will generally be close to criticality risk unless there is an uneven distribution of risk that should be investigated.
 
