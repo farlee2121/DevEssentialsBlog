@@ -9,6 +9,7 @@ title: Development Cycles Checklist
 ---
 
 A junior developer recently asked for a daily responsibilities checklist. This question made no sense to me at first. A developer's job isn't so routine as a daily checklist. However, it sparked me to think about how a developer's regular activities can be described concisely. 
+<!--more-->
 
 The model I came up with is a riff on [Cycles of TDD](https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html) by Robert Martin. I also previously [visualized the Cycles of TDD](../posts/2020-11-13-Cycles-Of-TDD.md).
 

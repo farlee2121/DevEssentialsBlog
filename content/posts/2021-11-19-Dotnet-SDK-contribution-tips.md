@@ -8,6 +8,7 @@ title: Dotnet SDK Contribution Tips
 
 I've been experimenting with adding a feature to the [.NET SDK](https://github.com/dotnet/sdk). Oof, this project is understandably large and complex.
 Here are a few lessons I've learned that simplify working on the project.
+<!--more-->
 
 
 ## Solution Filters

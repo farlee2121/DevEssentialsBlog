@@ -6,6 +6,7 @@ title: "SWEBOK: Hierarchy of chapters"
 ---
 
 The Software Engineering Body of Knowledge (SWEBOK) defines the major categories of software knowledge. It even talks about relationships between topics here and there. However, the overall picture is never very clearly explored. I hope to remedy that.
+<!--more-->
 
 > Update 2022-01-14: Here's [SWEBOK term definitions](../posts/2022-01-14-SWEBOK-term-definitions.md) if needed
 

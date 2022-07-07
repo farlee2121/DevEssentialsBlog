@@ -12,6 +12,7 @@ title: Righting Software Visual Summary
 ---
 
 Thus far this only includes the System Design portion of the book.
+<!--more-->
 
 ## Separating Nature from Solutions (Domain Discovery)
 ![Solution Scrubbing](../../static/post-media/IDesign-System/iDesignSolutionScubbing.png)

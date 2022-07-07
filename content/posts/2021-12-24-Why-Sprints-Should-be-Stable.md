@@ -10,6 +10,7 @@ title: Why Sprints Should Be Stable
 ---
 
 I've long understood agile sprints to be a fixed set of work. Lately, I've had to examine why. I think the principle still stands, and here's why.
+<!--more-->
 
 For work to interrupt an iteration, we either
 - undermine the work that was deemed most important

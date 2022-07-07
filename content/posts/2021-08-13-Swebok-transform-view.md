@@ -8,6 +8,7 @@ title: Software Engineering as Problem Translation
 ---
 
 The Software Engineering Body of Knowledge (SWEBOK) states that software engineering transforms problems stated in natural language to problems stated in electrical current. This transform view emphasizes the continuity of the design process and highlights intermediate artifacts.
+<!--more-->
 
 > Update 2022-01-14: Here's [SWEBOK term definitions](../posts/2022-01-14-SWEBOK-term-definitions.md) if needed
 

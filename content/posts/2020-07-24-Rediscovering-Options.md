@@ -11,6 +11,7 @@ title: Rediscovering Options
 ---
 
 Configuration is a powerful tool and a dangerous temptation. My goal in this post is to walk through the ways I mishandled configuration, ended up rediscovering the Options configuration pattern, and finally dive into specific design scenarios to show why Options is the most stable solution.
+<!--more-->
 
 First some motivation. Configuration is a powerful expression of the Open-Closed principle. It allows us to change the behavior of code without changing the code itself. This power to extend helps us trade many similar code paths for a single configurable path. Consider a calendar framework, it would be frustrating if you needed a different component to change the title, or color, or language, or date format, or so on. 
 

@@ -8,6 +8,7 @@ title: Practice & Feedback
 ---
 
 Repeatedly explaining some idea without perceived progress is frustrating for both the teacher and student. Ideas feel compelling and actionable, but remember, knowledge is both declarative and procedural. Thus, feedback and practice are two halves of one process. Feedback is not effective without an opportunity to practice.
+<!--more-->
 
 > Keypoint: Feedback is not effective without an opportunity to practice
 

@@ -7,6 +7,7 @@ title: "Event Stores: An Advance in Data Safety"
 ---
 
 I've been working with [Datomic](https://www.datomic.com/) on a recent project. Datomic, and stores like it, solve a fundamental class of development issues: data safety.
+<!--more-->
 
 [Datomic](https://www.datomic.com/), [EventStore](https://www.eventstore.com/), and similar databases don't appear to have an established category name. The best I've found is [event stores](https://en.wikipedia.org/wiki/Event_store) or event databases. However, they share one key quality: they store data as a series of changes rather than as some mutable current state. Current state may be queried, but it is an index built from the stored differences rather than the definitive representation.
 

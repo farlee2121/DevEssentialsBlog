@@ -8,6 +8,7 @@ title: Knowledge Types and Mastery
 ---
 
 *Defn: Mastery - a high degree of competence in a particular area.*
+<!--more-->
 
 Mastery is a goal of learning, but it can also be a barrier to teaching.
 

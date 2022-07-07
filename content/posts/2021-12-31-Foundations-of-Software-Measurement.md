@@ -8,6 +8,7 @@ title: Foundation of Software Measurement
 ---
 
 Software Engineers are differentiated from other programming disciplines by economical, repeatable, and reliable results. Such consistency requires measurement, data on which to make informed decisions. I propose that source control and work item tracking are the kernel of such process.
+<!--more-->
 
 First, what are the goals of a refined process? What do we want refine through measurement?
 - Delivery of expected value

@@ -8,6 +8,7 @@ title: Self-learning
 ---
 
 I see programming as an extended application of problem solving, and problem solving is just a different view on self-learning. Encouraging self-learning makes a team skillful and robust.
+<!--more-->
 
 **Learning is a skill like any other**. It requires practice, feedback, and ways of organizing knowledge.
 

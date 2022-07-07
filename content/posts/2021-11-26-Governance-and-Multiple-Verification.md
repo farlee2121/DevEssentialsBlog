@@ -9,6 +9,7 @@ title: Governance is a mine of Quality techniques
 ---
 
 I recently put together that multiple verification (the quality technique) is effectively the same and as [governance](https://en.wikipedia.org/wiki/Corporate_governance) techniques. It's about managing the level of trust and risk we accept from individual contributors.
+<!--more-->
 
 <!-- Aiming for "low-trust" may sound bad, but good governance doesn't mean we don't trust, it means we don't *have to*.
  -->

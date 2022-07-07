@@ -7,6 +7,7 @@ title: SWEBOK Key Definitions
 ---
 
 I realized that my Software Engineering Body of Knowledge (SWEBOK) posts reference, but never define, the 15 key knowledge areas outlined by SWEBOK. I intent to fix that with this post.
+<!--more-->
 
 Below I cover each of SWEBOK's key knowledge areas with
 - An informal definition

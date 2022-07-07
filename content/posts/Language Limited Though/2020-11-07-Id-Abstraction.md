@@ -12,6 +12,7 @@ title: Id Abstractions
 ---
 
 I once worked for a company that exposed all of their entities IDs as integers. It's common practice, but it bit them hard when they needed to adopt an offline-then-merge strategy for client data. This required switching ids to Guids all over the code base and it was an arduous undertaking. I've been trying and failing to simply abstract ID types since.
+<!--more-->
 
 Here I'll define the problem, look at attempted solutions in C#, and finish with the simple solutions in F#.
 

@@ -7,6 +7,7 @@ title: Service Locator Hides Circular References
 ---
 
 Many have discussed the issues with the service locator anti-pattern for dependency management. However, I've repeatedly run into an issue that I haven't seen discussed yet: it causes circular references. 
+<!--more-->
 
 ## Existing Arguments
 

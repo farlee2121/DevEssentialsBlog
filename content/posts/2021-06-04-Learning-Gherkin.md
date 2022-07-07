@@ -10,6 +10,7 @@ title: Getting started with Gherkin
 ---
 
 I finally got hands-on experience with Gherkin, the common language for Behavior-driven Development (BDD). Getting started was more of a struggle than I anticipated. Here are solutions to some of my main hangups.
+<!--more-->
 
 ## Struggles
 

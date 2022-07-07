@@ -8,6 +8,7 @@ title: Safe Refactoring with Scientist
 ---
 
 Agile and DevOps have pushed faster and more frequent releases. Techniques like integration test, feature flags, canary tests, and monitors evolved to maintain service reliability without slowing that pace. But some code paths are so critical that they cannot fail even once. This is where [Scientist](https://github.com/github/scientist) comes in.
+<!--more-->
 
 [Scientist](https://github.com/github/scientist), and language ports like [Scientist.net](https://github.com/scientistproject/Scientist.net), enable safe refactoring of critical code paths. The strategy is 
 1. Create an "experiment" that knows both the new and old code paths

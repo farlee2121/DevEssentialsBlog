@@ -7,6 +7,7 @@ title: Predictability and Correlated Type Systems
 ---
 
 I've recently been learning about type systems, and I realized that structural and dynamic typing often pair while nominal and static type system often pair. Why?
+<!--more-->
 
 First let's ground ourselves with some definitions
 

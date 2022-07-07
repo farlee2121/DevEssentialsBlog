@@ -8,6 +8,7 @@ title: Prior Knowledge
 ---
 
 Every student views new information through the lens of prior knowledge. In fact, some researchers suggest that learning *requires* connecting new information to what we already know. Either way, more connections leads to improved recall and utility.
+<!--more-->
 
 However, prior knowledge can hurt or fail to connect to new knowledge in several ways.
 

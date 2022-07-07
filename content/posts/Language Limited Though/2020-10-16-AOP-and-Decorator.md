@@ -14,6 +14,7 @@ title: Functional Composition, Decorator, and Aspect-Oriented Programming
 ---
 
 Aspect-Oriented programming has captivated my imagination for years. C#, however, does not support AOP. Even conceptually realizing benefits of the paradigm proved difficult. Then, I experienced functional composition.
+<!--more-->
 
 ## What is Aspect-Orientation
 The heart of Aspect-Orientated Programming (AOP) is cross-cutting concerns. The creators saw concerns like logging, authorization, authentication, and transaction management. They asked why these needed to be spread through the program. 

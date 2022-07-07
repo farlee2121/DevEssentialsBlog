@@ -9,6 +9,7 @@ title: Program Structure is not File Structure
 
 Naming is one of the most important activities in programming. Names are the primary vehicle for communicating intent and making code understandable.
 Names haves some sneaky counterparts: scope and context. I argue that our tools for scope and context impact how good our naming can be, and file-based modules force coupling between concerns that inhibit global name organization.
+<!--more-->
 
 I previously [wrote about](../posts/2021-09-24-Clojure-inhibits-code-grouping.md) a specific encounter with this trouble in Clojure. However, I think the topic deserves a more general exploration.
 

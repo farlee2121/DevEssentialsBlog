@@ -9,6 +9,7 @@ title: Lessons From Clojure
 ---
 
 Fred Brooks once described elegant design as few ideas combined powerfully. Clojure is a language that lives by that idea. Understanding Clojure improved my understanding of language choices in general. Here I'll highlight some of my learnings.
+<!--more-->
 
 ## Macros
 

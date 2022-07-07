@@ -10,6 +10,7 @@ title: Implicit Fundamentals
 I recently gave a presentation on the Software Engineering Body of Knowledge focused on road maps for software learning.
 This involves much philosophy on how we think about software. The conversation surfaced many crucial fundamental views that often go unstated.
 I've enumerated them here.
+<!--more-->
 
 - There is no perfect solution, just a bullseye of good enough
 - There is no general solution to expressing yourself clearly

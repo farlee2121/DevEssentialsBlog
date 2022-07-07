@@ -6,6 +6,7 @@ title: Value Objects and Reuse
 ---
 
 Looking for value objects among entity members is one of my favorite lessons from Domain Driven Design. Here's a quick overview.
+<!--more-->
 
 
 I can't count how many times I've seen types overflowing with members, and the members clearly form implicit groups or concepts. Spend a moment identifying implicit concepts in the following `User` example.

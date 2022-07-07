@@ -8,6 +8,7 @@ title: Functional Guided Reader
 ---
 
 I absolutely love Scott Wlaschin's work. He breaks down the unfamiliar and sometimes complex ideas of functional languages into approachable explanations. My one gripe with his site is that there is a bit of an implicit order to the content. Here's my outline of how I think the concepts best build on each other. 
+<!--more-->
 
 I know he divides posts into topics in his [site contents page](https://fsharpforfunandprofit.com/site-contents/), but it isn't really a reading order. Some of the early series recommend pre-requisites, but not until you already start reading.
 

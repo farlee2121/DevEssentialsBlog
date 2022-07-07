@@ -9,6 +9,7 @@ title: "Chat Library Case Study: Open-Closed Application"
 ---
 
 This is a throw back to one of my earlier wrestlings with the Open-Closed principle and writing extensible frameworks. The goal is to shed some light on an important realization that let me to understanding the Open-Closed Principle.
+<!--more-->
 
 ## The Problem
 

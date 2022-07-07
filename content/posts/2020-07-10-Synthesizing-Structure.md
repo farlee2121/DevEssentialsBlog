@@ -10,7 +10,6 @@ title: Synthesizing Project Organization Methods
 ---
 
 How to organize code into projects/packages can be a challenge. Here's an interesting idea I thought of from synthesizing ideas from Robert Martin, Juval Lowy, Mark Seemann, and how many nuget packages are organized.
-
 <!--more-->
 
 The ideas:

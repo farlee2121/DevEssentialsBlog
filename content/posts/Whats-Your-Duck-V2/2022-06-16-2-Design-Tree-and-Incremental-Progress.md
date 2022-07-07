@@ -8,6 +8,7 @@ title: "What's your Duck: The Design Tree and Incremental Progress"
 ---
 
 This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post explores the fundamental questions "How do we effectively break down problems?", "Can software be perfect?", and "What makes software good?"
+<!--more-->
 
 If you haven't considered these questions yourself, take a few moments to write down your thoughts. It [aids the learning process](../../posts/2022-03-07-Small-Teaching-Review.md#predicting).
 

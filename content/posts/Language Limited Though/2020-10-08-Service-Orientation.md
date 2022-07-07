@@ -12,6 +12,7 @@ title: Service-Orientation and Functional Programming
 ---
 
 Service-Oriented Programming is my primary programming paradigm. It divides the software into self-contained "services" or groups of functionality. Services also apply in functional programming, rather, service-like behavior is enforced all the way to the foundational functional concepts.
+<!--more-->
 
 To be clear, Service-Orientation isn't a concept I struggled with in C#. Rather, it is fascinating how service-oriented principles that surfaced in response to object-oriented issues align so well with concepts of functional programming. Let's look at the two methods, then compare them.
 

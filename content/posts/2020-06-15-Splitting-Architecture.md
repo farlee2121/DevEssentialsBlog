@@ -11,6 +11,7 @@ title: Splitting Architecture
 ---
 
 I was "raised" on the iDesign school of architecture. To me architecture meant the high-level separation of concerns into clients, managers, engines, accessors, and resources.
+<!--more-->
 
 Overall, this is a pretty decent view. Later, I would learn of Clean Architecture, Hexagonal Architecture, Onion Architecture, and some other less known paradigms. 
 All of these jive pretty well with iDesign. They all 

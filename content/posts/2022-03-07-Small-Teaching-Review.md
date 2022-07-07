@@ -8,6 +8,7 @@ title: Small Teaching Review
 ---
 
 Small teaching is an engaging and practical condensation of learning research into an accessible read. The book is oriented toward teachers, but is meaningful for anyone who wants to learn more effectively or understand how to share ideas.
+<!--more-->
 
 ## Core Concept
 

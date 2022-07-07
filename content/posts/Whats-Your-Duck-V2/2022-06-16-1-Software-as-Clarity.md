@@ -8,6 +8,7 @@ title: "What's your Duck: Software as Clarity"
 ---
 
 This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post explores the key questions "What is programming?", "What is Software Engineering?", and how these answers relate to our design process.
+<!--more-->
 
 If you haven't considered these questions yourself, take a few moments to write down your thoughts. It [aid the learning process](../../posts/2022-03-07-Small-Teaching-Review.md#predicting).
 

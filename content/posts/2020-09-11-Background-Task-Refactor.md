@@ -12,6 +12,7 @@ title: Async Task Refactor Case Study
 ---
 
 I've been unhappy with the async/background work model in my system for a while. The async logic always seems excessively complex, either entangled with business logic or creating opaque coupling between flows. However, my recent [breakthrough on code structure](../posts/2020-07-10-Synthesizing-Structure.md) suggested a clear path to adding background work in an aspect-oriented style. Let's examine a refactor that helped me prove decorator-style async communication.
+<!--more-->
 
 ## The Refactor
 The project centered around a search workflow. Searching required entities to be indexed with the search database (specifically Lucene). Many system events could trigger entities to be indexed. Most importantly, we were now letting users publish their own entities to the search index. This meant that we needed to add controls for when the search index was updated so that we could moderate published content and avoid search performance issues during peak hours.

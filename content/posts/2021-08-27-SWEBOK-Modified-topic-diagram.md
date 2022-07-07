@@ -9,6 +9,7 @@ title: "SWEBOK: Modified software Concept Map"
 
 I've been wrestling with the Software Engineering Body of Knowledge (SWEBOK) to distill an intuitive mental image for software knowledge.
 Here is my latest attempt incorporating insights from previous visuals.
+<!--more-->
 
 > Update 2022-01-14: Here's [SWEBOK term definitions](../posts/2022-01-14-SWEBOK-term-definitions.md) if needed
 

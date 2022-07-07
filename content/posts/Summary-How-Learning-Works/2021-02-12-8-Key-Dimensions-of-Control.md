@@ -8,6 +8,7 @@ title: Key Dimensions of Control
 ---
 
 **Measurement** – The types and amount of insights we extract on our students current understanding
+<!--more-->
 
 Tools: Concept Inventories, Self-Assessments, Diagnostic Assessments, Brainstorming, Assignment Error Patterns
 

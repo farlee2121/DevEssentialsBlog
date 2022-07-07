@@ -7,6 +7,7 @@ title: Going Fast is Going Well
 ---
 
 I want to directly address the idea that moving quickly means bad code. Heavy design process is also not the opposite of either speed or sloppy code. To go fast is to go well, and that means fast incremental design.
+<!--more-->
 
 ## Design Stamina
 It's generally accepted that bad code slows you down, eventually. The [design stamina hypothesis](https://www.martinfowler.com/bliki/DesignStaminaHypothesis.html) represents the general relationship well. 

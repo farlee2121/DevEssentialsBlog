@@ -7,6 +7,7 @@ title: Test Case Selection Guide
 ---
 
 Testing is a broad and essential topic for Software Developers. There is a dizzying diversity of [testing approaches for different scenarios](../posts/2021-12-05-What-tests-measure.md). However, the typical developer's inner loop focuses on a few kinds of tests and test selection. That is, choosing which tests need to be written.
+<!--more-->
 
 ## Differentiation & Context
 

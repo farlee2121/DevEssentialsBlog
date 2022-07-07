@@ -7,6 +7,7 @@ title: "Misconception: Constructor Injection Exposes Dependency Chains"
 ---
 
 I've struggled with explaining Service Locator as an anti-pattern. I've addressed [certain cons of service locator](../posts/2021-03-12-Service-Locator-Hides-Circular-Dependencies.md) and pros of constructor injection. However, I think I overlooked a fundamental misconception that would reasonably push developers away from constructor injection: a belief that constructor injection exposes dependency chains across the system.
+<!--more-->
 
 ## The Misconception
 

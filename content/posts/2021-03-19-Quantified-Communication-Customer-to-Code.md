@@ -10,6 +10,7 @@ title: Quantifying Communication From Customer to Code
 ---
 
 Learning functional programming has included significant quality time with Type-Driven Development and property-based testing. These paradigms highlighted a gap in my previous testing techniques. It led me to better classify types of communication errors between customers and code, and the toolset for addressing each type.
+<!--more-->
 
 There are three key players that can miscommunicate when making a business system: customers (and their reps), developers, and the code. Miscommunications can happen between each group.
 - Customer to devs: Different understandings of the problem being solved

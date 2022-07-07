@@ -8,6 +8,7 @@ title: Meta-Programming and Type Dynamics
 ---
 
 Dynamically typed systems effectively come with meta-programming capabilities for free, but are dynamic systems fundamentally better at meta-programming?
+<!--more-->
 
 I recently learned the difference between Structural and Nominal typing. This got me thinking about the differences I've felt when trying to implement Aspect-Orientation or other meta-programming type activities in Javascript vs C#.
 

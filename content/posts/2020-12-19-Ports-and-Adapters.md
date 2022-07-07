@@ -8,6 +8,7 @@ title: Ports and Adapters
 ---
 
 Understanding [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) has transformed my approach to architecture. Now I feel like my understanding has evolved one step further by understanding its parent pattern's name, Ports and Adapters.
+<!--more-->
 
 Ports and Adapters is more commonly known as Hexagonal Architecture. While the name confused me at first, I've come love it as a strong analogy for the core intent of this family of patterns.
 

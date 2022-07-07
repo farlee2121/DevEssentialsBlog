@@ -9,6 +9,7 @@ title: Qualities of a Good Dev Environment
 ---
 
 I recently tried to explain when a developer should be cautious versus when they should freely experiment. This caused me to realize I never learned this lesson explicitly. It's an intuition I built over time and forgot I had to learn. I believe the answer aligns with what makes a good development environment.
+<!--more-->
 
 Trying to identify times for caution first led me to answers like
 - Any time live data is involved (this tends to be the most powerful flag for caution because it's also usually the hardest to recover from)

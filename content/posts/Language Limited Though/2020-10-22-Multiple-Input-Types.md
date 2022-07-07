@@ -13,6 +13,7 @@ title: Type Safety with Multiple Valid Input Types
 ---
 
 Sometimes a constructor or function can naturally accept multiple types. The classic solution to this is overloading. The problem is overloading can combinatorially expand for every multi-typed parameter.
+<!--more-->
 
 A common example is the database connection. .Net offers a strongly typed DbConnection type, but the connection is usually stored as a string. There may also be framework-specific representations. Different users will have different opinions about how they want to represent the connection string and forcing users to convert every time would be frustrating.
 

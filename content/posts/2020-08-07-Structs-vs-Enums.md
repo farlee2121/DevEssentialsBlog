@@ -10,6 +10,7 @@ title: Why Static Structs are Better Than Enums
 ---
 
 C# (and Java) offer a type call enum (aka enumeration). It represents a fixed list of possible values and is a powerful tool for communicating intentions through the type system. However, a recent legacy project forced me to face the shortcomings of enums and realize an even more powerful pattern, struct named constants.
+<!--more-->
 
 ## The Problem
 I was working on an old golf-related program. This code was... special. One of it's many problems was the inconsistent use of literals all throughout the code. It was common to see sections like

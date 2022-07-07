@@ -8,6 +8,7 @@ title: Functional Programming is a lasting way forward
 ---
 
 My deep live into functional programming has definitely made me a fan. Most importantly, it helps me see a way for programming languages to keep evolving.
+<!--more-->
 
 Sure, I think it better matches the rising service-oriented views on software. It improves reasonability with immutable-by-default data and separating data from operations. Mark Seemann does a [great talk](https://www.youtube.com/watch?v=US8QG9I1XW0) in this vein. 
 

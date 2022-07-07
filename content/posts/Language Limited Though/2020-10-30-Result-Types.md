@@ -12,6 +12,7 @@ title: Result Types
 ---
 
 I want to cleanly represent predictable failure states as part of my function contracts. This lets consumers know right away what scenarios they should expect without documentation or looking through code. F# encourages this pattern and normalizes it with the Result type. Representing the same idea in C#, however, is non-trivial. 
+<!--more-->
 
 This post will first specify the problem(s), look at failed solutions in C#, cover F# solutions, and try to map functional ideas back to C#. 
 

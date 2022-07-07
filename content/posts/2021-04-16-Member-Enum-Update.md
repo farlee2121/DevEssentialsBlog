@@ -7,6 +7,7 @@ title: Static Member Enums Update
 ---
 
 I [previously wrote](../posts/2020-08-07-Structs-vs-Enums.md) on how static members on a struct work as a more extension-friendly enum. This pattern has gotten even better as of C# 9.
+<!--more-->
 
 ## Records
 The first improvement comes via records. Records are reference types with value-based equality. The main benefits are

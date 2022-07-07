@@ -7,6 +7,7 @@ title: Schema and Selection
 ---
 
 <!-- As programmers, we naturally see semantic equivalencies between our data types, but need different sets or representations for each scenario.  -->
+<!--more-->
 I commonly struggle with "proliferation of types". Different usecases call for different views of the data (especially clients). This leads to a half dozen data types that represent about the same information. I always assumed this was unavoidable to achieve safety and clarity. However, Rich Hickey proposes a new take on the problem.
 
 This post is a response to [Maybe not](https://www.youtube.com/watch?v=YR5WdGrpoug) by Rick Hickey.

@@ -8,6 +8,7 @@ title: Case for Static Class Extension in C#
 ---
 
 Working on [System.CommandLine.PropertyMapBinder](https://github.com/farlee2121/System.CommandLine.PropertyMapBinder) has led me to believe C# is missing a powerful feature: static class extensions. This post explains my usecase, and balances some of the tradeoffs.
+<!--more-->
 
 
 ## Context

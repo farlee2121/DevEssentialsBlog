@@ -7,6 +7,7 @@ title: A Few Logging Ideas
 ---
 
 This post is mostly a self-reminder to think more on a few logging ideas I encountered. I figured others might benefit from them too.
+<!--more-->
 
 
 ## Canonical Log Lines

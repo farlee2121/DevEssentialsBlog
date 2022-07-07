@@ -9,6 +9,7 @@ title: Efficient Inter-Team Contracts with Acceptance Tests
 ---
 
 I've been exploring large-scale formal development practices, and realized acceptance tests may be the best way for developers to encode expectations for other developers.
+<!--more-->
 <!-- (maybe rephrase to sound less conclusive than "realized") -->
 
 ## Testing Techniques

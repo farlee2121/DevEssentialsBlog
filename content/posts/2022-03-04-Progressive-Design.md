@@ -8,6 +8,7 @@ title: Progressive Design
 ---
 
 Choosing the right amount of process is an art. Too much process is smothering and too little is a mess. However, I think [incremental, stable, and additive processes](../posts/2022-02-25-Stable-Incremental-Additive.md) naturally start simple and mature *progressively* with our demands.
+<!--more-->
 
 
 Progressive value is inherent if our system isn't deeply affected by change (stable), changes in small complete chunks (incremental), and the increments mostly build on each other (additive).

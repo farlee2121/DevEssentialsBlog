@@ -8,6 +8,7 @@ title: What Tests Measure
 ---
 
 My [test types diagram](../posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) sparked concern that mature process focuses on repeated measured improvement, not specific techniques. This is right, but I don't see the conflict. Tests are a kind of measure, and the diagram identifies common tests (measures) certain actors leverage to meet larger goals. This raises the question, what do the different kinds of tests measure? Consequently, what do they tell us about our system?
+<!--more-->
 
 
 Measurement is a big part of what differentiates software *engineering*, from general practice. A good engineer has a wide variety of tools to choose from and knows when to apply them. Here I'll try to explain what different tests measure and why we use them.

@@ -7,6 +7,7 @@ title: Design and Requirements as Negotiation
 ---
 
 I finally got around to reading [Getting to Yes](http://www.fd.unl.pt/docentes_docs/ma/AGON_MA_25849.pdf ), which several friends have recommended. It is a fantastic crash course in negotiation. I also couldn't help but notice the similarities between negotiation and design.
+<!--more-->
 
 Good designs are driven by clear understanding of user requirements, and requirement's gathering is really a form of negotiation itself.
 

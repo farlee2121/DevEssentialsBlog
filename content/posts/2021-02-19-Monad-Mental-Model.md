@@ -8,6 +8,7 @@ title: Building a Monad Intuition
 ---
 
 Like most people, I've found monads hard to pin down. I know things I can do with them, but I don't understand them at an intuitive and flexible level. Here I'll try to build my mental model by relating to other tools.
+<!--more-->
 
 Monads are originally a math concept, but I learned about them in a programming context and want to use them practically as a developer. However, they aren't like other programming structures I know. It isn't really a statement, data structure, or type. What makes a monad special is the behavioral properties that live outside of the obvious syntax or structures.
 

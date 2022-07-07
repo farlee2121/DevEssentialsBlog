@@ -8,6 +8,7 @@ title: Tests as Values
 ---
 
 Lambdas, or functions as values, have worked their way into mainstream programming and transformed development for many programmers. 
+<!--more-->
 It's rare to see a program that doesn't `.filter` a list with a predicate or `.map` to transform from one type to another. This same 
 as-a-value approach can be applied to automated tests, and I have hopes it will also transform how we program.
 

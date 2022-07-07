@@ -6,6 +6,7 @@ title: Pull Request Checklist
 ---
 
 This is my attempt to communicate what I consider when looking at a pull request.
+<!--more-->
 
 I've tried to frame the list as a series of questions. Not all lines of investigation 
 are always relevant. The list instead tries to prompt the right lines of thought and defer to separate processes if specialized knowledge is needed.

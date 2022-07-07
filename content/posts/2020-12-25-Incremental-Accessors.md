@@ -9,6 +9,7 @@ title: Incremental Accessors
 ---
 
 I've been on a long journey of meshing IDesign with Clean Architecture. Accessors have been a conceptual sticking point. 
+<!--more-->
 
 On the side of IDesign, I understood accessors as a *domain* service for abstracting storage. This would place them in the business logic or domain layer of Clean Architecture.
 

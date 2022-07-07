@@ -8,6 +8,7 @@ title: BDD Pushes the right extensibility
 ---
 
 I recently read Mark Seemann's post on how [Testability is the Open-Closed Principle](https://blog.ploeh.dk/2009/06/05/TestabilityIsReallyTheOpenClosedPrinciple/). This helped me realize the approach to testing directs the kinds of flexibility in our system, and behavior-based testing pushes the right kind of flexibility.
+<!--more-->
 
 Consider this visual on volatility analysis ([from this post on IDesign](../posts/2020-07-03-iDesign-Visual-Summary.md)). 
 

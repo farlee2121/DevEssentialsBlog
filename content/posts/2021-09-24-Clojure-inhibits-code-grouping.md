@@ -7,6 +7,7 @@ title: Clojure Namespaces Inhibit Code Grouping
 ---
 
 I've spent most of this year in Clojure after years of .NET. Much of my F# design skills made the jump, but one language difference has notably changed how I write programs. Specifically, two namespacing choices inhibit my inclination to explicitly group small sections of related declarations. This broadly impacts both program structure and naming.
+<!--more-->
 
 ## No Nested Modules
 

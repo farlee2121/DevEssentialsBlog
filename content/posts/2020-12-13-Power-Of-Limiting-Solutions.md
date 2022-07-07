@@ -7,6 +7,7 @@ title: The Power of a Limited Toolset
 ---
 
 It's easy to drown in the sea of frameworks and methodologies available to programmers. Numerous authors speak out about against the constant swarming between them. However, now I have a concrete expression for both why it hurts and why fewer solutions can be better.
+<!--more-->
 
 I've known that chasing frameworks was bad for quite a while. I was lucky to learn early that a programmer should consider their design first, and then figure out how languages and frameworks can serve the design (Code Complete by Steve McConnell, [Robert Martin](https://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html), Domain Modeling). 
 

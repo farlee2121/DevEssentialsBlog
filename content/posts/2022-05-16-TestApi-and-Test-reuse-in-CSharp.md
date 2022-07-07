@@ -9,6 +9,7 @@ title: TestApi and Test Reuse in C#
 
 The [TestApi](../posts/2020-08-21-Test-Api-InPractice.md) pattern helps decouple tests from our system and enables more stable and reusable tests.
 I've shown how I [use the pattern in F#](../posts/2021-10-08-TestApi-in-FSharp-revised.md). Now here's a similar example in C#.
+<!--more-->
 
 
 ## Motivating Context

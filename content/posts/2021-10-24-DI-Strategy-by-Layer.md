@@ -10,6 +10,7 @@ title: "Theory: Dependency Injection Scheme is Determined by Responsibility Laye
 ---
 
 Scott Wlaschin posted an [incredible series](https://fsharpforfunandprofit.com/posts/dependencies/) on dependency injection. It clarifies the different techniques and cases where each is useful. I noticed an interesting relationship between the techniques and the layers I use to categorize services.
+<!--more-->
 
 # Techniques
 

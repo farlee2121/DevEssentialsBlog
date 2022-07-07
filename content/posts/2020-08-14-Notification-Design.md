@@ -10,6 +10,7 @@ title: Notification Refactor Case Study
 ---
 
 A general design for integrating notifications (email, text, push, etc) has long eluded me. However, a recent refactor using the concepts of [Synthesizing Project Organization Methods](2020-07-10-Synthesizing-Structure.md) has settled my search. Here I'll explore my refactoring experience and why the conceptual shift is generically more stable. 
+<!--more-->
 
 ## Current System
 

@@ -8,6 +8,7 @@ title: Pros and cons of REPL-centered development
 ---
 
 I've been working on Clojure lately, and the Clojure community tends to center their development around the REPL. While often useful, this approach also comes with some unforeseen downsides.
+<!--more-->
 
 ## Pros
 Clojure has some top-tier REPL tooling with write-time assistance and smooth cycles between code files and the REPL. The result is easy experimentation with language and system components.

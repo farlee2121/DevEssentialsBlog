@@ -7,7 +7,7 @@ tags:
 title: "What's your Duck: Conclusion"
 ---
 This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post reviews what we've learned.
-
+<!--more-->
 
 First we explored the motivating questions
 - What is programming? Software Engineering?

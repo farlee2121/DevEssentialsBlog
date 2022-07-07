@@ -6,6 +6,7 @@ title: Patterns in practice
 ---
 
 Patterns are generally taught in isolation (separation of concerns), but application of patterns is often highly interconnected. Here I'll show how my most used patterns come together as a design system.
+<!--more-->
 
 As a reminder, patterns are named solutions to common problems in software. They level up developers by reducing complexity, and compactly communicating intent.
 

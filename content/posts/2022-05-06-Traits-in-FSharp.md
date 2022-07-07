@@ -10,6 +10,7 @@ title: Why No Traits (late-bound inheritance) in F#
 ---
 
 I fooled myself for a moment into thinking F# has ad-hoc polymorphism. Interface inheritance in F# looks a lot like traits in rust. So, why doesn't F# support trait-like polymorphism.
+<!--more-->
 
 ## What is a trait?
 

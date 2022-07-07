@@ -7,6 +7,7 @@ title: "Continuous Integration and Refactoring: How to constructively develop ag
 ---
 
 Continuous Integration (CI) is a hot buzzword. I've had a general sense of it for a while, but [Refactoring](https://refactoring.com/) chapter two brought its place into sharp focus, mainly through Preparatory Refactoring.
+<!--more-->
 
 Martin Fowler is approaching CI from how it relates to refactoring. Specifically, CI minimizes the inhibition to refactor, even at a large scale, by avoiding as much merging pain as possible. This leads to more frequent refactoring and a healthier code base. A healthier code base is easier to understand and easier to keep healthy.
 

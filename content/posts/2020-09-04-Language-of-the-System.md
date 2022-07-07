@@ -8,6 +8,7 @@ title: System Language
 ---
 
 [The Language of the System](https://www.youtube.com/watch?v=ROor6_NGIWU) by Rick Hickey is an illuminating talk about why systems differ from programs. It provides a clear framework for understanding and addressing the differences. I believe these same ideas underpin some of the recent movements in software design philosophy. Let's explore.
+<!--more-->
 
 ## Talk Summary
 The core of this presentation is recognizing how systems differ from programs and the consequences that has for system design.
