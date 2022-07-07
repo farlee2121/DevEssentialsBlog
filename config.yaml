@@ -10,6 +10,11 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+outputFormats:
+  RSS:
+    baseName: "feed"
+
 Params:
   # Paper theme settings
   ShowReadingTime: true
