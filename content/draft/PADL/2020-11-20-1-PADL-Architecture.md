@@ -14,6 +14,7 @@ tags:
 <!-- TODO: talk about accessibility somewhere. Both in understandability and usability. No question of "Can I apply this when...". The answer is yes. Your company, the state of your code, the phase of coding don't matter. You can always use this  -->
 
 Architecture is hard. There are few well-prescribed methods and those that exist are complex to understand. I've been on a journey to combine two methods I enjoy: iDesign and Clean Architecture (or Ports and Adapters-type architecture). Here I'll boil them down to their essence and glue them together.
+<!--more-->
 
 IDesign and Clean Architecture both define a variety of guidance, but I'm reducing each to what I see as its essence
 - Clean architecture -> use ports and adapters to create pluggable components
