@@ -7,6 +7,10 @@ theme: "github.com/adityatelange/hugo-PaperMod"
 enableRobotsTXT: true
 googleAnalytics: "G-YPSFPN3NJN"
 rss: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 Params:
   # Paper theme settings
   ShowReadingTime: true
