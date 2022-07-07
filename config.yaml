@@ -12,6 +12,7 @@ markup:
     renderer:
       unsafe: true
 Params:
+  description: "Critical developer skills in 5 minutes or less."
   # Paper theme settings
   ShowReadingTime: true
   ShowCodeCopyButtons: true
