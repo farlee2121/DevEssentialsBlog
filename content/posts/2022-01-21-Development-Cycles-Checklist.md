@@ -180,8 +180,8 @@ However, a series of time-based cycles does provide a decent picture of develope
 
 
 
--title: # Abbreviated Cycle view
----
+----
+## Abbreviated Cycle view
 
 Minute
 - what am I proving?
