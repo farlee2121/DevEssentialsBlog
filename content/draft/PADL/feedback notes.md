@@ -34,8 +34,8 @@ Consider making some of these posts stand-alone (not part of the initial series)
 
 I'd like some visuals, but i'm not sure what
 - i think a one service to one service visual would be good. Also allows me to demonstrate decorators
-  - I think a full system visual is just too complicated to be meaningful unless it is a concrete system. That could be meaninful as a post, but would be too complicated for a presentation.
-    - in my current posts it would probably fit well in the file orgnization post. Maybe in post 1b
+  - I think a full system visual is just too complicated to be meaningful unless it is a concrete system. That could be meaningful as a post, but would be too complicated for a presentation.
+    - in my current posts it would probably fit well in the file organization post. Maybe in post 1b
 
 -----
 

@@ -41,10 +41,10 @@ At its heart, clean architecture is about Port and Adapter-style plugin architec
 
 <!-- put a simple one service to one service port diagram? -->
 
-In contrast to iDesign, Clean Architecture provides guidance on loose coupling, but nothing about different reponsiblities in a domain. Robert Martin did this intentionally, but I feel like it results in too many open questions for beginners to easily apply the pattern.
+In contrast to iDesign, Clean Architecture provides guidance on loose coupling, but nothing about different responsibilities in a domain. Robert Martin did this intentionally, but I feel like it results in too many open questions for beginners to easily apply the pattern.
 
 ## PADL Guidelines
-PADL crosses the domain responsiblity separation of iDesign with the bind-time clarity and flexiblity of Clean Architecture. The patterns fill each others gaps to create a reusable library for the domain. Like any good library, the components are portable with decisions of scale, deployment, extension, and runtime are pushed into swappable add-ons.
+PADL crosses the domain responsibility separation of iDesign with the bind-time clarity and flexibility of Clean Architecture. The patterns fill each others gaps to create a reusable library for the domain. Like any good library, the components are portable with decisions of scale, deployment, extension, and runtime are pushed into swappable add-ons.
 
 The goal is to establish clear rules for organizing code and how each component communicates with other code. I can also provide guidelines for identifying domain concepts and designing contracts, but the final decisions are intrinsically unique to every system.
 
@@ -59,12 +59,12 @@ The goal is to establish clear rules for organizing code and how each component 
    - Implement service dependency contracts with thin maps to other frameworks or services
 - No inner-layer calls (i.e. service to service or adapter to adapter)
   - The only exception is decorators, which add functionality to a contract transparently. See the [decorator section](#decorator-adapters-for-cross-cutting-concerns).
-- Services get more generic to accomodate change instead of adding specific paths
+- Services get more generic to accommodate change instead of adding specific paths
 
 ### Differentiating domains
 - Non-Domain
   - Anything you'd expect to find available as a 3rd-party solution.
-  - Activites you might drop into any application (emails, pub-sub, identity,...)
+  - Activities you might drop into any application (emails, pub-sub, identity,...)
 - Domain
   - Essential activities or concepts of the problem you're solving (generally a business). They apply to your problem whether or not it is being run as software
 - Sub-domain
@@ -90,7 +90,7 @@ Cross-cutting concerns includes activities like
 - Trigger multiple adapters for one call
 - Retry and timeout policies
 
-These activities change for different reasons than either the business rules or the adapters. Their changes tend to apply to many flows of the system, but are not instrisic to any of the flows. Moving them into decorators allows them to be changed and configured independently.
+These activities change for different reasons than either the business rules or the adapters. Their changes tend to apply to many flows of the system, but are not intrinsic to any of the flows. Moving them into decorators allows them to be changed and configured independently.
 
 Default to decorating impacted adapters for the usecase. Decorate a service if every call to the service should have the same added per system configuration.
 
