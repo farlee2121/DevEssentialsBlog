@@ -5,9 +5,8 @@ tags:
 - BDD
 - Test api
 - Testing
+title: Test Api in F# Improved
 ---
-
-# Test Api in F# Improved
 
 I [previously wrote](../posts/2021-02-26-TestApi-in-FSharp.md) on the Test API behavioral testing in F#. More time and thinking has brought about a few key improvements, making the pattern both more concise and standardized.
 

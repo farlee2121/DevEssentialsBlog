@@ -2,8 +2,8 @@
 date: "2021-01-15T00:00:00Z"
 tags:
 - C# 9
+title: Result-type Update for C# 9
 ---
-# Result-type Update for C# 9
 
 I [previously wrote](./Language%20Limited%20Though/2020-10-30-Result-Types.md) on the difficulties of normalized result types in C#. Let me be clear, result types are still not great in C#, but C# 9 at least makes them practical.
 

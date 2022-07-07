@@ -5,9 +5,8 @@ tags:
 - Quality
 - Software Lifecycle
 - Team Organization
+title: Test Types and Lifecycle Phases
 ---
-
-# Test Types and Lifecycle Phases
 
 I was thinking about responsibility for different kinds of quality in an organization and I noticed that different kinds of testing line up well with particular roles and [software lifecycle phases](../posts/2021-08-27-SWEBOK-Modified-topic-diagram.md). I've summed it all up in a quick visual. 
 

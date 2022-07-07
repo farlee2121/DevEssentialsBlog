@@ -5,9 +5,8 @@ tags:
 - BDD
 - Team Process
 - Quality
+title: Thoughts on Acceptance Test Logistics
 ---
-
-# Thoughts on Acceptance Test Logistics
 
 I [previously wrote](../posts/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) on how acceptance tests can streamline communication between developers and teams. 
 I've been thinking about practical enactment of such a scheme and surfaced some interesting ideas.

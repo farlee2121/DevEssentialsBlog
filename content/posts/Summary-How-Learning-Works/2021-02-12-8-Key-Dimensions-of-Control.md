@@ -4,9 +4,8 @@ series: How Learning Works
 tags:
 - Learning
 - Book Review
+title: Key Dimensions of Control
 ---
-
-# Key Dimensions of Control
 
 **Measurement** – The types and amount of insights we extract on our students current understanding
 

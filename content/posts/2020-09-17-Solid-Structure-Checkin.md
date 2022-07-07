@@ -5,9 +5,8 @@ tags:
 - Design thinking
 - Clean Architecture
 - SOLID Structure
+title: "Clean Architecture+: Check-in and Benefits"
 ---
-
-# Clean Architecture+: Check-in and Benefits 
 
 I posted about [Synthesizing Project Organization Methods](./2020-06-15-Splitting-Architecture.md) a few months ago. Well... I've been busy putting it to practice in my own code, and the results have been been beyond my expectations!
 <!--more-->

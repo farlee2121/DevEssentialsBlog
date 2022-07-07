@@ -9,9 +9,8 @@ tags:
 - Design Thinking
 - Pivotal Insights
 math: true
+title: Type Safety with Multiple Valid Input Types
 ---
-
-# Type Safety with Multiple Valid Input Types
 
 Sometimes a constructor or function can naturally accept multiple types. The classic solution to this is overloading. The problem is overloading can combinatorially expand for every multi-typed parameter.
 

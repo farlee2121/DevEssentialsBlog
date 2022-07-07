@@ -4,8 +4,8 @@ tags:
 - Construction
 - Dev Essentials
 - Debugging
+title: Scientific Debugging
 ---
-# Scientific Debugging
 
 *“Finding the defect – and understanding it – is usually 90% of the work” - Steve McConnell*
 

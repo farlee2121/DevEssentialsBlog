@@ -3,9 +3,8 @@ date: "2021-09-17T00:00:00Z"
 tags:
 - Clojure
 - Meta-programming
+title: Macros are not a clear win
 ---
-
-# Macros are not a clear win
 
 I've been working in Clojure for the better portion of a year now. I came to Clojure very excited to learn more about macros and symbolic programming.
 I learned some powerful concepts, but the takeaways were not what I expected. Overall, I found that macros are not a clear win.

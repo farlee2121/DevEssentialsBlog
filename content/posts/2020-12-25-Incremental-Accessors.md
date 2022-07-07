@@ -5,9 +5,8 @@ tags:
 - SOLID Structure
 - IDesign
 - Clean Architecture
+title: Incremental Accessors
 ---
-
-# Incremental Accessors
 
 I've been on a long journey of meshing IDesign with Clean Architecture. Accessors have been a conceptual sticking point. 
 

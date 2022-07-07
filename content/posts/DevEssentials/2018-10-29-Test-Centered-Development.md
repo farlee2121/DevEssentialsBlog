@@ -4,9 +4,8 @@ tags:
 - Construction
 - Dev Essentials
 - Testing
+title: Test-Centered Development
 ---
-
-# Test-Centered Development
 
 >   “Coding ain’t done ‘til the tests run” - The Pragmatic Programmer
 

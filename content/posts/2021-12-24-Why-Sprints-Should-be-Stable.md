@@ -6,9 +6,8 @@ tags:
 - Iteration
 - Methodologies
 - Planning
+title: Why Sprints Should Be Stable
 ---
-
-# Why Sprints Should Be Stable
 
 I've long understood agile sprints to be a fixed set of work. Lately, I've had to examine why. I think the principle still stands, and here's why.
 

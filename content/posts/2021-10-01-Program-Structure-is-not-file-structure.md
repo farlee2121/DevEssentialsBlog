@@ -4,9 +4,8 @@ tags:
 - Clojure
 - F#
 - Program Structure
+title: Program Structure is not File Structure
 ---
-
-# Program Structure is not File Structure
 
 Naming is one of the most important activities in programming. Names are the primary vehicle for communicating intent and making code understandable.
 Names haves some sneaky counterparts: scope and context. I argue that our tools for scope and context impact how good our naming can be, and file-based modules force coupling between concerns that inhibit global name organization.

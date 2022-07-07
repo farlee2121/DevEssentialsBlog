@@ -6,8 +6,8 @@ tags:
 - Naming
 - Code Style
 - Readability
+title: Semantic Naming
 ---
-# Semantic Naming
 
 *There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors. - Phil Karlton*
 

@@ -3,9 +3,8 @@ date: "2021-09-24T00:00:00Z"
 tags:
 - Clojure
 - F#
+title: Clojure Namespaces Inhibit Code Grouping
 ---
-
-# Clojure Namespaces Inhibit Code Grouping
 
 I've spent most of this year in Clojure after years of .NET. Much of my F# design skills made the jump, but one language difference has notably changed how I write programs. Specifically, two namespacing choices inhibit my inclination to explicitly group small sections of related declarations. This broadly impacts both program structure and naming.
 

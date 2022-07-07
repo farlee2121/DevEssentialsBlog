@@ -5,9 +5,8 @@ tags:
 - Construction
 - Self-documenting code
 - naming
+title: Sharp-Dressed Code
 ---
-
-# Sharp-Dressed Code
 
 You know what they say about sharp-dressed code. Every dev's crazy about it...
 

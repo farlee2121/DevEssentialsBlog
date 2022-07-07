@@ -2,9 +2,8 @@
 date: "2021-04-30T00:00:00Z"
 tags:
 - Design Patterns
+title: The Place for Ambient Context
 ---
-
-# The Place for Ambient Context
 
 Ambient context is a useful design pattern, but a recent project got me thinking about how universal this context should be.
 

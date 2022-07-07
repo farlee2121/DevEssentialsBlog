@@ -4,9 +4,8 @@ tags:
 - Testing
 - Expecto
 - Composition
+title: Tests as Values
 ---
-
-# Tests as Values
 
 Lambdas, or functions as values, have worked their way into mainstream programming and transformed development for many programmers. 
 It's rare to see a program that doesn't `.filter` a list with a predicate or `.map` to transform from one type to another. This same 

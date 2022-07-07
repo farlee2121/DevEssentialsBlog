@@ -4,9 +4,8 @@ tags:
 - Architecture
 - Design thinking
 - Reading Review
+title: System Language
 ---
-
-# System Language
 
 [The Language of the System](https://www.youtube.com/watch?v=ROor6_NGIWU) by Rick Hickey is an illuminating talk about why systems differ from programs. It provides a clear framework for understanding and addressing the differences. I believe these same ideas underpin some of the recent movements in software design philosophy. Let's explore.
 

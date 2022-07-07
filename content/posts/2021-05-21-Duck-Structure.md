@@ -4,9 +4,8 @@ tags:
 - Duck Docs
 - Rubber Ducking
 - Design Process
+title: Duck Structure
 ---
-
-# Duck Structure
 
 Good designs generally reflect the nature of the problem they solve, and the same applies to designing a process for design. Design is messy, incremental, and has spurts of both broad and deep exploration.
 

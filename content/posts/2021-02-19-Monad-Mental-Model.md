@@ -4,8 +4,8 @@ tags:
 - Math
 - Functional Programming
 - Design Patterns
+title: Building a Monad Intuition
 ---
-# Building a Monad Intuition
 
 Like most people, I've found monads hard to pin down. I know things I can do with them, but I don't understand them at an intuitive and flexible level. Here I'll try to build my mental model by relating to other tools.
 

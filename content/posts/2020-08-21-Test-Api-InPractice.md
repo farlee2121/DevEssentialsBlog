@@ -7,9 +7,8 @@ tags:
 - Test Api
 - Reading Review
 math: true
+title: Test Api In Practice
 ---
-
-# Test Api In Practice
 
 A friend of mine, Paul Spoon, wrote a [delightful article](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) about using the Anti-Corruption Layer pattern as a tool for more stable tests. I tried the pattern with skepticism, and will now never go back.
 

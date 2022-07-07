@@ -4,8 +4,8 @@ tags:
 - Construction
 - Dev Essentials
 - Process
+title: Iteration
 ---
-# Iteration
 
 >   “...the incompletenesses and inconsistencies of our ideas become clear only
 >   during implementation.” – Fred Brooks (Mythical Man-Month)

@@ -4,9 +4,8 @@ tags:
 - Testing
 - Test Api
 - F#
+title: Test Api in F#
 ---
-
-# Test Api in F#
 
 [Paul's Test Api](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) [permanently changed the way that I test](../posts/2020-08-21-Test-Api-InPractice.md). It's only natural I'd want to bring the pattern over to F# with me. Here's how I did it and a few extra testing tips for F#. 
 

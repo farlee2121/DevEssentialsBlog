@@ -5,9 +5,8 @@ tags:
 - BDD
 - Behavior Driven Development
 - TestApi
+title: Gherkin-named Tests as Low-bar Acceptance Tests
 ---
-
-# Gherkin-named Tests as Low-bar Acceptance Tests
 
 I [previously compared the tradeoffs](../posts/2021-06-11-Gherkin-vs-TestApi.md) of Gherkin-based and TestApi-based behavior tests. Recently, I realized there is a simple in-between solution: TestApi with Gherkin-style names.
 

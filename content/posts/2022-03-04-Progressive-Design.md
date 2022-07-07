@@ -4,9 +4,8 @@ tags:
 - Design Thinking
 - Architecture
 - Software Design
+title: Progressive Design
 ---
-
-# Progressive Design
 
 Choosing the right amount of process is an art. Too much process is smothering and too little is a mess. However, I think [incremental, stable, and additive processes](../posts/2022-02-25-Stable-Incremental-Additive.md) naturally start simple and mature *progressively* with our demands.
 

@@ -8,8 +8,8 @@ tags:
 - Scaling
 - Decorator
 - AOP
+title: Async Task Refactor Case Study
 ---
-# Async Task Refactor Case Study
 
 I've been unhappy with the async/background work model in my system for a while. The async logic always seems excessively complex, either entangled with business logic or creating opaque coupling between flows. However, my recent [breakthrough on code structure](../posts/2020-07-10-Synthesizing-Structure.md) suggested a clear path to adding background work in an aspect-oriented style. Let's examine a refactor that helped me prove decorator-style async communication.
 

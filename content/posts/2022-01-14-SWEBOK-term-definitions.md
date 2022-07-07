@@ -3,9 +3,8 @@ date: "2022-01-14T00:00:00Z"
 tags:
 - SWEBOK
 - Software Engineering
+title: SWEBOK Key Definitions
 ---
-
-# SWEBOK Key Definitions
 
 I realized that my Software Engineering Body of Knowledge (SWEBOK) posts reference, but never define, the 15 key knowledge areas outlined by SWEBOK. I intent to fix that with this post.
 

@@ -4,9 +4,8 @@ tags:
 - tools
 - markdown
 - process
+title: Notes as Data
 ---
-
-# Notes as Data
 
 I've fallen in love with Markdown and it is slowly permeating all of my documents. The latest addition is notes, which Markdown makes easy to reference either manually or programmatically!
 

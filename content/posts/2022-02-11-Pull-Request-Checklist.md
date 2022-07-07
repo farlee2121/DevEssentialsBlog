@@ -2,9 +2,8 @@
 date: "2022-02-11T00:00:00Z"
 tags:
 - Checklist
+title: Pull Request Checklist
 ---
-
-# Pull Request Checklist
 
 This is my attempt to communicate what I consider when looking at a pull request.
 

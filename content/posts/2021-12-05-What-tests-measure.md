@@ -4,9 +4,8 @@ tags:
 - Testing
 - Quality
 - Measurement
+title: What Tests Measure
 ---
-
-# What Tests Measure
 
 My [test types diagram](../posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) sparked concern that mature process focuses on repeated measured improvement, not specific techniques. This is right, but I don't see the conflict. Tests are a kind of measure, and the diagram identifies common tests (measures) certain actors leverage to meet larger goals. This raises the question, what do the different kinds of tests measure? Consequently, what do they tell us about our system?
 

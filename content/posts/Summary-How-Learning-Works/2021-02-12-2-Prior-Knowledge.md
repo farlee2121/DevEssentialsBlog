@@ -4,9 +4,8 @@ series: How Learning Works
 tags:
 - Learning
 - Book Review
+title: Prior Knowledge
 ---
-
-# Prior Knowledge
 
 Every student views new information through the lens of prior knowledge. In fact, some researchers suggest that learning *requires* connecting new information to what we already know. Either way, more connections leads to improved recall and utility.
 

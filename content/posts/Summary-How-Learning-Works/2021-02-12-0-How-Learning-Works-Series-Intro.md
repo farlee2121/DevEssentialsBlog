@@ -4,9 +4,8 @@ series: How Learning Works
 tags:
 - Learning
 - Book Review
+title: Learning Principles
 ---
-
-# Learning Principles
 Communication is hard. We’ve all (probably) experienced situations where our words fall flat; where repeated explanation just doesn't seem to create understanding. 
 
 In this situation, you are an educator.

@@ -3,9 +3,8 @@ date: "2022-04-24T00:00:00Z"
 tags:
 - Continuous Integration
 - Refactoring
+title: "Continuous Integration and Refactoring: How to constructively develop against a single branch"
 ---
-
-# Continuous Integration and Refactoring: How to constructively develop against a single branch
 
 Continuous Integration (CI) is a hot buzzword. I've had a general sense of it for a while, but [Refactoring](https://refactoring.com/) chapter two brought its place into sharp focus, mainly through Preparatory Refactoring.
 

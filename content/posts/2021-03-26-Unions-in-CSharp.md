@@ -4,9 +4,8 @@ tags:
 - Functional Programming
 - C#
 - Union Types
+title: Union Types in C#
 ---
-
-# Union Types in C#
 
 Union types are common in functional languages, but have yet to make it to C# and similar. These types solve a simple and very common problem, data that is one of a finite set of possibilities. Here's we'll look at how to accomplish the same in C#.
 

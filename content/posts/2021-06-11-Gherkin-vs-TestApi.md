@@ -6,9 +6,8 @@ tags:
 - Gherkin
 - DDD
 - TestApi
+title: Gherkin vs Test API
 ---
-
-# Gherkin vs Test API
 
 I've use Test API for behavior testing for more than a year now, and to great effect. I expected [my recent experience with Gherkin](./2021-06-04-Learning-Gherkin.md) to be similar, but found the two BDD techniques to be surprisingly different. Here I'll contrast the two methods to highlight their distinct value.
 

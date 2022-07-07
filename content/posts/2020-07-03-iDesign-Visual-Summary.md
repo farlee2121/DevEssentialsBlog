@@ -8,9 +8,8 @@ tags:
 - DDD
 - iDesign
 - Reading Notes
+title: Righting Software Visual Summary
 ---
-
-# Righting Software Visual Summary
 
 Thus far this only includes the System Design portion of the book.
 

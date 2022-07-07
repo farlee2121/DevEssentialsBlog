@@ -4,9 +4,8 @@ series: How Learning Works
 tags:
 - Learning
 - Book Review
+title: Motivation and Goals
 ---
-
-# Motivation and Goals
 
 <style>
 .sr-only {

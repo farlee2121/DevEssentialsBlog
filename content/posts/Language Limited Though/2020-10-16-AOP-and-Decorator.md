@@ -10,9 +10,8 @@ tags:
 - Pivotal Insights
 
 math: true
+title: Functional Composition, Decorator, and Aspect-Oriented Programming
 ---
-
-# Functional Composition, Decorator, and Aspect-Oriented Programming
 
 Aspect-Oriented programming has captivated my imagination for years. C#, however, does not support AOP. Even conceptually realizing benefits of the paradigm proved difficult. Then, I experienced functional composition.
 

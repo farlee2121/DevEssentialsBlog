@@ -4,9 +4,8 @@ tags:
 - Project Management
 - Dev Essentials
 - Process
+title: Requirements
 ---
-
-# Requirements
 
 > The most important single aspect of software development is to be clear
 > about what you are trying to build. - Bjarne Stroustrup (inventor of c++)

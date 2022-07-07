@@ -8,9 +8,8 @@ tags:
 - Functional Programming
 - Design Thinking
 - Pivotal Insights
+title: Service-Orientation and Functional Programming
 ---
-
-# Service-Orientation and Functional Programming
 
 Service-Oriented Programming is my primary programming paradigm. It divides the software into self-contained "services" or groups of functionality. Services also apply in functional programming, rather, service-like behavior is enforced all the way to the foundational functional concepts.
 

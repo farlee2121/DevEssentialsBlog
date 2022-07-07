@@ -2,9 +2,8 @@
 date: "2021-07-09T00:00:00Z"
 tags:
 - Patterns
+title: Patterns in practice
 ---
-
-# Patterns in practice
 
 Patterns are generally taught in isolation (separation of concerns), but application of patterns is often highly interconnected. Here I'll show how my most used patterns come together as a design system.
 

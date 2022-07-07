@@ -4,9 +4,8 @@ tags:
 - Functional Programming
 - Programming Languages
 - Language Properties
+title: Functional Programming is a lasting way forward
 ---
-
-# Functional Programming is a lasting way forward
 
 My deep live into functional programming has definitely made me a fan. Most importantly, it helps me see a way for programming languages to keep evolving.
 

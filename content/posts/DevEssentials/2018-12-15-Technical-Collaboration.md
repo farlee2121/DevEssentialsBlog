@@ -7,9 +7,8 @@ tags:
 - Review
 - Collaboration
 - Pair Programming
+title: Technical Collaboration
 ---
-
-# Technical Collaboration
 
 > “The need for reviewing was so obvious to the best programmer that they
 > rarely mentioned it in print, while the worst programmers believed they 

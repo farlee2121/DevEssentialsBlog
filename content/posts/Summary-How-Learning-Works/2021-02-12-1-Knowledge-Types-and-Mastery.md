@@ -4,9 +4,8 @@ series: How Learning Works
 tags:
 - Learning
 - Book Review
+title: Knowledge Types and Mastery
 ---
-
-# Knowledge Types and Mastery
 
 *Defn: Mastery - a high degree of competence in a particular area.*
 

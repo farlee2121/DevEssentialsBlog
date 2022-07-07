@@ -4,9 +4,8 @@ tags:
 - Interviews
 - Eductation
 - Defect Detection
+title: Better Software Interviews with Defect Detection
 ---
-
-# Better Software Interviews with Defect Detection
 
 I've sat through many a coding interview as both examiner and examinee. The experience is usually sub-par on either side. 
 The results always feel incomplete, and the assessment of skill feels foggy and inconsistent. My recent experiments suggest a new approach that may be more effective: defect detection in code samples.

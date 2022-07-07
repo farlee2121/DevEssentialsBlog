@@ -3,8 +3,8 @@ date: "2020-11-27T00:00:00Z"
 tags:
 - Language properties
 - Type systems
+title: Schema and Selection
 ---
-# Schema and Selection
 
 <!-- As programmers, we naturally see semantic equivalencies between our data types, but need different sets or representations for each scenario.  -->
 I commonly struggle with "proliferation of types". Different usecases call for different views of the data (especially clients). This leads to a half dozen data types that represent about the same information. I always assumed this was unavoidable to achieve safety and clarity. However, Rich Hickey proposes a new take on the problem.

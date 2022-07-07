@@ -4,9 +4,8 @@ series: What's your Duck v2
 tags:
 - Design Process
 - Ducks
+title: "What's your Duck: The Design Tree and Incremental Progress"
 ---
-
-# What's your Duck: The Design Tree and Incremental Progress
 
 This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post explores the fundamental questions "How do we effectively break down problems?", "Can software be perfect?", and "What makes software good?"
 

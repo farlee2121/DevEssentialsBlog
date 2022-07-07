@@ -3,9 +3,8 @@ date: "2021-05-28T00:00:00Z"
 tags:
 - Database
 - Event Sourcing
+title: "Event Stores: An Advance in Data Safety"
 ---
-
-# Event Stores: An Advance in Data Safety
 
 I've been working with [Datomic](https://www.datomic.com/) on a recent project. Datomic, and stores like it, solve a fundamental class of development issues: data safety.
 

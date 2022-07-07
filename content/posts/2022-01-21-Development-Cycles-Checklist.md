@@ -5,8 +5,8 @@ tags:
 - Critical Thinking
 - Duck docs
 - Process
+title: Development Cycles Checklist
 ---
-# Development Cycles Checklist
 
 A junior developer recently asked for a daily responsibilities checklist. This question made no sense to me at first. A developer's job isn't so routine as a daily checklist. However, it sparked me to think about how a developer's regular activities can be described concisely. 
 
@@ -179,8 +179,8 @@ However, a series of time-based cycles does provide a decent picture of develope
 
 
 
-----
-## Abbreviated Cycle view
+-title: # Abbreviated Cycle view
+---
 
 Minute
 - what am I proving?

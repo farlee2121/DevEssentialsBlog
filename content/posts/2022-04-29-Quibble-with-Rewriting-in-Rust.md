@@ -3,9 +3,8 @@ date: "2022-04-29T00:00:00Z"
 tags:
 - Rust
 - F#
+title: Small Quibble with The Great Rewriting in Rust
 ---
-
-# Small Quibble with The Great Rewriting in Rust
 [The Great Rewriting in Rust](https://deprogrammaticaipsum.com/the-great-rewriting-in-rust/) is a good overview of why Rust is a compelling and growing language.
 However, I have a small quibble with how it refers to F#.
 
