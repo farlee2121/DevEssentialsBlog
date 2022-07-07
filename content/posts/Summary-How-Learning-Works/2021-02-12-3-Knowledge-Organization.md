@@ -1,6 +1,5 @@
 ---
 date: "2021-02-12T00:03:00Z"
-excerpt_separator: <!--more-->
 series: How Learning Works
 tags:
 - Learning

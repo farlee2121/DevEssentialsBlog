@@ -1,6 +1,6 @@
 ---
 date: "2020-07-03T00:00:00Z"
-excerpt: Righting Software (definitive iDesign method book) system design principles
+summary: Righting Software (definitive iDesign method book) system design principles
   explained with pictures
 strip_title: false
 tags:

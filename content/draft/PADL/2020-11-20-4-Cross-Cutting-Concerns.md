@@ -1,7 +1,6 @@
 ---
 date: "2020-11-20T00:00:00Z"
 draft: true
-excerpt_separator: <!--more-->
 ---
 
 # PADL: Cross-Cutting Concerns

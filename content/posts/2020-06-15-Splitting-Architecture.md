@@ -1,6 +1,6 @@
 ---
 date: "2020-06-15T00:00:00Z"
-excerpt: I was 'raised' on the iDesign school of architecture. To me architecture
+summary: I was 'raised' on the iDesign school of architecture. To me architecture
   meant the high-level separation of concerns into clients, managers, engines, accessors,
   and resources. ... but now there is a new level of separation
 strip_title: false

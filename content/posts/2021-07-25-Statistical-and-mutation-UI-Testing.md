@@ -1,6 +1,5 @@
 ---
 date: "2021-07-25T00:00:00Z"
-excerpt_separator: <!--more-->
 tags:
 - Testing
 - functional
