@@ -1,3 +1,6 @@
+---
+draft: true
+---
 <!-- 
   Paul didn't pickup what I was putting down at all. He thought it was basically just IDesign
   He made a good point that overall architecture systems are pretty much impossible to maintain at large companies like amazon.

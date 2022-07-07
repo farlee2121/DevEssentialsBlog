@@ -1,3 +1,6 @@
+---
+draft: true
+---
 My results post lacks focus. I need to orient myself to make these posts worth while.
 as my opener states, each post needs to be centered around FP ideas and why the FP ideas bring clarity
 Should probably split nullable in some way. Either give it it's own solution section or make another post

@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 I'm thinking about a presentation or a post where I have a limited amount of time to explain good construction. What would I talk about?
 - !!! Understanding is king - all the other techniques are about improving understanding
 - Naming

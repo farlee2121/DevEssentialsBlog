@@ -1,3 +1,6 @@
+---
+draft: true
+---
 
 Q: What are the primary divisions?
 - I think they fundamentally can't be lifecycle-based. The activities have too much overlap between lifecycle phases

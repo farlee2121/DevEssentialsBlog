@@ -1,3 +1,6 @@
+---
+draft: true
+---
 - Why was I so meh about the console?
   - I feel like there I had a mentor that felt that way... hmm
     - maybe reactionary from things like Emacs that people seemed to love in college as a way to feel cool. because they were "real devs" similar to the linux obsession

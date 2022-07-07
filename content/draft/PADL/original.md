@@ -1,4 +1,6 @@
-
+---
+draft: true
+---
 # Ports and Adapters + Domains Layers
 
 I've been on a journey to combine iDesign and Clean Architecture (or Ports and Adapters-type architecture). The goal is a repeatable process for flexible architecture and domain organization, even with relatively low architecture experience. This requires simple rules and intuition for where each piece of code should live.
