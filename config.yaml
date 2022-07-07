@@ -27,6 +27,7 @@ Params:
   defaultTheme: light
   disableThemeToggle: true
   ShowPostNavLinks: true
+  disableSpecial1stPost: true
 
 frontmatter:
   date: [ ":filename", ":default"] # https://github.com/gohugoio/hugo/pull/4494
