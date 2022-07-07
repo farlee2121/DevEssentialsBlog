@@ -1,4 +1,6 @@
 github.com/adityatelange/hugo-PaperMod v0.0.0-20220624153009-9af128a8a638 h1:PGJb+GtnP160sAixalWhrMPfxnN8QN3k+X/99PT3kTc=
 github.com/adityatelange/hugo-PaperMod v0.0.0-20220624153009-9af128a8a638/go.mod h1:HCHxNMKYdGafUYjVV3ICiAqznZK2yH0iI53jqcDFDdQ=
+github.com/danielfdickinson/image-handling-mod-hugo-dfd v0.4.1 h1:zVvnRgWDdVy/xiK7ZP99M6fyjemXLUA57UNTpozlcKo=
+github.com/danielfdickinson/image-handling-mod-hugo-dfd v0.4.1/go.mod h1:WFjQtUdhBGFndQVaMo5UoXcKRxyAZ6dtxOea27J0ccE=
 github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.1 h1:kujYarppbu4laEsv1P53xGGgkep+bQBsO7FhPIj98Sg=
 github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.1/go.mod h1:inb1U/NMQWMjoDBEhpabB/cI06SkgWnbM4dHKFHCG60=
