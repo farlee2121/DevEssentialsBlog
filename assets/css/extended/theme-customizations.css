@@ -2,3 +2,16 @@
     display: block;
     overflow: initial;
 }
+
+.footer .social-icons {
+    vertical-align: middle;
+    display: inline;
+}
+.footer .social-icons a {
+    text-decoration: none;
+    border: none;
+}
+.footer .social-icons svg{
+    height: 18px;
+    width: 18px;
+}
