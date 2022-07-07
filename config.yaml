@@ -15,6 +15,11 @@ outputFormats:
   RSS:
     baseName: "feed"
 
+sitemap:
+  changefreq: weekly
+  filename: /sitemap/index.xml
+  priority: 1.0
+
 Params:
   # Paper theme settings
   ShowReadingTime: true
