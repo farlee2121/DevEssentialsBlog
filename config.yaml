@@ -6,13 +6,11 @@ theme: "github.com/adityatelange/hugo-PaperMod"
 
 enableRobotsTXT: true
 googleAnalytics: "G-YPSFPN3NJN"
-rss: true
 markup:
   goldmark:
     renderer:
       unsafe: true
 Params:
-  description: "Critical developer skills in 5 minutes or less."
   # Paper theme settings
   ShowReadingTime: true
   ShowCodeCopyButtons: true
