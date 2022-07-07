@@ -26,6 +26,7 @@ Params:
   ShowCodeCopyButtons: true
   defaultTheme: light
   disableThemeToggle: true
+  ShowPostNavLinks: true
 
 frontmatter:
   date: [ ":filename", ":default"] # https://github.com/gohugoio/hugo/pull/4494
