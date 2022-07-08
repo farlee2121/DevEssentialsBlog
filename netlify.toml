@@ -1,5 +1,11 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration
 
+[build]
+  command = "jekyll build"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
