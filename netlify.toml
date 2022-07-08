@@ -1,13 +1,6 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration
 
 [build]
-  command = "jekyll build"
-  publish = "_site"
-
-[build.environment]
-  JEKYLL_ENV = "production"
-
-[build]
   command = "hugo"
   publish = "public"
 
