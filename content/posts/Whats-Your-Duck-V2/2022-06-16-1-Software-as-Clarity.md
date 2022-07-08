@@ -1,5 +1,6 @@
 ---
 date: "2022-06-16T00:01:00Z"
+publishDate: "2022-06-16T00:01:00Z"
 series: What's your Duck v2
 tags:
 - Design Process

@@ -1,5 +1,6 @@
 ---
 date: "2021-02-12T00:08:00Z"
+publishDate: "2021-02-12T00:08:00Z"
 series: How Learning Works
 tags:
 - Learning
