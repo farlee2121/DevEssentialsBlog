@@ -1,3 +1,6 @@
+:root{
+    --splash: cornflowerblue;
+}
 .post-entry .entry-content{
     display: block;
     overflow: initial;
@@ -14,6 +17,13 @@
 .footer .social-icons svg{
     height: 18px;
     width: 18px;
+}
+
+.home-banner hr{
+    background-color: var(--splash);
+}
+#top-link{
+    background-color: var(--splash);
 }
 
 
