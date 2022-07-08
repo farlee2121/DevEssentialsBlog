@@ -6,7 +6,7 @@ draft: true
 ```yml
 layout: post
 tags: [PADL, Ports and Adapters, Architecture]
-series: PADL
+seriesId: PADL
 ```
 # Dependencies and Bind-times in Port-based Architectures
 

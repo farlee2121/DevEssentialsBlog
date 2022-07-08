@@ -1,7 +1,7 @@
 ---
 date: "2020-11-20T00:00:00Z"
 draft: true
-series: PADL
+seriesId: PADL
 tags:
 - Architecture
 - Design thinking

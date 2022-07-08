@@ -5,7 +5,7 @@ tags:
 title: Result-type Update for C# 9
 ---
 
-I [previously wrote](./Language%20Limited%20Though/2020-10-30-Result-Types.md) on the difficulties of normalized result types in C#. Let me be clear, result types are still not great in C#, but C# 9 at least makes them practical.
+I [previously wrote](./Language-Limited-Thought/2020-10-30-Result-Types.md) on the difficulties of normalized result types in C#. Let me be clear, result types are still not great in C#, but C# 9 at least makes them practical.
 <!--more-->
 
 When I'm thinking practical, I mean

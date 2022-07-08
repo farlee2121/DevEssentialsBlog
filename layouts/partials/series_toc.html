@@ -1,10 +1,10 @@
 {{ $page := .}}
-{{ if $page.Params.series }}
+{{ if $page.Params.seriesId }}
 <div class="series-toc">
-    <h3>The "{{ $page.Params.series }}" series</h3>
+    <h3>The "{{ $page.Params.seriesId }}" series</h3>
     <ol>
-{{/* range $otherpage := where (site.Pages.ByParam "seriesOrder") ".Params.series" "==" $page.Params.series */}}
-{{ range $index, $otherpage := where (site.Pages.ByPublishDate) ".Params.series" "==" $page.Params.series }}
+{{/* range $otherpage := where (site.Pages.ByParam "seriesOrder") ".Params.seriesId" "==" $page.Params.seriesId */}}
+{{ range $index, $otherpage := where (site.Pages.ByPublishDate) ".Params.seriesId" "==" $page.Params.seriesId }}
         <li>
         {{ if eq $page $otherpage }}
         <span><strong>{{ $otherpage.Title  }}</strong></span>
