@@ -4,10 +4,8 @@ tags:
 - Software Design
 - Design Smells
 - Dependency Inversion
+title: Private Implementations for Public Use is a Smell
 ---
-
-<!-- Todo: find better file name -->
-# Private Implementations for Public Use is a Smell
 
 I was refactoring an older code base and noticed a pattern I used to follow where a project keeps implementations private and only leaves the interfaces public.
 
