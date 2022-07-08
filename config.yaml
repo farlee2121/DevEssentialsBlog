@@ -13,7 +13,7 @@ markup:
 outputFormats:
   RSS:
     baseName: "feed"
-
+disableKinds: ["taxonomy", "term"]  
 sitemap:
   changefreq: weekly
   filename: /sitemap/index.xml
