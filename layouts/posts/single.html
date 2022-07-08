@@ -36,10 +36,10 @@
   {{- end }}
 
   <footer class="post-footer">
-    {{- $tags := .Page.Params.tags  }}
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
-      {{- range $tags }}
-      <li><a href="javascript:void(0)">{{ . }}</a></li>
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
     </ul>
     {{- partial "series_toc" . -}}
