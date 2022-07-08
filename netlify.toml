@@ -7,6 +7,13 @@
 [build.environment]
   JEKYLL_ENV = "production"
 
+[build]
+  command = "hugo"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "v0.101.0"
+
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"

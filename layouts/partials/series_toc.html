@@ -1,0 +1,18 @@
+{{ $page := .}}
+{{ if $page.Params.seriesId }}
+<div class="series-toc">
+    <h3>The "{{ $page.Params.seriesId }}" series</h3>
+    <ol>
+{{/* range $otherpage := where (site.Pages.ByParam "seriesOrder") ".Params.seriesId" "==" $page.Params.seriesId */}}
+{{ range $index, $otherpage := where (site.Pages.ByPublishDate) ".Params.seriesId" "==" $page.Params.seriesId }}
+        <li>
+        {{ if eq $page $otherpage }}
+        <span><strong>{{ $otherpage.Title  }}</strong></span>
+        {{ else }}
+        <span><a href="{{ $otherpage.RelPermalink }}" title="{{ $otherpage.Title }}">{{ $otherpage.Title }}</a></span>
+        {{ end }}
+        </li>
+{{ end }}
+    </ol>
+</div>
+{{ end }}

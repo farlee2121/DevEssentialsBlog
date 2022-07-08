@@ -1,0 +1,3 @@
+{{ .Render "archives"}}
+
+{{ (where .Site.RegularPages "Section" "==" "posts") | len }}

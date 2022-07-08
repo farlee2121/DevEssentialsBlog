@@ -1,0 +1,8 @@
+<footer class="footer">
+    {{- if site.Copyright }}
+    <span>{{ site.Copyright | markdownify }}</span>
+    {{- else }}
+    <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
+    {{- end }}
+    {{ partial "social_icons" .Site.Params.footerSocialIcons}}
+</footer>

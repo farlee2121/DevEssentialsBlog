@@ -1,0 +1,4 @@
+{{- $path :=  (partial "helpers/lib/image-handling/get-static-image" (dict "destination" .Destination "getRelative" true) | default "") -}}
+{{- $path = $path | replaceRE "/static/" "/" -}}
+<img src="{{$path}}" alt="{{.Text}}" title="{{.Text}}" />
+

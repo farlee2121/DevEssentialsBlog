@@ -1,29 +1,22 @@
-# Idea files
-.idea/*
 
-# Mac files
-.DS_Store
-
-# Byte-compiled / optimized / DLL files
-*.manifest
-*.spec
-
-# Jekyll dev or build files
-_site/*
-_development_tool/*
-.sass-cache/*
+# css/sass
 *.css.map
+.sass-cache/*
 *.scssc
-.jekyll-metadata
 
-# Theme Gem files
-Gemfile.lock
-*.gem
-.gems
-jekyll-theme-type-on-strap.gemspec
+
+# Generated files by hugo
+.hugo_build.lock
+/public/
+hugo_stats.json
+/resources/_gen/
+/assets/jsconfig.json
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
 
 # Node js files
 **/node_modules/*
-
-# ignore office temporary files
-~$*
