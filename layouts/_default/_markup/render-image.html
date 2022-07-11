@@ -1,4 +1,31 @@
+{{- $external := false -}}
+{{- $base64 := false -}}
 {{- $path :=  (partial "helpers/lib/image-handling/get-static-image" (dict "destination" .Destination "getRelative" true) | default "") -}}
-{{- $path = $path | replaceRE "/static/" "/" -}}
-<img src="{{$path}}" alt="{{.Text}}" title="{{.Text}}" />
+{{- if strings.HasPrefix $path "data:image" -}}
+    {{- $base64 = true -}}
+{{- else -}}
+    {{- with urls.Parse $path -}}
+        {{- if or .Host .Scheme -}}
+            {{- $external = true -}}
+        {{- end -}}
+        {{- $path = .Path -}}
+    {{- else -}}
+        {{- errorf printf "Unable to parse image src '%s'" $path -}}
+    {{- end -}}
+{{- end -}}
+{{ $linkPath := "unset"}}
+{{- if (and (not $external) (not $base64)) -}}
+    {{- $path = $path | replaceRE "/static/" "/" -}}
+    {{- $linkPath = partial "helpers/lib/link-handling/find-destination" (dict "page" .Page "destination" $path) -}}
+    {{- $curPage := .Page -}}
+    {{- if (or (not $path) (eq $path "")) -}}
+        {{- if $curPage.File -}}
+            {{- errorf (printf "Image %s is missing and not external for page %s" .Destination $curPage.File.Path) -}}
+        {{- else -}}
+            {{- errorf (printf "Image %s is missing and not external for page %s" .Destination $curPage.Title) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+<img src="{{$path}}" alt="{{.Text}}" title="{{.Text}}" debug="external: {{$external}}; 64: {{$base64}};link: {{$linkPath}}"/>
 
