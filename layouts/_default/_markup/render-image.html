@@ -13,10 +13,8 @@
         {{- errorf printf "Unable to parse image src '%s'" $path -}}
     {{- end -}}
 {{- end -}}
-{{ $linkPath := "unset"}}
 {{- if (and (not $external) (not $base64)) -}}
     {{- $path = $path | replaceRE "/static/" "/" -}}
-    {{- $linkPath = partial "helpers/lib/link-handling/find-destination" (dict "page" .Page "destination" $path) -}}
     {{- $curPage := .Page -}}
     {{- if (or (not $path) (eq $path "")) -}}
         {{- if $curPage.File -}}
@@ -27,5 +25,5 @@
     {{- end -}}
 {{- end -}}
 
-<img src="{{$path}}" alt="{{.Text}}" title="{{.Text}}" debug="external: {{$external}}; 64: {{$base64}};link: {{$linkPath}}"/>
+<img src="{{$path}}" alt="{{.Text}}" title="{{.Text}}"/>
 
