@@ -2,9 +2,8 @@
 date: "2022-05-22T00:00:00Z"
 draft: true
 tags: [Programming Paradigms, Language Features]
+title: Proof-Oriented Programming
 ---
-
-# Proof-Oriented Programming
 
 I've been exploring ways to leverage [type-driven development](https://fsharpforfunandprofit.com/series/designing-with-types/) for better testing.
 Turns out this has already been done, and there is a whole category of proof-oriented programming languages.

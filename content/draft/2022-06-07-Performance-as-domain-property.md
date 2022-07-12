@@ -2,6 +2,7 @@
 date: "2022-06-07T00:00:00Z"
 draft: true
 tags: [Testing, Performance, Expecto, Property Testing, Behavior-Driven Development]
+title: Performance as a Domain Property
 ---
 
 *Sometimes performance is an observable domain behavior that belongs in our normal test suite*

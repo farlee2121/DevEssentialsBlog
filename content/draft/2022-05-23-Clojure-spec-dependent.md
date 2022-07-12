@@ -2,9 +2,8 @@
 date: "2022-05-23T00:00:00Z"
 draft: true
 tags: [Clojure, Language features, Specification Pattern]
+title: "Is Clojure Spec a dependant type system?"
 ---
-
-# Is Clojure Spec a dependant type system?
 
 <!-- TODO: consider how the except will work, or if I just want to nerf the excerpt -->
 Clojure has a rather interesting optional type system: [Clojure Spec](https://clojure.org/about/spec). 

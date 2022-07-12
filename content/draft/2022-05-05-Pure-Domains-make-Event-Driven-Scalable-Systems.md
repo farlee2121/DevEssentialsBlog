@@ -2,6 +2,7 @@
 date: "2022-05-05T00:00:00Z"
 draft: true
 tags: [Event Streaming, Dependency Rejection, Event-based Architecture, Domain Modeling Made Functional]
+title: Pure Domains make Event-driven and Scalable Systems
 ---
 
 <!-- 
@@ -14,8 +15,6 @@ TODO: improve title
 
 TODO: is post still aligned with original introduction / framing? Can it be? Does it need reframed or split?
 -->
-
-# Pure Domains make Event-driven and Scalable Systems
 
 Consider a system where the business rules (domain) don't change the system state. Instead they return data that represents a state change and let consumers enact the change. Such a system is maximally event-driven and simplifies some difficult problems in high-scale systems.
 <!--more-->

@@ -2,9 +2,8 @@
 date: "2022-06-05T00:00:00Z"
 draft: true
 tags: [Clojure, Specification Pattern, Property Testing]
+title: "Spec Test Pitfalls in Static Languages"
 ---
-
-## Spec Test Pitfalls in Static Languages
 
 I've been thinking about constrained values, and how those constraints could be used to [better test our systems](../posts/2022-06-03-Improved-completeness-automatic-random-testing.md). Mark Seemann was gracious to [think through this with me](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#2c0403d1e69d43a496ee04c16bea282c) and point out some interesting conclusions.
 <!--more-->
