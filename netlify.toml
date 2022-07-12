@@ -1,12 +1,11 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration
 
 [build]
-  command = "hugo"
+  command = "HUGO_BASEURL = $DEPLOY_PRIME_URL; hugo"
   publish = "public"
 
 [build.environment]
   HUGO_VERSION = "v0.101.0"
-  HUGO_BASEURL = $DEPLOY_PRIME_URL
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
