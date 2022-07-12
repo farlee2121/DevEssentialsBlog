@@ -42,7 +42,7 @@
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- end }}
 
-{{- $paginator := .Paginate $pages }}
+{{- $paginator := .Paginate $pages.ByPublishDate.Reverse }}
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
 {{- partial "home_info.html" . }}
