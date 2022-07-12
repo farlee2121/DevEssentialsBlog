@@ -1,9 +1,7 @@
 ---
 date: "2022-05-22T00:00:00Z"
 draft: true
-tags:
-- Programming Paradigms
-- Language Features
+tags: [Programming Paradigms, Language Features]
 ---
 
 # Proof-Oriented Programming

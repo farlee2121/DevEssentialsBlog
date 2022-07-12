@@ -1,10 +1,7 @@
 ---
 date: "2021-11-19T00:00:00Z"
 draft: true
-tags:
-- C#
-- F#
-- interop
+tags: [C#, F#, interop]
 ---
 
 <!-- I'm not entirely sure this stands. PropertyMapBinder (and the wrapper in Notedown) was able to handle inferred conversion from functions to lambdas fairly well. Even a passed 'a -> 'b was implicitly converted to a Func<'a,'b> -->

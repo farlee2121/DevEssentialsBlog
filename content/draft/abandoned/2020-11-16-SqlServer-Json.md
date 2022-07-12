@@ -1,11 +1,7 @@
 ---
 date: "2020-11-16T00:00:00Z"
 draft: true
-tags:
-- Sql
-- SqlServer
-- JSON
-- how-to
+tags: [Sql, SqlServer, JSON, how-to]
 ---
 
 # Getting Started with JSON in MS SQL Server

@@ -2,11 +2,7 @@
 date: "2020-11-20T00:00:00Z"
 draft: true
 seriesId: PADL
-tags:
-- Architecture
-- Design thinking
-- SOLID Structure
-- Patterns
+tags: [Architecture, Design thinking, SOLID Structure, Patterns]
 ---
 
 # PADL: Ports and Adapters + Domains Layers

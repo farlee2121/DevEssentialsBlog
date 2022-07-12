@@ -1,10 +1,7 @@
 ---
 date: "2022-05-23T00:00:00Z"
 draft: true
-tags:
-- Clojure
-- Language features
-- Specification Pattern
+tags: [Clojure, Language features, Specification Pattern]
 ---
 
 # Is Clojure Spec a dependant type system?

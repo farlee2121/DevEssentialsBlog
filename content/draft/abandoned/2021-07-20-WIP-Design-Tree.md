@@ -1,9 +1,7 @@
 ---
 date: "2021-07-20T00:00:00Z"
 draft: true
-tags:
-- Design Process
-- Ducks
+tags: [Design Process, Ducks]
 ---
 
 <!-- Outmoded by What's your duck post -->

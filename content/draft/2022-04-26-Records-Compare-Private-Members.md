@@ -1,9 +1,7 @@
 ---
 date: "2022-04-26T00:00:00Z"
 draft: true
-tags:
-- C#
-- Records
+tags: [C#, Records]
 ---
 
 # C# Records Compare Private Members
