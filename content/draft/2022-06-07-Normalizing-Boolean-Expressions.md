@@ -7,6 +7,7 @@ tags: [formal proof, Boolean logic]
 # Normalizing Boolean Expressions for Programmatic Inspection
 
 Programmer often arrange boolean expressions in all kinds of groupings for readability. The semantic of these groups, however, is not readily apparent to programs and algorithms. It turns out we can have it both ways, boolean expressions can be algorithmically normalized to consistent depth and form.
+<!--more-->
 
 ## Motivating Context
 

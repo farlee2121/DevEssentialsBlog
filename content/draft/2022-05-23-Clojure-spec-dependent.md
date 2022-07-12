@@ -9,7 +9,8 @@ tags: [Clojure, Language features, Specification Pattern]
 <!-- TODO: consider how the except will work, or if I just want to nerf the excerpt -->
 Clojure has a rather interesting optional type system: [Clojure Spec](https://clojure.org/about/spec). 
 
-I've been [mulling over possibilities](TODO) of this approach to types and encountered [dependent type systems](TODO).
+I've been [mulling over the possibilities](TODO) of this approach to types and encountered [dependent type systems](TODO).
+<!--more-->
 
 Dependent types allow values to be part of type definitions. For example, arrays with length as part of their type.
 

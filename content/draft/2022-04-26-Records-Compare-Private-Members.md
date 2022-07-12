@@ -2,11 +2,11 @@
 date: "2022-04-26T00:00:00Z"
 draft: true
 tags: [C#, Records]
+title: "C# Records Compare Private Members"
 ---
 
-# C# Records Compare Private Members
-
 Turns out private members of C# records affect value-based equality.
+<!--more-->
 
 This means that if we define a type like
 

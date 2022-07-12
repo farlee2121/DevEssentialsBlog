@@ -5,6 +5,7 @@ tags: [Testing, Performance, Expecto, Property Testing, Behavior-Driven Developm
 ---
 
 *Sometimes performance is an observable domain behavior that belongs in our normal test suite*
+<!--more-->
 
 I believe tests should generally encode domain requirements over simply exercising what we know a function does. Tests should be [decoupled from implementation details](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) and focus on observable behaviors. 
 

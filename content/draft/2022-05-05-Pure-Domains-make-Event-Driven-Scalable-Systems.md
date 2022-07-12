@@ -18,6 +18,7 @@ TODO: is post still aligned with original introduction / framing? Can it be? Doe
 # Pure Domains make Event-driven and Scalable Systems
 
 Consider a system where the business rules (domain) don't change the system state. Instead they return data that represents a state change and let consumers enact the change. Such a system is maximally event-driven and simplifies some difficult problems in high-scale systems.
+<!--more-->
 
 ## A Pure Domain through Events
 

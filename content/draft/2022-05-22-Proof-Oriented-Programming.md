@@ -8,6 +8,7 @@ tags: [Programming Paradigms, Language Features]
 
 I've been exploring ways to leverage [type-driven development](https://fsharpforfunandprofit.com/series/designing-with-types/) for better testing.
 Turns out this has already been done, and there is a whole category of proof-oriented programming languages.
+<!--more-->
 
 ## My explorations
 
