@@ -9,11 +9,17 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    lineNos: true
+    # noClasses: false
+    style: monokai
 
 outputFormats:
   RSS:
     baseName: "feed"
-# disableKinds: ["taxonomy", "term"]  
+
 sitemap:
   changefreq: weekly
   filename: /sitemap/index.xml
@@ -31,6 +37,8 @@ Params:
   footerSocialIcons:
     - name: RSS
       url: /feed.xml
+  assets:
+    disableHLJS: true
 
 frontmatter:
   date: [ ":filename", ":default"] # https://github.com/gohugoio/hugo/pull/4494

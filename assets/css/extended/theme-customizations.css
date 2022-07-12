@@ -45,3 +45,9 @@
 .series-toc ol strong {
     font-weight: bold;
 }
+
+
+.chroma, .post-content .highlight:not(table), .post-content .highlight code {
+    background-color: unset !important;
+    color: unset !important;
+  }
