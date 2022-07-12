@@ -6,6 +6,7 @@
 
 [build.environment]
   HUGO_VERSION = "v0.101.0"
+  HUGO_BASEURL = $DEPLOY_PRIME_URL
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
