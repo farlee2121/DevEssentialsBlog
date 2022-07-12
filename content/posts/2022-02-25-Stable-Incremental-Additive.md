@@ -1,8 +1,6 @@
 ---
 date: "2022-02-25T00:00:00Z"
-tags:
-- Design Thinking
-- Principles
+tags: [Design Thinking, Principles]
 title: "Process Quality Drivers: Stable, Incremental, Additive"
 ---
 

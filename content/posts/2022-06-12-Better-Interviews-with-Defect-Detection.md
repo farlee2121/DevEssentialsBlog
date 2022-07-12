@@ -1,9 +1,6 @@
 ---
 date: "2022-06-12T00:00:00Z"
-tags:
-- Interviews
-- Eductation
-- Defect Detection
+tags: [Interviews, Eductation, Defect Detection]
 title: Better Software Interviews with Defect Detection
 ---
 

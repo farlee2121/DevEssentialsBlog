@@ -1,13 +1,6 @@
 ---
 date: "2020-09-11T00:00:00Z"
-tags:
-- Architecture
-- Design thinking
-- SOLID Structure
-- Case Study
-- Scaling
-- Decorator
-- AOP
+tags: [Architecture, Design thinking, SOLID Structure, Case Study, Scaling, Decorator, AOP]
 title: Async Task Refactor Case Study
 ---
 

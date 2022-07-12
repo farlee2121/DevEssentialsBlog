@@ -1,9 +1,6 @@
 ---
 date: "2020-10-02T00:00:00Z"
-tags:
-- Design thinking
-- TDD
-- Reading Notes
+tags: [Design thinking, TDD, Reading Notes]
 title: What's Your Duck?
 ---
 

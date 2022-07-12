@@ -1,11 +1,6 @@
 ---
 date: "2021-12-24T00:00:00Z"
-tags:
-- Agile
-- Sprint
-- Iteration
-- Methodologies
-- Planning
+tags: [Agile, Sprint, Iteration, Methodologies, Planning]
 title: Why Sprints Should Be Stable
 ---
 

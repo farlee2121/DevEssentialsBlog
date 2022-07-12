@@ -2,9 +2,7 @@
 date: "2022-06-16T00:02:00Z"
 publishDate: "2022-06-16T00:02:00Z"
 seriesId: What's your Duck v2
-tags:
-- Design Process
-- Ducks
+tags: [Design Process, Ducks]
 title: "What's your Duck: The Design Tree and Incremental Progress"
 ---
 

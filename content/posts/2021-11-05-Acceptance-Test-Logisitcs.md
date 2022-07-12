@@ -1,10 +1,6 @@
 ---
 date: "2021-11-05T00:00:00Z"
-tags:
-- Acceptance Tests
-- BDD
-- Team Process
-- Quality
+tags: [Acceptance Tests, BDD, Team Process, Quality]
 title: Thoughts on Acceptance Test Logistics
 ---
 

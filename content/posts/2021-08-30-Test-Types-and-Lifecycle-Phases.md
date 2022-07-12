@@ -1,10 +1,6 @@
 ---
 date: "2021-08-30T00:00:00Z"
-tags:
-- Testing
-- Quality
-- Software Lifecycle
-- Team Organization
+tags: [Testing, Quality, Software Lifecycle, Team Organization]
 title: Test Types and Lifecycle Phases
 ---
 

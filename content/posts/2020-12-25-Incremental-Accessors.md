@@ -1,10 +1,6 @@
 ---
 date: "2020-12-25T00:00:00Z"
-tags:
-- Architecture
-- SOLID Structure
-- IDesign
-- Clean Architecture
+tags: [Architecture, SOLID Structure, IDesign, Clean Architecture]
 title: Incremental Accessors
 ---
 

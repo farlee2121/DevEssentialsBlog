@@ -1,11 +1,6 @@
 ---
 date: "2020-08-21T00:00:00Z"
-tags:
-- Design thinking
-- Testing
-- TDD
-- Test Api
-- Reading Review
+tags: [Design thinking, Testing, TDD, Test Api, Reading Review]
 math: true
 title: Test Api In Practice
 ---

@@ -1,9 +1,6 @@
 ---
 date: "2020-11-20T00:00:00Z"
-tags:
-- Programming Languages
-- Type Systems
-- Language properties
+tags: [Programming Languages, Type Systems, Language properties]
 title: Meta-Programming and Type Dynamics
 ---
 

@@ -1,9 +1,6 @@
 ---
 date: "2020-09-04T00:00:00Z"
-tags:
-- Architecture
-- Design thinking
-- Reading Review
+tags: [Architecture, Design thinking, Reading Review]
 title: System Language
 ---
 

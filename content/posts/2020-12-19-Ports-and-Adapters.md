@@ -1,9 +1,6 @@
 ---
 date: "2020-12-19T00:00:00Z"
-tags:
-- Architecture
-- Patterns
-- Clean Architecture
+tags: [Architecture, Patterns, Clean Architecture]
 title: Ports and Adapters
 ---
 

@@ -1,10 +1,6 @@
 ---
 date: "2022-01-07T00:00:00Z"
-tags:
-- Critical Thinking
-- Best Practice
-- Integration
-- Deployment
+tags: [Critical Thinking, Best Practice, Integration, Deployment]
 title: Qualities of a Good Dev Environment
 ---
 

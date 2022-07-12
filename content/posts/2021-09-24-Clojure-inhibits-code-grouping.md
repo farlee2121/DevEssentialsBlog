@@ -1,8 +1,6 @@
 ---
 date: "2021-09-24T00:00:00Z"
-tags:
-- Clojure
-- F#
+tags: [Clojure, F#]
 title: Clojure Namespaces Inhibit Code Grouping
 ---
 

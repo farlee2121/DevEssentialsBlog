@@ -1,9 +1,6 @@
 ---
 date: "2021-12-31T00:00:00Z"
-tags:
-- Tools
-- Process
-- Quality
+tags: [Tools, Process, Quality]
 title: Foundation of Software Measurement
 ---
 

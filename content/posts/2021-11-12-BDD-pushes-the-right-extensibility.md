@@ -1,9 +1,6 @@
 ---
 date: "2021-11-12T00:00:00Z"
-tags:
-- Testing
-- BDD
-- Open-Closed Principle
+tags: [Testing, BDD, Open-Closed Principle]
 title: BDD Pushes the right extensibility
 ---
 

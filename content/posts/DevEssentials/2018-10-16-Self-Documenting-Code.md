@@ -1,13 +1,6 @@
 ---
 date: "2018-10-16T00:00:00Z"
-tags:
-- Construction
-- Dev Essentials
-- Naming
-- Code Style
-- Readability
-- Documentation
-- Testing
+tags: [Construction, Dev Essentials, Naming, Code Style, Readability, Documentation, Testing]
 title: Self-Documenting Code
 ---
 

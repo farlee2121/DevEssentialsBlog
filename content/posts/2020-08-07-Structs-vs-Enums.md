@@ -1,11 +1,6 @@
 ---
 date: "2020-08-07T00:00:00Z"
-tags:
-- Architecture
-- Patterns
-- Design thinking
-- Volatility Analysis
-- Case Study
+tags: [Architecture, Patterns, Design thinking, Volatility Analysis, Case Study]
 title: Why Static Structs are Better Than Enums
 ---
 

@@ -1,8 +1,6 @@
 ---
 date: "2022-06-03T00:00:00Z"
-tags:
-- Random Testing
-- Completeness
+tags: [Random Testing, Completeness]
 title: Automated Random Testing and Improved Completeness
 ---
 

@@ -1,8 +1,6 @@
 ---
 date: "2022-03-27T00:00:00Z"
-tags:
-- Testing
-- UI
+tags: [Testing, UI]
 title: UI Mutation and Generative Testing Update
 ---
 I previously wrote on

@@ -1,10 +1,6 @@
 ---
 date: "2020-09-17T00:00:00Z"
-tags:
-- Architecture
-- Design thinking
-- Clean Architecture
-- SOLID Structure
+tags: [Architecture, Design thinking, Clean Architecture, SOLID Structure]
 title: "Clean Architecture+: Check-in and Benefits"
 ---
 

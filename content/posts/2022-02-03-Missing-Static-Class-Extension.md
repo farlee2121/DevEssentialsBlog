@@ -1,9 +1,6 @@
 ---
 date: "2022-02-03T00:00:00Z"
-tags:
-- .NET
-- C#
-- Language Design
+tags: [.NET, C#, Language Design]
 title: Case for Static Class Extension in C#
 ---
 

@@ -1,11 +1,6 @@
 ---
 date: "2018-10-01T00:00:00Z"
-tags:
-- Construction
-- Dev Essentials
-- Naming
-- Code Style
-- Readability
+tags: [Construction, Dev Essentials, Naming, Code Style, Readability]
 title: Semantic Naming
 ---
 

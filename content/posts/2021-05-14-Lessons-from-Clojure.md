@@ -1,10 +1,6 @@
 ---
 date: "2021-05-14T00:00:00Z"
-tags:
-- Clojure
-- Retrospective
-- Meta-programming
-- Functional
+tags: [Clojure, Retrospective, Meta-programming, Functional]
 title: Lessons From Clojure
 ---
 

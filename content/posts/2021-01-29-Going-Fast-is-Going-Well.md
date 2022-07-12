@@ -1,8 +1,6 @@
 ---
 date: "2021-01-29T00:00:00Z"
-tags:
-- Design Thinking
-- Requirements
+tags: [Design Thinking, Requirements]
 title: Going Fast is Going Well
 ---
 

@@ -1,8 +1,6 @@
 ---
 date: "2020-11-27T00:00:00Z"
-tags:
-- Language properties
-- Type systems
+tags: [Language properties, Type systems]
 title: Schema and Selection
 ---
 

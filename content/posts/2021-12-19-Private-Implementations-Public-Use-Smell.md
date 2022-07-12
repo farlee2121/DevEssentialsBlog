@@ -1,9 +1,6 @@
 ---
 date: "2021-12-19T00:00:00Z"
-tags:
-- Software Design
-- Design Smells
-- Dependency Inversion
+tags: [Software Design, Design Smells, Dependency Inversion]
 title: Private Implementations for Public Use is a Smell
 ---
 

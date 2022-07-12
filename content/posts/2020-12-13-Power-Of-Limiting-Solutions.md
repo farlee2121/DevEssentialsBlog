@@ -1,8 +1,6 @@
 ---
 date: "2020-12-13T00:00:00Z"
-tags:
-- Design
-- Reading Notes
+tags: [Design, Reading Notes]
 title: The Power of a Limited Toolset
 ---
 

@@ -1,9 +1,7 @@
 ---
 date: "2021-06-28T00:00:00Z"
 published: false
-tags:
-- Concept Map
-- Reading Review
+tags: [Concept Map, Reading Review]
 title: Construx Career Ladder
 ---
 

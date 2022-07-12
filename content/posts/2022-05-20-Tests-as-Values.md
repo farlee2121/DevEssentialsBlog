@@ -1,9 +1,6 @@
 ---
 date: "2022-05-20T00:00:00Z"
-tags:
-- Testing
-- Expecto
-- Composition
+tags: [Testing, Expecto, Composition]
 title: Tests as Values
 ---
 

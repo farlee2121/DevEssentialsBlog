@@ -1,9 +1,6 @@
 ---
 date: "2021-06-19T00:00:00Z"
-tags:
-- Clojure
-- Testing
-- REPL
+tags: [Clojure, Testing, REPL]
 title: Pros and cons of REPL-centered development
 ---
 

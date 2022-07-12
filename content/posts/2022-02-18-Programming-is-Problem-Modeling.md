@@ -1,7 +1,6 @@
 ---
 date: "2022-02-18T00:00:00Z"
-tags:
-- Design Thinking
+tags: [Design Thinking]
 title: Programming is Problem Modeling
 ---
 

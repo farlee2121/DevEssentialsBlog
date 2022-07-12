@@ -1,7 +1,6 @@
 ---
 date: "2021-08-08T00:00:00Z"
-tags:
-- SWEBOK
+tags: [SWEBOK]
 title: "SWEBOK: Hierarchy of chapters"
 ---
 

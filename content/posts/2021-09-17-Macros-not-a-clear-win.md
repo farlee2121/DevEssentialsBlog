@@ -1,8 +1,6 @@
 ---
 date: "2021-09-17T00:00:00Z"
-tags:
-- Clojure
-- Meta-programming
+tags: [Clojure, Meta-programming]
 title: Macros are not a clear win
 ---
 

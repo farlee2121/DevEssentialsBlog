@@ -1,11 +1,6 @@
 ---
 date: "2022-05-06T00:00:00Z"
-tags:
-- Rust
-- F#
-- Inheritance
-- Composition
-- Traits
+tags: [Rust, F#, Inheritance, Composition, Traits]
 title: Why No Traits (late-bound inheritance) in F#
 ---
 

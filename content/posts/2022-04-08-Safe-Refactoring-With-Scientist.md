@@ -1,9 +1,6 @@
 ---
 date: "2022-04-08T00:00:00Z"
-tags:
-- Refactoring
-- Monitoring
-- Migrations
+tags: [Refactoring, Monitoring, Migrations]
 title: Safe Refactoring with Scientist
 ---
 

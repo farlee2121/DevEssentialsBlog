@@ -1,14 +1,8 @@
 ---
 date: "2020-10-16T00:00:00Z"
 seriesId: "Language-Limited Thought"
-series_description: Exploring how different languages equip us to solve different
-  design problems
-tags:
-- Languages
-- Functional Programming
-- Design Thinking
-- Pivotal Insights
-
+series_description: Exploring how different languages equip us to solve different design problems
+tags: [Languages, Functional Programming, Design Thinking, Pivotal Insights]
 math: true
 title: Functional Composition, Decorator, and Aspect-Oriented Programming
 ---

@@ -1,9 +1,6 @@
 ---
 date: "2021-12-05T00:00:00Z"
-tags:
-- Testing
-- Quality
-- Measurement
+tags: [Testing, Quality, Measurement]
 title: What Tests Measure
 ---
 

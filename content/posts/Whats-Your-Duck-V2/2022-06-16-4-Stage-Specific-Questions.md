@@ -2,9 +2,7 @@
 date: "2022-06-16T00:04:00Z"
 publishDate: "2022-06-16T00:04:00Z"
 seriesId: What's your Duck v2
-tags:
-- Design Process
-- Ducks
+tags: [Design Process, Ducks]
 title: "What's your Duck: Stage-specifc questions"
 ---
 

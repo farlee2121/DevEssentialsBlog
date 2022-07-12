@@ -1,7 +1,6 @@
 ---
 date: "2021-04-30T00:00:00Z"
-tags:
-- Design Patterns
+tags: [Design Patterns]
 title: The Place for Ambient Context
 ---
 

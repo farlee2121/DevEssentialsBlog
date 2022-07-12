@@ -1,9 +1,6 @@
 ---
 date: "2021-02-26T00:00:00Z"
-tags:
-- Testing
-- Test Api
-- F#
+tags: [Testing, Test Api, F#]
 title: Test Api in F#
 ---
 

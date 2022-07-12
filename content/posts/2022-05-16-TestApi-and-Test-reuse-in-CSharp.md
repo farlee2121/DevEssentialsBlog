@@ -1,9 +1,6 @@
 ---
 date: "2022-05-16T00:00:00Z"
-tags:
-- TestApi
-- Testing
-- C#
+tags: [TestApi, Testing, C#]
 title: TestApi and Test Reuse in C#
 ---
 

@@ -1,9 +1,6 @@
 ---
 date: "2021-03-05T00:00:00Z"
-tags:
-- tools
-- markdown
-- process
+tags: [tools, markdown, process]
 title: Notes as Data
 ---
 

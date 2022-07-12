@@ -1,7 +1,6 @@
 ---
 date: "2021-01-15T00:00:00Z"
-tags:
-- C# 9
+tags: [C# 9]
 title: Result-type Update for C# 9
 ---
 

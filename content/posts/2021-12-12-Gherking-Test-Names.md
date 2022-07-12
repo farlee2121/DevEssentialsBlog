@@ -1,10 +1,6 @@
 ---
 date: "2021-12-12T00:00:00Z"
-tags:
-- Testing
-- BDD
-- Behavior Driven Development
-- TestApi
+tags: [Testing, BDD, Behavior Driven Development, TestApi]
 title: Gherkin-named Tests as Low-bar Acceptance Tests
 ---
 

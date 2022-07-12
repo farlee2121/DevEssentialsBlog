@@ -1,9 +1,6 @@
 ---
 date: "2021-03-26T00:00:00Z"
-tags:
-- Functional Programming
-- C#
-- Union Types
+tags: [Functional Programming, C#, Union Types]
 title: Union Types in C#
 ---
 

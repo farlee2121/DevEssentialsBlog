@@ -1,11 +1,6 @@
 ---
 date: "2021-06-11T00:00:00Z"
-tags:
-- Testing
-- BDD
-- Gherkin
-- DDD
-- TestApi
+tags: [Testing, BDD, Gherkin, DDD, TestApi]
 title: Gherkin vs Test API
 ---
 

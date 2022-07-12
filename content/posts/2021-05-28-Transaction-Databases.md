@@ -1,8 +1,6 @@
 ---
 date: "2021-05-28T00:00:00Z"
-tags:
-- Database
-- Event Sourcing
+tags: [Database, Event Sourcing]
 title: "Event Stores: An Advance in Data Safety"
 ---
 

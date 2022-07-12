@@ -1,10 +1,6 @@
 ---
 date: "2021-08-20T00:00:00Z"
-tags:
-- SWEBOK
-- Design Process
-- SCM
-- Quality
+tags: [SWEBOK, Design Process, SCM, Quality]
 title: Lifecycle Artifacts and Cross-Cutting Concerns
 ---
 

@@ -1,8 +1,6 @@
 ---
 date: "2021-07-02T00:00:00Z"
-tags:
-- Concept Map
-- Reading Review
+tags: [Concept Map, Reading Review]
 title: "Reading Review: Professional Software Development"
 ---
 

@@ -1,8 +1,6 @@
 ---
 date: "2022-01-28T00:00:00Z"
-tags:
-- Testing
-- Test Selection
+tags: [Testing, Test Selection]
 title: Test Case Selection Guide
 ---
 

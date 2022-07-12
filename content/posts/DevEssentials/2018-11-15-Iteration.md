@@ -1,9 +1,6 @@
 ---
 date: "2018-11-15T00:00:00Z"
-tags:
-- Construction
-- Dev Essentials
-- Process
+tags: [Construction, Dev Essentials, Process]
 title: Iteration
 ---
 

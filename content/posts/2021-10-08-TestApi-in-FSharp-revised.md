@@ -1,10 +1,6 @@
 ---
 date: "2021-10-08T00:00:00Z"
-tags:
-- F#
-- BDD
-- Test api
-- Testing
+tags: [F#, BDD, Test api, Testing]
 title: Test Api in F# Improved
 ---
 

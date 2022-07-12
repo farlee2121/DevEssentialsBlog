@@ -1,8 +1,6 @@
 ---
 date: "2022-03-18T00:00:00Z"
-tags:
-- Documentation
-- Process
+tags: [Documentation, Process]
 title: Levels of Developer Documentation
 ---
 

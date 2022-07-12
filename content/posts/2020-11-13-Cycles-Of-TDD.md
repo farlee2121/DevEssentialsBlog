@@ -1,9 +1,6 @@
 ---
 date: "2020-11-13T00:00:00Z"
-tags:
-- Design thinking
-- TDD
-- Reading Notes
+tags: [Design thinking, TDD, Reading Notes]
 title: The Cycles of TDD Diagram
 ---
 

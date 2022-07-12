@@ -1,8 +1,6 @@
 ---
 date: "2021-11-19T00:00:00Z"
-tags:
-- .NET
-- Open source
+tags: [.NET, Open source]
 title: Dotnet SDK Contribution Tips
 ---
 

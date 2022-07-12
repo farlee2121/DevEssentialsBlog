@@ -1,9 +1,6 @@
 ---
 date: "2022-07-03T00:00:00Z"
-tags:
-- SOLID
-- Dependency Inversion
-- Software Design
+tags: [SOLID, Dependency Inversion, Software Design]
 title: Dependency Inversion > Dependency Injection
 ---
 

@@ -1,9 +1,6 @@
 ---
 date: "2021-09-10T00:00:00Z"
-tags:
-- SWEBOK
-- Design
-- Fundamentals
+tags: [SWEBOK, Design, Fundamentals]
 title: Implicit Fundamentals
 ---
 

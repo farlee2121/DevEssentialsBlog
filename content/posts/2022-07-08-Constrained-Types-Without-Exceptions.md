@@ -1,10 +1,7 @@
 ---
 date: "2022-07-08T00:00:00Z"
 draft: false
-tags:
-- C#
-- Type-Driven Development
-- Value Types
+tags: [C#, Type-Driven Development, Value Types]
 title: Constrained Types without Exceptions
 ---
 

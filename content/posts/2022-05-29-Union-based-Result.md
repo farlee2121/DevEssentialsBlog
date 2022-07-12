@@ -1,9 +1,6 @@
 ---
 date: "2022-05-29T00:00:00Z"
-tags:
-- Union Types
-- C#
-- Discriminated Unions
+tags: [Union Types, C#, Discriminated Unions]
 title: Union-based Result Types in C#
 ---
 

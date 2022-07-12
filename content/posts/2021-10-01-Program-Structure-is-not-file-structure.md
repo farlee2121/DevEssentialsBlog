@@ -1,9 +1,6 @@
 ---
 date: "2021-10-01T00:00:00Z"
-tags:
-- Clojure
-- F#
-- Program Structure
+tags: [Clojure, F#, Program Structure]
 title: Program Structure is not File Structure
 ---
 

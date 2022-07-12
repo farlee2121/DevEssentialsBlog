@@ -1,8 +1,6 @@
 ---
 date: "2022-04-24T00:00:00Z"
-tags:
-- Continuous Integration
-- Refactoring
+tags: [Continuous Integration, Refactoring]
 title: "Continuous Integration and Refactoring: How to constructively develop against a single branch"
 ---
 

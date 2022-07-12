@@ -1,11 +1,6 @@
 ---
 date: "2021-03-19T00:00:00Z"
-tags:
-- Testing
-- BDD
-- Example-Based testing
-- Generative testing
-- Type-Driven Development
+tags: [Testing, BDD, Example-Based testing, Generative testing, Type-Driven Development]
 title: Quantifying Communication From Customer to Code
 ---
 

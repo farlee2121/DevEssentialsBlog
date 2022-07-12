@@ -1,11 +1,6 @@
 ---
 date: "2021-10-24T00:00:00Z"
-tags:
-- F#
-- DI
-- Dependency Injection
-- iDesign
-- Layered Architecture
+tags: [F#, DI, Dependency Injection, iDesign, Layered Architecture]
 title: "Theory: Dependency Injection Scheme is Determined by Responsibility Layer"
 ---
 

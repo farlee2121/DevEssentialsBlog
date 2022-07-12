@@ -1,8 +1,6 @@
 ---
 date: "2022-04-01T00:00:00Z"
-tags:
-- Logging
-- Monitoring
+tags: [Logging, Monitoring]
 title: A Few Logging Ideas
 ---
 

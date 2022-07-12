@@ -1,9 +1,6 @@
 ---
 date: "2018-09-23T00:00:00Z"
-tags:
-- Construction
-- Dev Essentials
-- Debugging
+tags: [Construction, Dev Essentials, Debugging]
 title: Scientific Debugging
 ---
 

@@ -1,12 +1,6 @@
 ---
 date: "2020-07-24T00:00:00Z"
-tags:
-- Architecture
-- Patterns
-- Configuration
-- Design thinking
-- Volatility Analysis
-- Case Study
+tags: [Architecture, Patterns, Configuration, Design thinking, Volatility Analysis, Case Study]
 title: Rediscovering Options
 ---
 

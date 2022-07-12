@@ -1,7 +1,6 @@
 ---
 date: "2022-02-11T00:00:00Z"
-tags:
-- Checklist
+tags: [Checklist]
 title: Pull Request Checklist
 ---
 

@@ -1,10 +1,6 @@
 ---
 date: "2021-11-26T00:00:00Z"
-tags:
-- Quality
-- Governance
-- Testing
-- Measurement
+tags: [Quality, Governance, Testing, Measurement]
 title: Governance is a mine of Quality techniques
 ---
 

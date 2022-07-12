@@ -1,8 +1,6 @@
 ---
 date: "2021-04-23T00:00:00Z"
-tags:
-- Design Process
-- Design Thinking
+tags: [Design Process, Design Thinking]
 title: Design and Requirements as Negotiation
 ---
 

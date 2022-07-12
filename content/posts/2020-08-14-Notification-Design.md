@@ -1,11 +1,6 @@
 ---
 date: "2020-08-14T00:00:00Z"
-tags:
-- Architecture
-- Patterns
-- Design thinking
-- SOLID Structure
-- Case Study
+tags: [Architecture, Patterns, Design thinking, SOLID Structure, Case Study]
 title: Notification Refactor Case Study
 ---
 

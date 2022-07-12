@@ -1,9 +1,6 @@
 ---
 date: "2022-03-04T00:00:00Z"
-tags:
-- Design Thinking
-- Architecture
-- Software Design
+tags: [Design Thinking, Architecture, Software Design]
 title: Progressive Design
 ---
 

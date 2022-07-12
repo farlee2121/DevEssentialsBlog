@@ -1,7 +1,6 @@
 ---
 date: "2021-07-09T00:00:00Z"
-tags:
-- Patterns
+tags: [Patterns]
 title: Patterns in practice
 ---
 

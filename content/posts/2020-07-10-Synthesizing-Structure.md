@@ -1,11 +1,6 @@
 ---
 date: "2020-07-10T00:00:00Z"
-tags:
-- Design Thinking
-- System Structure
-- Project Structure
-- Synthesizing
-- Design Theory
+tags: [Design Thinking, System Structure, Project Structure, Synthesizing, Design Theory]
 title: Synthesizing Project Organization Methods
 ---
 

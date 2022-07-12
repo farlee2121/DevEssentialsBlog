@@ -1,9 +1,6 @@
 ---
 date: "2021-04-02T00:00:00Z"
-tags:
-- Functional Programming
-- Programming Languages
-- Language Properties
+tags: [Functional Programming, Programming Languages, Language Properties]
 title: Functional Programming is a lasting way forward
 ---
 

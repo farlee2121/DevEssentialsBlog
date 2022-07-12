@@ -1,9 +1,6 @@
 ---
 date: "2018-11-25T00:00:00Z"
-tags:
-- Project Management
-- Dev Essentials
-- Process
+tags: [Project Management, Dev Essentials, Process]
 title: Requirements
 ---
 

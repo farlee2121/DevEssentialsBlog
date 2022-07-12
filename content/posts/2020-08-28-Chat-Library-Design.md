@@ -1,10 +1,6 @@
 ---
 date: "2020-08-28T00:00:00Z"
-tags:
-- Design thinking
-- Case Study
-- SOLID
-- Open-Closed Principle
+tags: [Design thinking, Case Study, SOLID, Open-Closed Principle]
 title: "Chat Library Case Study: Open-Closed Application"
 ---
 

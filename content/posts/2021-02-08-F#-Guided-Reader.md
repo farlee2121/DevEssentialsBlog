@@ -1,9 +1,6 @@
 ---
 date: "2021-02-08T00:00:00Z"
-tags:
-- functional
-- F#
-- Guided Reader
+tags: [functional, F#, Guided Reader]
 title: Functional Guided Reader
 url: /2021/02/08/f-guided-reader
 ---

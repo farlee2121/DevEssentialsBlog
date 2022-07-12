@@ -1,8 +1,6 @@
 ---
 date: "2021-03-12T00:00:00Z"
-tags:
-- Dependency Injection
-- Design Patterns
+tags: [Dependency Injection, Design Patterns]
 title: Service Locator Hides Circular References
 ---
 

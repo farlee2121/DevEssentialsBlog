@@ -1,10 +1,6 @@
 ---
 date: "2021-10-31T00:00:00Z"
-tags:
-- Acceptance Tests
-- BDD
-- Team Process
-- Quality
+tags: [Acceptance Tests, BDD, Team Process, Quality]
 title: Efficient Inter-Team Contracts with Acceptance Tests
 ---
 

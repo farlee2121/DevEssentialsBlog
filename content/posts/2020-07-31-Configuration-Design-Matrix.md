@@ -1,11 +1,6 @@
 ---
 date: "2020-07-31T00:00:00Z"
-tags:
-- Architecture
-- Patterns
-- Configuration
-- Design thinking
-- Volatility Analysis
+tags: [Architecture, Patterns, Configuration, Design thinking, Volatility Analysis]
 title: Rediscovering Options - Design Matrix
 ---
 

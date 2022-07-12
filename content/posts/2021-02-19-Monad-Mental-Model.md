@@ -1,9 +1,6 @@
 ---
 date: "2021-02-19T00:00:00Z"
-tags:
-- Math
-- Functional Programming
-- Design Patterns
+tags: [Math, Functional Programming, Design Patterns]
 title: Building a Monad Intuition
 ---
 

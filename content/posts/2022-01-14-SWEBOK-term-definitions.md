@@ -1,8 +1,6 @@
 ---
 date: "2022-01-14T00:00:00Z"
-tags:
-- SWEBOK
-- Software Engineering
+tags: [SWEBOK, Software Engineering]
 title: SWEBOK Key Definitions
 ---
 

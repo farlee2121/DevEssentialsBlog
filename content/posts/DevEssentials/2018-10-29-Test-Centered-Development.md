@@ -1,9 +1,6 @@
 ---
 date: "2018-10-29T00:00:00Z"
-tags:
-- Construction
-- Dev Essentials
-- Testing
+tags: [Construction, Dev Essentials, Testing]
 title: Test-Centered Development
 ---
 

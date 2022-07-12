@@ -1,9 +1,6 @@
 ---
 date: "2021-10-15T00:00:00Z"
-tags:
-- State Machines
-- Theory
-- Interpreters
+tags: [State Machines, Theory, Interpreters]
 title: State Machines and Interpreters are Equivalent
 ---
 
