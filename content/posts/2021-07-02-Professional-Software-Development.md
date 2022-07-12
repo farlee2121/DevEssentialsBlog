@@ -2,6 +2,8 @@
 date: "2021-07-02T00:00:00Z"
 tags: [Concept Map, Reading Review]
 title: "Reading Review: Professional Software Development"
+aliases:
+- /2021/07/02/professional-software-development
 ---
 
 Steve McConnell is best known for Code Complete. Professional Software Development is a much lighter packaging of McConnell's core philosophy. It establishes up a well-founded view on what the software industry is and could be. Here I'll highlight some of my key takeaways from the book.

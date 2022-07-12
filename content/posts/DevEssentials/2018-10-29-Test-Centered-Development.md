@@ -2,6 +2,8 @@
 date: "2018-10-29T00:00:00Z"
 tags: [Construction, Dev Essentials, Testing]
 title: Test-Centered Development
+aliases:
+- /2018/10/29/test-centered-development
 ---
 
 >   “Coding ain’t done ‘til the tests run” - The Pragmatic Programmer

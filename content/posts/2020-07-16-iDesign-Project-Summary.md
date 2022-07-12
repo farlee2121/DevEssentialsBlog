@@ -3,6 +3,8 @@ date: "2020-07-16T00:00:00Z"
 tags: [Architecture, DDD, iDesign, Reading Notes]
 math: true
 title: "Righting Software - Project Design Summary"
+aliases:
+- /2020/07/16/idesign-project-summary
 ---
 
 Part 2 of Righting software presents the most complete theory of project management I've seen: the [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method). 

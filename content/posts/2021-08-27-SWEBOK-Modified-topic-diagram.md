@@ -2,6 +2,8 @@
 date: "2021-08-27T00:00:00Z"
 tags: [SWEBOK, Software Engineering Body of Knowledge, Visual]
 title: "SWEBOK: Modified software Concept Map"
+aliases:
+- /2021/08/27/swebok-modified-topic-diagram
 ---
 
 I've been wrestling with the Software Engineering Body of Knowledge (SWEBOK) to distill an intuitive mental image for software knowledge.

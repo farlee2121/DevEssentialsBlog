@@ -2,6 +2,8 @@
 date: "2022-01-21T00:00:00Z"
 tags: [Checklist, Critical Thinking, Duck docs, Process]
 title: Development Cycles Checklist
+aliases:
+- /2022/01/21/development-cycles-checklist
 ---
 
 A junior developer recently asked for a daily responsibilities checklist. This question made no sense to me at first. A developer's job isn't so routine as a daily checklist. However, it sparked me to think about how a developer's regular activities can be described concisely. 

@@ -2,6 +2,8 @@
 date: "2021-12-19T00:00:00Z"
 tags: [Software Design, Design Smells, Dependency Inversion]
 title: Private Implementations for Public Use is a Smell
+aliases:
+- /2021/12/19/private-implementations-public-use-smell
 ---
 
 I was refactoring an older code base and noticed a pattern I used to follow where a project keeps implementations private and only leaves the interfaces public.

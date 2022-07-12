@@ -2,6 +2,8 @@
 date: "2021-05-14T00:00:00Z"
 tags: [Clojure, Retrospective, Meta-programming, Functional]
 title: Lessons From Clojure
+aliases:
+- /2021/05/14/lessons-from-clojure
 ---
 
 Fred Brooks once described elegant design as few ideas combined powerfully. Clojure is a language that lives by that idea. Understanding Clojure improved my understanding of language choices in general. Here I'll highlight some of my learnings.

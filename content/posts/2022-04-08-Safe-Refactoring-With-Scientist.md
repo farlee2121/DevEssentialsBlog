@@ -2,6 +2,8 @@
 date: "2022-04-08T00:00:00Z"
 tags: [Refactoring, Monitoring, Migrations]
 title: Safe Refactoring with Scientist
+aliases:
+- /2022/04/08/safe-refactoring-with-scientist
 ---
 
 Agile and DevOps have pushed faster and more frequent releases. Techniques like integration test, feature flags, canary tests, and monitors evolved to maintain service reliability without slowing that pace. But some code paths are so critical that they cannot fail even once. This is where [Scientist](https://github.com/github/scientist) comes in.

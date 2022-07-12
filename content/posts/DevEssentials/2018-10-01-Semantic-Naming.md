@@ -2,6 +2,8 @@
 date: "2018-10-01T00:00:00Z"
 tags: [Construction, Dev Essentials, Naming, Code Style, Readability]
 title: Semantic Naming
+aliases:
+- /2018/10/01/semantic-naming
 ---
 
 *There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors. - Phil Karlton*

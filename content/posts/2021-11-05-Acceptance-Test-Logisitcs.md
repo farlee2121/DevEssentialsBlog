@@ -2,6 +2,8 @@
 date: "2021-11-05T00:00:00Z"
 tags: [Acceptance Tests, BDD, Team Process, Quality]
 title: Thoughts on Acceptance Test Logistics
+aliases:
+- /2021/11/05/acceptance-test-logisitcs
 ---
 
 I [previously wrote](../posts/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md) on how acceptance tests can streamline communication between developers and teams. 

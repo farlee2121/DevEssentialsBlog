@@ -4,6 +4,8 @@ publishDate: "2021-02-12T00:03:00Z"
 seriesId: "How Learning Works"
 tags: [Learning, Book Review]
 title: Knowledge Organization
+aliases:
+- /2021/02/12/3-knowledge-organization
 ---
 
 Think back to [the first post on mastery](./2021-02-12-1-Knowledge-Types-and-Mastery.md). Expert blindspot is caused by information obvious to the master and imperceptible to the student, causing both sides to be baffled by the behavior of the other. 

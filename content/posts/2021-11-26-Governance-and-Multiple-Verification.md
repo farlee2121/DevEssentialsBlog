@@ -2,6 +2,8 @@
 date: "2021-11-26T00:00:00Z"
 tags: [Quality, Governance, Testing, Measurement]
 title: Governance is a mine of Quality techniques
+aliases:
+- /2021/11/26/governance-and-multiple-verification
 ---
 
 I recently put together that multiple verification (the quality technique) is effectively the same and as [governance](https://en.wikipedia.org/wiki/Corporate_governance) techniques. It's about managing the level of trust and risk we accept from individual contributors.

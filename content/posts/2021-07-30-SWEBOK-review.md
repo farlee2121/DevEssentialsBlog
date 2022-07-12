@@ -2,6 +2,8 @@
 date: "2021-07-30T00:00:00Z"
 tags: [SWEBOK, Reading Review]
 title: "Reading Review: Software Engineering Body of Knowledge"
+aliases:
+- /2021/07/30/swebok-review
 ---
 
 The Software Engineering Body of Knowledge (SWEBOK) levels up our industry. It collects evidence-based standard practices that every developer is expected to know. This post will establish some background for SWEBOK, cover my high-level takeaways.

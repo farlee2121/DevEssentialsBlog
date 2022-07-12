@@ -2,6 +2,8 @@
 date: "2021-08-20T00:00:00Z"
 tags: [SWEBOK, Design Process, SCM, Quality]
 title: Lifecycle Artifacts and Cross-Cutting Concerns
+aliases:
+- /2021/08/20/swebok-transform-scm
 ---
 
 The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](../posts/2021-08-13-Swebok-transform-view.md). I realized that each transform creates an artifact, and these artifacts are key to connecting cross-cutting concerns into the lifecycle phases.

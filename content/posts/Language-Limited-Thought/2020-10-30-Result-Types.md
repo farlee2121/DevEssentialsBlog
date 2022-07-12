@@ -4,6 +4,8 @@ seriesId: "Language-Limited Thought"
 series_description: Exploring how different languages equip us to solve different design problems
 tags: [Languages, Functional Programming, Design Thinking, Pivotal Insights]
 title: Result Types
+aliases:
+- /2020/10/30/result-types
 ---
 
 I want to cleanly represent predictable failure states as part of my function contracts. This lets consumers know right away what scenarios they should expect without documentation or looking through code. F# encourages this pattern and normalizes it with the Result type. Representing the same idea in C#, however, is non-trivial. 

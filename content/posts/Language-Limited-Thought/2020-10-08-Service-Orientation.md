@@ -4,6 +4,8 @@ seriesId: "Language-Limited Thought"
 series_description: Exploring how different languages equip us to solve different design problems
 tags: [Languages, Functional Programming, Design Thinking, Pivotal Insights]
 title: Service-Orientation and Functional Programming
+aliases:
+- /2020/10/08/service-orientation
 ---
 
 Service-Oriented Programming is my primary programming paradigm. It divides the software into self-contained "services" or groups of functionality. Services also apply in functional programming, rather, service-like behavior is enforced all the way to the foundational functional concepts.

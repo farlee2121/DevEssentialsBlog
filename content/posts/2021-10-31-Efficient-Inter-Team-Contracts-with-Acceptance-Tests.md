@@ -2,6 +2,8 @@
 date: "2021-10-31T00:00:00Z"
 tags: [Acceptance Tests, BDD, Team Process, Quality]
 title: Efficient Inter-Team Contracts with Acceptance Tests
+aliases:
+- /2021/10/31/efficient-inter-team-contracts-with-acceptance-tests
 ---
 
 I've been exploring large-scale formal development practices, and realized acceptance tests may be the best way for developers to encode expectations for other developers.

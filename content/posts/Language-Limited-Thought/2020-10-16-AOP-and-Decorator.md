@@ -5,6 +5,8 @@ series_description: Exploring how different languages equip us to solve differen
 tags: [Languages, Functional Programming, Design Thinking, Pivotal Insights]
 math: true
 title: Functional Composition, Decorator, and Aspect-Oriented Programming
+aliases:
+- /2020/10/16/aop-and-decorator
 ---
 
 Aspect-Oriented programming has captivated my imagination for years. C#, however, does not support AOP. Even conceptually realizing benefits of the paradigm proved difficult. Then, I experienced functional composition.

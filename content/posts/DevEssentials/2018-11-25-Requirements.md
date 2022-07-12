@@ -2,6 +2,8 @@
 date: "2018-11-25T00:00:00Z"
 tags: [Project Management, Dev Essentials, Process]
 title: Requirements
+aliases:
+- /2018/11/25/requirements
 ---
 
 > The most important single aspect of software development is to be clear

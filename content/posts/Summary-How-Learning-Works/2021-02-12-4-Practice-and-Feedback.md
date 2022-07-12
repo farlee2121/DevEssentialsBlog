@@ -4,6 +4,8 @@ publishDate: "2021-02-12T00:04:00Z"
 seriesId: "How Learning Works"
 tags: [Learning, Book Review]
 title: Practice & Feedback
+aliases:
+- /2021/02/12/4-practice-and-feedback
 ---
 
 Repeatedly explaining some idea without perceived progress is frustrating for both the teacher and student. Ideas feel compelling and actionable, but remember, knowledge is both declarative and procedural. Thus, feedback and practice are two halves of one process. Feedback is not effective without an opportunity to practice.

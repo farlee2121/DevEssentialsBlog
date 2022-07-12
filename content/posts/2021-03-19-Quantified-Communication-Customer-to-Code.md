@@ -2,6 +2,8 @@
 date: "2021-03-19T00:00:00Z"
 tags: [Testing, BDD, Example-Based testing, Generative testing, Type-Driven Development]
 title: Quantifying Communication From Customer to Code
+aliases:
+- /2021/03/19/quantified-communication-customer-to-code
 ---
 
 Learning functional programming has included significant quality time with Type-Driven Development and property-based testing. These paradigms highlighted a gap in my previous testing techniques. It led me to better classify types of communication errors between customers and code, and the toolset for addressing each type.

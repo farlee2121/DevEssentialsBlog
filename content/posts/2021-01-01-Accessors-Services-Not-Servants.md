@@ -2,6 +2,8 @@
 date: "2021-01-01T00:00:00Z"
 tags: [Architecture, SOLID Structure, IDesign, Clean Architecture]
 title: "Accessors: Services, Not Servants"
+aliases:
+- /2021/01/01/accessors-services-not-servants
 ---
 
 I've been on a long journey of meshing IDesign with Clean Architecture. Managers, engines, and utilities fit nicely, but accessors seemed too substantial for an adapter and not independent enough for a true service. At last, I've realized the place of accessors by building off [their relationship to utilities](../posts/2020-12-25-Incremental-Accessors.md). Accessors are independent services, not servants to managers.

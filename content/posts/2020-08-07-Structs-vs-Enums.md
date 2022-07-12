@@ -2,6 +2,8 @@
 date: "2020-08-07T00:00:00Z"
 tags: [Architecture, Patterns, Design thinking, Volatility Analysis, Case Study]
 title: Why Static Structs are Better Than Enums
+aliases:
+- /2020/08/07/structs-vs-enums
 ---
 
 C# (and Java) offer a type call enum (aka enumeration). It represents a fixed list of possible values and is a powerful tool for communicating intentions through the type system. However, a recent legacy project forced me to face the shortcomings of enums and realize an even more powerful pattern, struct named constants.

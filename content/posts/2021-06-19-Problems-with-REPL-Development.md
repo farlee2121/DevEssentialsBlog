@@ -2,6 +2,8 @@
 date: "2021-06-19T00:00:00Z"
 tags: [Clojure, Testing, REPL]
 title: Pros and cons of REPL-centered development
+aliases:
+- /2021/06/19/problems-with-repl-development
 ---
 
 I've been working on Clojure lately, and the Clojure community tends to center their development around the REPL. While often useful, this approach also comes with some unforeseen downsides.

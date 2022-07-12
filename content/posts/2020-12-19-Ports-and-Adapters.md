@@ -2,6 +2,8 @@
 date: "2020-12-19T00:00:00Z"
 tags: [Architecture, Patterns, Clean Architecture]
 title: Ports and Adapters
+aliases:
+- /2020/12/19/ports-and-adapters
 ---
 
 Understanding [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) has transformed my approach to architecture. Now I feel like my understanding has evolved one step further by understanding its parent pattern's name, Ports and Adapters.

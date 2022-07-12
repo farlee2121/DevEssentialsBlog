@@ -4,6 +4,8 @@ publishDate: "2021-02-12T00:01:00Z"
 seriesId: "How Learning Works"
 tags: [Learning, Book Review]
 title: Knowledge Types and Mastery
+aliases:
+- /2021/02/12/1-knowledge-types-and-mastery
 ---
 
 *Defn: Mastery - a high degree of competence in a particular area.*

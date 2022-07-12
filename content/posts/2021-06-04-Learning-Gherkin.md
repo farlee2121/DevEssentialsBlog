@@ -2,6 +2,8 @@
 date: "2021-06-04T00:00:00Z"
 tags: [Testing, BDD, Gherkin, DDD, TestApi]
 title: Getting started with Gherkin
+aliases:
+- /2021/06/04/learning-gherkin
 ---
 
 I finally got hands-on experience with Gherkin, the common language for Behavior-driven Development (BDD). Getting started was more of a struggle than I anticipated. Here are solutions to some of my main hangups.

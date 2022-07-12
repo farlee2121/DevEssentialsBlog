@@ -2,6 +2,8 @@
 date: "2020-08-28T00:00:00Z"
 tags: [Design thinking, Case Study, SOLID, Open-Closed Principle]
 title: "Chat Library Case Study: Open-Closed Application"
+aliases:
+- /2020/08/28/chat-library-design
 ---
 
 This is a throw back to one of my earlier wrestlings with the Open-Closed principle and writing extensible frameworks. The goal is to shed some light on an important realization that let me to understanding the Open-Closed Principle.

@@ -2,6 +2,8 @@
 date: "2022-03-07T00:00:00Z"
 tags: [Eductation, Learning, Reading Review]
 title: Small Teaching Review
+aliases:
+- /2022/03/07/small-teaching-review
 ---
 
 Small teaching is an engaging and practical condensation of learning research into an accessible read. The book is oriented toward teachers, but is meaningful for anyone who wants to learn more effectively or understand how to share ideas.

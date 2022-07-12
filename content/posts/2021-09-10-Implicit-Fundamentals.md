@@ -2,6 +2,8 @@
 date: "2021-09-10T00:00:00Z"
 tags: [SWEBOK, Design, Fundamentals]
 title: Implicit Fundamentals
+aliases:
+- /2021/09/10/implicit-fundamentals
 ---
 
 I recently gave a presentation on the Software Engineering Body of Knowledge focused on road maps for software learning.

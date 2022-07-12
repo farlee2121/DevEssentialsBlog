@@ -3,6 +3,8 @@ date: "2020-08-21T00:00:00Z"
 tags: [Design thinking, Testing, TDD, Test Api, Reading Review]
 math: true
 title: Test Api In Practice
+aliases:
+- /2020/08/21/test-api-inpractice
 ---
 
 A friend of mine, Paul Spoon, wrote a [delightful article](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) about using the Anti-Corruption Layer pattern as a tool for more stable tests. I tried the pattern with skepticism, and will now never go back.

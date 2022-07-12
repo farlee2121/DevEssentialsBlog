@@ -4,6 +4,8 @@ publishDate: "2022-06-16T00:01:00Z"
 seriesId: What's your Duck v2
 tags: [Design Process, Ducks]
 title: "What's your Duck: Software as Clarity"
+aliases:
+- /2022/06/16/1-software-as-clarity
 ---
 
 This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post explores the key questions "What is programming?", "What is Software Engineering?", and how these answers relate to our design process.

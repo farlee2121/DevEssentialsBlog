@@ -2,6 +2,8 @@
 date: "2021-10-08T00:00:00Z"
 tags: [F#, BDD, Test api, Testing]
 title: Test Api in F# Improved
+aliases:
+- /2021/10/08/testapi-in-fsharp-revised
 ---
 
 I [previously wrote](../posts/2021-02-26-TestApi-in-FSharp.md) on the Test API behavioral testing in F#. More time and thinking has brought about a few key improvements, making the pattern both more concise and standardized.

@@ -2,6 +2,8 @@
 date: "2018-11-15T00:00:00Z"
 tags: [Construction, Dev Essentials, Process]
 title: Iteration
+aliases:
+- /2018/11/15/iteration
 ---
 
 >   “...the incompletenesses and inconsistencies of our ideas become clear only

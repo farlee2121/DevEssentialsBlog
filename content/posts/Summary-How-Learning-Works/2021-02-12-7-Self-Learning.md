@@ -4,6 +4,8 @@ publishDate: "2021-02-12T00:07:00Z"
 seriesId: "How Learning Works"
 tags: [Learning, Book Review]
 title: Self-learning
+aliases:
+- /2021/02/12/7-self-learning
 ---
 
 I see programming as an extended application of problem solving, and problem solving is just a different view on self-learning. Encouraging self-learning makes a team skillful and robust.

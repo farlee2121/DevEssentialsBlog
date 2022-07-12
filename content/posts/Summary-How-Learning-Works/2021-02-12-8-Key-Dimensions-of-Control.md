@@ -4,6 +4,8 @@ publishDate: "2021-02-12T00:08:00Z"
 seriesId: "How Learning Works"
 tags: [Learning, Book Review]
 title: Key Dimensions of Control
+aliases:
+- /2021/02/12/8-key-dimensions-of-control
 ---
 
 **Measurement** – The types and amount of insights we extract on our students current understanding

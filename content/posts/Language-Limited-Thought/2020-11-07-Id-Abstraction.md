@@ -4,6 +4,8 @@ seriesId: "Language-Limited Thought"
 series_description: Exploring how different languages equip us to solve different design problems
 tags: [Languages, Functional Programming, Design Thinking, Pivotal Insights]
 title: Id Abstractions
+aliases:
+- /2020/11/07/id-abstraction
 ---
 
 I once worked for a company that exposed all of their entities IDs as integers. It's common practice, but it bit them hard when they needed to adopt an offline-then-merge strategy for client data. This required switching ids to Guids all over the code base and it was an arduous undertaking. I've been trying and failing to simply abstract ID types since.

@@ -2,6 +2,8 @@
 date: "2020-10-02T00:00:00Z"
 tags: [Design thinking, TDD, Reading Notes]
 title: What's Your Duck?
+aliases:
+- /2020/10/02/whats-your-duck
 ---
 
 The Pragmatic Programmer tells the now legendary tale of talking with a rubber duck to overcome programming problems. This sounds a bit silly, but programming is a design activity all the way down to the source code implementations. Problems and possibilities often won't reveal themselves until we try to communicate them. Every programmer needs a duck. So what is yours?

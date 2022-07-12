@@ -5,6 +5,8 @@ series_description: Exploring how different languages equip us to solve differen
 tags: [Languages, Functional Programming, Design Thinking, Pivotal Insights]
 math: true
 title: Type Safety with Multiple Valid Input Types
+aliases:
+- /2020/10/22/multiple-input-types
 ---
 
 Sometimes a constructor or function can naturally accept multiple types. The classic solution to this is overloading. The problem is overloading can combinatorially expand for every multi-typed parameter.

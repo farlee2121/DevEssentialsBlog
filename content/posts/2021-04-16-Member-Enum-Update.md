@@ -2,6 +2,8 @@
 date: "2021-04-16T00:00:00Z"
 tags: [C# 9, Patterns]
 title: Static Member Enums Update
+aliases:
+- /2021/04/16/member-enum-update
 ---
 
 I [previously wrote](../posts/2020-08-07-Structs-vs-Enums.md) on how static members on a struct work as a more extension-friendly enum. This pattern has gotten even better as of C# 9.

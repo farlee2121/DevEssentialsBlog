@@ -2,6 +2,8 @@
 date: "2020-07-24T00:00:00Z"
 tags: [Architecture, Patterns, Configuration, Design thinking, Volatility Analysis, Case Study]
 title: Rediscovering Options
+aliases:
+- /2020/07/24/rediscovering-options
 ---
 
 Configuration is a powerful tool and a dangerous temptation. My goal in this post is to walk through the ways I mishandled configuration, ended up rediscovering the Options configuration pattern, and finally dive into specific design scenarios to show why Options is the most stable solution.

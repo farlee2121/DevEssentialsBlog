@@ -2,6 +2,8 @@
 date: "2020-07-31T00:00:00Z"
 tags: [Architecture, Patterns, Configuration, Design thinking, Volatility Analysis]
 title: Rediscovering Options - Design Matrix
+aliases:
+- /2020/07/31/configuration-design-matrix
 ---
 
 I got to thinking about the [Rediscovering Options](2020-07-24-Rediscovering-Options.md) post. The volatility analysis portion is an important artifact of my design process. The current version requires reading the whole list to comprehend the results. How could I make it better?

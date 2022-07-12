@@ -3,6 +3,8 @@ date: "2021-06-28T00:00:00Z"
 published: false
 tags: [Concept Map, Reading Review]
 title: Construx Career Ladder
+aliases:
+- /2021/06/28/construx-career-ladder
 ---
 
 The [Construx Professional Development Ladder](https://www.construx.com/professional-development-ladder/) is a comprehensive and clear road map for software career development. It mixes community standards, respected literature, and experiential learning to create a framework for understanding and acquiring software competency. I would recommend this short reading to every young developer. Let's look at what makes it so good.

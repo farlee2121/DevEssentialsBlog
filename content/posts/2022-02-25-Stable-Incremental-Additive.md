@@ -2,6 +2,8 @@
 date: "2022-02-25T00:00:00Z"
 tags: [Design Thinking, Principles]
 title: "Process Quality Drivers: Stable, Incremental, Additive"
+aliases:
+- /2022/02/25/stable-incremental-additive
 ---
 
 "No ideal process, or set of processes, exists" "Software processes must be selected, adapted, and applied as appropriate for each project and each organizational context." ([SWEBOK](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3) Ch 1.1 intro). No one likes to hear "that's just how we do it". Process without understanding leads to [frustrating lack of results](https://stevemcconnell.com/articles/cargo-cult-software-engineering/). Understanding factors of good process is critical for effective work across projects and for continued improvement.

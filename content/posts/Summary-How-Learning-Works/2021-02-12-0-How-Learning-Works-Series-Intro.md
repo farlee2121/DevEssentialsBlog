@@ -4,6 +4,8 @@ publishDate: "2021-02-12T00:00:00Z"
 seriesId: "How Learning Works"
 tags: [Learning, Book Review]
 title: Learning Principles
+aliases:
+- /2021/02/12/0-how-learning-works-series-intro
 ---
 Communication is hard. We’ve all (probably) experienced situations where our words fall flat; where repeated explanation just doesn't seem to create understanding. 
 

@@ -2,6 +2,8 @@
 date: "2021-12-31T00:00:00Z"
 tags: [Tools, Process, Quality]
 title: Foundation of Software Measurement
+aliases:
+- /2021/12/31/foundations-of-software-measurement
 ---
 
 Software Engineers are differentiated from other programming disciplines by economical, repeatable, and reliable results. Such consistency requires measurement, data on which to make informed decisions. I propose that source control and work item tracking are the kernel of such process.

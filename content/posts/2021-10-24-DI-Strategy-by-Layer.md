@@ -2,6 +2,8 @@
 date: "2021-10-24T00:00:00Z"
 tags: [F#, DI, Dependency Injection, iDesign, Layered Architecture]
 title: "Theory: Dependency Injection Scheme is Determined by Responsibility Layer"
+aliases:
+- /2021/10/24/di-strategy-by-layer
 ---
 
 Scott Wlaschin posted an [incredible series](https://fsharpforfunandprofit.com/posts/dependencies/) on dependency injection. It clarifies the different techniques and cases where each is useful. I noticed an interesting relationship between the techniques and the layers I use to categorize services.

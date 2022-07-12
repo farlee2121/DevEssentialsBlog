@@ -2,6 +2,8 @@
 date: "2021-01-29T00:00:00Z"
 tags: [Design Thinking, Requirements]
 title: Going Fast is Going Well
+aliases:
+- /2021/01/29/going-fast-is-going-well
 ---
 
 I want to directly address the idea that moving quickly means bad code. Heavy design process is also not the opposite of either speed or sloppy code. To go fast is to go well, and that means fast incremental design.

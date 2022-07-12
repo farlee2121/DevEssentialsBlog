@@ -2,6 +2,8 @@
 date: "2021-01-22T00:00:00Z"
 tags: [C# 9, AOP, Aspect-Orientated Programming]
 title: Aspect-Orientation Update for C# 9
+aliases:
+- /2021/01/22/aop-update
 ---
 
 I [previously wrote](../posts/Language-Limited-Thought/2020-10-16-AOP-and-Decorator.md) on the difficulties of Aspect-Orientation in C#. The addition of Source Generators in C# 9 changes the possibilities considerably.

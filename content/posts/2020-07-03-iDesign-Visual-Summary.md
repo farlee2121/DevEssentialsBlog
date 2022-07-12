@@ -3,6 +3,8 @@ date: "2020-07-03T00:00:00Z"
 summary: Righting Software (definitive iDesign method book) system design principles explained with pictures
 tags: [Architecture, DDD, iDesign, Reading Notes]
 title: Righting Software Visual Summary
+aliases:
+- /2020/07/03/idesign-visual-summary
 ---
 
 Thus far this only includes the System Design portion of the book.

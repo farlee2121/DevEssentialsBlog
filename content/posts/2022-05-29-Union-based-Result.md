@@ -2,6 +2,8 @@
 date: "2022-05-29T00:00:00Z"
 tags: [Union Types, C#, Discriminated Unions]
 title: Union-based Result Types in C#
+aliases:
+- /2022/05/29/union-based-result
 ---
 
 I previously wrote about [result types](../posts/2021-01-15-Results-Update.md) and [union types](../posts/2021-03-26-Unions-in-CSharp.md) in C#. I got to wondering if a union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.

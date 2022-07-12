@@ -4,6 +4,8 @@ publishDate: "2022-06-16T00:04:00Z"
 seriesId: What's your Duck v2
 tags: [Design Process, Ducks]
 title: "What's your Duck: Stage-specifc questions"
+aliases:
+- /2022/06/16/4-stage-specific-questions
 ---
 
 This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post explores questions to clarify thoughts in specific software lifecycle stages.

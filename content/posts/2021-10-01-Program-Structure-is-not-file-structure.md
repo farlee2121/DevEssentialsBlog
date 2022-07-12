@@ -2,6 +2,8 @@
 date: "2021-10-01T00:00:00Z"
 tags: [Clojure, F#, Program Structure]
 title: Program Structure is not File Structure
+aliases:
+- /2021/10/01/program-structure-is-not-file-structure
 ---
 
 Naming is one of the most important activities in programming. Names are the primary vehicle for communicating intent and making code understandable.

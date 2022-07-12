@@ -2,6 +2,8 @@
 date: "2022-05-16T00:00:00Z"
 tags: [TestApi, Testing, C#]
 title: TestApi and Test Reuse in C#
+aliases:
+- /2022/05/16/testapi-and-test-reuse-in-csharp
 ---
 
 The [TestApi](../posts/2020-08-21-Test-Api-InPractice.md) pattern helps decouple tests from our system and enables more stable and reusable tests.

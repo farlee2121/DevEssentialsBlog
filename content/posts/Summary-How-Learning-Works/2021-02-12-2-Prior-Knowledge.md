@@ -4,6 +4,8 @@ publishDate: "2021-02-12T00:02:00Z"
 seriesId: "How Learning Works"
 tags: [Learning, Book Review]
 title: Prior Knowledge
+aliases:
+- /2021/02/12/2-prior-knowledge
 ---
 
 Every student views new information through the lens of prior knowledge. In fact, some researchers suggest that learning *requires* connecting new information to what we already know. Either way, more connections leads to improved recall and utility.

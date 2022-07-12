@@ -2,6 +2,8 @@
 date: "2021-11-12T00:00:00Z"
 tags: [Testing, BDD, Open-Closed Principle]
 title: BDD Pushes the right extensibility
+aliases:
+- /2021/11/12/bdd-pushes-the-right-extensibility
 ---
 
 I recently read Mark Seemann's post on how [Testability is the Open-Closed Principle](https://blog.ploeh.dk/2009/06/05/TestabilityIsReallyTheOpenClosedPrinciple/). This helped me realize the approach to testing directs the kinds of flexibility in our system, and behavior-based testing pushes the right kind of flexibility.

@@ -3,6 +3,8 @@ date: "2022-07-08T00:00:00Z"
 draft: false
 tags: [C#, Type-Driven Development, Value Types]
 title: Constrained Types without Exceptions
+aliases:
+- /2022/07/08/constrained-types-without-exceptions
 ---
 
 Representing constrained values with types greatly reduces defensive programming. However, constraints make some values invalid, and constructors don't allow for flexible return types like a failure state. Here's an approach to constructing constrained values without relying on exceptions.

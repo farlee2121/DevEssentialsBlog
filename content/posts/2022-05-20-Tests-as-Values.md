@@ -2,6 +2,8 @@
 date: "2022-05-20T00:00:00Z"
 tags: [Testing, Expecto, Composition]
 title: Tests as Values
+aliases:
+- /2022/05/20/tests-as-values
 ---
 
 Lambdas, or functions as values, have worked their way into mainstream programming and transformed development for many programmers. 

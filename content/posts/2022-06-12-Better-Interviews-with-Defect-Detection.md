@@ -2,6 +2,8 @@
 date: "2022-06-12T00:00:00Z"
 tags: [Interviews, Eductation, Defect Detection]
 title: Better Software Interviews with Defect Detection
+aliases:
+- /2022/06/12/better-interviews-with-defect-detection
 ---
 
 I've sat through many a coding interview as both examiner and examinee. The experience is usually sub-par on either side. 

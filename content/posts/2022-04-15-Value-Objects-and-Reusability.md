@@ -2,6 +2,8 @@
 date: "2022-04-15T00:00:00Z"
 tags: [Domain Driven Design]
 title: Value Objects and Reuse
+aliases:
+- /2022/04/15/value-objects-and-reusability
 ---
 
 Looking for value objects among entity members is one of my favorite lessons from Domain Driven Design. Here's a quick overview.

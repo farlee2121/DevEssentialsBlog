@@ -2,6 +2,8 @@
 date: "2022-01-07T00:00:00Z"
 tags: [Critical Thinking, Best Practice, Integration, Deployment]
 title: Qualities of a Good Dev Environment
+aliases:
+- /2022/01/07/good-dev-environments
 ---
 
 I recently tried to explain when a developer should be cautious versus when they should freely experiment. This caused me to realize I never learned this lesson explicitly. It's an intuition I built over time and forgot I had to learn. I believe the answer aligns with what makes a good development environment.

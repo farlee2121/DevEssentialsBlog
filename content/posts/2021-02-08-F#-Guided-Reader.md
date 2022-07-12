@@ -2,7 +2,8 @@
 date: "2021-02-08T00:00:00Z"
 tags: [functional, F#, Guided Reader]
 title: Functional Guided Reader
-url: /2021/02/08/f-guided-reader
+aliases:
+- /2021/02/08/f-guided-reader
 ---
 
 I absolutely love Scott Wlaschin's work. He breaks down the unfamiliar and sometimes complex ideas of functional languages into approachable explanations. My one gripe with his site is that there is a bit of an implicit order to the content. Here's my outline of how I think the concepts best build on each other. 

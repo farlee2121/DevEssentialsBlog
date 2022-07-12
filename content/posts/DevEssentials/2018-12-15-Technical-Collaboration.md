@@ -2,6 +2,8 @@
 date: "2018-12-15T00:00:00Z"
 tags: [Project Management, Dev Essentials, Process, Review, Collaboration, Pair Programming]
 title: Technical Collaboration
+aliases:
+- /2018/12/15/technical-collaboration
 ---
 
 > “The need for reviewing was so obvious to the best programmer that they

@@ -2,6 +2,8 @@
 date: "2021-07-25T00:00:00Z"
 tags: [Testing, functional, state machines, UI]
 title: "Hypothesis: Statistical and Mutation Testing are Achievable for Visual UI Testing"
+aliases:
+- /2021/07/25/statistical-and-mutation-ui-testing
 ---
 
 I have a wide range of techniques for testing code behavior. I can reliably increase quality over time no matter how large the feature set grows and even measure the completeness of my test suite (mutation testing).

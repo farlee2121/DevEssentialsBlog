@@ -2,6 +2,8 @@
 date: "2022-03-18T00:00:00Z"
 tags: [Documentation, Process]
 title: Levels of Developer Documentation
+aliases:
+- /2022/03/18/levels-of-developer-documentation
 ---
 
 A friend has been struggling with under-documented projects (\*cough\* [zoo software](https://blog.ploeh.dk/2012/12/18/RangersandZookeepers/)). This raised the question, what makes good documentation? And what is a good documentation system? Here's my opinion backed with some sources.

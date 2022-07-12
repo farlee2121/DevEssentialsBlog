@@ -2,6 +2,8 @@
 date: "2021-09-17T00:00:00Z"
 tags: [Clojure, Meta-programming]
 title: Macros are not a clear win
+aliases:
+- /2021/09/17/macros-not-a-clear-win
 ---
 
 I've been working in Clojure for the better portion of a year now. I came to Clojure very excited to learn more about macros and symbolic programming.

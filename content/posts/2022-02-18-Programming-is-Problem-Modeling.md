@@ -2,6 +2,8 @@
 date: "2022-02-18T00:00:00Z"
 tags: [Design Thinking]
 title: Programming is Problem Modeling
+aliases:
+- /2022/02/18/programming-is-problem-modeling
 ---
 
 Code is not the goal of programming. Programming is about understanding and representing problems. While this belief is expressed by many experts, the repercussions are many and nuanced. This is my latest attempt to communicate the idea clearly.

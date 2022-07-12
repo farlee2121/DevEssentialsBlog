@@ -4,6 +4,8 @@ seriesId: "Language-Limited Thought"
 series_description: Exploring how different languages equip us to solve different design problems
 tags: [Languages, Functional Programming, Design Thinking, Pivotal Insights]
 title: Language Limited Thought
+aliases:
+- /2020/09/24/language-and-design
 ---
 
 Language is strongly related to the kinds of thoughts we have. Language shapes to favor what it's users most want to describe. This post introduces a series about how I internalized the value of different programming languages. Specifically, my transition to functional-style thinking. I'll be diving into concrete design problems and how FP trivialized my long-standing struggle with them.

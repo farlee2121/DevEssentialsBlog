@@ -2,6 +2,8 @@
 date: "2020-07-10T00:00:00Z"
 tags: [Design Thinking, System Structure, Project Structure, Synthesizing, Design Theory]
 title: Synthesizing Project Organization Methods
+aliases:
+- /2020/07/10/synthesizing-structure
 ---
 
 How to organize code into projects/packages can be a challenge. Here's an interesting idea I thought of from synthesizing ideas from Robert Martin, Juval Lowy, Mark Seemann, and how many nuget packages are organized.

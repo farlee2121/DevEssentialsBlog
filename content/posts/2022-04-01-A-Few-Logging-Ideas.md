@@ -2,6 +2,8 @@
 date: "2022-04-01T00:00:00Z"
 tags: [Logging, Monitoring]
 title: A Few Logging Ideas
+aliases:
+- /2022/04/01/a-few-logging-ideas
 ---
 
 This post is mostly a self-reminder to think more on a few logging ideas I encountered. I figured others might benefit from them too.

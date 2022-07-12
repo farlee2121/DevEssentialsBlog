@@ -2,6 +2,8 @@
 date: "2022-06-03T00:00:00Z"
 tags: [Random Testing, Completeness]
 title: Automated Random Testing and Improved Completeness
+aliases:
+- /2022/06/03/improved-completeness-automatic-random-testing
 ---
 
 Clojure has a unique type system based on specifications: [Clojure.spec](https://clojure.org/guides/spec). The type system includes constraints, and it can automatically test any spec-ed function to ensure valid inputs always produce valid outputs. I think this kind of testing can be brought to statically typed languages to improve test completeness.

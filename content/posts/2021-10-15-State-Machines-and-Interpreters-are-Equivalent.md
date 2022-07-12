@@ -2,6 +2,8 @@
 date: "2021-10-15T00:00:00Z"
 tags: [State Machines, Theory, Interpreters]
 title: State Machines and Interpreters are Equivalent
+aliases:
+- /2021/10/15/state-machines-and-interpreters-are-equivalent
 ---
 
 Scott Wlaschin wrote a [delightful series on dependency injection patterns](https://fsharpforfunandprofit.com/posts/dependencies/). [Part 4](https://fsharpforfunandprofit.com/posts/dependencies-4/) covers the Interpreter pattern. Interestingly, my main takeaway was that Interpreter is really the same as State Machine.

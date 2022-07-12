@@ -2,6 +2,8 @@
 date: "2020-12-25T00:00:00Z"
 tags: [Architecture, SOLID Structure, IDesign, Clean Architecture]
 title: Incremental Accessors
+aliases:
+- /2020/12/25/incremental-accessors
 ---
 
 I've been on a long journey of meshing IDesign with Clean Architecture. Accessors have been a conceptual sticking point. 

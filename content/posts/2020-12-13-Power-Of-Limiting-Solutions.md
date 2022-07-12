@@ -2,6 +2,8 @@
 date: "2020-12-13T00:00:00Z"
 tags: [Design, Reading Notes]
 title: The Power of a Limited Toolset
+aliases:
+- /2020/12/13/power-of-limiting-solutions
 ---
 
 It's easy to drown in the sea of frameworks and methodologies available to programmers. Numerous authors speak out about against the constant swarming between them. However, now I have a concrete expression for both why it hurts and why fewer solutions can be better.

@@ -2,6 +2,8 @@
 date: "2020-11-27T00:00:00Z"
 tags: [Language properties, Type systems]
 title: Schema and Selection
+aliases:
+- /2020/11/27/schema-and-selection
 ---
 
 <!-- As programmers, we naturally see semantic equivalencies between our data types, but need different sets or representations for each scenario.  -->
