@@ -6,8 +6,8 @@ tags:
 - iDesign
 - Reading Notes
 math: true
+title: "Righting Software - Project Design Summary"
 ---
-# Righting Software - Project Design Summary
 
 Part 2 of Righting software presents the most complete theory of project management I've seen: the [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method). 
 <!--more-->
