@@ -32,6 +32,12 @@ Params:
     - name: RSS
       url: /feed.xml
 
+frontmatter:
+  date: [ ":filename", ":default"] # https://github.com/gohugoio/hugo/pull/4494
+
+permalinks: 
+  posts: /:year/:month/:day/:slug
+
 ## Paper theme search
 outputs:
   home:
