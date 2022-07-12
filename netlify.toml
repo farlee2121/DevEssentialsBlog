@@ -1,7 +1,7 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration
 
 [build]
-  command = "HUGO_BASEURL = $DEPLOY_PRIME_URL; hugo"
+  command = "export HUGO_BASEURL = $DEPLOY_PRIME_URL; hugo"
   publish = "public"
 
 [build.environment]
