@@ -1,6 +1,6 @@
 ---
 date: "2022-02-03T00:00:00Z"
-tags: [.NET, C#, Language Design]
+tags: [dotnet, C#, Language Design]
 title: Case for Static Class Extension in C#
 aliases:
 - /2022/02/03/missing-static-class-extension

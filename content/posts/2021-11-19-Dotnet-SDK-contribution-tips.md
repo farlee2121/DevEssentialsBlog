@@ -1,6 +1,6 @@
 ---
 date: "2021-11-19T00:00:00Z"
-tags: [.NET, Open source]
+tags: [dotnet, Open source]
 title: Dotnet SDK Contribution Tips
 aliases:
 - /2021/11/19/dotnet-sdk-contribution-tips
