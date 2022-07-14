@@ -1,3 +1,8 @@
+{{/* derived from https://github.com/adityatelange/hugo-PaperMod/blob/master/layouts/partials/post_nav_links.html
+  modified
+  - next/prev order
+  - RegularPages sort
+  */}}
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = $pages.ByPublishDate.Reverse }}
 {{- if and (gt (len $pages) 1) (in $pages . ) }}
