@@ -1,6 +1,5 @@
 ---
 date: "2022-06-07T00:00:00Z"
-draft: true
 tags: [formal proof, Boolean logic]
 title: Normalizing Boolean Expressions for Programmatic Inspection
 ---

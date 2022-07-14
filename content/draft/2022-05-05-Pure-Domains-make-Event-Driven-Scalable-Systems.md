@@ -1,6 +1,5 @@
 ---
 date: "2022-05-05T00:00:00Z"
-draft: true
 tags: [Event Streaming, Dependency Rejection, Event-based Architecture, Domain Modeling Made Functional]
 title: Pure Domains make Event-driven and Scalable Systems
 ---

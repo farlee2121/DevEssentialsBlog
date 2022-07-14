@@ -1,6 +1,7 @@
 ---
 date: "2022-04-26T00:00:00Z"
-draft: true
+# draft: true
+sitemapExclude: true
 tags: [C#, Records]
 title: "C# Records Compare Private Members"
 ---
