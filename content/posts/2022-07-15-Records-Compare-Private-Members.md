@@ -1,7 +1,5 @@
 ---
-date: "2022-04-26T00:00:00Z"
-# draft: true
-sitemapExclude: true
+date: "2022-07-15T00:00:00Z"
 tags: [C#, Records]
 title: "C# Records Compare Private Members"
 ---
@@ -27,7 +25,7 @@ new Title("hi") == new Title("hi") // true
 new Title("hi") == new Title("bye") // false
 ```
 
-The same applies for private propertiesn
+The same applies for private properties
 
 ```cs
 public record Title{
