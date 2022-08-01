@@ -48,6 +48,37 @@ Hypothesis: I think construction may need split in two, one for low-level design
 - i'm starting to change my mind. I think the way of working may help reinforce the way we design
 
 
+## What is the layout of construction techniques?
+
+It has a lot to do with your programming paradigm
+
+Some techniques
+- DbC
+- type-driven
+- event sourcing?
+- table-driven
+- "inside-out" refactoring
+- polymorphism
+- Patterns
+- state machines
+
+Clarity (thus naming, scope, info hiding, coupling) are always relevant
+
+What have other books on the subject included?
+- Clean Code
+  - naming
+  - comments
+  - functions, parameters
+  - objects & data structures
+  - comments
+  - formatting
+  - boundaries (hiding ideas outside domain)
+  - emergence & successive refinement 
+  - concurrency (why?)
+  - !!! smells and heuristics 
+    - these embody a lot of situational decisions that are hard to systemize
+- Code Complete
+- Pragmatic Programmer 
 
 
 ## Presentation Outline
