@@ -1,5 +1,5 @@
 ---
-date: "2022-06-05T00:00:00Z"
+date: "2022-08-01T00:00:00Z"
 tags: [Clojure.spec, Specification Pattern, Property Testing]
 title: "Pitfalls of Spec-based Random Testing"
 ---
