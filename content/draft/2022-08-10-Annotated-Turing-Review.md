@@ -26,5 +26,10 @@ Object Orientation sought to abstract state via encapsulation and alternative op
 
 Now functional adoption is [bringing back](https://fsharpforfunandprofit.com/posts/designing-with-types-representing-states/) continuations and state machines for composability and clarity of side-effects. However, these state machines keep their own world instead of relying on the implicit hardware machine state. It's cycled back, but now at higher abstraction. Even loops are starting to disappear in favor of recursion again.
 
-I never realized how far back the old-is-new cycle really went. All the way to the beginning it turns out.
+I never realized how far back the old-is-new cycle really went. All the way to the beginning it turns out. 
 The cycles certainly came with their own realizations and advances. However, I see this as a clear example of how much we can learn from history.
+
+
+<!-- 
+TODO: Should I reference https://www.dreamsongs.com/WorseIsBetter.html and acknowledge alternative approaches have long existed?
+ -->
