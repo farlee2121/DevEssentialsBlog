@@ -1,15 +1,15 @@
 ---
-date: "2022-06-07T00:00:00Z"
-tags: [formal proof, Boolean logic]
+date: "2022-08-12T00:00:00Z"
+tags: [formal proof, Boolean logic, FsSpec]
 title: Normalizing Boolean Expressions for Programmatic Inspection
 ---
 
-Programmer often arrange boolean expressions in all kinds of groupings for readability. The semantic of these groups, however, is not readily apparent to programs and algorithms. It turns out we can have it both ways, boolean expressions can be algorithmically normalized to consistent depth and form.
+Programmers often arrange boolean expressions in all kinds of groupings for readability. The semantic of these groups, however, is not readily apparent to programs and algorithms. It turns out we can have it both ways, boolean expressions can be algorithmically normalized to consistent depth and form.
 <!--more-->
 
 ## Motivating Context
 
-I first faced this challenge working on [FsSpec](https://github.com/farlee2121/fsspec). FsSpec aims to aid type-driven development by defining constraints on values as data structures. For example, you might want to constraint an integer to fall in a certain range `and [min 0; max 100]`.
+I first faced this challenge working on [FsSpec](https://github.com/farlee2121/fsspec). FsSpec aims to aid type-driven development by defining value constraints as data structures. For example, you might want to constraint an integer to fall in a certain range `and [min 0; max 100]`.
 
 Representing these constraints as data (not functions) allows us to programmatically access the constraints and do far more than just validation. In my specific case, I wanted to generate data matching the requirements.
 
@@ -29,20 +29,22 @@ Parsing constraints from arbitrary trees is also insufficient. Consider a constr
 min 0 &&& (max 10 ||| value 500)
 ``` 
 
-Valid values can only be zero to fifty or 500. This is intuitive to see, but an algorithm would not so easily find both the upper and lower bounds, since they are in split levels of the expression. It's easy enough to solve for this sample, but the separation could be much more complex in an arbitrarily deep expression.
+Valid values can only be zero to 10 or 500. This is intuitive to see, but an algorithm would not so easily find both the upper and lower bounds, since they are in split levels of the expression. It's easy enough to solve for this one sample, but the separation could be much more complex in the general case.
 
 We need some way to consistently understand maximally constrained alternatives allowed by the constraints. Fortunately, I was able to prove that boolean expressions can always be arranged for just that.
 
 ## Intuitive Reasoning
 
-Understanding maximally constrained alternatives of a boolean expression structurally means we're looking for AND Groups separated by ORs. 
+The goal is to find maximally constrained alternatives of a boolean expression. Structurally, this means we're looking for AND Groups separated by ORs. 
 
 More visually
 ```
 (a1 AND a2 AND ...) OR (b1 AND b2 AND ...) OR ...
 ```
 
-The intuitive reason this works is distribution. If we fully distribute every AND then we are left with a set of valid alternatives. Terms that were formally consolidated higher in the tree are now part of each AND group they influenced and each AND group contains all the terms that effect its logical outcome. If any one of these AND groups is true, then the whole expression is true because the groups are strictly joined by OR.
+The intuitive reason this works is distribution. If we fully distribute every AND then we are left with a set of valid alternatives. Terms that were formally consolidated higher in the tree are now part of each AND group they influenced and each AND group contains all the terms that effect its logical outcome.
+
+If any one of these AND groups is true, then the whole expression is true because the groups are strictly joined by OR.
 
 I've included my formal proof below, for those who are curious.
 
