@@ -1,7 +1,7 @@
 ---
 date: "2022-08-14T00:00:00Z"
 tags: [Software Engineering]
-title: "Code That Fits in Your Head Practices are Stable Incremental and Additive" 
+title: "Code That Fits in Your Head: Mental Models" 
 ---
 
 Mental models are foundational. They decide how we interpret information and reason about a topic. Yet mental models for writing software are immature and little discussed. Code That Fits in Your Head puts mental models front and center.
@@ -58,16 +58,6 @@ Approaching software a problem modeling process has served me well. It also alig
 
 The mental model we use to understand software greatly impacts what we believe about software. Code That Fits in Your Head explicitly calls out several models and shows the progression toward a better, but still not perfect, engineering model of software. The engineering model meshes well with my personal model born from math and general problem solving.
 
-
-<!-- 
-related to zen and the art of motorcycle maintenance
-the hard part of being a mechanic is not usually swapping hte part, it's asking good questions to find out what's wrong and what needs replaced
-
-IN software, we're defining the problem even after we've released to customers.
-
- --> 
-
-
 <!-- Write post on -driven development? 
 One of my favorite takeaways. I use many drivers but this calls out the idea so clearly. 
 Drivers aren't exclusive, not is a specific set currently known to best every other set of drivers. What matters is that you're motivating the code you write from consistent sources
@@ -82,5 +72,3 @@ List some drivers
 
 I use most of these approaches in varying situations, and many of them all at once. Using complexity measures as a driver is new to me, and I certainly intent to give it a try
 -->
-
-
