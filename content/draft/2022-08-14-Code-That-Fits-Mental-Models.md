@@ -5,6 +5,7 @@ title: "Code That Fits in Your Head: Mental Models"
 ---
 
 Mental models are foundational. They decide how we interpret information and reason about a topic. Yet mental models for writing software are immature and little discussed. [Code That Fits in Your Head](https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401) puts mental models front and center.
+<!--more-->
 
 The first chapter lays out some analogies use for software and how they fall short. I'll briefly recap the ideas to lead up to my own mental model.
 

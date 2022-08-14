@@ -5,6 +5,7 @@ title: "Google DORA: Objective Developer Practice Research"
 ---
 
 Software development is notoriously short on research-based practices. Google's [DevOps Research and Assessment](https://www.devops-research.com/research.html) (DORA) project is helping fill that gap.
+<!--more-->
 
 DORA describes itself as
 

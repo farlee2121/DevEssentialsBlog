@@ -5,6 +5,7 @@ title: "Book Review: The Annotated Turing"
 ---
 
 Following software to it's orgins with Alan Turing reveals some interesting trends in how ideas cycle.
+<!--more-->
 
 [The Annotated Turing](http://www.theannotatedturing.com/) walks readers through Allan Turing's entire landmark paper on computability.
 The book prepares the reader with required concepts, clarifies complex sections with examples, and intermixes facinating history about Alan Turing himself.

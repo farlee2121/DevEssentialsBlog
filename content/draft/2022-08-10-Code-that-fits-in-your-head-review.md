@@ -5,6 +5,7 @@ title: "Book Review: Code That Fits in Your Head"
 ---
 
 [Code That Fits in Your Head](https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401) tackles a problem dear to my heart. Mark Seemann realized good Software Engineering practices are out there, but it was hard to connect the dots between scattered sources.
+<!--more-->
 
 Mark seeks to remedy that problem with Code That Fits in Your Head. The book distills leading literature into an actionable personal practice of software.
 
