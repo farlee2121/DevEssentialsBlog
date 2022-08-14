@@ -5,7 +5,7 @@ title: "Development Drivers"
 ---
 
 <!-- TODO: need to align intro with conclusion. Useful to have category focusing on motivations -->
-[Code That Fits in Your Head](https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401) clarifies the myriad of somthing-driven practices into a critical category of drivers. It's not about picking one, it's about intentional motivations behind changing code.
+I love how [Code That Fits in Your Head](https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401) clarifies the myriad of somthing-driven practices. It's not about picking one, it's about intentional motivations behind changing code. These motivation-focused tools are called *drivers*.
 <!-- more -->
 
 There are many -driven developments out there. To name some popular ones
