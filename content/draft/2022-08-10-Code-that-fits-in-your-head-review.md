@@ -1,6 +1,6 @@
 ---
 date: "2022-08-10T00:00:00Z"
-tags: [Book Review]
+tags: [Book Review, Software Engineering]
 title: "Book Review: Code That Fits in Your Head" 
 ---
 
@@ -27,8 +27,4 @@ If I have any gripe with this book, I wish there was a clearer roadmap for next 
 Code That Fits in Your Head is a masterpiece. It sets out a cohesive and comprehensive approach to personal developer practices. This is hands-down the first resource I'll jump to for training junior devs.
 
 
-<!-- maybe make this a separate post
-
-Stable Incremental Additive is all throughout. red-green-refactor, multi-phase refactoring and the strangler pattern, CI/CD, twice daily code reviews, walking skeleton
- -->
 
