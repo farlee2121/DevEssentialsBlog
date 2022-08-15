@@ -4,8 +4,7 @@ tags: [Software Engineering]
 title: "Development Drivers" 
 ---
 
-<!-- TODO: need to align intro with conclusion. Useful to have category focusing on motivations -->
-I love how [Code That Fits in Your Head](https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401) clarifies the myriad of somthing-driven practices. It's not about picking one, it's about intentional motivations behind changing code. These motivation-focused tools are called *drivers*.
+[Code That Fits in Your Head](https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401) collects the myriad of somthing-driven practices into a category of *drivers*. Drivers form our toolkit for highlighting motivations and responding to them with code.
 <!--more-->
 
 There are many -driven developments out there. To name some popular ones
@@ -25,9 +24,10 @@ Mark Seeman elegantly collects all these approaches into one category: *drivers*
 
 These approaches all solve the problem that our unguided intuition is not very good deciding between solutions. These drivers provide us with guided motivations for why our code changes and what qualities that change should embody. For example
 
-- TDD -> Code should be written incrementally in response to a series of automatically testable expectations.  
-- BDD -> Software is made to satisfy expected observable behaviors, generally for non-developers. These expectations should drive tests and those test drive our implementations.
-- DDD -> The language and structure of the problems we solve should drive the design of our software.
+- Test-Driven -> Code should be written incrementally in response to a series of automatically testable expectations.  
+- Behavior-Driven -> Software is made to satisfy expected observable behaviors, generally for non-developers. These expectations should drive tests and those test drive our implementations.
+- Domain-Driven -> The language and structure of the problems we solve should drive the design of our software.
+- Type-Driven -> Types condense knowledge into the code and provide write-time feedback. We should lean into types to model our domain and disallow improper code use.
 
 Defining drivers as clear motivations for changing code also expands the category to more tools
 - Compiler errors and warnings
