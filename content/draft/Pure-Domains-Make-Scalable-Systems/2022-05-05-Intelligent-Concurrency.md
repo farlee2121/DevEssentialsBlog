@@ -1,5 +1,5 @@
 ---
-date: "2022-05-05T03:00:00Z"
+date: "2022-05-05T02:00:00Z"
 tags: [Event Streaming, Dependency Rejection, Event-based Architecture, Domain Modeling Made Functional]
 title: "Pure Domains Make Scalable Systems: Intelligent Concurrency"
 seriesId: Pure Domains Make Scalable Systems
