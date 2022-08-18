@@ -5,9 +5,10 @@ title: "Pure Domains Make Scalable Systems: Batching and Nesting"
 seriesId: Pure Domains Make Scalable Systems
 ---
 
-## Benefit: Composable / Batchable Requests
+This is a series exploring the benefits of pure domains for scalability. This post explores how pure domains reduce the rigidity of request and response timing and structure, enabling more control over our API experience.
+<!--more-->
 
-The most suprising benefit for me was batching and nesting of commands.
+I think batching and nesting commands is the most surprising benefit of pure domains.
 
 The domain rules are deterministic. They always give the same result given the same input. The rules don't care about where the data comes from. The identity of the operation the same no matter how the data arrives or when.
 
@@ -15,10 +16,14 @@ Similarly, the full change of system state is contained in the response of the d
 
 All together, this means that we can batch and nest domain commands safely without effecting outcomes of the event.
 
+## Batching and Offline State
+
 First consider batching. Suppose we have a system that supports offline editing. All the edits made while the client is offline can be stored as their domain events. When the client is back online, these events can be sent serverside and replayed. The server state will match the client state just as if it had never been offline. There is no need to diff client and server storage and no information about intermediate state is lost. 
 
 This approach also avoids potential conflicts with changes made on the server while the client was disconnected. We have each state delta and the time each state change was made. Therefore we can deterministically decide which change should take precedence.
 
+
+## Nesting
 
 We don't have to be offline to batch, we can also send a group of requests together simply because it's convenient. Consider the common scenario of an entity with child entities. Like a profile that contains a gallery of images 
 

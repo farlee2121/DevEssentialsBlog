@@ -10,7 +10,7 @@ seriesId: Pure Domains Make Scalable Systems
 ## Benefit: Maximize Event Tooling
 
 Using events for all input and output of the domain enables maximal leverage of mature event streaming tooling
-- System History: Event streams or a event store can track the entire history of system states, [which has many benefits](../posts/2021-05-28-Transaction-Databases.md)
+- System History: Event streams or a event store can track the entire history of system states, [which has many benefits](../../posts/2021-05-28-Transaction-Databases.md)
 - Decoupled Uptime: the event stream acts as a queue and decouples uptime between producers and consumers
 - Flexible consumers: All decisions of the domain rule are contained in data. That data can be passed to any number or type of consumer without changing the domain. 
 - Central cross-cutting policies: Event tooling typically supports configuration for policies like retry, error handling, and delivery guarantees without code changes. 
