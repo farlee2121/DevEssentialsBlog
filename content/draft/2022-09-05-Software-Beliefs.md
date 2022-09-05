@@ -15,20 +15,7 @@ These assumptions shape how I work and think, but many may never be verbalized o
 
 Enumerating these beliefs is important for passing them on and for better improving my own ability. I'll do my best to identify key beliefs here.
 
-## Memorable Beliefs to get started
 
-By list of beliefs ended up pretty long. I thought it'd be good to 
-
-**Camping Rule**: Always leave the campsite cleaner than you found it. The same applies to code. Quality is a continuous effort made by every contributor.
-**Tighten the Net**
-**Self-Documenting Code**
-**What's your duck**
-**Stable, Incremental, Additive**: Another term I [coined](../posts/2022-02-25-Stable-Incremental-Additive.md). I see this idea in many writings and critical software processes, but have yet to see a satisfying term for it. The idea is to work in small stable increments. Each unit of work is valuable and complete so the dev can stop or change directions most any time. Together the small units add up to clean systems equipped to evolve over time. This idea shows up many places as emphasis on iterating (like in Code Complete) or to work in short loops (Refactoring, Code That Fits in Your Head). It underlies practices like making small complete commits, keeping pull requests small and focused, TDD's Red-Green-Refactor, Preparatory Refactoring, Strangler refactoring pattern, and Continuous Integration / Continuous Deployment. 
-
-<!-- todo include some links -->
-
-Q: do I know any good rules names for making small increments of progress?
-- I don't think so. Maybe mention it's important even if it has no name
 
 ## General list
 <!-- Todo: try to order these so related ones are together. Maybe group some values -->
@@ -72,6 +59,7 @@ What are major beliefs to cover?
 - Unit tests should read clearly, even if you have to factor out work (Test Data pattern is helpful here)
 - Tests suites require design, maintenance, and refactoring like any other code
 - Test first or at least include tests in same (small) commit as the code you're testing.
+- Unit of reuse is the unit of release (Agile Principles, Practices, and Patterns)
 
 Q: what beliefs about work tracking?
 - more impactful if wrong
@@ -95,4 +83,3 @@ Angles to think about
 
 
 <!-- TODO: Ask other devs about their beliefs. Maybe create a follow up post with additions from other devs, including any dissentions. -->
-
