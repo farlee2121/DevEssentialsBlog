@@ -10,7 +10,7 @@ A friend asked me to summarize what I believe about software in five points or l
 This is part of a broader effort to identify and communicate what I believe about software.
 
 <!-- TODO: I have a somewhat odd mix of nouns and imperatives. I could also use better analogies for most of the beliefs. -->
-<!-- TODO: It's a bit long (7min read) -->
+<!-- TODO: It's a bit long (7min read), maybe cut runner up section (down to 6 min) -->
 
 ## Understand the problem
 
