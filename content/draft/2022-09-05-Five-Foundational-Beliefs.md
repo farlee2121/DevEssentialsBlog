@@ -27,7 +27,7 @@ In every situation, pursue problem understanding
 - Organizing your system services? Look for self-contained sub-problems of the overall problem you are solving.
 - How often do we release? Agile aims for at least every two weeks. CI/CD says as often as possible; often several times daily. This enables rapid feedback to better understand and adjust to the problem being solved.
 
-*Origins of this belief:* This belief originally stems from Fred Brooks and his writings on essence vs accident. Namely [No Silver Bullets]() and [Design of Design](). The idea was given greater form by [Domain-Driven Design](https://www.amazon.com/dp/0321125215) and the [Software Engineering Body of Knowledge](). [Stop Corrupting Yourself](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) improved how I apply this belief to tests.
+*Origins of this belief:* This belief originally stems from Fred Brooks and his writings on essence vs accident. Namely [No Silver Bullets](https://www.cs.unc.edu/techreports/86-020.pdf) and [Design of Design](https://www.amazon.com/dp/0201362988). The idea was given greater form by [Domain-Driven Design](https://www.amazon.com/dp/0321125215) and the [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3). [Stop Corrupting Yourself](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) improved how I apply this belief to tests.
 
 ## Stable, Incremental, Additive
 
@@ -40,7 +40,7 @@ This idea shows up many places as emphasis on iterating (like in Code Complete) 
 
 Stable, incremental, additive serves problem understanding. Working in small complete increments pushes us to break off and understand bits of the problem. It keeps us returning to the problem context. It also equips us for quick feedback cycles and to pivot in response to new understanding without losing in-progress work.
 
-*Origins of this belief:* This belief also stems from Fred Brook and his book [Design of Design](https://www.amazon.com/dp/0321125215). He uses the design tree to describe incremental work cycles, [which I've also written about](../posts/Whats-Your-Duck-V2/2022-06-16-2-Design-Tree-and-Incremental-Progress.md). This idea has been reinforced often in my career, but I'd say [Refactoring](https://martinfowler.com/books/refactoring.html) and [Code That Fits in Your Head](https://blog.ploeh.dk/2021/06/14/new-book-code-that-fits-in-your-head/) are some of the best demonstrations. Refactoring helped me understand true CI/CD and how this value can be practically maximized through the whole lifecycle.
+*Origins of this belief:* This belief also stems from Fred Brook and his book [Design of Design](https://www.amazon.com/dp/0201362988). He uses the design tree to describe incremental work cycles, [which I've also written about](../posts/Whats-Your-Duck-V2/2022-06-16-2-Design-Tree-and-Incremental-Progress.md). This idea has been reinforced often in my career, but I'd say [Refactoring](https://martinfowler.com/books/refactoring.html) and [Code That Fits in Your Head](https://blog.ploeh.dk/2021/06/14/new-book-code-that-fits-in-your-head/) are some of the best demonstrations. Refactoring helped me understand true CI/CD and how this value can be practically maximized through the whole lifecycle.
 
 ## Self-documenting code
 
