@@ -68,6 +68,10 @@ What are major beliefs to cover?
   - microservices is a deployment option within these patterns
 - Composition over inheritance
 - Design stamina hypothesis. Taking time to care for your design and system organization pays off quickly. It overtakes "just code" in productivity in a few days or weeks, not months.
+- Unit tests should be independent(don't effect each other), predictable, and self-contained (no implicit context)
+- Unit tests should read clearly, even if you have to factor out work (Test Data pattern is helpful here)
+- Tests suites require design, maintenance, and refactoring like any other code
+- Test first or at least include tests in same (small) commit as the code you're testing.
 
 Q: what beliefs about work tracking?
 - more impactful if wrong
