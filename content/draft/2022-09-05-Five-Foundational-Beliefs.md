@@ -10,6 +10,7 @@ A friend asked me to summarize what I believe about software in five points or l
 This is part of a broader effort to identify and communicate what I believe about software.
 
 <!-- TODO: I have a somewhat odd mix of nouns and imperatives. I could also use better analogies for most of the beliefs. -->
+<!-- TODO: It's a bit long (7min read) -->
 
 ## Understand the problem
 
@@ -79,9 +80,12 @@ that shaped the system to be the way it is. This ties in well ith understanding 
 
 *Origins of the belief:* I've valued automated testing since absence of it sunk the first professional project I worked on. Tightening the Net steps from [Pragmatic Programmer](https://www.amazon.com/dp/020161622X). Tests reflecting requirements stems from [Stop Corrupting Yourself](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/), which triggered a major reshaping of my testing practices.
 
-<!-- This relates to the first two beliefs because cleanliness is reflecting changes in our understanding to the problem as they occur and improvements in quality don't happen all at once they are stable increments that should be able to pivot over time as well. -->
 
+## Runner-ups ideas
 
+At this point I was out of allowed point. I think if I had a 6th point I might move into something about Ports and Adapters or otherwise try to cover the general approach to system structure and loose coupling.
+
+I don't regret my choices though. I think these beliefs are the most broadly impactful on my decisions. They underlie most all of my other beliefs, and I can't currently think of any practices I think are more fundamental than these. I'd love to work with developers that aligns with these ideas, even if we differ on other ideas.
 <!-- find it interesting that, as much as I love design and architecture, no principles of either made it into my most fundamental ideas of software. -->
 
 ## Summary
