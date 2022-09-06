@@ -27,7 +27,7 @@ In every situation, pursue problem understanding
 - Organizing your system services? Look for self-contained sub-problems of the overall problem you are solving.
 - How often do we release? Agile aims for at least every two weeks. CI/CD says as often as possible; often several times daily. This enables rapid feedback to better understand and adjust to the problem being solved.
 
-*Origins of this belief:* This belief originally stems from Fred Brooks and his writings on essence vs accident. Namely [No Silver Bullets](https://www.cs.unc.edu/techreports/86-020.pdf) and [Design of Design](https://www.amazon.com/dp/0201362988). The idea was given greater form by [Domain-Driven Design](https://www.amazon.com/dp/0321125215) and the [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3). [Stop Corrupting Yourself](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) improved how I apply this belief to tests.
+*Origins of this belief:* This belief originally stems from Fred Brooks and his writings on essence vs accident. Namely [No Silver Bullets](https://www.cs.unc.edu/techreports/86-020.pdf) and [Design of Design](https://www.amazon.com/dp/0201362988). The idea was given greater form by [What is Software Design](https://www.developerdotstar.com/mag/articles/reeves_design.html), [Domain-Driven Design](https://www.amazon.com/dp/0321125215) and the [Software Engineering Body of Knowledge](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3). [Stop Corrupting Yourself](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/) improved how I apply this belief to tests.
 
 ## Stable, Incremental, Additive
 
