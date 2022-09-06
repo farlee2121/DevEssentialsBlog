@@ -59,7 +59,7 @@ Break off another sub-problem if there isn't enough information to define the pr
 
 This process is similar for each sub-problem, but that doesn't mean it's mechanical or formulaic. Asking good questions and identifying the nature of a problem is a skill like any other. It gets better with experience and practice.
 
-## Thread Matrix: How much effort
+## Threat Matrix: How much effort
 
 Enumerating requirements, goals, and constraints for evaluating solutions may sound like a lot of work, but it doesn't have to be. This process can fall anywhere from a few options weighed in your head, to sticky notes, to design documents, to expansive interviews and studies. A threat matrix helps us evaluate how important each decision is and how much effort we put into it.
 
