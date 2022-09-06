@@ -1,7 +1,7 @@
 ---
 date: 2022-09-06T00:00:00-00:00
 tags: [Reading Review, Ducks]
-title: "Stuckness and Ducks"
+title: "Made some reading lists"
 ---
 
 
