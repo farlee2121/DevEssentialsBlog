@@ -73,9 +73,9 @@ what about testing? -->
 
 
 ## Non-software books, good for devs anyway
+- Getting To Yes
 - Small Teaching
 - Gap and the Gain
-- Getting To Yes
 - 
 
 ## 
