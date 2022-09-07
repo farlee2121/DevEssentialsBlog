@@ -4,7 +4,6 @@ title: Reading List
 type: page
 url: /reading-list
 ShowReadingTime: false
-draft: true
 ---
 
 I love to read and explore new ideas, especially in software. Many software thought leaders share their thoughts in writting.
@@ -42,7 +41,7 @@ This list may seem like a lot, but the majority are articles, not books.
 - [Refactoring](https://martinfowler.com/books/refactoring.html)
   - Teaches small complete increments of work and continuous improvement. Builds the toolbox for working effectively even in systems that might be sub-ideal.
 - [A Little Architecture](https://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html)
-  - A cheeky introduction to architecture. Addresses misconceptions and key goals of high-level design.
+  - A sassy introduction to architecture. Addresses misconceptions and key goals of high-level design.
 - [Four Languages from Forty Years Ago](https://fsharpforfunandprofit.com/video/#four-languages-from-forty-years-ago)
   - Compels developers to think beyond a single language. Establishes the value of learning different language paradigms.
 - [Code Complete](https://www.amazon.com/gp/product/0735619670/)
