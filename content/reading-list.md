@@ -69,6 +69,7 @@ I figured others might benefit from them too.
 - [On the criteria to be used in decomposing systems into modules](https://prl.ccs.neu.edu/img/p-tr-1971.pdf)
 - [Stop corrupting yourself](https://codewithspoon.com/2019/12/stop-corrupting-yourself-test-against-abstractions/)
 - [Peer Reviews in Software](https://www.amazon.com/dp/0201734850/)
+- [Layers, Onions, Ports, Adapters: it's all the same](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/)
 - [Clean Architecture (blog post)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 - [Prospects for an Engineering Discipline of Software](https://resources.sei.cmu.edu/asset_files/TechnicalReport/1990_005_001_299270.pdf)
 - [Designing with Types](https://fsharpforfunandprofit.com/series/designing-with-types/)
