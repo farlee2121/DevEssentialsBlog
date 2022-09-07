@@ -18,27 +18,47 @@ This is not a blog post because I plan to update it over time. I generally avoid
 - I think I could round out the sections i've already created and that's a pretty good start
  -->
 
-<!-- I don't think i'll make this  -->
 ## Fundamentals overview
-<!-- TODO: a little description of what each covers -->
-- Code That Fits in Your Head
-- No Silver Bullets
-- What is Software Design
-- What's Your Duck
-  - This is my own series. Read Design of Design for more
-- Pragmatic Programmer?
-  - learning languages, tightening net, understandability, thinking about compatability, ...
-- Refactoring
-  - Preparatory refactoring, short test and scm-based loops
-- [A Little Architecture](https://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html)
-- Four Languages from Forty Years Ago
-  - Why to learn different programming paradigms. Good qualities in programming languages
-- Code: The hidden language of computer hardware and software
 
-Still only poked around a bit, but DORA seems like a strong candidate for this group
-<!-- from foundational beliefs post, clear that Refactoring, Design of Design, No Silver Bullets, Code Complete, Domain Driven Design, Pragmatic Programmer are some my most influential sources-->
+This is the list I would currently use to train a young professional developer, probably. It tries to build overarching picture of software development. The focus is on ideas and approaches over specific technologies or specific techniques. I'm generally trying to cover all the categories in [this diagram](../content/posts/2021-08-27-SWEBOK-Modified-topic-diagram.md).
+
+This list may seem like a lot, but the majority are articles, not books.
+
+- [Code That Fits in Your Head](https://blog.ploeh.dk/2021/06/14/new-book-code-that-fits-in-your-head/)
+  - Teaches effective software practice by example. Does an incredible job of explaining underlying ideas while rigorously tying each back into the context of the example and a holistic development flow. Builds a good foundation for understanding how aspects of development fit together.
+- [No Silver Bullets](https://www.cs.unc.edu/techreports/86-020.pdf)
+  - Defines some of the fundamental challenges of software. Built some of my most foundational views on software. Its views on essence and accident are also immediately practical and effect how I code every day.
+- [What is Software Design](https://www.developerdotstar.com/mag/articles/reeves_design.html)
+  - Another article that influenced how I fundamentally view software and the nature of coding. Every stage of programming is design; there are no mechanical activities essential to the discipline.
+- [What's Your Duck](../content/posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md)
+  - This is my own series. It captures my mental models for software and problem solving. It also describes my primary tools for thinking effectively. 
+  - Most of the ideas come from [Design of Design](https://www.amazon.com/dp/0201362988)
+- [The Humble Programmer](https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html)
+  - Programs get big, and we can only keep so much of it in our heads at once. One of our most essential task as programmers is writing understandable code. Code that fits in our head. 
+- [Prospects for an Engineering Discipline of Software](https://resources.sei.cmu.edu/asset_files/TechnicalReport/1990_005_001_299270.pdf)
+  - Sets context for the current state of the software industry and how we can become a more mature discipline.
+- [Pragmatic Programmer](https://www.amazon.com/dp/020161622X)
+  - A broad overview of values and practices refined from experience. Covers ideas like testing, understandability, documentation, choosing tools, thinking about compatability and more.
+- [Refactoring](https://martinfowler.com/books/refactoring.html)
+  - Teaches small complete increments of work and continuous improvement. Builds the toolbox for working effectively even in systems that might be sub-ideal.
+- [A Little Architecture](https://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html)
+  - A cheeky introduction to architecture. Addresses misconceptions and key goals of high-level design.
+- [Four Languages from Forty Years Ago](https://fsharpforfunandprofit.com/video/#four-languages-from-forty-years-ago)
+  - Compels developers to think beyond a single language. Establishes the value of learning different language paradigms.
+- [Code Complete](https://www.amazon.com/gp/product/0735619670/)
+  - I'll admit, this book is massive. It's not necessary to tackle all at once, or even to read the whole book. Even so, it is the standard for low-level design and style like spacing, naming, variable use, and more.
+- [Code: The Hidden Language of Computer Hardware and Software](https://www.amazon.com/dp/0735611319/)
+  - A delightful crash course in how computers work told through the history of ideas that led up to computers. If you feel like computer hardware is magic, this book will make you a wizard.
+
+
+This book is notably lacking resources on requirements and reviews. I've read books I like on those subjects, but none that I'd hand to a junior dev as an introduction.
+
+A prospective addition to this list could be Google's [DevOps Research and Assessment](https://www.devops-research.com/research.html) site. I've only poked around a bit, but it seems like it overviews many key ideas. It's even backed by research!
 
 ## Writings that influenced my fundamental views of software development
+
+This list is not focused on any target group. It's an attempt to identify writings that significantly impacted how I write software.
+I figured others might benefit from them too.
 
 - [No Silver Bullets](https://www.cs.unc.edu/techreports/86-020.pdf)
 - [Design of Design](https://www.amazon.com/dp/0201362988)
@@ -61,8 +81,12 @@ Still only poked around a bit, but DORA seems like a strong candidate for this g
 - [Four Languages from Forty Years Ago](https://fsharpforfunandprofit.com/video/#four-languages-from-forty-years-ago)
 - [Railway-oriented programming](https://fsharpforfunandprofit.com/rop/)
 - [Property-Based Testing (F# for fun and Profit)](https://fsharpforfunandprofit.com/series/property-based-testing/)
+- [The Humble Programmer](https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html)
+- [Thorns Around the Gold](https://blog.cleancoder.com/uncle-bob/2014/11/19/GoingForTheGold.html)
+- [Hordes of Novices](https://blog.cleancoder.com/uncle-bob/2013/11/19/HoardsOfNovices.html)
+- [There is a Silver Bullet](https://dotnetrocks.com/?show=1685)
 
-Q: What caused me to lean into design patterns?
+<!-- Q: What caused me to lean into design patterns? -->
 
 <!-- 
 
@@ -73,19 +97,16 @@ what about testing? -->
 
 
 ## Non-software books, good for devs anyway
-- Getting To Yes
-- Small Teaching
-- Gap and the Gain
-- 
-
-## 
+- [Getting To Yes](https://www.amazon.com/dp/B004YZ4NCI/)
+- [Small Teaching](https://www.amazon.com/dp/B07SK8RQLW)
+- [Gap and the Gain](https://gapandgainbook.com/)
 
 
-## Specific 
+<!--
 
+## Topical readings
 
-
-## Just get everything down so I can decide how to categorize
+ ## Just get everything down so I can decide how to categorize
 
 - Engineering and the Mind's Eye
 - Code Complete
@@ -110,7 +131,7 @@ what about testing? -->
 - Parser Combinators by Scott Wlaschin
 - 
 
-- [Traction](https://www.amazon.com/dp/B00TY3ZOMS) by Gabriel Weinberg, Justin Mares
+- [Traction](https://www.amazon.com/dp/B00TY3ZOMS) by Gabriel Weinberg, Justin Mares -->
 
 <!-- 
 // this list is big enough that 1. I might want to generate it from my notes 2. I probably want to turn it into a data source and generate a table
