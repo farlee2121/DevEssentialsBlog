@@ -79,10 +79,13 @@ I'm sure some of these will change in the future. It's also a bit of a jumble, b
 - Never optimize performance without measuring
   - Related, Premature optimization is a leading source of design issues
   - Source: ???
-- Databases or any data store should be unimportant/subservient to the system architecture
+- Databases, any data store, and frameworks should be unimportant/subservient to the system architecture
+  - in general business logic should not know about concrete dependencies
+  - source: most clearly stated by A Little Architecture
 - Program into, not in languages 
   - Frameworks and languages come and go. Focus on the underlying patterns.
   - Source: from mentoring, but also discussed in CC
+- 
 
 
 Q: what beliefs about work tracking?
