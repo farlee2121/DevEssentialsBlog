@@ -14,6 +14,7 @@ This is part of a broader effort to identify and communicate what I believe abou
 
 ## Understand the problem
 
+<!-- TODO: change to clarify the problem? -->
 The first and most fundamental belief is "understand the problem". I've often referred to this as [programming is problem modeling](../posts/2022-02-18-Programming-is-Problem-Modeling.md).
 This belief targets the basic nature of and mental model for software development.
 
