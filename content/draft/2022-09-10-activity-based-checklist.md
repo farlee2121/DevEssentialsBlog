@@ -44,12 +44,14 @@ I was impressed how easily this checklist came together and how much it covers.
 
 There is certainly much I think about that is not covered by this checklist. 
 However, I think I would be comfortable supporting most code that can pass this checklist.
-It promotes small units of work, testing, review, and safe deployment.
+It promotes small units of work, testing, review, and safe deployment. 
+
+This list is also pretty low-controversy. Almost every item is generally accepted good practice. 
+Many are well proven indicators of team performance.
 
 I might potentially add documentation and self-documentation various places in this list.
-
 I would also consider adding additional checklists for team process events like stand up and retrospective.
-Those checklists would probably only be needed by the engineering manager or PM.
+However, those checklists would be oriented for the engineering manager or project manager.
 
 <!-- Standup is mostly about proactively identifying issues. It might look Something like this
 
