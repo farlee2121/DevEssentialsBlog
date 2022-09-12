@@ -53,6 +53,13 @@ I might potentially add documentation and self-documentation various places in t
 I would also consider adding additional checklists for team process events like stand up and retrospective.
 However, those checklists would be oriented for the engineering manager or project manager.
 
+<!-- Achieving these checklist would likely require training. For example, learning effective design and testing practices that enable those small units of work. 
+But, the design is probably fairly good if it can sustain those small increments of work.
+The checklist doesn't teach all necessary skills, but it does put up guard rails to continue pushing toward good practice. 
+
+Trying to say the checklist is sufficient to be an expert, but it should be good pressure toward expert practices
+-->
+
 <!-- Standup is mostly about proactively identifying issues. It might look Something like this
 
 Standup
