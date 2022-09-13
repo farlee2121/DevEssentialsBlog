@@ -25,6 +25,7 @@ Integration
   - [ ] Is the completed work small, cohesive, and production stable?
   - [ ] Does the pull request include all context a reviewer needs to understand the change?
   - [ ] Have all required reviewers approved?
+  <!-- - [ ] is any new behavior covered by tests? -->
 
 Work planning? / assignment?
   - [ ] Does this work have clear acceptance criteria?
