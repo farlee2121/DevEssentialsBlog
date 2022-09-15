@@ -8,7 +8,9 @@ My duck docs continue to evolve as my process changes. Here changes I've noticed
 <!--more-->
 
 This post does not fully cover duck docs. You can check out the [original duck structure post](../posts/2021-05-21-Duck-Structure.md) or my [whole series on ducking](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md).
-<!-- TODO: update old post with a forward link -->
+<!-- TODO: 
+- update old post with a forward link. 
+- Also update the link in the What's your duck series -->
 
 ## Sections
 
