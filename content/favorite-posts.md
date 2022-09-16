@@ -19,6 +19,7 @@ ShowReadingTime: false
 - [Accessors: Services, Not Servants](./posts/2021-01-01-Accessors-Services-Not-Servants.md)
 - [Righting Software - Project Design Summary](./posts/2020-07-16-iDesign-Project-Summary.md)
 - [Event Stores: An Advance in Data Safety](./posts/2021-05-28-Transaction-Databases.md)
+- [Development Drivers](./posts/2022-09-15-Code-That-Fits-Drivers.md)
   
 <!-- Split mental model and techniques into separate sections? -->
   
