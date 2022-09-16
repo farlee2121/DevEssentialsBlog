@@ -46,6 +46,7 @@ I still occasionally use a handful of other tags
 - **PROBLEM:** used for unforeseen issues in a previous decision. States the issue identifies and follows as a question of how to address the issue, potentially overturning earlier idea
 - **ALT:** like OPT, but the option is more of an aside (alternative) to a main line of thought
 - **DECIDED:** highlight the route chosen from alternatives. I'll generally use A: instead, since most most everthing is posed as a question now.   
+- **PICKUP:** A reminder of where I left off to help me get back into the flow later. These usually get deleted once I get back into the flow
 
 
 <!-- TODO: example? Be sure to show more untagged content to address Jack's complaint -->
