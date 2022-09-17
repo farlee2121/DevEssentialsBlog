@@ -105,6 +105,10 @@ I'm sure some of these will change in the future. It's also a bit of a jumble, b
 - Metrics should be monads (logs too)
   - source: wlaschin post on F# for fun and profit 
 - Ports and adapter systems (and functional core) are trimable. Old code can be decommissioned incrementally
+- Cleverness is the bane of maintainable software
+  - Source: apprenticeship
+  - What we can fit in our heads is our main limiting factor in design
+    - source: humble programmer
 
 performace
 - good design is most always the better route to good performance (many sources: CC, that one performance video)
@@ -126,8 +130,6 @@ performace
 - source control is critical. Source control everything you can
   - Leveraging source control for traceability, versioning, collaboration, repeatability, etc is a big motivator behind the push for *-as-code
   - Source: experience, but back up by readings like Code That Fits and many others
-- Source control and work tracking are the most fundamental tools for managing a quality process
-  - Source: thinking about my experience at Kana
 - Tests are the first client of our system
   - Source: Apprenticeship, Robert Martin blog? Pretty sure it's echoed in Mark Seemann's early blog posts
 - tests embody requirements
@@ -190,6 +192,8 @@ performace
   - prefer tools that adjust to you over immediate power?
   - Source: Pragmatic Programmer
 - Few tools combined powerfully make elegant systems
+- Source control and work tracking are the most fundamental tools for managing a quality process
+  - Source: thinking about my experience at Kana
 
 ## State of industry 
 
