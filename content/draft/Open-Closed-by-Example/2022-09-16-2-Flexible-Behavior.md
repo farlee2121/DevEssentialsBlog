@@ -83,7 +83,7 @@ Derivatives do not need to worry about state or existing behavior when deriving 
 
 ## Dependency Inversion
 
-Dependency Inversion (DI) takes behavior extension to the next level. DI dictates that *callers should own their own abstractions*.
+Dependency Inversion (DI) takes behavior extension to the next level. DI dictates that [*callers should own their own abstractions*](../../posts/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md).
 
 This means that a component, a class for example, should define it's own types instead of using types provides by another component.
 This usually means interfaces and [constructor injection](https://en.wikipedia.org/wiki/Dependency_injection#Constructor_injection) when it comes to behavior.
