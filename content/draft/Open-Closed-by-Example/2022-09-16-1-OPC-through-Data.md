@@ -8,17 +8,8 @@ title: "Open-Closed Principle by Example: Flexibility Through Data"
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) by example. In this post we'll demonstrate ways the OCP can be achieved through flexible data. 
 <!--more-->
 
-I recommend you read the [intro post](./2022-09-16-0-Intro.md) if you haven't already. It defines and sets motivations for the Open-Closed Principle.
+I recommend you read the [intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines and sets motivations for the Open-Closed Principle.
 
-## Analogy: Parameters
-
-```cs
-// wat?
-int Add2and2() => 2 + 2;
-
-// :)
-int Add(int x, int y)
-```
 
 
 ##  Metadata

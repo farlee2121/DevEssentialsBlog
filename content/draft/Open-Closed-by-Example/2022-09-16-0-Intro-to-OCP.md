@@ -2,7 +2,7 @@
 date: 2022-09-16
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
-title: "Open-Closed Principle by Example: Series Intro"
+title: "Open-Closed Principle by Example: Introducing the Principle"
 ---
 
 The [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle), one of the [SOLID principles](https://en.wikipedia.org/wiki/SOLID), is powerful but not broadly well understood. This series will run through a bunch of examples to clarify it.
@@ -40,17 +40,29 @@ Bertrand Meyer originally described this principle while considering how to make
 He wanted to publish some code that could be adapted to the use cases of many consumers without the different 
 consumers having access to modify the library itself. 
 
-
-## Up Next
 Think about all the packages you add to your software projects. Loggers, data access libraries, authentication, and much more.
 These libraries would not be possible if the source code had to be changed for every system.
 
-This same idea applies to components in our own systems. We can design our components to accommodate different needs without knowing the needs of each different caller.
+## Analogy: Function Parameters
+System level design can be abstract, but functions should be familiar. Imagine if functions didn't have parameters. They would be nearly useless. 
+A new function would be needed for every combinations of inputs. There would be almost no potential for reuse or abstraction.
+
+```cs
+// wat?
+int Add2and2() => 2 + 2;
+
+// :)
+int Add(int x, int y)
+```
+
+Parameters offer flexibility to function callers while enforcing a known contract that the function implentation can consistently operate against.
+
+This same idea applies to components in our systems. We can design our components to accommodate diverse needs without anticipating the needs of each different caller.
+The component defines what flexibility it offers on it's own terms (like parameters), but let callers imprint their own meaning within the defined flexibility.
 This makes our system robust to change and powerful to reuse.
 
-First we'll cover how this can be achieved [with data](../TODO.md), then [with behaviors](../TODO.md), and [with whole systems](../TODO.md). We'll also consider [examples that might look like the open-closed principle, but fail to deliver the expected value](../TODO.md).
-
-
+## Up next
+Components can offer this parameter-like open-closed flexibility many ways. First we'll cover approaches [with data](../TODO.md), then [with behaviors](../TODO.md), and [with whole systems](../TODO.md).
 
 
 
@@ -73,7 +85,15 @@ post break up
 
 Maybe merge examples into their conceptual lead ups? Depends on how long they get. At least comment the prior post is critical to understanding the example-->
 
+<!-- TODO: I think "defined flexibility" is a key term I should repeat often -->
 
 <!-- Q: do I talk about approaches like loosely structured data? I.e. having a content field and letting callers decide any regular structure in that field. Like product descriptions where the structure is determined and interpreted in the UI, but saved as text to the service -->
 
 <!-- Q: Do I add a post about custom predicates in FsSpec? It's a good example of metadata. Library doesn't care. All custom elements are in control of consumer. Can still validate, print sensible messages, *maybe* generate data (but we offer another route for adding a generation customization, registering a strategy) -->
+
+<!-- Q: Do I add a post with misc OCP applications, but without deeper examples
+- Callbacks (both with functions and endpoints)
+- Webhooks: similar to webhooks, but 
+- Generics
+- Configuration in general
+ -->
