@@ -1,8 +1,8 @@
 ---
-date: 2022-09-16
+date: "2022-09-16T00:00:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
-title: "Open-Closed Principle by Example: Introducing the Principle"
+title: "Open-Closed Principle by Example: Introduction to OCP"
 ---
 
 The [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle), one of the [SOLID principles](https://en.wikipedia.org/wiki/SOLID), is powerful but not broadly well understood. This series will run through a bunch of examples to clarify it.

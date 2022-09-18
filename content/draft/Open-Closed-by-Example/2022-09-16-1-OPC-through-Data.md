@@ -1,5 +1,5 @@
 ---
-date: 2022-09-16
+date: "2022-09-16T00:01:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Flexibility Through Data"
