@@ -5,13 +5,14 @@ seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Composable Behaviors"
 ---
 
-This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) by example. In this post we'll demonstrate ways the principle guides composable behaviors without leaking abstractions between components.
+This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) by example. This post will customizing behaviors without leaking abstractions between components.
 <!--more-->
 
 I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and hightlights some motivating questions.
 In summary, the OCP illuminates how components can set defined flexibility so the component can adapt to caller needs without changing internally. This is much like how parameters
 enable functions to be resused by many consumers without changing the function.
 
+The last post explored [flexibility through data](./2022-09-16-1-OPC-through-Data.md). This post will explore flexible behaviors.
 One way to achieve defined flexibility is through flexible data.
 
 
