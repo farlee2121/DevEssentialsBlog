@@ -93,6 +93,7 @@ Maybe merge examples into their conceptual lead ups? Depends on how long they ge
 
 <!-- Q: Do I add a post with misc OCP applications, but without deeper examples
 - Callbacks (both with functions and endpoints)
+  - depending on situation a continuations and callbacks might be used interchangably
 - Webhooks: similar to webhooks, but 
 - Generics
 - Configuration in general

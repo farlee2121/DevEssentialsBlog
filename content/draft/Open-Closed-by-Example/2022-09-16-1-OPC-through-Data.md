@@ -101,8 +101,8 @@ Let's dig into tags with a deeper example.
 
 ### Requirements and Context
 
-First, some context. This example is a messaging system meant to be used as part of a larger system.
-Specifically, it's part of a marketing application.
+First, some context. This example is a messaging/chat system meant to be used as part of a larger system.
+Specifically, it's part of a marketing application connecting brands and influencers.
 
 The marketing system requires that message threads must be retrievable by 
 - campaign
