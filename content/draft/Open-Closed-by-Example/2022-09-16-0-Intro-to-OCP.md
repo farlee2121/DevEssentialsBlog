@@ -44,7 +44,7 @@ Think about all the packages you add to your software projects. Loggers, data ac
 These libraries would not be possible if the source code had to be changed for every system.
 
 ## Analogy: Function Parameters
-System level design can be abstract, but functions should be familiar. Imagine if functions didn't have parameters. They would be nearly useless. 
+Imagine if functions didn't have parameters. They would be nearly useless. 
 A new function would be needed for every combinations of inputs. There would be almost no potential for reuse or abstraction.
 
 ```cs
@@ -55,10 +55,10 @@ int Add2and2() => 2 + 2;
 int Add(int x, int y)
 ```
 
-Parameters offer flexibility to function callers while enforcing a known contract that the function implentation can consistently operate against.
+Parameters offer defined flexibility. The function owns the parameters which work as a contract with the caller. The function implentation can consistently operate against this contract, yet many different callers can adapt a function to their own puposes by passing the different data.
 
 This same idea applies to components in our systems. We can design our components to accommodate diverse needs without anticipating the needs of each different caller.
-The component defines what flexibility it offers on it's own terms (like parameters), but let callers imprint their own meaning within the defined flexibility.
+The component defines what flexibility it offers on it's own terms (like parameters), but lets callers imprint their own meaning within that defined flexibility.
 This makes our system robust to change and powerful to reuse.
 
 ## Up next
