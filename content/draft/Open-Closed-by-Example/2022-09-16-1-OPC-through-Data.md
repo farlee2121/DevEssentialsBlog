@@ -189,11 +189,14 @@ To look up a thread, the caller might query by an intersection of tags like
 threadClient.GetThreads(tags: new [BrandToTag(brandId), InfluencerToTag(influencerId)])
 ```
 
-Not only have tags separated the domains, they've made our chat library simpler and powerful.
+This tag approach separates [essence from accident](https://en.wikipedia.org/wiki/Accident_(philosophy)). It more clearly reflects the chat library's actual nature, often called it the domain. 
+The chat domain is about managing conversation threads that can be retrieved by various groupings. The groupings themselves are unimportant.
+
+Clarifying th domain has made the chat library simpler and more powerful.
 There is now only one function for querying threads by tags. It can query by any set of tags, not just the entity relationships. 
 There's also now a clear path for defining more sophisticated behaviors. For example, we could offer unions between tags (i.e. has any of the given tags).
 
-This tag-based approach is open because different callers can leverage tags differently, but closed because callers don't need to modify the library to accomplish new
+This tag-based approach is open because different callers can impress their own groupings or metadata into tags, but closed because callers don't need to modify the library to accomplish new
 and tailored behavior.
 
 ## Conclusion
