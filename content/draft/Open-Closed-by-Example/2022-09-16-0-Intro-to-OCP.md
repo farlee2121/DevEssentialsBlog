@@ -97,4 +97,6 @@ Maybe merge examples into their conceptual lead ups? Depends on how long they ge
 - Generics
 - Configuration in general
 - "context": either this meta is probably a good name for what I intend with FsSpec
+
+I this misc examples might be good for the recap post.
  -->
