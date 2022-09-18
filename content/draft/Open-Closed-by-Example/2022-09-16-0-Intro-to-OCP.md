@@ -96,4 +96,5 @@ Maybe merge examples into their conceptual lead ups? Depends on how long they ge
 - Webhooks: similar to webhooks, but 
 - Generics
 - Configuration in general
+- "context": either this meta is probably a good name for what I intend with FsSpec
  -->
