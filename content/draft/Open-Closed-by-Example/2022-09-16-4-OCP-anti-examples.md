@@ -75,6 +75,24 @@ interface IThreadClient {
   Thread[] GetThreads(Tags[] tags);
 }
 ```
+```cs
+// In the caller
+static class CampaignMessagingTagNames{
+  public const string Campaign = "campaignId";
+  public const string Influencer = "influencerId";
+  public const string Brand = "brandId";
+
+  public static Tag CampaignToTag(Guid campaignId) =>
+      new Tag(Campaign, campaignId.ToString());
+  public static bool IsCampaignTag(Tag tag) =>
+      tag.Key == Campaign;
+  public static Guid TagToCampaignId(Tag tag) =>
+      new Guid (tag.Value);
+}
+//...
+threadClient.GetThreads(tags: new [BrandToTag(brandId), InfluencerToTag(influencerId)])
+```
+
 
 The tag based approach contains uncertainty to the tags field. Even in there it defines the outer shape of that flexibility.
 This allows the thread client to deal with tags confidently. Callers haven't lost any of the desired functionality, and the library is much easier to work with.
