@@ -27,7 +27,7 @@ Robert Martin later rephrased the principle when he coined the SOLID principles.
 The Open-Closed Principle definitions are correct, but... they can be difficult to picture if you don't already know what applications look like.
 We'll get into plenty of examples, but I also find it helpful to thing about the principle from the questions that motivate it.
 
-- How can we publish libraries that can adapt to unknown users?
+- How can we publish libraries that can adapt to unknown users without changing library code?
 - How do we prevent changes from cascading between services (or other components)?
 - How do we accommodate caller needs without knowing semantics from the callers?
 - How can a service compose new dependencies without changing the service?
