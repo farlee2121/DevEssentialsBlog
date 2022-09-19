@@ -1,9 +1,7 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="987px" height="492px" viewBox="-0.5 -0.5 987 492" content="&lt;mxfile&gt;&lt;diagram id=&quot;XV6IPSEZXFg1ho1ypp5j&quot; name=&quot;Page-1&quot;&gt;1ZZNj5swEIZ/DVJ7WRk7kOQYkmx7aNWoHHp28ASsGoyMsyH99bXBBFhYbauN+kEUYb+eiZn3GSt4ZJvXHxQts8+SgfAwYrVHdh7G/gIvzM0q11YJF34rpIozF9QLMf8BTkROPXMG1ShQSyk0L8diIosCEj3SqFLyMg47STHetaQpTIQ4oWKqfuNMZ071w3W/8BF4mrmtV3jZLuS0C3aVVBll8jKQyN4jWyWlbkd5vQVhzet8afMeX1i9PZiCQv9KAm4Tnqg4u9rcc+lrV6x5xNIOM6hpKguPRCUonoMG1auHTjIVRJeMa4hLmti0i2kBo2U6F2bmm+GJ19BBtfOqHa6DZk2IrRRSNXuTE6IEURujlfwOg5Vot0QI2QxZ6IGOmstmdM7aiasSlIb6Raf8m/+mcUGactTVhLgEsgraFNezGDmEl74DFp2WDeCT0InUdV16++0ejBk4NvOcyOucbHXc9OgnegRxkBXX3NLaHaXWMjcmUMFTKySmYssuYrTKgDmLBoC6X9q4hJwzZneJulbI69Qe7IeSM/MteZE+lOKcmgglNXX7EjTl6R+pD3iOJ0LhfvM45XlqriFP3wXFrnT/TnwDMuaLp3zDGbz3oLuY0P2iM4MIoxjUEzfnCIfC7BcdjRamuqk4pLk9WMWxsjdpo79CJc/Khj/rjVdP5P9CaY3HlJZTSH4wQ2l1B0rBhNKG0dIepbfZfQrsZ87usLmmdrfXnzgUaPXX7A4ndh+k0kZ5F2tFNaTX9281/t/5d1mjkc/rqc+rGZuD37fZTPu3i2Zt8I5G9j8B&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="987px" height="492px" viewBox="-0.5 -0.5 987 492" content="&lt;mxfile&gt;&lt;diagram id=&quot;XV6IPSEZXFg1ho1ypp5j&quot; name=&quot;Page-1&quot;&gt;1Zddb5swFIZ/TaTtJvIHOHDZfHS72LRqudi1ExywZjAyTkP262eDKRBTdVLpthJFmNfnxD7vYzBZ4E1ef1K0zL7KhIkFAkm9wNsFQjBAgTlZ5doqJICtkCqeuKBe2PNfzInAqWeesGoUqKUUmpdj8SiLgh31SKNKycs47CTFeNSSpswT9kcqfPUHT3TmVEjivuMz42nmho7Qqu3IaRfsKqkymsjLQMK7Bd4oKXXbyusNE9a8zpc27/6Z3qeJKVboP0lAbcIjFWdXm5uXvnbFmimWtpmxmqayWOB1yRTPmWaqVx86yVSwvmRcs31JjzbtYpaA0TKdC3MFTfPEa9ZBtddV24zDpk+IjRRSNWPjE6AYUBujlfzJBj3r7QoAYDNkoQc6aA6b0TlrL1yVTGlWP+sUfPLfLFwmTTnqakJcAo7CNsWtWQQcwku/AoJOywbwMXEidasuffrtHoxpODbTnAKP0zedGQAI7Jl65MZpRIQZcH0wGkl1UzOhubW+OFT2JG30d1bJs7LhN5RfZDbiAg8UMjTFBQCyu7v3uZyaY8gFuqC9mwSch1OM8IjTyscEwwlM0QyUQo/SXUJLe6O8zu5TaD9TdpPm8O1uj79gNwbRP7ObeHY/SKWN8mGvFdUsvX58rfH/z/MnBiOfY9/naMLmcAab45f3CFsZN/vjF3pg4kFWXHO7U2wPUmuZGwOo4KkVjqZau2+sE1plLHH2DAB0v3TnEnKeJHaUdbcN5XVqXyqWJU/Mt+RFuizFOTURSmrqxkXRLYHbpX8DmoUwmMLZP7a8BYAc6BnYBhgso2C8veB4CVce43C1JCsfM4TRkpDXo47eIer4JdRjdIUs2EzU4HinQcS/J8nEPTnH+wB+f6AweJv3iCnkc2xsZPzANVN6K7rmsn/jb/oG/5vw7jc=&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
         <path d="M 390 130 L 600 130 L 695 310 L 600 490 L 390 490 L 295 310 Z" fill="#f0a30a" stroke="#bd7000" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="263" y="150" width="60" height="60" fill="#000000" stroke="#000000" transform="translate(2,3)rotate(30,293,180)" pointer-events="all" opacity="0.25"/>
-        <rect x="263" y="150" width="60" height="60" fill="#1ba1e2" stroke="#006eaf" transform="rotate(30,293,180)" pointer-events="all"/>
         <rect x="833" y="0" width="150" height="80" fill="#000000" stroke="#000000" pointer-events="all" transform="translate(2,3)" opacity="0.25"/>
         <rect x="833" y="0" width="150" height="80" fill="#1ba1e2" stroke="#006eaf" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
@@ -59,6 +57,9 @@
                 </text>
             </switch>
         </g>
+        <rect x="340.84" y="169.17" width="57.67" height="118.66" fill="#e51400" stroke="#b20000" transform="rotate(28,369.67,228.5)" pointer-events="all"/>
+        <rect x="323" y="190" width="60" height="60" fill="rgb(255, 255, 255)" stroke="none" transform="rotate(29,353,220)" pointer-events="all"/>
+        <rect x="270" y="160" width="60" height="60" fill="#1ba1e2" stroke="#006eaf" transform="rotate(30,300,190)" pointer-events="all"/>
     </g>
     <switch>
         <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
