@@ -45,11 +45,11 @@ I feel grateful to have a background in mathematics, and for my early connection
 
 I see programming as problem modeling ([1](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md), [2](../posts/2022-02-18-Programming-is-Problem-Modeling.md)). Programmers, somewhat like mathematicians, encode ideas rigorously in a standard notation. 
 
-The math analogy also isn't perfect. Unlike in math, software only needs enough rigor for a computer to run the code. Math models/proofs can be arcane so long as they are rigorous. They only need to be understood once. Software models are regularly updated, so understandability is key, more like [engineering designs](https://www.developerdotstar.com/mag/articles/reeves_design.html), .
+Software problem modeling isn't quite like math either. Unlike in math, software only needs enough rigor for a computer to run the code. Math models/proofs can be arcane so long as they are rigorous. They only need to be understood once. Software models are regularly updated, so understandability is key, more like [engineering designs](https://www.developerdotstar.com/mag/articles/reeves_design.html).
 
-Software tends to model business processes. The whole software process is progressively finer grained iterations of understanding the business problem. Even released code is part of refining understanding to make future updates. A developer's job is only done when the problem is sufficiently understood such that the software no longer needs to change.
+The whole software process is progressive iterations of understanding the business problem. Even released code is part of refining understanding to make future updates. A developer's job is only done when the problem is sufficiently understood such that the software no longer needs to change.
 
-[Motorcycle maintenance](https://en.wikipedia.org/wiki/Zen_and_the_Art_of_Motorcycle_Maintenance) helped paint a more concrete picture for a friend of mine. The hard part of mechanical work usually isn't replacing parts, it's asking good questions to understand the problem and replace just the right parts. 
+[Motorcycle maintenance](https://en.wikipedia.org/wiki/Zen_and_the_Art_of_Motorcycle_Maintenance) painted a more concrete picture for a friend of mine. The hard part of mechanical work usually isn't replacing parts, it's asking good questions to understand the problem and replace just the right parts. 
 
 Overall, approaching software as problem modeling has served me well. It also aligns with the model described in the [Software Engineering Body of Knowledge](../posts/2021-08-13-Swebok-transform-view.md)
 
