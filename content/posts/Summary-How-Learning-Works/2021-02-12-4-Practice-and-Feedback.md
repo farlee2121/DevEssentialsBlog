@@ -2,7 +2,7 @@
 date: "2021-02-12T00:04:00Z"
 publishDate: "2021-02-12T00:04:00Z"
 seriesId: "How Learning Works"
-tags: [Learning, Book Review]
+tags: [Learning, Reading Review]
 title: Practice & Feedback
 aliases:
 - /2021/02/12/4-practice-and-feedback

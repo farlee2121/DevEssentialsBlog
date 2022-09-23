@@ -2,7 +2,7 @@
 date: "2021-02-12T00:00:00Z"
 publishDate: "2021-02-12T00:00:00Z"
 seriesId: "How Learning Works"
-tags: [Learning, Book Review]
+tags: [Learning, Reading Review]
 title: Learning Principles
 aliases:
 - /2021/02/12/0-how-learning-works-series-intro

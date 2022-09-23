@@ -2,7 +2,7 @@
 date: "2021-02-12T00:05:00Z"
 publishDate: "2021-02-12T00:05:00Z"
 seriesId: "How Learning Works"
-tags: [Learning, Book Review]
+tags: [Learning, Reading Review]
 title: Motivation and Goals
 aliases:
 - /2021/02/12/5-motivation-and-goals

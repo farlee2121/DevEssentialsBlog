@@ -2,7 +2,7 @@
 date: "2021-02-12T00:03:00Z"
 publishDate: "2021-02-12T00:03:00Z"
 seriesId: "How Learning Works"
-tags: [Learning, Book Review]
+tags: [Learning, Reading Review]
 title: Knowledge Organization
 aliases:
 - /2021/02/12/3-knowledge-organization

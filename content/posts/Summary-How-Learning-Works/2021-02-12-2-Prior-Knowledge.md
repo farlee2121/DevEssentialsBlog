@@ -2,7 +2,7 @@
 date: "2021-02-12T00:02:00Z"
 publishDate: "2021-02-12T00:02:00Z"
 seriesId: "How Learning Works"
-tags: [Learning, Book Review]
+tags: [Learning, Reading Review]
 title: Prior Knowledge
 aliases:
 - /2021/02/12/2-prior-knowledge

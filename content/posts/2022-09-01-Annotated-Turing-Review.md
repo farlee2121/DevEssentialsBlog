@@ -1,6 +1,6 @@
 ---
 date: "2022-09-01T00:00:00Z"
-tags: [Book Review]
+tags: [Reading Review]
 title: "Book Review: The Annotated Turing" 
 ---
 
