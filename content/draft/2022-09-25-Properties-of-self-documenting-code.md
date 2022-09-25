@@ -38,6 +38,12 @@ Naming is one of the most common activities in programming and a primary means o
 - **Consistency:** Fred Brooks described style as "consistency in micro-decisions across time and similar decisions". Consistency allows readers to make predictions about how the system behaves instead of storing individual facts. It frees up brain space for higher concepts instead of incidental details.
 - **Scope:** How much do you need to consider to *fully* understand a piece of code. For example: do you only need to know the function parameters, or do you have to worry about mutated class state, mutated system state, sequence of calls, data formats, etc. How far do you trace those decisions to be confident. Scope is effectively about Information Hiding.
 
+<!-- origins: 
+- naming: many origins. Widely considered one of the most important activities in programming. Learned a lot from code complete
+- Proximity: Code Complete's principle of proximity. Backed by research
+- Consistency: Design of Design, but also generally backed by design research
+- Scope: Information Hiding -->
+
 ## Sufficiency
 
 It seems fairly clear that each of these properties are important factors, but are they *sufficient* to explain the motivation behind all the kinds of decisions we face when constructing code? 
