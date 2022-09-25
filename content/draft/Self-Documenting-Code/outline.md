@@ -41,7 +41,16 @@ Q: is this a sufficient orthogonal set?
 - patterns are a variety of naming
 - naming is potentially a broader category of intent or semantics that might not just be naming
   - There aren't many other aspects to programming though. Spacing, grouping, braces, and names are most everything. Proximity and scope over half of that more clearly
-- 
+- Concurrency ... I'd say that belongs to scope. The problem with concurrency is side-effects. Those aren't an issue if you lock state for a given transaction i.e. pure functions
+- monitoring, retries, and similar are more part of maintenance or system-level discussion. I'm not worried about covering them here. If anything they belong to scope because they shouldn't be intermixed
+- table-driven methods -> scope
+- complexity? too abstract a concept and not directly actionable. Addressed via these concerns
+- Nesting -> scope & consistency 
+- SRP -> naming, Liskov -> scope, DI -> scope affecting naming and proximity, OCP -> scope & semantics, ISP -> scope & semantics
+- Eventual consistency -> hmm. not sure. scope? It has to do with breaking up uptime and transactional boundaries. So yes, scope.
+- A: Yes? covers most of what I can think of
+  - Q: Is scope too full? A: The applications are vast, but it highlights the central motivation of them all.
+  - !!! Scope is really a reprasing of Information Hiding. It's about the full scope of what might effect how a piece of code runs
 
 naming and proximity are relatively straight-forward to explain. Probably do them first.
 - Q: what makes a good name? A: Named for intent. Depends on scope, but oriented to the problem it solves
@@ -68,6 +77,13 @@ Consistency is a little hard, but I don't think I need to go into great depth (l
   - (all this is also well established for UI design)
 
 Scope is the really hard one. Related to proximity, but well defined contracts.
+- It's about the full scope of what might effect how a piece of code runs
+  - pure function -> depends only on inputs, used only by outputs
+  - mutable parameters -> depends on inputs and anything that might changes those inputs concurrently
+  - class data -> must know how the rest of the class might update the data. Must consider sequence/timing possibilities
+  - queries -> may force us to consider anything else that could update the data we want. Potentially the whole application or even multiple applications if done poorly. Vulnerable to timing issues. 
+  - Operation by mutation -> have to consider whole sequence of operations
+    - Global data -> have to consider whole application and how it interacts with that field
 Q: What makes a good contract? A: Defined by semantics/in terms of the domain. That's how you isolate reasons for change and minimize scope of change impact 
 Need to scale this one up with examples.
 - don't reuse a variable name
