@@ -10,6 +10,9 @@ The [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_pr
 
 <!-- TODO: the excerpt doesn't motivate why we want the OCP. It probably wont interest people who aren't interested in the OCP
 maybe "is critical to flexible and stable services"
+
+TODO: consider how principles like scope, proximity, consistency, and naming/semantic factor into this series. Think about using these terms to mimic construction
+- i.e. ports and adapters is about limiting scope. This also improves proximity and focuses semantics/naming.
  -->
 
 ## Definitions
@@ -31,6 +34,7 @@ We'll get into plenty of examples, but I also find it helpful to thing about the
 - How do we prevent changes from cascading between services (or other components)?
 - How do we accommodate caller needs without knowing semantics from the callers?
 - How can a service compose new dependencies without changing the service?
+<!-- TODO: - Stamina: continue to accommodate change over time without ever-increasing effort and scope to understand -->
 
 I encourage you to pause for a few minutes and write down your thoughts about these questions. You don't have to know the answers, guesses and questions are good too.
 Making predictions about what you're about to learn has been [proven to improve learning](../../posts/2022-03-07-Small-Teaching-Review.md#predicting).
@@ -96,6 +100,7 @@ Maybe merge examples into their conceptual lead ups? Depends on how long they ge
   - depending on situation a continuations and callbacks might be used interchangably
 - Webhooks: similar to webhooks, but 
 - Generics
+- UI components
 - Configuration in general
 - "context": either this meta is probably a good name for what I intend with FsSpec
 
