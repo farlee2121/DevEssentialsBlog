@@ -20,6 +20,7 @@ Q: Is this organization by quality best for understanding?
 
 IDEA: try breaking off some smaller blog posts to clarify what important parts of this post might look like
 - Scope across Scale post
+- blog post questioning sufficiency of the property set
 
 IDEA: maybe I build a separate stable, incremental, additive talk. That lets me cover process. Then this talk can mostly focus on code.
 - give more time for examples to make sure the concept sinks in
@@ -106,6 +107,7 @@ Need to scale this one up with examples.
 
 Q: do I order design first in books so I can lean into OCP in construction?
 
+
 Now that I have the principles outlines, Maybe now follow up with process
 - Good debugging asks a clear question. Limits the scope of the issue until it's found
 - Good commits are small in scope. They also contain necessary context so readers can have a small scope to consider to understand the change in context of the business
@@ -122,3 +124,18 @@ Don't forget examples:
 - adding readmes and other docs in source control is proximity
 - don't forget to lean into problem modeling. I've laid some context in the duck series. I don't need to fully re-explain increments, just make sure these are connected.
 problem modeling leads the major process and design elements: self-documenting code (DDD) and small increments of work (frequent problem feedback)
+
+
+## Learning these ideas
+Don't worry about mastering all these at once. Tackling all of them at once is likely to overwhelm.
+While these ideas ideas work best together, focusing on one is still powerful and becomes a thread pulling you into the others.
+
+I'd say start with naming. Name things really well. 
+It'll make your code much easier to follow. It'll push you to break things up if naming them is hard.
+It's a fairly intuitive place to start with big returns.
+
+Proximity and consistency are probably next. Also both relatively easy to understand with high returns.
+
+Scope is perhaps the sneakiest. Coupling can pop up in all kinds of indirect forms.
+Early on, it's probably test to focus on small-scale improvements. Don't reassign to variables. Try to keep functions pure (only depending on inputs).
+Centralize orchestration to avoid distributed state. The next place 
