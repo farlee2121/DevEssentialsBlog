@@ -10,15 +10,45 @@ understandability perhaps isn't an obvious desired outcome. May need to motivate
 being able to correctly modify system. Speed of modifying system. Understanding the problem being solved (what better way than the code itself teaching you). Modified more than initially written, read many more times than that.
 
 
+
+
 ## Major components
 
+Q: Is this organization by quality best for understanding?
+- I think it's better than going by scope. It encourages seeing the property across applications
+- A danger is an incomplete picture of what each level of design looks like
+
+IDEA: try breaking off some smaller blog posts to clarify what important parts of this post might look like
+- Scope across Scale post
+
+IDEA: maybe I build a separate stable, incremental, additive talk. That lets me cover process. Then this talk can mostly focus on code.
+- give more time for examples to make sure the concept sinks in
+- process is also important. Deserves more than just being squeezed into a style talk
+- Q: Where would I put SIA on the diagram?
+  - the swebok process KA? It cross cuts most activities: construction, design, review, deployment.
+  - Maybe show the cross-cutting by partially coloring all the lifecycle phases. I think a thin strip starting from the center could make sense
+    - probably use the same thin strip for both the outer and middle rings, but fully color process
+- Q: What would self-documenting code highlight?
+  - Fully construction with partials in testing and design. Maybe fully color design...
+
+
+
 components: naming/semantics, proximity, scope (IH, side-effects, contracts), maybe consistency (which is style)
+Q: is this a sufficient orthogonal set?
+- ... context is strongly related to scope and proximity
+- immutability is a result of scope
+- side-effect management is a result of scope. Contracts too
+- patterns are a variety of naming
+- naming is potentially a broader category of intent or semantics that might not just be naming
+  - There aren't many other aspects to programming though. Spacing, grouping, braces, and names are most everything. Proximity and scope over half of that more clearly
+- 
 
 naming and proximity are relatively straight-forward to explain. Probably do them first.
 - Q: what makes a good name? A: Named for intent. Depends on scope, but oriented to the problem it solves
   - in small scope you might have `acc`. That doesn't make sense... except it does in the right context. It's standard for accumulator
   - Recurse is similar. Makes it easy and standard to understand recursive definitions
   - Move up to functions, modules, etc
+- Patterns. If there's a pattern use it and use the name. Reduces cognitive load
 
 Proximity
 - whitespace. Often underrated
