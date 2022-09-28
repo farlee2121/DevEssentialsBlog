@@ -82,9 +82,10 @@ Components can offer this parameter-like open-closed flexibility many ways. Firs
   - depending on situation a continuations and callbacks might be used interchangably
 - Webhooks: similar to webhooks, but 
 - Generics
-- UI components
+- UI components (maybe mostly fits into callbacks)
 - Configuration in general
 - "context": either this meta is probably a good name for what I intend with FsSpec
+- 
 
 I this misc examples might be good for the recap post.
  -->

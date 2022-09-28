@@ -1,5 +1,5 @@
 ---
-date: "2022-09-16T00:02:00Z"
+date: "2022-09-16T00:03:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Composable Behaviors"
