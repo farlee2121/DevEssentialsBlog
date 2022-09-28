@@ -6,7 +6,7 @@ title: "Open-Closed Principle by Example: OCP as Architecture"
 ---
 
 <!-- TODO: This got really long. Consider tightening it up -->
-This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) by example. This post applies OCP to the system level with architecture patterns like ports and adapters.
+This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post applies OCP to the system level with architecture patterns like ports and adapters.
 <!--more-->
 
 I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. This post also learn heavily into ideas established in the previous [post on flexible behaviors](./2022-09-16-2-Flexible-Behavior.md)

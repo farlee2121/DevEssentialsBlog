@@ -76,6 +76,6 @@ Here are some of my considerations
 
 Self-documenting code is the heart of sustainable construction and low-level design.
 
-I haven't considered all of programming to be sure, but naming, proximity, consistency, and scope cover a surprisingly large variety of concerns for system understandability. Each is a clearly definable property and I think I could quickly produce examples of how each plays out at different scales of construction. Further, each can be learned and valuably applied fairly independently.
+I haven't considered all of programming to be sure, but naming, proximity, consistency, and scope cover a surprisingly large variety of system understandability factors. Each is a clearly definable property and I think I could quickly produce examples of how each plays out at different scales of construction. Further, each can be learned and valuably applied fairly independently.
 
 I believe naming, proximity, consistency, and scope are a good foundation for teaching self-documenting code. 

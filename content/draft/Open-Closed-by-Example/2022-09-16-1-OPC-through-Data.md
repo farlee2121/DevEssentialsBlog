@@ -5,7 +5,7 @@ seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Flexibility Through Data"
 ---
 
-This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) by example. This post will demonstrate how the OCP can be achieved through flexible data. 
+This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate how the OCP can be achieved through flexible data. 
 <!--more-->
 
 I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and highlights motivating questions.

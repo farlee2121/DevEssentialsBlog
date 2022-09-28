@@ -5,7 +5,7 @@ seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Anti-Examples"
 ---
 
-This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) by example. This post describes some approaches that may look like the OCP, but don't deliver the expected value.
+This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post describes some approaches that may look like the OCP, but don't deliver the expected value.
 <!--more-->
 
 <!-- TODO: the other anti-examples all seemed to best belong with their related good examples
