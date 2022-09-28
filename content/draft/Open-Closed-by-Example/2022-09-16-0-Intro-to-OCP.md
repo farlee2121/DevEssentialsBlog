@@ -15,7 +15,7 @@ TODO: consider how principles like scope, proximity, consistency, and naming/sem
 
 ## Definitions
 
-First off, let's make sure we're all on the same page about what the Open-Closed Principle is.
+First off, let's make sure we're all on the same page about the Open-Closed Principle definition.
 
 Bertrand Meyer originally defined the Open-closed Principle as
 > software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification - Bertrand Meyer
@@ -25,18 +25,21 @@ Robert Martin later rephrased the principle when he coined the SOLID principles.
 
 ## Motivating Questions
 
-The Open-Closed Principle definitions are correct, but... they can be difficult to picture if you don't already know what applications look like.
-We'll get into plenty of examples, but I also find it helpful to thing about the principle from the questions that motivate it.
+The Open-Closed Principle definitions are correct, but... they can be difficult to picture if you don't already know what the applications look like.
+We'll get into plenty of examples soon, but I also find it helpful to think about the principle from the questions that motivate it.
 
 - How can we publish libraries that can adapt to unknown users without changing library code?
-- How do we prevent changes from cascading between services (or other components)?
-- How do we accommodate caller needs without knowing semantics from the callers?
+  - In general, how do we accommodate unknown use cases?
+- How do we prevent changes from cascading between services (or other kind of components)?
+- How does a service isolate it's domain *and* support semantics needed by the caller?
 - How can a service compose new dependencies without changing the service?
-<!-- TODO: - Stamina: continue to accommodate change over time without ever-increasing effort and scope to understand -->
+- Design stamina: How can code [handle more use cases but remain simple](https://blog.cleancoder.com/uncle-bob/2017/03/03/TDD-Harms-Architecture.html)?
+
 
 I encourage you to pause for a few minutes and write down your thoughts about these questions. You don't have to know the answers, guesses and questions are good too.
-Making predictions about what you're about to learn has been [proven to improve learning](../../posts/2022-03-07-Small-Teaching-Review.md#predicting).
+Making predictions has been [proven to improve learning](../../posts/2022-03-07-Small-Teaching-Review.md#predicting).
 
+## History
 
 Bertrand Meyer originally described this principle while considering how to make reusable software libraries. 
 He wanted to publish some code that could be adapted to the use cases of many consumers without the different 
@@ -57,7 +60,7 @@ int Add2and2() => 2 + 2;
 int Add(int x, int y)
 ```
 
-Parameters offer defined flexibility. The function owns the parameters which work as a contract with the caller. The function implentation can consistently operate against this contract, yet many different callers can adapt a function to their own puposes by passing the different data.
+Parameters offer defined flexibility. The function owns the parameters which work as a contract with the caller. The function implentation can consistently operate against this contract, yet many different callers can adapt a function to their own puposes by passing different data.
 
 This same idea applies to components in our systems. We can design our components to accommodate diverse needs without anticipating the needs of each different caller.
 The component defines what flexibility it offers on it's own terms (like parameters), but lets callers imprint their own meaning within that defined flexibility.
@@ -68,26 +71,7 @@ Components can offer this parameter-like open-closed flexibility many ways. Firs
 
 
 
-<!-- 
-
-post break up
-- intro: definition + motivations
-- OCP through data
-  - parameter analogy, metadata, tags
-- Chat Thread sample 
-- Implicit assumption != OCP 
-  - include clojure spec here
-  - TODO: consider combining this with Anti-examples. maybe dropping closure. I can't remember exactly the point I made there
-- Behaviors & OCP (Not sure on title)
-  - The build up is from object inheritance, to interface, to DI
-- Notification Example
-- OCP + DI as architecture
-- Anti-Examples
-- Conclusion
-
-Maybe merge examples into their conceptual lead ups? Depends on how long they get. At least comment the prior post is critical to understanding the example-->
-
-<!-- TODO: I think "defined flexibility" is a key term I should repeat often -->
+<!-- TODO: does defined flexibility really help?-->
 
 <!-- Q: do I talk about approaches like loosely structured data? I.e. having a content field and letting callers decide any regular structure in that field. Like product descriptions where the structure is determined and interpreted in the UI, but saved as text to the service -->
 
