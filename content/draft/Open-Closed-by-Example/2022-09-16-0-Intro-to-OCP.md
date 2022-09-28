@@ -70,22 +70,11 @@ This makes our system robust to change and powerful to reuse.
 Components can offer this parameter-like open-closed flexibility many ways. First we'll cover approaches [with data](./2022-09-16-1-OPC-through-Data.md), then [with behaviors](./2022-09-16-3-Flexible-Behavior.md), and [with whole systems](./2022-09-16-4-OCP-as-architecture.md). We'll also look at some [examples that might look like OCP, but fail to deliver the expected value](./2022-09-16-5-OCP-anti-examples.md).
 
 
-
-<!-- TODO: does defined flexibility really help?-->
-
-<!-- Q: do I talk about approaches like loosely structured data? I.e. having a content field and letting callers decide any regular structure in that field. Like product descriptions where the structure is determined and interpreted in the UI, but saved as text to the service -->
-
 <!-- Q: Do I add a post about custom predicates in FsSpec? It's a good example of metadata. Library doesn't care. All custom elements are in control of consumer. Can still validate, print sensible messages, *maybe* generate data (but we offer another route for adding a generation customization, registering a strategy) -->
 
 <!-- Q: Do I add a post with misc OCP applications, but without deeper examples
-- Callbacks (both with functions and endpoints)
-  - depending on situation a continuations and callbacks might be used interchangably
-- Webhooks: similar to webhooks, but 
 - Generics
-- UI components (maybe mostly fits into callbacks)
 - Configuration in general
+- Strategies?
 - "context": either this meta is probably a good name for what I intend with FsSpec
-- 
-
-I this misc examples might be good for the recap post.
  -->
