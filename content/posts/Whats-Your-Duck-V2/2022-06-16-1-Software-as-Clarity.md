@@ -45,15 +45,17 @@ This spectrum from unknown to known plays out both at the work item level and sy
 > Better wrong than vague  
 > \- Fred Brooks, Design of Design
 
-This quote is the single most important idea you can take from this series. If you remember nothing else, remember it's better to be wrong than vague.
+This quote is the single most important idea you can take from this series. If you remember nothing else, remember it's better to be wrong than vague. 
 
 Clarity is key to effective design, and software itself is a complex design activity. We deal with messy problems and problems that often change. It's inevitable that we will get some elements wrong. What matters is [when and how we discover errors](https://stevemcconnell.com/articles/an-ounce-of-prevention/).
 
+Eisenhower is famous for another take on this same idea "plans are worthless, but planning is everything". Real situations inevitably call for a change in plans. Planning forges clarity and unity to respond to changes effectively.
+
 Vague ideas can still be wrong, it's just less likely that anyone will notice. Vague problems get swept down the line and pile up until they're nearly insurmountable. Software has coined the derogatory term "legacy" for such software, and it's often a place projects go to die.
 
-Favoring clarity means identifying and communicating our assumptions. It means encoding what we think we know about the problem we're solving and how we're solving it. It's about ordering our thoughts well.
+Favoring clarity means identifying and communicating our assumptions. It means encoding what we *think* we know about the problem we're solving and how we're solving it. It's about ordering our thoughts well.
 
-Clearly communicated ideas, unlike vague ideas, enable collaboration, comparison, reviews, and future reference.
+Clearly communicated ideas, unlike vague ideas, enable collaboration, comparison, reviews, and future reference.  
 
 Everything that follows in this series builds a framework to order thoughts well. The next step is achieving incremental progress using the [Design Tree](./2022-06-16-2-Design-Tree-and-Incremental-Progress.md).
 
