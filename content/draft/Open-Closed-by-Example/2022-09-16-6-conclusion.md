@@ -31,8 +31,8 @@ enable functions to be resused by many consumers without changing the function.
 
 Some of our primary tools to create this flexibility are
 - [Flexible or semi-structured data](./2022-09-16-1-OPC-through-Data.md), like tags. This allows callers to imprint their own idea on data without requiring the component to handle the data differently. 
-- [Self-owned interfaces](./2022-09-16-2-Flexible-Behavior.md), which allow no-domain dependencies to be deferred for callers to inject later.
-- [Dependency Inversion with adapters](2022-09-16-3-OCP-as-architecture.md) to map between services, also known at the Ports and Adapters pattern. This allows services to become reusable libraries that are composed into different use cases as needed. This pattern also isolates cross-cutting concerns and integrations, allowing different system configurations to be accumulated and swapped rather than ripped and replaced.
+- [Self-owned interfaces](./2022-09-16-3-Flexible-Behavior.md), which allow no-domain dependencies to be deferred for callers to inject later.
+- [Dependency Inversion with adapters](2022-09-16-4-OCP-as-architecture.md) to map between services, also known at the Ports and Adapters pattern. This allows services to become reusable libraries that are composed into different use cases as needed. This pattern also isolates cross-cutting concerns and integrations, allowing different system configurations to be accumulated and swapped rather than ripped and replaced.
 
-[Focusing too much on flexibility or reuse](./2022-09-16-4-OCP-anti-examples.md) can undermine expected value. 
+[Focusing too much on flexibility or reuse](./2022-09-16-5-OCP-anti-examples.md) can undermine expected value. 
 Focus on isolating domains from each other instead of inviting external complexity. The OCP enables components to focus on the essence of their own problem domain and defer details of interpretation to other components.

@@ -9,7 +9,7 @@ title: "Open-Closed Principle by Example: OCP as Architecture"
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post applies OCP to the system level with architecture patterns like ports and adapters.
 <!--more-->
 
-I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. This post also learn heavily into ideas established in the previous [post on flexible behaviors](./2022-09-16-2-Flexible-Behavior.md)
+I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. This post also learn heavily into ideas established in the previous [post on flexible behaviors](./2022-09-16-3-Flexible-Behavior.md)
 
 As a reminder, the OCP illuminates how components can adapt to caller needs without changing internally. Data patterns like tags enable callers to imprint custom meaning on data without modifying the component that owns that data. Dependency Inversion enables composition of different dependency implementations without changing the consumer of those dependencies. 
 Both approaches enable components to focus on the essence of their own problem domain and defer details of interpretation to other components.
@@ -36,7 +36,7 @@ I've referenced a chat system for examples throughout this series. Now we'll loo
 ![chat system diagram](../../../static/post-media/Open-closed-by-example/messaging-diagram.drawio.svg)
 
 The messaging client is where the core domain logic happens. This diagram shows four dependencies: 
-- IMessageNotifier: Notify when a message was sent. Covered in [flexible behavior post](./2022-09-16-2-Flexible-Behavior.md)
+- IMessageNotifier: Notify when a message was sent. Covered in [flexible behavior post](./2022-09-16-3-Flexible-Behavior.md)
 - IThreadAccess: Read or save thread information, not including messages in the thread
 - IMessageAccess: Read or save messages
 - IAttachmentAccess: Read or save attachment to messages
@@ -79,7 +79,7 @@ As always, the answer depends. Components with little change or short lifetimes 
 
 For one, this approach is high testable. Already usually worth the effort.
 
-The [last post](./2022-09-16-2-Flexible-Behavior.md) showed how this approach enabled the message client to adapt to testing, new kinds of notifications, or even dynamic notification types without changing the core messaging client. The specific mix of notifications also being decided per-consumer.
+The [last post](./2022-09-16-3-Flexible-Behavior.md) showed how this approach enabled the message client to adapt to testing, new kinds of notifications, or even dynamic notification types without changing the core messaging client. The specific mix of notifications also being decided per-consumer.
 
 ### Isolate Cross-cutting Concerns
 This approach enables a similar but broader benfit: [separation of cross-cutting concerns into decorators](https://blog.ploeh.dk/2010/04/07/DependencyInjectionisLooseCoupling/).
