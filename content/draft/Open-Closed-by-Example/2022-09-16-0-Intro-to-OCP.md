@@ -5,12 +5,10 @@ seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Introduction to OCP"
 ---
 
-The [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle), one of the [SOLID principles](https://en.wikipedia.org/wiki/SOLID), is powerful but not broadly well understood. This series will clarify the principle with examples.
+The [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle), one of the [SOLID principles](https://en.wikipedia.org/wiki/SOLID), is crucial to reusable code and insulated domains. This series will clarify the principle with examples.
 <!--more-->
 
-<!-- TODO: the excerpt doesn't motivate why we want the OCP. It probably wont interest people who aren't interested in the OCP
-maybe "is critical to flexible and stable services"
-
+<!-- 
 TODO: consider how principles like scope, proximity, consistency, and naming/semantic factor into this series. Think about using these terms to mimic construction
 - i.e. ports and adapters is about limiting scope. This also improves proximity and focuses semantics/naming.
  -->
