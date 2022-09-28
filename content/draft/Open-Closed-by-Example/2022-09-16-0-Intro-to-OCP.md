@@ -60,7 +60,7 @@ int Add2and2() => 2 + 2;
 int Add(int x, int y)
 ```
 
-Parameters offer defined flexibility. The function owns the parameters which work as a contract with the caller. The function implentation can consistently operate against this contract, yet many different callers can adapt a function to their own puposes by passing different data.
+Parameters offer self-defined flexibility. The function owns the parameters which work as a contract with the caller. The function implentation can consistently operate against this contract, yet many different callers can adapt a function to their own puposes by passing different data.
 
 This same idea applies to components in our systems. We can design our components to accommodate diverse needs without anticipating the needs of each different caller.
 The component defines what flexibility it offers on it's own terms (like parameters), but lets callers imprint their own meaning within that defined flexibility.

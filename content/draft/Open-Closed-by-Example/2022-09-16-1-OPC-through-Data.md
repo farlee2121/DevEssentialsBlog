@@ -9,13 +9,13 @@ This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/
 <!--more-->
 
 I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and highlights motivating questions.
-In summary, the OCP illuminates how components can set defined flexibility so the component can adapt to caller needs without changing internally. This is much like how parameters
+In summary, the OCP illuminates how components can offer self-defined flexibility and adapt to caller needs without changing internally. This is much like how parameters
 enable functions to be resused by many consumers without changing the function.
 
-One way to achieve defined flexibility is through flexible data.
+One way to achieve this self-defined flexibility is through flexible data.
 
 ## Semi-Structured Data
-The general way services offer flexibility is by leaving some amount of interpretation up to the callers.
+The general way services offer flexibility is by leaving some amount of interpretation up to the callers, but within constraints set out by the service.
 This can be as simple as offering an unstructured field for extra data.
 
 <!-- need to define loose shape, but leave interpretation to caller -->
@@ -31,13 +31,13 @@ class Person{
 ```
 
 Most of the `Person` type is well structured. The Id, name, and phone number all use types that enforce expectations on their values.
-CustomData however is left to be any string. 
+CustomData, however, can be any string. 
 
 `Person` is "open" because different callers can put any information they want in the CustomData field. It could be simple text, or it could be json or xml.
-The caller can do anything they want with the field so long as it fits in a string. For
+The caller can do anything they want with the field so long as it fits in a string.
 
-`Person` is also "closed". It knows the outer shape of CustomData is a string, so any operations on Person can handle CustomData uniformly for any caller.
-It can pass the data around and save it safely because it knows the outer shape is a string. The inner structure of CustomData doesn't matter to our component,
+`Person` is also "closed". It knows the outer shape of CustomData is a string, so any internal operations on Person can handle CustomData uniformly.
+It can pass the data around or persist it safely because it knows the outer shape is a string. The inner structure of CustomData doesn't matter to our component,
 we only save the data to later return it to the caller as we received it. 
 
 ## Tradeoff: Flexibility vs Operability
@@ -45,13 +45,13 @@ Data doesn't need to be completely unstructured to offer flexibility to callers.
 There is a gradient between flexibility and operability. 
 
 Decisions about data structure are always made somewhere, but who makes the decision [changes the dynamic](https://blog.ploeh.dk/2018/07/09/typing-and-testing-problem-23/).
-The more structure our component defines, the more operations we can safely perform on the data. 
+The more structure our component defines, the more operations we can perform on the data. 
 Less structure allows callers to fill in their own structures and enables greater flexibility, but at the cost of reducing what the called component can do with the data.
 
 ## Implicit Assumptions are Not Flexibility
 
-I want to be very clear that using less structured, but assuming stronger properties of that data is not an application of the open-closed principle.
-They are simply dangerous and unintuitive coupling.
+I want to be very clear that using less structured, but making assumptions of that data is not an application of the open-closed principle.
+It is simply dangerous and unintuitive coupling.
 
 Consider this javascript. Will it work?
 ```js
@@ -68,7 +68,7 @@ function DoSomething(input){
 ```
 
 Passing this function anything but a non-zero integer will throw an exception.
-This function has specific expectations about the data it's passed, it's just not enforcing them.
+This function has specific expectations about the data it's passed. It just doesn't enforce them upfront.
 
 If a component is going to leave flexibility for callers, it must not make any assumptions beyond what what it enforces.
 For example, our earlier `Person` type must only count on `CustomData` being a string and never assume there is some specific structure in the string, like json.
@@ -113,7 +113,7 @@ The marketing system requires that message threads must be retrievable by
 ### Threads: First pass
 
 This first implementation does not consider Open-Closed Principle.
-The chat system is only part of the marketing application, so it's tempting to directly 
+The chat system is only part of the marketing application. So, it's tempting to directly 
 model the expected relationships between threads and marketing domain types. 
 This manifests as foreign keys on the the `Thread` and as different methods for fetching threads.
 
@@ -136,8 +136,7 @@ interface IThreadClient{
 
 This approach has several problems.
 
-First, it's not open-closed. Adding a new relationship to a chat thread requires a new foreign key and a new method. 
-Querying any intersection of relationships (like threads between a brand and influencer) also requires a new method.
+First, it's not open-closed. New thread groupings require new code. The thread requires a new foreign key and the client requires a new method for every new relationship. Any intersections between groupings also require new code.
 
 Second, the chat library depends on unnecessary ideas. Brands, Campaigns, and Influencers don't inherently have anything to do with chat.
 This prevents reuse of the chat system to new needs in our system, or an ever-increasing list of fields only used in certain situations.
@@ -146,7 +145,7 @@ The chat system relies on information about each of its consumers.
 
 ### Threads: Using Tags
 
-Tags can isolating our chat sub-system to care only about chat concepts and enable reuse in any situation that requires chat.
+Tags can focus our chat sub-domain, to push out external ideas and care only about chat concepts. In turn, enabling reuse of the chat code in any situation that requires chat.
 
 The key is replacing the foreign keys on thread with tags. These particular tags are key-value pairs.
 
@@ -195,14 +194,15 @@ The chat domain is about managing conversation threads that can be retrieved by 
 
 Clarifying th domain has made the chat library simpler and more powerful.
 There is now only one function for querying threads by tags. It can query by any set of tags, not just the entity relationships. 
-There's also now a clear path for defining more sophisticated behaviors. For example, we could offer unions between tags (i.e. has any of the given tags).
+There's also now a clear path for defining more sophisticated behaviors. For example, we could offer unions between tags (e.g. all threads for x campaign *or* y brand).
+Tags don't have to be used for grouping. They can also be used for metadata.
 
-This tag-based approach is open because different callers can impress their own groupings or metadata into tags, but closed because callers don't need to modify the library to accomplish new
-and tailored behavior.
+This tag-based approach is open because different callers can impress their own groupings or metadata into tags, but closed because callers don't need to modify the library to change the groupings or metadata.
 
 ## Conclusion
 
-The Open-Closed Principle pushes components to offer defined flexibility. To enable adapted behavior without changing for each consumer.
-In this post we've seen how flexible data like tags enable components to adapt to then needs of different callers without knowing anything about those callers.
+The Open-Closed Principle pushes components to offer self-defined flexibility, to enable adapted behavior without changing for each consumer.
+In this post we've seen how flexible data like tags adapt to then needs of different callers without knowing anything about those callers.
+
 However, flexible data is a tradeoff. The less our component enforces, the fewer operations it can safely perform on data. 
 The key is separating responsibilities, understanding what knowledge is essential to the component and what can be left to the caller.
