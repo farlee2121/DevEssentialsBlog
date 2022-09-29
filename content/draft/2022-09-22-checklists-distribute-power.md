@@ -1,10 +1,10 @@
 ---
 date: 2022-09-22
 tags: [Reading Review, Checklists]
-title: Use Checklists to Empower
+title: Checklists Distribute Power
 ---
 
-[Checklist Manifesto](https://www.amazon.com/dp/0312430000) paints an facinating journey of a surgeon who discovered checklists. The book explores checklists across industries and applications, but one lesson pervades them all: use checklists to empower.
+[Checklist Manifesto](https://www.amazon.com/dp/0312430000) paints an facinating journey of a surgeon who discovered checklists. The book explores checklists across industries and applications, but one lesson pervades them all: use checklists to distribute power.
 <!--more-->
 
 It's quite impressive how many industries Dr. Gawande explores in his book: construction, aviation, finance, venture funds, and medicine. 
