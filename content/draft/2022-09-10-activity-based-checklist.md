@@ -5,6 +5,7 @@ title: "Activity-based Developer Checklist"
 ---
 
 This my attempt to at short actionable checklists to guide key moments in software process.
+<!--more-->
 
 I previously wrote a [checklist based on increments of time](../posts/2022-01-21-Development-Cycles-Checklist.md).
 I was reading more about checklists and noticed many were based on key events in some process. 
