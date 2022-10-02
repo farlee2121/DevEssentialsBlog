@@ -66,8 +66,8 @@ Here are some of my considerations
 - complexity -> too abstract a concept and not directly actionable. Addressed via these concerns
 - Nesting -> scope & consistency 
 - SOLID
-  - Single-responsibility -> naming/intent
-  - Open-Closed -> scope & semantics, 
+  - Single-responsibility -> scope (reasons for change), naming/intent
+  - Open-Closed -> scope & semantic
   - Liskov -> scope
   - Interface Segregation -> scope & semantics
   - Dependency Inversion -> scope affecting naming and proximity
