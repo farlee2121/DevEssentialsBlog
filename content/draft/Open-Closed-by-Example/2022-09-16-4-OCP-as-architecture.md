@@ -9,8 +9,8 @@ title: "Open-Closed Principle by Example: OCP as Architecture"
 - a lot of it is about specific->Generic. Domain becomes reusable library for specific problem rather than a collector of specific accomodations/paths. Gain more options over time instead of rip and replace. Avoid carving path for every case
   - deeply testable, still accommodates system concerns like monitoring, independent deployment, etc
 
-TODO: consider how I could add more examples to architecture. Maybe split benefits into a different post
-- show chain diagram for document service?
+TODO: I never discuss what adapters can map into
+TODO: I like calling out that services become the lowest layer in the call chain. Where does that fit now?
 
 Q: Mention that you often end up with fewer services because 3rd party services can be more directly integrated without polluting the domain. You can eliminate many conforming container-type services that exist just to centralize the pain of integrating a third party generic domain. I've seen so many custom user services and payment services. There's no need for that kind of wrapper service with Ports and Adapters. Neither do services need to always use the same payments and authorization, even within the same deployed application
  -->
@@ -86,28 +86,13 @@ Now consider if MessagingClient owns it's dependency abstactions (i.e. IMessageN
 The dependency interfaces live in the same assembly as MessagingClient.
 Adapters *outside* of the MessagingClient's assembly map the dependency interfaces & data contracts to concrete implementations.
 
-We've already seen an example of this using IMessageNotifier in the [flexible behavior post](./2022-09-16-3-Flexible-Behavior.md). The same flexibility applies for each dependency.
+We've [already seen](./2022-09-16-3-Flexible-Behavior.md) an example of this using IMessageNotifier. The same flexibility applies for each dependency.
 
-Note that threads and messages are both being stored to relational databases. This could be the same database, or it could be separate. The service does not depend on the data store to manage relationships, it handles relationships in the logic layer. This was a hard step for me to take and I wrote [a thorough post about it](../../posts/2021-01-01-Accessors-Services-Not-Servants.md).
+Consider IAttachmentAccess. It could directly adapt to a 3rd-party storage service like S3, BlobStorage, or a CDN. Our application could also decide to centralize campaign documents and adapt message client into a custom CampaignDocumentService. We could even use the adapters to migrate between storage options.
 
-IAttachmentAccess could directly adapt to a 3rd-party storage service like S3, BlobStorage, or a CDN. Our application could also decide to centralize campaign documents and adapt message client into a custom CampaignDocumentService. We could even use the adapters to migrate between the two.
+Note how threads and messages are both being stored to relational databases. This could be the same database, or it could be separate. The service does not depend on the data store to manage relationships. It handles relationships in the logic layer. This removes implicit data assumptions between dependencies and keeps port implementations interchangeable. This was a hard step for me to take and I wrote [a thorough post about it](../../posts/2021-01-01-Accessors-Services-Not-Servants.md). 
 
-Each dependency of Messaging client can be swapped independently, per consumer of MessagingClient, and without changes the MessagingClient.
-
-## General pattern
-
-<!-- TODO: could this consolidate with the explanations prior to the example? -->
-The chat library example extends to all kinds of services.
-
-![general ports and adapters diagram](../../../static/post-media/Open-closed-by-example/general-diagram.drawio.svg)
-
-In general, you have some core workflow or logic that is self-contained using OCP and DI to define "ports". Other services are then mapped into these ports using adapters that live outside the assembly of the core workflow.
-
-<!-- TODO: I never discuss what adapters can map into -->
-
-![Call chain using ports and adapters](../../../static/post-media/Open-closed-by-example/pattern-diagram.drawio.svg)
-
-In this way the core workflow or business logic becomes the lowest layer in the dependency chain. It only knows about abstractions (i.e. interfaces and data contracts) that it's created for itself. The core workflow comes with little baggage. It only knows about the domain problem it solves and everything else is composed later via ports. The core service is thus maximally reusable between different consumers. They could be other services in our own system or external users we've never thought of and may never know about.
+All together, each dependency of MessagingClient can be swapped independently without changes the MessagingClient.
 
 ## Architecture Benefits
 
@@ -115,16 +100,31 @@ All of these ports and adapters can feel like a lot of inderection. Is it worth 
 
 As always, the answer depends. Components with little change or short lifetimes probably don't need this approach. Benefits for evolving or frequently reused components stack up pretty fast.
 
-For one, this approach is high testable. Already usually worth the effort.
 
-The [last post](./2022-09-16-3-Flexible-Behavior.md) showed how this approach enabled the message client to adapt to testing, new kinds of notifications, or even dynamic notification types without changing the core messaging client. The specific mix of notifications also being decided per-consumer.
+## Testability
+Domain rules are usually the focus of system behavior. Ports and Adapters isolates domain rules with swappable dependencies. This approach is highly testable. This also is usually worth the effort.
+
+
+## Reusable Domain Rules & Diminishing Complexity
+
+The [last post](./2022-09-16-3-Flexible-Behavior.md) demonstrated a single port enabled the message client to adapt to testing, new kinds of notifications, or even dynamic notification types without changing the core messaging client. The specific mix of notifications also being decided per consumer of MessagingClient.
+
+This benefit extends to all kinds of services.
+
+Services that use external dependency abstactions have to change internally to support new compositions of their dependencies. They can only support one composition at a time. Ports and Adapter services accumulate compositions as swappable adapters, creating an every greater palette of options for reusing a service.
+
+OCP also pushes sub-domains and domain rules [become more flexible to accommodate new caller needs](https://blog.cleancoder.com/uncle-bob/2017/03/03/TDD-Harms-Architecture.html) rather than carving new specific paths through the system. Thus, the system becomes more flexible and reusable over time instead of more complex and entangled.
+
+These quickly results in less code for the same outcomes.
 
 ### Isolate Cross-cutting Concerns
-This approach enables a similar but broader benfit: [separation of cross-cutting concerns into decorators](https://blog.ploeh.dk/2010/04/07/DependencyInjectionisLooseCoupling/).
+Composing services enables a similar but broader benfit: [separation of cross-cutting concerns into decorators](https://blog.ploeh.dk/2010/04/07/DependencyInjectionisLooseCoupling/).
 
 Logging, authentication, retry policies, caching, and more can all be accomplished without changing any domain service. Instead they are accomplished with [decorators](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 Decorators sit between the caller and the called component. They add some functionality and then pass off to another implementation of the same interface. 
+
+![Call chain using ports and adapters](../../../static/post-media/Open-closed-by-example/pattern-diagram.drawio.svg)
 
 Consider this decorator that logs when another notifier fails
 ```cs
@@ -153,20 +153,29 @@ IMessageNotifier notifier = new ErrorLogMessageNotifier(new SendGridMessageNotif
 
 These cross-cutting concerns tend to add noise to domain logic and cause sneaky coupling between components that could otherwise be generally reused.
 
+<!-- ### Progressive Integrations
+
+Ports and Adapters reduces the gap between first and third party services.
+
+I've often seen system wrap user services or payment services in their own abstractions, which are then used system-wide. The goal is to reduce coupling to the external vendor, but this creates a [conforming container](https://blog.ploeh.dk/2014/05/19/conforming-container/) where the wrapper tends to become a lot of work and is never as good as the wrapped 3rd party service.loq
+
+The key problem with this central wrapper is that it tries to hide a whole problem domain from the entire system. I can't do so without becoming
+
+
+![general ports and adapters diagram](../../../static/post-media/Open-closed-by-example/general-diagram.drawio.svg) -->
+
 ### Trimability and Progressive Change
 
-The composition is isolated in adapters. This allows for flexible and progressive system evolution.
+Ports and Adapters isolates composition of services in adapters. This allows for flexible and progressive system evolution.
+Not only for adding features, but also removing them.
 
 Suppose we want to migrate data stores. A new adapter can be written for the new data store plus a migration decorator. The migration decorator can ensure that we read and write to the old data store while also writing to the new data store until we are sure all data is migrated. Then we repace the aggregate migration adapter with just the new data store adapter. We could even add another phase that reads and writes to the new store, but still writes to the old store until we're sure the migration worked. This can all be done without changing the core service. It could even be done dynamically using feature flags.
 
-This same kind of progressive swap can be done with all kinds of behaviors, not just data storage. The composition of services lives external to the services themselves and their interaction is contained in swappable units. 
-
-This results in service actions that can easily be trimmed over time, changed out, our built up into a suite of alternative. Consider [entity framework](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) which has built up an [army of supported data stores and drop-in enhancements](https://www.nuget.org/packages?q=entity+framework).
-This is opposed to direct service dependencies, which often require coordinated release and require overwriting the old dependency integration in order to add the new.
+This same kind of progressive swap can be done with all kinds of behaviors, not just data storage. The old dependencies don't have to be thrown away. They can be kept as an option to swap back in. Keeping the old implementation doesn't muddy the current integration because each is isolated to its own adapter.
 
 ### Protocol Agnostic
 
-This pattern is not limited to systems that run in-process. In fact, communication protocol also becomes flexible. Different adapters can be used to support different protocols. The services don't care if the adapter sources from dependencies that are in-process, background work, REST APIs, or something else. Deployment strategy becomes a configurable option using Ports and Adapters.
+This pattern is not limited to systems that run in-process. In fact, communication protocol also becomes flexible. Different adapters can be used to support different protocols. The services don't care if the adapter sources from dependencies that are in-process, background work, REST APIs, or something else. Deployment strategy becomes a configurable option when using Ports and Adapters.
 
 
 ## Paradigm Disclaimer
@@ -188,8 +197,7 @@ I'll admit this concept takes some experimentation to understand. Here are resou
 
 ## Conclusion
 
-The Open-Closed Principle and Dependency Inversion applied at the system level define the Ports and Adapters architecture.
-This approach requires our domain services to own their dependency abstractions (ports) and let external adapters map between services.
+Open-Closed Principle and Dependency Inversion applied together protect fully protect services from external domains. Each service owns its abstactions, and services talk to each other through adapters. This pattern is Ports and Adapters architecture.
 
 Ports and Adapters clears the way for flexible systems where
 - domain services are reuseable libraries 
@@ -197,3 +205,21 @@ Ports and Adapters clears the way for flexible systems where
 - integrations can be accumulated and composed instead of torn out and replaced
 - dependencies can be trimmed and progressively migrated
 - deployment doesn't effect service implementations
+
+
+
+
+
+<!-- ## General pattern
+
+The chat library example extends to all kinds of services.
+
+![general ports and adapters diagram](../../../static/post-media/Open-closed-by-example/general-diagram.drawio.svg)
+
+In general, you have some core workflow or logic that is self-contained using OCP and DI to define "ports". Other services are then mapped into these ports using adapters that live outside the assembly of the core workflow.
+
+
+
+![Call chain using ports and adapters](../../../static/post-media/Open-closed-by-example/pattern-diagram.drawio.svg)
+
+In this way the core workflow or business logic becomes the lowest layer in the dependency chain. It only knows about abstractions (i.e. interfaces and data contracts) that it's created for itself. The core workflow comes with little baggage. It only knows about the domain problem it solves and everything else is composed later via ports. The core service is thus maximally reusable between different consumers. They could be other services in our own system or external users we've never thought of and may never know about. -->
