@@ -9,12 +9,8 @@ title: "Open-Closed Principle by Example: OCP as Architecture"
 - a lot of it is about specific->Generic. Domain becomes reusable library for specific problem rather than a collector of specific accomodations/paths. Gain more options over time instead of rip and replace. Avoid carving path for every case
   - deeply testable, still accommodates system concerns like monitoring, independent deployment, etc
 
-TODO: Consider addressing the tension between OCP's self-defined flexibility and DI's caller-owned abstractions. So which owns the abstractions? It depends. Between two major services the answer is both. Each defines their API and dependencies on their own terms then you write adapters between the two.
-
-This is a good transition from the flexible behavior post into this architecture post. 
-I need to make sure I've defined DI already. Maybe even pose it as "did you notice a contradiction in the previous post? Take moment to think about it" 
-
 TODO: consider how I could add more examples to architecture. Maybe split benefits into a different post
+- show chain diagram for document service?
 
 Q: Mention that you often end up with fewer services because 3rd party services can be more directly integrated without polluting the domain. You can eliminate many conforming container-type services that exist just to centralize the pain of integrating a third party generic domain. I've seen so many custom user services and payment services. There's no need for that kind of wrapper service with Ports and Adapters. Neither do services need to always use the same payments and authorization, even within the same deployed application
  -->
@@ -54,7 +50,10 @@ I generally say Ports and Adapters. I think it provides the best analogy for how
 
 At the core we have some service or component (yellow). It defines the ways external actors are allowed to interact and customize as ports (red). Then adapters (blue) are create to map other services into the ports.
 
+![call chain from one service, through a port, an adapter, and to another service](../../../static/post-media/Open-closed-by-example/ports-call-chain.drawio.svg)
+
 Other services also selfishly define their own abstractions/ports and adapters bridge the gap. This separates the business rules from composition of those rules. The result is a highly flexible and reusable system. The services are more like domain-specific libraries than an inherently connected system. Changes tend to be far more isolated, involving a single service or a service and some adapters.
+
 
 I'll discuss more benefits, but let's look at a more concrete example first.
 
