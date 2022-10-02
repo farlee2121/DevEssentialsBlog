@@ -38,11 +38,13 @@ Naming is one of the most common activities in programming and a primary means o
 - **Consistency:** Fred Brooks described style as "consistency in micro-decisions across time and similar decisions". Consistency allows readers to make predictions about how the system behaves instead of storing individual facts. It frees up brain space for higher concepts instead of incidental details.
 - **Scope:** How much do you need to consider to *fully* understand a piece of code. For example: do you only need to know the function parameters, or do you have to worry about mutated class state, mutated system state, sequence of calls, data formats, etc. How far do you trace those decisions to be confident. Scope is effectively about Information Hiding.
 
-<!-- origins: 
-- naming: many origins. Widely considered one of the most important activities in programming. Learned a lot from code complete
-- Proximity: Code Complete's principle of proximity. Backed by research
+### Property origins
+
+I didn't pull these properties out of thin air. I selected them from principles I learned other places and use frequently.
+- Naming: Many origins. Widely considered one of the most important activities in programming, if not exactly a principle. I initally learned much about naming from Code Complete.
+- Proximity: Code Complete's Principle of Proximity. Backed by research
 - Consistency: Design of Design, but also generally backed by design research
-- Scope: Information Hiding -->
+- Scope: Information Hiding
 
 ## Sufficiency
 
@@ -71,11 +73,13 @@ Here are some of my considerations
   - Dependency Inversion -> scope affecting naming and proximity
 - Eventual consistency -> hmm. not sure. scope? It has to do with breaking up uptime and transactional boundaries. So yes, scope.
 
+I don't know that I can claim sufficiency, but this is more than I expected to cover!
+
 
 ## Conclusion
 
 Self-documenting code is the heart of sustainable construction and low-level design.
 
-I haven't considered all of programming to be sure, but naming, proximity, consistency, and scope cover a surprisingly large variety of system understandability factors. Each is a clearly definable property and I think I could quickly produce examples of how each plays out at different scales of construction. Further, each can be learned and valuably applied fairly independently.
+Naming, proximity, consistency, and scope cover a surprisingly large variety of understandability factors. Each is a clearly definable property and I think I could quickly produce examples of how each plays out at different scales of construction. Further, each can be learned and valuably applied fairly independently.
 
 I believe naming, proximity, consistency, and scope are a good foundation for teaching self-documenting code. 
