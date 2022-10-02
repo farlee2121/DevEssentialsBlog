@@ -5,6 +5,7 @@ title: SOLID is a toolbox for Conceptual Scope
 ---
 
 I've been pondering properties of self-documenting code. Comparing [these properties](../draft/2022-09-25-Properties-of-self-documenting-code.md) against [SOLID](https://en.wikipedia.org/wiki/SOLID) lead me to realize Information Hiding, or conceptual scope, is the central theme of SOLID.
+<!--more-->
 
 
 - **Single Responsibility Principle:** Any given piece of code (variable, function, class, etc) should have one reason for change. 
