@@ -13,6 +13,15 @@ TODO: consider how principles like scope, proximity, consistency, and naming/sem
 - i.e. ports and adapters is about limiting scope. This also improves proximity and focuses semantics/naming.
  -->
 
+ <!-- Q: Do I add a post about custom predicates in FsSpec? It's a good example of metadata. Library doesn't care. All custom elements are in control of consumer. Can still validate, print sensible messages, *maybe* generate data (but we offer another route for adding a generation customization, registering a strategy) -->
+
+<!-- Q: Do I add a post with misc OCP applications, but without deeper examples
+- Generics
+- Configuration in general
+- Strategies?
+- "context": either this meta is probably a good name for what I intend with FsSpec
+ -->
+
 ## Definitions
 
 First off, let's make sure we're all on the same page about the Open-Closed Principle definition.
@@ -68,13 +77,3 @@ This makes our system robust to change and powerful to reuse.
 
 ## Up next
 Components can offer this parameter-like open-closed flexibility many ways. First we'll cover approaches [with data](./2022-09-16-1-OPC-through-Data.md), then [with behaviors](./2022-09-16-3-Flexible-Behavior.md), and [with whole systems](./2022-09-16-4-OCP-as-architecture.md). We'll also look at some [examples that might look like OCP, but fail to deliver the expected value](./2022-09-16-5-OCP-anti-examples.md).
-
-
-<!-- Q: Do I add a post about custom predicates in FsSpec? It's a good example of metadata. Library doesn't care. All custom elements are in control of consumer. Can still validate, print sensible messages, *maybe* generate data (but we offer another route for adding a generation customization, registering a strategy) -->
-
-<!-- Q: Do I add a post with misc OCP applications, but without deeper examples
-- Generics
-- Configuration in general
-- Strategies?
-- "context": either this meta is probably a good name for what I intend with FsSpec
- -->
