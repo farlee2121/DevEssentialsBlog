@@ -202,6 +202,7 @@ This tag-based approach is open because different callers can impress their own 
 ## Conclusion
 
 The Open-Closed Principle pushes components to offer self-defined flexibility, to enable adapted behavior without changing for each consumer.
+
 In this post we've seen how flexible data like tags adapt to then needs of different callers without knowing anything about those callers.
 
 However, flexible data is a tradeoff. The less our component enforces, the fewer operations it can safely perform on data. 

@@ -2,14 +2,22 @@
 date: "2022-09-16T00:03:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
-title: "Open-Closed Principle by Example: Composable Behaviors"
+title: "Open-Closed Principle by Example: Interchangable Implementations"
 ---
 
-This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will customizing behaviors without leaking abstractions between components.
+<!-- Maybe rename to polymorphic behavior/ interchangable?
+Maybe need to refocus around dependencies?
+
+Composable Dependencies?
+Interchangeable implementations
+ -->
+  <!-- TODO: Consider reframing DI buildup in terms of continuations instead of inheritance. Probably still important to highlight issues with inheritance because it's so commonly taught -->
+
+This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate extensible dependencies without leaking abstractions between components.
 <!--more-->
 
 I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and hightlights some motivating questions.
-In summary, the OCP illuminates how components can set defined flexibility so the component can adapt to caller needs without changing internally. This is much like how parameters
+In summary, the OCP illuminates how components can offer self-defined flexibility and adapt to caller needs without changing internally. This is much like how parameters
 enable functions to be resused by many consumers without changing the function.
 
 ## Object Inheritance
@@ -79,7 +87,7 @@ Interfaces offer the same basic open-closed value as object inheritance. The are
 That is they require method of specific names, parameters, and return types. They are also open for anyone to derive and supply a new implementation.
 
 Unlike objects, interfaces are abstract. You cannot directly create instance of them.
-Derivatives do not need to worry about state or existing behavior when deriving from an interface.
+Derivatives do not need to worry about parent state or existing behavior when deriving from an interface. Implementation state can still be an issue.
 
 ## Dependency Inversion
 
