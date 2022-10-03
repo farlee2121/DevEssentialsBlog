@@ -155,12 +155,13 @@ These cross-cutting concerns tend to add noise to domain logic and cause sneaky 
 
 <!-- ### Progressive Integrations
 
-Ports and Adapters reduces the gap between first and third party services.
+Layered architectures commonly try to isolate a business layer from databases and 3rd party services with a data access layer.
 
-I've often seen system wrap user services or payment services in their own abstractions, which are then used system-wide. The goal is to reduce coupling to the external vendor, but this creates a [conforming container](https://blog.ploeh.dk/2014/05/19/conforming-container/) where the wrapper tends to become a lot of work and is never as good as the wrapped 3rd party service.loq
+The goal is to reduce coupling to the external vendors or storage choices. Unfortunately this often becomes a [conforming container](https://blog.ploeh.dk/2014/05/19/conforming-container/) where the service is trying to hide a whole domain from the entire system. There is no focused abstraction other than re-modeling the wrapped domain. I've seen this many times with user and payment services. They often become pass-thru code that doesn't fully decouple the 3rd party and feels pointless to maintain.
 
-The key problem with this central wrapper is that it tries to hide a whole problem domain from the entire system. I can't do so without becoming
+Ports and Adapters reduces the gap between first and third party services. Each service protects it's own domain, so we don't depend on system-wide wrappers of external domains. Individual services can write adapters directly to 3rd party services, infrastructure, or other services in the system without causing coupling. 
 
+Adapters are focused to a single service and much easier to implement than shared data abstraction layers. Services owning there abstactions paradoxically actually tends to reduce ceremony compared to shared abstraction layers.
 
 ![general ports and adapters diagram](../../../static/post-media/Open-closed-by-example/general-diagram.drawio.svg) -->
 
