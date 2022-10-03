@@ -5,14 +5,9 @@ seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: OCP as Architecture"
 ---
 
-<!-- TODO: Consider this post in light of being my high-level design post
-- a lot of it is about specific->Generic. Domain becomes reusable library for specific problem rather than a collector of specific accomodations/paths. Gain more options over time instead of rip and replace. Avoid carving path for every case
-  - deeply testable, still accommodates system concerns like monitoring, independent deployment, etc
-
+<!-- 
 TODO: I never discuss what adapters can map into
 TODO: I like calling out that services become the lowest layer in the call chain. Where does that fit now?
-
-Q: Mention that you often end up with fewer services because 3rd party services can be more directly integrated without polluting the domain. You can eliminate many conforming container-type services that exist just to centralize the pain of integrating a third party generic domain. I've seen so many custom user services and payment services. There's no need for that kind of wrapper service with Ports and Adapters. Neither do services need to always use the same payments and authorization, even within the same deployed application
  -->
 <!-- TODO: This got really long. Consider tightening it up -->
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post applies OCP to the system level with architecture patterns like ports and adapters.
