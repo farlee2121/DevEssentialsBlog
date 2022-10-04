@@ -5,6 +5,8 @@ seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Flexibility Through Data"
 ---
 
+<!-- TODO: consider a flow more like the callback post. Start with the example, explain problems, show better example, explain benefits -->
+
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate how the OCP can be achieved through flexible data. 
 <!--more-->
 
