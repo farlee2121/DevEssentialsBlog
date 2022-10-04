@@ -26,7 +26,7 @@ Previous post in this series covered [Implicit data assumptions](./2022-09-16-1-
 
 The focus of this post is a hard fail I managed early in my journey to understand the Open-Closed Principle.
 
-This example brings us back to the chat library. Before I tried tags, I tried to use generics to allow for caller-defined additional data.
+This example brings us back to the chat library. Before I [tried tags](./2022-09-16-1-OPC-through-Data.md#threads-using-tags), I tried to use generics to allow for caller-defined additional data.
 
 For example,
 ```cs
@@ -48,8 +48,8 @@ interface IThreadClient{
 ```
 
 This approach was a hot mess. The complexity of the chat library exploded. Generics cascaded through the functions and data.
-The library couldn't instantiate any of its own types because my functions didn't use concrete types. I was allowing the 
-caller to decide what derivative I passed back to them.
+I was allowing the 
+caller to decide what derivative I passed back to them, so the library couldn't safely instantiate any of its own types. 
 
 Data store operations like saving and querying became a nightmare. I had to store some fields separately so I could query them, but then also had to serialize the whole object in order to restore object state. Querying based on custom fields like `CampaignId` required translating arbitrary predicates into sql queries. I didn't know what data might exists or where it might live on the type, so predicates were about my only option.
 
