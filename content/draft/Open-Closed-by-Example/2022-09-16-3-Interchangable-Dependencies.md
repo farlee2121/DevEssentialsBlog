@@ -13,16 +13,17 @@ Interchangeable implementations
  -->
   <!-- TODO: Consider reframing DI buildup in terms of continuations instead of inheritance. Probably still important to highlight issues with inheritance because it's so commonly taught -->
 
-This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate extensible dependencies without leaking abstractions between components.
+This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate the OCP through interchangable and composable dependencies.
 <!--more-->
 
 I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and hightlights some motivating questions.
+
 In summary, the OCP illuminates how components can offer self-defined flexibility and adapt to caller needs without changing internally. This is much like how parameters
 enable functions to be resused by many consumers without changing the function.
 
 ## Object Inheritance
-Most software students these days learn [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming).
-Object inheritance tends to be one of the first tools taught for modeling relationships
+Most software students learn [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming).
+Class inheritance tends to be one of the first tools taught for modeling relationships.
 <!-- , despite the principle to [favor composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance). -->
 
 Inheritance does offer some open-closed benefits. It is
@@ -64,8 +65,7 @@ The system develops a "memory" and it becomes difficult to reason about what the
 Behavior overriding is also unsafe. It's easy to slip up and cause different behaviors
 depending on what type the object is used as. For example, `PaymentType cc = new CreditCard()` might behave differently than `CreditCard cc = new CreditCard()`.
 
-All of these result in un-advertised expectations and systems that are difficult to understand.
-Object Inheritance makes good behavior extension complex.
+All of these result in un-advertised expectations and systems that are difficult to understand. Class inheritance enables interchangable behaviors, but it's challenging to get right.
 
 
 ## Interfaces
@@ -84,10 +84,10 @@ class StripePaymentStrategy : IPaymentStrategy{
 ```
 
 Interfaces offer the same basic open-closed value as object inheritance. The are closed because they define a fixed contract.
-That is they require method of specific names, parameters, and return types. They are also open for anyone to derive and supply a new implementation.
+That is, they require method of specific names, parameters, and return types. They are also open for anyone to derive and supply a new implementation.
 
-Unlike objects, interfaces are abstract. You cannot directly create instance of them.
-Derivatives do not need to worry about parent state or existing behavior when deriving from an interface. Implementation state can still be an issue.
+Unlike objects, interfaces are abstract. You cannot directly create an instance of them.
+Derivatives do not need to worry about parent state or existing behavior when deriving from an interface. Implementation state, however, can still be an issue.
 
 ## Dependency Inversion
 
@@ -116,16 +116,16 @@ class SignupWorkflow{
 }
 ```
 
-Dependency Inversion is closed because a component (often a class) specifies the list of dependencies it requires and what those dependencies look like.
+Dependency Inversion (DI) is closed because a component (often a class) specifies the list of dependencies it requires and what those dependencies look like.
 DI is also open because consumers can swap in different implementations of those dependencies to change behavior. We'll see an example of that soon.
 
 DI may seem like it requires a lot of extra types that feel unnecessary. This is partially an artifact of common Object-Oriented language choices. The
-overhead is less in other kinds of language, like some functional languages. And, sometimes, the extra types really are unneeded overhead. 
+overhead is less in other type systems, like some functional languages. Sometimes the extra types really are unneeded overhead. 
 However, this pattern will open up powerful possibilities that we'll explore more deeply in the next post about system structure.
 
 
 ## System Example: Email Notification
-It's time for an extended example. We're revising the chat/messaging system from the previous post.
+It's time for an extended example. We're revising the chat/messaging system from the [data](./2022-09-16-1-OPC-through-Data.md) post.
 This time we want to sent users an email when they receive a message in chat.
 
 ### First Pass
@@ -153,16 +153,15 @@ class MessageClient{
 ```
 
 This works, but only with email from one email provider. Every user of this chat library is forced 
-into sending email notifications and always by the same provider.
+to send email notifications and always by the same provider.
 
 ### Injection-based
 
 An injection-based approach better highlights the essence of the chat problem domain. 
-Our chat library only cares about notifying users they received a message. 
+The chat library only cares about notifying users when they received a message. 
 It doesn't care if notification is email, in-app, push notification, physical mail, or other.
 
-Instead of depending on a specific notification method, the chat library can define an interface 
-for sending notifications. Then consumers of the chat library can register any kind of notification they want.
+The chat library can define it's own notification interface instead of depending on a specific notification method. Then consumers of the chat library can register any kind of notification they want.
 
 The core message flow looks almost the same.
 ```cs
@@ -189,6 +188,7 @@ However, now we can create many notifiers and swap them out to meet different ne
 class SendgridMessageNotifier : IMessageNotifier {
   void NotifyMessageSent(Message message){
     //Email code from before
+    sendgridClient.Send([map message to sendgrid]);
   }
 }
 
@@ -206,8 +206,6 @@ Consider this AggregateNotifier. It takes a list of notifiers and calls all of t
 We could send notifications my email, text, and in-app or even dynamically select strategies based on user notification preference. 
 All without changing the chat library or the individual notifiers.
 
-DI requires some extra types, but can dramatically reduce implementation complexity as requirements complexity increases.
-
 ```cs
 class AggregateNotifier : IMessageNotifier{
   private IMessageNotifier[] notifierList;
@@ -222,8 +220,10 @@ class AggregateNotifier : IMessageNotifier{
 }
 ```
 
-Notifier implementations don't just have to be for production. Great testability tends to be one of the first benefits of DI.
-We can swap out dependencies with ones custom-built for our testing.
+DI requires some extra types, but can dramatically reduce implementation complexity as requirements complexity increases.
+
+## Testability
+Notifier implementations don't just have to be for production. We can swap out dependencies with ones custom-built for our testing. 
 
 ```cs
 class MockMessageNotifier : IMessageNotifier{
@@ -235,10 +235,13 @@ class MockMessageNotifier : IMessageNotifier{
 }
 ```
 
+Great testability tends to be one of the first benefits of DI.
+
 ## Conclusion
 
-The Open-Closed Principle calls for flexibility without modifying the core implementation. 
-Interfaces and Dependency Inversion are foundational tools for achieving that flexibility with behaviors.
+The Open-Closed Principle pushes components to self-defined flexibility. Such components adapt to different callers without changing internally.
+
+Interfaces and Dependency Inversion are foundational tools for achieving that flexibility with component dependencies.
 Components better represent their domain by defining their own dependency interfaces. 
 Consumers can then swap dependency implementations to compose new behaviors as the specific usecase become more complex.
  <!--TODO: this conclusion might need work -->

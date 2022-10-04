@@ -5,6 +5,8 @@ seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Callbacks & Handlers"
 ---
 
+<!-- TODO: Can I tie back to focusing the domain like I do with other posts in the series? -->
+
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate how the OCP can be achieved through flexible behaviors like callbacks. 
 <!--more-->
 

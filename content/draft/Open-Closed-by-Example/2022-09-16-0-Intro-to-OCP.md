@@ -77,4 +77,4 @@ The component defines what flexibility it offers on it's own terms (like paramet
 This makes a system robust to change and powerful to reuse.
 
 ## Up next
-Components can offer this parameter-like open-closed flexibility many ways. First we'll cover approaches [with data](./2022-09-16-1-OPC-through-Data.md), then [with behaviors](./2022-09-16-2-OCP-callbacks.md), with [dependencies](./2022-09-16-3-Flexible-Behavior.md) and [with whole systems](./2022-09-16-4-OCP-as-architecture.md). We'll also look at some [examples that might look like OCP, but fail to deliver the expected value](./2022-09-16-5-OCP-anti-examples.md).
+Components can offer this parameter-like open-closed flexibility many ways. First we'll cover approaches [with data](./2022-09-16-1-OPC-through-Data.md), then [with behaviors](./2022-09-16-2-OCP-callbacks.md), with [dependencies](./2022-09-16-3-Interchangable-Dependencies.md) and [with whole systems](./2022-09-16-4-OCP-as-architecture.md). We'll also look at some [examples that might look like OCP, but fail to deliver the expected value](./2022-09-16-5-OCP-anti-examples.md).
