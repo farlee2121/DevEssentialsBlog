@@ -148,8 +148,8 @@ IMessageNotifier notifier = new ErrorLogMessageNotifier(new SendGridMessageNotif
 
 These cross-cutting concerns tend to add noise to domain logic and cause sneaky coupling between components that could otherwise be generally reused.
 
-<!-- ### Progressive Integrations
-
+### Progressive Integrations
+<!-- TODO: not sure about this section -->
 Layered architectures commonly try to isolate a business layer from databases and 3rd party services with a data access layer.
 
 The goal is to reduce coupling to the external vendors or storage choices. Unfortunately this often becomes a [conforming container](https://blog.ploeh.dk/2014/05/19/conforming-container/) where the service is trying to hide a whole domain from the entire system. There is no focused abstraction other than re-modeling the wrapped domain. I've seen this many times with user and payment services. They often become pass-thru code that doesn't fully decouple the 3rd party and feels pointless to maintain.
@@ -158,7 +158,7 @@ Ports and Adapters reduces the gap between first and third party services. Each 
 
 Adapters are focused to a single service and much easier to implement than shared data abstraction layers. Services owning there abstactions paradoxically actually tends to reduce ceremony compared to shared abstraction layers.
 
-![general ports and adapters diagram](../../../static/post-media/Open-closed-by-example/general-diagram.drawio.svg) -->
+![general ports and adapters diagram](../../../static/post-media/Open-closed-by-example/general-diagram.drawio.svg)
 
 ### Trimability and Progressive Change
 
