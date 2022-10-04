@@ -26,7 +26,7 @@ TODO: revisit series titles and intro statements to ensure smooth progression
 
 ## Definitions
 
-First off, let's make sure we're all on the same page about the Open-Closed Principle definition.
+First off, some official definitions for the Open-Closed Principle.
 
 Bertrand Meyer originally defined the Open-closed Principle as
 > software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification - Bertrand Meyer
@@ -37,11 +37,11 @@ Robert Martin later rephrased the principle when he coined the SOLID principles.
 ## Motivating Questions
 
 The Open-Closed Principle definitions are correct, but... they can be difficult to picture if you don't already know what the applications look like.
-We'll get into plenty of examples soon, but I also find it helpful to think about the principle from the questions that motivate it.
+We'll get into plenty of examples soon, but I also find it helpful to think about motivations of the principle.
 
 - How can we publish libraries that can adapt to unknown users without changing library code?
   - In general, how do we accommodate unknown use cases?
-- How do we prevent changes from cascading between services (or other kind of components)?
+- How do we prevent changes from cascading between services (or other kinds of components)?
 - How does a service isolate it's domain *and* support semantics needed by the caller?
 - How can a service compose new dependencies without changing the service?
 - Design stamina: How can code [handle more use cases but remain simple](https://blog.cleancoder.com/uncle-bob/2017/03/03/TDD-Harms-Architecture.html)?
@@ -53,11 +53,10 @@ Making predictions has been [proven to improve learning](../../posts/2022-03-07-
 ## History
 
 Bertrand Meyer originally described this principle while considering how to make reusable software libraries. 
-He wanted to publish some code that could be adapted to the use cases of many consumers without the different 
-consumers having access to modify the library itself. 
+He wanted to publish some code that could be adapted to could be adapted to many systems without those systems modifying the library itself. 
 
 Think about all the packages you add to your software projects. Loggers, data access libraries, authentication, and much more.
-These libraries would not be possible if the source code had to be changed for every system.
+These libraries would not be meaningful if the source code had to be changed for every system.
 
 ## Analogy: Function Parameters
 Imagine if functions didn't have parameters. They would be nearly useless. 
@@ -75,7 +74,7 @@ Parameters offer self-defined flexibility. The function owns the parameters whic
 
 This same idea applies to components in our systems. We can design our components to accommodate diverse needs without anticipating the needs of each different caller.
 The component defines what flexibility it offers on it's own terms (like parameters), but lets callers imprint their own meaning within that defined flexibility.
-This makes our system robust to change and powerful to reuse.
+This makes a system robust to change and powerful to reuse.
 
 ## Up next
-Components can offer this parameter-like open-closed flexibility many ways. First we'll cover approaches [with data](./2022-09-16-1-OPC-through-Data.md), then [with behaviors](./2022-09-16-3-Flexible-Behavior.md), and [with whole systems](./2022-09-16-4-OCP-as-architecture.md). We'll also look at some [examples that might look like OCP, but fail to deliver the expected value](./2022-09-16-5-OCP-anti-examples.md).
+Components can offer this parameter-like open-closed flexibility many ways. First we'll cover approaches [with data](./2022-09-16-1-OPC-through-Data.md), then [with behaviors](./2022-09-16-2-OCP-callbacks.md), with [dependencies](./2022-09-16-3-Flexible-Behavior.md) and [with whole systems](./2022-09-16-4-OCP-as-architecture.md). We'll also look at some [examples that might look like OCP, but fail to deliver the expected value](./2022-09-16-5-OCP-anti-examples.md).
