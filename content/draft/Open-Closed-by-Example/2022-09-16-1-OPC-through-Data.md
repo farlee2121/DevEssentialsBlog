@@ -9,13 +9,14 @@ This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/
 <!--more-->
 
 I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and highlights motivating questions.
+
 In summary, the OCP illuminates how components can offer self-defined flexibility and adapt to caller needs without changing internally. This is much like how parameters
 enable functions to be resused by many consumers without changing the function.
 
 One way to achieve this self-defined flexibility is through flexible data.
 
 ## Semi-Structured Data
-The general way services offer flexibility is by leaving some amount of interpretation up to the callers, but within constraints set out by the service.
+Services offer flexibility by leaving some amount of interpretation up to the callers, but within constraints set out by the service.
 This can be as simple as offering an unstructured field for extra data.
 
 <!-- need to define loose shape, but leave interpretation to caller -->
@@ -37,8 +38,8 @@ CustomData, however, can be any string.
 The caller can do anything they want with the field so long as it fits in a string.
 
 `Person` is also "closed". It knows the outer shape of CustomData is a string, so any internal operations on Person can handle CustomData uniformly.
-It can pass the data around or persist it safely because it knows the outer shape is a string. The inner structure of CustomData doesn't matter to our component,
-we only save the data to later return it to the caller as we received it. 
+It can pass the data around or persist it safely as a string. We only hold on to the data to later return it to the caller as we received it. The inner structure of CustomData doesn't matter to our component.
+
 
 ## Tradeoff: Flexibility vs Operability
 Data doesn't need to be completely unstructured to offer flexibility to callers.
@@ -50,7 +51,7 @@ Less structure allows callers to fill in their own structures and enables greate
 
 ## Implicit Assumptions are Not Flexibility
 
-I want to be very clear that using less structured, but making assumptions of that data is not an application of the open-closed principle.
+I want to be very clear that using less structured data, but making assumptions of that data is not an application of the open-closed principle.
 It is simply dangerous and unintuitive coupling.
 
 Consider this javascript. Will it work?
@@ -80,10 +81,8 @@ Tags are a common and powerful application of the Open-Closed Principle.
 They enforce only a little structure, but that bit of structure is enough
 for many operations.
 
-For example, we can use an array of strings as tags on a recipe.
-We can then filter, sort, or group recipes based on this tags.
-Yet consumers have full control over the meaning of these tags.
-They can classify recipes however they wish.
+For example, we might use an array of strings as tags on a recipe.
+Consumers have full control over the meaning of these tags, but recipe service can then filter, sort, or group recipes based on this tags without knowing their meaning.
 
 ```cs
 class Recipe{
@@ -104,7 +103,7 @@ Let's dig into tags with a deeper example.
 First, some context. This example is a messaging/chat system meant to be used as part of a larger system.
 Specifically, it's part of a marketing application connecting brands and influencers.
 
-The marketing system requires that message threads must be retrievable by 
+The marketing system requires that message threads are retrievable by 
 - campaign
 - brand (company)
 - influencer
@@ -136,16 +135,16 @@ interface IThreadClient{
 
 This approach has several problems.
 
-First, it's not open-closed. New thread groupings require new code. The thread requires a new foreign key and the client requires a new method for every new relationship. Any intersections between groupings also require new code.
+First, it's not open-closed. New thread groupings require new code. The thread requires a new foreign key and the client requires a new method for every new relationship. Any intersections between thread groupings also require new code.
 
-Second, the chat library depends on unnecessary ideas. Brands, Campaigns, and Influencers don't inherently have anything to do with chat.
+Second, the chat library depends on unnecessary ideas. Brands, Campaigns, and Influencers aren't an intrinsic part of chat.
 This prevents reuse of the chat system to new needs in our system, or an ever-increasing list of fields only used in certain situations.
 The chat system relies on information about each of its consumers.
 
 
 ### Threads: Using Tags
 
-Tags can focus our chat sub-domain, to push out external ideas and care only about chat concepts. In turn, enabling reuse of the chat code in any situation that requires chat.
+Tags can focus our chat sub-domain, pushing out external ideas and including only chat-related concepts. In turn, the chat client becomes reusable for any situation that requires chat.
 
 The key is replacing the foreign keys on thread with tags. These particular tags are key-value pairs.
 
@@ -194,8 +193,8 @@ The chat domain is about managing conversation threads that can be retrieved by 
 
 Clarifying th domain has made the chat library simpler and more powerful.
 There is now only one function for querying threads by tags. It can query by any set of tags, not just the entity relationships. 
-There's also now a clear path for defining more sophisticated behaviors. For example, we could offer unions between tags (e.g. all threads for x campaign *or* y brand).
-Tags don't have to be used for grouping. They can also be used for metadata.
+There's also now a clear path for defining more sophisticated behaviors. For example, query all threads for x campaign *or* y brand.
+These tags aren't just for grouping. They can also be used for metadata.
 
 This tag-based approach is open because different callers can impress their own groupings or metadata into tags, but closed because callers don't need to modify the library to change the groupings or metadata.
 
@@ -203,7 +202,7 @@ This tag-based approach is open because different callers can impress their own 
 
 The Open-Closed Principle pushes components to offer self-defined flexibility, to enable adapted behavior without changing for each consumer.
 
-In this post we've seen how flexible data like tags adapt to then needs of different callers without knowing anything about those callers.
+This post explored how flexible data like tags adapt to the needs of different callers without knowing anything about those callers.
 
 However, flexible data is a tradeoff. The less our component enforces, the fewer operations it can safely perform on data. 
 The key is separating responsibilities, understanding what knowledge is essential to the component and what can be left to the caller.
