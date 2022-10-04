@@ -12,16 +12,7 @@ The [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_pr
 TODO: consider how principles like scope, proximity, consistency, and naming/semantic factor into this series. Think about using these terms to mimic construction
 - i.e. ports and adapters is about limiting scope. This also improves proximity and focuses semantics/naming.
  
-TODO: revisit series titles and intro statements to ensure smooth progression
- -->
- 
- <!-- Q: Do I add a post about custom predicates in FsSpec? It's a good example of metadata. Library doesn't care. All custom elements are in control of consumer. Can still validate, print sensible messages, *maybe* generate data (but we offer another route for adding a generation customization, registering a strategy) -->
-
-<!-- Q: Do I add a post with misc OCP applications, but without deeper examples
-- Generics
-- Configuration in general
-- Strategies?
-- "context": either this meta is probably a good name for what I intend with FsSpec
+TODO: revisit series titles and intro & conclusion statements to ensure smooth progression
  -->
 
 ## Definitions

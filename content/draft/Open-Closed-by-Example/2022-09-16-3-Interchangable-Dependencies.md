@@ -5,13 +5,9 @@ seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Interchangable Implementations"
 ---
 
-<!-- Maybe rename to polymorphic behavior/ interchangable?
-Maybe need to refocus around dependencies?
 
-Composable Dependencies?
-Interchangeable implementations
- -->
-  <!-- TODO: Consider reframing DI buildup in terms of continuations instead of inheritance. Probably still important to highlight issues with inheritance because it's so commonly taught -->
+<!-- TODO: Consider reframing DI buildup in terms of continuations instead of inheritance. Class dependencies are basically like class-level event handlers.
+Probably still important to highlight issues with inheritance because it's so commonly taught -->
 
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate the OCP through interchangable and composable dependencies.
 <!--more-->
@@ -244,4 +240,3 @@ The Open-Closed Principle pushes components to self-defined flexibility. Such co
 Interfaces and Dependency Inversion are foundational tools for achieving that flexibility with component dependencies.
 Components better represent their domain by defining their own dependency interfaces. 
 Consumers can then swap dependency implementations to compose new behaviors as the specific usecase become more complex.
- <!--TODO: this conclusion might need work -->
