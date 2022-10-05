@@ -15,6 +15,8 @@ First off, I think sets of properties with a memorable handle are incredibly use
 
 Second, I know many principles but very few collected sets of principles. SOLID is by far the most prominent. Individual principles are useful, but it can be hard to understand which are most important and how they relate to each other. It can be overwhelming as a learner. Collecting a minimal set of principles to address an aspect of software sets an attainable roadmap of the most important aspects. This both enables discussion if said set of principles is really most important, and focuses educational efforts.
 
+<!-- There are some really good books on construction, but a book is too long when you're trying to advise someone in the flow of work. I think we can do better for an outline of construction knowledge then a whole book. It will likely still take one or more books to understand the variety and nuance of construction decisions but we can set the road map with a shorter list and provide a tool for remembering and organizing construction concepts -->
+
 ## Value of SPNC
 
 Principle sets are valuable, but does my specifc set of scope, proximity, naming, and consistency have value?
