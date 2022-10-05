@@ -4,6 +4,10 @@ tags: []
 title: Properties of Self-Documenting Code
 ---
 
+<!-- IDEA: Semantic or Meaning might be better than Naming. I'm realizing that actions like groupings of parameters or if we give something a dedicated type are also actions that carry semantic, but aren't covered in my current principles -->
+
+<!-- TODO: consider portability and trimability -->
+
 I've been trying to identify a minimal set of factors that guide how I write self-documenting code.
 It seems these may be sufficient: naming, proximity, consistency, and scope.
 <!--more-->
