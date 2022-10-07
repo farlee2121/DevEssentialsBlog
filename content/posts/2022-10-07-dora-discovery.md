@@ -1,5 +1,5 @@
 ---
-date: 2022-08-14T00:00:00-00:00
+date: 2022-10-07T00:00:00-00:00
 tags: [DevOps, Research, Best Practices]
 title: "Google DORA: Objective Developer Practice Research"
 ---
@@ -14,7 +14,7 @@ DORA describes itself as
 
 The leaders of DORA also published a book based on their research, [Accelerate](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339).
 
-I've yet to look deeply into either of these resources. I still thought it worth sharing since research-based studies of best practices are rare in software.
+I've yet to look deeply into either of these resource, but I still thought it worth sharing since research-based studies of best practices are rare in software.
 
 The project seems promising from my browsing thusfar. Their article on database practices helped me find [managed database migration tools](https://cloud.google.com/architecture/devops/devops-tech-database-change-management) I long hypothesized should exist.
 
