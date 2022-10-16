@@ -90,3 +90,12 @@ Properties
 META: thinking about the post this way, I could definitely revive the presentation with test api
 
  -->
+
+## Motivating questions
+- Confidence
+  - How can we be confident our code 
+- How do we increase confidence in our code over time?
+  - automation, tighten the net
+- How can be confident code works accross environments / configuration?
+- How do we know how much testing is enough?
+- How do we keep our inner loop fast? (tests should be fast, aid not impede inner loop)
