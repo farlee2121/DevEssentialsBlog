@@ -11,12 +11,16 @@ I've also included other software design terms that I felt relevant and potentia
 
 I commonly reference the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3).
 
-<!-- Give some examples. Compare and contrast the terms against similar terms. focus on the value each category provides (like how my other post noticed principles are a compass. contrast with heuristic... heuristic is like moss on a tree, moss isn't always on the north but it can still give you a way to orient )
+<!-- Give some examples. Compare and contrast the terms against similar terms. focus on the value each category provides (like how my other post noticed principles are a compass. contrast with heuristic...  )
 
 TODO: flesh out analogies
-- pattern is like sign posts. You can't just plop copies of the same sign everywhere. Each sign needs to be adapted to the context it is used. Still, we know the purpose of signs and can reliably look for them to inform our direction 
-- Practice: 
-- Convention: is like the side of the road you drive on. It doesn't matter right or left, it matters that everyone does it the same.-->
+- principle: more like a compass than an odometer
+- pattern is like sign posts. You can't just plop copies of the same sign everywhere. Each sign needs to be adapted to the context it is used in. Still, we know the purpose of signs and can reliably look for them to inform our direction 
+- Practice: Is like packing food? Maybe just skip this one
+- Convention: is like the side of the road you drive on. It doesn't matter right or left, it matters that everyone does it the same.
+- Heuristics are like moss on a tree. Moss isn't always on the north but it can still give you a way to orient yourself
+- Architecture: Architecture is like a trip itinerary. It identifies the main places we'll go and how they fit into the overall plan. It needs to balance detail with freedom so everyone can enjoy the trip and be back on the bus on time.
+-->
 
 <!-- Other potential terms
 - driver
@@ -61,7 +65,7 @@ Patterns don't requisitely follow principles. They can be applied incorrectly. P
 
 Well defined patterns also describe pattern forces, or the challenges/conditions that motivate pattern as well as trade-offs. These forces and trade-offs often relate the pattern back to achieving principles.
   
-
+[Anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern) are common solutions to common problems that tend to be ineffective. In other words, patterns that should be avoided. 
 
 ### Examples
 Wikipedia collected a [large list of patterns](https://en.wikipedia.org/wiki/Software_design_pattern)
@@ -78,8 +82,6 @@ Some common ones
 Some patterns have even become common language constructs like 
 - [Iterator](https://en.wikipedia.org/wiki/Iterator_pattern)
 - [Lock](https://en.wikipedia.org/wiki/Lock_(computer_science))
-
-
 
 ## Practice
 
@@ -131,42 +133,67 @@ Conventions overlap with patterns. Some patterns set conventions for how to sepa
 
 "Heuristic methods are those experience-based software engineering methods that have been and are fairly widely practiced in the software industry" (SWEBOK 9.4.1)
 
+Heuristic is generally defined as "any approach to problem solving or self-discovery that employs a practical method that is not guaranteed to be optimal, perfect, or rational, but is nevertheless sufficient for reaching an immediate, short-term goal or approximation". "Heuristics are the strategies derived from previous experiences with similar problems. These strategies depend on using readily accessible, though loosely applicable, information to control problem solving"
+
 ### Explanation
+
+Heuristics are rules of thumb. They define quick tests to that gauge if you're work is on the right track. Unlike principles, they are not rigorous or certain. However, they tend to be easier to follow and require less time to internalize compared to principles.
+
+Violating a heuristic doesn't mean your solution is necessarily bad and meeting he heuristic doesn't mean it's necessarily good. To quote a certain pirate "they be more like guidelines". 
+
+[Smells](https://en.wikipedia.org/wiki/Code_smell) are defect-focused heuristics. They suggest when something may be wrong rather than when something is right.
+
+<!-- Progressive refinement of the software mod -
+els leads to a detailed design. The detailed 
+design  is  then  either  evolved  through  suc-
+cessive iteration or transformed (using some 
+mechanism)  into  the  implementation  view 
+of  the  model -->
 
 ### Examples
 - Integrate code at least twice a day
+- If it's hard to name it's probably a poor abstraction or unfocused code
+- Only 7 +/- 2 concepts at a time (i.e. number of function parameters, number of methods on a class, max cyclomatic complexity, etc)
+- A function should read like a sentence
+- X out function names and see if you can still un
 
-
-## Smell
-https://en.wikipedia.org/wiki/Code_smell
-
-### Explanation
-
-Heuristics for bad design issues
-
-### Examples
-
+Smells
+- [Primitive obsession](https://blog.ploeh.dk/2015/01/19/from-primitive-obsession-to-domain-modelling/)
+- Long method
+- Large parameter list
+- Large class
+- [Feature Envy](https://refactoring.guru/smells/feature-envy)
+- Deeply nested code
+- Reassigning a variable
+- Null
+- Mutation
 
 ## Architecture
 
-(SWEBOK 2.3) "meaning how software is structured and how the software’s components interact"
-  - "the set of structures needed to reason about the system, which comprise software elements, relations among them, and properties of both"
-  - architectural style "a specialization of element and relation types, together with a set of constraints on how they can be used"
+SWEBOK section 2.3 defines architecture as "how software is structured and how the software’s components interact" or "the set of structures needed to reason about the system, which comprise software elements, relations among them, and properties of both".
+
+It insightfully separately defines *architectural style* as "a specialization of element and relation types, together with a set of constraints on how they can be used".
+
+Both of these are commonly referred to as architecture.
 
 ### Explanation
 
-Architecture is notoriously hard to define.
+Architecture is notoriously hard to define. Part of the issue is multiple ways the term is used. It can refer to the main components of a system and how they interact, but it can also refer to patterns that guide what kinds of components and interactions are allowed. In general, the first is fairly tangible and the second (styles) has few well-defined options.
+
+Another challenge with architecture is the overlap with patterns. It can be hard to discern what consitutes a design pattern versus an architecture pattern. In truth, numerous patterns can be either depending on how you apply them. For example, batch, interpreter, pipes and filters, and Model-view-controller can all fit into either category.
+
+Unfortunately I don't have any silver bullets here. Here are some differences to consider. Architecture patterns tend to focus more on Information Hiding, coupling, and other principles that keep major portions of the system independent and stable. Construction and design patterns tend to focus more on solving individual problems. Architectural decisions tend to effect how the company can divide teams and how those teams work together. Architecture is big strokes while design patterns are smaller strokes.
+
+A good architecture style should default developers to good use of principles, particularly principles regarding scope and communication, like Information Hiding or the Robustness principle. 
 
 ### Examples
 
+Architectural styles
+- [Hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) / Ports and Adapters
+- [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- Pipes and filters (think Unix / command line)
+- Batch
+- [iDesign](https://www.youtube.com/watch?v=Jxm2rgeuC6s)
 
-<!-- 
-## Anti-pattern
-
-### Formal Definition
-
-### Explanation
-
-### Examples -->
 
 
