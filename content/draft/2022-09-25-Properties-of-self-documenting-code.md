@@ -4,7 +4,9 @@ tags: []
 title: Properties of Self-Documenting Code
 ---
 
-<!-- IDEA: Semantic or Meaning might be better than Naming. I'm realizing that actions like groupings of parameters or if we give something a dedicated type are also actions that carry semantic, but aren't covered in my current principles -->
+<!-- IDEA: Semantic or Meaning might be better than Naming. I'm realizing that actions like groupings of parameters or if we give something a dedicated type are also actions that carry semantic, but aren't covered in my current principles 
+If I use semantic over naming the acronym could be SSPC (speak). The code should speak for itself, it should speak of the domain, it should speak to the readers.
+-->
 
 <!-- TODO: consider portability and trimability -->
 
