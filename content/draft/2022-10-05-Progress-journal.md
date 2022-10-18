@@ -17,7 +17,7 @@ Talking it through, we added "something I learned" to his weekly reflection.
 The effect was rapid and significant. Within two weeks I noticed a significant change. He also reported feeling 
 - like it was removing barriers to his development
 - more interested in parts of his work code that he's unfamiliar with
-- more confident handling the unknown
+- more confident when handling the unknown
 - excited for growth
 
 These are incredible outcomes, and from such a small change!
@@ -34,7 +34,7 @@ How Learning Works also emphasizes the [importance of self-efficacy for learning
 
 [Gap and the Gain](https://gapandgainbook.com/) is a psychology-backed approach for just this problem! It notes how humans get stuck in the "gap" which is the distance between where we are and what we want to achieve. The solution is focusing on the "gain" which is where we are now compared to where we used to be. 
 
-I've used Gap and the Gain to track my own progress toward goal for a while. I just didn't connect the idea to helping students out of the pit. Progress journals are "gain" mindset for learning. They target that sense of self-efficacy, of believing that they have the power to learn and are making progress toward their goals.
+I've used Gap and the Gain to track my own progress toward goals for a while. I just didn't connect the idea to helping students out of the pit. Progress journals are "gain" mindset for learning. They target that sense of self-efficacy, of believing that they have the power to learn and are making progress toward their goals.
 
 ## Duck Progress
 
@@ -46,7 +46,7 @@ My mentee is teaching me too!
 
 ## Conclusion
 
-Progress journals help learners out of the pit. They are a reliable tool for bolstering self-efficacy and highlighting gains a student has made. A tool they can carry into most any context!
+Progress journals can help learners out of the pit. They are a research-backed tool for bolstering self-efficacy and highlighting progress a student has made. A tool they can carry into most any context!
 
 I feel so proud of my mentee. I can tell this habit has improved his confidence and appetite to learn. He is increasingly self-directed and is finding better ways to learn.
 
