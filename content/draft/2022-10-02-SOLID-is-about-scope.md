@@ -4,7 +4,7 @@ tags: [SOLID]
 title: SOLID is a toolbox for Conceptual Scope
 ---
 
-I've been pondering properties of self-documenting code. Comparing [these properties](../draft/2022-09-25-Properties-of-self-documenting-code.md) against [SOLID](https://en.wikipedia.org/wiki/SOLID) lead me to realize Information Hiding, or conceptual scope, is the central theme of SOLID.
+I've been pondering properties of self-documenting code. Comparing [self-documenting properties](../draft/2022-09-25-Properties-of-self-documenting-code.md) against [SOLID](https://en.wikipedia.org/wiki/SOLID) lead me to realize Information Hiding, or conceptual scope, is the central theme of SOLID.
 <!--more-->
 
 
@@ -17,7 +17,10 @@ I've been pondering properties of self-documenting code. Comparing [these proper
 - **Interface Segregation:** No code should be forced to depend on methods it does not use.
   -  This limits scope a component knows about through dependencies. It also pushes towards Dependency Inversion and Port and Adapters architecture to achieve this level of dependency focus. 
 - **Dependency Inversion:** Depend on abstractions, not concrete types. Callers own the abstractions
-  - Dependency Inversion is the cornerstone of components isolating themselves from dependencies. The component defines dependency abstractions on their own terms and lets someone else provide concrete implementations. This dramatically reduces scope known to business rules and other workflows. Done well, the rule or flow is conceptually self-contained and the lowest layer in a dependency chaing. This allows those rules to be reused in many different configurations rather than having application-specific concerns baked into the rules.  
+  - Dependency Inversion is the cornerstone of components isolating themselves from dependencies. The component defines dependency abstractions on their own terms and lets someone else provide concrete implementations. This dramatically reduces scope known to business rules and other workflows. Done well, the rule or flow is conceptually self-contained and the lowest layer in a dependency chain. This allows those rules to be reused in many different configurations rather than having application-specific concerns baked into the rules.  
+
+
+Each and every principle in SOLID is a tool for limiting conceptual scope!
 
 <!-- READ: I've never heard [GRASP](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design)) -->
 
