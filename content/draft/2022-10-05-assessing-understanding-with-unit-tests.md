@@ -7,30 +7,30 @@ draft: true
 
 <!-- TODO: Benefits section doesn't flow with overall framing -->
 <!-- TODO: should test this more in mentoring before posting -->
-I've been thinking of ways I can get student to get knowledge out of their head and experiment. Both so I can review and give feedback and to get them in the habit of checking their understanding. I think unit tests might be an effective tool.
+I've been thinking of ways I can encourages student to get knowledge out of their head and experiment. Both so I can review and give feedback and to get them in the habit of checking their own understanding. I think unit tests might be an effective tool.
 <!--more-->
 
 ## Teaching clarity
-I strongly favor the [better wrong than vague](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md) philosophy. Committing our thoughts to concrete forms like words or code exposes gaps in our thinking. It also sets a basis for refining understanding, referencing it, or collaborating.
+I strongly favor the [better wrong than vague](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md) philosophy. Committing thoughts to concrete forms like words or code exposes gaps in our thinking. It also sets a basis for refining understanding, referencing it, or collaborating.
 
-These are all desirable properties for learning. However, I've found some difficulty bridging the gap between my understand and that of learners. My concept of clear is not the same as theirs. Clarity is also relative, and we may not understand context the other person needs to understand a concept. 
+These are all desirable properties for learning. However, I've found some difficulty bridging the gap between my understand and that of learners. Clarity is relative, and we may not understand context the other person needs to understand what we want to communicate. 
 
-I also have build up an extensive and almost reflexive set of potential experiments for testing my thoughts. Students don't yet have that.
+I have also built up an extensive and almost reflexive set of potential experiments for testing my thoughts. Students don't yet have that.
 
-So, how can I choose a finite skill set that enable students to check their understanding and communicate it effectively.
+So, how can I choose a finite skill set that enables students to check their understanding and communicate it effectively?
 
 ## Unit tests as understanding
 
-Unit tests are commonly used to verify production systems work the way we expect them to.
+Unit tests are commonly used to verify that production systems work the way we expect them to.
 I've long considered unit tests to be an encoding of requirements, the "why" behind a system.
 
-This same property can be useful for teaching. Students can encode the key points of their understanding as unit tests.
+This same property can be useful for teaching. Students can encode the key points of their understanding, the "why", as unit tests.
 
 ## Example
 
-Suppose I want a student to understand how typing work in nominal languages. More specifically, the relationship between casting and inheritance.
+Suppose I want a student to understand how typing works in nominally typed languages. More specifically, the relationship between casting and inheritance.
 
-I can ask the student to demonstrate cases of valid casts and invalid casts with unit tests, and name or comment each test to why each case is a valid or invalid cast.
+I can ask the student to demonstrate valid casts and invalid casts with unit tests. The test name or a comment can be used to explain why that case is important, or what that test tells us about the type system.
 
 ```cs
 public class CastingAndInheritanceTests
@@ -91,22 +91,23 @@ public class CastingAndInheritanceTests
 }
 ```
 
-## Benefits
-
-This approach encourages students to feel out the boundaries of an idea with experiments that are repeatable, referencable for later review, and sharable. 
+## Suspected Benefits
 
 Unit tests encode expectations, so they encourage students to always keep the goals of a concept in mind.
 
-Unit tests simultaneously guide experimentation and provide immediate feedback. A good compiler will pass/fail many ideas right away. The test can also be run to feel out the problem. 
+The tests encourage students to feel out the boundaries of an idea while locking down independent facts. The tests also provide immediate feedback for self-learning. A good compiler will pass/fail many ideas right away. The test can also be run to collect further information.
+
+Each concluded test is a stable increment of knowledge, which should help students from back-tracking too far and forgetting what they've learned.
+
+The tests can also be shared, discussed, compared, and referenced for reviewing learnings.
+The compiler and pass/fail nature of the tests also requires a higher level of precision than does prose or verbal communication, improving chances of shared understanding.
 
 Even better, the feedback loop with the tests is very similar to what the student will experience while developing code professionally.
-
-After experimenting, the test remains as an expression of the studen'ts knowledge. It serves as a reference point for the teacher to give concrete feedback, and review for the student. The compiler and pass/fail nature of the tests also requires a higher level of precision than does prose or verbal communication.
 
 
 ## Conclusion
 
 Shared understanding is hard, especially across an experience gap.
-Unit tests encode expections about a system, and can similarly encode understanding of concepts being learned.
+Unit tests encode expections about a system, and could similarly encode understanding of concepts for educational purposes.
 
-In this way, unit tests standardize the form of student experimentation, offer immediate feedback similar to professional development, and create an artifact both the student and teach understand.
+In this way, unit tests would standardize the form of student experimentation, offer immediate feedback similar to professional development, and create an artifact both the student and teach understand.
