@@ -190,6 +190,7 @@ A good architecture style should default developers to good use of principles, p
 
 Architectural styles
 - [Hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) / Ports and Adapters
+- [Functional core, imperative shell](https://blog.ploeh.dk/2016/03/18/functional-architecture-is-ports-and-adapters/)
 - [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 - Pipes and filters (think Unix / command line)
 - Batch
