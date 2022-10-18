@@ -59,16 +59,19 @@ It seems fairly clear that each of these properties are important factors, but a
 
 To be clear, I'm just considering what makes code understandable. I'm not considering the process for writing the code. 
 
-Here are some of my considerations
+Here are some of my considerations. Be warned, they're rather stream-of-thought
 
 - context (relation to other code and ideas in the code) -> appears to comprise of scope and proximity. Relationships between names is part of consistency and naming. Comments are potentially not covered. External resources seems like they belong to scope.
 - immutability -> is a result of scope
-- side-effect management -> a result of scope. Contracts too
-- patterns are a variety of naming
+- side-effect management -> a result of scope.
+- contracts & abstractions -> an intersection of scope, consistency, proximity, and semantics
+  - abstractions are largely driven by the domain, though consistency of an api and hiding scope are certainly major factors of the domain qualities chosen.
+  - Names cover much of an abstraction's definition, but the grouped concepts also matter. While plausibly covered by the four properties, it is important enough I would consider broading naming to semantic, essence or similar. The trade-off is reduced concreteness 
+- design patterns -> are a variety of naming
 - naming is potentially a broader category of intent or semantics that might not just be naming
   - There aren't many other aspects to programming though. Spacing, grouping, braces, and names are most everything. Proximity and scope cover spacing and grouping. I'm not sure it's worth a more abstract property to include braces. Braces could also be considered proximity.
 - Concurrency ... I'd say that belongs to scope. The problem with concurrency is side-effects. Those aren't an issue if you lock state for a given transaction i.e. pure functions
-- monitoring, retries, and similar are more part of maintenance or system-level discussion. I'm not worried about covering them here. If anything they belong to scope because they shouldn't be intermixed
+- monitoring, retries, and similar cross-cutting -> more part of maintenance or system-level discussion. I'm not worried about covering them here. If anything they belong to scope because they shouldn't be intermixed
 - table-driven methods -> scope
 - complexity -> too abstract a concept and not directly actionable. Addressed via these concerns
 - Nesting -> scope & consistency 
