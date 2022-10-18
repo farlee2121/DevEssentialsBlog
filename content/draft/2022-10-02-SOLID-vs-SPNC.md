@@ -13,7 +13,7 @@ Is there really a need for another set of properties?
 First off, I think sets of properties with a memorable handle are incredibly useful.
 [SOLID](https://en.wikipedia.org/wiki/SOLID) has achieved wide-spread recognition where many of it's components or inspirations did not.
 
-Second, I know many principles but very few collected sets of principles. SOLID is by far the most prominent. Individual principles are useful, but it can be hard to understand which are most important and how they relate to each other. It can be overwhelming as a learner. Collecting a minimal set of principles to address an aspect of software sets an attainable roadmap of the most important aspects. This both enables discussion if said set of principles is really most important, and focuses educational efforts.
+Second, I know many principles but very few collected sets of principles. SOLID is by far the most prominent. Individual principles are useful, but it can be hard to understand which are most important and how they relate to each other. It can be overwhelming as a learner. Collecting a minimal set of principles to address some aspect of software sets an attainable baseline for learning. This both enables discussion if said set of principles is really most important, and focuses educational efforts.
 
 <!-- There are some really good books on construction, but a book is too long when you're trying to advise someone in the flow of work. I think we can do better for an outline of construction knowledge then a whole book. It will likely still take one or more books to understand the variety and nuance of construction decisions but we can set the road map with a shorter list and provide a tool for remembering and organizing construction concepts -->
 
@@ -23,7 +23,7 @@ Principle sets are valuable, but does my specifc set of scope, proximity, naming
 
 I think so.
 
-I will call this set SPNC (pronounced spunk) for ease of reference. The name and property set might change, but I'll run with the name for now.
+I will call this set SPNC (pronounced spunk) for ease of reference. The name and property set might change, but I'll run with this name as I explain why I think such a set has value.
 
 ## Uncollected Common Concepts
 
@@ -53,4 +53,4 @@ I actually find it relieving that SOLID and SPNC overlap. Construction and desig
 ## Conclusion
 
 I think scope, proximity, naming, and consistency (SPNC) is a valuable set of principles.
-It collects key concepts I've heard repeated across many sources into a focused set. It covers common development activities not covered by SOLID (or other principle sets). Even better, SOLID and SPNC clarify each other.
+It collects key construction concepts I've heard repeated across many sources into a focused set. It covers common development activities not covered by SOLID (or other principle sets). Even better, SOLID and SPNC clarify each other.
