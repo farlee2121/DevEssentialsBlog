@@ -1,13 +1,11 @@
 ---
-date: 2022-09-05T00:00:00-00:00
+date: 2022-10-21
 tags: []
 title: "Five Foundational Beliefs"
 ---
 
 A friend asked me to summarize what I believe about software in five points or less. These are those five points.
 <!--more-->
-
-This is part of a broader effort to identify and communicate what I believe about software.
 
 <!-- TODO: I have a somewhat odd mix of nouns and imperatives. I could also use better analogies for most of the beliefs. -->
 
@@ -21,7 +19,7 @@ Every aspect of programming is about understanding and representing the problem 
 
 In every situation, pursue problem understanding
 - Feeling stuck? [Clarify what problem you're solving](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md)
-- Trying to decide between multiple implementations? Weigh how does serves the problem you're solving
+- Trying to decide between multiple implementations? Weigh how each serves the problem you're solving
 - What tests do I need to write? Identify observable requirements of the problem you're solving
 - Trying to name a variable, function, class, etc? Describe what the component means to the problem it solves
 - Organizing your system services? Look for self-contained sub-problems of the overall problem you are solving
@@ -52,20 +50,20 @@ Stable, incremental, additive serves [Understand the Problem](#understand-the-pr
 
 The third belief is Self-Documenting Code. Code is written for humans first, then computers. The code should communicate the domain and lead developers into deeper understanding of the problem.
 
-Understanable code is essential to effective maintenance. Programs quickly become complex and expansive. Any documentation outside of the code will easily fall out-of-date and is difficult to keep in sync. The faster developers can understand the system, the faster and more safely they can modify the system.
-The compiler will understand as long as syntax is correct, and will likely micro-optimize better than you will. The real danger is future developers (including future you) misunderstanding the intent of code and incorrectly modifying the system.
-
-Self-documenting code aligns with both [Understand the Problem](#understand-the-problem) and [Stable, Incremental, Additive](#stable-incremental-additive). The code embodies the problem understanding. Self-documenting code also builds incrementally over time. Developers better understand the problem, adapt the code, the code become more descriptive, this leads to better understanding and the cycle repeats. 
+Understandable code is essential to effective maintenance. Programs quickly become complex and expansive. Any documentation outside of the code will easily fall out-of-date and is difficult to keep in sync. The faster developers can understand the system, the faster and more safely they can modify the system.
+The compiler will understand code as long as syntax is correct, and will likely micro-optimize performance better than you will. The real danger is future developers (including future you) misunderstanding the intent of code and incorrectly modifying the system.
 
 Some information is hard to communicate effectively in code: external feedback, contribution guidelines, broad design patterns, etc. 
 This information should be kept as [close to the code as possible](https://spencerfarley.com/2022/03/18/levels-of-developer-documentation/).
 Comments and readmes are common choices, depending on the scope of the information.
 
+Self-documenting code aligns with both [Understand the Problem](#understand-the-problem) and [Stable, Incremental, Additive](#stable-incremental-additive). The code embodies the problem understanding in its naming and structure. Self-documenting code also builds incrementally over time. Developers better understand the problem, adapt the code, the code become more descriptive, this leads to better understanding and the cycle repeats. 
+
 ## Camping Rule
 
 The fourth belief is the camping rule: always leave the campsite cleaner than you found it. The same applies to code. Quality is a continuous effort made by every contributor.
 
-Remember that this rule in context of the other beliefs. We clean our code by making it self-documenting, by better representing the problem, and also by improving tests (as we'll discuss in the next belief). 
+Remember this rule in context of the other beliefs. We clean our code by making it self-documenting, by better representing the problem, making change points flexible, and also by improving tests (as we'll discuss in the next belief). 
 Improvements should also be done in small complete steps on a continual basis. Large rewrites and refactors may sometimes be necessary, but long-term quality can only be maintained through continual care.
 
 ## Tighten the Net
@@ -76,8 +74,8 @@ The fifth belief is Tighten the Net. The image is that of a bug net. If a bug es
 This also requires that we cast the net in the first place. Our net is our automated test suite. Automated tests are fundamental to system maintainability.
 
 Tests should reflect the requirements (externally visible qualities of the problem being solved), not the system (how we're currently solving the problem).
-The latter leads to the fragile test problem. The former improves test suite stability, likelihood of detecting errors with change, and also better represents the motivations
-that shaped the system to be the way it is. This ties in well with Understanding the Problem and Self-Documenting Code. Requirements-focused tests also tend to be Stable, Incremental, Additive since new requirements are scoped into small units of value and requirements replace each other less frequently than do implementations.
+The latter leads to the fragile test problem. The former improves test suite stability, likelihood of detecting errors with change, and also better documents the motivations
+that shaped the system to be the way it is. This ties in well with Understanding the Problem and Self-Documenting Code. Requirements-focused tests also tend to be Stable, Incremental, Additive since new requirements usually source from work items (which should be focused in scope) and requirements replace each other less frequently than do implementations.
 
 ## Runner-ups ideas
 
