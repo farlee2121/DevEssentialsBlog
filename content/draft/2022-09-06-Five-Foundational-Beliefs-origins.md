@@ -4,7 +4,7 @@ tags: []
 title: "Five Foundational Beliefs: Origins"
 ---
 
-A friend asked me to summarize what I believe about software in five points or less. I [previously described those points](../draft/2022-09-05-Five-Foundational-Beliefs.md). Here is where each of those beliefs originates from.
+A friend asked me to summarize what I believe about software in five points or less. I [previously described those points](../posts/2022-10-21-Five-Foundational-Beliefs.md). Here is where each of those beliefs originates from.
 <!--more-->
 
 ## Understand the Problem
