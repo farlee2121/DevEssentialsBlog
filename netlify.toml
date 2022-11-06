@@ -31,16 +31,35 @@
     """
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer-when-downgrade"
+    # https://www.permissionspolicy.com/
     Permissions-Policy = """\
-        geolocation=(), \
-        midi=(), \
-        notifications=(), \
-        push=(), \
-        microphone=(), \
+        accelerometer=(), \
+        ambient-light-sensor=(), \
+        autoplay=(), \
+        battery=(), \
         camera=(), \
-        magnetometer=(), \
+        cross-origin-isolated=(), \
+        display-capture=(), \
+        document-domain=(), \
+        encrypted-media=(), \
+        execution-while-not-rendered=(), \
+        execution-while-out-of-viewport=(), \
+        fullscreen=(), \
+        geolocation=(), \
         gyroscope=(), \
-        vibrate=()\
+        keyboard-map=(), \
+        magnetometer=(), \
+        microphone=(), \
+        midi=(), \
+        navigation-override=(), \
+        payment=(), \
+        picture-in-picture=(), \
+        publickey-credentials-get=(), \
+        screen-wake-lock=(), \
+        sync-xhr=(), \
+        usb=(), \
+        web-share=(), \
+        xr-spatial-tracking=()\
     """
     
     
