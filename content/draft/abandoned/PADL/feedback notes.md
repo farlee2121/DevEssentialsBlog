@@ -37,6 +37,17 @@ I'd like some visuals, but i'm not sure what
   - I think a full system visual is just too complicated to be meaningful unless it is a concrete system. That could be meaningful as a post, but would be too complicated for a presentation.
     - in my current posts it would probably fit well in the file organization post. Maybe in post 1b
 
+## Unknown feedback from legal pad
+
+- liked progressive reveal
+  - post stays ignorant of what is to come, helps him process it a bit at a time
+- thought example was understandable
+- liked the part where I explained how an adapter could become an engine
+- Post had a sense of time
+  - he felt like he gained experience as he read
+- feels further posts don't need new examples, but should build on this one
+
+
 -----
 
 # How deep does it go?
