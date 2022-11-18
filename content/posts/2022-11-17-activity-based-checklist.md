@@ -4,7 +4,7 @@ tags: [Checklist, Software Engineering, Process]
 title: "Activity-based Developer Checklist"
 ---
 
-This my attempt at short actionable checklists to guide key moments in software process.
+This is my attempt at short actionable checklists to guide key moments in software process.
 <!--more-->
 
 I previously wrote a [software checklist based on increments of time](../posts/2022-01-21-Development-Cycles-Checklist.md).
@@ -54,7 +54,7 @@ It promotes small units of work, testing, review, and safe deployment.
 This list is also pretty low-controversy. Almost every item is generally accepted good practice. 
 Many are well proven indicators of team performance.
 
-I might potentially add documentation and self-documentation various places in this list.
+I might potentially add documentation and self-documentation in various places.
 
 I would also consider additional checklists for team process events like stand-up and retrospective.
 However, those checklists would be oriented for the engineering manager or project manager.
