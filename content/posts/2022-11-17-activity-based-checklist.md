@@ -1,5 +1,5 @@
 ---
-date: 2022-09-10T00:00:00-00:00
+date: 2022-11-17
 tags: [Checklist, Software Engineering, Process]
 title: "Activity-based Developer Checklist"
 ---
@@ -8,21 +8,22 @@ This my attempt to at short actionable checklists to guide key moments in softwa
 <!--more-->
 
 I previously wrote a [software checklist based on increments of time](../posts/2022-01-21-Development-Cycles-Checklist.md).
-I was reading more about checklists and noticed many are based on key events in some process. (I later learned these key moments are called *pause points*)
+I was reading more about checklists and noticed many are based on key events in some process. I later learned these key moments are called *pause points*.
 
 Here's my attempt to identify key process moments (pause points) for software, and what is most important to verify at that juncture.
-I also aimed to keep the list very short
+I also aimed to keep the list very short.
 
 ## The Checklist
 Commiting Code
   - [ ] Is the code well covered with automated tests?
   - [ ] Is the commit only a single focused change? (e.g. a rename, a small refactor, a preparatory refactor, a small behavior change and it's tests)
   - [ ] Is the commit message clear and descriptive of context for the change?
-  - [ ] Have I pushed my changes?
   - [ ] Could I pull request / integrate my work?
+  - [ ] Have I pushed my changes?
 
 Integration
   - [ ] Does the code pass all automated checks?
+  - [ ] Does the work satisfy acceptance criteria?
   - [ ] Is the completed work small, cohesive, and production stable?
   - [ ] Does the pull request include all context a reviewer needs to understand the change?
   - [ ] Have all required reviewers approved?
@@ -33,6 +34,7 @@ Work planning
   - [ ] Is the scope of this work estimated and less than 1 week?
   - [ ] Are upstream dependencies completed?
   - [ ] Does the developer have everthing needed to execute the task (information, experience, support)?
+<!-- Access to domain experts to clarify work? -->
 
 Deployment
   - [ ] Is the deployment automated?
@@ -54,7 +56,7 @@ Many are well proven indicators of team performance.
 
 I might potentially add documentation and self-documentation various places in this list.
 
-I would also consider additional checklists for team process events like stand up and retrospective.
+I would also consider additional checklists for team process events like stand-up and retrospective.
 However, those checklists would be oriented for the engineering manager or project manager.
 
 <!-- Achieving these checklist would likely require training. For example, learning effective design and testing practices that enable those small units of work. 
