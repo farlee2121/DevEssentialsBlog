@@ -4,7 +4,7 @@ tags: [Checklist, Software Engineering, Process]
 title: "Activity-based Developer Checklist"
 ---
 
-This my attempt to at short actionable checklists to guide key moments in software process.
+This my attempt at short actionable checklists to guide key moments in software process.
 <!--more-->
 
 I previously wrote a [software checklist based on increments of time](../posts/2022-01-21-Development-Cycles-Checklist.md).
