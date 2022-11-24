@@ -40,4 +40,6 @@ None of these differentiating measures relate to long-term planning. They measur
 
 I want to be clear that I'm not against estimation or long-term planning. Smooth process requires a prioritized pipeline, which requires a sense of the bigger picture and cost-benefit tradeoffs. It's more that estimation and planning milestones takes a back seat to how ongoing work achieves understanding, agility, and adaptability. The plan serves the work, the work doesn't serve the plan.
 
+Of course, I may be missing the perspectives or contexts that most benefit from estimation.
+
 In conclusion, I think estimation has reduced in importance because we've realized good estimation is not a forcing function of performance. Most business software systems respond to continual change. We are continually refining the problem. Thus the driver of performance is the quality of our processes. It is more important to focus on smooth increment progress than to better predict the future.
