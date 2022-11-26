@@ -4,10 +4,10 @@ tags: [ducks]
 title: "Duck Structure Update"
 ---
 
-My duck docs continue to evolve as my process changes. Here changes I've noticed lately.
+My duck docs continue to evolve as my process changes. Here are changes I've noticed lately.
 <!--more-->
 
-This post does not fully cover duck docs. You can check out the [original duck structure post](../posts/2021-05-21-Duck-Structure.md) or my [whole series on ducking](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md). In short, the ducking process is about communicating ideas to assist the process of solving them. I tend to use lightly structured text documents.
+This post does not fully cover duck docs. You can check out the [original duck structure post](../posts/2021-05-21-Duck-Structure.md) or my [whole series on ducking](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md). In short, the ducking process is about externally communicating to clarify thoughts and assist effective problem solving. I tend to communicate via lightly structured text documents that I call duck docs.
 
 ## Sections
 
