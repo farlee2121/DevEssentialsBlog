@@ -53,7 +53,7 @@ I still occasionally use a handful of other tags
 
 ## Sample
 
-I've reworked the example from my previous [duck structure post](../posts/2021-05-21-Duck-Structure.md). It focuses on a [learning project of mine](https://github.com/farlee2121/clj-recipe). The stakes were low and the goals loose. Thus, I don't dive deep into many of the questions.
+I've reworked the example from my previous [duck structure post](../posts/2021-05-21-Duck-Structure.md). It focuses on a prior [learning project of mine](https://github.com/farlee2121/clj-recipe). I don't show very deep deliberations, partially because it was a fairly simple project and partially to keep the example size digestable.
 
 ```md
 ## Motivation
@@ -69,7 +69,7 @@ This project should
 - REQ: Try to coordinate a few different modules
   - REQ: require some composition
 - REQ: Include tests
-  - REQ: Map the testApi pattern into Clojure
+  - GOAL: Map the testApi pattern into Clojure
 
 Domain requirements
 - REQ: View a list of recipes
