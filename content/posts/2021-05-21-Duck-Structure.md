@@ -12,6 +12,8 @@ Here I'll describe the simple and flexible organization structure my [duck docs]
 
 <!--more-->
 
+> UPDATE: I've [updated some of my duck doc structure](../posts/2022-11-25-Duck-Structure-Update.md)
+
 The organization scheme consists of two main mechanisms: sections and tags.
 
 ## Sections
