@@ -100,6 +100,7 @@ what about testing? -->
 - [Getting To Yes](https://www.amazon.com/dp/B004YZ4NCI/)
 - [Small Teaching](https://www.amazon.com/dp/B07SK8RQLW)
 - [Gap and the Gain](https://gapandgainbook.com/)
+- [Checklist Manifesto](https://en.wikipedia.org/wiki/The_Checklist_Manifesto)
 
 
 <!--
