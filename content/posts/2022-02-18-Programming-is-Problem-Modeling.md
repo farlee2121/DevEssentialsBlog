@@ -70,7 +70,7 @@ It's important to note, requirements in our "definition of done" are not just be
 
 ## Adaptability: Volatility Analysis as Essence Discovery
  
-![Volatility analysis](../site-media/../../static/post-media/IDesign-System/iDesignSolutionScubbing.png)
+![Volatility analysis](../site-media/../../static/post-media/IDesign-System/iDesignSolutionScrubbing.png)
 
 So far we've mostly explored how problem modeling applies to incremental story-level work. However, problem modeling is even more important for managing the big picture of inevitable change.
 
