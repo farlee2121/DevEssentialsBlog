@@ -3,6 +3,8 @@ date: "2022-09-16T00:05:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Anti-Examples"
+aliases:
+- /draft/open-closed-by-example/5-OCP-anti-examples
 ---
 
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post describes some approaches that may look like the OCP, but don't deliver the expected value.

@@ -3,6 +3,8 @@ date: "2022-09-16T00:00:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Introduction to OCP"
+aliases:
+- /draft/open-closed-by-example/0-intro-to-ocp/
 ---
 
 The [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle), one of the [SOLID principles](https://en.wikipedia.org/wiki/SOLID), is crucial to reusable code and insulated domains. This series will clarify the principle with examples.

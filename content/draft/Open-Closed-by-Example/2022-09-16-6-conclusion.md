@@ -3,6 +3,8 @@ date: "2022-09-16T00:06:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Conclusion"
+aliases:
+- /draft/open-closed-by-example/6-conclusion 
 ---
 
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post recaps what we've learned

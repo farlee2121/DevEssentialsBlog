@@ -3,6 +3,8 @@ date: "2022-09-16T00:01:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Flexibility Through Data"
+aliases:
+- /draft/open-closed-by-example/1-OCP-through-data 
 ---
 
 <!-- TODO: consider a flow more like the callback post. Start with the example, explain problems, show better example, explain benefits -->

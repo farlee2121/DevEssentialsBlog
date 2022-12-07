@@ -3,6 +3,8 @@ date: "2022-09-16T00:02:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Callbacks & Handlers"
+aliases:
+- /draft/open-closed-by-example/2-OCP-callbacks  
 ---
 
 <!-- TODO: Can I tie back to focusing the domain like I do with other posts in the series? -->
