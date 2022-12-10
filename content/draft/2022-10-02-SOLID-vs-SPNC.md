@@ -4,7 +4,7 @@ tags: []
 title: SOLID vs SPNC
 ---
 
-I previously enumerated a [set of properties](../draft/2022-09-25-Properties-of-self-documenting-code.md) that drive self-documenting code.
+I previously enumerated a [set of properties](../posts/2022-12-09-Properties-of-self-documenting-code.md) that drive self-documenting code.
 Is there really a need for another set of properties?
 <!--more-->
 
