@@ -1,5 +1,5 @@
 ---
-date: 2022-09-25
+date: 2022-12-09
 tags: []
 title: Properties of Self-Documenting Code
 ---
