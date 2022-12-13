@@ -3,13 +3,85 @@ date: 2022-11-29
 tags: []
 seriesId: Information Hiding by Example
 title: "Information Hiding by Example - Intro"
+draft: true
 ---
 
+<!--more-->
 
 TODO: 
 - [ ] motivations
 - [ ] draft/outline examples 
 
+Motivations
+- manage complexity (probably needs explained)
+- minimize scope needed to understand a piece of the program
+  - avoid spaghetti where you have to follow calls all over the system to understand a given piece of code
+- define durable contracts with changes less likely to cascade between components
+  - NOTE: I think people will relate to needing to change a whole vertical 
+- Uncover the nature of the problem you're solving? -> grouping change that happens together and separating changes that happen separately -> separating essence and accident -> domain modeling
+
+
+CROSS: [](../posts/../../posts/2021-11-12-BDD-pushes-the-right-extensibility.md)
+- "Software can choose an almost unlimited number of ways to be flexible, but not every kind of flexibility is relevant for a given project. Adding too much flexibility actually bogs down the system with unnecessary complexity. The most stable and high-return decompositions stem from understanding the fundamental nature of the problem we are solving."
+  - this could be a great line to pull in
+  - CON: it may be too far from general info hiding? Info hiding doesn't necessarily imply domain modeling, just that we choose modules by ability to completely hide decisions. 
+    - Domain modeling tends to be the best way to accomplish that.
+    - CROSS: SRP could be considered another view of info hiding, since it's about isolating a *reason* for change
+  - IDEA: maybe use something similar to his original example with sequence vs info hiding modularization, then expand that domain tends to be the best way to discern those boundaries
+  - CROSS: volatility-based decomposition
+
+https://en.wikipedia.org/wiki/Information_hiding
+
+![](../../../public/post-media/IDesign-System/iDesignSolutionScrubbing.png)
+- If I use this, then I should probably re-make it using drawio
+
+
+- UI? -> knowing about internal navigation of composed components?
+- local level: mutation?
+- class-ish level: exceptions, semantic values, leaky contracts
+- service level: side-effects
+  - configuration (including service locator), sequence expected
+across interfaces
+
+
+Q: What is the smallest and easiest to understand example of information hiding I can think of?
+- mutation is small scope, but maybe not very direct
+
+
+what is a good mutation example?
+- setting properties
+- looping with an accumulator (what about a cursor?)
+  - iterator pattern has become standard to the point most languages loop that way by default, which might actually make it a great candidate to start with because people already get it
+
+
+```cs
+TypeName cursor = null;
+for (int i = 0; i < 5; i++){
+    cursor = list[i] //hmm, no need for this since you could declare it in the loop, but iterator is still better. No index complexities
+}
+```
+
+```cs
+TypeName accumulator1; // maybe min, max, average?
+TypeName accumulator2;
+
+foreach(Item item in list){
+    accumulator1...
+}
+
+
+function int Min(TypeName list){
+
+}
+
+var min = Min(list);
+var max = Max(list);
+var average = Average(list);
+
+// shared loop is accidental. A very likely change is consuming these stats separately. 
+// If one state changes it doesn't effect the calculation of the other stats, so they should not be tied together
+// Follows SRP
+```
 
 probably start by creating my exhibits / examples, then write around those
 
@@ -51,4 +123,4 @@ across interfaces
 
 Frame info hiding with essence and accident?
 How I decide scope or what to separate is driven by essence and accident. What must be know versus what could we cut and still reason about the problem. What will always be true versus what only happens to be involved.
-Maybe bring in my graphic and explanation around that domain tree I made for idesign 
+Maybe bring in my graphic and explanation around that domain tree I made for idesign?
