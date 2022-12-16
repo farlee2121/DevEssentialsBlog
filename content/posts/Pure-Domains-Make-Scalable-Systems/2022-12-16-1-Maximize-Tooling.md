@@ -1,5 +1,5 @@
 ---
-date: "2022-05-05T01:00:00Z"
+date: "2022-12-16T01:00:00Z"
 tags: [Event Streaming, Dependency Rejection, Event-based Architecture, Domain Modeling Made Functional]
 title: "Pure Domains Make Scalable Systems: Maximize Tooling"
 seriesId: Pure Domains Make Scalable Systems
@@ -8,7 +8,7 @@ This series explores the scalability benefits of pure domains. This post explore
 <!--more-->
 <!-- TODO: I kinda feel like I should split this more -->
 
-I highly recommend you read the [series intro](./2022-05-05-Intro.md) if you are unfamiliar with pure domain modeling.
+I highly recommend you read the [series intro](./2022-12-16-0-Intro.md) if you are unfamiliar with pure domain modeling.
 
 ## Benefit: Maximize Event Tooling
 

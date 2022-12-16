@@ -1,5 +1,5 @@
 ---
-date: "2022-05-05T02:00:00Z"
+date: "2022-12-16T02:00:00Z"
 tags: [Event Streaming, Dependency Rejection, Event-based Architecture, Domain Modeling Made Functional]
 title: "Pure Domains Make Scalable Systems: Intelligent Concurrency"
 seriesId: Pure Domains Make Scalable Systems
@@ -7,6 +7,8 @@ seriesId: Pure Domains Make Scalable Systems
 
 This series explores the scalability benefits of pure domains. In this post we explore how pure domains enable sophisticated concurrency rules without modifying the domain.
 <!--more-->
+
+I highly recommend you read the [series intro](./2022-12-16-0-Intro.md) if you are unfamiliar with pure domain modeling.
 
 Horizontal scaling (e.g. more servers instead of more powerful servers) is key to scalability. 
 
