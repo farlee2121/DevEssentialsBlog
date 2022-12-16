@@ -5,7 +5,7 @@ title: "Pure Domains Make Scalable Systems: Batching and Nesting"
 seriesId: Pure Domains Make Scalable Systems
 ---
 
-This is a series exploring the benefits of pure domains for scalability. This post explores how pure domains reduce the rigidity of request and response timing and structure, enabling more control over our API experience.
+This series explores the benefits of pure domains for scalability. This post explores how pure domains reduce the rigidity of request and response timing and structure, enabling more control over our API experience.
 <!--more-->
 
 I think batching and nesting commands is the most surprising benefit of pure domains.

@@ -5,7 +5,7 @@ title: "Pure Domains Make Scalable Systems: Intelligent Concurrency"
 seriesId: Pure Domains Make Scalable Systems
 ---
 
-This is a series exploring the benefits of pure domains for scalability. In this post we explore how pure domains enable sophisticated concurrency rules without modifying the domain.
+This series explores the benefits of pure domains for scalability. In this post we explore how pure domains enable sophisticated concurrency rules without modifying the domain.
 <!--more-->
 
 Horizontal scaling (e.g. more servers instead of more powerful servers) is key to scalability. A event-based pure domain offers flexible concurrency control that maximizes horizontal scaling. 

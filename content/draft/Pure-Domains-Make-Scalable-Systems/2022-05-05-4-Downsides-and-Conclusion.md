@@ -5,7 +5,7 @@ title: "Pure Domains Make Scalable Systems: Downsides & Conclusion"
 seriesId: Pure Domains Make Scalable Systems
 ---
 
-This is a series exploring the benefits of pure domains for scalability. This post explores downsides of pure domains and concludes the series.
+This series explores the benefits of pure domains for scalability. This post explores downsides of pure domains and concludes the series.
 <!--more-->
 
 ## Downsides

@@ -4,7 +4,7 @@ tags: [Event Streaming, Dependency Rejection, Event-based Architecture, Domain M
 title: "Pure Domains Make Scalable Systems: Maximize Tooling"
 seriesId: Pure Domains Make Scalable Systems
 ---
-This is a series exploring the benefits of pure domains for scalability. This post explores how pure domains mesh well with common system tools: event streams, logging, and caching.
+This series explores the benefits of pure domains for scalability. This post explores how pure domains mesh well with common system tools: event streams, logging, and caching.
 <!--more-->
 <!-- TODO: I kinda feel like I should split this more -->
 
