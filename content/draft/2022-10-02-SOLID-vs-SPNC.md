@@ -45,7 +45,7 @@ SPNC covers concepts that SOLID does not, but the two principle sets do overlap.
 
 On the surface, naming and consistency are as important to design as they are to construction. Good design tools also enable conceptual clarity, thus better names and proximity of related concepts.
 
-Going deeper, comparing SOLID and SPNC helped me realize that [conceptual scope is the central theme of SOLID](../draft/2022-10-02-SOLID-is-about-scope.md). This makes sense. SOLID, as I understand it, is a distillation of design principles. Managing complexity through conceptual scope is the essence of software design.
+Going deeper, comparing SOLID and SPNC helped me realize that [conceptual scope is the central theme of SOLID](../posts/2022-12-23-SOLID-is-about-scope.md). This makes sense. SOLID, as I understand it, is a distillation of design principles. Managing complexity through conceptual scope is the essence of software design.
 
 I actually find it relieving that SOLID and SPNC overlap. Construction and design overlap significantly. It would be weird if a set of construction principles and a set of design principles didn't address some of the same concerns. Even better, I think SOLID and SPNC clarify each other. Scope is the most abstract member of SPNC, and SOLID is a compact toolbox to clarify scope. On the other side, I didn't realize the uniting theme of SOLID until I considered SPNC. I think identifying scope as the central theme of SOLID improves understanding of the whole set of principles.
 
