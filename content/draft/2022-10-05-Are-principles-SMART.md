@@ -23,7 +23,7 @@ This is a good framework for goals. However, does it apply to principles?
 Speaking of principles, SMART is a principle for setting goals. Is SMART SMART?
 
 - *Specific*: A little help from the template goes a long way. I'd say it's decently clear even without the template.
-- *Measurable*: I can't think any meaningful measures. One can recognize if a goal is SMART, but that's more of a review than a measure. Each property within is relatively boolean or rather subjective if quantified.
+- *Measurable*: I can't think any meaningful measures. One can recognize if a goal is SMART, but that's more of a review than a measure. Each SMART property is subjective and boolean rather than quantitatively measurable.
 - *Achievable*: Yes
 - *Realistic*: Yes
 - *Timely*: No. There is no timeframe for SMART. It is something you apply whenever you set a goal and it doesn't specify how often you set goals.
@@ -42,18 +42,24 @@ The [SOLID principles](https://en.wikipedia.org/wiki/SOLID) are probably the mos
 
 The analyses of SMART and SOLID look awfully similar. I think this is pointing to the nature of principles.
 
-I'm having a surprisingly hard time finding an official definition of design principles. IEEE published [a paper](https://ieeexplore.ieee.org/document/6301346) that outlines common expectations of principles
+I surprisingly couldn't find an official definition of design principles. Instead I've picked out some trends from the definitions I found.
+
+Most every definition of principles has some flavor of guiding decisions using established knowledge.
+
+For example, IEEE published [a paper](https://ieeexplore.ieee.org/document/6301346) that outlines common expectations of principles
 - "standards used to organize and arrange the structural components of Software Engineering design"
 - "build up common consensus about architectural knowledge"
 - "help beginners avoid traps and pitfalls"
 
-Most every definition of principles has some flavor of guiding decisions using established knowledge.
+<!-- Principles are for the right kairos not the right chronos -->
 
-I think this is why principles are not measurable or timely. They are a decision tool used any time certain kinds of decisions are made. They describe motivations and desirable qualities, not prescriptive action plans. They narrow the solution space so we can decide faster and more consistently.
+I think this is why principles are not measurable or timely. They are a decision tool used any time certain kinds of decisions are made. Principles are made for a certain opportunity or context, not a certain timeline. They describe motivations and desirable qualities, not prescriptive action plans. They narrow the solution space so we can decide faster and more consistently.
 
 By analogy, you could say that principles are more like a compass than an odometer. They tell us if we're going the right direction. They don't tell us how far we've gone.
 
 Principles are not about tracking over time. They're about improving the individual decisions on our way to any goal. 
+
+Principles are a good example of [Smooth is Fast](../draft/2022-11-20-flow-over-prediction.md). Taking time to build tools for making quality decisions smooths our process and permanently increases our velocity.
 
 ## Conclusions
 
