@@ -2,6 +2,8 @@
 date: 2022-11-20
 tags: []
 title: Smooth iteration over improved prediction
+aliases:
+- /draft/flow-over-prediction/
 ---
 
 I've been thinking about the estimation books sitting on my shelf. Why haven't I read them? They don't seem as critical as other reads. Estimation may be taking a back seat to improved iterative process.

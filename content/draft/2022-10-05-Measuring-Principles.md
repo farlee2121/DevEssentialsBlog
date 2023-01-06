@@ -6,7 +6,7 @@ title: "Measuring Principles"
 
 <!-- TODO: reconsider the title -->
 
-A [previous post](../draft/2022-10-05-Are-principles-SMART.md) got me thinking about how principles can be measured and what value such measure could provide. 
+A [previous post](../posts/2023-01-06-Are-principles-SMART.md) got me thinking about how principles can be measured and what value such measure could provide. 
 <!--more-->
 
 Principles highlight good or bad qualities to guide decisions. They don't outline prescriptive implementations. As such, principles manifest in diverse ways, many of them subjective. 
