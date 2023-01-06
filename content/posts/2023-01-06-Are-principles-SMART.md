@@ -1,5 +1,5 @@
 ---
-date: 2022-10-05
+date: 2023-01-06
 tags: [SOLID, Design Principles]
 title: Are principles SMART?
 ---
