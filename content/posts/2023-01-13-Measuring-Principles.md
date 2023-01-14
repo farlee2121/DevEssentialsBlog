@@ -1,12 +1,12 @@
 ---
-date: 2022-10-05
-tags: []
+date: 2023-01-13
+tags: [education, principles, measurement]
 title: "Measuring Principles"
 ---
 
 <!-- TODO: reconsider the title -->
 
-A [previous post](../posts/2023-01-06-Are-principles-SMART.md) got me thinking about how principles can be measured and what value such measure could provide. 
+A [previous post](../posts/2023-01-06-Are-principles-SMART.md) got me thinking about how principles can be measured and what value such measures could provide. 
 <!--more-->
 
 Principles highlight good or bad qualities to guide decisions. They don't outline prescriptive implementations. As such, principles manifest in diverse ways, many of them subjective. 
@@ -17,7 +17,7 @@ What could we gain from measuring principle usage itself?
 
 I can only think of one answer so far: to gauge how well a team understands principles and is using them to guide decisions. This would allow management to measure the outcomes of educational initiatives.
 
-From this standpoint, we could measure principles with a sort of audit. Experts outside of the team could periodically review a codebase for use of principles. This would likely be a sudo-random sampling of fairly recent code, including contributions from each member. The expert could count actualized and overlooked applications of the principles. This would set a rough benchmark for how well the team understands principles in their daily work.
+From this standpoint, we could measure principles with a sort of audit. Experts outside of the team could periodically review a codebase for use of principles. This would likely be a pseudo-random sampling of fairly recent code, including contributions from each member. The expert could count actualized and overlooked applications of the principles. This would set a rough benchmark for how well the team understands principles in their daily work.
 
 Similar measures could be collected by classifying and tracking defects found in code reviews. However, this is susceptible to shared blindspots within a team.
 
