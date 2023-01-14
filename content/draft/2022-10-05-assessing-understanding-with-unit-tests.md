@@ -65,13 +65,14 @@ public class CastingAndInheritanceTests
     public void AnAbstractTypeCanCastToTheConcreteType()
     {
         IBase abstr = new Child1();
-        Child1 concrete = (Child1)abstr;
+        // don't actually do this
+        Child1 concrete = (Child1)abstr; 
         Assert.Equal(abstr, abstr);
     }
 
     public interface IFoo
     {
-        public string Foo();
+        string Foo();
     }
     class NotDerived
     {
