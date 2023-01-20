@@ -2,7 +2,6 @@
 date: 2023-01-20
 tags: [learning, unit tests]
 title: Assessing Understanding with Unit tests
-draft: true
 ---
 
 I've been thinking of ways I can encourage students to get knowledge out of their head and experiment. Both so I can give feedback and to get them in the habit of checking their own understanding. I think unit tests might be an effective tool.
