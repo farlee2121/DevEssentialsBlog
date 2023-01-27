@@ -48,7 +48,7 @@ My mentee is teaching me too!
 
 Progress journals can help learners out of the pit. They are a research-backed tool for bolstering self-efficacy and highlighting progress a student has made. A tool they can carry into most any context!
 
-I feel so proud of my mentee. I can tell this habit has improved his confidence and appetite to learn. He is increasingly self-directed and is finding better ways to learn.
+I feel proud of my mentee. I can tell this habit has improved his confidence and appetite to learn. He is increasingly self-directed and is finding better ways to learn.
 
 <!-- Q: Explicitly call out that I'm excited to have a tool for helping students out of the pit? -->
 <!-- gap and the gain is Better Wrong Than Vague or a checklist of self-efficacy and positivity -->
