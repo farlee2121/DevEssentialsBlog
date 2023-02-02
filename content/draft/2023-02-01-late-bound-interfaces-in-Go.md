@@ -3,6 +3,7 @@ date: 2023-02-01
 tags: []
 title: Lessons from Late-bound inheritance in Go
 ---
+<!-- TODO: maybe have paul double check this post. My Go is still pretty iffy -->
 
 I heard Go had late-bound inheritance and was excited to see how that effected my thinking.
 Unfortunately, I don't think it effects my thinking (but it's still cool)
