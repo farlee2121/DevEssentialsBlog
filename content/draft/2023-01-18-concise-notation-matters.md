@@ -39,15 +39,92 @@ Here are a few examples where short syntax has effected how I program.
 F# has union types, which represent a set of alternatives that don't necessarily have the same data.
 
 ```fsharp
+type PaymentTypes = 
+| CreditCard of CardNumber * SecurityCode * Expiration * NameOnCard
+| ACH of (AccountNumber * RoutingNumber)
+| Paypal of IntentToken
 ```
 
 C# has no such concept, and the intent of the alternatives is not very clear with traditional class syntax.
 Thus, I rarely used union types in my C# even though I like using them in F#.
 
+```cs
+class PaymentType{}
+
+class CreditCard : PaymentType{
+    public readonly CardNumber CardNumber {get; init;}
+    public readonly SecurityCode CVV {get; init;}
+    public readonly Expiration ExpirationDate {get; init;}
+    public readonly NameOnCard Name {get; init;}
+
+    // constructor isn't strictly necessary, but it helps with concise initialization later on
+    public CreditCard(CardNumber cardNumber, SecurityCode cvv, Expiration expirationDate, NameOnCard name){
+      //...
+    }
+}
+
+class ACH : PaymentType{
+    public readonly AccountNumber AccountNumber {get; init;}
+    public readonly RoutingNumber RoutingNumber {get; init;}
+    
+    public ACH(AccountNumber accountNumber, RoutingNumber routingNumber){
+      //...
+    }
+}
+class Paypal : PaymentType{
+    public readonly IntentToken Token {get; init;}
+
+    public Paypal(IntentToken token){
+      Token = token;
+    }
+}
+```
+
 However, C# introduced positional records which allow a clear approximation of union types.
 Now I often use union-like records in C#.
 
 ```cs
+record PaymentType{
+    public record CreditCard(CardNumber CardNumber, SecurityCode CVV, Expiration ExpirationDate, NameOnCard Name) : PaymentType();
+    public record ACH(AccountNumber AccountNumber, RoutingNumber RoutingNumber) : PaymentType();
+    public record Paypal(IntentToken Token) : PaymentType();
+
+    private PaymentType(){} // private constructor can prevent derived cases from being defined elsewhere
+}
+```
+
+Effective pattern matching is also key to concisely consuming union-likes. C# previous would have required a bunch of type checks and casting.
+Now it can be done like this
+```cs
+public void HandlePayment(PaymentType paymentInfo){
+    paymentInfo switch {
+        CreditCard cardInfo => //...
+        ACH checkInfo => //...
+        Paypal paypalInfo => //...
+    };
+}
+```
+
+I have a [whole post](https://spencerfarley.com/2021/03/26/unions-in-csharp/) about unions in C#.
+
+### Function Composition
+
+In F#, there is an operator for composing two functions. That is, to create a new function that take the input of a function, passes the output to the next function, and returns the result of the second function.
+
+```fs
+let aToB (param: A) : B = //...
+let bToC (param: B) : C = //...
+let cToD (param: C) : D = //...
+
+let aToD = aToB >> bToC >> cToD
+```
+
+Achieving just that last line in C# looks like
+
+```cs
+public D AToD(A param){
+  return CToD(BToC(AToB(param));
+}
 ```
 
 ### Passing functions
@@ -57,13 +134,35 @@ F# uses a sophisticated type inference system. As such, function parameters ofte
 This makes it very simple to write functions that compose other functions.
 
 ```fsharp
+let tryWithFallback fSuccess fError input = 
+    try 
+        fSuccess input
+    with 
+    | e ->
+        fError input e
 ```
 
 C# can pass functions as parameters, but infers far fewer types. As such, functions that take other functions tend to be verbose and difficult to read.
 As such, it takes a much more compelling case for me to write higher-order functions in C#.
 
 ```cs
+public TOut TryWithFallback<TIn,TOut>(Func<TIn,TOut> fSuccess, Func<TIn, Exception, TOut> fError, TIn input)
+{
+    try
+    {
+        return fSuccess(input);
+    }
+    catch (Exception e)
+    {
+        return fError(input, e,);
+    }
+}
 ```
+
+This function doesn't make much sense in C#. It's not really better than directly using a try-catch.
+
+However in F#, functions like these [can be composed into very clean and readable pipelines](https://fsharpforfunandprofit.com/rop/).
+
 
 ## Conclusion
 In summary, syntax length matters. Ideas that take more effort to express are less likely to be expressed. 
