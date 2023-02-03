@@ -1,5 +1,5 @@
 ---
-date: 2022-10-16
+date: 2023-02-03
 tags: []
 title: Common Software Design Terms
 ---
@@ -10,7 +10,7 @@ finding official definitions. Here I'll try to define these terms and differenti
 
 I've also included other software design terms that I felt relevant and potentially nebulous. For each term I try to reference some official definition, informally explain the term, relate it to other design concepts, and provide examples. 
 
-I commonly reference the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3).
+I frequently reference the [Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3).
 
 <!-- Give some examples. Compare and contrast the terms against similar terms. focus on the value each category provides (like how my other post noticed principles are a compass. contrast with heuristic...  )
 
@@ -190,7 +190,7 @@ Smells
 ### Formal Definition
 SWEBOK section 2.3 defines architecture as "how software is structured and how the software’s components interact" or "the set of structures needed to reason about the system, which comprise software elements, relations among them, and properties of both".
 
-It insightfully separately defines *architectural style* as "a specialization of element and relation types, together with a set of constraints on how they can be used".
+SWEBOK insightfully separately defines *architectural style* as "a specialization of element and relation types, together with a set of constraints on how they can be used".
 
 Both of these are commonly referred to as architecture.
 
