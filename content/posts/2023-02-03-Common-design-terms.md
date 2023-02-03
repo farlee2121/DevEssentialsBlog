@@ -207,7 +207,7 @@ A good architecture style should default developers to good use of principles, p
 ### Examples
 
 Architecture: Examples require a concrete system. Here are some posts I've written with sample diagrams
-- [Open-closed Principle By Example](./Open-Closed-by-Example/2022-09-16-4-OCP-as-architecture.md)
+- [Open-closed Principle By Example](../draft/Open-Closed-by-Example/2022-09-16-4-OCP-as-architecture.md)
 - [Notification Case Study](../posts/2020-08-14-Notification-Design.md)
 - [Async Case Study](../posts/2020-09-11-Background-Task-Refactor.md)
 
