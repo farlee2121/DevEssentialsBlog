@@ -34,9 +34,18 @@ ShowReadingTime: false
 
 ## Educational And Overview Posts
 - [What's Your Duck (Series)](./posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md)
+- [Five Foundational Beliefs](./posts/2022-10-21-Five-Foundational-Beliefs.md)
 - [SWEBOK key Definitions](./posts/2022-01-14-SWEBOK-term-definitions.md)
 - [Pull Request Checklist](./posts/2022-02-11-Pull-Request-Checklist.md)
 - [Test Case Selection Guide](./posts/2022-01-28-Test-Case-Selection.md)
 - [Development Cycles Checklist](./posts/2022-01-21-Development-Cycles-Checklist.md)
 - [Sharp Dressed Code](./posts/2021-07-16-Well-Dressed-Code.md)
 - [Going Fast is Going Well](./posts/2021-01-29-Going-Fast-is-Going-Well.md)
+
+
+Educational techniques
+- [Better Interviews with Defect Detection](./posts/2022-06-12-Better-Interviews-with-Defect-Detection.md)
+- [Assessing Understanding with Unit Tests](./posts/2023-01-20-assessing-understanding-with-unit-tests.md)
+- [Progress Journals](./posts/2023-01-27-Progress-journal.md)
+- [Small Teaching Review](./posts/2022-03-07-Small-Teaching-Review.md)
+- [How Learning Works Summary](./posts/Summary-How-Learning-Works/2021-02-12-0-How-Learning-Works-Series-Intro.md)

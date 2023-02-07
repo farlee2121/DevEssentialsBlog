@@ -74,6 +74,7 @@ Then get into dev tests
   - behavior driven
  Using abstraction / decoupling from accident (thus against a domain-based abstraction not an implementation, even if abstraction is just public methods)
   - settle common questions like of tests make the data vs pre-seed, using mocks, concrete vs interface, how much integration...
+  - Don't forget degenerate cases.
 - I'd be nice to have something about tests as self-documenting code / domain modeling capturing a part of the problem often left out or poorly modeled, requirements (the why behind how the system got to now)
 
 Hmm. I'm getting into a bunch of properties I want represented. Remember to drive everything from motivations. What are we achieving? 
