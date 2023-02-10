@@ -1,7 +1,7 @@
 ---
 date: 2023-02-10
 tags: [testing]
-title: What fails, and what to test
+title: What fails and what to test
 ---
 
 Releasing frequently requires repeatable confidence that changes are safe.
