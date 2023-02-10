@@ -1,28 +1,27 @@
 ---
 date: 2022-10-18
-tags: []
+tags: [testing]
 title: What fails, and what to test
 ---
 
-Releasing frequently and confidently requires tests that reliably signal if the code works as expected.
-Reliably signaling health of the system requires covering the many failure modes of a system. So, what are those failure modes?
+Releasing frequently requires repeatable confidence that changes are safe.
+Reliably verifying system health requires covering the many failure modes of a system. So, what are those failure modes?
 <!--more-->
 
 ## Tighten the Net
 
-Software can fail in innumerable ways, and the importance of different failure modes differ per application.
-It's impossible and impractical to cover every kind of failure on every system.
+Software can fail in innumerable ways. It's impossible and impractical to cover every kind of failure on every system.
 
-Fortunately, we don't have to. We know that we expect our system to meet stated behavioral requirements, so start with those automated tests.
-Then, add automated tests for any errors that slip through beyond those tests. This will iteratively reduce the kinds of errors that can slip past tests and into production.
-It also intrinsically focuses effort on the most probable errors for each individual system.
+Fortunately, we don't have to. The test suite can be tailored to each application even without up-front understanding of the key failure modes for that application.
+
+Every system has expected behaviors. We have to know at least some of these to write the system. Start by encoding those as automated tests. Then, add automated tests for any errors that slip past those tests. This will iteratively reduce the kinds of errors that can slip past tests and into production. It also intrinsically focuses effort on the most probable errors for each individual system.
 
 This approach is called *tighten the net*.
 
 ## Enumerating Failure Modes
 
 Tightening the net is a very practical technique which doesn't require foresight about every kind of failure we might encounter.
-Still, I want to have a good mental map of those errors to better reason about system quality. 
+Still, I want to have a good mental map of errors types to better reason about system quality. 
 
 Here's an attempt at enumerating major categories of system failure
 
@@ -49,7 +48,7 @@ Here's an attempt at enumerating major categories of system failure
   - network failures
   - catestrophic failures (i.e. hardware dies)
   - insufficient resources (drive space, memory, etc)
-  - random failures (i.e. bit flips,)
+  - random failures (i.e. bit flips)
 - Malicious / Security
   - injection attacks
   - DDoS
