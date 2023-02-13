@@ -101,7 +101,7 @@ what about testing? -->
 - [Small Teaching](https://www.amazon.com/dp/B07SK8RQLW)
 - [Gap and the Gain](https://gapandgainbook.com/)
 - [Checklist Manifesto](https://en.wikipedia.org/wiki/The_Checklist_Manifesto)
-
+- [Dare to Lead](https://brenebrown.com/hubs/dare-to-lead/)
 
 <!--
 
