@@ -57,6 +57,44 @@ Q: Does this list represent a complete enough view of testing a reader could go 
 
 Up next: Try to outline series in more detail (perhaps make a slide deck of visuals/exhibits) to make sure my coverage flows, hits key points, and is tight enough.
 
+Q: How could I make this a "by example" series?
+- If it's anti-fragile tests by example
+  - Show decoupling from resources
+    - use same test api against in-memory store and other stores. Know the expectations are the same so you can have more confidence local tests are similar to integration tests without slowness
+      - bad example: tests using pre-seeded data
+      - bad example: tests writing to shared state/store (even if not pre-seeded, ordering could cause test to fail. Like if we add the get all in different tests simultaneously)
+    - Also need to show decoupling from config, since people tend to think of that differently
+    - if you have a library that supports it, you can use transactions to isolate calls and still work against the DB, but it is a much less general method
+  - Too much coupling to system (e.g. mocks)
+    - bad example: trying to test an intrinsically stateful action in isolation from its coupled methods
+    - good example: Behavior-based tests against consistent abstraction, a test-specific abstraction if needed (to add in coupled actions to check state)
+  - Excessive data prep
+    - bad example: Show constructing a big hierarchy example
+      - explicit example tests aren't necessarily bad, but a lot of them adds up to hesitation to change data structures
+    - Constrained indeterminism / have to think about shape of examples 
+      - Test Data pattern (change only what you need)
+      - Not a big deal if you use property tests. The can usually generate data for you.
+        - even stronger than test data because it can test many cases of the given shape. though sometimes the shape is hard to define and a more concrete example using TestData is an easier way to get started. Most of my tests have been property tests in the last 2-3 years. Can say that they are almost always possible once you have a bit of practice.
+  - Property tests and contrained indeterminism to fight edge cases
+    - highly related to excessive data prep. Arranging lots of data also inhibits desire to write more tests, so cases are more likely to get skipped.
+  - Multiple assertions & unclear failure context
+    - single assertions using a joined structure to compare all expectations at once
+    - may not make sense all the time, but I default to this kind of assertion now because the messages are so much more informative
+    - Likeness pattern
+    - use a DeepComparison if language doesn't easily support value-based equality
+  - Integration errors
+    - bad example: if your tests directly mock everything, you have to write whole new tests for integration
+    - good example: test api can simply run as integration tests with a bit of configuration
+  - Legacy systems and poor testability
+    - Again, test api to the rescue
+    - Some test qualities, like speed, may have to wait. At least you have a refactor roadmap driven by the tests.
+  - 
+
+Wow, the "by example" outline came together pretty quickly. I should probably write it this way then. I still want to cover high-level motivations though. I can do it as an extended version of what I did in 20x testing talking about good test qualities
+- Remember to tie each example back to a good test quality
+- Tie back to domain discovery / understanding the problem. Probably good to talk about in test case selection and in the overview
+- maybe talk about case selection early to set basis for how I'll be selecting tests across the series (behaviorally) to avoid fragile scenarios 
+
 <!-- 
 
 I think I explicitly focus only on dev tests, but to explain that focus properly I also need to frame what kinds of tests at at least a higher level. This leads to a great motivating question for framing. What kinds of tests are based in what things can go wrong.
