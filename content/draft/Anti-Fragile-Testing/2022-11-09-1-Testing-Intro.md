@@ -88,7 +88,7 @@ Q: How could I make this a "by example" series?
   - Legacy systems and poor testability
     - Again, test api to the rescue
     - Some test qualities, like speed, may have to wait. At least you have a refactor roadmap driven by the tests.
-  - 
+  - Advanced: reuse highly generic expectation sets, like a filter & sort experience
 
 Wow, the "by example" outline came together pretty quickly. I should probably write it this way then. I still want to cover high-level motivations though. I can do it as an extended version of what I did in 20x testing talking about good test qualities
 - Remember to tie each example back to a good test quality
