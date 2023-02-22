@@ -14,7 +14,7 @@ ShowReadingTime: false
 - [Better Interviews with Defect Detection](./posts/2022-06-12-Better-Interviews-with-Defect-Detection.md)
 - [Efficient Inter-Team Acceptance Tests](./posts/2021-10-31-Efficient-Inter-Team-Contracts-with-Acceptance-Tests.md)
 - [Test Types and Life Cycle Phases](./posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md)
-- [Test Api In Practice](./posts/2020-08-21-Test-Api-InPractice.md)
+- [TestApi In Practice](./posts/2020-08-21-Test-Api-InPractice.md)
 - [Going Fast is Going Well](./posts/2021-01-29-Going-Fast-is-Going-Well.md)
 - [Accessors: Services, Not Servants](./posts/2021-01-01-Accessors-Services-Not-Servants.md)
 - [Righting Software - Project Design Summary](./posts/2020-07-16-iDesign-Project-Summary.md)

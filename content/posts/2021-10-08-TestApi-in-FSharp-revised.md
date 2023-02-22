@@ -1,6 +1,6 @@
 ---
 date: "2021-10-08T00:00:00Z"
-tags: [F#, BDD, Test api, Testing]
+tags: [F#, BDD, TestApi, Testing]
 title: Test Api in F# Improved
 aliases:
 - /2021/10/08/testapi-in-fsharp-revised

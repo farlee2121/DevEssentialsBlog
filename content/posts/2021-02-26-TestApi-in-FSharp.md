@@ -1,6 +1,6 @@
 ---
 date: "2021-02-26T00:00:00Z"
-tags: [Testing, Test Api, F#]
+tags: [Testing, TestApi, F#]
 title: Test Api in F#
 aliases:
 - /2021/02/26/testapi-in-fsharp
