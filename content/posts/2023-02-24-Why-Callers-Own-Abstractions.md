@@ -1,5 +1,5 @@
 ---
-date: 2022-11-17
+date: 2023-02-24
 tags: [Dependency Inversion]
 title: Why callers own abstractions
 # title: How abstraction location affects bind time
