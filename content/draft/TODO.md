@@ -12,7 +12,7 @@ backup idea queue
 - Pact https://pact.io/
 - Realizing F# records can be inherited only when I studied scala and a tutorial mentioned the scala equivalent can't (been 4+ years) -> really don't need inheritance of concrete types for good design. I use it so little I didn't notice in 4+ years.
 - sub-domains as company responsibilities being an expression of SRP. Isolating competing design forces (look up notes from doug event storm) 
-- Socratic method, care, and curiosity
+- Socratic method, care, and curiosity (I think part of it was perspective taking, but I'll have to brush up a bit for this post)
 - OCP Q&A add-on post
 - try to make some incremental duck examples??
 -->

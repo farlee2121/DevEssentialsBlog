@@ -17,6 +17,9 @@ I can't speak for developers at large, let alone other roles, but here are some 
 - always starting with and constantly tying back to motivations of the work being done
 - hypothesis-test cycles
   - Usually Test-Driven Development or a similar test-code loop
+- Good naming & readability
+
+I don't practice it regularly, but I've also found it worthwhile to be familiar with my editor. Features like regex-based find and replace, multi-line editing, move line up/down, testing hot keys, and go to symbol are worth committing to muscle memory. These actions are so common that the time savings add up and it reduces breaks in flow.
 
 This idea was prompted by [Dare to Lead](https://brenebrown.com/hubs/dare-to-lead/), which considered the same for leadership. Great book.
 
