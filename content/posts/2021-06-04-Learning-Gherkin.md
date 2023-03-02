@@ -1,6 +1,6 @@
 ---
 date: "2021-06-04T00:00:00Z"
-tags: [Testing, BDD, Gherkin, DDD, TestApi]
+tags: [Testing, BDD, Gherkin, Domain-Driven Design, TestApi]
 title: Getting started with Gherkin
 aliases:
 - /2021/06/04/learning-gherkin

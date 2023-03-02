@@ -1,6 +1,6 @@
 ---
 date: "2021-06-11T00:00:00Z"
-tags: [Testing, BDD, Gherkin, DDD, TestApi]
+tags: [Testing, BDD, Gherkin, Domain-Driven Design, TestApi]
 title: Gherkin vs Test API
 aliases:
 - /2021/06/11/gherkin-vs-testapi

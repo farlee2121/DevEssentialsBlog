@@ -1,6 +1,6 @@
 ---
 date: "2021-04-09T00:00:00Z"
-tags: [Domain Driven Design, Events, Functional Programming]
+tags: [Domain-Driven Design, Events, Functional Programming]
 title: Progressive Modeling with Events, Transforms, and State
 aliases:
 - /2021/04/09/designing-with-events-transforms-and-state

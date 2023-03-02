@@ -1,6 +1,6 @@
 ---
 date: "2022-04-15T00:00:00Z"
-tags: [Domain Driven Design]
+tags: [Domain-Driven Design]
 title: Value Objects and Reuse
 aliases:
 - /2022/04/15/value-objects-and-reusability
