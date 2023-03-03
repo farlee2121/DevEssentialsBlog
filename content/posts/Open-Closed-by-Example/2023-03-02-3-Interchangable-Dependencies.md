@@ -1,5 +1,5 @@
 ---
-date: "2022-09-16T00:03:00Z"
+date: "2023-03-02T00:03:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Interchangable Implementations"
@@ -14,7 +14,7 @@ Probably still important to highlight issues with inheritance because it's so co
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate the OCP through interchangable and composable dependencies.
 <!--more-->
 
-I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and hightlights some motivating questions.
+I recommend you read the [series intro post](./2023-03-02-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and hightlights some motivating questions.
 
 In summary, the OCP illuminates how components can offer self-defined flexibility and adapt to caller needs without changing internally. This is much like how parameters
 enable functions to be resused by many consumers without changing the function.
@@ -125,7 +125,7 @@ However, this pattern will open up powerful possibilities that we'll explore mor
 
 
 ## System Example: Email Notification
-It's time for an extended example. We're revising the chat/messaging system from the [data](./2022-09-16-1-OPC-through-Data.md) post.
+It's time for an extended example. We're revising the chat/messaging system from the [data](./2023-03-02-1-OPC-through-Data.md) post.
 This time we want to sent users an email when they receive a message in chat.
 
 ### First Pass

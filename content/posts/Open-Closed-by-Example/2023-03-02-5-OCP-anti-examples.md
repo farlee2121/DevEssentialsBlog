@@ -1,5 +1,5 @@
 ---
-date: "2022-09-16T00:05:00Z"
+date: "2023-03-02T00:05:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Anti-Examples"
@@ -20,7 +20,7 @@ This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/
  -->
 
 ## Previous Examples
-Previous post in this series covered [Implicit data assumptions](./2022-09-16-1-OPC-through-Data.md#implicit-assumptions-are-not-flexibility) and [externally-owned abstractions](./2022-09-16-4-OCP-as-architecture.md#anti-example-externally-owned). Those are common traps to avoid, but I won't reproduce them here. 
+Previous post in this series covered [Implicit data assumptions](./2023-03-02-1-OPC-through-Data.md#implicit-assumptions-are-not-flexibility) and [externally-owned abstractions](./2023-03-02-4-OCP-as-architecture.md#anti-example-externally-owned). Those are common traps to avoid, but I won't reproduce them here. 
 
 
 
@@ -28,7 +28,7 @@ Previous post in this series covered [Implicit data assumptions](./2022-09-16-1-
 
 The focus of this post is a hard fail I managed early in my journey to understand the Open-Closed Principle.
 
-This example brings us back to the chat library. Before I [tried tags](./2022-09-16-1-OPC-through-Data.md#threads-using-tags), I tried to use generics to allow for caller-defined custom data.
+This example brings us back to the chat library. Before I [tried tags](./2023-03-02-1-OPC-through-Data.md#threads-using-tags), I tried to use generics to allow for caller-defined custom data.
 
 For example,
 ```cs

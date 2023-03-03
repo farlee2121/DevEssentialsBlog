@@ -1,5 +1,5 @@
 ---
-date: "2022-09-16T00:04:00Z"
+date: "2023-03-02T00:04:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: OCP as Architecture"
@@ -15,7 +15,7 @@ TODO: I like calling out that services become the lowest layer in the call chain
 This series clarifies the [Open-Closed Principle (OCP)](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post applies the OCP to the system level with architecture patterns like ports and adapters.
 <!--more-->
 
-I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. This post also leans heavily into ideas established in the previous [post on flexible behaviors](./2022-09-16-3-Interchangable-Dependencies.md).
+I recommend you read the [series intro post](./2023-03-02-0-Intro-to-OCP.md) if you haven't already. This post also leans heavily into ideas established in the previous [post on flexible behaviors](./2023-03-02-3-Interchangable-Dependencies.md).
 
 As a reminder, the Open-Closed Principle illuminates how components can adapt to caller needs without changing internally. Dependency Inversion (DI) is key to OCP with dependencies. When a component defines it's own dependency abstractions it can compose different dependency implementations without changing itself. Different callers can reuse that component's flow without changing the flow itself.
 
@@ -38,7 +38,7 @@ The answer depends, but is often *each own their own abstractions*. A service pr
 
 This pattern of fully self-defined services with connectors in-between is key to a composable architecture. 
 
-Many have rediscoved this idea. Consequentially, this pattern goes by many names: [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html), [Hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)), [Onion Architecture](2022-09-16-0-Intro-to-OCP.md), or Ports and Adapters.
+Many have rediscoved this idea. Consequentially, this pattern goes by many names: [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html), [Hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)), [Onion Architecture](2023-03-02-0-Intro-to-OCP.md), or Ports and Adapters.
 These approaches are [all fundamentally the same](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/).
 
 I generally say Ports and Adapters. I think it provides the best analogy for how the pattern works.
@@ -58,7 +58,7 @@ I'll discuss more benefits, but let's look at a more concrete example first.
 I've referenced a chat system for examples throughout this series. Now we'll look at the overall structure of the system.
 
 Specifically we'll focus on MessagingClient and its dependencies. MessagingClient is where the core domain logic happens. MessagingClient has four main dependencies 
-- IMessageNotifier: Notify when a message was sent. Covered in the [flexible behavior post](./2022-09-16-3-Interchangable-Dependencies.md)
+- IMessageNotifier: Notify when a message was sent. Covered in the [flexible behavior post](./2023-03-02-3-Interchangable-Dependencies.md)
 - IThreadAccess: Read or save thread information, not including messages in the thread
 - IMessageAccess: Read or save messages
 - IAttachmentAccess: Read or save attachments to messages
@@ -83,7 +83,7 @@ Now consider if MessagingClient owns its dependency abstactions (i.e. IMessageNo
 The dependency interfaces live in the same package as MessagingClient.
 Adapters *outside* of the MessagingClient's package map the dependency interfaces & data contracts to concrete implementations.
 
-We've [already seen](./2022-09-16-3-Interchangable-Dependencies.md) an example of this using IMessageNotifier. The same flexibility applies for each dependency.
+We've [already seen](./2023-03-02-3-Interchangable-Dependencies.md) an example of this using IMessageNotifier. The same flexibility applies for each dependency.
 
 Consider IAttachmentAccess. It could directly adapt to a 3rd-party storage service like S3, BlobStorage, or a CDN. Our application could also decide to centralize campaign documents and adapt IAttachmentAccess into a custom CampaignDocumentService. We could even use the different adapters to migrate between storage options.
 
@@ -103,7 +103,7 @@ Domain rules are usually the focus of system behavior. Ports and Adapters isolat
 
 ### Reusable Domain Rules & Diminishing Complexity
 
-The [last post](./2022-09-16-3-Interchangable-Dependencies.md) demonstrated how a single port enabled the MessagingClient to adapt to testing, new kinds of notifications, or even dynamic notification types without changing the core messaging client. The specific mix of notifications was also configurable per consumer of MessagingClient.
+The [last post](./2023-03-02-3-Interchangable-Dependencies.md) demonstrated how a single port enabled the MessagingClient to adapt to testing, new kinds of notifications, or even dynamic notification types without changing the core messaging client. The specific mix of notifications was also configurable per consumer of MessagingClient.
 
 This benefit extends to all kinds of services.
 

@@ -1,5 +1,5 @@
 ---
-date: "2022-09-16T00:02:00Z"
+date: "2023-03-02T00:02:00Z"
 tags: [SOLID, Design Principles]
 seriesId: "Open-Closed Principle by Example"
 title: "Open-Closed Principle by Example: Callbacks & Handlers"
@@ -12,7 +12,7 @@ aliases:
 This series clarifies the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) with examples. This post will demonstrate how the OCP can be achieved through flexible behaviors like callbacks. 
 <!--more-->
 
-I recommend you read the [series intro post](./2022-09-16-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and highlights motivating questions.
+I recommend you read the [series intro post](./2023-03-02-0-Intro-to-OCP.md) if you haven't already. It defines the Open-Closed Principle (OCP) and highlights motivating questions.
 
 In summary, the OCP illuminates how components can offer self-defined flexibility and adapt to caller needs without changing internally. This is much like how parameters
 enable functions to be resused by many consumers without changing the function.
