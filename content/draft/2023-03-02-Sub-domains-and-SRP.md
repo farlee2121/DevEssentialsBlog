@@ -1,7 +1,7 @@
 ---
 date: 2023-03-02
 tags: [Domain-Driven Design, SOLID, Single Responsibility Principle]
-title: 
+title: Sub-Domains That Follow the Single Responsibility Principle
 ---
 
 The [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle) applies even to identifying [sub-domains](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-decomposing-monoliths/decompose-subdomain.html).
