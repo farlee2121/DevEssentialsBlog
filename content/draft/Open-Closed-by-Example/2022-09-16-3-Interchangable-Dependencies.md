@@ -21,7 +21,7 @@ enable functions to be resused by many consumers without changing the function.
 
 ## Object Inheritance
 Most software students learn [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming).
-Class inheritance tends to be one of the first tools taught for modeling relationships.
+Class inheritance tends to be one of the first tools taught for modeling variable behaviors.
 <!-- , despite the principle to [favor composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance). -->
 
 Inheritance does offer some open-closed benefits. It is
@@ -81,7 +81,7 @@ class StripePaymentStrategy : IPaymentStrategy{
 }
 ```
 
-Interfaces offer the same basic open-closed value as object inheritance. The are closed because they define a fixed contract.
+Interfaces offer the same basic open-closed value as object inheritance. They are closed because they define a fixed shape.
 That is, they require method of specific names, parameters, and return types. They are also open for anyone to derive and supply a new implementation.
 
 Unlike objects, interfaces are abstract. You cannot directly create an instance of them.
@@ -91,21 +91,24 @@ Derivatives do not need to worry about parent state or existing behavior when de
 
 Dependency Inversion (DI) takes behavior extension to the next level. DI dictates that [*callers should own their own abstractions*](../../posts/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md).
 
-This means that a component, a class for example, should define it's own types instead of using types provides by another component.
+This means that a component, a class for example, should define its own dependency types instead of using types provided by another component.
 This usually means interfaces and [constructor injection](https://en.wikipedia.org/wiki/Dependency_injection#Constructor_injection) when it comes to behavior.
 
 ```cs
 class SignupWorkflow{
 
+  // The swappable behavior's interface
   interface IPaymentStrategy{
     void Pay(PaymentToken token);
   }
 
+  // Boilerplate constructor injection
   private IPaymentStrategy paymentStrategy;
   public SignupWorkflow(IPaymentStrategy paymentStrategy){
     this.paymentStrategy = paymentStrategy;
   }
 
+  // Using the injected dependency
   public SignUp(SignUpData signupData){
     //...
     paymentStrategy.Pay(signupData.PaymentToken);
@@ -117,8 +120,7 @@ class SignupWorkflow{
 Dependency Inversion (DI) is closed because a component (often a class) specifies the list of dependencies it requires and what those dependencies look like.
 DI is also open because consumers can swap in different implementations of those dependencies to change behavior. We'll see an example of that soon.
 
-DI may seem like it requires a lot of extra types that feel unnecessary. This is partially an artifact of common Object-Oriented language choices. The
-overhead is less in other type systems, like some functional languages. Sometimes the extra types really are unneeded overhead. 
+DI may seem like it requires a lot of extra types that feel unnecessary. This is partially an artifact of common Object-Oriented language choices. Other type systems, like some functional languages, require less overhead. Sometimes the extra types really are just overhead. 
 However, this pattern will open up powerful possibilities that we'll explore more deeply in the next post about system structure.
 
 
@@ -150,14 +152,14 @@ class MessageClient{
 }
 ```
 
-This works, but only with email from one email provider. Every user of this chat library is forced 
-to send email notifications and always by the same provider.
+This works, but only with email and only with one email provider. Every user of this chat library is forced 
+to send email notifications and always by the same email provider.
 
 ### Injection-based
 
 An injection-based approach better highlights the essence of the chat problem domain. 
 The chat library only cares about notifying users when they received a message. 
-It doesn't care if notification is email, in-app, push notification, physical mail, or other.
+It doesn't care if the notification is an email, in-app, push notification, physical mail, or other.
 
 The chat library can define it's own notification interface instead of depending on a specific notification method. Then consumers of the chat library can register any kind of notification they want.
 
@@ -170,7 +172,7 @@ interface IMessageNotifier{
 class MessageClient{
   private IMessageNotifier notifier;
   public MessagingClient(IMessageNotifier notifier){
-
+    this.notifier = notifier;
   }
 
   public SendMessage(){
@@ -202,7 +204,7 @@ class SNSMessageNotifier : IMessageNotifier{
 We aren't limited to just one notifier. Notifiers can be generically composed.
 Consider this AggregateNotifier. It takes a list of notifiers and calls all of them.
 We could send notifications my email, text, and in-app or even dynamically select strategies based on user notification preference. 
-All without changing the chat library or the individual notifiers.
+All this can be accomplished without changing the chat library or the individual notifiers.
 
 ```cs
 class AggregateNotifier : IMessageNotifier{
@@ -218,7 +220,7 @@ class AggregateNotifier : IMessageNotifier{
 }
 ```
 
-DI requires some extra types, but can dramatically reduce implementation complexity as requirements complexity increases.
+Dependency Inversion requires some extra types, but can dramatically reduce implementation complexity as requirements complexity increases.
 
 ## Testability
 Notifier implementations don't just have to be for production. We can swap out dependencies with ones custom-built for our testing. 
@@ -233,7 +235,7 @@ class MockMessageNotifier : IMessageNotifier{
 }
 ```
 
-Great testability tends to be one of the first benefits of DI.
+Great testability tends to be one of the first benefits of Dependency Inversion.
 
 ## Conclusion
 
@@ -241,4 +243,4 @@ The Open-Closed Principle pushes components to self-defined flexibility. Such co
 
 Interfaces and Dependency Inversion are foundational tools for achieving that flexibility with component dependencies.
 Components better represent their domain by defining their own dependency interfaces. 
-Consumers can then swap dependency implementations to compose new behaviors as the specific usecase become more complex.
+Callers can then swap dependency implementations to compose new behaviors as that caller's specific usecase becomes more complex.

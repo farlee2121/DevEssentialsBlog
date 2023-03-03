@@ -42,7 +42,7 @@ CustomData, however, can be any string.
 The caller can do anything they want with the field so long as it fits in a string.
 
 `Person` is also "closed". It knows the outer shape of CustomData is a string, so any internal operations on Person can handle CustomData uniformly.
-It can pass the data around or persist it safely as a string. We only hold on to the data to later return it to the caller as we received it. The inner structure of CustomData doesn't matter to our component.
+For example, it can pass the data around or persist it safely as a string. Person only holds on to the data to later return it to the caller as we received it. The inner structure of CustomData doesn't matter to our component.
 
 
 ## Tradeoff: Flexibility vs Operability
@@ -50,8 +50,8 @@ Data doesn't need to be completely unstructured to offer flexibility to callers.
 There is a gradient between flexibility and operability. 
 
 Decisions about data structure are always made somewhere, but who makes the decision [changes the dynamic](https://blog.ploeh.dk/2018/07/09/typing-and-testing-problem-23/).
-The more structure our component defines, the more operations we can perform on the data. 
-Less structure allows callers to fill in their own structures and enables greater flexibility, but at the cost of reducing what the called component can do with the data.
+The more structure our component defines, the more operations the component can perform on the data, but the less flexibility is left to callers.
+Conversely, less structure allows callers to fill in their own structures and enables greater flexibility, but at the cost of reducing what the called component can safely do with the data.
 
 ## Implicit Assumptions are Not Flexibility
 
@@ -73,10 +73,10 @@ function DoSomething(input){
 ```
 
 Passing this function anything but a non-zero integer will throw an exception.
-This function has specific expectations about the data it's passed. It just doesn't enforce them upfront.
+This function has specific expectations about the data it's passed. It just doesn't enforce those expectations upfront.
 
 If a component is going to leave flexibility for callers, it must not make any assumptions beyond what what it enforces.
-For example, our earlier `Person` type must only count on `CustomData` being a string and never assume there is some specific structure in the string, like json.
+For example, our earlier `Person` type must only count on `CustomData` being a string and never assume there is some specific structure in the string, like JSON.
 These kinds of implicit requirements cause semantic coupling and make a system very difficult to use.
 
 ## Tags
@@ -86,7 +86,7 @@ They enforce only a little structure, but that bit of structure is enough
 for many operations.
 
 For example, we might use an array of strings as tags on a recipe.
-Consumers have full control over the meaning of these tags, but recipe service can then filter, sort, or group recipes based on this tags without knowing their meaning.
+Consumers have full control over the meaning of these tags, but recipe service can then filter, sort, or group recipes based on the tags without knowing their meaning.
 
 ```cs
 class Recipe{
@@ -115,7 +115,7 @@ The marketing system requires that message threads are retrievable by
 
 ### Threads: First pass
 
-This first implementation does not consider Open-Closed Principle.
+This first implementation does not consider the Open-Closed Principle.
 The chat system is only part of the marketing application. So, it's tempting to directly 
 model the expected relationships between threads and marketing domain types. 
 This manifests as foreign keys on the the `Thread` and as different methods for fetching threads.
@@ -142,8 +142,8 @@ This approach has several problems.
 First, it's not open-closed. New thread groupings require new code. The thread requires a new foreign key and the client requires a new method for every new relationship. Any intersections between thread groupings also require new code.
 
 Second, the chat library depends on unnecessary ideas. Brands, Campaigns, and Influencers aren't an intrinsic part of chat.
-This prevents reuse of the chat system to new needs in our system, or an ever-increasing list of fields only used in certain situations.
-The chat system relies on information about each of its consumers.
+This prevents reuse of the chat sub-system to new needs in our system or results an ever-increasing list of fields only used in certain parts of the system.
+In either case, the chat system relies on information about each of its consumers.
 
 
 ### Threads: Using Tags
@@ -180,8 +180,10 @@ static class CampaignMessagingTagNames{
 
   public static Tag CampaignToTag(Guid campaignId) =>
       new Tag(Campaign, campaignId.ToString());
+
   public static bool IsCampaignTag(Tag tag) =>
       tag.Key == Campaign;
+      
   public static Guid TagToCampaignId(Tag tag) =>
       new Guid (tag.Value);
 }
@@ -189,22 +191,24 @@ static class CampaignMessagingTagNames{
 
 To look up a thread, the caller might query by an intersection of tags like
 ```cs
-threadClient.GetThreads(tags: new [BrandToTag(brandId), InfluencerToTag(influencerId)])
+threadClient.GetThreads(tags: new [
+  BrandToTag(brandId), 
+  InfluencerToTag(influencerId)])
 ```
 
-This tag approach separates [essence from accident](https://en.wikipedia.org/wiki/Accident_(philosophy)). It more clearly reflects the chat library's actual nature, often called it the domain. 
+This tag approach separates [essence from accident](https://en.wikipedia.org/wiki/Accident_(philosophy)). It more clearly reflects the chat library's actual nature. This underlying problem nature is often called the domain. 
 The chat domain is about managing conversation threads that can be retrieved by various groupings. The groupings themselves are unimportant.
 
-Clarifying th domain has made the chat library simpler and more powerful.
+Clarifying the domain has made the chat library simpler and more powerful.
 There is now only one function for querying threads by tags. It can query by any set of tags, not just the entity relationships. 
-There's also now a clear path for defining more sophisticated behaviors. For example, query all threads for x campaign *or* y brand.
-These tags aren't just for grouping. They can also be used for metadata.
+There's also now a clear path for defining more sophisticated behaviors. For example, quering all threads for x campaign *or* y brand.
+Plus, these tags aren't just for grouping. They can also be used for metadata.
 
 This tag-based approach is open because different callers can impress their own groupings or metadata into tags, but closed because callers don't need to modify the library to change the groupings or metadata.
 
 ## Conclusion
 
-The Open-Closed Principle pushes components to offer self-defined flexibility, to enable adapted behavior without changing for each consumer.
+The Open-Closed Principle pushes components to offer self-defined flexibility so callers can adapt behavior without changes to the reused component.
 
 This post explored how flexible data like tags adapt to the needs of different callers without knowing anything about those callers.
 

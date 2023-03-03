@@ -25,17 +25,17 @@ How has your perspective changed?
 
 ## Recap
 
-The Open-Closed Principle is one of the [SOLID](https://en.wikipedia.org/wiki/SOLID) principles, which defines it as
+The Open-Closed Principle is one of the [SOLID](https://en.wikipedia.org/wiki/SOLID) principles. It states
 > You should be able to extend the behavior of a system without having to modify that system. - Bob Martin 
 
-The OCP illuminates how components define contrained flexibility, allowing the component to adapt to caller needs without changing internally. This is much like how parameters
+The OCP illuminates how components offer flexibility defined on the component's own terms, allowing the component to adapt to caller needs without changing internally. This is much like how parameters
 enable functions to be resused by many consumers without changing the function.
 
-[Focusing too much on flexibility or reuse](./2022-09-16-5-OCP-anti-examples.md) can undermine expected value. Instead focus on isolating domains from each other. The OCP enables components to focus on the essence of their own problem domain and defer flexible details to other components.
+The OCP enables components to focus on the essence of their own problem domain and defer flexible details to other components. [Focusing too much on flexibility or reuse](./2022-09-16-5-OCP-anti-examples.md) can undermine expected value. Instead focus on isolating domains from each other. 
 
 Some of our primary tools to create this flexibility and independence are
-- [Flexible or semi-structured data](./2022-09-16-1-OPC-through-Data.md), like tags. This allows callers to imprint their own idea on data without requiring the component to handle the data differently. 
-- [Passing behaviors](./2022-09-16-2-OCP-callbacks.md) like event handlers and callback allow resuse of flows with interchangable behaviors
-- [Self-owned interfaces](./2022-09-16-3-Interchangable-Dependencies.md), which allow non-domain dependencies to be deferred for callers to inject later.
-- [Dependency Inversion with adapters](2022-09-16-4-OCP-as-architecture.md) to map between services, also known at the Ports and Adapters pattern. This allows services to become reusable libraries that are composed into different use cases as needed. This pattern also isolates cross-cutting concerns and integrations, allowing different system configurations to be accumulated and swapped rather than ripped and replaced.
+- [Flexible or semi-structured data](./2022-09-16-1-OPC-through-Data.md), like tags. This allows callers to imprint their own meaning on data without requiring the component to handle the data differently. 
+- [Passing behaviors](./2022-09-16-2-OCP-callbacks.md) like event handlers and callbacks allow resuse of flows with interchangable behaviors
+- [Self-owned interfaces](./2022-09-16-3-Interchangable-Dependencies.md) allow non-domain dependencies to be deferred for callers to inject later.
+- [Dependency Inversion with adapters](2022-09-16-4-OCP-as-architecture.md) to map between services, also known as the Ports and Adapters pattern. This allows services to become reusable libraries that are composed into different use cases as needed. This pattern also isolates cross-cutting concerns and integrations, allowing different system configurations to be accumulated and swapped rather than ripped and replaced.
 
