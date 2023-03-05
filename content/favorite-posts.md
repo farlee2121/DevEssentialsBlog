@@ -35,6 +35,7 @@ ShowReadingTime: false
 ## Educational And Overview Posts
 - [What's Your Duck (Series)](./posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md)
 - [Five Foundational Beliefs](./posts/2022-10-21-Five-Foundational-Beliefs.md)
+- [Open-Closed Principle By Example](./posts/Open-Closed-by-Example/2023-03-02-0-Intro-to-OCP.md)
 - [SWEBOK key Definitions](./posts/2022-01-14-SWEBOK-term-definitions.md)
 - [Pull Request Checklist](./posts/2022-02-11-Pull-Request-Checklist.md)
 - [Test Case Selection Guide](./posts/2022-01-28-Test-Case-Selection.md)
