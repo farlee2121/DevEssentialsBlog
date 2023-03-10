@@ -124,3 +124,7 @@ I also still believe there is a useful 2-axis gradient of stability and abstract
 This domain gradient informs how services should be composed and thus manages complexity by reducing mutual service dependencies. 
 
 
+## Conclusion
+
+In short, this visual helped me understand how Clean Architecture (and similar approaches) enable deferred composition of dependencies and a spectrum of when different kinds of decisions are bound.
+However, I now think that iDesign's role in separating kinds of cohesion is subsumed by domain-oriented "ports". There is no longer a need for concrete services for each cohesion layer. This reduces the difference between internal domain services and external implementations resulting is less layering and more stable systems.
