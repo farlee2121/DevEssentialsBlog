@@ -14,7 +14,7 @@ Volatility-based Decomposition is all about discovering what is likely to change
 
 The underlying design forces are the nature of the problem. This problem essence can be refined from user tasks or stories with questions like
 - Would a non-technical competitor do _____?
-- Would we be ______ business if we didn't do ____?
+- Would we be a ______ business if we didn't do ____?
 - If this business process was done on paper, would we do ___?
 
 I've previously used this visual to show use cases converging into underlying needs.
