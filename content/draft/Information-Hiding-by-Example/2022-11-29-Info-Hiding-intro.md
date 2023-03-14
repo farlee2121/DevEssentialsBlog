@@ -32,7 +32,7 @@ CROSS: [](../posts/../../posts/2021-11-12-BDD-pushes-the-right-extensibility.md)
 
 https://en.wikipedia.org/wiki/Information_hiding
 
-![](../../../public/post-media/IDesign-System/iDesignSolutionScrubbing.png)
+![](../../../static/post-media/IDesign-System/iDesignSolutionScrubbing.png)
 - If I use this, then I should probably re-make it using drawio
 
 

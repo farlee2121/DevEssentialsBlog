@@ -19,7 +19,7 @@ The underlying design forces are the nature of the problem. This problem essence
 
 I've previously used this visual to show use cases converging into underlying needs.
 
-![Shows different use cases converging to an underlying need much like tributaries into a river](../../public/post-media/IDesign-System/iDesignSolutionScrubbing.png)
+![Shows different use cases converging to an underlying need much like tributaries into a river](../../static/post-media/IDesign-System/iDesignSolutionScrubbing.png)
 
 This doesn't mean we don't leverage software-specific capabilities. It just means those capabilities likely aren't fundamental to the business and the details of how we achieve it might change.
 
