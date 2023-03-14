@@ -34,7 +34,7 @@ The Single Responsibility Principle states that each unit of code should have on
 
 ## Domain-Driven Design
 
-[Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) (DDD) urges programmers to reflect the business in their code. That includes type names, method names, and the decomposition sub-systems and components. 
+[Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) (DDD) urges programmers to reflect the business in their code. That includes type names, method names, and the decomposition of sub-systems and components. 
 
 For example, an e-commerce business will likely divide its workers into mostly separated roles like: purchasing, packing, delivery, and more. By DDD, this system would have sub-systems, or sub-domains, serving each of these division in the company. The programming teams and codebases may even be divided on those lines.
 
