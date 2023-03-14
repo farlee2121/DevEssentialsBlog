@@ -4,7 +4,7 @@ tags: [Domain-Driven Design, Volatility-based Decomposition]
 title: Domain-Driven Design and Volatility-based Decomposition Are Inseparable
 ---
 
-There are many ways to factor a system. I initially learned Volatility-based Decomposition. I not speak more in Domain-Driven Design terms. However, I consider this more a change in framing than a change factoring strategy.
+There are many ways to factor a system. I initially learned Volatility-based Decomposition. I now speak in more Domain-Driven Design terms. However, I consider this more a change in framing than a change in factoring strategy.
 <!--more-->
 
 First, let's overview the techniques to get on the same page.
@@ -23,22 +23,22 @@ I've previously used this visual to show use cases converging into underlying ne
 
 This doesn't mean we don't leverage software-specific capabilities. It just means those capabilities likely aren't fundamental to the business and the details of how we achieve it might change.
 
-Notifications are a prime example. A system may start by notifying users via email, but baking email notifications into flows around the code then it's very difficult to later add text, push, or other kinds of notifications. Isolating notifications from the business flows allows a much more centralized evolution of notifications.
+Notifications are a prime example. A system may start by notifying users via email. Since email is the only approach, it's tempting to bake email notifications directly into flows around the code. However, do so makes it very difficult to later add text, push, or other kinds of notifications. Isolating notifications from the business flows allows a much more centralized evolution of notifications, which are likely to change over time.
 
-Similarly, a business may want to transition from some paper-based or manual approval step into more automated solutions, but needs to maintain the manual processes during the transition. Isolating that manual flow under a consistent abstraction allows the two flows to be swapped or even run side-by-side.
+Similarly, a business may want to transition from some paper-based or manual step into more automated solutions, but needs to maintain the manual processes during the transition. Isolating that manual flow under a consistent abstraction allows the two flows to be swapped or even run side-by-side without other parts of the system changing.
 
 
 This is very similar to both the Single Responsibility Principle and Information Hiding.
-The Single Responsibility Principle stating that each unit of code should have one reason for change. Information Hiding dictates that code should be decomposed to hide how work is accomplished, thus minimizing conceptual scope, rather than decomposing based on steps, resource types, or other factors.
+The Single Responsibility Principle states that each unit of code should have one reason for change. Information Hiding dictates that code should be decomposed to hide how work is accomplished, thus minimizing conceptual scope, rather than decomposing based on steps, resource types, or other factors.
 
 
 ## Domain-Driven Design
 
-[Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) (DDD) urges programmers to reflect the business in their code. That includes type names, method names, and the decomposition sub-system and components. 
+[Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) (DDD) urges programmers to reflect the business in their code. That includes type names, method names, and the decomposition sub-systems and components. 
 
-For example, an e-commerce business will likely divide its workers into mostly separated roles like: purchasing, packing, delivery, and more. By DDD, this system would have sub-systems, or sub-domains, serving each of divisions of the company. The programming teams may even be divided on those lines.
+For example, an e-commerce business will likely divide its workers into mostly separated roles like: purchasing, packing, delivery, and more. By DDD, this system would have sub-systems, or sub-domains, serving each of these division in the company. The programming teams and codebases may even be divided on those lines.
 
-I recently wrote how [sub-domains satisfy the Single Responsibility Principle](../draft/2023-03-02-Sub-domains-and-SRP.md).
+I recently wrote how [DDD sub-domains satisfy the Single Responsibility Principle](../draft/2023-03-02-Sub-domains-and-SRP.md).
 
 ## DDD and Volatility Decomposition are Fundamentally Related
 
