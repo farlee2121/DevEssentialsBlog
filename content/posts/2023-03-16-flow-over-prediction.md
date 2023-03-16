@@ -1,6 +1,6 @@
 ---
-date: 2022-11-20
-tags: []
+date: 2023-03-16
+tags: [Continuous Integration, Continuous Deployment, Estimation]
 title: Smooth iteration over improved prediction
 aliases:
 - /draft/flow-over-prediction/
