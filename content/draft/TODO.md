@@ -12,4 +12,5 @@ backup idea queue
 - OCP Q&A add-on post
 - try to make some incremental duck examples??
 - urban planner over architect metaphor from Architecture Without Architects
+- flow over prediction related to distributed architecture over central planning
 -->
