@@ -13,7 +13,8 @@ I want to directly address the idea that moving quickly means bad code. Heavy de
 It's generally accepted that bad code slows you down, eventually. The [design stamina hypothesis](https://www.martinfowler.com/bliki/DesignStaminaHypothesis.html) represents the general relationship well. 
 
 <figure class="image">
-  <img src="{{site.url}}/post-media/Going-Fast/designStaminaGraph.gif" alt="Design Stamina Hypothesis">
+
+  ![Design Stamina Hypothesis](../../static/post-media/Going-Fast/designStaminaGraph.gif)
   <figcaption>Source: https://www.martinfowler.com/bliki/images/designStaminaGraph.gif</figcaption>
 </figure>
 <br />
