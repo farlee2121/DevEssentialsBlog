@@ -1,10 +1,10 @@
 ---
-date: 2022-11-28
+date: 2023-03-24
 tags: [observability, logging]
 title: Clear Observability Terms
 ---
 
-I never realized how sloppy my observability terminology was until I read the OpenTelemetry documentation.
+I never realized how sloppy my use of observability terminology was until I read the OpenTelemetry documentation.
 <!--more-->
 
 The docs offer concise and clear definitions, so I won't duplicate them here.
