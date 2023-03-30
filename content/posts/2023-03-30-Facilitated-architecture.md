@@ -2,7 +2,6 @@
 date: 2023-03-30
 tags: [Architecture, Design Process]
 title: "Architecture - Facilitated over Separated"
-draft: true
 ---
 
 I was asked what percentage of time I spend on system design (or architecture) over coding. The question didn't make sense to me, and I think I've articulated why. I see architecture as a facilitated aspect of implementation rather than a separable process.
