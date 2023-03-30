@@ -1,6 +1,6 @@
 ---
-date: 2022-12-18
-tags: []
+date: 2023-03-30
+tags: [Architecture, Design Process]
 title: "Architecture - Facilitated over Separated"
 draft: true
 ---
@@ -13,51 +13,54 @@ I've long believed that handing down designs to coders is not a recipe for succe
 This may have started with [What is Software Design](https://www.developerdotstar.com/mag/articles/reeves_design.html) by Jack Reeves, but has become interwoven with many of my beliefs about software. 
 
 I see [the whole software lifecycle as design](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md). 
-The details of implementation are part of clarifying the problem. Issues uncovered in implementation often reveal truths of the problem we're solving, details we overlooked from a higher viewpoint.
-Solving these problems is a matter of design and can undermine overarching information hiding efforts if done incorrectly.
-Thus, there is not mechanical implementation phase. Everything is design. There is no breakdown between design time and implementation time.
+The details of implementation are part of clarifying the problem being solved. Issues uncovered in implementation often reveal truths of the business problem we're solving.
+Solving these issues is can change modeled concepts, structure, and contracts. These are design choices and their impacts may not be small.
+Thus, there is no mechanical implementation phase. Everything is design. There is no breakdown between design time and implementation time.
 
-If all coding is design, and those design choices can under mine larger decisions, then 
+If all coding is design, and those design choices can undermine larger decisions, then 
 - all developers participate in system design
-- design checks must also span across the change lifecycle
+- design checks must continue through the work's whole lifecycle
 
-This poses some challenges. Not every contributor will have a robust understanding of design. 
-The task can't be centralized, yet there must also be quality control.
-Hand-holding more junior contributors at all times is not feasible, and regularly sending back work is demoralizing.
+As Alberto Brandolini said "it is the developer’s assumptions which get shipped to production".
+
+This poses some challenges. Not every contributor will have a robust understanding of software design. 
+The design can't be centralized, yet there must also be quality control.
+Hand-holding junior contributors at all times is not feasible, and regularly sending back work is demoralizing.
 
 So, the question is: how do we facilitate good design choices?
 
-I wish I had magical answer to that question.
+I wish I had a magical answer to that question.
 
 Some qualities I think are necessary
 - the process should grow contributors toward shared understanding
-- the team should have opportunity ensure key outcomes (and assume group ownership)
+- the team should have checkpoints to ensure key outcomes (and assume group ownership)
 - Decisions should be bounded to simplify the average contribution
 - expectations should be encoded and available to all 
 
 
 At first blush, these qualities mesh well with other techniques I already use.
 
-Domain-driven design identifies sub-domain, which are separable sub-problems.
+Domain-Driven Design identifies sub-domains, which are separable sub-problems.
 These sub-domains are effective boundaries for separting teams and creating high-level architectural boundaries.
-Making changes in other sub-domains requires consulting another team. This incentivized design choices isolated to only the owned sub-domain in order to avoid coordination with the other team.
-It doesn't prevent coupling one sub-domain to assumptions of the others, but it does bias those assumptions to public contracts rather than internal workings.
+Making changes in other sub-domains requires consulting another team. This incentivizes design choices isolated to the contributor's own sub-domain and that don't disrupt public contracts in order to avoid coordination with other teams. Wider impact changes automatically trigger extra review because they must been coordinated with other teams.
+Separated sub-domains don't prevent one sub-domain from depending on internal knowledge of another sub-domain, but separate ownership does limit the convenience of such coupling.
 
 Sub-domains are not locked in stone. They evolve over time as the team identifies separable elements of the problem they're solving.
-These sub-domains can be guided by senior developers and team deliberations, then bound the average contributions without requiring continual design guidance from senior contributors.
-Team-agreed domain boundaries also set a shared basis for review feedback. Review feedback can then grow each contributors understanding of the domain instead of potentially feeling like disconnected advice.
+These sub-domains can be guided by senior developers and team deliberations. They then bound the scope of average contributions without requiring continual design guidance from senior contributors.
+
+Domain models also set a shared mental model for review feedback. Relating feedback to the domain model can grow shared understanding within the larger picture of the domain. This sets context for feedback both within a review and over time. Consistent context improves learning and decreases situations where feedback feels arbitrary.
 
 Architectural decision records (ADRs) are another tool tool that guides system design without handing down individual decisions.
-ADRs are simple documents capture some practice the team has decided to follow along with motivations for the decision and, usually, examples.
+ADRs are simple documents that capture a practice the team has decided to follow along with motivations for the decision and, usually, examples.
 ADRs can cover a wide variety of practices like design patterns, applications of certain technologies, naming schemes, and more.
 The key is that they are recorded and available to everyone. They set a baseline of shared expectation that can be debated and improved.
-They also make reviews more objective.
+They also make reviews more objective since there is a baseline for expectations.
 
 Pull requests are the key process step where design standards like domain models and ADRs can be enforced.
-The standard also improve pull requests by setting clear and consistent expectations.
+These standards also improves pull requests by setting clear and consistent expectations.
 
 Overall, I'm quite satisfied with this new articulation of how system design fits into team processes.
-I think it also clarifies the role of existing techniques like Domain Modeling and Architectural decision records.
+I think it also clarifies the role of existing techniques like Domain Modeling and Architectural decision records. It also clarifies how control and high-level guidance can achieved without centralization.
 
 <!-- something about why clear standards for review are so important
 - junior contributor has a big picture to connect feedback into
