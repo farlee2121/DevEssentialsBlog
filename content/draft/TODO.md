@@ -13,4 +13,6 @@ backup idea queue
 - try to make some incremental duck examples??
 - urban planner over architect metaphor from Architecture Without Architects
 - flow over prediction related to distributed architecture over central planning
+- picard leadership?
+- new langauge about event and commands (fact vs intent), events change how we interpret state of system
 -->
