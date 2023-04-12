@@ -1,6 +1,6 @@
 ---
 date: 2023-02-10
-tags: []
+tags: [Testing]
 title: Footwork for Developers
 ---
 
@@ -18,6 +18,12 @@ I can't speak for developers at large, let alone other roles, but here are some 
 - hypothesis-test cycles
   - Usually Test-Driven Development or a similar test-code loop
 - Good naming & readability
+
+Several seasoned developers I respect write about intentional practice of small increments. Some examples are
+- Mark Seemann's [diamond kata](https://blog.ploeh.dk/2015/01/10/diamond-kata-with-fscheck/) or [roman numeral kata](https://blog.ploeh.dk/2016/06/28/roman-numerals-via-property-based-tdd/), 
+- Robert Martin's [terrain generation](https://blog.cleancoder.com/uncle-bob/2017/01/09/DiamondSquare.html)
+- Martin Fowler's whole book [Refactoring](https://refactoring.com/).
+
 
 I don't practice it regularly, but I've also found it worthwhile to be familiar with my editor. Features like regex-based find and replace, multi-line editing, move line up/down, testing hot keys, and go to symbol are worth committing to muscle memory. These actions are so common that the time savings add up and it reduces breaks in flow.
 
