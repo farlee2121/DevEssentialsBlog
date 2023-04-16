@@ -1,5 +1,5 @@
 ---
-date: 2023-01-18
+date: 2023-04-16
 tags: []
 title: Concise Notation Matters
 ---
@@ -8,8 +8,8 @@ Of all things, a sci-fi novel recently got me thinking about the importance of n
 In short, syntax length impacts the kinds and sophistication of ideas.
 <!--more-->
 
-The sci-fi book was [Canticle for Leibowitz](https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz). Some characters discover an ancient document with [sum notation](https://en.wikipedia.org/wiki/Summation#Notation).
-They marvel at the concise representation of so much information and wonder at all the ideas that hadn't even considered that might be explored.
+The sci-fi book was [Canticle for Leibowitz](https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz). Some scholars of a regressed humanity discover an ancient document with [sum notation](https://en.wikipedia.org/wiki/Summation#Notation).
+They marvel at the concise representation of so much information and wonder at all the ideas they hadn't even considered that could be explored.
 
 I've long learned that we should program *into* langauges in not *in* them. In other words, create your design based on your needs and figure out how the language can achieve it instead of basing your design on available language features. I also have long loved static language. Popular static languages like Java and C# have developed a reputation of lots of "ceremony" or unnecessary syntax to express an idea.
 Many have turned to dynamic languages because of this. This is a false dichotomy, however. Static languages can also have low ceremony. [F#](https://fsharp.org/) is a great example.
@@ -18,18 +18,16 @@ Still, the concern over ceremony is valid.
 
 The longer or more effortful an idea is to express, the less likely we are to express it.
 Just look at natural languages. Most anything we say often quickly gets a shortened form.
-However, programmers can't abbreviate syntax like we do words. Long ideas just don't get expressed as often.
+However, programmers can't abbreviate syntax like we do with words. Instead, ideas with inconvenient syntax don't get expressed as often.
 Longer syntax can also take more time to understand, and understandability is one of the most important factors for long-term maintainability of a system.
 
 
 The [Sapir-Whorf hypothesis](https://en.wikipedia.org/wiki/Linguistic_relativity) suggest that the language we use influences and may be limit the thoughts humans have.
 
 This certainly seems to be important in math and scientific fields. The effectiveness of notation is often related to the growth of ideas.
-Ideas can grow more complex by reducing current ideas into more terse communication. I'm thinking of examples like chemical notation. Describing the states and relationships of atoms is much less efficient than the [notation](https://en.wikipedia.org/wiki/Chemical_formula) we use to show elements and bonds. This itself requires the terse shared notation of the periodic table. We've taken chemical notation further with special representations for common combinations, like [Benzine rings](https://en.wikipedia.org/wiki/Benzene). Each of these steps in notation cemented a shared concept in a way that enables more efficient communication, which in turn enables us to reason about more complex ideas.
+Ideas can grow more complex by reducing current ideas into more terse communication. I'm thinking of examples like chemical notation. Using prose to describe the states and relationships of atoms is much less efficient than the [notation](https://en.wikipedia.org/wiki/Chemical_formula) we use to show elements and bonds. This itself requires the terse element notation of the periodic table. We've also taken chemical notation further with special representations for common combinations, like [Benzine rings](https://en.wikipedia.org/wiki/Benzene). Each of these steps in notation cemented a shared concept in a way that enables more efficient communication, which in turn enables us to reason about more complex ideas.
 
 To clarify, I don't think shorter is always better. Many code understandability violations are made in the name of conciseness. Understandability is of first importance. Conciseness can be an aid understandability, and clear concise notation can lead to new ideas and expressions. However, never be more concise than clear.
-
-<!-- TODO: Give examples of ideas I can express that I couldn't before. Perhaps records for union-likes, unions. Also passing functions and all the typing complexity in c# vs F# -->
 
 
 ## Programming Samples
@@ -45,7 +43,7 @@ type PaymentTypes =
 | Paypal of IntentToken
 ```
 
-C# has no such concept, and the intent of the alternatives is not very clear with traditional class syntax.
+C# has no concept of unions, and the intent of the alternatives is not very clear with traditional class syntax.
 Thus, I rarely used union types in my C# even though I like using them in F#.
 
 ```cs
@@ -80,7 +78,7 @@ class Paypal : PaymentType{
 }
 ```
 
-However, C# introduced positional records which allow a clear approximation of union types.
+However, C# introduced positional records which allow a concise approximation of union types.
 Now I often use union-like records in C#.
 
 ```cs
@@ -109,8 +107,9 @@ I have a [whole post](https://spencerfarley.com/2021/03/26/unions-in-csharp/) ab
 
 ### Function Composition
 
-In F#, there is an operator for composing two functions. That is, to create a new function that take the input of a function, passes the output to the next function, and returns the result of the second function.
+In F#, there is an operator for composing two functions. That is, to create one new function that does the same work as the two original functions.
 
+In F# we can compose three functions together like this.
 ```fs
 let aToB (param: A) : B = //...
 let bToC (param: B) : C = //...
@@ -119,9 +118,35 @@ let cToD (param: C) : D = //...
 let aToD = aToB >> bToC >> cToD
 ```
 
-Achieving just that last line in C# looks like
+In C#, achieving just that last line of F# looks like
 
 ```cs
+public D AToD(A param){
+  return CToD(BToC(AToB(param));
+}
+```
+
+Here the difference is not just density, but also order. F#'s composition operator allows the composition to be read left to right with no scope tracking.
+C#'s approach requires the user to read from the inside out of a series of nested scopes. 
+
+If we compose multi-argument functions the difference becomes even more significant.
+F# can partially apply information known beforehand
+
+```fsharp
+let aToB (config: Config) (param: A) : B = //...
+let config = //...
+let aToD = aToB config >> bToC >> cToD
+```
+
+C# would have to create additional functions to do the same. Something like
+
+```cs
+public B AToBWithConfig(Config config, A param){
+    //...
+}
+
+var config = /*...*/;
+var AToB = (a) => AToBWithConfig(config, a);
 public D AToD(A param){
   return CToD(BToC(AToB(param));
 }
@@ -143,7 +168,7 @@ let tryWithFallback fSuccess fError input =
 ```
 
 C# can pass functions as parameters, but infers far fewer types. As such, functions that take other functions tend to be verbose and difficult to read.
-As such, it takes a much more compelling case for me to write higher-order functions in C#.
+It takes a much more compelling case for me to write higher-order functions in C#.
 
 ```cs
 public TOut TryWithFallback<TIn,TOut>(Func<TIn,TOut> fSuccess, Func<TIn, Exception, TOut> fError, TIn input)
