@@ -1,0 +1,38 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"}]}}
+
+#!fsharp
+
+type Id = Id of Guid
+type Thing  = {Id: Id }
+type IDoThings = {
+    GetThing: Id -> Thing option
+    CreateThing: Thing -> unit
+    ListThings: unit -> Thing list
+    DeleteThing: Id -> unit
+}
+
+let mutable things : Thing list = []
+
+let matchId id thing= thing.Id = id
+let InMemoryDoThings = {
+    GetThing = (fun id -> things |> List.tryFind (matchId id))
+    CreateThing = (fun thing -> things <- thing :: things)
+    ListThings = (fun _ -> things)
+    DeleteThing = (fun id -> things <- (things |> List.filter (not << (matchId id))))
+}
+
+
+let deleteAll (api:IDoThings) = 
+    api.ListThings ()
+    |> List.map (fun thing -> api.DeleteThing thing.Id)
+
+let inline randomThing _ = {Id = Id (Guid.NewGuid())}
+List.init 5 randomThing |> List.map InMemoryDoThings.CreateThing
+
+InMemoryDoThings.ListThings().Display()
+
+deleteAll InMemoryDoThings
+
+InMemoryDoThings.ListThings().Display()
