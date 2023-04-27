@@ -1,6 +1,6 @@
-github.com/adityatelange/hugo-PaperMod v0.0.0-20220624153009-9af128a8a638 h1:PGJb+GtnP160sAixalWhrMPfxnN8QN3k+X/99PT3kTc=
-github.com/adityatelange/hugo-PaperMod v0.0.0-20220624153009-9af128a8a638/go.mod h1:HCHxNMKYdGafUYjVV3ICiAqznZK2yH0iI53jqcDFDdQ=
-github.com/danielfdickinson/image-handling-mod-hugo-dfd v0.4.1 h1:zVvnRgWDdVy/xiK7ZP99M6fyjemXLUA57UNTpozlcKo=
-github.com/danielfdickinson/image-handling-mod-hugo-dfd v0.4.1/go.mod h1:WFjQtUdhBGFndQVaMo5UoXcKRxyAZ6dtxOea27J0ccE=
-github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.1 h1:kujYarppbu4laEsv1P53xGGgkep+bQBsO7FhPIj98Sg=
-github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.1/go.mod h1:inb1U/NMQWMjoDBEhpabB/cI06SkgWnbM4dHKFHCG60=
+github.com/adityatelange/hugo-PaperMod v0.0.0-20230423144510-be5badf31756 h1:4qW3Ie2JxW1Q2YhyPMLPI49/jPMt5coFOdYwgTgWdRI=
+github.com/adityatelange/hugo-PaperMod v0.0.0-20230423144510-be5badf31756/go.mod h1:HCHxNMKYdGafUYjVV3ICiAqznZK2yH0iI53jqcDFDdQ=
+github.com/danielfdickinson/image-handling-mod-hugo-dfd v0.0.0-20230419160934-1d06778e0d2e h1:wu9iqawK0POBaPP3nFpVWAKQiSubDM7AdGDGsonRbl8=
+github.com/danielfdickinson/image-handling-mod-hugo-dfd v0.0.0-20230419160934-1d06778e0d2e/go.mod h1:PKb7pGYDJO23NhRgFAf25DxUqELpEHHidbLBCwte09Y=
+github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.2 h1:hRLX/qaBWrGAIGTRFnG2vTygF3LIZDIDCJI7Az962kc=
+github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.2/go.mod h1:ajYr1qZHU5FJloKLT9rF8jSzKhuv5uSzQ/kA5M1vsY8=
