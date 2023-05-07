@@ -27,7 +27,8 @@ TODO:
   - [ ] concepts
   - [ ] curiosity, overview, key callbacks / tie-ins 
 - [ ] Validate the flow
-- [ ] Draft key figures
+- [ ] Draft key figures 
+  - [ ] consider using the chat system over TODO to be consistent with OCP series
 - [ ] Practice & rearrange until satisfied
 - [ ] Write it out
 - [ ] might be nice to revisit small teaching overview and see if I can incorporate more teaching techniques
