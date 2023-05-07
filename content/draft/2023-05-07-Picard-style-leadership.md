@@ -4,6 +4,7 @@ tags: [Leadership]
 title: Picard-style Leadership
 ---
 
+<!-- TODO: this hook is a bit weak -->
 Star Trek holds some surprising insights into leadership.
 <!--more-->
 
@@ -31,12 +32,12 @@ Picard has deep experience. There are probably many situations where he goes int
 I think this is a key part of his leadership style. It's essential to many of the benefits above. He doesn't feel the need to be heard, but to hear others. I think is suggests we can also learn about what leadership is *not* from Picard.
 
 Some qualities that are *not* key to leadership, but are sometimes portrayed as leadership
-- Leading is more about hearing others than being heard
-- Leading is more about valuing others than being valued
+- A leader is not the most valued team member. Leading is more about valuing others than being valued
+- A leader shouldn't just be the person everyone has to listen to. Leading is more about hearing others than being heard
 - Leaders aren't necessarily experts in the skills they oversee
 - Leaders aren't independent. The higher you go in leadership, the less of your responsible outcomes are something you could accomplish by yourself.
 - A leader needn't be a critic or an explainer. There are other effective (and more empowering) ways to generate good ideas or educate.
-- A leader isn't necessarily a problem solver. They can guide others to devise their own solutions without providing solutions directly. 
+- A leader isn't necessarily a problem solver. They can guide others in exploring solutions without providing solutions directly. 
 
 
 
