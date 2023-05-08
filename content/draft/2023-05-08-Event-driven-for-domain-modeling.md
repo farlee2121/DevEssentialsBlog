@@ -42,15 +42,54 @@ I first learned about event storms from Scott Wlaschin's [Domain Modeling Made F
 
 Exploration would start with the high level workflow that maps the command to a result. The result being any, and possibly multiple, of the events.
 Then start asking what each of those look like and stub out for child types until you've reached the bottom or decided enough detail has been covered.
+All of this communicated in some semi-formal language to balance readability with enough clarity to expose gaps in understanding.
 
-A model in his style might look like
 
+For our semi-formal language let's defin
+- `->` indicates a transform. Like `CancelOrderRequest -> CancelOrderResult` means take a CancelOrderRequest and return a CancelOrderResult
+- `|` means alternatives. Like `type Answers = | Yes | No` 
+- Data inside brackets lives together `type Person = {Name: FullName; Address: PostalAddress}`
+- `*` indicates `AND` when a flow requires multiple pre-conditions. A comma could be used instead.
+
+A model in his style might look like this.
 ```fsharp
+type CancelOrder =  ((OrderId -> OrderExists?) * OrderFulfillmentStatus) * CancelOrderRequest -> CancelOrderResult
+
+type OrderId = // must be unique, and easy for a customer to read to a support agent
+
+type CancelOrderRequest = {
+  OrderId: OrderId
+  Reason: ShopperCancelReason
+}
+  type ShopperCancelReason = 
+    | FoundBetterPrice
+    // Q: What reasons might a shopper cancel their order for?
+
+
+type CancelOrderResult = 
+  | Success of
+    | OrderCanceled
+  | Error of
+    // Q: What ways can an order fail that might change the message to consumers? 
+    | OrderAlreadyInFulfillment
+    | OrderNotFound
+
+  type OrderCanceled = {
+    // Q: what do we need to notify others?
+    OrderId: OrderId
+    Reason: CancelReason
+  }
+
+  type CancelReason = 
+    // Q: What groups would have distinct reasons for cancelling?
+    | ShopperCancelReason
+    | SellerCancelReason
+    | WarehouseCancelReason
 
 ```
 
 Surprise! This is nearly valid F# syntax. I made a few light tweaks to make it more generally intuitive, but nothing that couldn't be fixed algorithmically.
-F# can be used as a fairly intuitive semi-formal convention to refine the event storm with non-developers, but then it is already a valid set of types modeling the domain.
+F# can be used as a fairly intuitive semi-formal convention to refine the event storm with non-developers, but it is already a valid set of types to start a code base from.
 
 The code design approach here is called Functional Core or Event-Driven Architecture. The idea is that the business rules are [pure functions](https://en.wikipedia.org/wiki/Pure_function), 
 they don't cause any observable state change. Instead they return values, in this case the events, which represent state changes that can be enacted by simple mapping functions.
@@ -73,49 +112,42 @@ This devolved quickly for several reasons. First, C# anonymous functions are not
 grouping command flows into modules or services. It also more clearly makes our model seem like code.
 
 ```cs
-// show some ugly code
+Func<CancelOrderRequest, CancelResult> CancelOrder; //Wat?
+// OR
+interface ISomeAggregateResponsibility { // I don't want to name this yet
+  CancelResult CancelOrder(CancelOrderRequest cancelOrderRequest);
+}
 ```
 
 Second, C# doesn't have a concise syntax for alternative data cases. We can model the command just fine, but the events would all have to inherit from a base class.
 It clearly becomes code
 
 ```cs
-//show some ugly code
+record ShopperCancelReason{
+  record FoundBetterPrice(RetailerWithBetterPrice retailer): ShopperCancelReason {};
+  record OrderedByAccident(): ShopperCancelReason;
+  //...
+}
 ```
 
 In C#, we have to use a constructor (or currying) if we don't want to pass dependencies on every function call. This starts pulling us into concrete types and draws more code-specific concerns into the picture.
 
 Overall, C# doesn't work well as a semi-formal specification. There are too many concerns that force a compromise between C# syntax and avoiding code-specific concerns.
+This is a deal breaker for working with non-developers, but also tempts developers to preemptively dive into code details.
+
+   <!-- CROSS: [concise syntax matters](../posts/2023-04-16-concise-notation-matters.md) -->
+
 
 ## Translating to F# with stateful dependencies
 
-I thought perhaps a Ports and Adapters-style model would fair better in F# because F# has unions, readable anonymous function types, and can partially apply functions to handle dependency management.
+I thought perhaps a Ports and Adapters-style model would fair better in F# because F# has readable anonymous function types, readable alternative value types, and can partially apply functions to handle dependency management.
 
-However, this style of modeling still didn't feel good in F#. The translation from events to types is less direct and functions have way more dependencies which decreases readability.
+However, this style of modeling still didn't feel good in F# either. The translation from events to types is less direct. The functions have way more dependencies which decreases readability.
 Most importantly, the concerns added to the process don't have any benefit for domain modeling, they are purely code design concerns. Non-developer don't care how or where state in enacted.
 
 ## Conclusion: Event-Driven Modeling  Wins
 
-My conclusion was that event-driven modeling is still the winner for refining event storms into high level models.
+My conclusion is that event-driven modeling is still the winner for refining event storms into high level models.
 The translation is clear and it can be done with non-technical stakeholders. There is no loss of information if the code is actually implemented in a different style.
-The important details needed from stakeholders are all still there. The translation to other styles is purely a coding concern that can be fairly intuitively 
+The important details needed from stakeholders are all still there. The translation to other architecture styles is purely a coding concern that can be fairly intuitively 
 mapped from the event-based model.
-
-
-
-
-<!-- - The difference I experienced translating event storm to C# vs pure & event-based
-  - Context, Translating event storm into software design. A lot of extra detail we're digging into here is what data is needed. For commands, for events, but also some data is needed for the workflows that never shows up in the command or events. Those are dependencies.
-  - trying to use C# and ports and adapters quickly surfaced some issues. Can't express alternatives without it clearly becoming code syntax. Value types are a bit messy. Dependencies are a no-go
-  - F# trying to consider distributed state enaction (find better way to describe this) failed in F# too. It's an improvement since we can partially apply in the signature without requiring us to decide an enclosing class for a set of workflows or dip into implementations (constructors) to show dependencies 
-  - TODO: need to explain and contrast the two approaches (inversion of control -> flow enacts state through abstract dependencies running the flow means changing system state, functional-core/pure event-based -> running the workflow doesn't change system state. The workflow returns data structures that can be interpreted into state changes)
-  - F# with a type-driven / functional-core approach can map the events pretty directly into types without any implementations or awkward translations
-    - The F# itself can almost express all of our domain ideas without it obviously being code. It reads more like a semi-formal specification convention. It's simple enough to be easy to read, but formal enough that we're unambiguous about what we're expressing and detailed enough that we can expose gaps in our understanding.
-    - F# has a few aspects that can be confusing (like -> between parameters, single-pass requiring root types/flows you start with to come last). can make it pretty intuitive to read if you're willing to tweak a few things for f# inspired pseudocode. Doesn't take much tweaking though. 
-      - Brief syntax explanation (unions as alternatives/OR, records as AND, aliases/value types, function signature aliases -> workflows)
-      - example of my pseudocode
-  - Don't have to use a pure event-based model for the code, but use it for the model. It keeps unnecessary coding concerns out of the discussion and enables a fair bit of detailed design in collaboration with less technical stakeholders. The pure event-based model can always be translated to other patterns by developers later.
-  - cross: [concise syntax matters](../posts/2023-04-16-concise-notation-matters.md) -->
-
-
-
