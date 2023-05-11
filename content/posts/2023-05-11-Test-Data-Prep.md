@@ -386,18 +386,18 @@ First, Data Prep biases toward data all living in generally the same data store,
 Second, Data Prep assumes enough data contracts are shared between services such that reusing data preps is worth while. However, services should own their own abstractions, otherwise we're violating Dependency Inversion and the services will end up leaking needs to each other via shared data contracts. This greatly reduces composability, but thats a [different blog series](../posts/Open-Closed-by-Example/2023-03-02-0-Intro-to-OCP.md). Isolating services with Dependency Inversion ([which is different from dependency injection](../posts/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md)) greatly reduces shared contracts, contract complexity, and complexity of data generation. This reduces the value of shared data prep.
 
 ## Moving Forward with TestApi
-I've completely abandoned Test Prep in favor of [TestApi](../posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md). TestAPI achieves a similar goal, but in a much more [stable, incremental, additive](../posts/2022-02-25-Stable-Incremental-Additive.md) way. 
+I've completely abandoned Test Data Prep in favor of [TestApi](../posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md). TestAPI achieves a similar goal, but in a much more [stable, incremental, additive](../posts/2022-02-25-Stable-Incremental-Additive.md) way. 
 
 You can think of a TestAPI as a kind of behavior-driven testing, but focused on solving the [Fragile Test Problem](http://xunitpatterns.com/Fragile%20Test.html) for developer tests rather than focusing on non-developer collaboration. 
 
 TestApi focuses on externally observable behaviors. For example, if we save an entity then we should be able to retrieve it. This means we can lean more into the system to create state or generate data for our tests.
 
-TestAPI also pushes tests to define their own data contracts (and thus satisfy Dependency Inversion). Each test class defines the methods and data it needs to run the tests. This focuses the test suite on expressing requirements while freeing the tests from accidental complexities of the system and coupling to system details. The accidental complexities and system coupling are isolated to an adapter class. These adapters also mean the system doesn't need to directly support all the data generation or stateful operations the tests require. The adapter can fill that disconnect.
+TestAPI also pushes tests to define their own dependency contracts (and thus satisfy Dependency Inversion). Each test class defines the methods and data it needs to run the tests. This focuses the test suite on expressing requirements while freeing the tests from accidental complexities of the system and coupling to system details. The accidental complexities and system coupling are isolated to an adapter class. These adapters also mean the system doesn't need to directly support all the data generation or stateful operations the tests require. The adapter can fill that disconnect.
 
 In short, data prep is no longer necessary because 
 - I test stateful actions as behavioral pairs, so we can use existing system code for data creation
-- Test-class-specific adapters mask system complexity and provide a clean interface for the tests
-- Fewer services share data contracts in systems following [Dependency Inversion](../posts/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md)
+- Test class-specific adapters mask system complexity and provide a clean interface for the tests
+- Fewer services share data contracts in systems following [Dependency Inversion](../posts/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md), reducing the value of centralized data prep
 
 
 I'm not doing TestApi justice in this short section, but I've written about it [many times](/tags/testapi) before [with concrete examples](../posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md).
