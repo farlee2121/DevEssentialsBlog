@@ -16,7 +16,7 @@ backup idea queue
   - I think I want more application with this before I give it a dedicated post
   - flow over prediction related to distributed architecture over central planning (might have more info in my Scaling Architecture Conversationally notes) -> Decentralized decision making means faster feedback loops, greater scalability. 
   - Refine the guardrails/SOP over controling specifics. Not easy though.
+- Test likeness (not sure I use that term right). creating structures to represent the full expected context of a test for cleaner assertions with more helpful messages
 
-- Announce notedown updates
 
 -->

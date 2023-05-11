@@ -4,7 +4,7 @@ tags: [Notedown, Ducks]
 title: Notedown Library Now Available
 ---
 
-Notedown is my convention for note taking in Markdown. Now it's also a library that parses the convention as semi-structured data.
+Notedown is my convention for note taking in Markdown. Now it's also a library that reads the convention as semi-structured data.
 <!--more-->
 
 I've previously covered Notedown several times. Such as [how notes can double as light data format](../posts/2021-03-05-Reference-Ready-Notes.md)
