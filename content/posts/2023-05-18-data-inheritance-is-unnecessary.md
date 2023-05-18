@@ -31,7 +31,7 @@ Traits and first-class functions particularly favor a more compositional style f
 
 Notice that separating data and actions leads to improved composability for both.
 
-We've seen this kind of language evolution before. [Structured programming](https://en.wikipedia.org/wiki/Structured_programming) eliminated GOTO. The [iterator pattern](https://en.wikipedia.org/wiki/Iterator_pattern) removed indexing issues from loops and eventually folded into language features (i.e. C# `foreach` loops). Some newer languages like Go don't even include traditional for loops. Separating data and actions while limiting inheritance (especially stateful inheritance) could be langauges integrating lessons from "favor composition over inheritance".
+We've seen this kind of language evolution before. [Structured programming](https://en.wikipedia.org/wiki/Structured_programming) eliminated GOTO, which was once considered an essential language feature. The [iterator pattern](https://en.wikipedia.org/wiki/Iterator_pattern) removed indexing issues from loops and eventually folded into language features (i.e. C# `foreach` loops). Some newer languages like Go don't even include traditional for loops. Separating data and actions while limiting inheritance (especially stateful inheritance) could be langauges integrating lessons from "favor composition over inheritance".
 
 In summary, I think langauges are trending toward separated data and actions. Separating data and behavior renders data-type inheritance unnecessary while improving composition for both data and actions. 
 This could be part of a larger initiative to "favor composition over inheritance" by restricting inheritance (especially stateful inheritance) through the programming language itself.
