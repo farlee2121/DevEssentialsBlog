@@ -4,10 +4,11 @@ tags: [Domain-Driven Design, SOLID, Single Responsibility Principle]
 title: Sub-Domains That Follow the Single Responsibility Principle
 ---
 
+<!-- TODO: This might need a less term-centric intro -->
 The [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle) applies even to identifying [sub-domains](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-decomposing-monoliths/decompose-subdomain.html).
 <!--more-->
 
-As a review, domains are essentially problems spaces. Accounting, e-commerce, and physics simulation are examples of problem domains.
+As a review, domains are essentially problems spaces. Accounting, e-commerce, developer tools, and mining are examples of problem domains.
 Sub-domains are subsets or supporting sub-problems within that problem space. Common generic sub-domains include notifications (like email delivery), payments, and identity management.
 
 I've long believed that sub-domains are often discovered by considering the division of a company into departments, teams, or other units.

@@ -20,4 +20,15 @@ backup idea queue
 - I can probably wring a post or two out of my Ionide contributions 
   - maybe talking about minimal parameters
   - probably just show of some of the challenges I was able to overcome (multiple sources, not all aligned; updating from code)
+- PR review approach: ask questions, make a PR to reviewed branch if you want something specific. Less confrontational, feels more like help than criticism or extra work. Opens opportunities to get people interested in techniques.
+  - be sure to credit blog post that introduced PR PR idea
+
+
+Longer-form 
+- What's your duck process applied to construction process in concrete technique demonstrations (probably many posts)
+  - interpolation (via logs, commenting, breakpoints, etc)
+  - NOTE: perhaps some of these examples follow SPEAC so we can also show that in these examples too. Possibly as a driver of sorts (inconsistent level of abstraction / reads smoothly, implementation-specific concerns in signature, need to add an alternative implementation, etc)
+  - a Driver-based loop (namely with tests, then some refactorings)
+  - Dealing with some legacy code (strangler and related) -> a multi-phase refactor is a sort of hypothesis about what would make a better shape/api/factoring and then you give it a limited trial without turning everthing over 
+  - remember to tie things back to test-hypothesis and increments
 -->
