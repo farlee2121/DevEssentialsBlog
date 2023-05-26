@@ -142,11 +142,5 @@ and
     | FromDiscover of (Type * ArbMap option)
 ```
 
-### More Explorations
-
-This is a bit in the weeds, but a few other solutions I ruled out include
-- Replacing ArbMap constructors with static factory methods. This falls short because the static methods wouldn't have access to `this`. And without `this` the typeclass wont resolve implicit registrations that take ArbMap as a parameter.
-- Splitting arbitrary discovery and registration with the ArbMap. Without an ArbMap instance registered on the TypeClass, any custom Arbitrary methods with ArbMap as a parameter are filtered out during discovery.
- 
-All these explorations and more can be see in [the PR discussion](https://github.com/fscheck/FsCheck/pull/613#discussion_r913368006)
+These and other attempted solutions can be found in [the PR discussion](https://github.com/fscheck/FsCheck/pull/613#discussion_r913368006)
 

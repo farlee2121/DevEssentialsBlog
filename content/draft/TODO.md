@@ -25,6 +25,7 @@ backup idea queue
 
 
 Longer-form 
+- NOTE: don't try tackling these as one great series. I think it'll be easier to tackle them as individual posts
 - What's your duck process applied to construction process in concrete technique demonstrations (probably many posts)
   - interpolation (via logs, commenting, breakpoints, etc)
   - NOTE: perhaps some of these examples follow SPEAC so we can also show that in these examples too. Possibly as a driver of sorts (inconsistent level of abstraction / reads smoothly, implementation-specific concerns in signature, need to add an alternative implementation, etc)
