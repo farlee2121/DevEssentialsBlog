@@ -1,21 +1,23 @@
 ---
-date: 2023-03-02
+date: 2023-06-01
 tags: [F#, C#, Scala, Union Types]
-title: Scala Enums and C# Union Similarity
+title: Scala and C# Approaches to Union Types
 ---
 
-I've been learning Scala lately, and it turns scala union types are sometimes done the same way I discovered for C#.
+I've been learning Scala lately, and it turns out that scala union types are sometimes implemented the same way I discovered unions could be imitated in C#.
 <!--more-->
 
-For reference, F# has union types that represent a set of strict alternatives.
+For context, union types represent a set of alternative values. They're sometimes known as an OR type or a sum type.
 
+Consider this F# example defining different payment methods 
 ```fsharp
-type PaymentTypes = 
-| CreditCard of CardNumber * SecurityCode * Expiration * NameOnCard
+type PaymentType = 
+| CreditCard of CardNumber * SecurityCode * Expiration * NameOnCard 
 | ACH of (AccountNumber * RoutingNumber)
 | Paypal of IntentToken
 ```
-A value can be any single value of the alternatives and then unpacked using pattern matching.
+A `PaymentType` value can be any *single* value of the defined alternatives. We don't know which option we'll be handed, so the value is handled using pattern matching.
+For example, this code demonstrates calling a different function for each of the possible payment options
 
 ```fsharp
 let ProcessPayment paymentInfo = 
@@ -26,22 +28,23 @@ let ProcessPayment paymentInfo =
 ```
 
 I [previously discovered](../posts/2021-03-26-Unions-in-CSharp.md) I could mimic F# union behavior 
-concisely in C# using the new-ish C# features for record types and pattern matching.
+concisely in C# using the new-ish C# features for [positional record types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record#positional-syntax-for-property-definition) and pattern matching.
 
+Here's a quick C# translation of the previous example
 ```cs
 record PaymentType{
     public record CreditCard(CardNumber CardNumber, SecurityCode CVV, Expiration ExpirationDate, NameOnCard Name) : PaymentType();
     public record ACH(AccountNumber AccountNumber, RoutingNumber RoutingNumber) : PaymentType();
     public record Paypal(IntentToken Token) : PaymentType();
 
-    private PaymentType(){} // private constructor can prevent derived cases from being defined elsewhere
+    private PaymentType(){} // a private constructor can prevent derived cases from being defined elsewhere
 }
 
 public void HandlePayment(PaymentType paymentInfo){
     paymentInfo switch {
-        CreditCard cardInfo => //...
-        ACH checkInfo => //...
-        Paypal paypalInfo => //...
+        CreditCard cardInfo => handleCard (cardInfo),
+        ACH checkInfo => handleCheck (checkInfo),
+        Paypal paypalInfo => handlePaypal (paypalInfo),
     };
 }
 ```
@@ -61,11 +64,11 @@ def symbolDuration(symbol: Symbol): String =
   }
 ```
 
-The core of this Scala example is deriving concrete types from an abstract type that can only be inherited within a limited scope.
-This is essentially the same as my C# solution. Scala, however, provides full pattern matching exhaustiveness support and destructuring.
+The core of this Scala example is deriving concrete alternative types from an abstract type that can only be inherited within a limited scope.
+This is essentially the same as my C# solution. Scala, however, provides full support for destructuring the data and static analysis of pattern matching exhaustiveness (ensuring all cases are covered, e.g. every `PaymentType` is handled).
 
 I'm not sure if Scala changed syntax, but I noticed [another example](https://scastie.scala-lang.org/2plItYkVS4enZCFwBIPnZA) that accomplished 
-the same using only an enum. The enum-based syntax is closer the F# syntax.
+the same goal by using an enum. The enum-based syntax is closer the F# syntax.
 
 ```scala
 enum Payment:
@@ -80,4 +83,4 @@ def process(kind: Payment) = kind match
 ```
 
 This is facinating and a bit validating. I'm glad my C# approach is good enough that Scala teaches it. 
-Perhaps all C# needs to complete it's union type experience is better static analyzer support.
+Perhaps all C# needs to complete its union type experience is better static analyzer support.
