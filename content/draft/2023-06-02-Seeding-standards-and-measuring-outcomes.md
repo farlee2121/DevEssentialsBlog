@@ -40,7 +40,7 @@ I'd also like to know how the team feels. Even with great quality, pace, and use
 
 
 These might not cover all concerns for all teams, but the coverage is surprisingly good. They track employee and user satisfaction and how quickly, frequently, and reliably the team can release low-defect work. Each measure is simple, objective, and well researched. 
-The measures also persist as a guidepost for refining process over time.
+The measures also persist as a guidepost for refining process over time and holding the team accountable for what their standard achieves.
 
 Perhaps when I've considered quality measures before I got too mired in details of a specific practices, teams, or systems. I'll be interested to see this leads. At the least, it's a good foundation for discussion.
 
