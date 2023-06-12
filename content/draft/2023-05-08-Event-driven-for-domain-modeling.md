@@ -7,7 +7,7 @@ title:
 <!-- TODO: I might have to ask doug if I can publish this -->
 
 Continuing my event storm explorations, I tested out several approaches for translating event storms into system designs.
-The clear winner was based on the functional core pattern.
+The clear winner was based on an event-driven functional core pattern.
 <!--more-->
 
 
@@ -45,28 +45,31 @@ Then start asking what each of those look like and stub out for child types unti
 All of this communicated in some semi-formal language to balance readability with enough clarity to expose gaps in understanding.
 
 
-For our semi-formal language let's defin
-- `->` indicates a transform. Like `CancelOrderRequest -> CancelOrderResult` means take a CancelOrderRequest and return a CancelOrderResult
+For our semi-formal language let's define
+- `->` indicates a transformation. For example, `CancelOrderRequest -> CancelOrderResult` means take a CancelOrderRequest and return a CancelOrderResult
 - `|` means alternatives. Like `type Answers = | Yes | No` 
 - Data inside brackets lives together `type Person = {Name: FullName; Address: PostalAddress}`
-- `*` indicates `AND` when a flow requires multiple pre-conditions. A comma could be used instead.
+- `*` indicates `AND` when a flow requires multiple pre-conditions
 
 A model in his style might look like this.
-```fsharp
-type CancelOrder =  ((OrderId -> OrderExists?) * OrderFulfillmentStatus) * CancelOrderRequest -> CancelOrderResult
+```
+workflow CancelOrder = 
+  ((OrderId -> OrderExists?) * OrderFulfillmentStatus) * CancelOrderRequest 
+  -> CancelOrderResult
 
-type OrderId = // must be unique, and easy for a customer to read to a support agent
+data OrderId = // must be unique, and easy for a customer to read to a support agent
 
-type CancelOrderRequest = {
+data CancelOrderRequest = {
   OrderId: OrderId
   Reason: ShopperCancelReason
 }
-  type ShopperCancelReason = 
-    | FoundBetterPrice
+
+  data ShopperCancelReason = 
     // Q: What reasons might a shopper cancel their order for?
+    | FoundBetterPrice
 
 
-type CancelOrderResult = 
+data CancelOrderResult = 
   | Success of
     | OrderCanceled
   | Error of
@@ -74,13 +77,13 @@ type CancelOrderResult =
     | OrderAlreadyInFulfillment
     | OrderNotFound
 
-  type OrderCanceled = {
+  data OrderCanceled = {
     // Q: what do we need to notify others?
     OrderId: OrderId
     Reason: CancelReason
   }
 
-  type CancelReason = 
+  data CancelReason = 
     // Q: What groups would have distinct reasons for cancelling?
     | ShopperCancelReason
     | SellerCancelReason
@@ -88,8 +91,9 @@ type CancelOrderResult =
 
 ```
 
-Surprise! This is nearly valid F# syntax. I made a few light tweaks to make it more generally intuitive, but nothing that couldn't be fixed algorithmically.
-F# can be used as a fairly intuitive semi-formal convention to refine the event storm with non-developers, but it is already a valid set of types to start a code base from.
+Surprise! This is nearly valid F# syntax. I made a few tweaks to make it more generally intuitive, but nothing that couldn't be fixed algorithmically.
+
+F# can be used as a fairly intuitive semi-formal convention to refine the event storm with non-developers. With the right approach, this semi-formal definition is already rigorous enough to define the foundational domain model in code.
 
 The code design approach here is called Functional Core or Event-Driven Architecture. The idea is that the business rules are [pure functions](https://en.wikipedia.org/wiki/Pure_function), 
 they don't cause any observable state change. Instead they return values, in this case the events, which represent state changes that can be enacted by simple mapping functions.
