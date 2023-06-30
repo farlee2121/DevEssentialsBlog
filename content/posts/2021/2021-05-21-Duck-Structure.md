@@ -8,11 +8,11 @@ aliases:
 
 Good designs generally reflect the nature of the problem they solve, and the same applies to designing a process for design. Design is messy, incremental, and has spurts of both broad and deep exploration.
 
-Here I'll describe the simple and flexible organization structure my [duck docs](./../posts/2020-10-02-Whats-Your-Duck.md) evolved to capture design thoughts for reference without impeding exploration.
+Here I'll describe the simple and flexible organization structure my [duck docs](./../posts/2020/2020-10-02-Whats-Your-Duck.md) evolved to capture design thoughts for reference without impeding exploration.
 
 <!--more-->
 
-> UPDATE: I've [updated some of my duck doc structure](../posts/2022-11-25-Duck-Structure-Update.md)
+> UPDATE: I've [updated some of my duck doc structure](../../posts/2022/2022-11-25-Duck-Structure-Update.md)
 
 The organization scheme consists of two main mechanisms: sections and tags.
 
@@ -53,7 +53,7 @@ You don't have to tag everything. Tag things you want to be able to find later. 
 
 It's best to get your thoughts out there, and tag them later if they end up being important.
 
-Textual tags are a much more general pattern. You can read about similar techniques [here](./../posts/2021-03-05-Reference-Ready-Notes.md)
+Textual tags are a much more general pattern. You can read about similar techniques [here](./../posts/2021/2021-03-05-Reference-Ready-Notes.md)
 
 ## Sample
 

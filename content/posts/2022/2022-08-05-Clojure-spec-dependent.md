@@ -4,7 +4,7 @@ tags: [Clojure, Language features, Specification Pattern]
 title: "Is Clojure Spec a dependant type system?"
 ---
 
-I recently learned of [dependent type systems](../posts/2022-07-22-Proof-Oriented-Programming.md). I'm trying to feel out the boundaries of dependent types and came to the question: Is Clojure Spec a dependent type system?
+I recently learned of [dependent type systems](../../posts/2022/2022-07-22-Proof-Oriented-Programming.md). I'm trying to feel out the boundaries of dependent types and came to the question: Is Clojure Spec a dependent type system?
 
 <!--more-->
 

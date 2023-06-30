@@ -6,7 +6,7 @@ aliases:
 - /2022/03/27/ui-mutation-testing-update
 ---
 I previously wrote on
-[statistical and mutation testing for UIs](../posts/2021-07-25-Statistical-and-mutation-UI-Testing.md). After additional thought, I don't think UI mutation testing is feasible, at least in the traditional sense. Structure-based generative testing still could be.
+[statistical and mutation testing for UIs](../../posts/2021/2021-07-25-Statistical-and-mutation-UI-Testing.md). After additional thought, I don't think UI mutation testing is feasible, at least in the traditional sense. Structure-based generative testing still could be.
 
 ## Lack of Deterministic Errors for Mutation
 

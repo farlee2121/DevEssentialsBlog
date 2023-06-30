@@ -8,7 +8,7 @@ I've been thinking of ways I can encourage students to get knowledge out of thei
 <!--more-->
 
 ## Teaching clarity
-I strongly favor the [better wrong than vague](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md) philosophy. Committing thoughts to concrete forms, like words or code, exposes gaps in our thinking. It also sets a basis for refining understanding, referencing it, or collaborating.
+I strongly favor the [better wrong than vague](../../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md) philosophy. Committing thoughts to concrete forms, like words or code, exposes gaps in our thinking. It also sets a basis for refining understanding, referencing it, or collaborating.
 
 These are all desirable properties for learning. However, I've found some difficulty bridging the gap between my understand and that of learners. Clarity is relative, and we may not understand what context the other person needs to understand what we want to communicate. 
 

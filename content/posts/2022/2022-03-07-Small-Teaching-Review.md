@@ -87,13 +87,13 @@ Tools:
 ### Self-explaining
 "Learners benefit from explaining out loud (to themselves or to others) what they are doing during the completion of a learning task". Good self-explaining includes why, not just what. Self-explaining helps students monitor their own understanding and fill gaps. It also connects general principles to the specific worked examples, and to their own knowledge.
 
-I use a written variation of this that I call [duck docs](../posts/2021-05-21-Duck-Structure.md).
+I use a written variation of this that I call [duck docs](../../posts/2021/2021-05-21-Duck-Structure.md).
 
 Tools: 
 - "Why are you doing that?"
 - peer instruction
 - clickers (answer, discuss, re-answer)
-- [duck docs](../posts/2021-05-21-Duck-Structure.md)
+- [duck docs](../../posts/2021/2021-05-21-Duck-Structure.md)
 
 ### Motivation
 Motivation is key for engaging and sustaining learners. Motivation often stems from emotions. Purpose, especially purpose beyond self, is the most powerful emotion for extended motivation.

@@ -7,8 +7,8 @@ title: Notedown Library Now Available
 Notedown is my convention for note taking in Markdown. Now it's also a library that reads the convention as semi-structured data.
 <!--more-->
 
-I've previously covered Notedown several times. Such as [how notes can double as light data format](../posts/2021-03-05-Reference-Ready-Notes.md)
-and how I use the format [for exploring ideas](../posts/2022-11-25-Duck-Structure-Update.md).
+I've previously covered Notedown several times. Such as [how notes can double as light data format](../posts/2021/2021-03-05-Reference-Ready-Notes.md)
+and how I use the format [for exploring ideas](../posts/2022/2022-11-25-Duck-Structure-Update.md).
 
 The new library contains two main features, extracting document section hierarchies with metadata and extracting tagged content.
 

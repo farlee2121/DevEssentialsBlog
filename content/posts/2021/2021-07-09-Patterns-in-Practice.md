@@ -13,14 +13,14 @@ As a reminder, patterns are named solutions to common problems in software. They
 
 
 ## High-level structure
-![Service-to-service diagram](../../static/post-media/Patterns-in-Practice/pattern-diagram.drawio.svg)
+![Service-to-service diagram](../../../static/post-media/Patterns-in-Practice/pattern-diagram.drawio.svg)
 
 The overall program structure is ruled by **dependency inversion**. The major components are services, and each service builds up an abstract set of dependencies know as **ports**. Ports are often **strategies** or **observers**. The service ports are then implemented by **adapters**, which fit other services into the port's interface. Sometimes a **decorator** will wrap an adapter to add cross-cutting concerns like logging, authorization, failure/retry policies, or indirect communication protocols.
 
 
 ## Service Internal Design
 
-![Service internals](../../static/post-media/Patterns-in-Practice/service-workflow.drawio.svg)
+![Service internals](../../../static/post-media/Patterns-in-Practice/service-workflow.drawio.svg)
 
 Each service defines it's input and output data as **entities**, **value-types**, or primitives. Input is validated using a **specification** and usually becomes the input to some business flow represented as a **state machine**. The state machine produces a new state which is returned to the caller. The output states are fed to an **interpreter** which aligns the global persistent state with the changes.
 

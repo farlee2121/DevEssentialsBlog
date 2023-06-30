@@ -4,10 +4,10 @@ tags: [Software Engineering]
 title: "Code That Fits in Your Head Practices are Stable Incremental and Additive" 
 ---
 
-[Stable, incremental, and additive](../posts/2022-02-25-Stable-Incremental-Additive.md) is my personal theory about what underlies effective software practices. I'm pleased to find these qualities hold up quite well for practices described by Code That Fits in Your Head.
+[Stable, incremental, and additive](../../posts/2022/2022-02-25-Stable-Incremental-Additive.md) is my personal theory about what underlies effective software practices. I'm pleased to find these qualities hold up quite well for practices described by Code That Fits in Your Head.
 <!--more-->
 
-[Code That Fits in Your Head](https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401) seeks to collect scattered effective practices into a clear picture of effective software development. It is a fantastic read and I [highly recommend it](../posts/2022-09-09-Code-that-fits-in-your-head-review.md)
+[Code That Fits in Your Head](https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401) seeks to collect scattered effective practices into a clear picture of effective software development. It is a fantastic read and I [highly recommend it](../../posts/2022/2022-09-09-Code-that-fits-in-your-head-review.md)
 
 
 A quick recap of stable, incremental, and additive

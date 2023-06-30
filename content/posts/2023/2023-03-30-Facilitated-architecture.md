@@ -11,7 +11,7 @@ I've long believed that handing down designs to coders is not a recipe for succe
 
 This may have started with [What is Software Design](https://www.developerdotstar.com/mag/articles/reeves_design.html) by Jack Reeves, but has become interwoven with many of my beliefs about software. 
 
-I see [the whole software lifecycle as design](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md). 
+I see [the whole software lifecycle as design](../../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md). 
 The details of implementation are part of clarifying the problem being solved. Issues uncovered in implementation often reveal truths of the business problem we're solving.
 Solving these issues is can change modeled concepts, structure, and contracts. These are design choices and their impacts may not be small.
 Thus, there is no mechanical implementation phase. Everything is design. There is no breakdown between design time and implementation time.

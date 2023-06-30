@@ -28,7 +28,7 @@ However, SWEBOK is a *standards document*. It prioritizes precision and enumerat
 
 SWEBOK as a whole is not suited as educational reading, but parts of it introduce topics very well. It spurred other, much more approachable, resources that are suited for beginning and intermediate training.
 
-First off, I recommend the [Construx Professional Development Ladder](https://www.construx.com/professional-development-ladder/). This career ladder lays out an approachable and flexible system for developers to methodically improve their skills. I've [previously summarized](../posts/2021-06-28-Construx-Career-Ladder.md) the ladder if you want a deeper look. 
+First off, I recommend the [Construx Professional Development Ladder](https://www.construx.com/professional-development-ladder/). This career ladder lays out an approachable and flexible system for developers to methodically improve their skills. I've [previously summarized](../../posts/2021/2021-06-28-Construx-Career-Ladder.md) the ladder if you want a deeper look. 
 
 I recommend the following sections for those who want to dabble in SWEBOK
 - Chapter 13.1 Problem Solving Techniques
@@ -47,7 +47,7 @@ SWEBOK is also an exceedingly good index of topic resources. Each chapter define
 The further readings are generally aimed at learning topics introduced by the chapter, and each comes with an explanation of what you should learn from that reading.
 The reference table maps every topic to a specific section of relevant source materials.
 
-> Update 2022-01-14: Here's [SWEBOK term definitions](../posts/2022-01-14-SWEBOK-term-definitions.md) for a quick overview of SWEBOK topics
+> Update 2022-01-14: Here's [SWEBOK term definitions](../../posts/2022/2022-01-14-SWEBOK-term-definitions.md) for a quick overview of SWEBOK topics
 
 ## Personal Takeaways
 

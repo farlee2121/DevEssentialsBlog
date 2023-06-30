@@ -4,7 +4,7 @@ tags: [SOLID, SPNC, Construction, Principles]
 title: SOLID vs SPNC
 ---
 
-I previously enumerated a [set of properties](../posts/2022-12-09-Properties-of-self-documenting-code.md) that underlay self-documenting code.
+I previously enumerated a [set of properties](../../posts/2022/2022-12-09-Properties-of-self-documenting-code.md) that underlay self-documenting code.
 Is there really a need for another set of properties?
 <!--more-->
 
@@ -14,7 +14,7 @@ I think sets of properties (and/or principles) with a memorable handle are incre
 
 Individual principles are useful, but it can be hard to understand which principles are most important and how the principles relate to each other. The volume of knowledge and connections can be overwhelming as a learner. Selecting, thus prioritizing, a limited set of principles with sufficient coverage of a topic sets an attainable baseline for learning that topic. 
 
-As always, [communicating clearly improves understanding and collaboration](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md#better-wrong-than-vague). A clear statement can be debated, tested, and refined.
+As always, [communicating clearly improves understanding and collaboration](../../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md#better-wrong-than-vague). A clear statement can be debated, tested, and refined.
 
 Further, I know many principles but very few collected sets of principles. SOLID is by far the most prominent. [SOLID](https://en.wikipedia.org/wiki/SOLID) has achieved wide-spread recognition where many of it's components or inspirations did not.
 
@@ -49,7 +49,7 @@ SPNC covers concepts that SOLID does not, but the two principle sets do overlap.
 
 On the surface, naming and consistency are as important to design as they are to construction. Good design approaches also enable conceptual clarity, thus better names and proximity of related concepts.
 
-Going deeper, comparing SOLID and SPNC helped me realize that [conceptual scope is the central theme of SOLID](../posts/2022-12-23-SOLID-is-about-scope.md). This makes sense. SOLID, as I understand it, is a distillation of design principles. Managing complexity through conceptual scope is the essence of software design.
+Going deeper, comparing SOLID and SPNC helped me realize that [conceptual scope is the central theme of SOLID](../../posts/2022/2022-12-23-SOLID-is-about-scope.md). This makes sense. SOLID, as I understand it, is a distillation of design principles. Managing complexity through conceptual scope is the essence of software design.
 
 I actually find it relieving that SOLID and SPNC overlap. Construction and design overlap significantly. It would be weird if a set of construction principles and a set of design principles didn't address some of the same concerns. Even better, I think SOLID and SPNC clarify each other. Scope is the most abstract member of SPNC, and SOLID is a compact toolbox to clarify scope. On the other side, I didn't realize the uniting theme of SOLID until I considered SPNC. I think identifying scope as the central theme of SOLID improves understanding of the whole set of principles.
 

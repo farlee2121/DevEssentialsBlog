@@ -21,7 +21,7 @@ I like to approach requirements with the 5ish interrogatives
 - When (do they need it)
 - How much (are they willing to invest in a solution)
 
-The trio of what, when, and how much [inform if a solution is even worth pursuing](../../posts/2020-07-16-iDesign-Project-Summary.md).
+The trio of what, when, and how much [inform if a solution is even worth pursuing](../../posts/2020/2020-07-16-iDesign-Project-Summary.md).
 
 Most requirement techniques are different angles at these questions that try to achieve enough granularity for development. It's also critical to align understanding between customers and developers. Again, it's better to be wrong than vague. Producing artifacts (sketches, descriptions, diagrams, etc) that both implementers and the customer understand helps surface differences in understanding early and saves pain for everyone later.
 
@@ -57,12 +57,12 @@ Important
 - Likely design changes
 - Project scale
 
-Seen another way, architecture is [understanding the problem domain](../../posts/2022-02-18-Programming-is-Problem-Modeling.md). [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) is one of the most popular design methodologies. It prescribes that software should reflect the problem it solves and provides various techniques for understanding and reflecting the domain. For example, sub-domains (or separable responsibilities of the problem domain) can often be discovered by considering business departments.
+Seen another way, architecture is [understanding the problem domain](../../posts/2022/2022-02-18-Programming-is-Problem-Modeling.md). [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) is one of the most popular design methodologies. It prescribes that software should reflect the problem it solves and provides various techniques for understanding and reflecting the domain. For example, sub-domains (or separable responsibilities of the problem domain) can often be discovered by considering business departments.
 
 My main lines of thought for evaluating a design include
 - [Essence vs accident](http://worrydream.com/refs/Brooks-NoSilverBullet.pdf): What is a fundamental part of the problem versus what could change by circumstance
   - Could we be a (company type) if we didn't (activity)?
-- [Volatility Analysis](../../posts/2022-02-18-Programming-is-Problem-Modeling.md#adaptability-volatility-analysis-as-essence-discovery): Using likelihood of change to understand how fundamental concepts are to a problem
+- [Volatility Analysis](../../posts/2022/2022-02-18-Programming-is-Problem-Modeling.md#adaptability-volatility-analysis-as-essence-discovery): Using likelihood of change to understand how fundamental concepts are to a problem
   - Note: frameworks, data stores, data schemas, communication protocols, UI organization, and similar are almost never essential to a problem and highly likely to change. They are poor foundations for organizing a system
 - [Information Hiding](https://en.wikipedia.org/wiki/Information_hiding): How can I minimize the scope a programmer needs to consider to understand a given piece of the system 
 - [SOLID](https://en.wikipedia.org/wiki/SOLID): A well-known set of design principles that guide ways to avoid key design problems.
@@ -82,12 +82,12 @@ Design Approaches
 - [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) ([book](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215))
   - I highly recommend [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional). It covers a modeling process from end to end in digestable increments.
 - [Ports and Adapters, Clean Architecture, Hexagonal Architecture](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/)
-- [IDesign](../../posts/2020-07-03-iDesign-Visual-Summary.md)
+- [IDesign](../../posts/2020/2020-07-03-iDesign-Visual-Summary.md)
 
 I describe much of my design process in these posts
-- [Programming is Problem Modeling](../../posts/2022-02-18-Programming-is-Problem-Modeling.md)
-- [Stable, Incremental, Additive](../../posts/2022-02-25-Stable-Incremental-Additive.md)
-- [Patterns in practice](../../posts/2021-07-09-Patterns-in-Practice.md)
+- [Programming is Problem Modeling](../../posts/2022/2022-02-18-Programming-is-Problem-Modeling.md)
+- [Stable, Incremental, Additive](../../posts/2022/2022-02-25-Stable-Incremental-Additive.md)
+- [Patterns in practice](../../posts/2021/2021-07-09-Patterns-in-Practice.md)
 
 
 ## Questions for Construction

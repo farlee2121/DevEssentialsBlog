@@ -6,16 +6,16 @@ aliases:
 - /2021/08/20/swebok-transform-scm
 ---
 
-The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](../posts/2021-08-13-Swebok-transform-view.md). I realized that each transform creates an artifact, and these artifacts are key to connecting cross-cutting concerns into the lifecycle phases.
+The Software Engineering Body of Knowledge (SWEBOK) portrays the software lifecycle as a [set of transforms](../../posts/2021/2021-08-13-Swebok-transform-view.md). I realized that each transform creates an artifact, and these artifacts are key to connecting cross-cutting concerns into the lifecycle phases.
 <!--more-->
 
-> Update 2022-01-14: Here's [SWEBOK term definitions](../posts/2022-01-14-SWEBOK-term-definitions.md) if needed
+> Update 2022-01-14: Here's [SWEBOK term definitions](../../posts/2022/2022-01-14-SWEBOK-term-definitions.md) if needed
 
 ## Life-cycle Artifacts
 
 A quick review on the transformation lifecycle. The input is plain-language requirements, and the output is machine instructions. Each transform translates the problem one step closer to machine code, resolving ambiguities and disconnects as needed.
 
-![Lifecycle transform view](../../static/post-media/SWEBOK-transform/transform-pipe.drawio.svg)
+![Lifecycle transform view](../../../static/post-media/SWEBOK-transform/transform-pipe.drawio.svg)
 
 
 The key here is that each step is a transform, and must have an output that represents the problem being solved.
@@ -114,7 +114,7 @@ Models and Methods:
     - Request for Creation (RFC)
     - Architure Design Records
   - Architectural models (e.g. layer models, pipe and filters, IDesign, Ports and Adapters, design analogies)
-  - [Duck docs](../posts/2020-10-02-Whats-Your-Duck.md)
+  - [Duck docs](../../posts/2020/2020-10-02-Whats-Your-Duck.md)
 
 
 

@@ -12,13 +12,13 @@ A friend asked me to summarize what I believe about software in five points or l
 ## Understand the Problem
 
 <!-- TODO: change to clarify the problem? -->
-The first and most fundamental belief is "understand the problem". I've often referred to this as [programming is problem modeling](../posts/2022-02-18-Programming-is-Problem-Modeling.md).
+The first and most fundamental belief is "understand the problem". I've often referred to this as [programming is problem modeling](../../posts/2022/2022-02-18-Programming-is-Problem-Modeling.md).
 This belief targets the basic nature of and mental model for software development.
 
 Every aspect of programming is about understanding and representing the problem we are solving. Requirements, design, coding, testing, deployment, team cadence, and all other software activities are different angles of understanding the problem and capturing that knowledge in a form that computers can run and humans can understand (i.e. code). Software process is about understanding the problem and softare is about representing the problem.
 
 In every situation, pursue problem understanding
-- Feeling stuck? [Clarify what problem you're solving](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md)
+- Feeling stuck? [Clarify what problem you're solving](../../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md)
 - Trying to decide between multiple implementations? Weigh how each serves the problem you're solving
 - What tests do I need to write? Identify observable requirements of the problem you're solving
 - Trying to name a variable, function, class, etc? Describe what the component means to the problem it solves
@@ -27,7 +27,7 @@ In every situation, pursue problem understanding
 
 ## Stable, Incremental, Additive
 
-The second belief, [Stable, Incremental, Additive](../posts/2022-02-25-Stable-Incremental-Additive.md), targets the underpinnings of good software process. 
+The second belief, [Stable, Incremental, Additive](../../posts/2022/2022-02-25-Stable-Incremental-Additive.md), targets the underpinnings of good software process. 
 
 - Stable: existing work is rarely effected by changes in other units of work
 - Incremental: value can be delivered in small and complete chunks

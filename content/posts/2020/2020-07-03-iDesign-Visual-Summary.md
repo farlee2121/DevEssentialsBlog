@@ -11,13 +11,13 @@ Thus far this only includes the System Design portion of the book.
 <!--more-->
 
 ## Separating Nature from Solutions (Domain Discovery)
-![Solution Scrubbing](../../static/post-media/IDesign-System/iDesignSolutionScrubbing.png)
+![Solution Scrubbing](../../../static/post-media/IDesign-System/iDesignSolutionScrubbing.png)
 
 ## Layer Guidelines
-![Rule of Thumb Grid](../../static/post-media/IDesign-System/iDesignRuleofThumbGrid.png)
+![Rule of Thumb Grid](../../../static/post-media/IDesign-System/iDesignRuleofThumbGrid.png)
 
 ## Sub-system Guidelines
-![Sub-system breakdown](../../static/post-media/IDesign-System/iDesignSubsystems.png)
+![Sub-system breakdown](../../../static/post-media/IDesign-System/iDesignSubsystems.png)
 
  - Systems are kept small to be intellectually manageable. They are split on a cohesive vertical call-chain, which is based around a manager and thus generally a sub-domain
  - "2% activities" are the activities that aren't the nature of you're business and so you spend little time on them. Thus, you'll never be an expert at them and you should keep them separated so that you can utilize pre-packaged solutions if needed (even if you custom implement at first). 

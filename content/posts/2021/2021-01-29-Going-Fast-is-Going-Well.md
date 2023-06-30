@@ -14,7 +14,7 @@ It's generally accepted that bad code slows you down, eventually. The [design st
 
 <figure class="image">
 
-  ![Design Stamina Hypothesis](../../static/post-media/Going-Fast/designStaminaGraph.gif)
+  ![Design Stamina Hypothesis](../../../static/post-media/Going-Fast/designStaminaGraph.gif)
   <figcaption>Source: https://www.martinfowler.com/bliki/images/designStaminaGraph.gif</figcaption>
 </figure>
 <br />
@@ -33,7 +33,7 @@ I see it this way
 
 Thus, the speed limiter is how tight of a feedback loop you have with your customer, and progress is measured in understanding of the problem.
 
-![spectrum image](../../static/post-media/Going-Fast/spectrum.png)
+![spectrum image](../../../static/post-media/Going-Fast/spectrum.png)
 
 The fastest scenario is that you *are* your customer and you are constantly feeding backing into the development process. Still fast is that you can contact your customer whenever questions come up and work through a decision with them.
 

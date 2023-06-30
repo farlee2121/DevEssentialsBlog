@@ -207,9 +207,9 @@ A good architecture style should default developers to good use of principles, p
 ### Examples
 
 Architecture: Examples require a concrete system. Here are some posts I've written with sample diagrams
-- [Open-closed Principle By Example](../posts/Open-Closed-by-Example/2023-03-02-4-OCP-as-architecture.md)
-- [Notification Case Study](../posts/2020-08-14-Notification-Design.md)
-- [Async Case Study](../posts/2020-09-11-Background-Task-Refactor.md)
+- [Open-closed Principle By Example](../../posts/Open-Closed-by-Example/2023-03-02-4-OCP-as-architecture.md)
+- [Notification Case Study](../../posts/2020/2020-08-14-Notification-Design.md)
+- [Async Case Study](../../posts/2020/2020-09-11-Background-Task-Refactor.md)
 
 Architectural styles
 - [Hexagonal Architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) / Ports and Adapters

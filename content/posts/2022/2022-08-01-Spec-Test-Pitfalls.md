@@ -6,7 +6,7 @@ aliases:
 - /draft/spec-test-pitfalls/
 ---
 
-I've been thinking about constrained values, and how those constraints could be used to [better test our systems](../posts/2022-06-03-Improved-completeness-automatic-random-testing.md). Mark Seemann was gracious to [think through this with me](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#2c0403d1e69d43a496ee04c16bea282c) and point out some interesting conclusions.
+I've been thinking about constrained values, and how those constraints could be used to [better test our systems](../../posts/2022/2022-06-03-Improved-completeness-automatic-random-testing.md). Mark Seemann was gracious to [think through this with me](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#2c0403d1e69d43a496ee04c16bea282c) and point out some interesting conclusions.
 <!--more-->
 
 ## Background
@@ -15,7 +15,7 @@ A bit of background on my motivations. Clojure has a fascinating optional type s
 
 All expectations on what a type should look like are encoded in these specifications. Spec-ed functions can be automatically tested by using the spec to generate random inputs and verifying the return value fits spec constraints.
 
-My hope was that this kind of testing could help us [measure and promote totality in typical statically typed systems](../posts/2022-06-03-Improved-completeness-automatic-random-testing.md). Total functions, or functions that always map their input to an advertized output, are much easier to understand.
+My hope was that this kind of testing could help us [measure and promote totality in typical statically typed systems](../../posts/2022/2022-06-03-Improved-completeness-automatic-random-testing.md). Total functions, or functions that always map their input to an advertized output, are much easier to understand.
 
 ## Totality can't be experimentally proven
 I originally framed this kind of testing to Mark Seemann as [experimental totality testing](https://blog.ploeh.dk/2015/05/07/functional-design-is-intrinsically-testable/#2c0403d1e69d43a496ee04c16bea282c).

@@ -33,7 +33,7 @@ Series overview
 
 Series outline
 - What kinds of tests? -> what kinds of problems. Create context for developer test goals & build overall picture
-  - pull from [my swebok-inspired test diagram](../../posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md)?
+  - pull from [my swebok-inspired test diagram](../../posts/2021/2021-08-30-Test-Types-and-Lifecycle-Phases.md)?
   - definitely [what to test for](../../draft/2022-10-18-What-to-test-for.md)
 - Signal: what tests do and don't tell us. Important qualities of tests (independent, repeatable, stable under system change, not too sensitive (false positives) but also meaningful coverage (don't miss many true positives))
   - Show nega examples of how bad signal is often created?

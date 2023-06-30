@@ -37,7 +37,7 @@ The vast options created by macros are also not always a good thing. Constraints
 
 One example is my experience with Clojure unit tests versus F# unit tests. Clojure test libraries lean on macros to define tests like functions and expand them with fixtures and other niceties. The global approach to defining tests pushes the macros to register tests in a global hidden variable to maintain the abstraction. Tests can be reused and operated on with additional macros, but it gets complicated very quickly.
 
-F# doesn't have macros. Libraries, like [Expecto](https://github.com/haf/expecto), instead represent tests as data structures. Tests are defined as lists. Test lists and can be operated on, reused, and aggregated like any other list of data structures. This made [test api](../posts/2021-02-26-TestApi-in-FSharp.md) rather simple to setup for standard unit tests in F#. It's very easy to reason about how the tests are being reused for all future contributors.
+F# doesn't have macros. Libraries, like [Expecto](https://github.com/haf/expecto), instead represent tests as data structures. Tests are defined as lists. Test lists and can be operated on, reused, and aggregated like any other list of data structures. This made [test api](../../posts/2021/2021-02-26-TestApi-in-FSharp.md) rather simple to setup for standard unit tests in F#. It's very easy to reason about how the tests are being reused for all future contributors.
 
 ## Conclusion
 

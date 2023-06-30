@@ -50,7 +50,7 @@ The first is the [Software Engineering Body of Knowledge (SWEBOK)](https://www.c
 
 Having an agreed kernel of critical knowledge for creating software facilitates possible certifications, trainings, educational programs, and other ways of leveling up our industry.
 
-The second key material is the [Construx Professional Development Ladder](https://www.construx.com/professional-development-ladder/). This builds on SWEBOK to define a flexible, comprehensive, an incremental training program. It helps companies and developers find a clear path to top notch skills that apply across projects. I wrote about the ladder [here](../posts/2021-06-28-Construx-Career-Ladder.md).
+The second key material is the [Construx Professional Development Ladder](https://www.construx.com/professional-development-ladder/). This builds on SWEBOK to define a flexible, comprehensive, an incremental training program. It helps companies and developers find a clear path to top notch skills that apply across projects. I wrote about the ladder [here](../../posts/2021/2021-06-28-Construx-Career-Ladder.md).
 
 ## Room for improvement
 I think the book does an excellent job exploring possible ways forward for the software industry as a whole. However, I feel there is a missed opportunity.

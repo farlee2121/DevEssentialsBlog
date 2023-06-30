@@ -30,11 +30,11 @@ I framed most of these skills in terms of leadership, but they are all valuable 
 The secret is that we're all leaders in some way. Our actions shape our environment, including how other people behave.
 
 Beyond team skills, curiosity also impacts relationships in potentially adversarial and less familiar relationships.
-[Getting to Yes](../posts/2021-04-23-Negotiation-Design.md) teaches Principled Negotiation. One of the core tenants of Principled Negotiation
+[Getting to Yes](../posts/2021/2021-04-23-Negotiation-Design.md) teaches Principled Negotiation. One of the core tenants of Principled Negotiation
 is thinking of both parties as being on the same side. Get curious about their needs and how both parties can benefit from the agreement.
 If both parties can't benefit, then you probably don't want an agreement as it will only harm the relationship and your reputation.
 
-The [Socratic method, Leading, and Caring](../draft/2023-03-03-Socratic-method-and-care.md) was a transformational technique for my teaching.
+The [Socratic method, Leading, and Caring](../posts/2023/2023-06-16-Socratic-method-and-care.md) was a transformational technique for my teaching.
 The socratic method is all about asking questions to guide a student's exploration rather than presenting answers. In other words, a it's a form of curiosity.
 
 

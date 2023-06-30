@@ -14,7 +14,7 @@ title: Evolving Test Data Arrangement
 This post recounts my journey to understand tests data arrangement from before my blogging days. This exploration cemented key lessons in reusability and composition.
 <!--more-->
 
-Disclaimer, the methods I devised in this journey do not reflect my current approaches to testing. My testing approach was transformed by the [TestApi technique](../posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md) a few years ago. I'll cover some of why TestApi renders this Test Data Prep approach unnecessary at the end of the post.
+Disclaimer, the methods I devised in this journey do not reflect my current approaches to testing. My testing approach was transformed by the [TestApi technique](../../posts/2022/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md) a few years ago. I'll cover some of why TestApi renders this Test Data Prep approach unnecessary at the end of the post.
 
 Even though I don't follow Test Data Prep anymore, the journey was formative for my understanding of reuse and composition. Perhaps reliving the journey can help someone else.
 
@@ -373,7 +373,7 @@ public class TodoItemPrep{
 
 ## Test Reuse
 
-With dependency injection in place, Data Prep can support different data stores per-instance based on configuration. This enables another initiative to reuse tests as both unit and integration tests. The demo repo contains an [early example](https://github.com/farlee2121/TestingPatterns/blob/c17649d9610b94298b456ce6b2fa61bd58d80d3c/Tests.ManagerTests/TodoCRUDManagerTests.cs). I won't cover this reuse approach further because the goal is better served by TestApi, which I've already [written about](../posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md).
+With dependency injection in place, Data Prep can support different data stores per-instance based on configuration. This enables another initiative to reuse tests as both unit and integration tests. The demo repo contains an [early example](https://github.com/farlee2121/TestingPatterns/blob/c17649d9610b94298b456ce6b2fa61bd58d80d3c/Tests.ManagerTests/TodoCRUDManagerTests.cs). I won't cover this reuse approach further because the goal is better served by TestApi, which I've already [written about](../../posts/2022/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md).
 
 
 ## Problems with Data Prep
@@ -383,10 +383,10 @@ My views on testing, however, have changed. Data prep has some key weaknesses.
 
 First, Data Prep biases toward data all living in generally the same data store, which is a design smell. The system is probably experiencing implicit coupling through relationships managed at the datastore level. 
 
-Second, Data Prep assumes enough data contracts are shared between services such that reusing data preps is worth while. However, services should own their own abstractions, otherwise we're violating Dependency Inversion and the services will end up leaking needs to each other via shared data contracts. This greatly reduces composability, but thats a [different blog series](../posts/Open-Closed-by-Example/2023-03-02-0-Intro-to-OCP.md). Isolating services with Dependency Inversion ([which is different from dependency injection](../posts/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md)) greatly reduces shared contracts, contract complexity, and complexity of data generation. This reduces the value of shared data prep.
+Second, Data Prep assumes enough data contracts are shared between services such that reusing data preps is worth while. However, services should own their own abstractions, otherwise we're violating Dependency Inversion and the services will end up leaking needs to each other via shared data contracts. This greatly reduces composability, but thats a [different blog series](../../posts/Open-Closed-by-Example/2023-03-02-0-Intro-to-OCP.md). Isolating services with Dependency Inversion ([which is different from dependency injection](../../posts/2022/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md)) greatly reduces shared contracts, contract complexity, and complexity of data generation. This reduces the value of shared data prep.
 
 ## Moving Forward with TestApi
-I've completely abandoned Test Data Prep in favor of [TestApi](../posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md). TestAPI achieves a similar goal, but in a much more [stable, incremental, additive](../posts/2022-02-25-Stable-Incremental-Additive.md) way. 
+I've completely abandoned Test Data Prep in favor of [TestApi](../../posts/2022/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md). TestAPI achieves a similar goal, but in a much more [stable, incremental, additive](../../posts/2022/2022-02-25-Stable-Incremental-Additive.md) way. 
 
 You can think of a TestAPI as a kind of behavior-driven testing, but focused on solving the [Fragile Test Problem](http://xunitpatterns.com/Fragile%20Test.html) for developer tests rather than focusing on non-developer collaboration. 
 
@@ -397,9 +397,9 @@ TestAPI also pushes tests to define their own dependency contracts (and thus sat
 In short, data prep is no longer necessary because 
 - I test stateful actions as behavioral pairs, so we can use existing system code for data creation
 - Test class-specific adapters mask system complexity and provide a clean interface for the tests
-- Fewer services share data contracts in systems following [Dependency Inversion](../posts/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md), reducing the value of centralized data prep
+- Fewer services share data contracts in systems following [Dependency Inversion](../../posts/2022/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md), reducing the value of centralized data prep
 
 
-I'm not doing TestApi justice in this short section, but I've written about it [many times](/tags/testapi) before [with concrete examples](../posts/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md).
+I'm not doing TestApi justice in this short section, but I've written about it [many times](/tags/testapi) before [with concrete examples](../../posts/2022/2022-05-16-TestApi-and-Test-reuse-in-CSharp.md).
 
 

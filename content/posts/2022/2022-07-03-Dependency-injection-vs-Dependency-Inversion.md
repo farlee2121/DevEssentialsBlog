@@ -153,7 +153,7 @@ Other common applications of these composites include
 - Transport/protocol: requests to a port or service can be moved out of process without changing the service or port implementations. Just wrap the out-of-process component with a new decorator (and maybe a new client to receive the calls if the protocol requires it) 
 - Authorization: decorate an interface with an implementation that checks authorization, then passes on to another implementation or throws an unauthorized exception ([example](https://github.com/farlee2121/DependencyInversionExample/blob/65ddb973949131b1367d143e791bd378331a062e/src/Managers.RecipeManagementService.Adapters/Identity/AuthorizedRecipeManagementServiceDecorator.cs))
 
-I've started a [repository](https://github.com/farlee2121/DependencyInversionExample) for demonstrating inversion and some techniques it empowers. I also wrote [Patterns in Practice](../posts/2021-07-09-Patterns-in-Practice.md), which describes how I use this approach and other patterns to design systems.
+I've started a [repository](https://github.com/farlee2121/DependencyInversionExample) for demonstrating inversion and some techniques it empowers. I also wrote [Patterns in Practice](../../posts/2021/2021-07-09-Patterns-in-Practice.md), which describes how I use this approach and other patterns to design systems.
 
 
 ## Conclusion

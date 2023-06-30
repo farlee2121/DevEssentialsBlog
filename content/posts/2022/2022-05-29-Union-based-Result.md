@@ -6,7 +6,7 @@ aliases:
 - /2022/05/29/union-based-result
 ---
 
-I previously wrote about [result types](../posts/2021-01-15-Results-Update.md) and [union types](../posts/2021-03-26-Unions-in-CSharp.md) in C#. I got to wondering if a union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.
+I previously wrote about [result types](../../posts/2021/2021-01-15-Results-Update.md) and [union types](../../posts/2021/2021-03-26-Unions-in-CSharp.md) in C#. I got to wondering if a union-based approach would allow nicer result types. In short, it works, but not as nicely as I'd hope.
 <!--more-->
 
 Some of my previous goals for results types included
@@ -67,7 +67,7 @@ public record DerivedResult : Result<int, string>
 DerivedResult.Ok(5); // !!! This creates Result<int, string> != DerivedResult
 ```
 
-This could be worked around in [the class-based result-type experiment](../posts/2021-01-15-Results-Update.md). However, a similar workaround doesn't compile for the union-like approach. The success and failure types would need to inherit from arbitrary derivatives of Result, but generic type parameters cannot be inherited from.
+This could be worked around in [the class-based result-type experiment](../../posts/2021/2021-01-15-Results-Update.md). However, a similar workaround doesn't compile for the union-like approach. The success and failure types would need to inherit from arbitrary derivatives of Result, but generic type parameters cannot be inherited from.
 
 ```cs
 public record DerivableResult<TSuccess, TError, TResult> where TResult : DerivableResult<TSuccess, TError, TResult>

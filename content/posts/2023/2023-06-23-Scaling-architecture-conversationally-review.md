@@ -13,9 +13,9 @@ I won't make its points better or faster than it. Instead I'll make a few connec
 
 First off, this article connected my thoughts on architecture to some of my more general readings on facilitating creative work. For example, [Dare to Lead](https://brenebrown.com/hubs/dare-to-lead/) and [Meetings Are the Work](https://spencerfarley.com/2022/10/21/five-foundational-beliefs/) talk about how command and control leadership structures don't work effectively for knowledge work. Knowledge work is inherently messy and requires diverse inputs. Often times the ones closest to the work are the ones best equipped to make new connections and make the most effective decisions.
 
-Second, I realized that my [Five Foundational Beliefs](../posts/2022-10-21-Five-Foundational-Beliefs.md) post is essentially an architectural principle list. It attempts to explain what mindsets guide my choices between competing options in a minimal set of memorable ideas.
+Second, I realized that my [Five Foundational Beliefs](../../posts/2022/2022-10-21-Five-Foundational-Beliefs.md) post is essentially an architectural principle list. It attempts to explain what mindsets guide my choices between competing options in a minimal set of memorable ideas.
 
-Much of Scaling Architecture Conversationally seems to be reconciling architectural alignment with a faster pace and more distributed CI/CD flow. As such, it has a lot of overlap with my [Flow Over Prediction](../posts/2023-03-16-flow-over-prediction.md) post.
+Much of Scaling Architecture Conversationally seems to be reconciling architectural alignment with a faster pace and more distributed CI/CD flow. As such, it has a lot of overlap with my [Flow Over Prediction](../../posts/2023/2023-03-16-flow-over-prediction.md) post.
 
 Now for the quotes
 

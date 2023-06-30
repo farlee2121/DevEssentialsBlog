@@ -21,7 +21,7 @@ It seems these may be sufficient: naming, proximity, consistency, and scope.
 
 ## Context
 
-I've been working through the [SWEBOK key knowledge areas](../posts/2021-08-27-SWEBOK-Modified-topic-diagram.md) trying 
+I've been working through the [SWEBOK key knowledge areas](../../posts/2021/2021-08-27-SWEBOK-Modified-topic-diagram.md) trying 
 to distill compact systems for teaching effective practice. Or, at the least, to describe how I approach software development.
 
 Construction is my current focus, and I ended up splitting it in two: the process of making code and the qualities of the code itself.
@@ -29,10 +29,10 @@ Process including activities like debugging, red-greed-refactor, working in smal
 Qualities of the code including aspects like style, readability, understandability. In general everything that impacts the mid to low level
 design and implementation.
 
-I've previously distilled [stable, incremental, additive](../posts/2022-02-25-Stable-Incremental-Additive.md) as drivers of healthy iterative process.
-I've also covered [incremental problem solving](../posts/Whats-Your-Duck-V2/2022-06-16-2-Design-Tree-and-Incremental-Progress.md).
+I've previously distilled [stable, incremental, additive](../../posts/2022/2022-02-25-Stable-Incremental-Additive.md) as drivers of healthy iterative process.
+I've also covered [incremental problem solving](../../posts/Whats-Your-Duck-V2/2022-06-16-2-Design-Tree-and-Incremental-Progress.md).
 
-The code quality half of construction kept bringing me back to the term "self-documenting code". I believe that software ultimately [encodes problem understanding](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md). It encodes the problem so a computer can execute it, but future programmers are the more important audience.
+The code quality half of construction kept bringing me back to the term "self-documenting code". I believe that software ultimately [encodes problem understanding](../../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md). It encodes the problem so a computer can execute it, but future programmers are the more important audience.
 A well constructed system encodes the problem so that future maintainers can understand and modify the system correctly. 
 "Correctly" requiring them to understand the problem that was solved, including the intent and not just what the solution ended up looking like.
 

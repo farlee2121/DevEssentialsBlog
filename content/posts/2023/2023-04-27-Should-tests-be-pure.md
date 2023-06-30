@@ -58,15 +58,15 @@ Tests are the top of the call chain. We shouldn't have to worry about tests bein
 
 In another strike against test purity, stateful behaviors are often critical expectations for our program. For example, one of the most common tasks in an application is saving data to retrieve later. Tests need to be able to verify these side-effects. Since tests are the top of the call chain, they must be the composition root that connects dependencies (or the "pure-impure sandwich" in a functional core design).
 
-That said, test composition and resuse can be very useful. The [TestApi pattern](../posts/2021-10-08-TestApi-in-FSharp-revised.md) is one of my most revisited topics on this blog. PureTest appears to advertise a similar approach to TestAPI, but using a state monad. They also point out some ways the pure monadic approach facilitates composition and reuse. More on this in the next section.
+That said, test composition and resuse can be very useful. The [TestApi pattern](../../posts/2021/2021-10-08-TestApi-in-FSharp-revised.md) is one of my most revisited topics on this blog. PureTest appears to advertise a similar approach to TestAPI, but using a state monad. They also point out some ways the pure monadic approach facilitates composition and reuse. More on this in the next section.
 
 ## Value in Values
 
 [Expecto](https://github.com/haf/expecto) is my favorite testing framework to date and my motivation for seeking out similar libraries in Scala.
-Scala's pure testing libraries frame their value differently from Expecto, but I think the core value is the same: [tests as values](../posts/2022-05-20-Tests-as-Values.md).
+Scala's pure testing libraries frame their value differently from Expecto, but I think the core value is the same: [tests as values](../../posts/2022/2022-05-20-Tests-as-Values.md).
 
 Defining tests as normal programming values that can be created, passed, and operated on like any other value greatly empowers programmers to customize the testing experience. 
-It also removes the meta-programming magic. I demonstrate some of these customization in [a previous post](../posts/2022-05-20-Tests-as-Values.md).
+It also removes the meta-programming magic. I demonstrate some of these customization in [a previous post](../../posts/2022/2022-05-20-Tests-as-Values.md).
 
 Expecto delivers this empowerment to customize and operate on tests while still offering some optional top-level inversion of control. Test values, including test lists, can be annotated and discovered automatically instead of manually executed (e.g. from the program's main function).
 I find this quite useful, since it moves test "registration" much closer to the tests themselves. It also creates an experience much more familiar to users of typical testing frameworks.
@@ -79,7 +79,7 @@ This could potentially simplify customization of test *result* behaviors, much l
 ## Concluding Thoughts
 
 I don't currently see significant value in test purity. The forces that motivate purity are less pertinent to developer tests than code that may be composed by arbitrary consumers (i.e. domain rules).
-I think the underlying value of these pure testing libraries is [tests as values](../posts/2022-05-20-Tests-as-Values.md), which empowers developers to customize and extend their 
+I think the underlying value of these pure testing libraries is [tests as values](../../posts/2022/2022-05-20-Tests-as-Values.md), which empowers developers to customize and extend their 
 testing experience. However, PureTest suggest that pure tests, via monads, may provide even more customization compared to other tests-as-values approaches. 
 
 Overall, my explorations are still early. I may yet find new value in pure tests.

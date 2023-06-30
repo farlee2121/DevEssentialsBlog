@@ -6,7 +6,7 @@ aliases:
 - /2020/09/11/background-task-refactor
 ---
 
-I've been unhappy with the async/background work model in my system for a while. The async logic always seems excessively complex, either entangled with business logic or creating opaque coupling between flows. However, my recent [breakthrough on code structure](../posts/2020-07-10-Synthesizing-Structure.md) suggested a clear path to adding background work in an aspect-oriented style. Let's examine a refactor that helped me prove decorator-style async communication.
+I've been unhappy with the async/background work model in my system for a while. The async logic always seems excessively complex, either entangled with business logic or creating opaque coupling between flows. However, my recent [breakthrough on code structure](../../posts/2020/2020-07-10-Synthesizing-Structure.md) suggested a clear path to adding background work in an aspect-oriented style. Let's examine a refactor that helped me prove decorator-style async communication.
 <!--more-->
 
 ## The Refactor
@@ -29,7 +29,7 @@ Goals include
 
 This code base originally managed async work through a QueueAccessor. Some manager would directly call a known event on the queue accessor with message data, then the queue accessor would publish to a queue, trigger a handler defined in a client, and run another manager method with the given message data.
 
-![Queue Accessor Diagram](../../static/post-media/Background-Task-Refactor/QueueAccessor.drawio.svg)
+![Queue Accessor Diagram](../../../static/post-media/Background-Task-Refactor/QueueAccessor.drawio.svg)
 
 This solution fails because
 - It directly couples the notion of the communication method to business logic
@@ -42,7 +42,7 @@ This solution fails because
 
 I had previously refactored a portion of the index updates. I opted to implement async calls as references back to the concrete manager rather than split up the async code and couple to the queue accessor. This did make the async work clearer, centralized, and prevent coupling to unrelated modules. However, it left my business logic coupled to async concerns and libraries.
 
-![Hangfire Diagram](../../static/post-media/Background-Task-Refactor/Hangfire.drawio.svg)
+![Hangfire Diagram](../../../static/post-media/Background-Task-Refactor/Hangfire.drawio.svg)
 
 ## Design Shift
 
@@ -61,7 +61,7 @@ Shifting to define dependencies contracts with only the calling service in mind 
 
 In essence, we can leverage Aspect-Orientation to apply power-ups to our contracts without changing the original implementation.
 
-![Decorator Diagram](../../static/post-media/Background-Task-Refactor/Decorator.drawio.svg)
+![Decorator Diagram](../../../static/post-media/Background-Task-Refactor/Decorator.drawio.svg)
 <!-- making this diagram makes me realize that the IHandlerRegistration interface belongs to the handler client, but source dependencies are only supposed to point in... How are adapters supposed to consume libraries? It seems silly to abstract every framework from the adapters that are specifically there to bridge the frameworks into the use cases. Nevermind. The adapter is the library that is being extended. It provides the abstraction for the client to consume  -->
 
 This diagram assumes a handler registration, like when using a message bus. However, the caller and concrete event handler don't change no matter what technology we use to implement the async decorator. 

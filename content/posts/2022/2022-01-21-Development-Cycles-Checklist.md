@@ -9,7 +9,7 @@ aliases:
 A junior developer recently asked for a daily responsibilities checklist. This question made no sense to me at first. A developer's job isn't so routine as a daily checklist. However, it sparked me to think about how a developer's regular activities can be described concisely. 
 <!--more-->
 
-The model I came up with is a riff on [Cycles of TDD](https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html) by Robert Martin. I also previously [visualized the Cycles of TDD](../posts/2020-11-13-Cycles-Of-TDD.md).
+The model I came up with is a riff on [Cycles of TDD](https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html) by Robert Martin. I also previously [visualized the Cycles of TDD](../../posts/2020/2020-11-13-Cycles-Of-TDD.md).
 
 The format
 - a scope of time
@@ -165,7 +165,7 @@ Expanded
 
 This was a surprisingly fruitful exercise. A developer balances many tools and techniques across diverse scenarios. However, a robust core of critical thinking and clarification skills bubble to the top at all time scales and across activities. 
 
-I was delighted to find a dividing line, appropriately, at one day. Everything one day and above is governed by common team rituals. Everything below a day is covered by my [duck docs](../posts/2020-10-02-Whats-Your-Duck.md). I have yet to blog the design tree bits of my presentation. That may need to become a priority.
+I was delighted to find a dividing line, appropriately, at one day. Everything one day and above is governed by common team rituals. Everything below a day is covered by my [duck docs](../../posts/2020/2020-10-02-Whats-Your-Duck.md). I have yet to blog the design tree bits of my presentation. That may need to become a priority.
 
 This divide makes sense. Under a day is personal process. Managing more tightly would be impractical. Process over a day gradually increases in scope from team, to department, and company-wide alignment.
 

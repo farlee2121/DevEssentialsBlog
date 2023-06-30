@@ -10,7 +10,7 @@ Turns out this has already been done, and there is a whole category of proof-ori
 
 ## Prior Context
 
-My explorations started between [experimenting with](../posts/2021-04-09-Designing-with-Events-Transforms-and-state.md) Scott Wlaschin's approach to [designing with types](https://fsharpforfunandprofit.com/series/designing-with-types/) and Clojure's unique optional type system, [clojure.spec](https://clojure.org/guides/spec).
+My explorations started between [experimenting with](../../posts/2021/2021-04-09-Designing-with-Events-Transforms-and-state.md) Scott Wlaschin's approach to [designing with types](https://fsharpforfunandprofit.com/series/designing-with-types/) and Clojure's unique optional type system, [clojure.spec](https://clojure.org/guides/spec).
 
 Scott's type-driven approach creates guarded domains with little internal defensive programming. Types are used to limit input to constrained values validated at the edge of the domain. 
 
@@ -20,7 +20,7 @@ Clojure's automatic generative testing had me wondering
 - What does this automatic generative testing measure or prove?
 - How can type-driven approaches similarly leverage constraint data?
 
-I previously [explored the first question](../posts/2022-06-03-Improved-completeness-automatic-random-testing.md), and concluded that such tests are an approximation of [totality](https://en.wikipedia.org/wiki/Partial_function) (all inputs properly map to valid outputs).
+I previously [explored the first question](../../posts/2022/2022-06-03-Improved-completeness-automatic-random-testing.md), and concluded that such tests are an approximation of [totality](https://en.wikipedia.org/wiki/Partial_function) (all inputs properly map to valid outputs).
 
 Turns out the second question has already been explored and has very interesting answers.
 

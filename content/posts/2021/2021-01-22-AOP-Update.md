@@ -6,7 +6,7 @@ aliases:
 - /2021/01/22/aop-update
 ---
 
-I [previously wrote](../posts/Language-Limited-Thought/2020-10-16-AOP-and-Decorator.md) on the difficulties of Aspect-Orientation in C#. The addition of Source Generators in C# 9 changes the possibilities considerably.
+I [previously wrote](../../posts/Language-Limited-Thought/2020-10-16-AOP-and-Decorator.md) on the difficulties of Aspect-Orientation in C#. The addition of Source Generators in C# 9 changes the possibilities considerably.
 <!--more-->
 
 [Source Generators](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/) are much more general than just AOP. They are essentially compile-time reflection. They allow us to use our own code (or any resource) as information to generate code. This allows programmers to leverage all kinds of relationships beyond what the language itself can piece together. There is also no significant performance hit, since everything is determined at compile-time.

@@ -31,7 +31,7 @@ Most of these layers define abstractions that model the problem being solved.
 
 For the most part the higher service types call the layer below. For example, clients call managers and managers call engines and accessors. Utilities tend to be cross-cutting and are used across the layers.
 
-I've written [more on iDesign](../posts/2020-07-03-iDesign-Visual-Summary.md) if you want to explore deeper.
+I've written [more on iDesign](../../posts/2020/2020-07-03-iDesign-Visual-Summary.md) if you want to explore deeper.
 
 ### Clean Architecture layers
 Clean Architecture also organizes systems into layers, but bases the layers on the level of abstraction. Dependency Inversion is used to defer details that are not essential to the business rules or may vary.
@@ -107,7 +107,7 @@ Services themselves are more about what parts of the problem are *both* isolatab
 
 Another way of looking at it, iDesign layers tend not do deliver on their intended Stable Abstractions promise. Since services try to model domain-wide reusable concepts, their abstraction tends to just reflect the implementation (see [header interfaces](https://blog.ploeh.dk/2010/12/02/Interfacesarenotabstractions/#5003089a645f468bb76d44b61871bfdd)). There is no need for the domain service to be abstract when the calling service already defines a port to decouple from concrete implementations. In fact, there is no need for the lower domain service at all if there isn't a concrete need shared between higher services. Instead trying to use domain-wide service interfaces leads to conceptual coupling between services and causes changes to ripple through the application.
 
-Conversely, Ports and Adapters limits the abstractions to the one service that calls it. Domain-wide reuse can still be collected into a service, but the reused service doesn't need to try being abstract or worry about specific caller usecases. Calling services can just use adapters to map their needs into the lower service's api. See, [Open-Closed Principle by Example](../posts/Open-Closed-by-Example/2023-03-02-0-Intro-to-OCP.md) for a more in-depth exploration of how this works.
+Conversely, Ports and Adapters limits the abstractions to the one service that calls it. Domain-wide reuse can still be collected into a service, but the reused service doesn't need to try being abstract or worry about specific caller usecases. Calling services can just use adapters to map their needs into the lower service's api. See, [Open-Closed Principle by Example](../../posts/Open-Closed-by-Example/2023-03-02-0-Intro-to-OCP.md) for a more in-depth exploration of how this works.
 
 ## What's stayed the same
 
@@ -117,7 +117,7 @@ More explicitly
 - Domain rules focus only on modeling the essence of the problem we're solving. This is where domain rules are "bound".
   - Ports allow the domain rules to define dependencies in terms of the domain, not the implementation. They allow dependencies to be bound later
 - Adapters define a suite of alternatives we can swap in for different domain dependencies. This "binds" our suite of behavior options.
-  - Many cross-cutting concerns like identity, logging, caching and similar can be also separated from the domain rules into [decorator adapters](../posts/Open-Closed-by-Example/2023-03-02-4-OCP-as-architecture.md#isolate-cross-cutting-concerns) to be composed later
+  - Many cross-cutting concerns like identity, logging, caching and similar can be also separated from the domain rules into [decorator adapters](../../posts/Open-Closed-by-Example/2023-03-02-4-OCP-as-architecture.md#isolate-cross-cutting-concerns) to be composed later
 - Clients or consumers of the rules decide which adapters to compose into the service ports. This determines, or "binds", the final run-time behavior and dependencies.
 
 I also still believe there is a useful 2-axis gradient of stability and abstraction. However, I don't know how to update the table for the new domain spectrum. The new domain spectrum spans a composed suite of services that don't know about each other. Some services will probably be more fundamental than others. Especially since many services evolve from adapters expanding to meet the needs of other services. 

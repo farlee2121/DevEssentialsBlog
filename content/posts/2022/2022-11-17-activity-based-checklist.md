@@ -7,7 +7,7 @@ title: "Activity-based Developer Checklist"
 This is my attempt at short actionable checklists to guide key moments in software process.
 <!--more-->
 
-I previously wrote a [software checklist based on increments of time](../posts/2022-01-21-Development-Cycles-Checklist.md).
+I previously wrote a [software checklist based on increments of time](../../posts/2022/2022-01-21-Development-Cycles-Checklist.md).
 I was reading more about checklists and noticed many are based on key events in some process. I later learned these key moments are called *pause points*.
 
 Here's my attempt to identify key process moments (pause points) for software, and what is most important to verify at that juncture.

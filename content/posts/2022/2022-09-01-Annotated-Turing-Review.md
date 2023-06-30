@@ -11,7 +11,7 @@ Following software to it's orgins with Alan Turing reveals some interesting tren
 The book prepares the reader with required concepts, clarifies complex sections with examples, and intermixes facinating history about Alan Turing himself.
 
 I did not find the book highly applicable for typical software practice, but it is still quite facinating. It explores computation in its most fundamental form.
-This led to applicable lessons like realizing [every program can be a state machine](../posts/2021-10-15-State-Machines-and-Interpreters-are-Equivalent.md).
+This led to applicable lessons like realizing [every program can be a state machine](../../posts/2021/2021-10-15-State-Machines-and-Interpreters-are-Equivalent.md).
 
 I also find it interesting how many ideas of modern software exist in Turing's original paper, and how the ideas have cycled over time.
 

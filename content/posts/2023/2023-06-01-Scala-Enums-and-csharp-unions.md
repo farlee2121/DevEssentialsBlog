@@ -27,7 +27,7 @@ let ProcessPayment paymentInfo =
     | Paypal paypalInfo -> handlePaypal (paypalInfo)
 ```
 
-I [previously discovered](../posts/2021-03-26-Unions-in-CSharp.md) I could mimic F# union behavior 
+I [previously discovered](../../posts/2021/2021-03-26-Unions-in-CSharp.md) I could mimic F# union behavior 
 concisely in C# using the new-ish C# features for [positional record types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record#positional-syntax-for-property-definition) and pattern matching.
 
 Here's a quick C# translation of the previous example

@@ -25,7 +25,7 @@ Governance is, of course, a trade-off. Governance naturally tends to slow proces
 
 This tradeoff between speed and safety is really a decision of about risk. How much we are willing to tolerate possibility of failure for increased throughput. 
 
-![governance risk vs speed spectrum](../../static/post-media/Governance-and-Multiple-Verification/risk-spectrum.drawio.svg)
+![governance risk vs speed spectrum](../../../static/post-media/Governance-and-Multiple-Verification/risk-spectrum.drawio.svg)
 
 A spectrum of governance techniques have evolved for many levels of speed vs trust. To name a few 
 - Requiring multiple approvals
@@ -40,7 +40,7 @@ A spectrum of governance techniques have evolved for many levels of speed vs tru
 
 Deciding how much governance is needed for a given process is tricky, but a threat matrix is your best friend.
 
-![threat matrix](../../static/post-media/threat-matrix.png)
+![threat matrix](../../../static/post-media/threat-matrix.png)
 
 In general,
 - more contributors increases probability some contributor will err

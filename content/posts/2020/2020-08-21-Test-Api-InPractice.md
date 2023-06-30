@@ -25,7 +25,7 @@ Paul solves this problem by placing an anti-corruption layer between the tests a
 
 If something is to be tested, it must be exposed through the test api. There is no cheating knowledge of code internals.
 
-![Test api diagram](../../static/post-media/test-api-diagram.drawio.svg)
+![Test api diagram](../../../static/post-media/test-api-diagram.drawio.svg)
 
 ## Expected Benefits
 Paul expected various benefits from this pattern.

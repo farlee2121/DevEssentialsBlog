@@ -42,7 +42,7 @@ Motivating questions include
 
 
 I encourage you to pause for a few minutes and write down your thoughts about these questions. You don't have to know the answers, guesses and questions are good too.
-Making predictions has been [proven to improve learning](../../posts/2022-03-07-Small-Teaching-Review.md#predicting).
+Making predictions has been [proven to improve learning](../../posts/2022/2022-03-07-Small-Teaching-Review.md#predicting).
 
 ## History
 

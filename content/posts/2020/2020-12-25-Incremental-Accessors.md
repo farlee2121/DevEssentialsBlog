@@ -20,9 +20,9 @@ Then it hit me, accessors are much like utilities. Utilities evolve from collect
 A similar approach applies to engines. They are repeated domain utilities focused on a computation.
 
 If you want to know more, here are other articles on this journey to-date:
-- [Original realization](../posts/2020-07-10-Synthesizing-Structure.md)
-- [Notification case study](../posts/2020-08-14-Notification-Design.md)
-- [Background task case study](../posts/2020-09-11-Background-Task-Refactor.md)
-- [Pros & Cons after a few months](../posts/2020-09-17-Solid-Structure-Checkin.md)
+- [Original realization](../../posts/2020/2020-07-10-Synthesizing-Structure.md)
+- [Notification case study](../../posts/2020/2020-08-14-Notification-Design.md)
+- [Background task case study](../../posts/2020/2020-09-11-Background-Task-Refactor.md)
+- [Pros & Cons after a few months](../../posts/2020/2020-09-17-Solid-Structure-Checkin.md)
 
-Those unfamiliar with iDesign can checkout [my visual summary of the official book](../posts/2020-07-03-iDesign-Visual-Summary.md).
+Those unfamiliar with iDesign can checkout [my visual summary of the official book](../../posts/2020/2020-07-03-iDesign-Visual-Summary.md).

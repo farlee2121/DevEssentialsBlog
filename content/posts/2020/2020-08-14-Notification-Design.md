@@ -13,7 +13,7 @@ A general design for integrating notifications (email, text, push, etc) has long
 
 The system I'm working on tries to abstract notifications through an EmailAccessor that hides the SMTP framework and an EmailGenerationEngine that creates email content from data, hiding a templating framework. The EmailGenerationEngine returns contracts containing address information and the full html email, which can be passed to the EmailAccessor. Each email has it's own method on the engine. Some of the notifications are also made background tasks by queueing a message to a a bus and processing it in a general NotificationManager.
 
-![Current system diagram](../../static/post-media/Notifications-Design/Old-System-Diagram.drawio.svg)
+![Current system diagram](../../../static/post-media/Notifications-Design/Old-System-Diagram.drawio.svg)
 
 ## New Constraints
 We now needed to white label our system. Emails need to be branded per white label customer and adapted quickly to changing product positioning. Requiring feedback cycles between developers and business people for every email just isn't a tenable solution. Instead we wanted to define emails on a remote service where we could edit them visually. This meant emails must be sent by calling an api with the template ID and data instead of generating them locally (at least for the popular and trusted services we researched).
@@ -83,7 +83,7 @@ The adapter has also stayed thin and focused. It is only concerned with mapping 
 
 Further, the dependency we've defined is much simpler and more generic. It better represents the idea of notifying some event in the service, allowing us to extend the service with many tightly focused implementations.
 
-![New system diagram](../../static/post-media/Notifications-Design/New-System-Diagram.drawio.svg)
+![New system diagram](../../../static/post-media/Notifications-Design/New-System-Diagram.drawio.svg)
 
 ## Generic Wrapper
 There may still be cases where you want to treat notifiers polymorphically. For example, running the event handler out of process.

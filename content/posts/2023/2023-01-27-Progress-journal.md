@@ -38,7 +38,7 @@ I've used Gap and the Gain to track my own progress toward goals for a while. I 
 
 ## Duck Progress
 
-My mentee connected this gain mindset to [duck docks](../posts/Whats-Your-Duck-V2/2022-06-16-3-Ducks.md), a tool we use to clarify, break down, and track progress toward solving a problem.
+My mentee connected this gain mindset to [duck docks](../../posts/Whats-Your-Duck-V2/2022-06-16-3-Ducks.md), a tool we use to clarify, break down, and track progress toward solving a problem.
 
 His idea was to add a "What I learned" section to every duck he creates while he works. This way he can see what he is learning over time and see how much he as progressed.
 My mentee is teaching me too!

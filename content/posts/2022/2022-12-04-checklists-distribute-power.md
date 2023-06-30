@@ -45,7 +45,7 @@ Dr. Gawande takes this even further and suggest the leader should not start a ch
 
 ## Better Wrong Than Vague
 
-I can't resist the connection to [Design of Design](https://en.wikipedia.org/wiki/The_Design_of_Design). After all, I wrote a whole series elaborating on how to [prefer to be wrong rather than vague](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md).
+I can't resist the connection to [Design of Design](https://en.wikipedia.org/wiki/The_Design_of_Design). After all, I wrote a whole series elaborating on how to [prefer to be wrong rather than vague](../../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md).
 
 Part of the power of checklists is clarifying what's important and writing it down. 
 This is even more true when the checklist is short or shared by a team. Refining the checklist to only the most powerful options is a difficult.

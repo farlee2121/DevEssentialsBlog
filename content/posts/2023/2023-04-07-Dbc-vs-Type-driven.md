@@ -7,7 +7,7 @@ title: Design-by-Contract vs Type-driven Constraints
 Validating that data fits certain constraints is a prevelant programming task and how we approach it effects the system's safety and reliability. Many approaches have been devised, and I recently realized the key difference between two major approaches: Design-by-Contract and Type-Driven Development.
 <!--more-->
 
-I was reflecting on my previous adventures with constraints: [FsSpec](https://github.com/farlee2121/FsSpec), [proof-oriented systems](../posts/2022-07-22-Proof-Oriented-Programming.md), [clojure.spec](../posts/2022-08-05-Clojure-spec-dependent.md), and some others.
+I was reflecting on my previous adventures with constraints: [FsSpec](https://github.com/farlee2121/FsSpec), [proof-oriented systems](../../posts/2022/2022-07-22-Proof-Oriented-Programming.md), [clojure.spec](../../posts/2022/2022-08-05-Clojure-spec-dependent.md), and some others.
 In particular, [someone asked](https://github.com/farlee2121/FsSpec/issues/1#issuecomment-1189127034) why I saw Clojure.spec as part of the Clojure type system but *not* FsSpec as part of the F# type system.
 
 ## Key Paradigm differences

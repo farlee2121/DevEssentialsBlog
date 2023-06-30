@@ -7,7 +7,7 @@ title: "Duck Structure Update"
 My duck docs continue to evolve as my process changes. Here are changes I've noticed lately.
 <!--more-->
 
-This post does not fully cover duck docs. You can check out the [original duck structure post](../posts/2021-05-21-Duck-Structure.md) or my [whole series on ducking](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md). In short, the ducking process is about externally communicating to clarify thoughts and assist effective problem solving. I tend to communicate via lightly structured text documents that I call duck docs.
+This post does not fully cover duck docs. You can check out the [original duck structure post](../../posts/2021/2021-05-21-Duck-Structure.md) or my [whole series on ducking](../../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md). In short, the ducking process is about externally communicating to clarify thoughts and assist effective problem solving. I tend to communicate via lightly structured text documents that I call duck docs.
 
 ## Sections
 
@@ -24,7 +24,7 @@ I've also noticed that the motivation and requirements sections for bugs tend to
 The main change is the Plan and Implementation sections got absorbed into Exploration and TODO.
 
 I've been refining my ability to work, commit, and pull request in small increments. I usually still ask a lot of questions before writing code, but I no longer separate the exploration and implementation phases. I implement small chunks of value as I have enough knowledge to implement them. The exploration section is a continuous dialog until the problem is solved. 
-This also better matches my mental model that [software is increments of clarity until you've represented the problem so that a computer can execute it](../posts/Whats-Your-Duck-V2/2022-06-16-2-Design-Tree-and-Incremental-Progress.md).
+This also better matches my mental model that [software is increments of clarity until you've represented the problem so that a computer can execute it](../../posts/Whats-Your-Duck-V2/2022-06-16-2-Design-Tree-and-Incremental-Progress.md).
 
 
 ## Tags
@@ -53,7 +53,7 @@ I still occasionally use a handful of other tags
 
 ## Sample
 
-I've reworked the example from my previous [duck structure post](../posts/2021-05-21-Duck-Structure.md). It focuses on a prior [learning project of mine](https://github.com/farlee2121/clj-recipe). I don't show very deep deliberations, partially because it was a fairly simple project and partially to keep the example size digestable.
+I've reworked the example from my previous [duck structure post](../../posts/2021/2021-05-21-Duck-Structure.md). It focuses on a prior [learning project of mine](https://github.com/farlee2121/clj-recipe). I don't show very deep deliberations, partially because it was a fairly simple project and partially to keep the example size digestable.
 
 ```md
 ## Motivation

@@ -27,7 +27,7 @@ Then, I started this blog. I wanted to write my posts in format that made it eas
 - Post metadata via a common yaml section
 - extensibility via familiar tools (HTML & CSS)
 
-Markdown and VsCode worked so well that I moved my [duck doc design process](../posts/2020-10-02-Whats-Your-Duck.md) over to markdown. I could
+Markdown and VsCode worked so well that I moved my [duck doc design process](../../posts/2020/2020-10-02-Whats-Your-Duck.md) over to markdown. I could
 - get my thoughts out without the tools slowing me down
 - work with design docs directly in the code base
 - copy design doc snippets into issue trackers or other tools

@@ -6,7 +6,7 @@ title: "Measuring Principles"
 
 <!-- TODO: reconsider the title -->
 
-A [previous post](../posts/2023-01-06-Are-principles-SMART.md) got me thinking about how principles can be measured and what value such measures could provide. 
+A [previous post](../../posts/2023/2023-01-06-Are-principles-SMART.md) got me thinking about how principles can be measured and what value such measures could provide. 
 <!--more-->
 
 Principles highlight good or bad qualities to guide decisions. They don't outline prescriptive implementations. As such, principles manifest in diverse ways, many of them subjective. 
@@ -21,7 +21,7 @@ From this standpoint, we could measure principles with a sort of audit. Experts 
 
 Similar measures could be collected by classifying and tracking defects found in code reviews. However, this is susceptible to shared blindspots within a team.
 
-Alternatively, developers could take assessments targeting certain design principles. Perhaps by [detecting defects in work](../posts/2022-06-12-Better-Interviews-with-Defect-Detection.md). This sounds much less invasive, but potentially less descriptive of true application.
+Alternatively, developers could take assessments targeting certain design principles. Perhaps by [detecting defects in work](../../posts/2022/2022-06-12-Better-Interviews-with-Defect-Detection.md). This sounds much less invasive, but potentially less descriptive of true application.
 
 There's no real conclusion here. Just some interesting thoughts to tuck away for future consideration and experimentation. Always good to have better education tools.
 

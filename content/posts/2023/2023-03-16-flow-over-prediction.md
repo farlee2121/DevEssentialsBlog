@@ -12,10 +12,10 @@ I've been thinking about the estimation books sitting on my shelf. Why haven't I
 <!-- Would estimation be more important to other groups?  
 Realized that estimation may have reduced in importance in software.-->
 
-Iterative process is reaching its maximum with the [Continuous Integration / Continuous deployment (CI/CD)](https://en.wikipedia.org/wiki/CI/CD) movement. It's not just about having an automated build and release. CI/CD is intended to maximize feedback loops and refine problem understanding in stable increments. It's about [iterating quickly and sustainably](../posts/2022-04-24-CI-and-Refactoring.md) with units of value that users can experience. 
+Iterative process is reaching its maximum with the [Continuous Integration / Continuous deployment (CI/CD)](https://en.wikipedia.org/wiki/CI/CD) movement. It's not just about having an automated build and release. CI/CD is intended to maximize feedback loops and refine problem understanding in stable increments. It's about [iterating quickly and sustainably](../../posts/2022/2022-04-24-CI-and-Refactoring.md) with units of value that users can experience. 
 <!-- Doing challenging activities (like deploys and merges) more frequently pushes us to solve -->
 
-This fits well with how I view the nature of software. Software is problem modeling. [Progress is measured in understanding and solved user needs](../posts/2021-01-29-Going-Fast-is-Going-Well.md), not in code released or effort expended. 
+This fits well with how I view the nature of software. Software is problem modeling. [Progress is measured in understanding and solved user needs](../../posts/2021/2021-01-29-Going-Fast-is-Going-Well.md), not in code released or effort expended. 
 
 Quick stable feedback loops render estimates less important, since we're always delivering the next most important work as quickly as we can then re-evaluating priorities in light of the new feedback.
 
@@ -31,7 +31,7 @@ Slow in this case doesn't mean inefficient. It means we should never be rushed. 
 
 Cutting quality for short-term gains is not smooth. Shortcuts create friction that effect performance and build bad habits. The key to going fast is a sustainable and consistent process, a smooth process.
 
-Phrases used with CI/CD include "shift pain left" or "if it hurts, do it more often". Doing challenging activities like reviews, merges, and deployments more frequently forces us to invest in those processes and smooth the experience. You can't rely on manual deployment steps or extended manual testing if you deploy several times daily. These processes need to find errors fast and with as much automation as possible. In a sense, CI/CD extends ["tightening the net"](../posts/2022-10-21-Five-Foundational-Beliefs.md#tighten-the-net) beyond testing into other key processes. The goal is to permanently improve agility and safety by refining process in sustainable ways.
+Phrases used with CI/CD include "shift pain left" or "if it hurts, do it more often". Doing challenging activities like reviews, merges, and deployments more frequently forces us to invest in those processes and smooth the experience. You can't rely on manual deployment steps or extended manual testing if you deploy several times daily. These processes need to find errors fast and with as much automation as possible. In a sense, CI/CD extends ["tightening the net"](../../posts/2022/2022-10-21-Five-Foundational-Beliefs.md#tighten-the-net) beyond testing into other key processes. The goal is to permanently improve agility and safety by refining process in sustainable ways.
 
 [DORA](https://www.devops-research.com/research.html) is one of the longest and most measured studies on software team performance. It identified four key measures that predict team performance 
 - Lead time (from review passed to deployed)

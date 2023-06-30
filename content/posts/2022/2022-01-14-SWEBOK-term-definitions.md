@@ -62,7 +62,7 @@ Examples
 ## Software Testing
 Testing executes the software to verify expectations.
 
-SWEBOK includes debugging (running the software with ability to stop at certain lines of code & inspect values) in this category. Most often this category refers to automated tests (e.g. unit tests). I have several posts on [different kinds of tests](../posts/2021-08-30-Test-Types-and-Lifecycle-Phases.md) and [when to use them](../posts/2021-12-05-What-tests-measure.md).
+SWEBOK includes debugging (running the software with ability to stop at certain lines of code & inspect values) in this category. Most often this category refers to automated tests (e.g. unit tests). I have several posts on [different kinds of tests](../../posts/2021/2021-08-30-Test-Types-and-Lifecycle-Phases.md) and [when to use them](../../posts/2021/2021-12-05-What-tests-measure.md).
 
 Examples
 - Debugging
@@ -121,7 +121,7 @@ Software Engineering Process is effectively process in the general sense.
 
 It's how we go about executing our activities and how that feeds into accomplishing desired outcomes. This includes the software development lifecycle, but also the selection and arrangement of controls and measures within that lifecycle, as well as process improvement practices.
 
-I've previously discussed software development as [a series of problem transformations](../posts/2021-08-13-Swebok-transform-view.md) and how this process [produces artifacts for control](../posts/2021-08-20-SWEBOK-transform-SCM.md).
+I've previously discussed software development as [a series of problem transformations](../../posts/2021/2021-08-13-Swebok-transform-view.md) and how this process [produces artifacts for control](../../posts/2021/2021-08-20-SWEBOK-transform-SCM.md).
 
 Examples
 - Development lifecycles (e.g. requirements, design, construction, test, and maintenance)

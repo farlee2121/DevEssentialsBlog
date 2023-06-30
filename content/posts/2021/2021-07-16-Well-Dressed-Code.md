@@ -10,7 +10,7 @@ You know what they say about sharp-dressed code. Every dev's crazy about it...
 
 More seriously, developers often fail to notice well-written code, but easily recognize and curse poorly written code.
 
-[![wtf per minute comic](../../static/post-media/Well-Dressed-Code/WFTPM.png)](https://reviewthecode.blogspot.com/2016/01/wtf-per-minute-actual-measurement-for.html)
+[![wtf per minute comic](../../../static/post-media/Well-Dressed-Code/WFTPM.png)](https://reviewthecode.blogspot.com/2016/01/wtf-per-minute-actual-measurement-for.html)
 
 Still, some of the greatest minds in our field have a great passion for well-written code (quotes below). Code clarity directly contributes to understandability, maintenance, quality, and more.  Here I'll discuss practical ways to write clean and maintainable code.
 <!--more-->
@@ -44,7 +44,7 @@ The primary audience of code is maintainers (probably ourselves). A piece of cod
 
 Here are my favorite practical techniques for writing clear code. Most of them can be found in the [Software Engineering Body of Knowledge Chapter 3](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v3) or with great detail in [Code Complete](https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670).
 
-**Naming**: Naming is one of the most important aspects of clear code. I've written [a full post about naming](../posts/DevEssentials/2018-10-01-Semantic-Naming.md)
+**Naming**: Naming is one of the most important aspects of clear code. I've written [a full post about naming](../../posts/DevEssentials/2018-10-01-Semantic-Naming.md)
 - Abbreviations are usually bad
 - don't be afraid of long names
 - name for semantic purpose, not type or implementation
@@ -74,7 +74,7 @@ Avoid mutating data (e.g. conditionals that modify variables) or wrap the mutati
 
 **THINK!** Unclear thoughts make unclear code. Think before you write.
 
-**TEST!** Testing is one of the best techniques to clarify thought and think from the perspective of code consumers. Especially [tests that aren't tangled with implementations](../posts/2020-08-21-Test-Api-InPractice.md)
+**TEST!** Testing is one of the best techniques to clarify thought and think from the perspective of code consumers. Especially [tests that aren't tangled with implementations](../../posts/2020/2020-08-21-Test-Api-InPractice.md)
 
 
 ## Conclusion

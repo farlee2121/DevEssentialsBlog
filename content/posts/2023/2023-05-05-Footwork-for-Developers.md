@@ -13,13 +13,13 @@ This idea was prompted by [Dare to Lead](https://brenebrown.com/hubs/dare-to-lea
 
 I can't speak for developers at large, let alone other roles, but here are some of the skills I've invested long-term intentional practice into. I think they underpin most everything I do.
 
-- [Small and complete increments of work](../posts/2022-02-25-Stable-Incremental-Additive.md)
+- [Small and complete increments of work](../../posts/2022/2022-02-25-Stable-Incremental-Additive.md)
   - Small and complete commits
   - Considering a few alternatives before coding
-  - [Trying to externally communicate ideas early and often](../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md) (maybe just to a text doc, maybe collaborative processes)
+  - [Trying to externally communicate ideas early and often](../../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md) (maybe just to a text doc, maybe collaborative processes)
 - Always starting with and constantly tying back to motivations of the work being done
 - hypothesis-test cycles
-  - Test-Driven Development or a similar test-code loop. Can also take many forms before coding even starts (like [duck docs](../posts/Whats-Your-Duck-V2/2022-06-16-3-Ducks.md))
+  - Test-Driven Development or a similar test-code loop. Can also take many forms before coding even starts (like [duck docs](../../posts/Whats-Your-Duck-V2/2022-06-16-3-Ducks.md))
 - Good naming & readability
 
 Several seasoned developers I respect write about intentionally practicing small increments of work. Some examples are
@@ -31,7 +31,7 @@ Several seasoned developers I respect write about intentionally practicing small
 I've also found it worthwhile to be very familiar with my editor, but I don't explicitly practice it regularly. Features like regex-based find and replace, multi-line editing, move line up/down, hot keys for various test run selections, and go to symbol are worth committing to muscle memory. These actions are so common that the time savings add up and they reduce breaks in flow.
 
 Overall, I really like the fundamental, muscle-memory ingrained, skill analogy. 
-Intentional practice is [critical to forming expertise](../posts/Summary-How-Learning-Works/2021-02-12-4-Practice-and-Feedback.md). 
+Intentional practice is [critical to forming expertise](../../posts/Summary-How-Learning-Works/2021-02-12-4-Practice-and-Feedback.md). 
 Identifying and normalizing practice routines for software skills could be rocket fuel for team maturity.
 I know kata are somewhat meant for this, but many kata I've encountered are geared only toward algorithms or language syntax.
 

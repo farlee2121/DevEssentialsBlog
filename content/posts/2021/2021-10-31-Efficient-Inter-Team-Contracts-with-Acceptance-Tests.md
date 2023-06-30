@@ -14,7 +14,7 @@ I've been exploring large-scale formal development practices, and realized accep
 
 Let's set a bit of background.
 
-First, I use [TestApi](../posts/2020-08-21-Test-Api-InPractice.md) for behavior-driven testing. This, and other [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development#Principles_of_BDD) methods, write tests against their own abstraction. This allows tests to cleanly encode behavior instead of getting wrapped up in system details. It also allows the same test suite to test multiple implementations.
+First, I use [TestApi](../../posts/2020/2020-08-21-Test-Api-InPractice.md) for behavior-driven testing. This, and other [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development#Principles_of_BDD) methods, write tests against their own abstraction. This allows tests to cleanly encode behavior instead of getting wrapped up in system details. It also allows the same test suite to test multiple implementations.
 
 Second, I use [plugin-style architectures](https://spencerfarley.com/2020/12/19/ports-and-adapters/) like Hexagonal or Clean Architectures. These methods work on the same idea as TestApi. Services use Dependency Inversion to build up their own abstract dependencies and use adapters to map implementations into those expected abstractions. This allows us to test dependency behaviors against the abstraction with clean caller-oriented semantics. Mixing in BDD methods allows us to test all implementations of the dependency with the same test suite.
 
@@ -34,7 +34,7 @@ However, splitting code means more communication overhead. Each feedback cycle r
 
   <!-- - todo: maybe move this up and share the same steps across cycle formalities-->
 
-Staying efficient means reducing communication overhead. [The fewer cycles we need to share an understanding of the problem, the faster we can be](../posts/2021-01-29-Going-Fast-is-Going-Well.md). Agile methods attempt to address this generally through frequent collaboration in small additive chunks.
+Staying efficient means reducing communication overhead. [The fewer cycles we need to share an understanding of the problem, the faster we can be](../../posts/2021/2021-01-29-Going-Fast-is-Going-Well.md). Agile methods attempt to address this generally through frequent collaboration in small additive chunks.
 
 ## Acceptance Tests as Developer Communication
 

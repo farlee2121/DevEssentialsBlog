@@ -59,7 +59,7 @@ By analogy, you could say that principles are more like a compass than an odomet
 
 Principles are not about tracking over time. They're about improving the individual decisions on our way to any goal. 
 
-Principles are a good example of [Smooth is Fast](../posts/2023-03-16-flow-over-prediction.md). Taking time to build tools for making quality decisions smooths our process and permanently increases our velocity.
+Principles are a good example of [Smooth is Fast](../../posts/2023/2023-03-16-flow-over-prediction.md). Taking time to build tools for making quality decisions smooths our process and permanently increases our velocity.
 
 ## Conclusions
 

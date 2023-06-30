@@ -22,7 +22,7 @@ They cannot test for expectations that are not represented in code. In particula
 
 ## Type-Driven Design and Total Functions
 
-Scott Wlaschin, in Domain Modeling Made Functional, introduces [total functions](https://en.wikipedia.org/wiki/Partial_function). These functions should clearly communicate all of their expectations in their signatures and always return advertized values. This means potential failures are not exceptions, but instead constructs like a [result type](../posts/2021-01-15-Results-Update.md).
+Scott Wlaschin, in Domain Modeling Made Functional, introduces [total functions](https://en.wikipedia.org/wiki/Partial_function). These functions should clearly communicate all of their expectations in their signatures and always return advertized values. This means potential failures are not exceptions, but instead constructs like a [result type](../../posts/2021/2021-01-15-Results-Update.md).
 
 He also discusses how [designing with types](https://fsharpforfunandprofit.com/series/designing-with-types/) allows us to centralize defensive programming and communicate constrained types in signatures.
 
