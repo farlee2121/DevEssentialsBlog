@@ -42,7 +42,7 @@ If we recognize notifications are likely to change often, we can instead take a 
 
 For example, an e-commerce business will likely divide its workers into distinct roles like: purchasing, packing, delivery, and more. A domain-driven software system for this company would have sub-systems, or sub-domains, serving each of these roles in the company. The programming teams and codebases may even be divided on those lines.
 
-I recently wrote how [Domain-driven sub-domains satisfy the Single Responsibility Principle](../posts/2023/2023-06-12-Sub-domains-and-SRP.md).
+I recently wrote how [Domain-driven sub-domains satisfy the Single Responsibility Principle](../posts/2023-06-12-Sub-domains-and-SRP.md).
 
 DDD also encourages programmers and business experts to use the same terms and concepts as much as possible. This improves communication and increases likelihood that programmers will unlock new understanding of the business's nature, and thus create a more stable (and useful) system.
 

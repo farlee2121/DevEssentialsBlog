@@ -34,7 +34,7 @@ Beyond team skills, curiosity also impacts relationships in potentially adversar
 is thinking of both parties as being on the same side. Get curious about their needs and how both parties can benefit from the agreement.
 If both parties can't benefit, then you probably don't want an agreement as it will only harm the relationship and your reputation.
 
-The [Socratic method, Leading, and Caring](../draft/2023-03-03-Socratic-method-and-care.md) was a transformational technique for my teaching.
+The [Socratic method, Leading, and Caring](../posts/2023-06-16-Socratic-method-and-care.md) was a transformational technique for my teaching.
 The socratic method is all about asking questions to guide a student's exploration rather than presenting answers. In other words, a it's a form of curiosity.
 
 
