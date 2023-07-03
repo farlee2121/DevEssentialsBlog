@@ -32,7 +32,9 @@ A few examples
 - "What is the objective? What are we trying to accomplish here?"
 - "How am I supposed to do that?"
 
-I notice these most of these question examples point back to uncovering motivations. That is, to better understand your counterpart. This overlaps well with my development philosophy. Which is to [tie work back to motivations/ the problem being solved early and often](../posts/2022-10-21-Five-Foundational-Beliefs.md). I see programming itself as [a process of clarifying needs](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md) until they're specific enough for software to run.
+Calibrated questions invite your counterpart to elaborate. They can be used to uncover more information, show interest, or encourage the other party to think through their position more. When encouraging further reflection, calibrated questions can act as a way of saying no that is less confrontational. We'll chosen questions shape the conversation. They can lead the other side to better solutions while leaving them feeling like it was their idea.
+
+I notice these most of these question examples point back to uncovering motivations. That is, to better understand your counterpart. This overlaps well with my development philosophy. Which is to [tie work back to motivations/ the problem being solved early and often](../posts/2022-10-21-Five-Foundational-Beliefs.md). I see programming itself as [a process of clarifying needs](../posts/Whats-Your-Duck-V2/2022-06-16-1-Software-as-Clarity.md) until they're specific enough for software to run. Calibrated questions may refine my skills for extracting intent and thus for writing better software.
 
 
 In summary, I greatly enjoyed this book. It overlaps significantly with other lessons I've learned, and builds on them. It defines actionable ways to ask gentle and purposeful questions, manage emotions constructively, and solve problems while leaving everyone feeling good about it.
