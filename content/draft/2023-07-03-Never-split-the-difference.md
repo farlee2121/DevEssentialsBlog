@@ -16,7 +16,7 @@ The underlying approach is to be curious, listen intensely, and help the other p
 
 This includes situations where you can't actually give anything to the other side. As he points out, hostage negotiators usually have to get everything they want without giving much or anything to the hostage taker. Similar rules often apply when dealing with children who don't want to follow rules, upset customers, etc. Yet the right approach can still leave both sides feeling good and preserving the relationship.
 
-I absolutely love this message. It fits well with my recent learnings around the [socratic method](../posts/2023-06-16-Socratic-method-and-care.md) and [curiosity as a leadership tool](../draft/2023-05-05-Curiosity-and-leadership.md).
+I absolutely love this message. It fits well with my recent learnings around the [socratic method](../posts/2023-06-16-Socratic-method-and-care.md) and [curiosity as a leadership tool](../posts/2023-07-06-Curiosity-and-leadership.md).
 
 
 Curiosity, with a few techniques for showing you're listening, helps the other side feel heard, connected, and often cared for. In fact, he mentions research showing that positive emotions improve mental agility. This puts everyone in a better position to solve problems. This includes making deals, teaching/learning, or most any kind of problem solving. 

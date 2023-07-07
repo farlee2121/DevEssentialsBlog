@@ -13,7 +13,7 @@ Everyone lauds Picard as a great leader, and at some point I got frustrated with
 I thought "All he does is ask his subordinates for options then picks one". 
 Then I realized, That's exactly why he's a great leader.
 
-Picard-style leadership overlaps heavily with my recent post on [curiosity as an effective tool for practicing relational skills](../draft/2023-05-05-Curiosity-and-leadership.md).
+Picard-style leadership overlaps heavily with my recent post on [curiosity as an effective tool for practicing relational skills](../posts/2023-07-06-Curiosity-and-leadership.md).
 
 Picard has prestigious experience and deep expertise, but that's not what we not what we normally see of him and it's not what makes him an effective leader.
 Picard is an effective leader because he gets the right people talking, listens to his people, tests their ideas, then takes accountability.
