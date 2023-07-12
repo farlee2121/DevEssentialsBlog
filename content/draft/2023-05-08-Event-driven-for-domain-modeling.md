@@ -95,6 +95,8 @@ Surprise! This is nearly valid F# syntax. I made a few tweaks to make it more ge
 
 F# can be used as a fairly intuitive semi-formal convention to refine the event storm with non-developers. With the right approach, this semi-formal definition is already rigorous enough to define the foundational domain model in code.
 
+<!-- TODO: maybe include a sample of a less rigorous syntax. Fundamentally the same approach, just a little different. One way or the other, dependencies don't come in until post stakeholder conversations (input and outputs stand on their own). With either form, dependencies can be contemplated and added to the model fairly intuitively, it's just that one of them is valid code... -->
+
 The code design approach here is called Functional Core or Event-Driven Architecture. The idea is that the business rules are [pure functions](https://en.wikipedia.org/wiki/Pure_function), 
 they don't cause any observable state change. Instead they return values, in this case the events, which represent state changes that can be enacted by simple mapping functions.
 
