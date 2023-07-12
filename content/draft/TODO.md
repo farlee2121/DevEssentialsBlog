@@ -20,8 +20,6 @@ backup idea queue
 - I can probably wring a post or two out of my Ionide contributions 
   - maybe talking about minimal parameters
   - probably just show of some of the challenges I was able to overcome (multiple sources, not all aligned; updating from code)
-- PR review approach: ask questions, make a PR to reviewed branch if you want something specific. Less confrontational, feels more like help than criticism or extra work. Opens opportunities to get people interested in techniques.
-  - be sure to credit blog post that introduced PR PR idea
 
 Longer-form 
 - NOTE: don't try tackling these as one great series. I think it'll be easier to tackle them as individual posts
