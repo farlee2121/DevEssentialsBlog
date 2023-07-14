@@ -8,7 +8,6 @@ Placeholder for links that need filled
 backup idea queue
 - FsCheck saga
   - better understanding delegates (target issue) 
-- Pact https://pact.io/. An interesting and good tool, but not as full a replacement as advertized. It's basically a assertion-less property test. Perhaps a bit smarter than that. It seems like they sample real data, which would make it an operational profile test. Again, useful but not a replacement for good behavioral tests, especially since developer tests are partially about helping the developer think critically about their problem, not just for verifying the behavior. Good developer tests also aren't fragile (still working on that series, but have some test api posts)
 - try to make some incremental duck examples?? (demonstrate working through a duck? maybe skip through several stages to show techniques/questions applied at those stages)
 - OCP Q&A add-on post
 - Explore https://en.wikipedia.org/wiki/Bloom%27s_taxonomy and https://blog.edmentum.com/webb%E2%80%99s-depth-knowledge-framework-basics as a means of more effective/intentional question asking
@@ -17,7 +16,8 @@ backup idea queue
   - flow over prediction related to distributed architecture over central planning (might have more info in my Scaling Architecture Conversationally notes) -> Decentralized decision making means faster feedback loops, greater scalability. 
   - Refine the guardrails/SOP over controling specifics. Not easy though.
 - I can probably wring a post or two out of my Ionide contributions 
-  - maybe talking about minimal parameters / the refactoring I did early on could be a good case study in information hiding
+  - maybe talking about minimal parameters / the refactoring I did early on could be a good case study in information hiding and how to choose parameters
+    - maybe frame as: I can see how all this would be considered helpers to improve readability of the main flow, but now I want to reuse parts of this and their current parameters don't let me do that. Need to identify the core reusable logic, isolate it, and require only the parameters needed for that bit of logic. Refactoring that first, then I can use the logic in my new flow when I add it. 
   - probably just show of some of the challenges I was able to overcome (multiple sources, not all aligned; updating from code)
   - can probably do a high-level one that's essentially just the PR
 
