@@ -4,7 +4,7 @@ tags: [Leadership]
 title: Picard-style Conflict Resolution
 ---
 
-I previously wrote about [Picard-style leadership](../draft/2023-05-07-Picard-style-leadership.md), where the captain provides no answers and instead creates an empowered team through questions.
+I previously wrote about [Picard-style leadership](../posts/2023-07-21-Picard-style-leadership.md), where the captain provides no answers and instead creates an empowered team through questions.
 Now I realize the same principle applies to conflict resolution.
 <!--more-->
 
