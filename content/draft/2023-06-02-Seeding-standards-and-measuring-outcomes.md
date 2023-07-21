@@ -1,6 +1,6 @@
 ---
 date: 2023-06-02
-tags: [Leadership, Standards, Measurement]
+tags: [Leadership, Standards, Measurement, Quality]
 title: Seeding Standards and Measuring Development Outcomes
 ---
 
