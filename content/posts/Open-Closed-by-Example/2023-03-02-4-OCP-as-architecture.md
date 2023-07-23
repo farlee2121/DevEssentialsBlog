@@ -87,7 +87,7 @@ We've [already seen](./2023-03-02-3-Interchangable-Dependencies.md) an example o
 
 Consider IAttachmentAccess. It could directly adapt to a 3rd-party storage service like S3, BlobStorage, or a CDN. Our application could also decide to centralize campaign documents and adapt IAttachmentAccess into a custom CampaignDocumentService. We could even use the different adapters to migrate between storage options.
 
-Note how threads and messages are both being stored to relational databases. This could be the same database, or it could be separate. The service does not depend on the data store to manage relationships. It handles relationships in the logic layer. This removes implicit data assumptions between dependencies and keeps port implementations interchangeable. This was a hard step for me to take and I wrote [a thorough post about it](../../posts/2021-01-01-Accessors-Services-Not-Servants.md). 
+Note how threads and messages are both being stored to relational databases. This could be the same database, or it could be separate. The service does not depend on the data store to manage relationships. It handles relationships in the logic layer. This removes implicit data assumptions between dependencies and keeps port implementations interchangeable. This was a hard step for me to take and I wrote [a thorough post about it](../../posts/2021/2021-01-01-Accessors-Services-Not-Servants.md). 
 
 All together, each dependency of MessagingClient can be swapped independently without changes the MessagingClient.
 
@@ -183,13 +183,13 @@ This series has shown ports and adapter implementations from a common Object-Ori
 ## Further reading
 I'll admit this concept takes some experimentation to understand. Here are resources that helped me and some writtings about my own process learning this pattern
 - [Layers, Onions, Ports, Adapters: it's all the same](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/)
-- [Notification Refactor Case Study](../../posts/2020-08-14-Notification-Design.md)
-- [Async Refactor Case Study](../../posts/2020-09-11-Background-Task-Refactor.md)
-- [Accessors: Services Not Servants](../../posts/2021-01-01-Accessors-Services-Not-Servants.md)
-- [Clean Architecture+: Check-in and Benefits](../../posts/2020-09-17-Solid-Structure-Checkin.md)
+- [Notification Refactor Case Study](../../posts/2020/2020-08-14-Notification-Design.md)
+- [Async Refactor Case Study](../../posts/2020/2020-09-11-Background-Task-Refactor.md)
+- [Accessors: Services Not Servants](../../posts/2021/2021-01-01-Accessors-Services-Not-Servants.md)
+- [Clean Architecture+: Check-in and Benefits](../../posts/2020/2020-09-17-Solid-Structure-Checkin.md)
 - [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-- [Incremental Accessors](../../posts/2020-12-25-Incremental-Accessors.md)
-- [Ports and Adapters](../../posts/2020-12-19-Ports-and-Adapters.md)
+- [Incremental Accessors](../../posts/2020/2020-12-25-Incremental-Accessors.md)
+- [Ports and Adapters](../../posts/2020/2020-12-19-Ports-and-Adapters.md)
 - [DI-Friendly Framework](https://blog.ploeh.dk/2014/05/19/di-friendly-framework/)
 
 

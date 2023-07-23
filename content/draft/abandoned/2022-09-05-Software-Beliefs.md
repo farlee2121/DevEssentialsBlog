@@ -26,7 +26,7 @@ I'm sure some of these will change in the future. It's also a bit of a jumble, b
 <!-- Todo: try to order these so related ones are together. Maybe group some values -->
 
 ## Mental Model
-- Current best hierarchy of software knowledge [is roughly like this diagram](../../posts/2021-08-27-SWEBOK-Modified-topic-diagram.md)
+- Current best hierarchy of software knowledge [is roughly like this diagram](../../posts/2021/2021-08-27-SWEBOK-Modified-topic-diagram.md)
 - There is no routine stage of software development. Every step of software is design. 
   - Source: Fred Brooks, especially Design of Design. More clearly stated in What is Software Design
   - The house / construction model of development is harmful

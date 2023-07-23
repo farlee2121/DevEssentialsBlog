@@ -25,7 +25,7 @@ These tools generally offer mature capabilities for scale
   - A pure domain does not depend on external state, and thus decouples dependency on risky out-of-process resources. The risky integrations can be composed via event tooling which centralizes error handling behaviors
   - This also works for events in a well-done dependency inversion structure, but less of the system is represented as events
 
-Event streams offer the additional benefit of system history. Event streams or an event store can track the entire history of system states, [which has many benefits](../../posts/2021-05-28-Transaction-Databases.md).
+Event streams offer the additional benefit of system history. Event streams or an event store can track the entire history of system states, [which has many benefits](../../posts/2021/2021-05-28-Transaction-Databases.md).
 
 ## Benefit: Traceability
 
