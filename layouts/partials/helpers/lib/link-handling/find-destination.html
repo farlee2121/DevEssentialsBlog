@@ -114,6 +114,14 @@
                 {{- if and (not (hasPrefix $path ".")) (fileExists $staticFile) -}}
                     {{- $notFound = false -}}
                 {{- end -}}
+                {{- /* Is it a relatively specified static file? (i.e. `../../static/image.png`) */ -}}
+                {{- if strings.Contains $path "/static/" -}}
+                    {{- $absolutePath := (print "/" (index (last 1 (split $path "/static/")) 0)) -}}
+                    {{- if fileExists (path.Join "/static" $absolutePath) -}}
+                        {{- $destination = $absolutePath}}
+                        {{ $notFound = false }}
+                    {{- end -}}
+                {{- end -}}
             {{- end -}}
         {{- else -}}
             {{- $notFound = false -}}
