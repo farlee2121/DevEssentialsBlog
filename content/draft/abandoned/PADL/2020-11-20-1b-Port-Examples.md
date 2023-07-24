@@ -248,6 +248,6 @@ Notifications are a good example of an adapter that could evolve into a utility.
 This example previewed different kinds of ports and how ports simplify incremental design by pushing volatile details into abstractions. The design of ports is heavily tied to the domain design. Choosing good ports is a matter of practice, but is much easier than balancing domain and implementation concerns at once. 
 
 More examples
-- [Notification case study](../../posts/2020-08-14-Notification-Design.md)
-- [Background task case study](../../posts/2020-09-11-Background-Task-Refactor.md)
+- [Notification case study](../../posts/2020/2020-08-14-Notification-Design.md)
+- [Background task case study](../../posts/2020/2020-09-11-Background-Task-Refactor.md)
 - A book-long example [Domain Modeling Made Functional](https://pragprog.com/titles/swdddf/domain-modeling-made-functional/)

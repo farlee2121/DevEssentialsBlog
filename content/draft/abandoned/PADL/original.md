@@ -10,13 +10,13 @@ For now I'm calling it PADL architecture (Ports and Adapters with Domain Layers)
 
 ## Journey So Far
 Here are other posts i've written on the topic so far
-- [Original realization](../../posts/2020-07-10-Synthesizing-Structure.md)
-- [Notification case study](../../posts/2020-08-14-Notification-Design.md)
-- [Background task case study](../../posts/2020-09-11-Background-Task-Refactor.md)
-- [Pros & Cons after a few months](../../posts/2020-09-17-Solid-Structure-Checkin.md)
-- [Ports & Adapters](../../posts/2020-12-19-Ports-and-Adapters.md)
-- [Incremental Accessors](../../posts/2020-12-25-Incremental-Accessors.md)
-- [Accessors: Services not Servants](../../posts/2021-01-01-Accessors-Services-Not-Servants.md)
+- [Original realization](../../posts/2020/2020-07-10-Synthesizing-Structure.md)
+- [Notification case study](../../posts/2020/2020-08-14-Notification-Design.md)
+- [Background task case study](../../posts/2020/2020-09-11-Background-Task-Refactor.md)
+- [Pros & Cons after a few months](../../posts/2020/2020-09-17-Solid-Structure-Checkin.md)
+- [Ports & Adapters](../../posts/2020/2020-12-19-Ports-and-Adapters.md)
+- [Incremental Accessors](../../posts/2020/2020-12-25-Incremental-Accessors.md)
+- [Accessors: Services not Servants](../../posts/2021/2021-01-01-Accessors-Services-Not-Servants.md)
 
 ## Parent Patterns
 PADL effectively crosses two different layered architectures into one system. First let's briefly explore the parent patterns.
@@ -76,7 +76,7 @@ The goal is to establish clear rules for organizing code and how each component 
 - Accessors: Domain entities repeated across managers or engines. Collect from repeated manager and engine adapters.
   - Accessor centers around a primary domain entity and all the types that only belong to that entity
   - The accessor may not expose explicit relationships to entities of other accessors
-  - In-Depth guidance available [here](../posts/../../posts/2021-01-01-Accessors-Services-Not-Servants.md)
+  - In-Depth guidance available [here](../posts/../../posts/2021/2021-01-01-Accessors-Services-Not-Servants.md)
 - Utilities: Repeated non-domain concerns across other services. Collect from repeated adapters.
   - Examples: payments, identity management, pub-sub, notifications
   - May just be a thin facade to enable portability between existing 3rd-party solutions 

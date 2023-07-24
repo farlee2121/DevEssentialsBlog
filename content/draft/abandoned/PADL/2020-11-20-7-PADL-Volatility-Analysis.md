@@ -25,6 +25,6 @@ very conceptual
 - really focus on the adapt to integrate here
 
 I think I did a volatility analysis in a previous post. Maybe in the notification system? Queue?
-- it was in [](../../posts/2020-08-14-Notification-Design.md)
+- it was in [](../../posts/2020/2020-08-14-Notification-Design.md)
 
 Want analysis on how direct dependencies force change 

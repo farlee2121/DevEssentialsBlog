@@ -21,7 +21,7 @@ Motivations
 - Uncover the nature of the problem you're solving? -> grouping change that happens together and separating changes that happen separately -> separating essence and accident -> domain modeling
 
 
-CROSS: [](../posts/../../posts/2021-11-12-BDD-pushes-the-right-extensibility.md)
+CROSS: [](../posts/../../posts/2021/2021-11-12-BDD-pushes-the-right-extensibility.md)
 - "Software can choose an almost unlimited number of ways to be flexible, but not every kind of flexibility is relevant for a given project. Adding too much flexibility actually bogs down the system with unnecessary complexity. The most stable and high-return decompositions stem from understanding the fundamental nature of the problem we are solving."
   - this could be a great line to pull in
   - CON: it may be too far from general info hiding? Info hiding doesn't necessarily imply domain modeling, just that we choose modules by ability to completely hide decisions. 

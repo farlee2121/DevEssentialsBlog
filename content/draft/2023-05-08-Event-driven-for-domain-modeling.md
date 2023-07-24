@@ -141,7 +141,7 @@ In C#, we have to use a constructor (or currying) if we don't want to pass depen
 Overall, C# doesn't work well as a semi-formal specification. There are too many concerns that force a compromise between C# syntax and avoiding code-specific concerns.
 This is a deal breaker for working with non-developers, but also tempts developers to preemptively dive into code details.
 
-   <!-- CROSS: [concise syntax matters](../posts/2023-04-16-concise-notation-matters.md) -->
+   <!-- CROSS: [concise syntax matters](../posts/2023/2023-04-16-concise-notation-matters.md) -->
 
 
 ## Translating to F# with stateful dependencies

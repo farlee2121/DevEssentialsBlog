@@ -11,13 +11,13 @@ aliases:
 This series is about design process and organizing our thoughts for effective development. The main goal is to establish a mental model and intuition for effective design process. This post explores the key questions "What is programming?", "What is Software Engineering?", and how these answers relate to our design process.
 <!--more-->
 
-If you haven't considered these questions yourself, take a few moments to write down your thoughts. It [aid the learning process](../../posts/2022-03-07-Small-Teaching-Review.md#predicting).
+If you haven't considered these questions yourself, take a few moments to write down your thoughts. It [aid the learning process](../../posts/2022/2022-03-07-Small-Teaching-Review.md#predicting).
 
 ## The Nature of Software 
 
 Let's first tackle the first motivational question: "What is programming?".
 
-I'm a firm believer that [programming is problem modeling](../../posts/2022-02-18-Programming-is-Problem-Modeling.md). I love the quote from Fred Brooks
+I'm a firm believer that [programming is problem modeling](../../posts/2022/2022-02-18-Programming-is-Problem-Modeling.md). I love the quote from Fred Brooks
 
 > The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castles in the air, from air, creating by exertion of the imagination.  
 > \- Fred Brooks, Mythical Man-month
@@ -30,11 +30,11 @@ Software Engineering is then the repeatable process for encoding ideas in softwa
 
 ## Spectrum of Clarity
 
-The high-level of software process is often known as the [software development life cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle). The Software Engineering Body of Knowledge (SWEBOK) [imagines this process as a series of clarifying translations](../../posts/2021-08-13-Swebok-transform-view.md). I tend to view the software life cycle as a spectrum of clarity.
+The high-level of software process is often known as the [software development life cycle](https://en.wikipedia.org/wiki/Systems_development_life_cycle). The Software Engineering Body of Knowledge (SWEBOK) [imagines this process as a series of clarifying translations](../../posts/2021/2021-08-13-Swebok-transform-view.md). I tend to view the software life cycle as a spectrum of clarity.
 
 ![Spectrum of clarity](../../../static/post-media/Whats-your-duck/spectrum.png)
 
-The spectrum starts with much unknown and ends with most elements known. At the beginning, we know relatively little about the problem we're solving. Each development stage (i.e. requirements, design, construction, ...) is a [checkpoint in how well we've defined the problem](../../posts/2022-02-18-Programming-is-Problem-Modeling.md#increment-to-good-enough). Eventually the problem is clear enough for a computer to execute.
+The spectrum starts with much unknown and ends with most elements known. At the beginning, we know relatively little about the problem we're solving. Each development stage (i.e. requirements, design, construction, ...) is a [checkpoint in how well we've defined the problem](../../posts/2022/2022-02-18-Programming-is-Problem-Modeling.md#increment-to-good-enough). Eventually the problem is clear enough for a computer to execute.
 
 I don't mean to profess a strict linear flow like [waterfall](https://en.wikipedia.org/wiki/Waterfall_model). Remember that programming is a design activity and design is messy. It's common to uncover questions in a later phase that force us to reconsider decisions we made in an earlier phase. This is natural and part of understanding the problem. What we want to avoid is cycling back frequently or back multiple stages. Cycling back, especially multiple stages back, undermines previous work and is expensive. 
 

@@ -19,7 +19,7 @@ This is not a blog post because I plan to update it over time. I generally avoid
 
 ## Fundamentals overview
 
-This is the list I would currently use to train a young professional developer, probably. It tries to build overarching picture of software development. The focus is on ideas and approaches over specific technologies or specific techniques. I'm generally trying to cover all the categories in [this diagram](../content/posts/2021-08-27-SWEBOK-Modified-topic-diagram.md).
+This is the list I would currently use to train a young professional developer, probably. It tries to build overarching picture of software development. The focus is on ideas and approaches over specific technologies or specific techniques. I'm generally trying to cover all the categories in [this diagram](../content/posts/2021/2021-08-27-SWEBOK-Modified-topic-diagram.md).
 
 This list may seem like a lot, but the majority are articles, not books.
 

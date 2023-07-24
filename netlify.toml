@@ -3,16 +3,16 @@
 
 [build]
   publish = "public"
-  command = "hugo --gc --minify"
+  command = "hugo --gc --minify --panicOnWarning"
 
 [build.environment]
   HUGO_VERSION = "v0.101.0"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify --panicOnWarning -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify --panicOnWarning -b $DEPLOY_PRIME_URL"
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
