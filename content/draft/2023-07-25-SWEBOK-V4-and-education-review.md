@@ -5,11 +5,11 @@ title: "Reading Review - SWEBOK 4 and Engineering Training"
 ---
 
 The [Software Engineering Body of Knowledge V4](https://www.computer.org/volunteering/boards-and-committees/professional-educational-activities/software-engineering-committee/swebok-evolution)
-is due to land in 2023. Here I'll highlite my a [brief article](https://ieeecs-media.computer.org/media/education/swebok/SWEBOK_Education_CSEE_T2023.pdf) that summarizes update to V4 and their impacts for education.
+is due to land in 2023. Here I'll highlite my an [article](https://ieeecs-media.computer.org/media/education/swebok/SWEBOK_Education_CSEE_T2023.pdf) that summarizes update to V4 and their impacts for education.
 <!--more-->
 
 For those who are unfamiliar, the Software Engineering Body of Knowledge (SWEBOK) organizes and outlines generally accepted software engineering practices.
-It is an [IEEE](https://www.computer.org/) standard meant to set a shared baseline of software knowledge to improve education and training across the field.
+It is an [IEEE](https://www.computer.org/) standard meant to define a shared baseline of software knowledge to improve education and training across the field.
 
 The article, [Envisioning software engineer training needs in the digital era through the SWEBOK V4 prism](https://ieeecs-media.computer.org/media/education/swebok/SWEBOK_Education_CSEE_T2023.pdf), is just 5 pages long. Most of it is a table if you want to look up information just the topics that interest you.
 
