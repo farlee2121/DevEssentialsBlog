@@ -7,6 +7,7 @@ title:
 I wasn't familiar with all educational methods highlighted in this [SWEBOK v4 update article](https://ieeecs-media.computer.org/media/education/swebok/SWEBOK_Education_CSEE_T2023.pdf).
 So, here I'll explore them and visualize their recommended connection to software knowledge areas.
 <!--more-->
+<!-- TODO: Get grace's feedback on my assessment of the educational techniques, and if she'd heard anything about the 2 I couldn't find -->
 
 For those who are unfamiliar, the Software Engineering Body of Knowledge (SWEBOK) organizes and outlines generally accepted software engineering practices.
 It is an [IEEE](https://www.computer.org/) standard meant to define a shared baseline of software knowledge to improve education and training across the field.
