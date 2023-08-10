@@ -77,8 +77,3 @@ Acceptance criteria could work too, but it's important to keep the criteria focu
 I think Shape Up identified a significant problem with accidental complexity from over detailed designs early in the process. 
 However, I don't think concreteness in general is the problem. Rather, I think the problem is the kind of concreteness. It's good to get concrete with examples and constraints of the problem being solved. It's more dangerous, but to some degree still necessary, to use detailed concrete artifacts when exploring solutions. Shape Up offers some interesting tools for combating the temptation for unnecessary detail. 
 
-
-
-<!-- note a key theme here is alignment, especially by reducing accidental complexity in alignment. Appetite reduces accidental misalignment about value. Lo-fi mocks reduce accidental complexity about implementation. These techniques try to better focus the most essential aspect of each phase and leave everthing else to those closer to the work (who thus have better context and shorter cycles to address issues there) 
-
-I'm not sure they see it this way, but its a thread I notice because I look for in just about everthing. It is my most fundamental software view of software https://spencerfarley.com/2022/10/21/five-foundational-beliefs/#understand-the-problem-->
