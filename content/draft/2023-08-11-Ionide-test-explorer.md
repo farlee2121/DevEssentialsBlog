@@ -1,7 +1,7 @@
 ---
 date: 2023-08-11
 tags: []
-title: 
+title: Ionide Test Explorer Contribution
 ---
 
 I contributed to the Ionide (F#) test explorer for VS Code. I'm proud of the work, so please pardon a bit of show and tell.

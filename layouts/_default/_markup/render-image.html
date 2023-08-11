@@ -1,6 +1,7 @@
+
 {{- $external := false -}}
 {{- $base64 := false -}}
-{{- $path :=  (partial "helpers/lib/image-handling/get-static-image" (dict "destination" .Destination "getRelative" true) | default "") -}}
+{{- $path := .Destination -}}
 {{- if strings.HasPrefix $path "data:image" -}}
     {{- $base64 = true -}}
 {{- else -}}
@@ -14,7 +15,8 @@
     {{- end -}}
 {{- end -}}
 {{- if (and (not $external) (not $base64)) -}}
-    {{- $path = $path | replaceRE "/static/" "/" -}}
+    {{- $path = (partial "helpers/lib/image-handling/get-static-image" (dict "destination" .Destination "getRelative" true) | default "") 
+                | replaceRE "/static/" "/" -}}
     {{- $curPage := .Page -}}
     {{- if (or (not $path) (eq $path "")) -}}
         {{- if $curPage.File -}}
