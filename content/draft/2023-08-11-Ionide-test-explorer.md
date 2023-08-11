@@ -35,7 +35,7 @@ Someone contributed an MVP test explorer to Ionide. It covered many of these cas
 
 It updated with code changes, but had a tendency to accumulate test tree items mid-rename states.
 
-![2023-04-27-ionide-test-pollution-on-rename](https://user-images.githubusercontent.com/2847259/234953975-e9f3e0ef-1a6f-4afb-8437-737a64a2af19.png)
+![2023-04-27-ionide-test-pollution-on-rename](../../static/post-media/Ionide-Test-Explorer/rename-pollution.png)
 
 It also based the test hierarchy fully on the code structure, and not the test group / test name structure. Sometimes these are the same, but they often aren't, especially in Expecto where tests can be composed.
 
@@ -55,24 +55,24 @@ My core solution was to change the primary source of truth for test explorer. In
 
 The result were pretty satisfying. The tests now consistently display in the hierarchy expected by their logical grouping. Other languages and test frameworks without code analysis are now supported.
 
-![Test explorer reflects result structure not code structure](https://github.com/ionide/ionide-vscode-fsharp/assets/2847259/65a0f3a5-2384-42f8-96a5-898bd148a8d5)
+![Test explorer reflects result structure not code structure](../../static/post-media/Ionide-Test-Explorer/code-vs-name-hierarchy.png)
 
 Code analysis results are still used for "go to test" and live updates.
 Live updates like rename, add, and remove from code updates are more stable
 
 <video  controls>
-  <source src="https://github.com/ionide/ionide-vscode-fsharp/assets/2847259/349eb391-822d-484f-a74b-214e9ffdfe84" type="video/mp4">
+  <source src="/post-media/Ionide-Test-Explorer/live-explorer-updates.mp4" type="video/mp4">
 </video>
 
 The test explorer can be refreshed if anything looks off.
 
 I also added console output. This improves troubleshooting and failure message discoverability for any tests that can't show error messages next to the test code.
 
-![test-results-console-output](https://github.com/ionide/ionide-vscode-fsharp/assets/2847259/8cceb3eb-ce42-4e65-b7b3-066c2f809e37)
+![test-results-console-output](../../static/post-media/Ionide-Test-Explorer/test-console.png)
 
 Though you can also see errors for any test in the results view by clicking on the message under the test
 
-![error-message-in-result-view](https://github.com/ionide/ionide-vscode-fsharp/assets/2847259/fad0fc45-f6f7-4408-9166-b9b67c3f0e3a)
+![error-message-in-result-view](../../static/post-media/Ionide-Test-Explorer/result-explorer.png)
 
 There's a number of other trouble shooting improvements I won't cover here, but they can be read about in the [full PR](https://github.com/ionide/ionide-vscode-fsharp/pull/1874).
 
