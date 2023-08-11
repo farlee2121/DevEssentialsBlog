@@ -62,6 +62,7 @@ I also considered Event Storms, but I'm not sure how I'd categorize them. Event 
 The above problem-focused artifacts are enough to start exploring solutions, but not enough to hold someone accountable for delivering a solution. As Shape Up points out, we also need to feel confident the problem has a solution fitting the constraints before we expect someone to deliver it.
 
 This is where solution concreteness, like with mocks, can be a problem.
+We still want to be clear and tangible with the key core elements of the solution, but communicate them without any accidental/unnecessary concrete decisions tagging along. The challenge is focused communication tools that include just the right details without forcing us to make additional decsions.
 
 I like the solutions Shape Up proposes.
 
