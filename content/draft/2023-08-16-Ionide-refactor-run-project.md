@@ -6,6 +6,7 @@ title: Refactoring for Information Hiding - Ionide Case Study - Run Project
 ---
 
 <!-- TODO: intro might need work -->
+<!-- TODO: It'd still be nice to cover trying to centralize testRun, but discovering the build needed to be serialized an then retaining sub-methods, but grouped to make their ownership and non-reusability clear -->
 
 Information Hiding is a critical, but tricky principle to get familiar with. I'm working through an exampled based on my [Ionide test explorer contributions](https://github.com/ionide/ionide-vscode-fsharp/pull/1874). The [previous post](./2023-08-14-Ionide-refactor-display-results.md) explored the top scope, now we'll dive into a more complex method.
 <!--more-->
