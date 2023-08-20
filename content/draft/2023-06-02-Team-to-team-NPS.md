@@ -7,7 +7,7 @@ title: External-dependency NPS
 What could Net Promoter Scores tell us if we apply them differently?
 <!--more-->
 
-My [previous post](../draft/2023-06-02-Seeding-standards-and-measuring-outcomes.md) got me thinking about uses for [Net Promoter Scores (NPS)](https://en.wikipedia.org/wiki/Net_promoter_score). I realized that the measures I covered the high-level outcomes expected from a team well, but didn't necessarily diagnose the source of any shortcomings very well. Particularly, my mind jumped to issues out of the team's control.
+My [previous post](../posts/2023/2023-08-20-Seeding-standards-and-measuring-outcomes.md) got me thinking about uses for [Net Promoter Scores (NPS)](https://en.wikipedia.org/wiki/Net_promoter_score). I realized that the measures I covered the high-level outcomes expected from a team well, but didn't necessarily diagnose the source of any shortcomings very well. Particularly, my mind jumped to issues out of the team's control.
 
 For example
 - What if a team others depend on is underperforming?
