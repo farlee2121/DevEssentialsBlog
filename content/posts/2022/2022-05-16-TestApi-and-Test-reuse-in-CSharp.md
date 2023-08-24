@@ -22,7 +22,7 @@ TestApi allows us to write those shared behavior expectations once and verify th
 
 ## Example: Testing an abstract dependency
 
-Suppose we have a service
+Suppose we have a user chat service
 ```cs
 class ChatClient{
     IThreadAccess threadAccess;
@@ -44,7 +44,9 @@ class ChatClient{
 }
 ```
 
-One can imagine how some of the service dependencies could vary. For example, we might have a stand-alone user store or we might want to leverage a shared user store with the hosting application. We might want to store attachments in blob storage, or publishes them to a CDN for fast delivery, or use a shared media service used across the application. These are valid use cases, but not the concern of our ChatClient. Our ChatClient only cares that it can orchestrate the sending and browsing of messages effectively. We can guarantee consistent behavior of ChatClient's dependencies and of the client itself by testing with TestApi.
+One can imagine how some of the service dependencies could vary. For example, chat might have a stand-alone user store or it might want to share a user store with the hosting application. We might want to store file attachments in blob storage, or publish them to a CDN for fast delivery, or leverage some unified user-centric media service. 
+
+These are valid use cases, but not the concern of ChatClient. ChatClient only cares that it can orchestrate the sending and browsing of messages effectively. We can guarantee consistent behavior of ChatClient's dependencies and of the client itself without access to these detailed decisions by testing with TestApi.
 
 Consider this example against `IUserAccess`
 ```cs
@@ -102,7 +104,9 @@ public class InMemoryUserAccessTests : UserAccessTests{
         }
     }
 }
+```
 
+```cs
 public class SharedIdentityUserAccessTests : UserAccessTests{
     public override ITestApi SutFactory(){
         return SharedIdentityUserAccessTestApi();
@@ -168,4 +172,4 @@ public class IntegrationChatClientTests : ChatClientTests{
 
 ## Conclusion
 
-C# users of TestApi can still benefit from test reuse. The use of inheritance makes the reuse less straightforward compared to F#, but the overhead is still fairly low and the pattern is fairly easy to trace. I've certainly found it worth the reduction in duplicated tests.
+C# users of TestApi can still benefit from test reuse. The use of inheritance makes the reuse less straightforward compared to F#, but the overhead is still fairly low and the pattern is fairly easy to trace. I've certainly found it worth the flexibility to test different configurations or implementations without duplicating tests.
