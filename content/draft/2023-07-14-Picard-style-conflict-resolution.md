@@ -29,7 +29,7 @@ them do anyway. Overall, the system can work without the leader and the leader i
 
 Of course, tense situations may still need a third party, and serious infractions still demand intervention (i.e. kids with sharp things at risk of starting to hit each other).
 
-This approach fits really well with [Never Split the Difference-style techniques](../draft/2023-07-03-Never-split-the-difference.md).
+This approach fits really well with [Never Split the Difference-style techniques](../posts/2023/2023-09-04-Never-split-the-difference.md).
 Labeling and open-ended questions help the parties identify and communicate their feelings, desires, and ideas without solving anything for them.
 These techniques also help people feel heard, which improves emotional regulation and critical thinking.
 The leader can provide the listening neither side is ready to give the other, which gets them to a place they can work out their problem together.
