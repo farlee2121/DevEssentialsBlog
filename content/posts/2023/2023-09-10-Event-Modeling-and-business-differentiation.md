@@ -1,5 +1,5 @@
 ---
-date: 2023-07-12
+date: 2023-09-10
 tags: [Event Storming]
 title: Event Modeling and Business Differentiation
 ---
