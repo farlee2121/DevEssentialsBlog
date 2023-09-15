@@ -1,10 +1,9 @@
 ---
-date: 2023-07-12
+date: 2023-09-15
 tags: [Testing, Design Patterns]
 title: Resemblance and Likeness Testing Patterns
 ---
 
-<!-- Todo: need to think more about my narrative -->
 The Resemblance and Likeness patterns improve the readability and diagnosability of developer tests.
 <!--more-->
 
