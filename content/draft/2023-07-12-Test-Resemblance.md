@@ -5,18 +5,41 @@ title: Resemblance and Likeness Testing Patterns
 ---
 
 <!-- Todo: need to think more about my narrative -->
-The Resemblance and Likeness patterns increases the readability and observability of developer tests.
+The Resemblance and Likeness patterns improve the readability and diagnosability of developer tests.
 <!--more-->
 
-I've been using the [Resemblance](https://blog.ploeh.dk/2012/06/21/TheResemblanceidiom/) and [Likeness](https://blog.ploeh.dk/2012/06/22/ResemblanceandLikeness/) patterns for several years to clarify up my developer tests. They've earned a permanent spot in my toolbox and I use them frequently. Thanks to Mark Seemann for introducing the patterns!
+I've been using the [Resemblance](https://blog.ploeh.dk/2012/06/21/TheResemblanceidiom/) and [Likeness](https://blog.ploeh.dk/2012/06/22/ResemblanceandLikeness/) patterns for several years to clarify my developer tests. They've earned a permanent spot in my toolbox and I use them frequently. Thanks to Mark Seemann for introducing the patterns!
 
-## Pattern Explanations
+Here I'll explain the patterns and they value they deliver.
 
-In short, the Resemblance pattern creates a data structure with the whole context of what's expected from a developer test. Then the test can have a single assertion between the expected and actual versions of that resemblance data structure.
+## Resemblance Example
 
-For example, we might expect that creating some data allows us to both fetch that data *and* raises some notification.
+Consider this common scenario: saving some data and alerting subscribers about the new data. 
+
+This scenario contains at two expectations: The saved data should be retrievable as saved *and* that a notification was sent.
+
+The immediate intuition would be to test the scenario with separate assertions for each expectation.
 ```cs
+Assert.Equal(saved, fetched);
+Assert.Equal(notificationSent, notificationIntercepted);
+```
 
+But multiple assertions lead to problems. The test's error message will only include information from the first failing assertion.
+
+In the previous example, if the retrieved data is incorrect, then we don't know if the notification was sent. 
+
+```cs
+Assert.Equal(saved, fetched);
+// ! We never get here if the saved data is wrong
+Assert.Equal(notificationSent, notificationIntercepted);
+```
+
+Flipping the order doesn't solve the problem, it just changes what information we might miss out on.
+
+The Resemblance pattern creates a data structure with the whole context of what's expected from a developer test. Collecting all expectations into one data structure allows a single assertion with all the context we might want about the final test state.
+
+Here's a relatively complete example including a faked dependency.
+```cs
 public record CreateDataResemblance {
     public CreatedNotification[] RaisedNotifications { get; init; }
     public SomeData DataAfterUpdate { get; init; }
@@ -45,53 +68,13 @@ public void CreateThrowsNotification(){
 
 ```
 
-The similar Likeness pattern creates some standard equality for data that isn't in the right form to compare for the test.
 
-For example, if you want to copy data from one structure to the other but the overall structure isn't the same.
-Like if we want to create a reserveration for a list of customers and then check that there is a reservation under each customer
-(with a customer Id since these customers have accounts).
+## Likeness Example
 
-```cs
+The likeness pattern provides a similar value. It standardizes an unruly comparison into a single operation. However, the purpose is different. Resemblance focuses on collecting the whole context of test expectations but likeness focuses on simplifying comparision for data that's awkward to compare. 
 
-public class Customer{
-    public Guid Id;
-    public string FirstName;
-    public string LastName;
-    public ContactInfo PrimaryContact;
-    //...
-}
-
-public class Reservation {
-    public Guid? CustomerId;
-    public string ReservedUnderName;
-    public DateTime ReservationTime;
-    //...
-}
-
-public record CustomerReservationLikeness
-{
-    public Guid CustomerId;
-    public string CustomerName;
-}
-
-//...
-public CustomerReservationLikeness LikenessFromCustomer(Customer customer){
-    return new (){
-        CustomerId = customer.Id,
-        CustomerName = $"{customer.FirstName} {customer.LastName}"
-    };
-}
-
-public CustomerReservationLikeness LikenessFromReservation(Reservation reservation){
-    return new (){
-        CustomerId = reservation.CustomerId,
-        CustomerName = reservation.ReservedUnderName
-    };
-}
-```
-
-Likeness can also be used for structures that don't compare easily by default.
-For example, ordering lists that aren't necessarily ordered.
+A simple example is collections. 
+I often write a simple likeness to standardize sneaky assumptions about collections, like the sort order.
 
 ```csharp
 var getLikeness = (list) => list.OrderBy(x => x.Id)
@@ -100,7 +83,56 @@ var getLikeness = (list) => list.OrderBy(x => x.Id)
 Assert.Equal(getLikeness(expected), getLikeness(actual))
 ```
 
-One trick I often use is mapping properties I want to compare into a tuple or string.
+Sorting by Id may seem too simple for a separate method, but the method communicates the intent behind the sort and centralizes changes if the comparison becomes more sophisticated in the future. 
+
+For example, the expected and returned data structures might not be the same, but we still want to compare them in some way
+
+Consider this simple online order example.
+```cs
+class OrderRequest{
+    PaymentInfo paymentInfo;
+    CustomerName customerName;
+    Address address;
+    //...
+}
+class ConfirmedOrder{
+    CustomerName customerName;
+    Address address;
+    Guid confirmationId;
+    //...
+}
+```
+
+We might want to test that every OrderRequest we place results in a ConfirmedOrder for the same customer, address, etc.
+
+We can simplify this comparison with a likeness
+```cs
+record OrderDestinationLikeness {
+    CustomerName customerName {get; init;}
+    Address address {get; init;}
+
+    public static OrderDestinationLikeness FromOrderRequest(OrderRequest request){
+        //...
+    }
+    public static OrderDestinationLikeness FromConfirmedOrder(ConfirmedOrder request){
+        //...
+    }
+}
+
+//...
+
+// Now we can write a simple comparision
+Assert.Equal(
+    orderRequests.Select(FromOrderRequest), 
+    confirmedOrders.Select(FromConfirmedOrder)
+);
+```
+
+Likenesses can often be reused across many tests too.
+
+### Ad-hoc likeness structures
+
+Creating dedicated types (like `OrderDestinationLikeness`) may still feel too heavy for simple comparisions. For simple comparisions, I often use ad-hoc structures like a tuple or string.
 
 ```cs
 var dataToLikeness = (data) => (data.Id, data.Name);
@@ -110,31 +142,26 @@ var otherDataToLikeness = (otherData) => (otherData.SomethingId, otherData.Displ
 Assert.Equal(dataToLikeness(data), otherDataToLikeness(otherData));
 ```
 
-[Records](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record) and tuples work really well for resemblances because they use value-based equality. If the structures contain the same values, they're considered equal. F# users can similarly use [anonymous records](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/anonymous-records). Regular C# classes can still be used in a resemblance or likeness when compared with a [deep comparision library](https://www.nuget.org/packages/CompareNETObjects). 
+C#'s positional records also provide a concise syntax for creating likeness types.
 
-Note that this data standardization version of likeness may not be what Mark originally intended, but it seems to be in the same spirit.
+```cs
+public record OrderDestinationLikeness(CustomerName customerName, Address address);
+```
 
-## Value Gained
+[Records](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record), tuples, and strings work really well for resemblances and likenesses because they use value-based equality. If the structures contain the same values, they're considered equal (as opposed to reference-based equality that check if the object is the same instance). F# users can similarly use [anonymous records](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/anonymous-records). Regular C# classes can still be used in a resemblance or likeness when compared with a [deep comparision library](https://www.nuget.org/packages/CompareNETObjects). 
 
-Resemblance and likeness are both useful because they 
-- clarify what the test author was focused on when creating the assertion
-- Allow the whole context of expectations for a test to be expressed in one assertion
 
-Expressing all the expectations for a test in one data structure and one assertion improves the reader's understanding
-of the design forces at work with the test. It also improves error messages when the test fails.
-Instead of just getting whatever data the first failed assertion gives us, we have access to all the differences. 
-This reduces the time needed to reproduce and fix errors, especially for flaky failures or failures that vary by environment (i.e. works locally but fails on the build server).
+## Likenesses to build Resemblances
 
-Checking all data in one assertion also applies some pressure toward simpler code. The incentive is to write code where it's easy to get all the context instead of relying on mocks that need to intercept and assert based on calls to the mocks.
+I should note that this approach to likeness using standard data structures (as opposed to `.Equals` overrides) may not be what Mark originally intended, but it seems to be in the same spirit of simplified comparision.
 
-It may seem like a lot of extra effort to add data structures just for an assertion in a test. 
-However, my experience is the opposite. Many resemblance or likeness structures can be created ad-hoc using structures like tuples.
-Many others can be reused between a series of related tests. 
-In any case, the reduced complexity of the assertion pays for itself. Reading and modifying the test becomes much faster and less error-prone since the test assertion is clear and clean.
+Plus, this data-based approach has a distinct advantage: the data can be used for more than direct comparision. For example, the data can be used to build resemblances. Unlike a boolean equality, the data structures retain their full context when compared in the resemblance or displayed in the test error message.
+
+Likenesses can also optimize their data output for additional outcomes, like improving the readability of test error messages.
+
 
 ## Conclusion
 
-The Resemblance and Likeness patterns improve test readability and observability by normalizing all the factors of a test assertion into a data structure.
-Using this normalized data structure highlights all the factors considered when evaluating test success.
-This both improves clarity to the reader, but also ensures we have the full context if the test ever fails. Especially for the most time-consuming errors like flaky tests
-or environment-based test failures.
+The Resemblance and Likeness patterns improve test readability and error diagnosis by normalizing all the factors of a test assertion into a data structure.
+These normalized data structures highlight the author's understanding of the factors considered when evaluating test success.
+This improves code clarity and ensures the test error includes the full failure context. This greatly simplifies error diagnosis, especially for the most time-consuming errors like flaky tests or environment-based test failures.

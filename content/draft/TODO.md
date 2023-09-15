@@ -5,6 +5,15 @@ title: todo
 Placeholder for links that need filled
 
 <!-- 
+
+Emergency ideas
+- describe the performance gain in trx performance. Fell for fallacy of the in-memory doc selection being fast (not deep, ID lookup usually fast). Not the case here.
+- Describe gotchas in ionide test debugging (need processid returned in console only when in debug mode, need to continue for breakpoints to load)
+- .C# adding type aliases! https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12#alias-any-type. A significant tool for domain modeling, especially if you want to incrementally refactor to semantic names
+- useful randomness methods for in .NET 8 https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8#methods-for-working-with-randomness. Implemented these myself too many times
+- Interested to see where C# will go with these AOP features https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12#interceptors. Personally, I no longer see meta-programming based AOP as especially desirable. A good dependency inversion strategy achieves much of the value. Though, this could centralize some rather deterministic situations like authorization or logging decorators.
+  - should investigate more before writing about it https://github.com/dotnet/roslyn/blob/main/docs/features/interceptors.md
+
 backup idea queue
 - FsCheck saga
   - better understanding delegates (target issue) 
