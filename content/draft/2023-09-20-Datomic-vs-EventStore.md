@@ -17,7 +17,7 @@ In general, I think treating the history of data changes over time as a first-cl
 
 Datomic stores data as a series of changes in data over time, but Datomic does the data delta management for you. The developer primarily interacts with the data much like a relational database. There is a schema which defines entities (much like tables) and relationships between them. 
 
-<!-- TODO: align this example with eventstore -->
+<!-- TODO: align this example with the eventstore example -->
 Here's a simple schema for a cooking recipe
 ```clojure
 (def recipe-schema [{:db/ident :recipe/id
@@ -120,25 +120,41 @@ await client.AppendToStreamAsync(
 These events can then be replayed to create different views of the data, like if we want to know the current shipping and item details of an order. 
 The playback is really just a function that maps events into a certain shape, potentially overwritting information from previous events.
 
-Unlike Datomic, there is not one canonical schema for the current state of an entity (in this case an order). The series of semantic events is treated as the primary view of the data and any "current state" views are treated as disposable computations from the events.
+Unlike Datomic, there is not one canonical schema for the current state of an entity (in this case an order). The series of semantic events is treated as the primary view of the data and any "current state" views are treated as disposable computations from the events. EventStore provides various subscription and projection approaches maintaining these computed views of an event stream.
 
 <!-- TODO: Do I add a more detailed example of replaying or projecting  -->
 
 
 
+## Key differences
 
-## Benefit Tradeoff
+Both Datomic and EventStore use increments of data as the primary source of truth.
+The key difference is how they view the increments of data.
 
+Datomic treats these deltas as largely anonymous artifacts of updating entities.  The developer primarily interacts with the current view of data within a defined schema.
 
-Datomic's approach feels familiar and it can deliver the capabilities we generally expect from a relational database (i.e. querying a bunch of entities on fields). But, unlike relational databases, you can see changes over time or query against the history. This greatly improves diagnosis of challenging errors and data safety.
+EventStore takes the inverse assumption. There is no primary "current state" view for entities. The developer primarily interacts with the increments of change to the data. 
+The data increments (events) should communicate the meaning behind changes. Any "current state" is computed from the events. It's expected that there may be many different views computed from the same events and none of them get special treatment.
 
-The downside of Datomic's relational-like approach is that the state changes are stored as data diffs without context. We don't know the intended meaning of the change.
+## Tradeoffs Between Mindsets
 
-EventStore is the reverse of this tradeoff. It focuses on storing events as semantic increments of change. The event themselves are the focus and any current state views are treated like disposable calculations from the event stream. 
+Datomic's approach feels familiar and it can deliver the capabilities we generally expect from a relational database (i.e. querying a bunch of entities on fields). 
 
-This means that EventStore does not feel like a relational database. It's openly a different paradigm and doesn't hide it. It can take some trial and error to use it correctly, and EventStore probably won't be the right tool for all capabilities we expect of a relational database. Instead, some query-focused relational tables will probably be built based on the event stream.
+The downside of Datomic's relational-like approach is that the state changes is stored without context. We don't know the intended meaning of the change.
+
+EventStore's approach is weak where Datomic is strong. EventStore does not have the familiar feel of a relational database. It can take some trial and error to use it correctly, and EventStore probably won't be the right tool for all capabilities we expect of a relational database. Some queries might require computing a view of the data and persisting it to a data store more suited to the kind of query.
 
 While the EventStore approach is more disruptive, it also holds tremendous business value. My experience at a recent job suggested that storing changes as *semantic* events and not just data deltas was the primary value to the business as a whole. Events logs could be exposed to customer service representatives to better diagnose customer issues. The data team could analyze the series of events for an in-depth analysis of shopping trends or hangups in customer experience.
 All the technical benefits of better observability and data safety are there too, but the benefit extended across the whole business.
 
 Let me put it this way. The business team would probably have thrown a fit and intervened if the tech team ever tried to move away from storing semantic events. I think it's rare for a whole business to be so invested in a development paradigm choice.
+
+I do think it'd be possible to attach semantic descriptors to changes in Datomic (the transaction meta is very flexible), but it's not a expectation and facilitated approach like it is in EventStore.
+
+## Conclusion
+
+Both Datomic and EventStore are awesome database technologies.
+They both store data as a series of changes, and both provide significant benefits to data safety, observability, auditing, and more.
+
+However, the two databases treat the series of changes differently.
+Each approach has it's benefits, but I think EventStore's emphasis on semantically named increments of change hold tremendous value for the whole business. Recording the intent of changes over time preserves a new dimension of understanding about the data, and that depth is useful far beyond technical development.
