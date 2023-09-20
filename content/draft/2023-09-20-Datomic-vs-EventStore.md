@@ -122,8 +122,14 @@ The playback is really just a function that maps events into a certain shape, po
 
 Unlike Datomic, there is not one canonical schema for the current state of an entity (in this case an order). The series of semantic events is treated as the primary view of the data and any "current state" views are treated as disposable computations from the events. EventStore provides various subscription and projection approaches maintaining these computed views of an event stream.
 
-<!-- TODO: Do I add a more detailed example of replaying or projecting  -->
+I should highlight that different events might change the same data, but communicate different reasons for change. In the example above, `ItemAdded` and `ItemReturned` might both effect how we tabulate item quantities. 
 
+The interpretation of events can change over time since we know the intent of each event. For example, the system might be removing returned items from the total items sold, but decide to pivot to including them as sold items and accounting for returns separately later on. Different usecases can similarly interpret the events differently. For example, the logic for recommending products might interpret return quantities differently than the logic for managing inventory.
+
+It's also possible to support advance decisions based on the order of events. Decisions based on event order don't lose context over time, unlike decisions based on a set of state flags.
+
+<!-- TODO: Call out how the same data can change for different reasons. 
+-->
 
 
 ## Key differences
