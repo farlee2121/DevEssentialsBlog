@@ -13,6 +13,8 @@ Emergency ideas
 - useful randomness methods for in .NET 8 https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8#methods-for-working-with-randomness. Implemented these myself too many times
 - Interested to see where C# will go with these AOP features https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12#interceptors. Personally, I no longer see meta-programming based AOP as especially desirable. A good dependency inversion strategy achieves much of the value. Though, this could centralize some rather deterministic situations like authorization or logging decorators.
   - should investigate more before writing about it https://github.com/dotnet/roslyn/blob/main/docs/features/interceptors.md
+  - DI libraries like CastleWindsor have had proxies for a long time, and SourceGenerators enabled some of this to become compile-time reflection-based, but I haven't seen much adoption of dynamic AOP-style decorators. 
+  - Curious what their motivations are
 
 backup idea queue
 - FsCheck saga
