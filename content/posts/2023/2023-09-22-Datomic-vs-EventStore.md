@@ -1,5 +1,5 @@
 ---
-date: 2023-09-20
+date: 2023-09-22
 tags: [Event Sourcing]
 title: Datomic vs EventStore
 ---
