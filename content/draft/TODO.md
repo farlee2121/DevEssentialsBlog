@@ -31,6 +31,13 @@ backup idea queue
     - maybe frame as: I can see how all this would be considered helpers to improve readability of the main flow, but now I want to reuse parts of this and their current parameters don't let me do that. Need to identify the core reusable logic, isolate it, and require only the parameters needed for that bit of logic. Refactoring that first, then I can use the logic in my new flow when I add it. 
   - probably just show of some of the challenges I was able to overcome (multiple sources, not all aligned; updating from code)
   - can probably do a high-level one that's essentially just the PR
+- Elm
+  - Values win again. Simpler Hot reload due to composed state. Don't need to go deep into tooling chain. It's attainable mostly at the level we normally program at.
+  - Comparing elm to transition away from OO because distributed state is hard to manage
+  - (maybe) elm state as CRDTs?
+- Async vs Sync another reason to keep system as pure as possible
+  - did a big deep dive on multi-threading best practices and performance gotchas. Two bits that stood out where that async IO can be much faster in aggregate. Separately, sync and async callchains shouldn't be mixed. Pure functions don't really matter though. They're already perfectly parallelizable and can be called safely without blocking in a sync or async environment. Distributed state will lead to distributed IO, which will pull your whole application into async and overall increase complexity. But, if you keep many functions pure, then a larger part of your app is indifferent to the execution context and such decisions can be relatively centralized. Check out functional-core architecture [link to Mark Seemann post of some kind]
+  - probably need to explain purity, again 
 
 Longer-form 
 - NOTE: don't try tackling these as one great series. I think it'll be easier to tackle them as individual posts (maybe give them a tag or a retroactive series so people can work through the similar posts)
