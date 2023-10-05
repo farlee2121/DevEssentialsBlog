@@ -4,9 +4,6 @@ tags: [Event Storming]
 title: Event Storming Interaction-heavy Flows
 ---
 
-<!-- TODO:
-- do I redefine keywords or do I make it more clear I expect them to do outside reading
-- can I bring in some  -->
 [Event storming](http://ziobrando.blogspot.com/2013/11/introducing-event-storming.html) for UI-focused flows was a bit confusing at first,
 but the right questions can lead to great insights.
 <!--more-->
@@ -26,13 +23,13 @@ Some of the key words are
 - **Flow**: Not a true event storming word, but I'll use it to describe a series of commands and events that form a larger experience. For example, the `CancelOrderRequest` might result in a `OrderCanceled` event, or in another event like `OrderCancelFailed (Reason: Item Already Shipped)`
 
 Sticky notes are usually used to represent commands and events. Here's a simple example flow. The command is blue and the events are orange-ish.
-![Submit order flow](../../static/post-media/Event-Storm/event-storm-submit-order.png)
+![Submit order flow](../../../static/post-media/Event-Storm/event-storm-submit-order.png)
 
 ## The Exercise 
 
 I've been working through an event stormming exercise on an e-commerce system.
 
-The event storm started with fulfillment flows. Finding events for these internal flows was fairly intuitive. You can see a sample of it in [Event Modeling and Business Differentiation](../posts/2023/2023-09-10-Event-Modeling-and-business-differentiation.md)
+The event storm started with fulfillment flows. Finding events for these internal flows was fairly intuitive. You can see a sample of it in [Event Modeling and Business Differentiation](../../posts/2023/2023-09-10-Event-Modeling-and-business-differentiation.md)
 
 The shopping experience proved more challenging. 
 
