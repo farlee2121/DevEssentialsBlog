@@ -5,6 +5,7 @@ title: Event Storm To Software Design - Event-based Domain Modeling
 ---
 
 <!-- todo: probably rename the file or title so the url and title align -->
+<!-- TODO: this should probably be split into two posts. One is data model, the other is the from data model to code design -->
 
 Continuing the event storm explorations, I tested out several approaches for translating event storms into system designs.
 <!--more-->
