@@ -1,44 +1,52 @@
 ---
 date: 2023-05-07
 tags: [Event Storming]
-title: Event Storm To Software Design
+title: Event Storm To Software Design - Event-based Domain Modeling
 ---
 
+<!-- todo: probably rename the file or title so the url and title align -->
 
-Continuing my event storm explorations, I tested out several approaches for translating event storms into system designs.
+Continuing the event storm explorations, I tested out several approaches for translating event storms into system designs.
 <!--more-->
+
+## Event Storming Review
+
+For those who are unfamiliar, event storming is a technique for mapping out processes. It's often used to create a shared picture between people of many different roles. 
+
+An event storm is primarily composed of events. Events represent something that happened in a process that other parts of the business might need to know about. Some examples from an ecommerce site might include `OrderCanceled`, `OrderPacked`, and `OrderShipped`.
+
+Alberto published an [excellent and brief introduction](http://ziobrando.blogspot.com/2013/11/introducing-event-storming.html) to event storming. You can also
+checkout [Awesome Event Storming](https://github.com/mariuszgil/awesome-eventstorming) for more materials and examples.
 
 ## Problem Context
 
-[Event storming](https://www.eventstorming.com/) is a technique for modeling the flow of business processes. Generally with the intent of creating a shared high-level understanding of the business between different roles, though other variations exist.  
-
-If you're not familiar with event storming, you can read [this brief introduction](http://ziobrando.blogspot.com/2013/11/introducing-event-storming.html) or
-checkout [Awesome Event Storming](https://github.com/mariuszgil/awesome-eventstorming) for more materials and examples.
 
 I've been exploring event storming with some other developers, and now we want to translate the event storm into a high-level system design in order to understand the flow from discovery to code. 
 
 I've experimented with event storms in the past, but always in a functional programming context. 
 Functional design seemed like too much learning to pile on for others in the current experiment. So, I explored with a few other approaches for refining event storms into designs. 
 
-## Example workflow
+## Example Workflow for Design 
 
 ![Event storm stickies described below](../../static/post-media/Event-Storm/2023-05-07-storm-stickies.png)
 
-The portion of the event flow I'll be translating to design is shown in the picture above.
-It consists of one command and the events that follow it. Specifically, the command is Cancel Order Request.
-If the request succeeds the Shopper Order Canceled event is raised, it notifies the user of the cancel, and the Fulfillment Canceled event is also raised.
+The portion of the event storm I'll be translating to a high-level design is shown in the picture above.
+
+This flow consists of one command and the events that follow it. Specifically, the command is Cancel Order Request.
+
+If the command succeeds, then the Shopper Order Canceled event is raised and the Fulfillment Canceled event is also raised. Fulfillment Cancelled could, in the future, be subject to more sophisticated flows the follow from an order cancel. For simplicity, it fulfillment is assumed canceled if the order succeeds in canceling. 
+
 If the Cancel Order Request fails, an Order Cancel Failed event is thrown with the reason for failure. 
 There aren't multiple failure events in this case because different modes of failure wouldn't be handled differently by the business.
 
-The next modeling steps would be working with stakeholders to identify 
-- the data needed on each command and event
-- data needed to decide command outcomes that aren't present in the command. In other words, dependencies.
 
-## Original process
+## Data Modeling
 
-I first learned about event storms from Scott Wlaschin's [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional).
+With this event storm model in place (the sticky notes), the next steps would be working with stakeholders to identify the data needed on each command and event. 
 
-Exploration would start with the high-level workflow. The workflow takes the command as input and returns the events as output.
+I first learned about event storms from Scott Wlaschin's [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional), and this process largely follows his example.
+
+Data exploration starts by choosing a high-level workflow, like the one we demonstrated [above](#example-workflow-for-design). We bootstrap our data model by encoding the workflow with the command as input and the events as output.
 
 A simple syntax might stub the workflow like this
 ```
@@ -49,7 +57,8 @@ workflow CancelOrder =
     | Order Cancel Failed
 ```
 
-Then, start asking what each of those inputs and outputs include. Stub out for child types until you've reached the bottom or decided enough detail has been covered.
+Then, start asking what data each of those inputs and outputs include. Stub out child types until you've reached the bottom or decided enough detail has been covered. 
+
 All of this communicated in some semi-formal language to balance readability with enough clarity to expose gaps in understanding.
 
 ```
@@ -81,7 +90,30 @@ A few choices might need a bit of explanation.
 
 These data models aren't primarily for coding. They dig into dependencies between parts of the business process with greater detail. They're an effective way to find gaps in the higher-level sticky note model and avoid programmers unhappily rewriting code to fit what business people knew all along, but didn't know to share.
 
-Later, developers can explore code dependencies as an extension to this syntax
+I was surprised [how much this data phase reveals about the business](../posts/2023/2023-07-13-Differentiating-events-and-commands.md), and how much it led to rework of the overall event storm.
+
+This approach benefits from several types of incremental progress. Each workflow stands on its own (out of the larger event storm), and the data is also progressively clarified from the top-down. This means the team can work in complete chunks, prioritize the chucks most likely to effect the big picture, and stop whenever they feel confident that overall risk to the model is low enough.
+
+
+## High-Level Design 
+
+This stakeholder-focused data model is also a very good starting point for a software design. It specifies data, constraints on that data, and workflow inputs/outputs that can translate to action signatures.
+
+In essence, this originally stakeholder-focused model has defined our high-level system endpoints.
+
+But, we still need to know what dependencies those high-level endpoints will need, what concerns should be reused, how all of it should be organized into modules, etc.
+
+This is where I hoped to side-step functional programming, but let's see the functional version for reference.
+
+## Event-Driven Architecture
+
+Event storms focus on events to model business processes. Well, there's also a software design paradigm based on events: Event-Driven Architecture. Specifically, I'll focus on a functional-core type design.
+
+Before I get into the ideas behind the approach, I want to give a taste of it's power.
+
+Let's use the workflows we've defined so far as a baseline. Assume that any events returned from our flow will be saved / turned into entity state. This frees the workflow from state management. 
+
+Now we can consider dependencies of our workflow with an extension of our data model. In this case, I added a `dependencies` section.
 
 ```
 workflow CancelOrder =
@@ -91,37 +123,52 @@ workflow CancelOrder =
     | OrderCancelFailed
 
   dependencies:
-    GetOrderById
+    GetOrderById 
+      // the command doesn't include the full order, 
+      // so we need to be able to look it up
 ```
+
+In this way we can build an 
+<!-- TODO: PICKUP: -->
+
+### Sneaky Code
+
+The data model has thus far been focused on redability and collaboration.
+It was largely a convenient translation of our event sticky notes into text that could be progressively clarified.
+
+But this model is also a good starting place for code. 
+
+Turns out, with the right software design, this model effectively *is* a high level code model.
 
 Suppose we tweak this model syntax just a bit
 - `->` indicates a transformation. For example, `CancelOrderRequest -> CancelOrderResult` means take a CancelOrderRequest and return a CancelOrderResult
 - `*` indicates `AND` when a flow requires multiple pre-conditions
+- We replace `workflow` and `data` with `type`
 
 Now the model might look like this
 ```
-workflow CancelOrder = 
+type CancelOrder = 
   // non-domain dependencies first, if included at all
   GetOrderById 
   // domain input / output
   -> ((OrderId -> OrderExists?) * OrderFulfillmentStatus) * CancelOrderRequest 
   -> CancelOrderResult
 
-dependency GetOrderById = OrderId -> Order
+type GetOrderById = OrderId -> Order
 
-data OrderId = // must be unique, and easy for a customer to read to a support agent
+type OrderId = // must be unique, and easy for a customer to read to a support agent
 
-data CancelOrderRequest = {
+type CancelOrderRequest = {
   OrderId: OrderId
   Reason: ShopperCancelReason
 }
 
-  data ShopperCancelReason = 
+  type ShopperCancelReason = 
     // Q: What reasons might a shopper cancel their order for?
     | FoundBetterPrice
 
 
-data CancelOrderResult = 
+type CancelOrderResult = 
   | Success of
     | OrderCanceled
   | Error of
@@ -129,13 +176,13 @@ data CancelOrderResult =
     | OrderAlreadyInFulfillment
     | OrderNotFound
 
-  data OrderCanceled = {
+  type OrderCanceled = {
     // Q: what do we need to notify others?
     OrderId: OrderId
     Reason: CancelReason
   }
 
-  data CancelReason = 
+  type CancelReason = 
     // Q: What groups would have distinct reasons for cancelling?
     | ShopperCancelReason
     | SellerCancelReason
@@ -143,7 +190,7 @@ data CancelOrderResult =
 
 ```
 
-Surprise! This is nearly valid F# syntax. I made a few tweaks to make it more generally intuitive, but nothing that couldn't be fixed algorithmically.
+Surprise! This is valid F# syntax (minus the order of type declarations, which I left alone to keep the comparison easy).
 
 This approach for refining event storm sticky notes into a more detailed view is simple for developers and non-developers alike. While working with non-developers, the inputs and outputs are discussed in purely domain terms and recorded in the readable but consistent style. But, this semi-formal definition is already rigorous enough to define the foundational domain model in code.
 
