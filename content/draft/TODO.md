@@ -7,6 +7,7 @@ Placeholder for links that need filled
 <!-- 
 
 Emergency ideas
+- Test API with Jest
 - describe the performance gain in trx performance. Fell for fallacy of the in-memory doc selection being fast (not deep, ID lookup usually fast). Not the case here.
 - Describe gotchas in ionide test debugging (need processid returned in console only when in debug mode, need to continue for breakpoints to load)
 - .C# adding type aliases! https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12#alias-any-type. A significant tool for domain modeling, especially if you want to incrementally refactor to semantic names
