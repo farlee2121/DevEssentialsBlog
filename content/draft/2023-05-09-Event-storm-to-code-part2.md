@@ -4,8 +4,16 @@ tags: [Event Storming]
 title: Event Storm To Software Design Part 1 - High-level code
 ---
 
+ I tested out several approaches for translating event storms into system designs. 
 <!--more-->
 
+## Problem Context
+
+
+I've been exploring event storming with some other developers, and now we want to translate the event storm into a high-level system design. 
+
+I've experimented with event storms in the past, but always in a functional programming context. 
+Functional design seemed like too much learning to pile on for others in the current experiment. So, I explored with a few other approaches for refining event storms into designs. 
 ## High-Level Design 
 
 This stakeholder-focused data model is also a very good starting point for a software design. It specifies data, constraints on that data, and workflow inputs/outputs that can translate to action signatures.
