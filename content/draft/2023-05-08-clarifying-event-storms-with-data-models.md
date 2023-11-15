@@ -63,7 +63,7 @@ workflow CancelOrder =
     | Order Cancel Failed
 ```
 
-Note that `|` is used as a shorthand for alternatives. Like `type Answers = | Yes | No`. Later, curly brackets (`{}`) are used to group related data.
+Note that `|` is used as a shorthand for alternatives. Like `type Answers = | Yes | No`.
 
 Next, start asking what data each of those inputs and outputs include. Stub out child types until you've reached the bottom or decided enough detail has been covered. 
 
@@ -120,13 +120,13 @@ I think the syntax use above works pretty well.
 The short of it is
 - `workflow` keyword to denote the highlevel process that turns commands into events
   - `input:` and `output:` indented under the workflow to denote the input command and output events
-- `data` to denote the shape of information. For example, what the input command looks like.
-- `|` for alternative data
+- `data` to denote the shape of information. For example, what information the input command should include.
+- `|` for alternative data options (e.g. `data Answers = | Yes | No`)
 - `{}` for groups of data
-  - `Field: data type` is a bit a bit program-y. It might help to explain it like fields on a form (E.g. Delivery Address and Billing Address might be different fields but share the same Address rules)
-- `constraints:` for noting any requirements on data
+  - The `Field Name: Data Type` format is a bit a bit program-y. It might help to explain it like fields on a form. E.g. Delivery Address and Billing Address might be different fields but share the same Address rules.
+- `constraints:` Note any requirements on data. Can just be a sentence or a bullet list describing the requirements.
 
-I'd guess many readers can intuit most of these without help though.
+I'd guess many readers can intuit most of these rules without help though.
 
 
 ## Trickier examples - Cart Contents
