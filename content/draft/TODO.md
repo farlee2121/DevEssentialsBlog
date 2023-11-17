@@ -8,7 +8,6 @@ Placeholder for links that need filled
 
 Emergency ideas
 - Test API with Jest
-- Describe gotchas in ionide test debugging (need processid returned in console only when in debug mode, need to continue for breakpoints to load)
 - .C# adding type aliases! https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12#alias-any-type. A significant tool for domain modeling, especially if you want to incrementally refactor to semantic names
 - useful randomness methods for in .NET 8 https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8#methods-for-working-with-randomness. Implemented these myself too many times
 - Interested to see where C# will go with these AOP features https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12#interceptors. Personally, I no longer see meta-programming based AOP as especially desirable. A good dependency inversion strategy achieves much of the value. Though, this could centralize some rather deterministic situations like authorization or logging decorators.
@@ -26,11 +25,6 @@ backup idea queue
   - I think I want more application with this before I give it a dedicated post
   - flow over prediction related to distributed architecture over central planning (might have more info in my Scaling Architecture Conversationally notes) -> Decentralized decision making means faster feedback loops, greater scalability. 
   - Refine the guardrails/SOP over controling specifics. Not easy though.
-- I can probably wring a post or two out of my Ionide contributions 
-  - maybe talking about minimal parameters / the refactoring I did early on could be a good case study in information hiding and how to choose parameters
-    - maybe frame as: I can see how all this would be considered helpers to improve readability of the main flow, but now I want to reuse parts of this and their current parameters don't let me do that. Need to identify the core reusable logic, isolate it, and require only the parameters needed for that bit of logic. Refactoring that first, then I can use the logic in my new flow when I add it. 
-  - probably just show of some of the challenges I was able to overcome (multiple sources, not all aligned; updating from code)
-  - can probably do a high-level one that's essentially just the PR
 - Elm
   - Values win again. Simpler Hot reload due to composed state. Don't need to go deep into tooling chain. It's attainable mostly at the level we normally program at.
   - Comparing elm to transition away from OO because distributed state is hard to manage
