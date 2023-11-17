@@ -1,6 +1,6 @@
 ---
 date: "2020-09-11T00:00:00Z"
-tags: [Software Architecture, Design thinking, SOLID Structure, Case Study, Scaling, Decorator, AOP]
+tags: [Software Architecture, Design thinking, SOLID Structure, Case Study, Scaling, Decorator, Aspect-Oriented Programming]
 title: Async Task Refactor Case Study
 aliases:
 - /2020/09/11/background-task-refactor

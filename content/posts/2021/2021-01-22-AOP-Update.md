@@ -1,6 +1,6 @@
 ---
 date: "2021-01-22T00:00:00Z"
-tags: [C# 9, AOP, Aspect-Orientated Programming]
+tags: [C# 9, Aspect-Oriented Programming]
 title: Aspect-Orientation Update for C# 9
 aliases:
 - /2021/01/22/aop-update

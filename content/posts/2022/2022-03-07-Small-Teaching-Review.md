@@ -1,6 +1,6 @@
 ---
 date: "2022-03-07T00:00:00Z"
-tags: [Eductation, Learning, Reading Review]
+tags: [Education, Learning, Reading Review]
 title: Small Teaching Review
 aliases:
 - /2022/03/07/small-teaching-review

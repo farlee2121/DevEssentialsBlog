@@ -1,6 +1,6 @@
 ---
 date: "2022-07-15T00:00:00Z"
-tags: [C#, Records]
+tags: [C#, Record Types]
 title: "C# Records Compare Private Members"
 ---
 

@@ -1,6 +1,6 @@
 ---
 date: "2022-01-21T00:00:00Z"
-tags: [Checklist, Critical Thinking, Duck docs, Process]
+tags: [Checklist, Critical Thinking, Ducks, Process]
 title: Development Cycles Checklist
 aliases:
 - /2022/01/21/development-cycles-checklist

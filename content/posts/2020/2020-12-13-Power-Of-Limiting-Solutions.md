@@ -1,6 +1,6 @@
 ---
 date: "2020-12-13T00:00:00Z"
-tags: [Design Principles, Reading Notes]
+tags: [Design Principles, Reading Review]
 title: The Power of a Limited Toolset
 aliases:
 - /2020/12/13/power-of-limiting-solutions

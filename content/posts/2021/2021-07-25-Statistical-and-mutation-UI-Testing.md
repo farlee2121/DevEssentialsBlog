@@ -1,6 +1,6 @@
 ---
 date: "2021-07-25T00:00:00Z"
-tags: [Testing, functional, state machines, UI]
+tags: [Testing, Functional Programming, state machines, UI]
 title: "Hypothesis: Statistical and Mutation Testing are Achievable for Visual UI Testing"
 aliases:
 - /2021/07/25/statistical-and-mutation-ui-testing

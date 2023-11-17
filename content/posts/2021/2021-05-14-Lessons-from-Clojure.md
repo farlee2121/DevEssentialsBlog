@@ -1,6 +1,6 @@
 ---
 date: "2021-05-14T00:00:00Z"
-tags: [Clojure, Retrospective, Meta-programming, Functional]
+tags: [Clojure, Retrospective, Meta-programming, Functional Programming]
 title: Lessons From Clojure
 aliases:
 - /2021/05/14/lessons-from-clojure

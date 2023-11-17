@@ -1,6 +1,6 @@
 ---
 date: "2022-06-12T00:00:00Z"
-tags: [Interviews, Eductation, Defect Detection, Learning]
+tags: [Interviews, Education, Defect Detection, Learning]
 title: Better Software Interviews with Defect Detection
 aliases:
 - /2022/06/12/better-interviews-with-defect-detection
