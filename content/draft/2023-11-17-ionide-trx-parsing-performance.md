@@ -1,6 +1,6 @@
 ---
 date: 2023-11-17
-tags: [Performance, Case Study]
+tags: [Performance]
 title: Improving the Ionide TRX Parsing Performance 
 ---
 
