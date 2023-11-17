@@ -1,6 +1,6 @@
 ---
 date: "2021-07-16T00:00:00Z"
-tags: [Style, Construction, Self-documenting code, naming]
+tags: [Code Style, Construction, Self-documenting code, naming]
 title: Sharp-Dressed Code
 aliases:
 - /2021/07/16/well-dressed-code

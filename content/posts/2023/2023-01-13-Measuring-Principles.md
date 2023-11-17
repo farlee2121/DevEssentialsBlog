@@ -1,6 +1,6 @@
 ---
 date: 2023-01-13
-tags: [education, principles, measurement, Quality]
+tags: [education, design principles, measurement, Quality]
 title: "Measuring Principles"
 ---
 

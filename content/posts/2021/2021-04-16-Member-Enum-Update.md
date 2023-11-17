@@ -1,6 +1,6 @@
 ---
 date: "2021-04-16T00:00:00Z"
-tags: [C# 9, Patterns]
+tags: [C# 9, Design Patterns]
 title: Static Member Enums Update
 aliases:
 - /2021/04/16/member-enum-update

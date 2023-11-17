@@ -1,6 +1,6 @@
 ---
 date: "2020-12-19T00:00:00Z"
-tags: [Architecture, Patterns, Clean Architecture]
+tags: [Software Architecture, Design Patterns, Clean Architecture]
 title: Ports and Adapters
 aliases:
 - /2020/12/19/ports-and-adapters

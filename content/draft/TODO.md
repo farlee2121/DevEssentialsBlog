@@ -48,4 +48,11 @@ Longer-form
   - a Driver-based loop (namely with tests, then some refactorings)
   - Dealing with some legacy code (strangler and related) -> a multi-phase refactor is a sort of hypothesis about what would make a better shape/api/factoring and then you give it a limited trial without turning everthing over 
   - remember to tie things back to test-hypothesis and increments
+
+Tags to consolidate
+- Language Design, Language Properties, Languages, Language Features, Programming Langauges
+- Design, Software Design
+  - maybe also: Design Theory, Design Thinking, Design Patterns, Design Principles, Design process
+- System structure, Program Structure, maybe Project Structure
+- process 
 -->

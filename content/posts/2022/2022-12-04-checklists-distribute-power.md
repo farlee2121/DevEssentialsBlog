@@ -1,6 +1,6 @@
 ---
 date: 2022-12-04
-tags: [Reading Review, Checklists]
+tags: [Reading Review, Checklist]
 title: Checklists Distribute Power
 ---
 

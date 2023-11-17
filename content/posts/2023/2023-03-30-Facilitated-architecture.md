@@ -1,6 +1,6 @@
 ---
 date: 2023-03-30
-tags: [Architecture, Design Process]
+tags: [Software Architecture, Design Process]
 title: "Architecture - Facilitated over Separated"
 ---
 

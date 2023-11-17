@@ -1,7 +1,7 @@
 ---
 date: "2020-06-15T00:00:00Z"
 summary: I was 'raised' on the iDesign school of architecture. To me architecture meant the high-level separation of concerns into clients, managers, engines, accessors, and resources. ... but now there is a new level of separation
-tags: [Pivotal Insights, Architecture, Domain-Driven Design, iDesign]
+tags: [Pivotal Insights, Software Architecture, Domain-Driven Design, iDesign]
 title: Splitting Architecture
 aliases:
 - /2020/06/15/splitting-architecture

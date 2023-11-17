@@ -1,6 +1,6 @@
 ---
 date: "2021-07-09T00:00:00Z"
-tags: [Patterns]
+tags: [Design Patterns]
 title: Patterns in practice
 aliases:
 - /2021/07/09/patterns-in-practice

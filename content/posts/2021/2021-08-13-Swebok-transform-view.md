@@ -1,6 +1,6 @@
 ---
 date: "2021-08-13T00:00:00Z"
-tags: [SWEBOK, Design, Design Process]
+tags: [SWEBOK, Software Design, Design Process]
 title: Software Engineering as Problem Translation
 aliases:
 - /2021/08/13/swebok-transform-view

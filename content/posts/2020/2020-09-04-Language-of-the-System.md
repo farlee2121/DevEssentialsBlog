@@ -1,6 +1,6 @@
 ---
 date: "2020-09-04T00:00:00Z"
-tags: [Architecture, Design thinking, Reading Review]
+tags: [Software Architecture, Design thinking, Reading Review]
 title: System Language
 aliases:
 - /2020/09/04/language-of-the-system

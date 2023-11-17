@@ -1,6 +1,6 @@
 ---
 date: "2021-08-27T00:00:00Z"
-tags: [SWEBOK, Software Engineering Body of Knowledge, Visual]
+tags: [SWEBOK, Visual]
 title: "SWEBOK: Modified software Concept Map"
 aliases:
 - /2021/08/27/swebok-modified-topic-diagram

@@ -1,6 +1,6 @@
 ---
 date: 2023-03-10
-tags: [iDesign, Clean Architecture, Ports and Adapters]
+tags: [iDesign, Clean Architecture, Ports and Adapters, Software Architecture]
 # title: Abstraction vs Composition Dependency Spectrums
 title: Revisiting iDesign and Clean Architecture Merge
 ---

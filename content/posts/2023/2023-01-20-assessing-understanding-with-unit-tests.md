@@ -1,6 +1,6 @@
 ---
 date: 2023-01-20
-tags: [learning, unit tests]
+tags: [learning, testing]
 title: Assessing Understanding with Unit tests
 ---
 

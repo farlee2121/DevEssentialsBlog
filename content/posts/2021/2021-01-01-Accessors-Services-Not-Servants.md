@@ -1,6 +1,6 @@
 ---
 date: "2021-01-01T00:00:00Z"
-tags: [Architecture, SOLID Structure, IDesign, Clean Architecture]
+tags: [Software Architecture, SOLID Structure, IDesign, Clean Architecture]
 title: "Accessors: Services, Not Servants"
 aliases:
 - /2021/01/01/accessors-services-not-servants

@@ -1,7 +1,7 @@
 ---
 date: "2020-11-19T00:00:00Z"
 draft: true
-tags: [Architecture, SOLID Structure, IDesign, Clean Architecture]
+tags: [Software Architecture, SOLID Structure, IDesign, Clean Architecture]
 ---
 
 # Ports and Adapters+ Visualized

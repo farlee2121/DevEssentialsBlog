@@ -1,6 +1,6 @@
 ---
 date: 2022-12-29
-tags: [SOLID, SPNC, Construction, Principles]
+tags: [SOLID, SPNC, Construction, Design Principles]
 title: SOLID vs SPNC
 ---
 

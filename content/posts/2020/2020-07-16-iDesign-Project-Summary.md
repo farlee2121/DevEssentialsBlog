@@ -1,6 +1,6 @@
 ---
 date: "2020-07-16T00:00:00Z"
-tags: [Architecture, Domain-Driven Design, iDesign, Reading Notes]
+tags: [Software Architecture, Domain-Driven Design, iDesign, Reading Notes]
 math: true
 title: "Righting Software - Project Design Summary"
 aliases:
