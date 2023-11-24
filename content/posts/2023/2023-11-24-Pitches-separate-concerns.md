@@ -1,5 +1,5 @@
 ---
-date: 2023-08-10
+date: 2023-11-24
 tags: [Shape Up, Requirements, Project Management]
 title: Pitches Separate Concerns For Cross-level Coordination
 ---
@@ -41,7 +41,7 @@ Pitches define the minimal interface that matters to both management and program
 
 The managers need all this information to decide if they want to schedule work. It's often enough information to decide if the work is worth scheduling, and there isn't any information the manager is uninterested in.
 
-Likewise, the programmers need all of this information to make well informed decisions about implementation. It likely tells the programmers everything the management expects of them, and it doesn't include any [extra information that might unnecessarily constrain their implementation](../posts/2023/2023-11-17-kinds-of-Concreteness-for-specifications.md).
+Likewise, the programmers need all of this information to make well informed decisions about implementation. It likely tells the programmers everything the management expects of them, and it doesn't include any [extra information that might unnecessarily constrain their implementation](../../posts/2023/2023-11-17-kinds-of-Concreteness-for-specifications.md).
 
 Exploring the solution well enough to feel certain it solves the problem within the given appetite may require more detailed exploration than shows up in the pitch. 
 Excluding that work may feel like a waste, but the rigorous limitation is key.
@@ -65,7 +65,7 @@ Conversely, managers also don't have to parse a sea of broken down work items an
 ## Duck Docs
 
 I have pretty high confidence in the core idea behind pitchs.
-I use many of the same core elements in my [duck docs](https://spencerfarley.com/2022/06/16/0-intro/). While I haven't exactly used duck docs for project management, I've used them for many years with great success to co-iterate with various stakeholders, understand problems, and reduce uncertainty. 
+I use many of the same core elements in my [duck docs](../../posts/Whats-Your-Duck-V2/2022-06-16-0-Intro.md). While I haven't exactly used duck docs for project management, I've used them for many years with great success to co-iterate with various stakeholders, understand problems, and reduce uncertainty. 
 
 ## Uncertainties
 
