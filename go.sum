@@ -8,3 +8,5 @@ github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.1 h1:kujYarppbu4laEs
 github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.1/go.mod h1:inb1U/NMQWMjoDBEhpabB/cI06SkgWnbM4dHKFHCG60=
 github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.2 h1:hRLX/qaBWrGAIGTRFnG2vTygF3LIZDIDCJI7Az962kc=
 github.com/danielfdickinson/link-handling-mod-hugo-dfd v0.3.2/go.mod h1:ajYr1qZHU5FJloKLT9rF8jSzKhuv5uSzQ/kA5M1vsY8=
+github.com/farlee2121/link-handling-mod-hugo-from-cache v0.3.111 h1:N7iq+yP+n8m+0fzH8VQpuNXEdKZDsB0WD+aBt1mnlZA=
+github.com/farlee2121/link-handling-mod-hugo-from-cache v0.3.111/go.mod h1:Pn5kYATEQkbwmSJTf6ZKfGIAzryBjkWxNK4hkYjE798=
