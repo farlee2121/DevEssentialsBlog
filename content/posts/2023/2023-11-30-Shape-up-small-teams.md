@@ -1,5 +1,5 @@
 ---
-date: 2023-08-10
+date: 2023-11-30
 tags: [Shape Up]
 title: Shape Up - Importance of Small Teams
 ---
@@ -22,6 +22,6 @@ A 2-3 person team is also big enough that you can account for different specialt
 
 It's also important that these team can change up every 6 weeks. That's long enough that the team has time to be steeped in the problem together and not lose that momentum. But, it's short enough that you don't have long-term knowledge siloing. The end also isn't very far if the team comp isn't working out or isn't aligning well on the particular problem.
 
-I'm accustomed to much shorter cycles, about 1 to 2 weeks. These shorter cycles, theoretically, leave less time for work to go off the tracks. These 1-2 weeks cycles are more designed for individual-sized tasks orchestrated by a manager. A very different assumption than Shape Up. Shape Up's 6-week cycles feel uncomfortably long to me, but I can imagine how 1-2 weeks isn't enough time for a small team to self-organize around a project and gain momentum. That 6-week cycle factors in [more decision making reserved for the implementers](../posts/2023/2023-11-24-Pitches-separate-concerns.md), as well as an expectation that [unfinished work is cancelled](../posts/2023/2023-11-09-Appetite.md).
+I'm accustomed to much shorter cycles, about 1 to 2 weeks. These shorter cycles, theoretically, leave less time for work to go off the tracks. These 1-2 weeks cycles are more designed for individual-sized tasks orchestrated by a manager. A very different assumption than Shape Up. Shape Up's 6-week cycles feel uncomfortably long to me, but I can imagine how 1-2 weeks isn't enough time for a small team to self-organize around a project and gain momentum. That 6-week cycle factors in [more decision making reserved for the implementers](../../posts/2023/2023-11-24-Pitches-separate-concerns.md), as well as an expectation that [unfinished work is cancelled](../../posts/2023/2023-11-09-Appetite.md).
 
 In short, I think the small teams address many difficult team dynamics. Protecting these small and independent teams could be a significant reason why 6-week cycles work better for Basecamp than shorter cycles. 
