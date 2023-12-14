@@ -11,7 +11,7 @@ A key challenge working on the Ionide test explorer was merging data from variou
 ## Context
 
 For context, I made a number of contributions to the Ionide test explorer. A more thorough explanation can be 
-[read here](./2023-08-11-Ionide-test-explorer.md).
+[read here](../posts/2023/2023-12-14-Ionide-test-explorer.md).
 
 ## Key Assumptions
 
