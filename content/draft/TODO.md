@@ -8,6 +8,11 @@ Placeholder for links that need filled
 
 Emergency ideas
 - Test API with Jest
+- Mentoring pivot, work in system then summarize essence of the work done / problem solved. 
+  - Self-directed, starts concrete and abstract comes later (versus starting with topic discussion and demonstration), does still require distilling essence though, have to live with code you made, NDA friendly
+  - Better milestones. Not trying to master a full concept, which is broad and many-faceted. End is when you're happy with the code.
+  - Seems obvious in retrospect. 
+    - I would have defaulted to pairing w/o an NDA. This has less shared context, but is better in many ways. I'm limited in what solutions I can offer even if I want to. The student must take greater ownership and also has to think about the essence of what they did (link to summarizing?). In pairing, you'd have to be intentional about pausing to summarize and distill any learnings.
 - .C# adding type aliases! https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12#alias-any-type. A significant tool for domain modeling, especially if you want to incrementally refactor to semantic names
 - useful randomness methods for in .NET 8 https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8#methods-for-working-with-randomness. Implemented these myself too many times
 - Interested to see where C# will go with these AOP features https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12#interceptors. Personally, I no longer see meta-programming based AOP as especially desirable. A good dependency inversion strategy achieves much of the value. Though, this could centralize some rather deterministic situations like authorization or logging decorators.

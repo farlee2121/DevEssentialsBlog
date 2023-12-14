@@ -1,6 +1,6 @@
 ---
 date: 2023-08-11
-tags: []
+tags: [Ionide]
 title: Ionide Test Explorer Contribution
 ---
 
@@ -11,9 +11,9 @@ The [full pull request](https://github.com/ionide/ionide-vscode-fsharp/pull/1874
 
 ## Motivation 
 
-Yes, I know that Visual Studio has good F# support with a well functioning test explorer. But VS Code with it's strong extension ecosystem works better for some of my mixed workflows. Like if I want to iterate between an interactive notebook and coding, or between an exploratory markdown document and coding, or if I'm working in mixed languages. So, I regularly find myself working on F# in VS Code.
+Yes, I know that Visual Studio has good F# support with a well functioning test explorer. But VS Code, with it's strong extension ecosystem, works better for some of my mixed workflows. Like if I want to iterate between an interactive notebook and coding, or between an exploratory markdown document and coding, or if I'm working in mixed languages. So, I regularly find myself working on F# in VS Code.
 
-VS Code has a nice F# plugin: Ionide. But test explorers for .NET in VS Code have long been a bit lacking. This is especially true for for my F# experience since I use Expecto, which functions differently than the mainline attribute-based test frameworks. 
+VS Code has a nice F# plugin: Ionide. But test explorers for .NET in VS Code don't meet all my key requirements. This is especially true for for my F# experience since I use Expecto, which functions differently than the mainline attribute-based test frameworks. 
 
 Testing is central to my development flow, so I want a fast test loop. At least I want my test explorer to
 - Show tests in the expected hierarchy / test groupings
@@ -21,11 +21,11 @@ Testing is central to my development flow, so I want a fast test loop. At least 
 - reliably run individual tests and groups of tests
 - Go to test code from the test item in the explorer
 
-I'd also like to
-- See the test explorer update as code updates
-- Run tests from an line lens / from a control in proximity to the test code
-- Debug tests
-- Test across .NET languages
+I'd also like
+- Reliable explorer updates as the test code updates (i.e. test method renames)
+- Running tests from a line lens / from a trigger close to the test code
+- Test Debugging
+- Testing across .NET languages
 
 None of the existing .NET explorers covered all the requirements.
 
@@ -41,7 +41,7 @@ It also based the test hierarchy fully on the code structure, and not the test g
 
 This has several consequences.
 - Sometimes tests show in the wrong place, and can't be run when that happens
-- Tests using custom test methods, like this [theoryWithResult example](https://github.com/farlee2121/Ionide-Test-Explorer-RegressionTest/blob/7c968e045ce4bca562a814ded63ac99a1938eb1f/tests/ExpectoTests/Expecto.fs#L83) don't show in the explorer
+- Tests using custom test methods, like this [theoryWithResult example](https://github.com/farlee2121/Ionide-Test-Explorer-RegressionTest/blob/7c968e045ce4bca562a814ded63ac99a1938eb1f/tests/ExpectoTests/Expecto.fs#L83) don't show in the explorer at all
 - Other .NET langauges can't be supported
 - A code analyzer must be written for every test framework the explorer wants to support
 
@@ -51,20 +51,20 @@ You can see an in-depth list of behaviors and issues in my [regression testing p
 
 ## The solution
 
-My core solution was to change the primary source of truth for test explorer. Instead of basing on the code, I'd base the explorer on the test results. Then I could merge locations from the code.
+My core solution was to change the primary source of truth for test explorer. Instead of basing the test hierarchy on the code, I'd base the hierarchy on the test results. Then I could merge test locations from the code.
 
-The result were pretty satisfying. The tests now consistently display in the hierarchy expected by their logical grouping. Other languages and test frameworks without code analysis are now supported.
+The result were pretty satisfying. The tests now consistently display in the hierarchy as expected from their logical grouping. Other languages and test frameworks without code analysis are now supported.
 
 ![Test explorer reflects result structure not code structure](../../static/post-media/Ionide-Test-Explorer/code-vs-name-hierarchy.png)
 
-Code analysis results are still used for "go to test" and live updates.
-Live updates like rename, add, and remove from code updates are more stable
+Code analysis results are still used for "go to test" and live updates (i.e. renaming, adding, or removing tests).
+However, using test results as the main truth source enabled new strategies to improve live update stability.
 
 <video  controls>
   <source src="/post-media/Ionide-Test-Explorer/live-explorer-updates.mp4" type="video/mp4">
 </video>
 
-The test explorer can be refreshed if anything looks off.
+Live update issues are also less impactful, since the test explorer can now be refreshed (rebuilt from test results) if anything looks off.
 
 I also added console output. This improves troubleshooting and failure message discoverability for any tests that can't show error messages next to the test code.
 
@@ -79,11 +79,11 @@ There's a number of other trouble shooting improvements I won't cover here, but 
 
 ## Outstanding work
 
-Changing the source of truth enabled some significant feature enhancements. But this work also revealed the incredible depths of potential issues and edge cases in test explorers.
+Changing the source of truth enabled some significant feature enhancements. But this work also revealed the depth of potential issues and edge cases in test explorers.
 
-There are still cases, relatively uncommon ones, where mislocated tests can show up in the wrong place in the explorer. I decided to leave this error though because it's relatively uncommon and the near term fix would have killed live explorer updates (which are highly valuable). In the long term, I hope to fix this with more sophisticated matching for tests where the code-based and logical/name-based hierarchies don't match. 
+There are still cases, relatively uncommon ones, where mislocated tests can show up in the wrong place in the explorer. I decided to leave this error though because it's relatively uncommon and the near term fix would have killed live explorer updates (which are highly valuable). In the long term, I hope to fix this with more sophisticated matching for tests where the code-based and logical/name-based hierarchies don't match. (Update: [it's fixed](https://github.com/ionide/ionide-vscode-fsharp/pull/1922))
 
-Special characters like `.` and `+` in test names can also cause incorrect hierarchy splitting. This problem goes deep though. Even the test results file reports name splits incorrectly. 
+Special characters like `.` and `+` in test names can also cause incorrect hierarchy splitting. This problem goes deep though. Even the test result file from `dotnet test` reports name splits incorrectly. 
 
 
 Overall, I'm still really proud of this work and how much it improves the experience!
