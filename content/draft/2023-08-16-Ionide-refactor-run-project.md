@@ -8,13 +8,13 @@ title: Refactoring for Information Hiding - Ionide Case Study - Run Project
 <!-- TODO: intro might need work -->
 <!-- TODO: It'd still be nice to cover trying to centralize testRun, but discovering the build needed to be serialized an then retaining sub-methods, but grouped to make their ownership and non-reusability clear -->
 
-Information Hiding is a critical, but tricky principle to get familiar with. I'm working through an exampled based on my [Ionide test explorer contributions](https://github.com/ionide/ionide-vscode-fsharp/pull/1874). The [previous post](./2023-08-14-Ionide-refactor-display-results.md) explored the top scope, now we'll dive into a more complex method.
+Information Hiding is a critical, but tricky principle to get familiar with. I'm working through an exampled based on my [Ionide test explorer contributions](https://github.com/ionide/ionide-vscode-fsharp/pull/1874). The [previous post](../posts/2023/2023-12-21-Ionide-refactor-display-results.md) explored the top scope, now we'll dive into a more complex method.
 <!--more-->
 
 The full work is available if you want to explore in more depth. The the [final code diff](https://github.com/ionide/ionide-vscode-fsharp/pull/1874/files) is a bit useless because the extensive changes. It might be better to read [the original code](https://github.com/ionide/ionide-vscode-fsharp/blob/6c485f6f5970dd3aa9e7a0fe17ba061742c70b80/src/Components/TestExplorer.fs) then the [updated version](https://github.com/ionide/ionide-vscode-fsharp/blob/e882c87c13cb55e1f6752da8a42ec41f19540c67/src/Components/TestExplorer.fs).
 
 ## Recap
-I highly recommend you read the [previous post](./2023-08-14-Ionide-refactor-display-results.md).
+I highly recommend you read the [previous post](../posts/2023/2023-12-21-Ionide-refactor-display-results.md).
 
 We previously discovered that the test explorer responds to test runs through `runHandler`, which orchestrates the high level flow of a test run (find projects, build, test, display results).
 
@@ -635,5 +635,5 @@ In this case, we can have our cake and eat it too. It's possible for the caller 
 
 Information Hiding is very powerful, and we've seen it in action for several problems here. Done well, it creates both reusable actions that are easier to understand on their own. The caller also benefits from well defined steps that can can be read at a consistent abstraction, focusing the purpose of the composing function too.
 
-We've also seen how information hiding can be accomplished incrementally ([including last post](./2023-08-14-Ionide-refactor-display-results.md)), creating pockets of well ordered code, stepping the overall code toward a larger goal, but without snowballing into wide-spread changes. 
+We've also seen how information hiding can be accomplished incrementally ([including last post](../posts/2023/2023-12-21-Ionide-refactor-display-results.md)), creating pockets of well ordered code, stepping the overall code toward a larger goal, but without snowballing into wide-spread changes. 
 

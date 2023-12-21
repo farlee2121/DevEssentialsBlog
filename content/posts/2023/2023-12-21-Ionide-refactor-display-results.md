@@ -1,5 +1,5 @@
 ---
-date: 2023-08-14
+date: 2023-12-21
 seriesId: "Ionide Refactor"
 tags: [Information Hiding, Refactoring]
 title: Refactoring for Information Hiding - Ionide Case Study - Getting Acquainted
@@ -205,7 +205,7 @@ let runHandler
 This change is pretty safe. It didn't change any behavior and it's small enough in scope that it's easy to understand and review. Yet it meaningfully improved the understandability of the code and stepped us closer to some wide-scale refactors.
 
 We also identified that `runProject` has some mixed responsibilities, and some better information hiding could potentially create more reusable components.
-I'll dig into that [next post](TODO.md)
+I'll dig into that [next post](../../draft/2023-08-16-Ionide-refactor-run-project.md).
 
 ## Full Code Links
 
