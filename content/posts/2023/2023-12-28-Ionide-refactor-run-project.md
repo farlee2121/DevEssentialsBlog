@@ -10,12 +10,12 @@ title: Refactoring for Information Hiding - Ionide Case Study - Run Project
 Information Hiding is a critical, but tricky principle to master. This post continues a worked example of Information Hiding based on my [Ionide test explorer contributions](https://github.com/ionide/ionide-vscode-fsharp/pull/1874). 
 <!--more-->
 
-The [previous post](../posts/2023/2023-12-21-Ionide-refactor-display-results.md) explored the top-level flow, now we'll dive into a more complex method.
+The [previous post](../../posts/2023/2023-12-21-Ionide-refactor-display-results.md) explored the top-level flow, now we'll dive into a more complex method.
 
 The full work is available if you want to explore in more depth. The the [final code diff](https://github.com/ionide/ionide-vscode-fsharp/pull/1874/files) is a bit useless because the extensive changes. It might be better to read [the original code](https://github.com/ionide/ionide-vscode-fsharp/blob/6c485f6f5970dd3aa9e7a0fe17ba061742c70b80/src/Components/TestExplorer.fs) then the [updated version](https://github.com/ionide/ionide-vscode-fsharp/blob/e882c87c13cb55e1f6752da8a42ec41f19540c67/src/Components/TestExplorer.fs).
 
 ## Recap
-I recommend reading the [previous post](../posts/2023/2023-12-21-Ionide-refactor-display-results.md) before this one.
+I recommend reading the [previous post](../../posts/2023/2023-12-21-Ionide-refactor-display-results.md) before this one.
 
 Last post, we discovered that the test explorer responds to test runs through `runHandler`, which orchestrates the high level flow of a test run (find projects, build, test, display results).
 
@@ -614,8 +614,8 @@ Information Hiding is the programming principle that tells us this kind of selfi
 
 Astute readers might be wondering why the callers always have to conform to their dependencies. Doesn't that break information hiding for the caller and limit it's flexibility.
 
-Indeed. That's why we have [Dependency Inversion](../posts/2022/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md).
-In this case, we can have our cake and eat it too. It's possible for the caller and called code to be defined on their own terms without knowledge of each other. But that's a [different blog post](../posts/2022/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md) ([or two](../posts/Open-Closed-by-Example/2023-03-02-3-Interchangable-Dependencies.md)).
+Indeed. That's why we have [Dependency Inversion](../../posts/2022/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md).
+In this case, we can have our cake and eat it too. It's possible for the caller and called code to be defined on their own terms without knowledge of each other. But that's a [different blog post](../../posts/2022/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md) ([or two](../../posts/Open-Closed-by-Example/2023-03-02-3-Interchangable-Dependencies.md)).
 
 <!-- ## Conclusion
 TODO: This conclusion is a bit awkward. Maybe I just ditch it for the section above Dependency inversion 
