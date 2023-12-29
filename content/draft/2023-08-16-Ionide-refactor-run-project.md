@@ -1,5 +1,5 @@
 ---
-date: 2023-08-16
+date: 2023-12-28
 seriesId: "Ionide Refactor"
 tags: [Information Hiding, Refactoring]
 title: Refactoring for Information Hiding - Ionide Case Study - Run Project
@@ -381,109 +381,6 @@ let parseTestResults (trxPath: string) executionId =
 Now we've got two TRX parsing methods that know nothing about our test explorer or it's UI.
 We could even publish this TRX parsing as a Nuget package for others to use. Anyone with a TRX file might benefit from it. 
 
-<!-- ### Using isolated TRX parsing in Run Project
-
-The original `runProject` method is now quite a bit simpler. Test result parsing has been moved out and replaced with a readable method call. There's still some distracting mapping to TestResult objects, but it return we're able to limit the scope of the refactor and not effect any callers of `runProject`. We can save that for later.
-
-```fsharp
-let runProject (tc: TestController) (projectWithTests: ProjectWithTests) : JS.Promise<ProjectWithTestResults> =
-    logger.Debug("Nunit project", projectWithTests)
-
-    promise {
-        // https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-test#filter-option-details
-        let filter =
-            if not projectWithTests.HasIncludeFilter then
-                Array.empty
-            else
-                let filterValue =
-                    projectWithTests.Tests
-                    |> Array.map (fun t ->
-                        if t.FullName.Contains(" ") && t.Test.Type = "NUnit" then
-                            // workaround for https://github.com/nunit/nunit3-vs-adapter/issues/876
-                            // Potentially we are going to run multiple tests that match this filter
-                            let testPart = t.FullName.Split(' ').[0]
-                            $"(FullyQualifiedName~{testPart})"
-                        else
-                            $"(FullyQualifiedName={t.FullName})")
-                    |> String.concat "|"
-
-                [| "--filter"; filterValue |]
-
-        if filter.Length > 0 then
-            logger.Debug("Filter", filter)
-
-        let! _, _, exitCode =
-            Process.exec
-                "dotnet"
-                (ResizeArray(
-                    [| "test"
-                        projectWithTests.Project.Project
-                        // Project should already be built, perhaps we can point to the dll instead?
-                        "--no-restore"
-                        "--logger:\"trx;LogFileName=Ionide.trx\""
-                        "--noLogo"
-                        yield! filter |]
-                ))
-
-        logger.Debug("Test run exitCode", exitCode)
-
-        let trxPath = TrxParser.getTrxPathForProject projectWithTests.Project.Project
-
-        let testDefinitions = TrxParser.parseTestDefinitions trxPath
-
-        let unmappedTests, mappedTests =
-            projectWithTests.Tests
-            |> Array.sortByDescending (fun t -> t.FullName)
-            |> Array.fold
-                (fun (tests, mappedTests) (t) ->
-                    let linkedTests, remainingTests =
-                        tests
-                        |> Array.partition (fun (fullName: string, _, _) -> fullName.StartsWith t.FullName)
-
-                    if Array.isEmpty linkedTests then
-                        remainingTests, mappedTests
-                    else
-                        remainingTests, ([| yield! mappedTests; (t, linkedTests) |]))
-                (testDefinitions, [||])
-
-        let tests =
-            mappedTests
-            |> Array.collect (fun (t, testCases) ->
-                testCases
-                |> Array.map (fun (fullName, testName, executionId) ->
-                    let trxResult = TrxParser.parseTestResults trxPath executionId
-
-                    if Seq.length testCases > 1 then
-                        let ti =
-                            t.Test.children.get (
-                                t.Test.uri.Value.ToString()
-                                + " -- "
-                                + Convert.ToBase64String(Encoding.UTF8.GetBytes(testName))
-                            )
-                            |> Option.defaultWith (fun () ->
-                                tc.createTestItem (
-                                    t.Test.uri.Value.ToString() + " -- " + testName,
-                                    testName,
-                                    t.Test.uri.Value
-                                ))
-
-                        t.Test.children.add ti
-
-                    { Test = t.Test
-                        FullTestName = trxResult.FullTestName
-                        Outcome = trxResult.Outcome
-                        ErrorMessage = trxResult.ErrorMessage
-                        ErrorStackTrace = trxResult.ErrorStackTrace
-                        Expected = trxResult.Expected
-                        Actual = trxResult.Actual
-                        Timing = trxResult.Timing }))
-
-        return
-            { Project = projectWithTests.Project
-                Tests = tests }
-    }
-``` -->
-
 
 ### Isolating Filter Building (Mostly)
 
@@ -720,13 +617,12 @@ Astute readers might be wondering why the callers always have to conform to thei
 Indeed. That's why we have [Dependency Inversion](../posts/2022/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md).
 In this case, we can have our cake and eat it too. It's possible for the caller and called code to be defined on their own terms without knowledge of each other. But that's a [different blog post](../posts/2022/2022-07-03-Dependency-injection-vs-Dependency-Inversion.md) ([or two](../posts/Open-Closed-by-Example/2023-03-02-3-Interchangable-Dependencies.md)).
 
-## Conclusion
-
-<!-- TODO: This conclusion is a bit awkward. Maybe I just ditch it for the section above Dependency inversion -->
+<!-- ## Conclusion
+TODO: This conclusion is a bit awkward. Maybe I just ditch it for the section above Dependency inversion 
 
 Information Hiding is about limiting the amount of code that must be understood together and is the [primary criteria for deciding how to split up code](https://dl.acm.org/doi/10.1145/361598.361623). 
 
 Done well, Information Hiding creates reusable components that are also understandable independently. Callers of such components also benefit from well defined steps that can can be read at a consistent abstraction, focusing the purpose of the composing function too.
 
-This post and the [previous post](../posts/2023/2023-12-21-Ionide-refactor-display-results.md) walked through several examples from my [work on Ionide](https://github.com/ionide/ionide-vscode-fsharp/pull/1874). These examples demonstrated discovery of separable concerns and how information hiding can be accomplished incrementally. This incremental approach to information hiding created pockets of clear code while stepping the overall code toward a larger goal, but without snowballing into wide-spread changes. 
+This post and the [previous post](../posts/2023/2023-12-21-Ionide-refactor-display-results.md) walked through several examples from my [work on Ionide](https://github.com/ionide/ionide-vscode-fsharp/pull/1874). These examples demonstrated discovery of separable concerns and how information hiding can be accomplished incrementally. This incremental approach to information hiding created pockets of clear code while stepping the overall code toward a larger goal, but without snowballing into wide-spread changes.  -->
 
