@@ -36,7 +36,7 @@ What we've just described is really an event system.
 
 Suppose we choose a better event-like design. Only minimal data is included on the event and the event subscriber uses that information to look up the rest of the information it needs to compose and send a notification. This further abstracts the notification medium, message construction, and number of recipients from the business flow.
 
-The flaw is the event data. What should be the minimal data contract of this general event system? Every component of the system will have a different answer for that. In my refactoring, I had events that required a just a user ID, just the ID for some other entity, and certain identity events that required both a user ID and a verification token for security purposes. 
+The flaw is the event data. What should be the minimal data contract of this general event system? Every component of the system will have a different answer for that. In my refactoring, I had events that required just a user ID, some just the ID for another entity, and certain identity events that required both a user ID and a verification token for security purposes. 
 
 We could have the notification system take a base object or a generic type parameter, but then how does the notification system retrieve the data? It has to know how to fetch data for all the different services', making the notification system highly coupled to the rest of the system. We've also lost type enforcement and could be tempted to pass excessive data to the event handler.
 

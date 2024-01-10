@@ -6,6 +6,10 @@ Placeholder for links that need filled
 
 <!-- 
 
+Priority ideas
+- GUID, CQS, and breaking db-driven identity
+- Aliases for domain modelling
+
 Emergency ideas
 - Test API with Jest
 - Mentoring pivot, work in system then summarize essence of the work done / problem solved. 
