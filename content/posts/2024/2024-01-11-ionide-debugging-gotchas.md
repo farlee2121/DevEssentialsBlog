@@ -1,11 +1,11 @@
 ---
-date: 2023-11-17
+date: 2024-01-11
 tags: [dotnet]
 title: Gotchas Implementing Debugging for Ionide
 ---
 
 I contributed debug support to the Ionide (F#) test explorer for VS Code.
-I thought I'd document the quirks I encountered, though I don't expect many people to need such info.
+Here's the quirks I encountered.
 <!--more-->
 
 ## Getting the right process ID to debug
@@ -16,7 +16,7 @@ I generally expect to get a process id when I spawn a process, in this case a [N
 However, invoking `dotnet test` does not return the correct process id. Instead, the console command spawns a separate test host process and it's 
 that process that we need to attach to. 
 
-Neither dotnet test or the underlying vstest list options for debugging in their CLI option documentation.
+Neither dotnet test nor the underlying vstest list options for debugging in their CLI documentation.
 Nor does the test host process id show in the console output.
 
 However, if you set the environment variable `VSTEST_HOST_DEBUG=1`, then vsTest will add the test host process id
@@ -34,5 +34,7 @@ Running with the debugger enabled causes the process to pause on entry. This avo
 
 However, the process does not automatically continue once the debugger is attached. *Continue has to be called explicitly*.
 
-To the user, this may look like the program never loaded. The program is stopped but no breakpoints are hit. It's not intuitive that they have to click continue. So, ideally, we'd programmatically continue execution once we've attached the debugger.
-This is yet another gotcha. The debugger attaching can take a while, so the continue call must be delayed a second or two, or it will be called before the debugger is ready and the user will be left with the confusing pause-on-entry state.
+To the user, this may look like the program never loaded. The program is stopped but no breakpoints are hit. It's not intuitive that they have to click continue (the button you normally hit to go to the next breakpoint). 
+
+Ideally, we'd programmatically continue execution once we've attached the debugger.
+But, this is yet another gotcha. The debugger attaching can take a while, so the continue call must be delayed a second or two or it will be called before the debugger is ready and the user will still be left with the confusing paused-on-entry state.
