@@ -1,5 +1,5 @@
 ---
-date: 2023-11-18
+date: 2024-01-18
 tags: []
 title: Ionide - Merging diverse data sources
 ---
@@ -11,7 +11,7 @@ A key challenge working on the Ionide test explorer was merging data from variou
 ## Context
 
 For context, I made a number of contributions to the Ionide test explorer. A more thorough explanation can be 
-[read here](../posts/2023/2023-12-14-Ionide-test-explorer.md).
+[read here](../../posts/2023/2023-12-14-Ionide-test-explorer.md).
 
 
 In short, the Ionide test explorer originally worked exclusively off of code analysis. That is, it analyzed the structure of the code to determine the tests in a test project (e.g. looking for `[Fact]` annotations).
