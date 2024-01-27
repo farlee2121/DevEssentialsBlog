@@ -4,9 +4,7 @@ tags: [Event Storming]
 title: Clarifying Event Storms with Data Models
 ---
 
-<!-- todo: probably rename the file or title so the url and title align -->
-
-Event storm sticky notes capture the high-level flow, but different actors in that flow often have specific expectations of each other. This is where high-level data modeling shines.
+Event storm sticky notes capture high-level process flow, but different actors in that flow often have specific expectations of each other. This is where high-level data modeling shines.
 <!--more-->
 
 ## Event Storming Review
@@ -16,8 +14,20 @@ For those who are unfamiliar, event storming is a technique for mapping out proc
 An event storm is primarily composed of events. Events represent something that happened that other parts of the business might need to know about. Some examples from an ecommerce site might include `OrderCanceled`, `OrderPacked`, and `OrderShipped`.
 
 Alberto published an [excellent and brief introduction](http://ziobrando.blogspot.com/2013/11/introducing-event-storming.html) to event storming. You can also
-checkout [Awesome Event Storming](https://github.com/mariuszgil/awesome-eventstorming) for more materials and examples.
+checkout [Awesome Event Storming](https://github.com/mariuszgil/awesome-eventstorming) for more materials and examples. There's also a brief example [below](#example-workflow).
 
+## Context & What now 
+
+I've been exploring event storming with some other developers. 
+We're satisfied with our overall process (modeled mostly with command and event sticky notes).
+The next step is to dig into portions of the flow and more thoroughly model
+what different actors expect from each other. Specifically, we'll elaborate on the sticky note model with a data model.
+
+This stage could be done with smaller groups of stakeholders and is still
+business-focused (focusing on business modeling, not translation to code).
+This detailed modeling aims to uncover hidden assumptions and specific dependencies at key parts of the business process.
+
+Uncovering these details might reveal weaknesses or needed changes in the overall event storm model. 
 
 ## Example Workflow 
 
@@ -27,32 +37,18 @@ The portion of the event storm we'll model is shown in the picture above.
 
 This flow consists of one command and the events that follow it. Specifically, the command is Cancel Order Request.
 
-If the command succeeds, then the Shopper Order Canceled event is raised and the Fulfillment Canceled event is also raised. Fulfillment Cancelled could, in the future, be subject to more sophisticated flows that follow from an order cancel. For simplicity, it fulfillment is assumed canceled if the order succeeds in canceling. 
+If the command succeeds, then the Shopper Order Canceled event is raised and the Fulfillment Canceled event is also raised. Fulfillment Cancelled could, in the future, be subject to more sophisticated flows that follow from an order cancel. For simplicity, it fulfillment is assumed canceled if the order cancel succeeds. 
 
 If the Cancel Order Request fails, an Order Cancel Failed event is thrown with the reason for failure. 
 There aren't multiple failure events in this case because different modes of failure wouldn't be handled differently by the business.
 
-## Context & What now 
-
-I've been exploring event storming with some other developers. 
-We're satisfied with our overall process (modeled mostly with command and event sticky notes).
-The next step is to dig into portions of the flow and more thoroughly model
-what different actors expect from each other.
-
-This stage could be done with smaller groups of stakeholders and is still
-business-focused (focusing on business modeling, not translation to code).
-Detailed modeling might uncover hidden assumptions and change the overall event storm view. 
-
-Not every part of the event storm needs this detailed modeling.
-The team can stop whenever they feel confident the overall model
-is sound and the critical details have been covered.
 
 
 ## Data Modeling
 
 I first learned about event storms from Scott Wlaschin's [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional), and this process largely follows his example.
 
-Data exploration starts by choosing a high-level workflow, like the one we demonstrated [above](#example-workflow-for-design). We bootstrap our data model by encoding the workflow with the command as input and the events as output.
+Data exploration starts by choosing a high-level workflow, like the one we demonstrated [above](#example-workflow-for-design). We bootstrap our data model by translating the stickynotes to a text-based workflow definition. The workflow uses the command as input and the events as output.
 
 A simple syntax might stub the workflow like this
 ```
@@ -87,9 +83,9 @@ data OrderId =
   constraints: Should be unique. Doesn't need to be human readable.
 ```
 
-At this point the team feels like the model is clear enough.
-There's little risk in the rest. 
-So, the final model looks roughly like this
+At this point the team feels like `CancelOrderRequest` and all it's members are clear enough. There's little risk in the `ShopperCancelReason`. 
+
+At this point, the final model looks roughly like this
 
 ```
 workflow CancelOrder =
@@ -130,9 +126,11 @@ I'd guess many readers can intuit most of these rules without help though.
 
 
 ## Trickier examples - Cart Contents
-This example went pretty smoothly, but others revealed significant gaps in understanding.
+The previous example went pretty smoothly. But this wasn't the case for many examples from our explorations. Several data models revealed significant gaps in both the event storm and our shared understanding.
 
-For example, cart contents
+
+### Cart Contents
+For example, the cart contents model revealed a modeling gap.
 
 ```
 data CartContents = {
@@ -157,13 +155,13 @@ data CustomerIdentifier =
     must be unique
 ```
 
-## Trickier examples - Picking
+### Picking
 
 The warehouse picking process revealed even more hidden assumptions, and even resulted in changes to the overall event storm model.
 
 A few of the key moments included.
 - How does this picker know where to get each item?
-  - Warehouse location is important SKU data, and we'd forgotten about it
+  - The warehouse location is important SKU data, and we'd forgotten about it
 - What do you mean by the picker signs off? Is that something that's tracked?
   - We'd missed the whole expectation that warehouse workers need to sign on orders they picked. It's a significant policy and performance metric.
 - What happens if an item is shorted?
@@ -208,11 +206,20 @@ workflow Capture Payment =
     | Token Expired 
 ```
 
+## When to Stop - Stable, Incremental, Additive
+
+This data modelling approach benefits from several types of incremental progress. Each workflow stands on its own (out of the larger event storm), and the data is also progressively clarified from the top-down. This means the team can work in complete chunks, prioritize the chucks most likely to effect the big picture, and stop whenever they feel confident that overall risk to the model is low enough.
+
+
 ## Summary
 
-These data models aren't primarily for coding. They dig into dependencies between parts of the business process with greater detail. They're an effective way to find gaps in the higher-level sticky note model and avoid programmers unhappily rewriting code to fit what business people knew all along, but didn't know to share.
+Data models were a surprisingly effective way to elaborate on an Event Storm and uncover hidden assumptions missed by the higher-level model. 
+This reduces the chances of programmers unhappily rewriting code to fit what business people knew all along, but didn't know to share.
+
+By choosing notation wisely, these data models can be easy for non-technical people to read but also rigorous enough to make gaps apparent.
 
 I was surprised [how much this data phase reveals about the business](../posts/2023/2023-07-13-Differentiating-events-and-commands.md), and how much it led to rework of the overall event storm.
 
-This data modelling approach benefits from several types of incremental progress. Each workflow stands on its own (out of the larger event storm), and the data is also progressively clarified from the top-down. This means the team can work in complete chunks, prioritize the chucks most likely to effect the big picture, and stop whenever they feel confident that overall risk to the model is low enough.
+
+
 
