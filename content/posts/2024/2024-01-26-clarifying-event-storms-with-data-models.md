@@ -1,5 +1,5 @@
 ---
-date: 2023-05-07
+date: 2024-01-26
 tags: [Event Storming]
 title: Clarifying Event Storms with Data Models
 ---
@@ -31,7 +31,7 @@ Uncovering these details might reveal weaknesses or needed changes in the overal
 
 ## Example Workflow 
 
-![Event storm stickies described below](../../static/post-media/Event-Storm/2023-05-07-storm-stickies.png)
+![Event storm stickies described below](../../../static/post-media/Event-Storm/2023-05-07-storm-stickies.png)
 
 The portion of the event storm we'll model is shown in the picture above.
 
@@ -218,7 +218,7 @@ This reduces the chances of programmers unhappily rewriting code to fit what bus
 
 By choosing notation wisely, these data models can be easy for non-technical people to read but also rigorous enough to make gaps apparent.
 
-I was surprised [how much this data phase reveals about the business](../posts/2023/2023-07-13-Differentiating-events-and-commands.md), and how much it led to rework of the overall event storm.
+I was surprised [how much this data phase reveals about the business](../../posts/2023/2023-07-13-Differentiating-events-and-commands.md), and how much it led to rework of the overall event storm.
 
 
 
