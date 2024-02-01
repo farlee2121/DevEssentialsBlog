@@ -11,7 +11,7 @@ Continuing the event storm explorations, I tested out several approaches for tra
 
 ## Event Storming Review
 
-For those who are unfamiliar, event storming is a technique for mapping out processes. It's often used to create a shared picture between people of many different roles. 
+For those who are unfamiliar, event storming is a technique for mapping out processes. It's used to create a shared picture between people of many different roles. 
 
 An event storm is primarily composed of events. Events represent something that happened that other parts of the business might need to know about. Some examples from an ecommerce site might include `OrderCanceled`, `OrderPacked`, and `OrderShipped`.
 
@@ -20,10 +20,10 @@ checkout [Awesome Event Storming](https://github.com/mariuszgil/awesome-eventsto
 
 ## Problem Context
 
-I've been exploring event storming with some other developers. We've previously completed the high-level event storm (process flow using sticky notes) and clarified the data models for key flows. Now we want to translate the event storm into a high-level system design. 
+I've been exploring event storming with some other developers. We've previously completed the high-level event storm (process flow using sticky notes) and clarified key flows using data models. Now we want to translate the event storm into a high-level system design. 
 
 I've written systems based on event storms in the past, but always in a functional programming context. 
-Functional design seemed like too much learning to pile on for others in the current experiment. Here I'll explore a few other approaches for refining event storms into high-level designs. 
+Functional design seemed like too much learning to pile on for others in the current experiment. Here I'll explore a few other approaches for refining event storms into high-level designs and compare them to the functional approach.
 
 ## Example Workflow 
 
@@ -99,7 +99,7 @@ TODO: need to talk about dependencies -->
 The data model has thus far been focused on redability and collaboration.
 It was largely a convenient translation of our event sticky notes into text that could be progressively clarified alongside non-developers.
 
-Turns out, with the right software design, this model effectively *is* a high level code model.
+Turns out, with the right software design, this model effectively *is* a high-level code model.
 
 Here's the non-developer friendly model we defined previously
 
@@ -136,40 +136,31 @@ type CancelOrder =
   -> CancelOrderRequest 
   -> CancelOrderResult
 
-type GetOrderById = OrderId -> Order
-
-type OrderId = // must be unique, and easy for a customer to read to a support agent
 
 type CancelOrderRequest = {
   OrderId: OrderId
   Reason: ShopperCancelReason
 }
 
-  type ShopperCancelReason = 
-    // Q: What reasons might a shopper cancel their order for?
-    | FoundBetterPrice
+type OrderId = // must be unique, and easy for a customer to read to a support agent
+type ShopperCancelReason = 
+  // Q: What reasons might a shopper cancel their order for?
+  | FoundBetterPrice
 
 
 type CancelOrderResult = 
-  | Success of
-    | OrderCanceled
-  | Error of
-    // Q: What ways can an order fail that might change the message to consumers? 
-    | OrderAlreadyInFulfillment
-    | OrderNotFound
+  | Success of ShopperOrderCanceled
+  | Error of OrderCancelFailed
 
-  type OrderCanceled = {
+  type ShopperOrderCanceled = {
     // Q: what do we need to notify others?
     OrderId: OrderId
     Reason: CancelReason
   }
 
-  type CancelReason = 
-    // Q: What groups would have distinct reasons for cancelling?
-    | ShopperCancelReason
-    | SellerCancelReason
-    | WarehouseCancelReason
-
+  type OrderCancelFailed =
+    | OrderAlreadyInFulfillment
+    | OrderNotFound
 ```
 
 Surprise! This is valid F# syntax (minus the order of type declarations, which I left alone to keep the comparison easy).
@@ -182,10 +173,10 @@ This approach for refining event storm sticky notes into a more detailed view is
 
 ### Functional Core
 
-The code design approach here is called Functional Core or Event-Driven Architecture.
+The code design approach here is called Functional Core. It also leans on Event-Driven Architecture ideas.
 
 The idea is that the business rules are [pure functions](https://en.wikipedia.org/wiki/Pure_function), 
-they don't cause any observable state change. Any changes must be reflected the functions return value. The return value in this case is the event data structures. The events represent state changes that can be persisted by simple mapping functions.
+they don't cause any observable state change. Any changes must be reflected in the function's return value. The return value in this case is the event data structures. The events represent state changes that can be persisted by simple mapping functions.
 
 This approach is very intersting, but I won't go very deep here. [Domain Modeling Made Functional](https://fsharpforfunandprofit.com/books/#domain-modeling-made-functional) is excellent resource for futher exploration.
 The book is a fantastic introduction to domain modeling, event storming, or just a thoughtful requirements-driven development process. 
@@ -197,13 +188,15 @@ The main thing to know for now is that this approach is my reference point for h
 
 ### Dependencies
 
+We showed that the domain-focused data model maps well to code, but to flesh out our developer-focused design we also need to consider dependencies. What will each flow need to complete its work and what are the common shared dependencies/activities between flows.
+
 Contemplating dependencies is rather straightforward with a functional-core approach. 
 
 Essentially, we just need to consider what information or sub-actions may be needed to translate a command into it's related events but isn't present in the input command. For example, the `CancelOrderRequest` includes only an OrderId, but we may need to analyze items in the order or the current status of the order to decide the outcome.
 
-We can mostly ignore the mundane dependencies like state persistence. The domain rules themselves don't persist state. Any changes in state will be reflected in the returned events and are usually rather predictably translated into persisted state with little logic.
+We can mostly ignore the mundane dependencies like state persistence. The domain rules themselves don't persist state. Any changes in state will be reflected in the returned events and are rather predictably translated into persisted state with little logic.
 
-Dependencies can be discussed with semi-formal syntax as an extension of the data model.
+Dependencies can be discussed as an extension of the business-focused data model.
 
 ```
 workflow CancelOrder =
@@ -228,38 +221,43 @@ type CancelOrder =
   -> CancelOrderResult
 ```
 
-Note that F# has partial application (as do most functional languages). 
-This allows us to pass part of the argument list and get back a function on the remaining arguments. This means functions can accept dependencies as arguments without passing them on every call.
+Note that F# has partial application (as do many functional languages). 
+This allows us to pass part of the argument list and get back a function on the remaining arguments. This means functions can accept dependencies as arguments without passing them on every function call. It's a bit like constructor injection, but at a function level.
 
 ```fsharp
+// apply the dependencies consistent across function calls
 let cancelOrder = SomeModule.cancelOrder getOrderById_FromSql
 
+// consume the function passing only data that differs for every function call
 let cancelResult = cancelOrder cancelRequest
 ```
+
+### Aside: Fix State Dependencies Upfront 
 
 Re-examining `GetOrderById`, there's not much reason the business rule needs a function to get the order. Instead, directly accepting an order allows the flow to fix all its state up front, making observability and error reproduction much easier. 
 This seems like a good place to diverge from the business model and assume we can get a full order ahead of time.
 
-```
+```fsharp
 type CancelOrder = 
   Order option
   * CancelOrderRequest 
   -> CancelOrderResult
 ```
 
-Note that `option` allows us to either find an existing order or not and let the CancelOrder flow decide what to do if no order exists.
+Note that `option` allows us to either find an existing order or not. We can let the CancelOrder flow decide what to do if no order exists.
 
 
 ### Modularization
 
 Modularization is also simple with an event-driven / functional-core approach. 
 
-The workflow signatures stand alone. They can communicate inputs, outputs, and even dependencies in a self-contained fashion. 
+The workflow signatures stand alone. They can communicate inputs, outputs, and even dependencies in a self-contained fashion (both in the business-oriented model and the F# model).
 
 This means we don't have to make any decisions about where these functions live in order to explore dependencies.
-Our modularization choices are not influenced by groupings made early on chunk off the top-level apis. Instead we can see what dependencies emerge, and inform our modularization at all levels *after* defining individual endpoints on their own terms.
+This avoids a potential bias from grouping workflow early on just to get them in classes for dependency management.
+Instead we can see what dependencies emerge, and inform our modularization at all levels *after* exploring individual endpoints on their own terms.
 
-The top-level modules will, however, likely be based on business division in the event storm. I.e. you could draw circles around groups of sticky notes based on who in the company is responsible for it. Still, analyzing common dependencies might inform hidden connections and who really owns certain workflows.
+The top-level modules will, however, likely be based on business divisions in the event storm. I.e. you could draw circles around groups of sticky notes based on who in the company is responsible for it. Still, analyzing common dependencies might inform hidden connections and who really owns certain workflows.
 
 
 ## Other Approaches
@@ -270,7 +268,7 @@ into functional designs. It's time to explore how other design approaches might 
 ## Translating to C#
 
 I thought I might be able to use C# to formalize data and dependencies in a similar way as I could with functional-core and F#. I could use interfaces to translate workflows into function signatures, and data-only classes to represent the inputs and outputs.
-Perhaps a constructor listing dependencies would do for modeling side-effects or state that workflow might need. 
+Perhaps a constructor listing dependencies would do for modeling side-effects or state required for a workflow. 
 
 Also key, I wasn't going to use a functional core model, but a [Ports and Adapters-style model](https://spencerfarley.com/2023/03/02/4-ocp-as-architecture/) where the workflows might enact state instead of returning events (i.e. using [Dependency Inversion](https://spencerfarley.com/2023/03/02/3-interchangable-dependencies/)).
 
@@ -278,7 +276,7 @@ This devolved quickly for several reasons. First, C# anonymous functions are not
 grouping command flows into modules or services. It also more clearly makes the model seem like code. The gap between the domain and code model is far enough that it feels weird and effortful.
 
 ```cs
-Func<CancelOrderRequest, CancelResult> CancelOrder; //Wat?
+Func<CancelOrderRequest, CancelResult> CancelOrder; //Not easy to read
 
 // OR
 
@@ -311,24 +309,28 @@ This is a deal breaker for working with non-developers, but also tempts develope
 
 I thought perhaps a Ports and Adapters-style model would fair better in F# because F# has readable anonymous function types, readable alternative value types, and can partially apply functions to handle dependency management.
 
-However, this style of modeling still didn't feel good in F# either. The translation from events to types is less direct. The functions have way more dependencies which decreases readability.
+However, ports and adapters-style modeling didn't feel good in F# either. The translation from events to types is less direct because the workflows commit state instead of returning events. The functions also have way more dependencies in order to enact state, which decreases readability.
 
-Most importantly, the added concerns don't add any modeling benefit, they are purely code design concerns. 
+Most importantly, the added concerns don't add any modeling benefit, they are purely code concerns. 
 
-State management is the most obvious complicating concern. Statefullness through the call stack distributes defensive programming, orchestration, and scaling concerns across many methods, and their relationship to each other must be kept in mind.
+State management is the most obvious complicating concern. Statefullness through the call stack distributes defensive programming, orchestration, and scaling concerns across many methods. The relationship of all these concerns must be kept in mind and weighs down the modeling process.
 
 It's much easier to grapple with state decisions when they are concentrated in one layer. In effect, we almost back to a functional-core approach.
 
 ## Semi-formal Ports and Adapters syntax
 
-A semi-formal Ports and Adapters syntax falls short for the same reasons an F# Ports and Adapters approach falls short. Statefulness complicates the dependencies and general design considerations. Attempts to simplify effectively lead back to what we had in our functional-core / event-driven model. 
+I also tried a ports and adapters-style design using a semi-formal syntax, like what was used for the business-focused data model.
+
+The semi-formal language didn't fair any better than F#. Statefulness still complicated the dependencies and general design considerations. Attempts to simplify effectively led back to the functional-core / event-driven model. 
 
 ## Conclusion: Event-Driven Modeling Wins
 
-My conclusion is that event-driven modeling is still the winner for refining event storms into high level models.
+My conclusion is that a functional core and event-driven model is the most effective for refining event storms into high level code models.
 
 The translation is clear and only a short step from the non-technical data model. The key concerns at the domain level and high-level design level can be clearly discussed with one model. 
 
-An event-based model requires the fewest incidental implementation details or premature decisions while still covering the essential high-level design decisions. 
+An event-based model requires the fewest incidental implementation details or premature decisions while still covering the essential high-level design decisions.
 
-The production code can be implemented in a different style if desired. The event model captures the critical high-level details. Translating an event-driven model into other styles is a matter of implementation details.
+The key difference between functional core and other styles like ports and adapters seems to be state. Statefulness in the domain distributes complicating factors like validation, transactions, and concurrency.
+
+While the simplest model is functional core, the production code can be implemented in a different style if desired. The event model still captures the critical high-level details and translating an event-driven model into other styles is mostly a matter of implementation details.
