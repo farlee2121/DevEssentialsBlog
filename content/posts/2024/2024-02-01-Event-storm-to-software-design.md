@@ -30,7 +30,7 @@ I've replicated the basic artifacts here. For more details please read [Event St
 
 The event storm sticky notes for the Cancel Order flow.
 
-![Event storm stickies described below](../../static/post-media/Event-Storm/2023-05-07-storm-stickies.png)
+![Event storm stickies described below](../../../static/post-media/Event-Storm/2023-05-07-storm-stickies.png)
 
 The data model for the Cancel Order flow.
 ```
