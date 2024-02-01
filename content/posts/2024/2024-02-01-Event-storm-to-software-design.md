@@ -1,10 +1,8 @@
 ---
-date: 2023-05-09
+date: 2024-02-01
 tags: [Event Storming]
 title: Event Storm To Software Design
 ---
-
-<!-- TODO: The experimentation with non-functional approaches in a relatively small part of the post. Should I change the framing in the problem context? -->
 
 Continuing the event storm explorations, I tested out several approaches for translating event storms into system designs. 
 <!--more-->
@@ -28,7 +26,7 @@ Functional design seemed like too much learning to pile on for others in the cur
 ## Example Workflow 
 
 This post is heavily based on artifacts from previous explorations
-I've replicated the basic artifacts here. For more details please read [Event Storming Interaction-heavy Flows](../posts/2023/2023-10-05-Storming-interaction-heavy-flows.md) and [Clarifying Event Storms with Data Modeling](../posts/2024/2024-01-26-clarifying-event-storms-with-data-models.md).
+I've replicated the basic artifacts here. For more details please read [Event Storming Interaction-heavy Flows](../../posts/2023/2023-10-05-Storming-interaction-heavy-flows.md) and [Clarifying Event Storms with Data Modeling](../../posts/2024/2024-01-26-clarifying-event-storms-with-data-models.md).
 
 The event storm sticky notes for the Cancel Order flow.
 
