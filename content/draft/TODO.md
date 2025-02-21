@@ -11,6 +11,7 @@ Priority ideas
 - Aliases for domain modelling
 
 Emergency ideas
+- critical thinking / learning tools that I listed for Jack
 - Test API with Jest
 - Mentoring pivot, work in system then summarize essence of the work done / problem solved. 
   - Self-directed, starts concrete and abstract comes later (versus starting with topic discussion and demonstration), does still require distilling essence though, have to live with code you made, NDA friendly
